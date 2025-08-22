@@ -1,0 +1,112 @@
+﻿@page
+@model ServiceHost.Areas.Administration.Pages.Organization.Countrys.IndexModel
+
+@{
+    Layout = "Shared/_AdminLayout";
+    ViewData["title"] = "Countries Management";
+}
+
+
+
+<div class="row">
+    <div class="col-sm-12">
+        <h3 class="page-title pull-left">@ViewData["title"]</h3>
+        <p class="pull-right">
+            <a class="btn btn-success btn-lg" href="#showmodal=@Url.Page("./Index", "Create")" >Create New</a>
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Search in Country</h3>
+            </div>
+            <div class="panel-body ">
+                <form class="form-inline" role="form" method="get">
+                    <div class="form-group">
+                        
+                        <label class="sr-only " asp-for="SearchModel.Name"></label>
+                        <input class="form-control " asp-for="SearchModel.Name" placeholder="Name">
+                            
+                        <label class="sr-only" asp-for="SearchModel.TailCode"></label>
+                        <input class="form-control " asp-for="SearchModel.TailCode" placeholder="TailCode">
+                           
+                        <button type="submit" class="btn btn-success waves-effect waves-light m-l-10">Search</button>
+                        <a class="btn btn-primary waves-effect waves-light m-l-10" asp-page="./Index">View All</a>
+                          
+                    </div>
+                   
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row" id="CountrysDiv">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Country list</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <table id="datatable" class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Image</th>
+                                    <th>Name</th>
+                                    <th>Alpha-2-Code</th>
+                                    <th>Alpha-3-Code</th>
+                                    <th>TailCode</th>
+                                    <th>UNCode</th>
+                                    <th>DialCode</th>
+                                    <th>Creation Date</th>
+                                    <th>Operation</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.Countrys)
+                                {
+                                <tr>
+                                    <td>@item.Id</td>
+                                        <td>
+                                          <img src="@item.Picture" style="width: 70px; height: 70px" />
+                                        </td>
+                                        <td>@item.Name</td>
+                                        <td>@item.Alpha2Code</td>
+                                        <td>@item.Alpha3Code</td>
+                                        <td>@item.TailCode</td>
+                                        <td>@item.UNCode</td>
+                                        <td>@item.DialCode</td>
+                                        <td>@item.CreationDate</td>
+                                    <td>
+                                        <a class="btn btn-warning pull-left m-rl-5"
+                                           href="#showmodal=@Url.Page("./Index", "Edit", new {id = item.Id})">
+                                            <i class="fa fa-edit"></i> Edit
+                                        </a>
+                                    </td>
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/AdminTheme/assets/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/AdminTheme/assets/datatables/dataTables.bootstrap.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#datatable').dataTable();
+        });
+    </script>
+}

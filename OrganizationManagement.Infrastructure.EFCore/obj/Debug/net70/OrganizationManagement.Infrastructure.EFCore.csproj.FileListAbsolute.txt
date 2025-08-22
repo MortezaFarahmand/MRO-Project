@@ -1,0 +1,42 @@
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\bin\Debug\net70\OrganizationManagement.Infrastructure.EFCore.deps.json
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\bin\Debug\net70\OrganizationManagement.Infrastructure.EFCore.runtimeconfig.json
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\bin\Debug\net70\OrganizationManagement.Infrastructure.EFCore.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\bin\Debug\net70\OrganizationManagement.Infrastructure.EFCore.pdb
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\bin\Debug\net70\0_Framework.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\bin\Debug\net70\OrganizationManagement.Application.Contracts.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\bin\Debug\net70\OrganizationManagement.Domain.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\bin\Debug\net70\OrganizationManagement.Domain.pdb
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\bin\Debug\net70\0_Framework.pdb
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\bin\Debug\net70\OrganizationManagement.Application.Contracts.pdb
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\obj\Debug\net70\OrganizationManagement.Infrastructure.EFCore.csproj.AssemblyReference.cache
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\obj\Debug\net70\OrganizationManagement.Infrastructure.EFCore.GeneratedMSBuildEditorConfig.editorconfig
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\obj\Debug\net70\OrganizationManagement.Infrastructure.EFCore.AssemblyInfoInputs.cache
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\obj\Debug\net70\OrganizationManagement.Infrastructure.EFCore.AssemblyInfo.cs
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\obj\Debug\net70\OrganizationManagement.Infrastructure.EFCore.csproj.CoreCompileInputs.cache
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\obj\Debug\net70\OrganizationManagement.Infrastructure.EFCore.csproj.CopyComplete
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\obj\Debug\net70\OrganizationManagement.Infrastructure.EFCore.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\obj\Debug\net70\refint\OrganizationManagement.Infrastructure.EFCore.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\obj\Debug\net70\OrganizationManagement.Infrastructure.EFCore.pdb
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\obj\Debug\net70\OrganizationManagement.Infrastructure.EFCore.genruntimeconfig.cache
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\obj\Debug\net70\ref\OrganizationManagement.Infrastructure.EFCore.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\obj\Debug\net70\OrganizationManagement.Infrastructure.EFCore.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\obj\Debug\net70\refint\OrganizationManagement.Infrastructure.EFCore.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\obj\Debug\net70\OrganizationManagement.Infrastructure.EFCore.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\bin\Debug\net70\OrganizationManagement.Infrastructure.EFCore.deps.json
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\bin\Debug\net70\OrganizationManagement.Infrastructure.EFCore.runtimeconfig.json
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\bin\Debug\net70\OrganizationManagement.Infrastructure.EFCore.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\bin\Debug\net70\OrganizationManagement.Infrastructure.EFCore.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\bin\Debug\net70\0_Framework.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\bin\Debug\net70\OrganizationManagement.Application.Contracts.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\bin\Debug\net70\OrganizationManagement.Domain.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\bin\Debug\net70\OrganizationManagement.Domain.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\bin\Debug\net70\0_Framework.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\bin\Debug\net70\OrganizationManagement.Application.Contracts.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\obj\Debug\net70\OrganizationManagement.Infrastructure.EFCore.csproj.AssemblyReference.cache
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\obj\Debug\net70\OrganizationManagement.Infrastructure.EFCore.GeneratedMSBuildEditorConfig.editorconfig
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\obj\Debug\net70\OrganizationManagement.Infrastructure.EFCore.AssemblyInfoInputs.cache
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\obj\Debug\net70\OrganizationManagement.Infrastructure.EFCore.AssemblyInfo.cs
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\obj\Debug\net70\OrganizationManagement.Infrastructure.EFCore.csproj.CoreCompileInputs.cache
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\obj\Debug\net70\OrganizationManagement.Infrastructure.EFCore.csproj.CopyComplete
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\obj\Debug\net70\OrganizationManagement.Infrastructure.EFCore.genruntimeconfig.cache
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Infrastructure.EFCore\obj\Debug\net70\ref\OrganizationManagement.Infrastructure.EFCore.dll

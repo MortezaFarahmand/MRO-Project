@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net90</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\PersonnelManagement.Application.Contracts\PersonnelManagement.Application.Contracts.csproj" />
+		<ProjectReference Include="..\PersonnelManagement.Domain\PersonnelManagement.Domain.csproj" />
+	</ItemGroup>
+
+</Project>

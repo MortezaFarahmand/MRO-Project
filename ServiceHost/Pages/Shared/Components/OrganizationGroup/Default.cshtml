@@ -1,0 +1,61 @@
+﻿@using _01_MROQuery.Contracts.OrganizationGroup;
+@model List<OrganizationGroupQueryModel>
+
+<section class="p-b100 particles-js" data-color="#fe4c1c,#00c3ff,#0160e7" data-id="i4-1">
+    <div class="bg-overlay"></div>
+    <div class="container">
+        <div class="row m-b40">
+            <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                <div class="ot-heading">
+                    <h6><span>Our Aviation Industry</span></h6>
+                    <h2 class="main-heading">Aviation Organization Groups</h2>
+                </div>
+                <p>The types of organizations that operate in the field of commercial aviation and their activities directly or indirectly <br>in the aviation industry lead to the provision of passenger and cargo air services are as follows.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 col-xs-12">
+                <div class="blog-grid pf_3_cols">
+
+                    @foreach(var item in Model)
+                    {
+                        <article class="col-md-4 col-sm-6 col-xs-12 post-box masonry-post-item">
+                            <div class="post-inner">
+                                <div class="entry-media">
+                                    <div class="post-cat">
+                                        <span class="posted-in">
+                                            <a href="#" rel="category tag">@item.Keywords</a>
+                                            <a href="#" rel="category tag">SEO</a>
+                                        </span>
+                                    </div>
+                                    <a asp-page="/OrganizationGroup" asp-route-id="@item.Slug">
+                                        <img src="@item.Picture" alt="@item.PictureAlt" title="@item.PictureTitle" />
+                                    </a>
+                                </div>
+                                <div class="inner-post">
+                                    <div class="entry-header">
+
+                                        <div class="entry-meta">
+                                            <span class="byline"><a class="url fn n" href="#"><i class="flaticon-user"></i> Tom Black</a></span>
+                                            <span class="posted-on">
+                                                <a><i class="flaticon-clock"></i> <time class="entry-date published">@item.CreationDate</time></a>
+                                            </span>
+                                        </div><!-- .entry-meta -->
+
+                                        <h3 class="entry-title"><a asp-page="/OrganizationGroup" asp-route-id="@item.Slug">@item.Name</a></h3>
+                                    </div><!-- .entry-header -->
+
+                                    <div class="entry-summary the-excerpt wrapper_Max_Len">
+                                        <p class="demo-1">@item.Description</p>
+                                    </div><!-- .entry-content -->
+                                </div>
+                            </div>
+                        </article>
+
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

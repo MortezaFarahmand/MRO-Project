@@ -1,0 +1,13 @@
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\0_Framework\bin\Debug\net90\0_Framework.deps.json
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\0_Framework\bin\Debug\net90\0_Framework.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\0_Framework\bin\Debug\net90\0_Framework.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\0_Framework\obj\Debug\net90\0_Framework.csproj.AssemblyReference.cache
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\0_Framework\obj\Debug\net90\0_Framework.GeneratedMSBuildEditorConfig.editorconfig
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\0_Framework\obj\Debug\net90\0_Framework.AssemblyInfoInputs.cache
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\0_Framework\obj\Debug\net90\0_Framework.AssemblyInfo.cs
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\0_Framework\obj\Debug\net90\0_Framework.csproj.CoreCompileInputs.cache
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\0_Framework\obj\Debug\net90\0_Framework.sourcelink.json
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\0_Framework\obj\Debug\net90\0_Framework.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\0_Framework\obj\Debug\net90\refint\0_Framework.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\0_Framework\obj\Debug\net90\0_Framework.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\0_Framework\obj\Debug\net90\ref\0_Framework.dll

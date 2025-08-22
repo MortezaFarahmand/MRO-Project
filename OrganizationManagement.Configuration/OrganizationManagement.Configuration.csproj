@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net90</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\01_MROQuery\01_MROQuery.csproj" />
+    <ProjectReference Include="..\OrganizationManagement.Application.Contracts\OrganizationManagement.Application.Contracts.csproj" />
+    <ProjectReference Include="..\OrganizationManagement.Application\OrganizationManagement.Application.csproj" />
+    <ProjectReference Include="..\OrganizationManagement.Infrastructure.EFCore\OrganizationManagement.Infrastructure.EFCore.csproj" />
+  </ItemGroup>
+
+</Project>

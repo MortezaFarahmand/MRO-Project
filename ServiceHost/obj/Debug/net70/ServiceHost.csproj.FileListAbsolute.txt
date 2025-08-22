@@ -1,0 +1,574 @@
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\appsettings.Development.json
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\appsettings.json
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ServiceHost.staticwebassets.runtime.json
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ServiceHost.exe
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ServiceHost.deps.json
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ServiceHost.runtimeconfig.json
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ServiceHost.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ServiceHost.pdb
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Azure.Core.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Azure.Identity.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Humanizer.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.AspNetCore.Razor.Language.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.Bcl.AsyncInterfaces.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.Build.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.Build.Framework.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.CodeAnalysis.AnalyzerUtilities.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.CodeAnalysis.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.CodeAnalysis.CSharp.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.CodeAnalysis.CSharp.Features.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.CodeAnalysis.Elfie.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.CodeAnalysis.Features.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.CodeAnalysis.Razor.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.CodeAnalysis.Scripting.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.CodeAnalysis.VisualBasic.Features.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.CodeAnalysis.VisualBasic.Workspaces.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.CodeAnalysis.Workspaces.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.Data.SqlClient.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.DiaSymReader.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.DotNet.Scaffolding.Shared.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.EntityFrameworkCore.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.EntityFrameworkCore.Design.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.EntityFrameworkCore.Relational.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.Extensions.DependencyModel.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.Identity.Client.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.IdentityModel.Abstractions.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.IdentityModel.Logging.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.IdentityModel.Protocols.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.IdentityModel.Tokens.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.NET.StringTools.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.SqlServer.Server.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.VisualStudio.Web.CodeGeneration.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\dotnet-aspnet-codegenerator-design.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.Win32.SystemEvents.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Mono.TextTemplating.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Newtonsoft.Json.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\NuGet.Common.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\NuGet.Configuration.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\NuGet.DependencyResolver.Core.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\NuGet.Frameworks.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\NuGet.LibraryModel.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\NuGet.Packaging.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\NuGet.ProjectModel.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\NuGet.Protocol.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\NuGet.Versioning.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\System.CodeDom.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\System.Composition.AttributedModel.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\System.Composition.Convention.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\System.Composition.Hosting.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\System.Composition.Runtime.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\System.Composition.TypedParts.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\System.Configuration.ConfigurationManager.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\System.Drawing.Common.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\System.IdentityModel.Tokens.Jwt.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\System.Memory.Data.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\System.Reflection.MetadataLoadContext.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\System.Runtime.Caching.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\System.Security.Cryptography.ProtectedData.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\System.Security.Permissions.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\System.Windows.Extensions.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\cs\Microsoft.CodeAnalysis.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\de\Microsoft.CodeAnalysis.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\es\Microsoft.CodeAnalysis.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\fr\Microsoft.CodeAnalysis.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\it\Microsoft.CodeAnalysis.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ja\Microsoft.CodeAnalysis.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ko\Microsoft.CodeAnalysis.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pl\Microsoft.CodeAnalysis.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ru\Microsoft.CodeAnalysis.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\tr\Microsoft.CodeAnalysis.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\cs\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\de\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\es\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\fr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\it\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ja\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ko\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pl\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pt-BR\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ru\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\tr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hans\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hant\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\cs\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\de\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\es\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\fr\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\it\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ja\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ko\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pl\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pt-BR\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ru\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\tr\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hans\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hant\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\cs\Microsoft.CodeAnalysis.Features.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\de\Microsoft.CodeAnalysis.Features.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\es\Microsoft.CodeAnalysis.Features.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\fr\Microsoft.CodeAnalysis.Features.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\it\Microsoft.CodeAnalysis.Features.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ja\Microsoft.CodeAnalysis.Features.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ko\Microsoft.CodeAnalysis.Features.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pl\Microsoft.CodeAnalysis.Features.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pt-BR\Microsoft.CodeAnalysis.Features.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ru\Microsoft.CodeAnalysis.Features.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\tr\Microsoft.CodeAnalysis.Features.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hans\Microsoft.CodeAnalysis.Features.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hant\Microsoft.CodeAnalysis.Features.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\cs\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\de\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\es\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\fr\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\it\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ja\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ko\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pl\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pt-BR\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ru\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\cs\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\de\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\es\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\fr\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\it\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ja\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ko\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pl\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pt-BR\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ru\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\tr\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hans\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hant\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\cs\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\de\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\es\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\fr\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\it\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ja\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ko\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pl\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pt-BR\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ru\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\tr\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hans\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hant\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\cs\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\de\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\es\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\fr\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\it\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ja\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ko\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pl\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pt-BR\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ru\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\tr\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hans\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hant\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\0_Framework.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\OrganizationManagement.Application.Contracts.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\OrganizationManagement.Application.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\OrganizationManagement.Configuration.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\OrganizationManagement.Domain.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\OrganizationManagement.Infrastructure.EFCore.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\OrganizationManagement.Configuration.pdb
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\0_Framework.pdb
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\OrganizationManagement.Application.pdb
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\OrganizationManagement.Application.Contracts.pdb
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\OrganizationManagement.Domain.pdb
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\OrganizationManagement.Infrastructure.EFCore.pdb
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\ServiceHost.csproj.AssemblyReference.cache
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\ServiceHost.GeneratedMSBuildEditorConfig.editorconfig
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\ServiceHost.AssemblyInfoInputs.cache
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\ServiceHost.AssemblyInfo.cs
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\ServiceHost.csproj.CoreCompileInputs.cache
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\ServiceHost.MvcApplicationPartsAssemblyInfo.cache
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\ServiceHost.RazorAssemblyInfo.cache
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\ServiceHost.RazorAssemblyInfo.cs
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\staticwebassets\msbuild.ServiceHost.Microsoft.AspNetCore.StaticWebAssets.props
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\staticwebassets\msbuild.build.ServiceHost.props
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\staticwebassets\msbuild.buildMultiTargeting.ServiceHost.props
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\staticwebassets\msbuild.buildTransitive.ServiceHost.props
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\staticwebassets.pack.json
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\staticwebassets.build.json
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\staticwebassets.development.json
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\scopedcss\bundle\ServiceHost.styles.css
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\ServiceHost.csproj.CopyComplete
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\ServiceHost.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\refint\ServiceHost.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\ServiceHost.pdb
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\ServiceHost.genruntimeconfig.cache
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\ref\ServiceHost.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\01_MROQuery.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\01_MROQuery.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\ServiceHost.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\refint\ServiceHost.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\ServiceHost.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\appsettings.Development.json
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\appsettings.json
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ServiceHost.staticwebassets.runtime.json
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ServiceHost.exe
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ServiceHost.deps.json
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ServiceHost.runtimeconfig.json
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ServiceHost.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ServiceHost.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Azure.Core.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Azure.Identity.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Humanizer.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.AspNetCore.Razor.Language.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.Bcl.AsyncInterfaces.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.Build.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.Build.Framework.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.CodeAnalysis.AnalyzerUtilities.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.CodeAnalysis.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.CodeAnalysis.CSharp.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.CodeAnalysis.CSharp.Features.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.CodeAnalysis.Elfie.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.CodeAnalysis.Features.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.CodeAnalysis.Razor.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.CodeAnalysis.Scripting.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.CodeAnalysis.VisualBasic.Features.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.CodeAnalysis.VisualBasic.Workspaces.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.CodeAnalysis.Workspaces.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.Data.SqlClient.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.DiaSymReader.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.DotNet.Scaffolding.Shared.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.EntityFrameworkCore.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.EntityFrameworkCore.Design.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.EntityFrameworkCore.Relational.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.Extensions.DependencyModel.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.Identity.Client.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.IdentityModel.Abstractions.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.IdentityModel.Logging.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.IdentityModel.Protocols.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.IdentityModel.Tokens.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.NET.StringTools.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.SqlServer.Server.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.VisualStudio.Web.CodeGeneration.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\dotnet-aspnet-codegenerator-design.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Microsoft.Win32.SystemEvents.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Mono.TextTemplating.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\Newtonsoft.Json.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\NuGet.Common.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\NuGet.Configuration.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\NuGet.DependencyResolver.Core.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\NuGet.Frameworks.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\NuGet.LibraryModel.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\NuGet.Packaging.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\NuGet.ProjectModel.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\NuGet.Protocol.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\NuGet.Versioning.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\System.CodeDom.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\System.Composition.AttributedModel.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\System.Composition.Convention.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\System.Composition.Hosting.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\System.Composition.Runtime.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\System.Composition.TypedParts.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\System.Configuration.ConfigurationManager.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\System.Drawing.Common.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\System.IdentityModel.Tokens.Jwt.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\System.Memory.Data.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\System.Reflection.MetadataLoadContext.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\System.Runtime.Caching.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\System.Security.Cryptography.ProtectedData.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\System.Security.Permissions.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\System.Windows.Extensions.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\cs\Microsoft.CodeAnalysis.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\de\Microsoft.CodeAnalysis.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\es\Microsoft.CodeAnalysis.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\fr\Microsoft.CodeAnalysis.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\it\Microsoft.CodeAnalysis.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ja\Microsoft.CodeAnalysis.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ko\Microsoft.CodeAnalysis.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pl\Microsoft.CodeAnalysis.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ru\Microsoft.CodeAnalysis.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\tr\Microsoft.CodeAnalysis.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\cs\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\de\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\es\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\fr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\it\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ja\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ko\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pl\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pt-BR\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ru\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\tr\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hans\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hant\Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\cs\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\de\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\es\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\fr\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\it\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ja\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ko\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pl\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pt-BR\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ru\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\tr\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hans\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hant\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\cs\Microsoft.CodeAnalysis.Features.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\de\Microsoft.CodeAnalysis.Features.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\es\Microsoft.CodeAnalysis.Features.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\fr\Microsoft.CodeAnalysis.Features.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\it\Microsoft.CodeAnalysis.Features.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ja\Microsoft.CodeAnalysis.Features.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ko\Microsoft.CodeAnalysis.Features.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pl\Microsoft.CodeAnalysis.Features.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pt-BR\Microsoft.CodeAnalysis.Features.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ru\Microsoft.CodeAnalysis.Features.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\tr\Microsoft.CodeAnalysis.Features.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hans\Microsoft.CodeAnalysis.Features.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hant\Microsoft.CodeAnalysis.Features.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\cs\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\de\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\es\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\fr\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\it\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ja\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ko\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pl\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pt-BR\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ru\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\cs\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\de\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\es\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\fr\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\it\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ja\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ko\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pl\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pt-BR\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ru\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\tr\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hans\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hant\Microsoft.CodeAnalysis.VisualBasic.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\cs\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\de\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\es\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\fr\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\it\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ja\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ko\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pl\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pt-BR\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ru\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\tr\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hans\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hant\Microsoft.CodeAnalysis.VisualBasic.Features.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\cs\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\de\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\es\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\fr\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\it\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ja\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ko\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pl\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pt-BR\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ru\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\tr\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hans\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hant\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\01_MROQuery.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\0_Framework.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\OrganizationManagement.Application.Contracts.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\OrganizationManagement.Application.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\OrganizationManagement.Configuration.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\OrganizationManagement.Domain.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\OrganizationManagement.Infrastructure.EFCore.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\OrganizationManagement.Configuration.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\01_MROQuery.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\0_Framework.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\OrganizationManagement.Application.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\OrganizationManagement.Application.Contracts.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\OrganizationManagement.Domain.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net70\OrganizationManagement.Infrastructure.EFCore.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\ServiceHost.csproj.AssemblyReference.cache
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\ServiceHost.GeneratedMSBuildEditorConfig.editorconfig
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\ServiceHost.AssemblyInfoInputs.cache
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\ServiceHost.AssemblyInfo.cs
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\ServiceHost.csproj.CoreCompileInputs.cache
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\ServiceHost.MvcApplicationPartsAssemblyInfo.cache
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\ServiceHost.RazorAssemblyInfo.cache
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\ServiceHost.RazorAssemblyInfo.cs
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\staticwebassets\msbuild.ServiceHost.Microsoft.AspNetCore.StaticWebAssets.props
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\staticwebassets\msbuild.build.ServiceHost.props
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\staticwebassets\msbuild.buildMultiTargeting.ServiceHost.props
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\staticwebassets\msbuild.buildTransitive.ServiceHost.props
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\staticwebassets.pack.json
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\staticwebassets.build.json
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\staticwebassets.development.json
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\scopedcss\bundle\ServiceHost.styles.css
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\ServiceHost.csproj.CopyComplete
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\ServiceHost.genruntimeconfig.cache
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net70\ref\ServiceHost.dll

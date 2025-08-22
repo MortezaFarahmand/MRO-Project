@@ -1,0 +1,42 @@
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\01_MROQuery\bin\Debug\net7.0\01_MROQuery.deps.json
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\01_MROQuery\bin\Debug\net7.0\01_MROQuery.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\01_MROQuery\bin\Debug\net7.0\01_MROQuery.pdb
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\01_MROQuery\bin\Debug\net7.0\0_Framework.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\01_MROQuery\bin\Debug\net7.0\OrganizationManagement.Application.Contracts.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\01_MROQuery\bin\Debug\net7.0\OrganizationManagement.Domain.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\01_MROQuery\bin\Debug\net7.0\OrganizationManagement.Infrastructure.EFCore.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\01_MROQuery\bin\Debug\net7.0\OrganizationManagement.Infrastructure.EFCore.pdb
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\01_MROQuery\bin\Debug\net7.0\0_Framework.pdb
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\01_MROQuery\bin\Debug\net7.0\OrganizationManagement.Application.Contracts.pdb
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\01_MROQuery\bin\Debug\net7.0\OrganizationManagement.Domain.pdb
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\01_MROQuery\obj\Debug\net7.0\01_MROQuery.csproj.AssemblyReference.cache
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\01_MROQuery\obj\Debug\net7.0\01_MROQuery.GeneratedMSBuildEditorConfig.editorconfig
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\01_MROQuery\obj\Debug\net7.0\01_MROQuery.AssemblyInfoInputs.cache
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\01_MROQuery\obj\Debug\net7.0\01_MROQuery.AssemblyInfo.cs
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\01_MROQuery\obj\Debug\net7.0\01_MROQuery.csproj.CoreCompileInputs.cache
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\01_MROQuery\obj\Debug\net7.0\01_MROQuery.csproj.CopyComplete
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\01_MROQuery\obj\Debug\net7.0\01_MROQuery.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\01_MROQuery\obj\Debug\net7.0\refint\01_MROQuery.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\01_MROQuery\obj\Debug\net7.0\01_MROQuery.pdb
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\01_MROQuery\obj\Debug\net7.0\ref\01_MROQuery.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\01_MROQuery\obj\Debug\net7.0\01_MROQuery.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\01_MROQuery\obj\Debug\net7.0\refint\01_MROQuery.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\01_MROQuery\obj\Debug\net7.0\01_MROQuery.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\01_MROQuery\bin\Debug\net7.0\01_MROQuery.deps.json
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\01_MROQuery\bin\Debug\net7.0\01_MROQuery.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\01_MROQuery\bin\Debug\net7.0\01_MROQuery.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\01_MROQuery\bin\Debug\net7.0\0_Framework.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\01_MROQuery\bin\Debug\net7.0\OrganizationManagement.Application.Contracts.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\01_MROQuery\bin\Debug\net7.0\OrganizationManagement.Domain.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\01_MROQuery\bin\Debug\net7.0\OrganizationManagement.Infrastructure.EFCore.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\01_MROQuery\bin\Debug\net7.0\OrganizationManagement.Infrastructure.EFCore.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\01_MROQuery\bin\Debug\net7.0\0_Framework.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\01_MROQuery\bin\Debug\net7.0\OrganizationManagement.Application.Contracts.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\01_MROQuery\bin\Debug\net7.0\OrganizationManagement.Domain.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\01_MROQuery\obj\Debug\net7.0\01_MROQuery.csproj.AssemblyReference.cache
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\01_MROQuery\obj\Debug\net7.0\01_MROQuery.GeneratedMSBuildEditorConfig.editorconfig
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\01_MROQuery\obj\Debug\net7.0\01_MROQuery.AssemblyInfoInputs.cache
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\01_MROQuery\obj\Debug\net7.0\01_MROQuery.AssemblyInfo.cs
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\01_MROQuery\obj\Debug\net7.0\01_MROQuery.csproj.CoreCompileInputs.cache
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\01_MROQuery\obj\Debug\net7.0\01_MROQuery.csproj.CopyComplete
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\01_MROQuery\obj\Debug\net7.0\ref\01_MROQuery.dll

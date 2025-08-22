@@ -1,0 +1,102 @@
+﻿@model OrganizationManagement.Application.Contracts.OrganizationAviationCode.EditOrganizationAviationCode
+@{
+}
+
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+    <h4 class="modal-title">Edit Organization Aviation Code " @Model.ICAO " </h4>
+</div>
+
+<form asp-page="./Index" asp-page-handler="Edit"
+      method="post"
+      data-ajax="true"
+      data-callback=""
+      data-action="Refresh"
+      enctype="multipart/form-data">
+
+    <div class="modal-body">
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="ICAO" class="control-label">ICAO</label>
+                    <input type="text" class="form-control" asp-for="ICAO">
+                    <span asp-validation-for="ICAO" class="error"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="IATA" class="control-label">IATA</label>
+                    <input type="text" class="form-control" asp-for="IATA">
+                    <span asp-validation-for="IATA" class="error"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label asp-for="Description" class="control-label">Description</label>
+                    <input type="text" class="form-control" asp-for="Description">
+                    <span asp-validation-for="Description" class="error"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="CivilAutority" class="control-label">Civil Authority</label>
+                    <input type="text" class="form-control" asp-for="CivilAutority" accept="image/*">
+                    <span asp-validation-for="CivilAutority" class="error"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="CallSign" class="control-label">Call-Sign</label>
+                    <input type="text" class="form-control" asp-for="CallSign" accept="image/*">
+                    <span asp-validation-for="CallSign" class="error"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label asp-for="Comment" class="control-label">Comment</label>
+                    <input type="text" class="form-control" asp-for="Comment">
+                    <span asp-validation-for="Comment" class="error"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="CountryId" class="control-label">Country</label>
+                    <select type="text" class="form-control" asp-for="CountryId"
+                            asp-items='new SelectList(Model.Countrys, "Id", "Name")'>
+                        <option value="0">-Country-</option>
+                    </select>
+                    <span asp-validation-for="CountryId" class="error"></span>
+                </div>
+            </div>
+            @*<div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="Feild_1" class="control-label">Feild_1</label>
+                    <input type="text" class="form-control" asp-for="Feild_1">
+                    <span asp-validation-for="Feild_1" class="error"></span>
+                </div>
+            </div>*@
+        </div>
+
+        <input type="hidden" asp-for="Id" value="@Model.Id" />
+
+    </div>
+    
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-info waves-effect waves-light">Edit</button>
+    </div>
+</form>

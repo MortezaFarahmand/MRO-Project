@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net90</TargetFramework>
+    <RootNamespace>_01_MROQuery</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OrganizationManagement.Infrastructure.EFCore\OrganizationManagement.Infrastructure.EFCore.csproj" />
+  </ItemGroup>
+
+</Project>

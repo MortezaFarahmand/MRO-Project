@@ -1,0 +1,16 @@
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Application.Contracts\bin\Debug\net90\OrganizationManagement.Application.Contracts.deps.json
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Application.Contracts\bin\Debug\net90\OrganizationManagement.Application.Contracts.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Application.Contracts\bin\Debug\net90\OrganizationManagement.Application.Contracts.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Application.Contracts\bin\Debug\net90\0_Framework.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Application.Contracts\bin\Debug\net90\0_Framework.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Application.Contracts\obj\Debug\net90\OrganizationManagement.Application.Contracts.csproj.AssemblyReference.cache
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Application.Contracts\obj\Debug\net90\OrganizationManagement.Application.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Application.Contracts\obj\Debug\net90\OrganizationManagement.Application.Contracts.AssemblyInfoInputs.cache
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Application.Contracts\obj\Debug\net90\OrganizationManagement.Application.Contracts.AssemblyInfo.cs
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Application.Contracts\obj\Debug\net90\OrganizationManagement.Application.Contracts.csproj.CoreCompileInputs.cache
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Application.Contracts\obj\Debug\net90\OrganizationManagement.Application.Contracts.sourcelink.json
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Application.Contracts\obj\Debug\net90\Organiza.24FD22ED.Up2Date
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Application.Contracts\obj\Debug\net90\OrganizationManagement.Application.Contracts.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Application.Contracts\obj\Debug\net90\refint\OrganizationManagement.Application.Contracts.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Application.Contracts\obj\Debug\net90\OrganizationManagement.Application.Contracts.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Application.Contracts\obj\Debug\net90\ref\OrganizationManagement.Application.Contracts.dll

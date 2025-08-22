@@ -1,0 +1,157 @@
+﻿@model OrganizationManagement.Application.Contracts.ApprovalAuthority.EditApprovalAuthority 
+@{
+}
+
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+    <h4 class="modal-title">Edit Approval Authority " @Model.NameEn " </h4>
+</div>
+
+<form asp-page="./Index" asp-page-handler="Edit"
+      method="post"
+      data-ajax="true"
+      data-callback=""
+      data-action="Refresh"
+      enctype="multipart/form-data">
+
+    <div class="modal-body">
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="NameEn" class="control-label">NameEn</label>
+                    <input type="text" class="form-control" asp-for="NameEn" onchange="makeSlug('NameEn', 'Slug')" />
+                    <span asp-validation-for="NameEn" class="error"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="NameFa" class="control-label">NameFa</label>
+                    <input type="text" class="form-control" asp-for="NameFa" />
+                    <span asp-validation-for="NameFa" class="error"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="Slug" class="control-label">Slug</label>
+                    <input type="text" class="form-control" asp-for="Slug" />
+                    <span asp-validation-for="Slug" class="error"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group no-margin">
+                    <label asp-for="Description" class="control-label">Description</label>
+                    <textarea class="form-control autogrow" asp-for="Description" onchange="fillField('Description', 'MetaDescription')"
+                              style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 104px;"></textarea>
+                    <span asp-validation-for="Description" class="error"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="Address" class="control-label">Address</label>
+                    <input type="text" class="form-control" asp-for="Address" />
+                    <span asp-validation-for="Address" class="error"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="WebSite" class="control-label">WebSite</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" asp-for="WebSite">
+                    <span class="input-group-addon"><i class="md md-web"></i></span>
+                </div>
+                <span asp-validation-for="WebSite" class="error"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8">
+                <div class="form-group">
+                    <label asp-for="CountryId" class="control-label">Country</label>
+                    <select type="text" class="form-control" asp-for="CountryId"
+                            asp-items='new SelectList(Model.Countries, "Id", "Name")'>
+                        <option value="0">-Country-</option>
+                    </select>
+                    <span asp-validation-for="CountryId" class="error"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Code" class="control-label">Code</label>
+                    <input type="text" class="form-control" asp-for="Code" />
+                    <span asp-validation-for="Address" class="error"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="LogoPicture" class="control-label">Logo-Picture</label>
+                    <input type="file" class="form-control" asp-for="LogoPicture" accept="image/*" />
+                    <span asp-validation-for="LogoPicture" class="error"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="LogoPictureAlt" class="control-label">Logo-Picture Alternate</label>
+                    <input type="text" class="form-control" asp-for="LogoPictureAlt" />
+                    <span asp-validation-for="LogoPictureAlt" class="error"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="LogoPictureTitle" class="control-label">Logo-Picture Title</label>
+                    <input type="text" class="form-control" asp-for="LogoPictureTitle" />
+                    <span asp-validation-for="LogoPictureTitle" class="error"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label asp-for="Keywords" class="control-label">Keywords</label>
+                    <input type="text" class="form-control" asp-for="Keywords" />
+                    <span asp-validation-for="Keywords" class="error"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group no-margin">
+                    <label asp-for="MetaDescription" class="control-label">Meta-Description</label>
+                    <textarea class="form-control autogrow" asp-for="MetaDescription"
+                              style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 104px;"></textarea>
+                    <span asp-validation-for="MetaDescription" class="error"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label asp-for="Remark" class="control-label">Remark</label>
+                    <textarea class="form-control autogrow" asp-for="Remark"
+                              style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 94px;"></textarea>
+                    <span asp-validation-for="Remark" class="error"></span>
+                </div>
+            </div>
+        </div>
+
+        <input type="hidden" asp-for="Id" value="@Model.Id" />
+
+    </div>
+    
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-info waves-effect waves-light">Edit</button>
+    </div>
+</form>

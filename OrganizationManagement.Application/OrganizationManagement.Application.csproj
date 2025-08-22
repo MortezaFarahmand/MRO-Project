@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net90</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OrganizationManagement.Application.Contracts\OrganizationManagement.Application.Contracts.csproj" />
+    <ProjectReference Include="..\OrganizationManagement.Domain\OrganizationManagement.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

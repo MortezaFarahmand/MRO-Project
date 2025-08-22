@@ -1,0 +1,520 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+
+
+    
+<div id="content" class="site-content">
+    
+    <!-- SLIDER -->
+    @await Component.InvokeAsync("Slide")
+    <!-- SLIDER  -->
+
+    <section class="home4-about">
+        <div class="container">
+            <div class="flex-row">
+                @*<div class="home4-top-left">
+                    <div class="home4-top-left-img">
+                        <img src="~/Theme/assets/img/slide_header_1.png" alt="">
+                    </div>
+                </div>
+                <div class="home4-top-right align-self-center">
+                    <h6>our experience boost your business</h6>
+                    <h2>Top Rated Online <br> Marketing Company</h2>
+                    <p>We bet you don’t spend much time on the 2nd page of Google – so why should your website?</p>
+                    <div class="ot-button">
+                        <a href="#" class="octf-btn octf-btn-primary octf-btn-icon"><span>Start Now <i class="flaticon-right-arrow-1"></i></span></a>
+                    </div>
+                </div>*@
+
+                <div class="col-md-6 col-sm-12 col-xs-12 align-self-center">
+                    <div class="home4-about-left">
+                        <div class="ot-heading left-align">
+                            <h6><span>about us</span></h6>
+                            <h2 class="main-heading">A platform to facilitate matters and improve flight qualification in the aviation industry</h2>
+                        </div>
+                        <p class="font22 text-dark">Among the methods of making smart and using data science is the use of a comprehensive informational and intelligent software...</p>
+                        <p class="m-b18">Technology changes the way businesses interact with their customers, make strategic decisions, and build workflows. For instance, such actions as booking a flight via phone or conducting solely offline surveys seem unusual these days. Real-time access to data — the 21st-century oil — allows organizations to take informed steps towards operational efficiency.</p>
+                        <div class="home4-about-left-btn">
+                            <a href="#">
+                                <img src="~/Theme/assets/img/gg-rating.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <div class="home4-about-right">
+                        <img src="~/Theme/assets/img/slide_AviationStartUp_1.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="h4-social-icons">
+            <a class="social-icon" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a class="social-icon" href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a class="social-icon" href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a class="social-icon" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </section>
+
+    <section class="home4-process p-lr30">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 md-m-b30">
+                    <div class="service-box s-box">
+                        <div class="overlay"></div>
+                        <span class="big-number">01</span>
+                        <div class="icon-main number-box"><span class="flaticon-pie-chart-1"></span></div>
+                        <div class="content-box">
+                            <h5>Social Media Marketing</h5>
+                            <p>Create and manage top-performing social campaigns and start.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 md-m-b30">
+                    <div class="service-box s-box">
+                        <div class="overlay"></div>
+                        <span class="big-number">02</span>
+                        <div class="icon-main number-box"><span class="flaticon-document"></span></div>
+                        <div class="content-box">
+                            <h5>App Development</h5>
+                            <p>Create, publish, and promote engaging content to generate more traffic.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 md-m-b30">
+                    <div class="service-box s-box">
+                        <div class="overlay"></div>
+                        <span class="big-number">03</span>
+                        <div class="icon-main number-box"><span class="flaticon-search-1"></span></div>
+                        <div class="content-box">
+                            <h5>SEO Optimization</h5>
+                            <p>Get more website traffic, more customers, and more online visibility.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <div class="service-box s-box elementor-animation-float">
+                        <div class="overlay"></div>
+                        <span class="big-number">04</span>
+                        <div class="icon-main number-box"><span class="flaticon-pie-chart"></span></div>
+                        <div class="content-box">
+                            <h5>Content Marketing</h5>
+                            <p>You can provide the answers that your potential customers are trying .</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @*<section class="home4-about">
+        <div class="container">
+            <div class="flex-row">
+                <div class="col-md-6 col-sm-12 col-xs-12 align-self-center">
+                    <div class="home4-about-left">
+                        <div class="ot-heading left-align">
+                            <h6><span>about us</span></h6>
+                            <h2 class="main-heading">Enjoy Full-Service Digital Marketing Expertise</h2>
+                        </div>
+                        <p class="font22 text-dark">Our approach to SEO is uniquely built around what we know works…and what we know doesn’t work.</p>
+                        <p class="m-b18">Over the years, we have worked with Fortune 500s and brand-new startups. We help ambitious businesses like yours generate more profits by building awareness, driving web traffic, connecting with customers, and growing overall sales.</p>
+                        <div class="home4-about-left-btn">
+                            <a href="#">
+                                <img src="~/Theme/assets/img/gg-rating.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <div class="home4-about-right">
+                        <img src="~/Theme/assets/img/slide_AviationStartUp_1.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>*@
+
+    <section class="home4-partners p-b110">
+        <div class="container">
+            <div class="partners">
+                <div class="owl-carousel home-client-carousel">
+                    <div class="partners-slide">
+                        <a href="#" class="client-logo">
+                            <figure class="partners-slide-inner">
+                                <img class="partners-slide-image" src="https://via.placeholder.com/137x31.png" alt="">
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="partners-slide">
+                        <a href="#" class="client-logo">
+                            <figure class="partners-slide-inner">
+                                <img class="partners-slide-image" src="https://via.placeholder.com/137x31.png" alt="">
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="partners-slide">
+                        <a href="#" class="client-logo">
+                            <figure class="partners-slide-inner">
+                                <img class="partners-slide-image" src="https://via.placeholder.com/137x31.png" alt="">
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="partners-slide">
+                        <a href="#" class="client-logo">
+                            <figure class="partners-slide-inner">
+                                <img class="partners-slide-image" src="https://via.placeholder.com/137x31.png" alt="">
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="partners-slide">
+                        <a href="#" class="client-logo">
+                            <figure class="partners-slide-inner">
+                                <img class="partners-slide-image" src="https://via.placeholder.com/137x31.png" alt="">
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="partners-slide">
+                        <a href="#" class="client-logo">
+                            <figure class="partners-slide-inner">
+                                <img class="partners-slide-image" src="https://via.placeholder.com/137x31.png" alt="">
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="partners-slide">
+                        <a href="#" class="client-logo">
+                            <figure class="partners-slide-inner">
+                                <img class="partners-slide-image" src="https://via.placeholder.com/137x31.png" alt="">
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="partners-slide">
+                        <a href="#" class="client-logo">
+                            <figure class="partners-slide-inner">
+                                <img class="partners-slide-image" src="https://via.placeholder.com/137x31.png" alt="">
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="partners-slide">
+                        <a href="#" class="client-logo">
+                            <figure class="partners-slide-inner">
+                                <img class="partners-slide-image" src="https://via.placeholder.com/137x31.png" alt="">
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="partners-slide">
+                        <a href="#" class="client-logo">
+                            <figure class="partners-slide-inner">
+                                <img class="partners-slide-image" src="https://via.placeholder.com/137x31.png" alt="">
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="partners-slide">
+                        <a href="#" class="client-logo">
+                            <figure class="partners-slide-inner">
+                                <img class="partners-slide-image" src="https://via.placeholder.com/137x31.png" alt="">
+                            </figure>
+                        </a>
+                    </div>
+                    <div class="partners-slide">
+                        <a href="#" class="client-logo">
+                            <figure class="partners-slide-inner">
+                                <img class="partners-slide-image" src="https://via.placeholder.com/137x31.png" alt="">
+                            </figure>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="home4-service">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-xs-12">
+                    <div class="ot-heading text-center">
+                        <h6><span>our services</span></h6>
+                        <h2 class="main-heading">Introduce Best <br> SEO Services for Business</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-row justify-content-center">
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="icon-box s3">
+                        <div class="bg-s3"></div>
+                        <div class="bg-before"></div>
+                        <div class="bg-after"></div>
+                        <div class="icon-main">
+                            <img src="https://via.placeholder.com/170x156.png" alt="All Sizes Business">
+                        </div>
+                        <div class="content-box">
+                            <h5>All Sizes Business</h5>
+                            <p>You can provide the answers that your potential customers are trying to find, so you can become the industry.</p>
+                        </div>
+                        <div class="action-box">
+                            <a href="#" class="octf-btn octf-btn-icon octf-btn-primary">Learn More<i class="flaticon-right-arrow-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="icon-box s3">
+                        <div class="bg-s3"></div>
+                        <div class="bg-before"></div>
+                        <div class="bg-after"></div>
+                        <div class="icon-main">
+                            <img src="https://via.placeholder.com/170x156.png" alt="Awesome Results">
+                        </div>
+                        <div class="content-box">
+                            <h5>Awesome Results</h5>
+                            <p>Create and manage top-performing social campaigns and start developing a dedicated customer fan base.</p>
+                        </div>
+                        <div class="action-box">
+                            <a href="#" class="octf-btn octf-btn-icon octf-btn-primary">Learn More<i class="flaticon-right-arrow-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="icon-box s3">
+                        <div class="bg-s3"></div>
+                        <div class="bg-before"></div>
+                        <div class="bg-after"></div>
+                        <div class="icon-main">
+                            <img src="https://via.placeholder.com/170x156.png" alt="Significant ROI">
+                        </div>
+                        <div class="content-box">
+                            <h5>Significant ROI</h5>
+                            <p>Get more website traffic, more customers, and more online visibility with powerful  SEO services.</p>
+                        </div>
+                        <div class="action-box">
+                            <a href="#" class="octf-btn octf-btn-icon octf-btn-primary">Learn More<i class="flaticon-right-arrow-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="home4-benefits">
+        <div class="container">
+            <div class="flex-row">
+                <div class="col-md-6 col-sm-12 col-xs-12 sm-m-b40">
+                    <div class="home4-benefits-left">
+                        <img src="https://via.placeholder.com/754x684.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12 align-self-center">
+                    <div class="home4-benefits-right">
+                        <div class="ot-heading left-align">
+                            <h6><span>our benefits</span></h6>
+                            <h2 class="main-heading">Grow Your Business <br> with Our Marketing Agency</h2>
+                        </div>
+                        <div class="row p-b30">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="benefits-block">
+                                    <h5 class="number">01.</h5>
+                                    <h5>PPC Advertising</h5>
+                                    <p>Target your ideal search phrases and get found at the top of search results. PPC allows you.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="benefits-block">
+                                    <h5 class="number">02.</h5>
+                                    <h5>Web Development</h5>
+                                    <p>Your website has to impress your visitors within just a few seconds. If it runs slow, if it feels outdated.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="benefits-block">
+                                    <h5 class="number">03.</h5>
+                                    <h5>Media Managment</h5>
+                                    <p>Create, publish, and promote engaging content to generate and build a dedicated community.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="benefits-block">
+                                    <h5 class="number">04.</h5>
+                                    <h5>Keyword Research</h5>
+                                    <p>We select themed keywords based on user-intent to solidify rankings based on what users searches</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skill-pricing">
+        <section class="home4-skills">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-13 sm-m-b60">
+                        <div class="circle-progress" data-color1="#ff403e" data-color2="#ff811b">
+                            <div class="inner-bar" data-percent="75">
+                                <span><span class="percent">75</span>%</span>
+                            </div>
+                            <h4>SEO &amp; Marketing</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-13 m-t60 sm-m-t0 sm-m-b60">
+                        <div class="circle-progress" data-color1="#ff403e" data-color2="#ff811b">
+                            <div class="inner-bar" data-percent="43">
+                                <span><span class="percent">43</span>%</span>
+                            </div>
+                            <h4>Keywords Results</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-13 xs-m-b60">
+                        <div class="circle-progress" data-color1="#ff403e" data-color2="#ff811b">
+                            <div class="inner-bar" data-percent="66">
+                                <span><span class="percent">66</span>%</span>
+                            </div>
+                            <h4>Google Analytics</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-13 m-t60 sm-m-t0">
+                        <div class="circle-progress" data-color1="#ff403e" data-color2="#ff811b">
+                            <div class="inner-bar" data-percent="15">
+                                <span><span class="percent">15</span>%</span>
+                            </div>
+                            <h4>Off Page SEO</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="home4-pricing particles-js-b" data-color="#fe4c1c,#00c3ff,#0160e7" data-id="i4">
+            <div class="container">
+                <div class="ot-heading text-center">
+                    <h6><span>choose your plan</span></h6>
+                    <h2 class="main-heading">Flexible Pricing Plans</h2>
+                </div>
+                <p class="text-center m-b40">
+                    We have experience working with large and small businesses and are ready to<br>
+                    develop a targeted strategy and plan that’s just right for you.
+                </p>
+                <div class="row">
+                    <div class="col-md-4 sm-p-b60">
+                        <div class="ot-pricing-table bg-shape s1">
+                            <span class="title-table">Standard</span>
+                            <div class="inner-table">
+                                <img src="https://via.placeholder.com/93x110.png" alt="Standard">
+                                <h2><sup>$</sup> 69.99</h2>
+                                <p>Monthly Package</p>
+                                <div class="details">
+                                    <ul>
+                                        <li>Social Media Marketing</li>
+                                        <li>2.100 Keywords</li>
+                                        <li>One Way Link Building</li>
+                                        <li>5 Free Optimization</li>
+                                        <li>3 Press Releases</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="#" class="octf-btn octf-btn-icon octf-btn-secondary">Choose Plane <i class="flaticon-right-arrow-1"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 sm-p-b60">
+                        <div class="ot-pricing-table bg-shape s3 feature">
+                            <span class="title-table">Economy</span>
+                            <div class="inner-table">
+                                <img src="https://via.placeholder.com/93x110.png" alt="Economy">
+                                <h2><sup>$</sup> 79.99</h2>
+                                <p>Monthly Package</p>
+                                <div class="details">
+                                    <ul>
+                                        <li>Social Media Marketing</li>
+                                        <li>3.100 Keywords</li>
+                                        <li>One Way Link Building</li>
+                                        <li>10 Free Optimization</li>
+                                        <li>5 Press Releases</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="#" class="octf-btn octf-btn-icon octf-btn-primary">Choose Plane <i class="flaticon-right-arrow-1"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="ot-pricing-table bg-shape s2">
+                            <span class="title-table">Executive</span>
+                            <div class="inner-table">
+                                <img src="https://via.placeholder.com/93x110.png" alt="Executive">
+                                <h2><sup>$</sup> 89.99</h2>
+                                <p>Monthly Package</p>
+                                <div class="details">
+                                    <ul>
+                                        <li>Social Media Marketing</li>
+                                        <li>5.100 Keywords</li>
+                                        <li>One Way Link Building</li>
+                                        <li>15 Free Optimization</li>
+                                        <li>10 Press Releases</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="#" class="octf-btn octf-btn-icon octf-btn-third">Choose Plane <i class="flaticon-right-arrow-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section class="home4-testimonial">
+        <div class="container">
+            <div class="flex-row">
+                <div class="col-md-6 col-sm-12 col-xs-12 align-self-center sm-m-b40">
+                    <div class="home4-testimonial-left">
+                        <div class="ot-heading left-align">
+                            <h6><span>real testimonials</span></h6>
+                            <h2 class="main-heading">What They Say About <br> Our Company?</h2>
+                        </div>
+                        <p>“After cycling through multiple SEO companies and seeing no results, I finally came across SEO. Choosing to work with Onum is hands down one of the best business investment decisions I have ever made.”</p>
+                        <div class="row">
+                            <div class="mics-testimonials">
+                                <div class="mics-testimonials-img">
+                                    <a href="#"><img src="https://via.placeholder.com/100x100.png" class="circle-img" alt=""></a>
+                                </div>
+                                <div class="mics-testimonials-content align-self-center">
+                                    <h6>Taylor Green,</h6>
+                                    <span>Client of Company</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <div class="home4-testimonial-right">
+                        <img src="https://via.placeholder.com/777x676.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR BLOGs -->
+    @await Component.InvokeAsync("OrganizationGroup")
+    <!-- OUR BLOGs -->
+
+    <section class="home4-cta">
+        <div class="container">
+            <div class="flex-row">
+                <div class="col-md-12 col-xs-12 text-center">
+                    <div class="home4-cta-block">
+                        <h2>Take Your Website to Next<br> Level Right Now!</h2>
+                        <div class="ot-button">
+                            <a href="#" class="octf-btn octf-btn-white octf-btn-icon"><span>Start Now <i class="flaticon-right-arrow-1"></i></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>

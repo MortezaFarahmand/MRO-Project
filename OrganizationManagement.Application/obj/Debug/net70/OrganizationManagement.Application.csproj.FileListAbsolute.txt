@@ -1,0 +1,38 @@
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\OrganizationManagement.Application\bin\Debug\net70\OrganizationManagement.Application.deps.json
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\OrganizationManagement.Application\bin\Debug\net70\OrganizationManagement.Application.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\OrganizationManagement.Application\bin\Debug\net70\OrganizationManagement.Application.pdb
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\OrganizationManagement.Application\bin\Debug\net70\0_Framework.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\OrganizationManagement.Application\bin\Debug\net70\OrganizationManagement.Application.Contracts.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\OrganizationManagement.Application\bin\Debug\net70\OrganizationManagement.Domain.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\OrganizationManagement.Application\bin\Debug\net70\OrganizationManagement.Application.Contracts.pdb
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\OrganizationManagement.Application\bin\Debug\net70\OrganizationManagement.Domain.pdb
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\OrganizationManagement.Application\bin\Debug\net70\0_Framework.pdb
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\OrganizationManagement.Application\obj\Debug\net70\OrganizationManagement.Application.csproj.AssemblyReference.cache
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\OrganizationManagement.Application\obj\Debug\net70\OrganizationManagement.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\OrganizationManagement.Application\obj\Debug\net70\OrganizationManagement.Application.AssemblyInfoInputs.cache
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\OrganizationManagement.Application\obj\Debug\net70\OrganizationManagement.Application.AssemblyInfo.cs
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\OrganizationManagement.Application\obj\Debug\net70\OrganizationManagement.Application.csproj.CoreCompileInputs.cache
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\OrganizationManagement.Application\obj\Debug\net70\OrganizationManagement.Application.csproj.CopyComplete
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\OrganizationManagement.Application\obj\Debug\net70\OrganizationManagement.Application.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\OrganizationManagement.Application\obj\Debug\net70\refint\OrganizationManagement.Application.dll
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\OrganizationManagement.Application\obj\Debug\net70\OrganizationManagement.Application.pdb
+D:\ASP.NET core - ATRIYA\MRO_Project\Code\MRO_Project\OrganizationManagement.Application\obj\Debug\net70\ref\OrganizationManagement.Application.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Application\obj\Debug\net70\OrganizationManagement.Application.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Application\obj\Debug\net70\refint\OrganizationManagement.Application.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Application\obj\Debug\net70\OrganizationManagement.Application.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Application\bin\Debug\net70\OrganizationManagement.Application.deps.json
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Application\bin\Debug\net70\OrganizationManagement.Application.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Application\bin\Debug\net70\OrganizationManagement.Application.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Application\bin\Debug\net70\0_Framework.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Application\bin\Debug\net70\OrganizationManagement.Application.Contracts.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Application\bin\Debug\net70\OrganizationManagement.Domain.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Application\bin\Debug\net70\OrganizationManagement.Application.Contracts.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Application\bin\Debug\net70\OrganizationManagement.Domain.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Application\bin\Debug\net70\0_Framework.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Application\obj\Debug\net70\OrganizationManagement.Application.csproj.AssemblyReference.cache
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Application\obj\Debug\net70\OrganizationManagement.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Application\obj\Debug\net70\OrganizationManagement.Application.AssemblyInfoInputs.cache
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Application\obj\Debug\net70\OrganizationManagement.Application.AssemblyInfo.cs
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Application\obj\Debug\net70\OrganizationManagement.Application.csproj.CoreCompileInputs.cache
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Application\obj\Debug\net70\OrganizationManagement.Application.csproj.CopyComplete
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Application\obj\Debug\net70\ref\OrganizationManagement.Application.dll
