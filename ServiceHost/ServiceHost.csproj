@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\OrganizationManagement.Configuration\OrganizationManagement.Configuration.csproj" />
+    <ProjectReference Include="..\PersonnelManagement.Configuration\PersonnelManagement.Configuration.csproj" />
   </ItemGroup>
 
   <ItemGroup>

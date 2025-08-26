@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v9.0": {
       "01_MROQuery/1.0.0": {
         "dependencies": {
-          "OrganizationManagement.Infrastructure.EFCore": "1.0.0"
+          "OrganizationManagement.Infrastructure.EFCore": "1.0.0",
+          "PersonnelManagement.Infrastructure.EFCore": "1.0.0"
         },
         "runtime": {
           "01_MROQuery.dll": {}
@@ -2102,6 +2103,44 @@
             "fileVersion": "1.0.0.0"
           }
         }
+      },
+      "PersonnelManagement.Application.Contracts/1.0.0": {
+        "dependencies": {
+          "0_Framework": "1.0.0",
+          "Microsoft.AspNetCore.Http": "2.3.0",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "9.0.0"
+        },
+        "runtime": {
+          "PersonnelManagement.Application.Contracts.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "PersonnelManagement.Domain/1.0.0": {
+        "dependencies": {
+          "0_Framework": "1.0.0",
+          "PersonnelManagement.Application.Contracts": "1.0.0"
+        },
+        "runtime": {
+          "PersonnelManagement.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "PersonnelManagement.Infrastructure.EFCore/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "9.0.8",
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.8",
+          "PersonnelManagement.Domain": "1.0.0"
+        },
+        "runtime": {
+          "PersonnelManagement.Infrastructure.EFCore.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -3240,6 +3279,21 @@
       "sha512": ""
     },
     "OrganizationManagement.Infrastructure.EFCore/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PersonnelManagement.Application.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PersonnelManagement.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PersonnelManagement.Infrastructure.EFCore/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -2874,6 +2874,50 @@
         "runtime": {
           "bin/placeholder/OrganizationManagement.Infrastructure.EFCore.dll": {}
         }
+      },
+      "PersonnelManagement.Application.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "0_Framework": "1.0.0",
+          "Microsoft.AspNetCore.Http": "2.3.0",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "9.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PersonnelManagement.Application.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PersonnelManagement.Application.Contracts.dll": {}
+        }
+      },
+      "PersonnelManagement.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "0_Framework": "1.0.0",
+          "PersonnelManagement.Application.Contracts": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PersonnelManagement.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PersonnelManagement.Domain.dll": {}
+        }
+      },
+      "PersonnelManagement.Infrastructure.EFCore/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "9.0.8",
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.8",
+          "PersonnelManagement.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PersonnelManagement.Infrastructure.EFCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PersonnelManagement.Infrastructure.EFCore.dll": {}
+        }
       }
     }
   },
@@ -7717,11 +7761,27 @@
       "type": "project",
       "path": "../OrganizationManagement.Infrastructure.EFCore/OrganizationManagement.Infrastructure.EFCore.csproj",
       "msbuildProject": "../OrganizationManagement.Infrastructure.EFCore/OrganizationManagement.Infrastructure.EFCore.csproj"
+    },
+    "PersonnelManagement.Application.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../PersonnelManagement.Application.Contracts/PersonnelManagement.Application.Contracts.csproj",
+      "msbuildProject": "../PersonnelManagement.Application.Contracts/PersonnelManagement.Application.Contracts.csproj"
+    },
+    "PersonnelManagement.Domain/1.0.0": {
+      "type": "project",
+      "path": "../PersonnelManagement.Domain/PersonnelManagement.Domain.csproj",
+      "msbuildProject": "../PersonnelManagement.Domain/PersonnelManagement.Domain.csproj"
+    },
+    "PersonnelManagement.Infrastructure.EFCore/1.0.0": {
+      "type": "project",
+      "path": "../PersonnelManagement.Infrastructure.EFCore/PersonnelManagement.Infrastructure.EFCore.csproj",
+      "msbuildProject": "../PersonnelManagement.Infrastructure.EFCore/PersonnelManagement.Infrastructure.EFCore.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
-      "OrganizationManagement.Infrastructure.EFCore >= 1.0.0"
+      "OrganizationManagement.Infrastructure.EFCore >= 1.0.0",
+      "PersonnelManagement.Infrastructure.EFCore >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -7758,6 +7818,9 @@
           "projectReferences": {
             "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\OrganizationManagement.Infrastructure.EFCore\\OrganizationManagement.Infrastructure.EFCore.csproj": {
               "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\OrganizationManagement.Infrastructure.EFCore\\OrganizationManagement.Infrastructure.EFCore.csproj"
+            },
+            "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\PersonnelManagement.Infrastructure.EFCore\\PersonnelManagement.Infrastructure.EFCore.csproj": {
+              "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\PersonnelManagement.Infrastructure.EFCore\\PersonnelManagement.Infrastructure.EFCore.csproj"
             }
           }
         }

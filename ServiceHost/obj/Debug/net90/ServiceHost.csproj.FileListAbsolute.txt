@@ -279,7 +279,6 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\compressed\jyxbiu7lrk-k027fp2dol.gz
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\compressed\i3z1qqhaav-zfv3crmgus.gz
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\compressed\8slxfwfigj-e177ptm9oh.gz
-D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\compressed\u9wvhlby43-6f1b7bwh8y.gz
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\compressed\kwt2xihxer-t5cljvqq81.gz
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\compressed\op1v766fdi-3nyz4siwxf.gz
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\compressed\da330a1obr-rtcnleuw8b.gz
@@ -310,7 +309,6 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\compressed\0sj92rki0p-8n8e4trdei.gz
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\compressed\a8wy8pqy9j-7ut2rmch5b.gz
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\compressed\vfie65qnyz-5ipweew5fc.gz
-D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\compressed\4cu14pbyiw-352sxxfgrd.gz
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\compressed\xw92dipdsq-4tqpqrjqc2.gz
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\compressed\ica733v9pa-452vsmel7k.gz
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\compressed\5lwyugjb2u-94aumpgnyi.gz
@@ -2274,3 +2272,15 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\ServiceHost.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\ServiceHost.genruntimeconfig.cache
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\ref\ServiceHost.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net90\PersonnelManagement.Application.Contracts.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net90\PersonnelManagement.Application.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net90\PersonnelManagement.Configuration.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net90\PersonnelManagement.Domain.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net90\PersonnelManagement.Infrastructure.EFCore.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net90\PersonnelManagement.Configuration.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net90\PersonnelManagement.Application.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net90\PersonnelManagement.Application.Contracts.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net90\PersonnelManagement.Domain.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net90\PersonnelManagement.Infrastructure.EFCore.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\compressed\u9wvhlby43-88qbgaw8r7.gz
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\compressed\4cu14pbyiw-tkej34jen1.gz

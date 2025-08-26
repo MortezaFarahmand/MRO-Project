@@ -9,17 +9,20 @@ namespace PersonnelManagement.Domain.PersonGroupAgg
         //public int PersonId { get; private set; }
         public bool IsActive { get; private set; }
 
-        public PersonGroup(string descriotion, string remark)
+        public PersonGroup(string description, string remark, bool isActive)
         {
-            Description = descriotion;
+            Description = description;
             Remark = remark;
+            IsActive = isActive;
         }
 
-        public void Edit(string descriotion, string remark)
+        public void Edit(string description, string remark, bool isActive)
         {
-            Description = descriotion;
+            Description = description;
             Remark = remark;
+            IsActive = isActive;
         }
+
     }
 
 

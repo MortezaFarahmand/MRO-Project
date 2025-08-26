@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\OrganizationManagement.Infrastructure.EFCore\OrganizationManagement.Infrastructure.EFCore.csproj" />
+	  <ProjectReference Include="..\PersonnelManagement.Infrastructure.EFCore\PersonnelManagement.Infrastructure.EFCore.csproj" />
   </ItemGroup>
 
 </Project>
