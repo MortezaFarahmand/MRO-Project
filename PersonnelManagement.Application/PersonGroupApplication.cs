@@ -1,7 +1,6 @@
 ﻿using _0_Framework.Application;
 using PersonnelManagement.Application.Contracts.PersonGroup;
 using PersonnelManagement.Domain.PersonGroupAgg;
-using System;
 using System.Collections.Generic;
 
 namespace PersonnelManagement.Application

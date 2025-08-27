@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net90</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\BasicDataManagement.Application.Contract\BasicDataManagement.Application.Contract.csproj" />
+		<ProjectReference Include="..\BasicDataManagement.Domain\BasicDataManagement.Domain.csproj" />
+	</ItemGroup>
+
+</Project>

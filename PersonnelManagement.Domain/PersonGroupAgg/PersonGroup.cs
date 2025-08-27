@@ -13,7 +13,7 @@ namespace PersonnelManagement.Domain.PersonGroupAgg
         {
             Description = description;
             Remark = remark;
-            IsActive = isActive;
+            IsActive = true;
         }
 
         public void Edit(string description, string remark, bool isActive)

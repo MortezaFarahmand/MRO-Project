@@ -24,7 +24,7 @@
 
 //            var person = new Person(command.NameEn, command.NameFa, command.FamilyEn, command.FamilyFa, command.FatherName, command.Birthday,
 //                command.PassportNo, command.NationalCode, command.Attachment, command.Picture, command.PictureAlt, command.IDCartNo,
-//                command.Address, command.OrganizationId);
+////                command.Address, command.OrganizationId);
 
 //            _personRepository.Create(person);
 //            _personRepository.SaveChanges();

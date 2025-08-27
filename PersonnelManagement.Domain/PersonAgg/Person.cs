@@ -1,4 +1,5 @@
 ﻿using _0_Framework.Domain;
+using System.Collections.Generic;
 
 namespace PersonnelManagement.Domain.PersonAgg
 {
@@ -19,8 +20,8 @@ namespace PersonnelManagement.Domain.PersonAgg
         public long CityId { get; private set; }
         public long CountryId { get; private set; }
         public string Attachment { get; private set; }
-        public string Picture { get; private set; }
-        public string PictureAlt { get; private set; }
+        public string EducationalDegree { get; private set; }
+        public string EducationalField { get; private set; }
         public string IDCartNo { get; private set; }
         public string Address { get; private set; }
         public string MobileNo1 { get; private set; }
@@ -34,6 +35,7 @@ namespace PersonnelManagement.Domain.PersonAgg
         public bool IsActive { get; private set; }
         public long PersonGroupId { get; private set; }
         public long OrganizationId { get; private set; }
+        //public List<Picture> Pictures { get; private set; }
         //public List<Country> Countrys { get; private set; }
         //public Person()
         //{
@@ -41,7 +43,7 @@ namespace PersonnelManagement.Domain.PersonAgg
         //}
 
         public Person(string nameEn, string nameFa, string familyEn, string familyFa, string fatherName, string birthDay,
-            string passportNo, string nationalCode, string attachment, string picture, string pictureAlt, string iDCartNo,
+            string passportNo, string nationalCode, string attachment, string iDCartNo,
              string address, long organizationId, bool Activate)
         {
             NameEn = nameEn;
@@ -52,8 +54,6 @@ namespace PersonnelManagement.Domain.PersonAgg
             PassportNo = passportNo;
             NationalCode = nationalCode;
             Attachment = attachment;
-            Picture = picture;
-            PictureAlt = pictureAlt;
             IDCartNo = iDCartNo;
             Address = address;
             OrganizationId = organizationId;
@@ -72,9 +72,9 @@ namespace PersonnelManagement.Domain.PersonAgg
             PassportNo = passportNo;
             NationalCode = nationalCode;
             Attachment = attachment;
-            if (!string.IsNullOrWhiteSpace(picture))
-                Picture = picture;
-            PictureAlt = pictureAlt;
+            //if (!string.IsNullOrWhiteSpace(picture))
+            //    Picture = picture;
+            //PictureAlt = pictureAlt;
             IDCartNo = iDCartNo;
             Address = address;
             OrganizationId = organizationId;

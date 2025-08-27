@@ -4,7 +4,7 @@ using PersonnelManagement.Application;
 using PersonnelManagement.Application.Contracts.PersonGroup;
 using PersonnelManagement.Domain.PersonGroupAgg;
 using PersonnelManagement.Infrastructure.EFCore.Repository;
-using PersonnelnManagement.Infrastructure.EFCore;
+using PersonnelManagement.Infrastructure.EFCore;
 
 namespace PersonManagement.Configuration
 {

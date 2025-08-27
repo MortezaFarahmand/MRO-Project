@@ -1,0 +1,24 @@
+﻿using BasicDataManagement.Domain.EntitiAgg;
+using BasicDataManagement.Infrastructure.EFCore.Mapping;
+using Microsoft.EntityFrameworkCore;
+
+namespace BasicDataManagement.Infrastructure.EFCore
+{
+    public class BasicDataContext : DbContext
+    {
+        public DbSet<Entiti> Entitis { get; set; }
+
+        public BasicDataContext(DbContextOptions<BasicDataContext> options) : base(options)
+        {
+
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            var assembly = typeof(EntitiMapping).Assembly;
+            modelBuilder.ApplyConfigurationsFromAssembly(assembly);
+            base.OnModelCreating(modelBuilder);
+        }
+    }
+
+}

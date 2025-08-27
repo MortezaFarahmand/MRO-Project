@@ -2,7 +2,7 @@
 using PersonnelManagement.Domain.PersonGroupAgg;
 using PersonnelManagement.Infrastructure.EFCore.Mapping;
 
-namespace PersonnelnManagement.Infrastructure.EFCore
+namespace PersonnelManagement.Infrastructure.EFCore
 {
     public class PersonnelContext : DbContext
     {

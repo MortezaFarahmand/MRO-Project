@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v9.0": {
       "ServiceHost/1.0.0": {
         "dependencies": {
+          "BasicDataManagement.Configuration": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "9.0.8",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "9.0.0",
           "OrganizationManagement.Configuration": "1.0.0",
@@ -2098,6 +2099,71 @@
           }
         }
       },
+      "BasicDataManagement.Application/1.0.0": {
+        "dependencies": {
+          "BasicDataManagement.Application.Contract": "1.0.0",
+          "BasicDataManagement.Domain": "1.0.0"
+        },
+        "runtime": {
+          "BasicDataManagement.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "BasicDataManagement.Application.Contract/1.0.0": {
+        "dependencies": {
+          "0_Framework": "1.0.0",
+          "Microsoft.AspNetCore.Http": "2.3.0",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "9.0.0"
+        },
+        "runtime": {
+          "BasicDataManagement.Application.Contract.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "BasicDataManagement.Configuration/1.0.0": {
+        "dependencies": {
+          "01_MROQuery": "1.0.0",
+          "BasicDataManagement.Application": "1.0.0",
+          "BasicDataManagement.Application.Contract": "1.0.0",
+          "BasicDataManagement.Infrastructure.EFCore": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "runtime": {
+          "BasicDataManagement.Configuration.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "BasicDataManagement.Domain/1.0.0": {
+        "dependencies": {
+          "0_Framework": "1.0.0",
+          "BasicDataManagement.Application.Contract": "1.0.0"
+        },
+        "runtime": {
+          "BasicDataManagement.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "BasicDataManagement.Infrastructure.EFCore/1.0.0": {
+        "dependencies": {
+          "BasicDataManagement.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "9.0.8",
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.8"
+        },
+        "runtime": {
+          "BasicDataManagement.Infrastructure.EFCore.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "OrganizationManagement.Application/1.0.0": {
         "dependencies": {
           "OrganizationManagement.Application.Contracts": "1.0.0",
@@ -3376,6 +3442,31 @@
       "sha512": ""
     },
     "0_Framework/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BasicDataManagement.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BasicDataManagement.Application.Contract/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BasicDataManagement.Configuration/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BasicDataManagement.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BasicDataManagement.Infrastructure.EFCore/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

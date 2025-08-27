@@ -2951,6 +2951,81 @@
           "bin/placeholder/0_Framework.dll": {}
         }
       },
+      "BasicDataManagement.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "BasicDataManagement.Application.Contract": "1.0.0",
+          "BasicDataManagement.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BasicDataManagement.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BasicDataManagement.Application.dll": {}
+        }
+      },
+      "BasicDataManagement.Application.Contract/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "0_Framework": "1.0.0",
+          "Microsoft.AspNetCore.Http": "2.3.0",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "9.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BasicDataManagement.Application.Contract.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BasicDataManagement.Application.Contract.dll": {}
+        }
+      },
+      "BasicDataManagement.Configuration/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "01_MROQuery": "1.0.0",
+          "BasicDataManagement.Application": "1.0.0",
+          "BasicDataManagement.Application.Contract": "1.0.0",
+          "BasicDataManagement.Infrastructure.EFCore": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "bin/placeholder/BasicDataManagement.Configuration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BasicDataManagement.Configuration.dll": {}
+        }
+      },
+      "BasicDataManagement.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "0_Framework": "1.0.0",
+          "BasicDataManagement.Application.Contract": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BasicDataManagement.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BasicDataManagement.Domain.dll": {}
+        }
+      },
+      "BasicDataManagement.Infrastructure.EFCore/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "BasicDataManagement.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "9.0.8",
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.8"
+        },
+        "compile": {
+          "bin/placeholder/BasicDataManagement.Infrastructure.EFCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BasicDataManagement.Infrastructure.EFCore.dll": {}
+        }
+      },
       "OrganizationManagement.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -8038,6 +8113,31 @@
       "path": "../0_Framework/0_Framework.csproj",
       "msbuildProject": "../0_Framework/0_Framework.csproj"
     },
+    "BasicDataManagement.Application/1.0.0": {
+      "type": "project",
+      "path": "../BasicDataManagement.Application/BasicDataManagement.Application.csproj",
+      "msbuildProject": "../BasicDataManagement.Application/BasicDataManagement.Application.csproj"
+    },
+    "BasicDataManagement.Application.Contract/1.0.0": {
+      "type": "project",
+      "path": "../BasicDataManagement.Application.Contract/BasicDataManagement.Application.Contract.csproj",
+      "msbuildProject": "../BasicDataManagement.Application.Contract/BasicDataManagement.Application.Contract.csproj"
+    },
+    "BasicDataManagement.Configuration/1.0.0": {
+      "type": "project",
+      "path": "../BasicDataManagement.Configuration/BasicDataManagement.Configuration.csproj",
+      "msbuildProject": "../BasicDataManagement.Configuration/BasicDataManagement.Configuration.csproj"
+    },
+    "BasicDataManagement.Domain/1.0.0": {
+      "type": "project",
+      "path": "../BasicDataManagement.Domain/BasicDataManagement.Domain.csproj",
+      "msbuildProject": "../BasicDataManagement.Domain/BasicDataManagement.Domain.csproj"
+    },
+    "BasicDataManagement.Infrastructure.EFCore/1.0.0": {
+      "type": "project",
+      "path": "../BasicDataManagement.Infrastructure.EFCore/BasicDataManagement.Infrastructure.EFCore.csproj",
+      "msbuildProject": "../BasicDataManagement.Infrastructure.EFCore/BasicDataManagement.Infrastructure.EFCore.csproj"
+    },
     "OrganizationManagement.Application/1.0.0": {
       "type": "project",
       "path": "../OrganizationManagement.Application/OrganizationManagement.Application.csproj",
@@ -8091,6 +8191,7 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "BasicDataManagement.Configuration >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.8",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 9.0.0",
       "OrganizationManagement.Configuration >= 1.0.0",
@@ -8129,6 +8230,9 @@
         "net9.0": {
           "targetAlias": "net90",
           "projectReferences": {
+            "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Configuration\\BasicDataManagement.Configuration.csproj": {
+              "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Configuration\\BasicDataManagement.Configuration.csproj"
+            },
             "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\OrganizationManagement.Configuration\\OrganizationManagement.Configuration.csproj": {
               "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\OrganizationManagement.Configuration\\OrganizationManagement.Configuration.csproj"
             },
@@ -8187,5 +8291,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json."
+    }
+  ]
 }
