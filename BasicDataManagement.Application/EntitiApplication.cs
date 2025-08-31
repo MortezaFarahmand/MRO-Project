@@ -38,7 +38,6 @@ namespace BasicDataManagement.Application
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
 
             entiti.Edit(command.Name, command.Title, command.Remark, command.IsActive);
-            _entitiRepository.Create(entiti);
             _entitiRepository.SaveChanges();
             return operation.Succeeded();
         }

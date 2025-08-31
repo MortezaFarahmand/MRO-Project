@@ -28,6 +28,18 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
+[D:/ATRIYA ASP.NET PROJECT/MRO_Project/Code/MRO_Project/ServiceHost/Areas/Administration/Pages/BasicData/Entitis/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cUGFnZXNcQmFzaWNEYXRhXEVudGl0aXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ATRIYA ASP.NET PROJECT/MRO_Project/Code/MRO_Project/ServiceHost/Areas/Administration/Pages/BasicData/Entitis/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cUGFnZXNcQmFzaWNEYXRhXEVudGl0aXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ATRIYA ASP.NET PROJECT/MRO_Project/Code/MRO_Project/ServiceHost/Areas/Administration/Pages/BasicData/Entitis/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cUGFnZXNcQmFzaWNEYXRhXEVudGl0aXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/ATRIYA ASP.NET PROJECT/MRO_Project/Code/MRO_Project/ServiceHost/Areas/Administration/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cUGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -116,20 +128,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cUGFnZXNcT3JnYW5pemF0aW9uXFNsaWRlc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ATRIYA ASP.NET PROJECT/MRO_Project/Code/MRO_Project/ServiceHost/Areas/Administration/Pages/Personnel/PersonGroup/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cUGFnZXNcUGVyc29ubmVsXFBlcnNvbkdyb3VwXENyZWF0ZS5jc2h0bWw=
+[D:/ATRIYA ASP.NET PROJECT/MRO_Project/Code/MRO_Project/ServiceHost/Areas/Administration/Pages/Personnel/PersonGroups/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cUGFnZXNcUGVyc29ubmVsXFBlcnNvbkdyb3Vwc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ATRIYA ASP.NET PROJECT/MRO_Project/Code/MRO_Project/ServiceHost/Areas/Administration/Pages/Personnel/PersonGroup/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cUGFnZXNcUGVyc29ubmVsXFBlcnNvbkdyb3VwXEVkaXQuY3NodG1s
+[D:/ATRIYA ASP.NET PROJECT/MRO_Project/Code/MRO_Project/ServiceHost/Areas/Administration/Pages/Personnel/PersonGroups/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cUGFnZXNcUGVyc29ubmVsXFBlcnNvbkdyb3Vwc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ATRIYA ASP.NET PROJECT/MRO_Project/Code/MRO_Project/ServiceHost/Areas/Administration/Pages/Personnel/PersonGroup/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cUGFnZXNcUGVyc29ubmVsXFBlcnNvbkdyb3VwXEluZGV4LmNzaHRtbA==
+[D:/ATRIYA ASP.NET PROJECT/MRO_Project/Code/MRO_Project/ServiceHost/Areas/Administration/Pages/Personnel/PersonGroups/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cUGFnZXNcUGVyc29ubmVsXFBlcnNvbkdyb3Vwc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/ATRIYA ASP.NET PROJECT/MRO_Project/Code/MRO_Project/ServiceHost/Areas/Administration/Pages/Personnel/Person/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cUGFnZXNcUGVyc29ubmVsXFBlcnNvblxJbmRleC5jc2h0bWw=
+[D:/ATRIYA ASP.NET PROJECT/MRO_Project/Code/MRO_Project/ServiceHost/Areas/Administration/Pages/Personnel/Persons/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cUGFnZXNcUGVyc29ubmVsXFBlcnNvbnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/ATRIYA ASP.NET PROJECT/MRO_Project/Code/MRO_Project/ServiceHost/Areas/Administration/Pages/Shared/_AdminLayout.cshtml]

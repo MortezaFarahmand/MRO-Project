@@ -36,8 +36,7 @@ namespace BasicDataManagement.Infrastructure.EFCore.Repository
                 Name = x.Name,
                 Remark = x.Remark,
                 Title = x.Title,
-                IsActive = x.IsActive,
-                CreationDate = x.CreationDate.ToString()
+                IsActive = x.IsActive
 
             }).ToList();
         }

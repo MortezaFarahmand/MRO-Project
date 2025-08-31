@@ -9,6 +9,7 @@ namespace ServiceHost.Areas.Administration.Pages.Organization.OrganizationGroups
     {
         public OrganizationGroupSearchModel SearchModel;
         public List<OrganizationGroupViewModel> OrganizationGroups;
+
         private readonly IOrganizationGroupApplication _organizationGroupApplication;
 
         public IndexModel(IOrganizationGroupApplication organizationGroupApplication)
