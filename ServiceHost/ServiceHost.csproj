@@ -51,14 +51,13 @@
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
-    <Content Update="Areas\Administration\Pages\Organization\Countrys\Index.cshtml">
+    <Content Update="Areas\Administration\Pages\BasicData\Countrys\Index.cshtml">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\Administration\Pages\BasicData\Countrys\" />
     <Folder Include="Areas\Administration\Pages\BasicData\Cities\" />
     <Folder Include="Areas\Administration\Pages\BasicData\PictureCategories\" />
     <Folder Include="Areas\Administration\Pages\BasicData\Pictures\" />

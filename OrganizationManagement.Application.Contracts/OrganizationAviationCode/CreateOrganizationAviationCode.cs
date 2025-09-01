@@ -1,11 +1,8 @@
 ﻿
 using _0_Framework.Application;
-using OrganizationManagement.Application.Contracts.Country;
-using OrganizationManagement.Application.Contracts.OrganizationGroup;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace OrganizationManagement.Application.Contracts.OrganizationAviationCode
+namespace BasicDatanManagement.Application.Contracts.OrganizationAviationCode
 {
     public class CreateOrganizationAviationCode
     {
@@ -18,7 +15,7 @@ namespace OrganizationManagement.Application.Contracts.OrganizationAviationCode
         public string CallSign { get; set; }
         [Range(1, 100000, ErrorMessage = ValidationMessages.IsRequired)]
         public long CountryId { get; set; }
-        public List<CountryViewModel> Countrys { get; set; }
+        //public List<CountryViewModel> Countrys { get; set; }
     }
 
 }

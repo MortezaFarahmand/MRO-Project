@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using OrganizationManagement.Configuration;
+using BasicDatanManagement.Configuration;
 using PersonManagement.Configuration;
 using BasicDataManagement.Configuration;
 

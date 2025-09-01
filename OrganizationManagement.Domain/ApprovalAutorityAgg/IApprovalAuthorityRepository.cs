@@ -1,8 +1,8 @@
 ﻿using _0_Framework.Domain;
-using OrganizationManagement.Application.Contracts.ApprovalAuthority;
+using BasicDatanManagement.Application.Contracts.ApprovalAuthority;
 using System.Collections.Generic;
 
-namespace OrganizationManagement.Domain.ApprovalAutorityAgg
+namespace BasicDatanManagement.Domain.ApprovalAutorityAgg
 {
     public interface IApprovalAuthorityRepository : IRepository<long, ApprovalAuthority>
     {

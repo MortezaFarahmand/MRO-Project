@@ -2,7 +2,7 @@
 using _0_Framework.Application;
 using System.Collections.Generic;
 
-namespace OrganizationManagement.Application.Contracts.Organization
+namespace BasicDatanManagement.Application.Contracts.Organization
 {
     public interface IOrganizationApplication 
     {

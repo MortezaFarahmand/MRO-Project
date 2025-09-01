@@ -2,8 +2,8 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using OrganizationManagement.Application.Contracts.Organization;
-using OrganizationManagement.Application.Contracts.OrganizationGroup;
+using BasicDatanManagement.Application.Contracts.Organization;
+using BasicDatanManagement.Application.Contracts.OrganizationGroup;
 
 namespace ServiceHost.Areas.Administration.Pages.Organization.Organizations
 {

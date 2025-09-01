@@ -2,11 +2,8 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using OrganizationManagement.Application;
-using OrganizationManagement.Application.Contracts.ApprovalAuthority;
-using OrganizationManagement.Application.Contracts.Country;
-using OrganizationManagement.Application.Contracts.Organization;
-using OrganizationManagement.Application.Contracts.OrganizationGroup;
+using BasicDatanManagement.Application.Contracts.ApprovalAuthority;
+using BasicDataManagement.Application.Contracts.Country;
 
 namespace ServiceHost.Areas.Administration.Pages.Organization.ApprovalAuthorities
 {
@@ -17,9 +14,9 @@ namespace ServiceHost.Areas.Administration.Pages.Organization.ApprovalAuthoritie
         public SelectList Countrys;
 
         private readonly IApprovalAuthorityApplication _approvalAuthorityApplication;
-        private readonly IPersonApplication _countryApplication;
+        private readonly ICountryApplication _countryApplication;
 
-        public IndexModel(IApprovalAuthorityApplication approvalAuthorityApplication, IPersonApplication countryApplication)
+        public IndexModel(IApprovalAuthorityApplication approvalAuthorityApplication, ICountryApplication countryApplication)
         {
             _approvalAuthorityApplication = approvalAuthorityApplication;
             _countryApplication = countryApplication;
@@ -37,7 +34,7 @@ namespace ServiceHost.Areas.Administration.Pages.Organization.ApprovalAuthoritie
         {
             var command = new CreateApprovalAuthority();
             {
-                command.Countries = _countryApplication.GetCountrys();
+                //command.Countries = _countryApplication.GetCountrys();
             }
             return Partial("./Create", command);
         }
@@ -51,7 +48,7 @@ namespace ServiceHost.Areas.Administration.Pages.Organization.ApprovalAuthoritie
         public IActionResult OnGetEdit(long id)
         {
             var approvalAuthority = _approvalAuthorityApplication.GetDetails(id);
-            approvalAuthority.Countries = _countryApplication.GetCountrys();
+            //approvalAuthority.Countries = _countryApplication.GetCountrys();
             return Partial("Edit", approvalAuthority);
         }
 

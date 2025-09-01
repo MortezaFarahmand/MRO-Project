@@ -1,10 +1,10 @@
 ﻿
 using _0_Framework.Application;
-using OrganizationManagement.Application.Contracts.Organization;
+using BasicDatanManagement.Application.Contracts.Organization;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace OrganizationManagement.Application.Contracts.OrganizationPicture
+namespace BasicDatanManagement.Application.Contracts.OrganizationPicture
 {
     public class CreateOrganizationPicture
     {

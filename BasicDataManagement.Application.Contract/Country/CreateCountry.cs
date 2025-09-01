@@ -2,9 +2,9 @@
 using _0_Framework.Application;
 using System.ComponentModel.DataAnnotations;
 
-namespace OrganizationManagement.Application.Contracts.Country
+namespace BasicDataManagement.Application.Contracts.Country
 {
-    public class CreatePerson
+    public class CreateCountry
     {
         [Required(ErrorMessage = ValidationMessages.IsRequired)]
         public string Name { get; set; }
@@ -17,8 +17,10 @@ namespace OrganizationManagement.Application.Contracts.Country
         //[Required(ErrorMessage=ValidationMessages.IsRequired)]
         //[FileExtentionLimitation(new string[] { ".jpeg", ".jpg", ".png" }, ErrorMessage = ValidationMessages.InvalidFileFormat)]
         //[MaxFileSize(3 * 1024 * 1024, ErrorMessage = ValidationMessages.MaxFileSize)]
-        public string Picture { get; set; }
+        public long PictureId { get; set; }
 
         public string TailCode { get; set; }
+        public string MetaDescription { get; set; }
+        public string Slug { get; set; }
     }
 }

@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using OrganizationManagement.Domain.OrganizationAviationCodeAgg;
+using BasicDatanManagement.Domain.OrganizationAviationCodeAgg;
 
-namespace OrganizationManagement.Infrastructure.EFCore.Mapping
+namespace BasicDatanManagement.Infrastructure.EFCore.Mapping
 {
     public class OrganizationAviationCodeMapping : IEntityTypeConfiguration<OrganizationAviationCode>
     {
@@ -20,9 +20,9 @@ namespace OrganizationManagement.Infrastructure.EFCore.Mapping
             builder.Property(x => x.CountryId).HasMaxLength(255);
             builder.Property(x => x.IsEnabled);
 
-            builder.HasOne(x => x.Countries)
-                .WithMany(x => x.OrganizationAviationCodes)
-                .HasForeignKey(x => x.CountryId);
+            //builder.HasOne(x => x.Countries)
+            //    .WithMany(x => x.OrganizationAviationCodes)
+            //    .HasForeignKey(x => x.CountryId);
         }
     }
 }

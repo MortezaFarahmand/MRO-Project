@@ -2,8 +2,8 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using OrganizationManagement.Application.Contracts.Country;
-using OrganizationManagement.Application.Contracts.OrganizationAviationCode;
+using BasicDatanManagement.Application.Contracts.OrganizationAviationCode;
+using BasicDataManagement.Application.Contracts.Country;
 
 namespace ServiceHost.Areas.Administration.Pages.Organization.OrganizationAviationCodes
 {
@@ -16,9 +16,9 @@ namespace ServiceHost.Areas.Administration.Pages.Organization.OrganizationAviati
         public SelectList Countries;
 
         private readonly IOrganizationAviationCodeApplication _organizationAviationCodeApplication;
-        private readonly IPersonApplication _countryApplication;
+        private readonly ICountryApplication _countryApplication;
 
-        public IndexModel(IOrganizationAviationCodeApplication OrganizationAviationCodeApplication, IPersonApplication countryApplication)
+        public IndexModel(IOrganizationAviationCodeApplication OrganizationAviationCodeApplication, ICountryApplication countryApplication)
         {
             _organizationAviationCodeApplication = OrganizationAviationCodeApplication;
             _countryApplication = countryApplication;
@@ -36,7 +36,7 @@ namespace ServiceHost.Areas.Administration.Pages.Organization.OrganizationAviati
         {
             var command = new CreateOrganizationAviationCode
             {
-                Countrys = _countryApplication.GetCountrys()
+                //Countrys = _countryApplication.GetCountrys()
             };
             return Partial("./Create", command);
         }
@@ -50,7 +50,7 @@ namespace ServiceHost.Areas.Administration.Pages.Organization.OrganizationAviati
         public IActionResult OnGetEdit(long id)
         {
             var organizationAviationCode = _organizationAviationCodeApplication.GetDetails(id);
-            organizationAviationCode.Countrys = _countryApplication.GetCountrys();
+            //organizationAviationCode.Countrys = _countryApplication.GetCountrys();
             return Partial("Edit", organizationAviationCode);
         }
 

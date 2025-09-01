@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 
 
-namespace OrganizationManagement.Application.Contracts.OrganizationGroup
+namespace BasicDatanManagement.Application.Contracts.OrganizationGroup
 {
     public class CreateOrganizationGroup
     {

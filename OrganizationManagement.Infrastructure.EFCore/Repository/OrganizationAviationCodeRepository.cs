@@ -1,11 +1,11 @@
 ﻿using _0_Framework.Infrastructure;
 using Microsoft.EntityFrameworkCore;
-using OrganizationManagement.Application.Contracts.OrganizationAviationCode;
-using OrganizationManagement.Domain.OrganizationAviationCodeAgg;
+using BasicDatanManagement.Application.Contracts.OrganizationAviationCode;
+using BasicDatanManagement.Domain.OrganizationAviationCodeAgg;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace OrganizationManagement.Infrastructure.EFCore.Repository
+namespace BasicDatanManagement.Infrastructure.EFCore.Repository
 {
     public class OrganizationAviationCodeRepository : RepositoryBase<long, OrganizationAviationCode>, IOrganizationAviationCodeRepository
     {
@@ -43,14 +43,16 @@ namespace OrganizationManagement.Infrastructure.EFCore.Repository
 
         public List<OrganizationAviationCodeViewModel> Search(OrganizationAviationCodeSearchModel searchModel)
         {
-           var query = _context.OrganizationAviationCodes.Include(x=>x.Countries).Select(x => new OrganizationAviationCodeViewModel
+           var query = _context.OrganizationAviationCodes
+                //.Include(x=>x.Countries)
+                .Select(x => new OrganizationAviationCodeViewModel
             {
                 Id = x.Id,
                 ICAO = x.ICAO,
                 IATA = x.IATA,
                 CivilAutority = x.CivilAutority,
                 CountryId = x.CountryId,
-                Country = x.Countries.Name,
+                //Country = x.Countries.Name,
                 Description = x.Description,
                 IsEnabled = x.IsEnabled
             });

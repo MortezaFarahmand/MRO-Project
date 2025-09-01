@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace OrganizationManagement.Infrastructure.EFCore.Migrations
+namespace BasicDatanManagement.Infrastructure.EFCore.Migrations
 {
     /// <inheritdoc />
     public partial class modify_OrganizationAvCod : Migration

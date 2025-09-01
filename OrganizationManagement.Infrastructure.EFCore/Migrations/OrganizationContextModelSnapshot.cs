@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using OrganizationManagement.Infrastructure.EFCore;
+using BasicDatanManagement.Infrastructure.EFCore;
 
 #nullable disable
 
-namespace OrganizationManagement.Infrastructure.EFCore.Migrations
+namespace BasicDatanManagement.Infrastructure.EFCore.Migrations
 {
     [DbContext(typeof(OrganizationContext))]
     partial class OrganizationContextModelSnapshot : ModelSnapshot

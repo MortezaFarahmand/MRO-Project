@@ -1,6 +1,6 @@
-﻿namespace OrganizationManagement.Application.Contracts.Country
+﻿namespace BasicDataManagement.Application.Contracts.Country
 {
-    public class PersonSearchModel
+    public class CountrySearchModel
     {
         public string Name { get; set; }
         public string Alpha2Code { get; set; }

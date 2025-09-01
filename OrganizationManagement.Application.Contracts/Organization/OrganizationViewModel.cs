@@ -1,7 +1,7 @@
 ﻿
 using System;
 
-namespace OrganizationManagement.Application.Contracts.Organization
+namespace BasicDatanManagement.Application.Contracts.Organization
 {
     public class OrganizationViewModel
     {

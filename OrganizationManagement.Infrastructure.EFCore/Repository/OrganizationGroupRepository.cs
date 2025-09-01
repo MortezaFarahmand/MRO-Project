@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using _0_Framework.Infrastructure;
-using OrganizationManagement.Application.Contracts.OrganizationGroup;
-using OrganizationManagement.Domain.OrganizationGroupAgg;
+using BasicDatanManagement.Application.Contracts.OrganizationGroup;
+using BasicDatanManagement.Domain.OrganizationGroupAgg;
 
-namespace OrganizationManagement.Infrastructure.EFCore.Repository
+namespace BasicDatanManagement.Infrastructure.EFCore.Repository
 {
     public class OrganizationGroupRepository : RepositoryBase<long, OrganizationGroup>, IOrganizationGroupRepository
     {

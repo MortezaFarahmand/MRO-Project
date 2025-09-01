@@ -1,7 +1,7 @@
 ﻿using _0_Framework.Application;
 using System.Collections.Generic;
 
-namespace OrganizationManagement.Application.Contracts.Slide
+namespace BasicDatanManagement.Application.Contracts.Slide
 {
     public interface ISlideApplication
     {

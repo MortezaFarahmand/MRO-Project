@@ -1,4 +1,4 @@
-﻿namespace OrganizationManagement.Application.Contracts.OrganizationGroup
+﻿namespace BasicDatanManagement.Application.Contracts.OrganizationGroup
 {
     public class EditOrganizationGroup : CreateOrganizationGroup
     {

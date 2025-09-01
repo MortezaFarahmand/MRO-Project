@@ -1,34 +1,34 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using OrganizationManagement.Application.Contracts.Country;
+using BasicDataManagement.Application.Contracts.Country;
 
 namespace ServiceHost.Areas.Administration.Pages.Organization.Countrys
 {
     public class IndexModel : PageModel
     {
-        public PersonSearchModel SearchModel;
+        public CountrySearchModel SearchModel;
         public List<CountryViewModel> Countrys;
-        private readonly IPersonApplication _countryApplication;
+        private readonly ICountryApplication _countryApplication;
 
-        public IndexModel(IPersonApplication countryApplication)
+        public IndexModel(ICountryApplication countryApplication)
         {
             _countryApplication = countryApplication;
         }
 
 
 
-        public void OnGet(PersonSearchModel searchModel)
+        public void OnGet(CountrySearchModel searchModel)
         {
             Countrys = _countryApplication.Search(searchModel);
         }
 
         public IActionResult OnGetCreate()
         {
-            return Partial("./Create", new CreatePerson());
+            return Partial("./Create", new CreateCountry());
         }
 
-        public JsonResult OnPostCreate(CreatePerson command)
+        public JsonResult OnPostCreate(CreateCountry command)
         {
             var result = _countryApplication.Create(command);
             return new JsonResult(result);
@@ -40,7 +40,7 @@ namespace ServiceHost.Areas.Administration.Pages.Organization.Countrys
             return Partial("Edit", country);
         }
 
-        public JsonResult OnPostEdit(EditPerson command)
+        public JsonResult OnPostEdit(EditCountry command)
         {
             var result = _countryApplication.Edit(command);
             return new JsonResult(result);

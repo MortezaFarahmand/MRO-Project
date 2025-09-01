@@ -1,9 +1,9 @@
 ﻿using _0_Framework.Application;
-using OrganizationManagement.Application.Contracts.Slide;
-using OrganizationManagement.Domain.SlideAgg;
+using BasicDatanManagement.Application.Contracts.Slide;
+using BasicDatanManagement.Domain.SlideAgg;
 using System.Collections.Generic;
 
-namespace OrganizationManagement.Application
+namespace BasicDatanManagement.Application
 {
     public class SlideApplication : ISlideApplication
     {

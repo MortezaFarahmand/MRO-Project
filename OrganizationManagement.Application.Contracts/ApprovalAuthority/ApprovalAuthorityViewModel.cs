@@ -1,4 +1,4 @@
-﻿namespace OrganizationManagement.Application.Contracts.ApprovalAuthority
+﻿namespace BasicDatanManagement.Application.Contracts.ApprovalAuthority
 {
     public class ApprovalAuthorityViewModel
     {

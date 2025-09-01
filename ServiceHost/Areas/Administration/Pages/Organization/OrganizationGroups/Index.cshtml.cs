@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using OrganizationManagement.Application.Contracts.OrganizationGroup;
+using BasicDatanManagement.Application.Contracts.OrganizationGroup;
 
 namespace ServiceHost.Areas.Administration.Pages.Organization.OrganizationGroups
 {

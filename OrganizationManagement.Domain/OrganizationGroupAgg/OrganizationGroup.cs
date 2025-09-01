@@ -1,8 +1,8 @@
 ﻿using _0_Framework.Domain;
-using OrganizationManagement.Domain.OrganizationAgg;
+using BasicDatanManagement.Domain.OrganizationAgg;
 using System.Collections.Generic;
 
-namespace OrganizationManagement.Domain.OrganizationGroupAgg
+namespace BasicDatanManagement.Domain.OrganizationGroupAgg
 {
     public class OrganizationGroup : EntityBase
     {

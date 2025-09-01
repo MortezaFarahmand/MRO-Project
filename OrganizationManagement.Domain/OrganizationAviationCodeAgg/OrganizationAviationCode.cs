@@ -1,9 +1,6 @@
 ﻿using _0_Framework.Domain;
-using OrganizationManagement.Domain.CountryAgg;
-using OrganizationManagement.Domain.OrganizationAgg;
-using System.Collections.Generic;
 
-namespace OrganizationManagement.Domain.OrganizationAviationCodeAgg
+namespace BasicDatanManagement.Domain.OrganizationAviationCodeAgg
 {
     public class OrganizationAviationCode : EntityBase
     {
@@ -15,7 +12,7 @@ namespace OrganizationManagement.Domain.OrganizationAviationCodeAgg
         public string CallSign { get; private set; }
         public long CountryId { get; private set; }
         public bool IsEnabled { get; private set; }
-        public Country Countries { get; private set; }
+        //public Country Countries { get; private set; }
         
         
 

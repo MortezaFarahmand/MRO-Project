@@ -1,9 +1,9 @@
 ﻿
 using _0_Framework.Domain;
-using OrganizationManagement.Application.Contracts.OrganizationAviationCode;
+using BasicDatanManagement.Application.Contracts.OrganizationAviationCode;
 using System.Collections.Generic;
 
-namespace OrganizationManagement.Domain.OrganizationAviationCodeAgg
+namespace BasicDatanManagement.Domain.OrganizationAviationCodeAgg
 {
     public interface IOrganizationAviationCodeRepository : IRepository<long, OrganizationAviationCode>
     {

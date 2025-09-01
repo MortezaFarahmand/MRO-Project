@@ -1,4 +1,4 @@
-﻿namespace OrganizationManagement.Application.Contracts.Country
+﻿namespace BasicDataManagement.Application.Contracts.Country
 {
     public class CountryViewModel
     {
@@ -8,9 +8,10 @@
         public string Alpha3Code { get; set; }
         public string UNCode { get; set; }
         public string DialCode { get; set; }
-        public string Picture { get; set; }
+        public long PictureId { get; set; }
         public string TailCode { get; set; }
         public string CreationDate { get; set; }
-        //public int OrganizationCount { get; set; }
+        public string MetaDescription { get; set; }
+        public string Slug { get; set; }
     }
 }

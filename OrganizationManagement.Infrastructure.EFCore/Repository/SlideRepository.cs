@@ -1,12 +1,12 @@
 ﻿using _0_Framework.Application;
 using _0_Framework.Infrastructure;
-using OrganizationManagement.Application.Contracts.Slide;
-using OrganizationManagement.Domain.SlideAgg;
+using BasicDatanManagement.Application.Contracts.Slide;
+using BasicDatanManagement.Domain.SlideAgg;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace OrganizationManagement.Infrastructure.EFCore.Repository
+namespace BasicDatanManagement.Infrastructure.EFCore.Repository
 {
     public class SlideRepository : RepositoryBase<long, Slide>, ISlideRepository
     {

@@ -1,6 +1,6 @@
 ﻿using _0_Framework.Domain;
 
-namespace OrganizationManagement.Domain.SlideAgg
+namespace BasicDatanManagement.Domain.SlideAgg
 {
     public class Slide : EntityBase
     {

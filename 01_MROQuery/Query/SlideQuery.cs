@@ -1,5 +1,5 @@
 ﻿using _01_MROQuery.Contracts.Slides;
-using OrganizationManagement.Infrastructure.EFCore;
+using BasicDatanManagement.Infrastructure.EFCore;
 
 namespace _01_MROQuery.Query
 {

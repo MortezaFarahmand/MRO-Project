@@ -1,4 +1,5 @@
-﻿using BasicDataManagement.Domain.EntitiAgg;
+﻿using BasicDataManagement.Domain.CountryAgg;
+using BasicDataManagement.Domain.EntitiAgg;
 using BasicDataManagement.Infrastructure.EFCore.Mapping;
 using Microsoft.EntityFrameworkCore;
 
@@ -7,6 +8,8 @@ namespace BasicDataManagement.Infrastructure.EFCore
     public class BasicDataContext : DbContext
     {
         public DbSet<Entiti> Entitis { get; set; }
+        public DbSet<Country> Countrys { get; set; }
+
 
         public BasicDataContext(DbContextOptions<BasicDataContext> options) : base(options)
         {

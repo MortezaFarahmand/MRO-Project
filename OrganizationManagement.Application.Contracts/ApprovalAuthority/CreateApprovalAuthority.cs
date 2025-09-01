@@ -1,11 +1,9 @@
 ﻿
 using _0_Framework.Application;
-using OrganizationManagement.Application.Contracts.Country;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace OrganizationManagement.Application.Contracts.ApprovalAuthority
+namespace BasicDatanManagement.Application.Contracts.ApprovalAuthority
 {
     public class CreateApprovalAuthority
     {
@@ -43,7 +41,7 @@ namespace OrganizationManagement.Application.Contracts.ApprovalAuthority
         [Range(1, 100000, ErrorMessage = ValidationMessages.IsRequired)]
         public long CountryId { get;  set; }
 
-        public List<CountryViewModel> Countries { get;  set; }
+        //public List<CountryViewModel> Countries { get;  set; }
 
     }
 }

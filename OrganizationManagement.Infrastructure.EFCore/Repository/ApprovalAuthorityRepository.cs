@@ -1,8 +1,8 @@
 ﻿using _0_Framework.Infrastructure;
 using Microsoft.EntityFrameworkCore;
-using OrganizationManagement.Application.Contracts.ApprovalAuthority;
-using OrganizationManagement.Application.Contracts.Organization;
-using OrganizationManagement.Domain.ApprovalAutorityAgg;
+using BasicDatanManagement.Application.Contracts.ApprovalAuthority;
+using BasicDatanManagement.Application.Contracts.Organization;
+using BasicDatanManagement.Domain.ApprovalAutorityAgg;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +10,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OrganizationManagement.Infrastructure.EFCore.Repository
+namespace BasicDatanManagement.Infrastructure.EFCore.Repository
 {
     public class ApprovalAuthorityRepository : RepositoryBase<long, ApprovalAuthority>, IApprovalAuthorityRepository
     {
@@ -66,7 +66,7 @@ namespace OrganizationManagement.Infrastructure.EFCore.Repository
         public List<ApprovalAuthorityViewModel> Search(ApprovalAuthoritySearchModel searchModel)
         {
             var query = _context.ApprovalAuthorities
-                .Include(x => x.Country)
+                //.Include(x => x.Country)
                 .Select(x => new ApprovalAuthorityViewModel()
             {
                 Id = x.Id,
@@ -77,7 +77,7 @@ namespace OrganizationManagement.Infrastructure.EFCore.Repository
                 Code = x.Code,
                 LogoPicture = x.LogoPicture,
                 CountryId = x.CountryId,
-                Country = x.Country.Name
+                //Country = x.Country.Name
                 });
 
             if(!string.IsNullOrWhiteSpace(searchModel.NameEn)) 

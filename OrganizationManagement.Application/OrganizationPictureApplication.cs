@@ -1,11 +1,11 @@
 ﻿using _0_Framework.Application;
-using OrganizationManagement.Application.Contracts.OrganizationPicture;
-using OrganizationManagement.Domain.OrganizationPictureAgg;
+using BasicDatanManagement.Application.Contracts.OrganizationPicture;
+using BasicDatanManagement.Domain.OrganizationPictureAgg;
 using System;
 using System.Collections.Generic;
 
 
-namespace OrganizationManagement.Application
+namespace BasicDatanManagement.Application
 {
     public class OrganizationPictureApplication : IOrganizationPictureApplication
     {

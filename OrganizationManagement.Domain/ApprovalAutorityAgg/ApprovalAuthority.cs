@@ -1,10 +1,8 @@
 ﻿using _0_Framework.Domain;
-using OrganizationManagement.Domain.CountryAgg;
-using OrganizationManagement.Domain.OrganizationAgg;
-using OrganizationManagement.Domain.OrganizationPictureAgg;
+using BasicDatanManagement.Domain.OrganizationPictureAgg;
 using System.Collections.Generic;
 
-namespace OrganizationManagement.Domain.ApprovalAutorityAgg
+namespace BasicDatanManagement.Domain.ApprovalAutorityAgg
 {
     public class ApprovalAuthority : EntityBase
     {
@@ -23,7 +21,7 @@ namespace OrganizationManagement.Domain.ApprovalAutorityAgg
         public string CanonicalAddress { get; private set; }
         public string Keywords { get; private set; }
         public long CountryId { get; private set; }
-        public Country Country { get; private set; }
+        //public Country Country { get; private set; }
         public List<OrganizationPicture> OrganizationPictures { get; private set; }
 
 

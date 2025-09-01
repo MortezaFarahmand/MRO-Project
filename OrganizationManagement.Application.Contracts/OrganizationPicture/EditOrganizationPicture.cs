@@ -1,5 +1,5 @@
 ﻿
-namespace OrganizationManagement.Application.Contracts.OrganizationPicture
+namespace BasicDatanManagement.Application.Contracts.OrganizationPicture
 {
     public class EditOrganizationPicture : CreateOrganizationPicture
     {

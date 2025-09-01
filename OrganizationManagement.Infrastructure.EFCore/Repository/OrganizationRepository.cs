@@ -1,13 +1,13 @@
 ﻿using _0_Framework.Application;
 using _0_Framework.Infrastructure;
 using Microsoft.EntityFrameworkCore;
-using OrganizationManagement.Application.Contracts.Organization;
-using OrganizationManagement.Domain.OrganizationAgg;
+using BasicDatanManagement.Application.Contracts.Organization;
+using BasicDatanManagement.Domain.OrganizationAgg;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 
-namespace OrganizationManagement.Infrastructure.EFCore.Repository
+namespace BasicDatanManagement.Infrastructure.EFCore.Repository
 {
     public class OrganizationRepository : RepositoryBase<long, Organization>, IOrganizationRepository
     {

@@ -1,10 +1,10 @@
 ﻿
 using _0_Framework.Application;
-using OrganizationManagement.Application.Contracts.OrganizationAviationCode;
-using OrganizationManagement.Domain.OrganizationAviationCodeAgg;
+using BasicDatanManagement.Application.Contracts.OrganizationAviationCode;
+using BasicDatanManagement.Domain.OrganizationAviationCodeAgg;
 using System.Collections.Generic;
 
-namespace OrganizationManagement.Application
+namespace BasicDatanManagement.Application
 {
     public class OrganizationAviationCodeApplication : IOrganizationAviationCodeApplication
     {

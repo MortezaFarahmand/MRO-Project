@@ -1,36 +1,36 @@
-﻿using OrganizationManagement.Application.Contracts.Country;
+﻿using BasicDataManagement.Application.Contracts.Country;
 using System.Collections.Generic;
 using _0_Framework.Application;
-using OrganizationManagement.Domain.CountryAgg;
+using BasicDataManagement.Domain.CountryAgg;
 
-namespace OrganizationManagement.Application
+namespace BasicDatanManagement.Application
 {
-    public class CountryApplication : IPersonApplication
+    public class CountryApplication : ICountryApplication
     {
-        private readonly IPersonRepository _countryRepository;
+        private readonly ICountryRepository _countryRepository;
 
-        public CountryApplication(IPersonRepository countryRepository)
+        public CountryApplication(ICountryRepository countryRepository)
         {
             _countryRepository = countryRepository;
         }
 
 
 
-        public OperationResult Create(CreatePerson command)
+        public OperationResult Create(CreateCountry command)
         {
             var operation = new OperationResult();
             if (_countryRepository.Exists(x => x.Name == command.Name))
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
 
             var country = new Country(command.Name, command.Alpha2Code, command.Alpha3Code, command.UNCode,
-                command.DialCode, command.Picture, command.TailCode);
+                command.DialCode, command.PictureId, command.TailCode, command.MetaDescription, command.Slug);
 
             _countryRepository.Create(country);
             _countryRepository.SaveChanges();
             return operation.Succeeded();
         }
 
-        public OperationResult Edit(EditPerson command)
+        public OperationResult Edit(EditCountry command)
         {
             var operation = new OperationResult();
             var country = _countryRepository.Get(command.Id);
@@ -41,14 +41,14 @@ namespace OrganizationManagement.Application
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
 
             country.Edit(command.Name, command.Alpha2Code, command.Alpha3Code, command.UNCode,
-                command.DialCode, command.Picture, command.TailCode);
+                command.DialCode, command.PictureId, command.TailCode, command.MetaDescription, command.Slug);
 
             _countryRepository.SaveChanges();
             return operation.Succeeded();
 
         }
 
-        public EditPerson GetDetails(long id)
+        public EditCountry GetDetails(long id)
         {
             return _countryRepository.GetDetails(id);
         }
@@ -58,7 +58,7 @@ namespace OrganizationManagement.Application
             return _countryRepository.GetCountrys();
         }
 
-        public List<CountryViewModel> Search(PersonSearchModel searchModel)
+        public List<CountryViewModel> Search(CountrySearchModel searchModel)
         {
             return _countryRepository.Search(searchModel);
         }
