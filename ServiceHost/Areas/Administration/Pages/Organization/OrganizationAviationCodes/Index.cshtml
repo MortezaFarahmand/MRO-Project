@@ -33,10 +33,10 @@
                         <label class="sr-only" asp-for="SearchModel.Description"></label>
                         <input class="form-control " asp-for="SearchModel.Description" placeholder="Description">
                            
-                        <label class="sr-only" asp-for="SearchModel.CountryId"></label>
+                        @* <label class="sr-only" asp-for="SearchModel.CountryId"></label>
                         <select class="form-control " asp-for="SearchModel.CountryId" asp-items="Model.Countries" >
                             <option value="0" >Select Country ... </option>
-                        </select>
+                        </select> *@
 
                         <button type="submit" class="btn btn-success waves-effect waves-light m-l-10">Search</button>
                         <a class="btn btn-primary waves-effect waves-light m-l-10" asp-page="./Index">View All</a>

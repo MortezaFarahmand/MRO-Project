@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using BasicDataManagement.Application.Contracts.Country;
 
-namespace ServiceHost.Areas.Administration.Pages.Organization.Countrys
+namespace ServiceHost.Areas.Administration.Pages.BasicData.Countrys
 {
     public class IndexModel : PageModel
     {

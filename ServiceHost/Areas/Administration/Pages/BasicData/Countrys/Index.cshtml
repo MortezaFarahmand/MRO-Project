@@ -1,4 +1,4 @@
-﻿@* @page
+﻿@page
 @model ServiceHost.Areas.Administration.Pages.BasicData.Countrys.IndexModel
 
 @{
@@ -12,7 +12,7 @@
     <div class="col-sm-12">
         <h3 class="page-title pull-left">@ViewData["title"]</h3>
         <p class="pull-right">
-            <a class="btn btn-success btn-lg" href="#showmodal=@Url.Page("./Index", "Create")" >Create New</a>
+            <a class="btn btn-success btn-lg" href="#showmodal=@Url.Page("./Index", "Create")">Create New</a>
         </p>
     </div>
 </div>
@@ -26,18 +26,18 @@
             <div class="panel-body ">
                 <form class="form-inline" role="form" method="get">
                     <div class="form-group">
-                        
+
                         <label class="sr-only " asp-for="SearchModel.Name"></label>
                         <input class="form-control " asp-for="SearchModel.Name" placeholder="Name">
-                            
+
                         <label class="sr-only" asp-for="SearchModel.TailCode"></label>
                         <input class="form-control " asp-for="SearchModel.TailCode" placeholder="TailCode">
-                           
+
                         <button type="submit" class="btn btn-success waves-effect waves-light m-l-10">Search</button>
                         <a class="btn btn-primary waves-effect waves-light m-l-10" asp-page="./Index">View All</a>
-                          
+
                     </div>
-                   
+
                 </form>
             </div>
         </div>
@@ -57,7 +57,7 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Image</th>
+                                    @* <th>Image</th> *@
                                     <th>Name</th>
                                     <th>Alpha-2-Code</th>
                                     <th>Alpha-3-Code</th>
@@ -71,11 +71,11 @@
                             <tbody>
                                 @foreach (var item in Model.Countrys)
                                 {
-                                <tr>
-                                    <td>@item.Id</td>
-                                        <td>
-                                          <img src="@item.Picture" style="width: 70px; height: 70px" />
-                                        </td>
+                                    <tr>
+                                        <td>@item.Id</td>
+                                        @* <td>
+                                      <img src="@item.Picture" style="width: 70px; height: 70px" />
+                                    </td> *@
                                         <td>@item.Name</td>
                                         <td>@item.Alpha2Code</td>
                                         <td>@item.Alpha3Code</td>
@@ -83,13 +83,13 @@
                                         <td>@item.UNCode</td>
                                         <td>@item.DialCode</td>
                                         <td>@item.CreationDate</td>
-                                    <td>
-                                        <a class="btn btn-warning pull-left m-rl-5"
-                                           href="#showmodal=@Url.Page("./Index", "Edit", new {id = item.Id})">
-                                            <i class="fa fa-edit"></i> Edit
-                                        </a>
-                                    </td>
-                                </tr>
+                                        <td>
+                                            <a class="btn btn-warning pull-left m-rl-5"
+                                               href="#showmodal=@Url.Page("./Index", "Edit", new { id = item.Id })">
+                                                <i class="fa fa-edit"></i> Edit
+                                            </a>
+                                        </td>
+                                    </tr>
                                 }
                             </tbody>
                         </table>
@@ -110,4 +110,3 @@
         });
     </script>
 }
- *@
