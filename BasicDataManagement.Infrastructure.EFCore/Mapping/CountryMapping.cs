@@ -21,7 +21,9 @@ namespace BasicDatanManagement.Infrastructure.EFCore.Mapping
             builder.Property(x => x.MetaDescription).HasMaxLength(500);
             builder.Property(x => x.Slug).HasMaxLength(500);
 
-
+            builder.HasMany(x => x.Provinces)
+                .WithOne(x => x.Country)
+                .HasForeignKey(x => x.CountryId);
 
             //builder.HasMany(x => x.OrganizationAviationCodes)
             //       .WithOne(x => x.Countries)

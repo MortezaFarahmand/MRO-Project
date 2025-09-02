@@ -1,8 +1,10 @@
 ﻿using BasicDataManagement.Application;
 using BasicDataManagement.Application.Contract.Entiti;
+using BasicDataManagement.Application.Contract.Province;
 using BasicDataManagement.Application.Contracts.Country;
 using BasicDataManagement.Domain.CountryAgg;
 using BasicDataManagement.Domain.EntitiAgg;
+using BasicDataManagement.Domain.ProvinceAgg;
 using BasicDataManagement.Infrastructure.EFCore;
 using BasicDataManagement.Infrastructure.EFCore.Repository;
 using BasicDatanManagement.Application;
@@ -21,6 +23,9 @@ namespace BasicDataManagement.Configuration
 
             services.AddTransient<ICountryApplication, CountryApplication>();
             services.AddTransient<ICountryRepository, CountryRepository>();
+
+            services.AddTransient<IProvinceApplication, ProvinceApplication>();
+            services.AddTransient<IProvinceRepository, ProvinceRepository>();
 
             services.AddDbContext<BasicDataContext>(x => x.UseSqlServer(connectionString));
         }

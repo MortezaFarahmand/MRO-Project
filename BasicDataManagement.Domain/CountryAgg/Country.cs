@@ -1,4 +1,6 @@
 ﻿using _0_Framework.Domain;
+using BasicDataManagement.Domain.ProvinceAgg;
+using System.Collections.Generic;
 //using OrganizationManagement.Domain.ApprovalAutorityAgg;
 //using OrganizationManagement.Domain.OrganizationAviationCodeAgg;
 //using System.Collections.Generic;
@@ -15,7 +17,11 @@ namespace BasicDataManagement.Domain.CountryAgg
         public string TailCode { get; private set; }
         public string MetaDescription { get; private set; }
         public string Slug { get; private set; }
-
+        public List<Province> Provinces { get; private set; }
+        public Country()
+        {
+            Provinces = new List<Province>();
+        }
         //public List<OrganizationAviationCode> OrganizationAviationCodes { get; private set; }
         //public ApprovalAuthority ApprovalAuthority { get; private set; }
         //public Country()
