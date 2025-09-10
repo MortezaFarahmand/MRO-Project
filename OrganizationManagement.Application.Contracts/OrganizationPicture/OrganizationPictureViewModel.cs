@@ -1,5 +1,5 @@
 ﻿
-namespace BasicDatanManagement.Application.Contracts.OrganizationPicture
+namespace OrganizationManagement.Application.Contracts.OrganizationPicture
 {
     public class OrganizationPictureViewModel
     {

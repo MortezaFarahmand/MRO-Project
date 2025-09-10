@@ -1,11 +1,11 @@
 ﻿using _0_Framework.Domain;
-using BasicDatanManagement.Domain.OrganizationGroupAgg;
-using BasicDatanManagement.Domain.OrganizationPictureAgg;
+using OrganizationManagement.Domain.OrganizationGroupAgg;
+using OrganizationManagement.Domain.OrganizationPictureAgg;
 //using OrganizationManagement.Domain.PersonAgg;
 using System;
 using System.Collections.Generic;
 
-namespace BasicDatanManagement.Domain.OrganizationAgg
+namespace OrganizationManagement.Domain.OrganizationAgg
 {
     public class Organization : EntityBase
     {

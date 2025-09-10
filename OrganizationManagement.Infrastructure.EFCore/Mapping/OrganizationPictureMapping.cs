@@ -2,9 +2,9 @@
 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using BasicDatanManagement.Domain.OrganizationPictureAgg;
+using OrganizationManagement.Domain.OrganizationPictureAgg;
 
-namespace BasicDatanManagement.Infrastructure.EFCore.Mapping
+namespace OrganizationManagement.Infrastructure.EFCore.Mapping
 {
     public class OrganizationPictureMapping : IEntityTypeConfiguration<OrganizationPicture>
     {

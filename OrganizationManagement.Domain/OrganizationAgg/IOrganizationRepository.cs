@@ -1,8 +1,8 @@
 ﻿using _0_Framework.Domain;
-using BasicDatanManagement.Application.Contracts.Organization;
+using OrganizationManagement.Application.Contracts.Organization;
 using System.Collections.Generic;
 
-namespace BasicDatanManagement.Domain.OrganizationAgg
+namespace OrganizationManagement.Domain.OrganizationAgg
 {
     public interface IOrganizationRepository : IRepository<long, Organization>
     {

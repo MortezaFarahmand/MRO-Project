@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using BasicDatanManagement.Domain.OrganizationAviationCodeAgg;
+using OrganizationManagement.Domain.OrganizationAviationCodeAgg;
 
-namespace BasicDatanManagement.Infrastructure.EFCore.Mapping
+namespace OrganizationManagement.Infrastructure.EFCore.Mapping
 {
     public class OrganizationAviationCodeMapping : IEntityTypeConfiguration<OrganizationAviationCode>
     {

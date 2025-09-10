@@ -1,4 +1,4 @@
-﻿namespace BasicDatanManagement.Application.Contracts.ApprovalAuthority
+﻿namespace OrganizationManagement.Application.Contracts.ApprovalAuthority
 {
     public class EditApprovalAuthority : CreateApprovalAuthority
     {

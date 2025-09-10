@@ -1,14 +1,14 @@
 ﻿using _0_Framework.Infrastructure;
 using Microsoft.EntityFrameworkCore;
-using BasicDatanManagement.Application.Contracts.OrganizationPicture;
-using BasicDatanManagement.Domain.OrganizationPictureAgg;
+using OrganizationManagement.Application.Contracts.OrganizationPicture;
+using OrganizationManagement.Domain.OrganizationPictureAgg;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BasicDatanManagement.Infrastructure.EFCore.Repository
+namespace OrganizationManagement.Infrastructure.EFCore.Repository
 {
     public class OrganizationPictureRepository : RepositoryBase<long, OrganizationPicture>, IOrganizationPictureRepository
     {

@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using BasicDatanManagement.Application.Contracts.Slide;
+using OrganizationManagement.Application.Contracts.Slide;
 using System.Collections.Generic;
 
 namespace ServiceHost.Areas.Administration.Pages.Organization.Slides

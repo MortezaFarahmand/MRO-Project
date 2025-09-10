@@ -1,6 +1,6 @@
 ﻿
 using _01_MROQuery.Contracts.OrganizationGroup;
-using BasicDatanManagement.Infrastructure.EFCore;
+using OrganizationManagement.Infrastructure.EFCore;
 
 namespace _01_MROQuery.Query
 {

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using BasicDatanManagement.Application.Contracts.ApprovalAuthority;
+using OrganizationManagement.Application.Contracts.ApprovalAuthority;
 using BasicDataManagement.Application.Contracts.Country;
 
 namespace ServiceHost.Areas.Administration.Pages.Organization.ApprovalAuthorities

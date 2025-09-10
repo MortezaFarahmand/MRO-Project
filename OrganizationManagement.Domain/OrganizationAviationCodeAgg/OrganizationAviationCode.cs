@@ -1,6 +1,6 @@
 ﻿using _0_Framework.Domain;
 
-namespace BasicDatanManagement.Domain.OrganizationAviationCodeAgg
+namespace OrganizationManagement.Domain.OrganizationAviationCodeAgg
 {
     public class OrganizationAviationCode : EntityBase
     {

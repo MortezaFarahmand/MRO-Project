@@ -1,5 +1,5 @@
 ﻿
-namespace BasicDatanManagement.Application.Contracts.Organization
+namespace OrganizationManagement.Application.Contracts.Organization
 {
     public class EditOrganization : CreateOrganization
     {

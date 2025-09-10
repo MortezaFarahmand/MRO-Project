@@ -2,7 +2,6 @@
 using BasicDataManagement.Application.Contract.Province;
 using BasicDataManagement.Domain.ProvinceAgg;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -13,7 +12,7 @@ namespace BasicDataManagement.Infrastructure.EFCore.Repository
         private readonly BasicDataContext _context;
         public ProvinceRepository(BasicDataContext context) : base(context)
         {
-            context = _context;
+            _context = context;
         }
 
 
@@ -32,9 +31,20 @@ namespace BasicDataManagement.Infrastructure.EFCore.Repository
             }).FirstOrDefault(x => x.Id == id);
         }
 
+        public List<ProvinceViewModel> GetProvinces()
+        {
+            return _context.Provinces.Select(x => new ProvinceViewModel()
+            {
+                Id= x.Id,
+                Name = x.Name
+            }).ToList();
+        }
+
         public List<ProvinceViewModel> Search(ProvinceSearchModel searchModel)
         {
-            var query = _context.Provinces.Include(x => x.Country).Select(x => new ProvinceViewModel()
+            var query = _context.Provinces
+                .Include(x => x.Country)
+                .Select(x => new ProvinceViewModel()
             {
                 Id = x.Id,
                 Name = x.Name,

@@ -1,13 +1,13 @@
 ﻿using _0_Framework.Application;
-using BasicDatanManagement.Application.Contracts.ApprovalAuthority;
-using BasicDatanManagement.Domain.ApprovalAutorityAgg;
+using OrganizationManagement.Application.Contracts.ApprovalAuthority;
+using OrganizationManagement.Domain.ApprovalAutorityAgg;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BasicDatanManagement.Application
+namespace OrganizationManagement.Application
 {
     public class ApprovalAuthorityApplication : IApprovalAuthorityApplication
     {

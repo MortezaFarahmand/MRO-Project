@@ -1,14 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
-using BasicDatanManagement.Domain.OrganizationAgg;
+using OrganizationManagement.Domain.OrganizationAgg;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BasicDatanManagement.Domain.ApprovalAutorityAgg;
+using OrganizationManagement.Domain.ApprovalAutorityAgg;
 
-namespace BasicDatanManagement.Infrastructure.EFCore.Mapping
+namespace OrganizationManagement.Infrastructure.EFCore.Mapping
 {
     public class ApprovalAuthorityMapping : IEntityTypeConfiguration<ApprovalAuthority>
         {

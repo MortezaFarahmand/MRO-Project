@@ -1,8 +1,8 @@
 ﻿using _0_Framework.Domain;
-using BasicDatanManagement.Application.Contracts.Slide;
+using OrganizationManagement.Application.Contracts.Slide;
 using System.Collections.Generic;
 
-namespace BasicDatanManagement.Domain.SlideAgg
+namespace OrganizationManagement.Domain.SlideAgg
 {
     public interface ISlideRepository : IRepository<long, Slide>
     {

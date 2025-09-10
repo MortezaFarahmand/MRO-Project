@@ -1,7 +1,7 @@
 ﻿using _0_Framework.Domain;
-using BasicDatanManagement.Domain.OrganizationAgg;
+using OrganizationManagement.Domain.OrganizationAgg;
 
-namespace BasicDatanManagement.Domain.OrganizationPictureAgg
+namespace OrganizationManagement.Domain.OrganizationPictureAgg
 {
     public class OrganizationPicture : EntityBase
     {

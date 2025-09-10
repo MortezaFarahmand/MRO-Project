@@ -1,8 +1,8 @@
 ﻿using _0_Framework.Domain;
-using BasicDatanManagement.Application.Contracts.OrganizationPicture;
+using OrganizationManagement.Application.Contracts.OrganizationPicture;
 using System.Collections.Generic;
 
-namespace BasicDatanManagement.Domain.OrganizationPictureAgg
+namespace OrganizationManagement.Domain.OrganizationPictureAgg
 {
      public interface IOrganizationPictureRepository : IRepository<long, OrganizationPicture>
     {

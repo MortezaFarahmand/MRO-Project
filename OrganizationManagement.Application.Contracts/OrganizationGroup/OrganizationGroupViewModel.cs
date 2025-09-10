@@ -1,4 +1,4 @@
-﻿namespace BasicDatanManagement.Application.Contracts.OrganizationGroup
+﻿namespace OrganizationManagement.Application.Contracts.Country
 {
     public class OrganizationGroupViewModel
     {

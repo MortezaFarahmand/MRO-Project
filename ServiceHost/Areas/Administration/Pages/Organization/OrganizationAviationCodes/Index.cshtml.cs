@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using BasicDatanManagement.Application.Contracts.OrganizationAviationCode;
+using OrganizationManagement.Application.Contracts.OrganizationAviationCode;
 using BasicDataManagement.Application.Contracts.Country;
 
 namespace ServiceHost.Areas.Administration.Pages.Organization.OrganizationAviationCodes

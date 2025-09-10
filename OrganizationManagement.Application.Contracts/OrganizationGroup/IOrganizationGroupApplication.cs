@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using _0_Framework.Application;
 
-namespace BasicDatanManagement.Application.Contracts.OrganizationGroup
+namespace OrganizationManagement.Application.Contracts.Country
 {
     public interface IOrganizationGroupApplication
     {

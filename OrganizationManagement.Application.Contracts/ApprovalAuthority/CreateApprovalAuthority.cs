@@ -3,7 +3,7 @@ using _0_Framework.Application;
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace BasicDatanManagement.Application.Contracts.ApprovalAuthority
+namespace OrganizationManagement.Application.Contracts.ApprovalAuthority
 {
     public class CreateApprovalAuthority
     {

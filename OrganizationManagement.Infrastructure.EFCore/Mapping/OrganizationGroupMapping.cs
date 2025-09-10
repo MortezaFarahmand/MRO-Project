@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using BasicDatanManagement.Domain.OrganizationGroupAgg;
+using OrganizationManagement.Domain.OrganizationGroupAgg;
 
-namespace BasicDatanManagement.Infrastructure.EFCore.Mapping
+namespace OrganizationManagement.Infrastructure.EFCore.Mapping
 {
     public class OrganizationGroupMapping : IEntityTypeConfiguration<OrganizationGroup>
     {

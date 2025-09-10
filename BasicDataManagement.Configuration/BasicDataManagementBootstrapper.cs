@@ -7,8 +7,6 @@ using BasicDataManagement.Domain.EntitiAgg;
 using BasicDataManagement.Domain.ProvinceAgg;
 using BasicDataManagement.Infrastructure.EFCore;
 using BasicDataManagement.Infrastructure.EFCore.Repository;
-using BasicDatanManagement.Application;
-using BasicDatanManagement.Infrastructure.EFCore.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 

@@ -1,11 +1,7 @@
 ﻿using _0_Framework.Application;
 using BasicDataManagement.Application.Contract.Province;
 using BasicDataManagement.Domain.ProvinceAgg;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BasicDataManagement.Application
 {
@@ -55,6 +51,11 @@ namespace BasicDataManagement.Application
         public EditProvince GetDetails(long id)
         {
             return _provinceRepository.GetDetails(id);
+        }
+
+        public List<ProvinceViewModel> GetProvinces()
+        {
+            return _provinceRepository.GetProvinces();
         }
 
         public List<ProvinceViewModel> Search(ProvinceSearchModel searchModel)

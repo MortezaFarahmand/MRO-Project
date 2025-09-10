@@ -2,21 +2,18 @@
 using _0_Framework.Infrastructure;
 using BasicDataManagement.Application.Contracts.Country;
 using BasicDataManagement.Domain.CountryAgg;
-using BasicDataManagement.Infrastructure.EFCore;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BasicDatanManagement.Infrastructure.EFCore.Repository
+namespace BasicDataManagement.Infrastructure.EFCore.Repository
 {
     public class CountryRepository : RepositoryBase<long, Country> , ICountryRepository
     {
         private readonly BasicDataContext _context;
-
-        public CountryRepository(BasicDataContext context) : base(context )
+        public CountryRepository(BasicDataContext context) : base(context)
         {
             _context = context;
         }
-
 
 
         public EditCountry GetDetails(long id)

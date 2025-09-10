@@ -1,4 +1,4 @@
-﻿namespace BasicDatanManagement.Application.Contracts.OrganizationAviationCode
+﻿namespace OrganizationManagement.Application.Contracts.OrganizationAviationCode
 {
     public class OrganizationAviationCodeViewModel
     {

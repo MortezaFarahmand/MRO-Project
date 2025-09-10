@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using _0_Framework.Application;
 using BasicDataManagement.Domain.CountryAgg;
 
-namespace BasicDatanManagement.Application
+namespace BasicDataManagement.Application
 {
     public class CountryApplication : ICountryApplication
     {

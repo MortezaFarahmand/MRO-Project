@@ -1,9 +1,9 @@
-﻿using BasicDatanManagement.Application.Contracts.OrganizationGroup;
+﻿using OrganizationManagement.Application.Contracts.Country;
 using System.Collections.Generic;
 using _0_Framework.Application;
-using BasicDatanManagement.Domain.OrganizationGroupAgg;
+using OrganizationManagement.Domain.OrganizationGroupAgg;
 
-namespace BasicDatanManagement.Application
+namespace OrganizationManagement.Application
 {
     public class OrganizationGroupApplication : IOrganizationGroupApplication
     {

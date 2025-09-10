@@ -2,7 +2,7 @@
 using _0_Framework.Application;
 using System.Collections.Generic;
 
-namespace BasicDatanManagement.Application.Contracts.OrganizationAviationCode
+namespace OrganizationManagement.Application.Contracts.OrganizationAviationCode
 {
     public interface IOrganizationAviationCodeApplication
     {

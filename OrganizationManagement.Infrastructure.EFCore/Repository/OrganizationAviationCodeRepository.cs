@@ -1,11 +1,11 @@
 ﻿using _0_Framework.Infrastructure;
 using Microsoft.EntityFrameworkCore;
-using BasicDatanManagement.Application.Contracts.OrganizationAviationCode;
-using BasicDatanManagement.Domain.OrganizationAviationCodeAgg;
+using OrganizationManagement.Application.Contracts.OrganizationAviationCode;
+using OrganizationManagement.Domain.OrganizationAviationCodeAgg;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BasicDatanManagement.Infrastructure.EFCore.Repository
+namespace OrganizationManagement.Infrastructure.EFCore.Repository
 {
     public class OrganizationAviationCodeRepository : RepositoryBase<long, OrganizationAviationCode>, IOrganizationAviationCodeRepository
     {

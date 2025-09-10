@@ -1,8 +1,8 @@
 ﻿using _0_Framework.Domain;
-using BasicDatanManagement.Domain.ApprovalAutorityAgg;
+using OrganizationManagement.Domain.ApprovalAutorityAgg;
 using System;
 
-namespace BasicDatanManagement.Domain.ApprovalAgg
+namespace OrganizationManagement.Domain.ApprovalAgg
 {
     public class Approval : EntityBase
     {

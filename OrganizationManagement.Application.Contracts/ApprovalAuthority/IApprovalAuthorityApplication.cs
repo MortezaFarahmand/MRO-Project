@@ -1,7 +1,7 @@
 ﻿using _0_Framework.Application;
 using System.Collections.Generic;
 
-namespace BasicDatanManagement.Application.Contracts.ApprovalAuthority
+namespace OrganizationManagement.Application.Contracts.ApprovalAuthority
 {
     public interface IApprovalAuthorityApplication
     {

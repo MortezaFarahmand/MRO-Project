@@ -8,6 +8,7 @@ namespace BasicDataManagement.Application.Contract.Province
         OperationResult Create(CreateProvince command);
         OperationResult Edit(EditProvince command);
         EditProvince GetDetails(long id);
+        List<ProvinceViewModel> GetProvinces();
         List<ProvinceViewModel> Search(ProvinceSearchModel searchModel); 
     }
 }

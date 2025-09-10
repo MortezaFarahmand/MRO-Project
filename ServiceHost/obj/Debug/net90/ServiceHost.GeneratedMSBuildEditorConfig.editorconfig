@@ -52,6 +52,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cUGFnZXNcQmFzaWNEYXRhXEVudGl0aXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/ATRIYA ASP.NET PROJECT/MRO_Project/Code/MRO_Project/ServiceHost/Areas/Administration/Pages/BasicData/Provinces/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cUGFnZXNcQmFzaWNEYXRhXFByb3ZpbmNlc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ATRIYA ASP.NET PROJECT/MRO_Project/Code/MRO_Project/ServiceHost/Areas/Administration/Pages/BasicData/Provinces/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cUGFnZXNcQmFzaWNEYXRhXFByb3ZpbmNlc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ATRIYA ASP.NET PROJECT/MRO_Project/Code/MRO_Project/ServiceHost/Areas/Administration/Pages/BasicData/Provinces/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cUGFnZXNcQmFzaWNEYXRhXFByb3ZpbmNlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/ATRIYA ASP.NET PROJECT/MRO_Project/Code/MRO_Project/ServiceHost/Areas/Administration/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cUGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

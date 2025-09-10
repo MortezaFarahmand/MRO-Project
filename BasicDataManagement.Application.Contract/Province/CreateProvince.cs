@@ -1,4 +1,7 @@
 ﻿
+using BasicDataManagement.Application.Contracts.Country;
+using System.Collections.Generic;
+
 namespace BasicDataManagement.Application.Contract.Province
 {
     public class CreateProvince
@@ -9,5 +12,6 @@ namespace BasicDataManagement.Application.Contract.Province
         public string Slug { get; set; }
         public string Keywords { get; set; }
         public long CountryId { get; set; }
+        public List<CountryViewModel> Countries { get; set; }
     }
 }

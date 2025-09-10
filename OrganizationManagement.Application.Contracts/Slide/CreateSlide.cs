@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using System.ComponentModel.DataAnnotations;
 
-namespace BasicDatanManagement.Application.Contracts.Slide
+namespace OrganizationManagement.Application.Contracts.Slide
 {
     public class CreateSlide
     {

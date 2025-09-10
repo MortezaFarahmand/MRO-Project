@@ -1,8 +1,8 @@
 ﻿using _0_Framework.Domain;
-using BasicDatanManagement.Domain.OrganizationPictureAgg;
+using OrganizationManagement.Domain.OrganizationPictureAgg;
 using System.Collections.Generic;
 
-namespace BasicDatanManagement.Domain.ApprovalAutorityAgg
+namespace OrganizationManagement.Domain.ApprovalAutorityAgg
 {
     public class ApprovalAuthority : EntityBase
     {

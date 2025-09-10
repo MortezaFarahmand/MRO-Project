@@ -2,7 +2,7 @@
 using _0_Framework.Application;
 using System.ComponentModel.DataAnnotations;
 
-namespace BasicDatanManagement.Application.Contracts.OrganizationAviationCode
+namespace OrganizationManagement.Application.Contracts.OrganizationAviationCode
 {
     public class CreateOrganizationAviationCode
     {

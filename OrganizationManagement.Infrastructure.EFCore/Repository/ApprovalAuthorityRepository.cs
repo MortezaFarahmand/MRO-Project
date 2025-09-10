@@ -1,8 +1,8 @@
 ﻿using _0_Framework.Infrastructure;
 using Microsoft.EntityFrameworkCore;
-using BasicDatanManagement.Application.Contracts.ApprovalAuthority;
-using BasicDatanManagement.Application.Contracts.Organization;
-using BasicDatanManagement.Domain.ApprovalAutorityAgg;
+using OrganizationManagement.Application.Contracts.ApprovalAuthority;
+using OrganizationManagement.Application.Contracts.Organization;
+using OrganizationManagement.Domain.ApprovalAutorityAgg;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +10,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BasicDatanManagement.Infrastructure.EFCore.Repository
+namespace OrganizationManagement.Infrastructure.EFCore.Repository
 {
     public class ApprovalAuthorityRepository : RepositoryBase<long, ApprovalAuthority>, IApprovalAuthorityRepository
     {

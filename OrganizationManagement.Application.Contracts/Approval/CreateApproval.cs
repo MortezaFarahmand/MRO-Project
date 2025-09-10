@@ -1,7 +1,7 @@
 ﻿
 using System;
 
-namespace BasicDatanManagement.Application.Contracts.Approval
+namespace OrganizationManagement.Application.Contracts.Approval
 {
     public class CreateApproval
     {

@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace BasicDatanManagement.Infrastructure.EFCore.Migrations
+namespace OrganizationManagement.Infrastructure.EFCore.Migrations
 {
     /// <inheritdoc />
     public partial class ADD_MaxLength_OrganGroupDes : Migration

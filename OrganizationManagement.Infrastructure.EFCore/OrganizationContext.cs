@@ -1,13 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using BasicDatanManagement.Domain.ApprovalAutorityAgg;
-using BasicDatanManagement.Domain.OrganizationAgg;
-using BasicDatanManagement.Domain.OrganizationAviationCodeAgg;
-using BasicDatanManagement.Domain.OrganizationGroupAgg;
-using BasicDatanManagement.Domain.OrganizationPictureAgg;
-using BasicDatanManagement.Domain.SlideAgg;
-using BasicDatanManagement.Infrastructure.EFCore.Mapping;
+using OrganizationManagement.Domain.ApprovalAutorityAgg;
+using OrganizationManagement.Domain.OrganizationAgg;
+using OrganizationManagement.Domain.OrganizationAviationCodeAgg;
+using OrganizationManagement.Domain.OrganizationGroupAgg;
+using OrganizationManagement.Domain.OrganizationPictureAgg;
+using OrganizationManagement.Domain.SlideAgg;
+using OrganizationManagement.Infrastructure.EFCore.Mapping;
 
-namespace BasicDatanManagement.Infrastructure.EFCore
+namespace OrganizationManagement.Infrastructure.EFCore
 {
     public class OrganizationContext : DbContext
     {

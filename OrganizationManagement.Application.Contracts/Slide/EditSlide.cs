@@ -1,4 +1,4 @@
-﻿namespace BasicDatanManagement.Application.Contracts.Slide
+﻿namespace OrganizationManagement.Application.Contracts.Slide
 {
     public class EditSlide : CreateSlide
     {

@@ -1,10 +1,10 @@
 ﻿
 using _0_Framework.Application;
-using BasicDatanManagement.Application.Contracts.OrganizationGroup;
+using OrganizationManagement.Application.Contracts.Country;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace BasicDatanManagement.Application.Contracts.Organization
+namespace OrganizationManagement.Application.Contracts.Organization
 {
     public class CreateOrganization
     {
