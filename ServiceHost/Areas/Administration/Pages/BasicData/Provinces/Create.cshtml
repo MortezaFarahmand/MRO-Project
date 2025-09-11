@@ -1,17 +1,10 @@
-﻿@model OrganizationManagement.Application.Contracts.Organization.CreateOrganization
+﻿@model BasicDataManagement.Application.Contracts.Province.CreateProvince
 @{
 }
 
-
-
-
-
-
-
-
 <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
-    <h4 class="modal-title">New Organization</h4>
+    <h4 class="modal-title">New Province</h4>
 </div>
 
 <form asp-page="./Index" asp-page-handler="Create"
@@ -25,16 +18,16 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label asp-for="NameEn" class="control-label">Name</label>
-                    <input type="text" class="form-control" asp-for="NameEn" onchange="makeSlug('NameEn','Slug')" >
-                    <span asp-validation-for="NameEn" class="error"></span>
+                    <label asp-for="Name" class="control-label" style="font-family:IranianSans">نام استان</label>
+                    <input type="text" class="form-control" asp-for="Name" style="font-family:IranianSans" onchange="makeSlug('NameEn','Slug')">
+                    <span asp-validation-for="Name" class="error"></span>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-group  element-dir-Fa">
-                    <label asp-for="NameFa" class="control-label">نام</label>
-                    <input type="text" class="form-control" asp-for="NameFa">
-                    <span asp-validation-for="NameFa" class="error"></span>
+                    <label asp-for="DialCode" class="control-label" style="font-family:IranianSans">پیش شماره</label>
+                    <input type="text" class="form-control" asp-for="DialCode">
+                    <span asp-validation-for="DialCode" class="error"></span>
                 </div>
             </div>
         </div>
@@ -42,234 +35,9 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group">
-                    <label asp-for="DescriptionEn" class="control-label">Description</label>
-                    <textarea class="form-control autogrow" asp-for="DescriptionEn" onchange="fillFeild('DescriptionEn', 'MetaDescription')"
-                              style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 75px;"></textarea>
-                    <span asp-validation-for="DescriptionEn" class="error"></span>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-12">
-                <div class="form-group  element-dir-Fa">
-                    <label asp-for="DescriptionFa" class="control-label" style="font-family:IranianSans">توضیحات</label>
-                    <textarea class="form-control autogrow" asp-for="DescriptionFa" 
-                              style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 75px;"></textarea>
-                    <span asp-validation-for="DescriptionFa" class="error"></span>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label asp-for="OrganizationGroupId" class="control-label">Organization Group</label>
-                    <select type="text" class="form-control" asp-for="OrganizationGroupId"
-                           asp-items='new SelectList(Model.Groups, "Id", "Name")'>
-                        <option value="0">-Organization Group-</option>
-                    </select>
-                    <span asp-validation-for="OrganizationGroupId" class="error"></span>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label asp-for="OrganizationAviationCodeId" class="control-label">OrganizationAviationCodeId</label>
-                    <input type="text" class="form-control" asp-for="OrganizationAviationCodeId">
-                    @* <select type="text" class="form-control" asp-items='new SelectList(Model.Groups, "Id", "Name")'>
-                    <option value="0">-Organization Group-</option>
-                    </select>*@
-                    <span asp-validation-for="OrganizationAviationCodeId" class="error"></span>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-12">
-                <div class="form-group">
-                    <label asp-for="AddressEn" class="control-label">Address</label>
-                    <textarea class="form-control autogrow" asp-for="AddressEn"
-                              style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 75px;"></textarea>
-                    <span asp-validation-for="AddressEn" class="error"></span>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-12">
-                <div class="form-group element-dir-Fa">
-                    <label asp-for="AddressFa" class="control-label">آدرس</label>
-                        <textarea class="form-control autogrow" asp-for="AddressFa"
-                                  style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 75px;"></textarea>
-                    <span asp-validation-for="AddressFa" class="error"></span>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label asp-for="Tel1" class="control-label">Telephone-1</label>
-                    <input type="text" class="form-control" asp-for="Tel1">
-                    <span asp-validation-for="Tel1" class="error"></span>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label asp-for="Tel2" class="control-label">Telephone-2</label>
-                    <input type="text" class="form-control" asp-for="Tel2">
-                    <span asp-validation-for="Tel2" class="error"></span>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label asp-for="Fax" class="control-label">Fax</label>
-                    <input type="text" class="form-control" asp-for="Fax">
-                    <span asp-validation-for="Fax" class="error"></span>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-4">
-            <div class="form-group">
-                <label asp-for="WebSite" class="control-label">WebSite</label>
-                <div class="input-group">
-                   <input type="text" class="form-control" asp-for="WebSite">
-                   <span class="input-group-addon"><i class="md md-web"></i></span>
-                </div> 
-                <span asp-validation-for="WebSite" class="error"></span>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="form-group">
-                <label asp-for="MailBox" class="control-label">Mailbox</label>
-                <div class="input-group">
-                   <input type="text" class="form-control" asp-for="MailBox">
-                   <span class="input-group-addon"><i class="md md-mail"></i></span>
-                 </div> 
-                <span asp-validation-for="MailBox" class="error"></span>
-            </div>
-        </div>
-            <div class="col-md-4">
-                <div class="form-group">
-                 <label asp-for="FormedDate" class="control-label">Formed Date</label>
-                 <div class="input-group">
-                     <input class="form-control persianDateInput"  asp-for="FormedDate">
-                     <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-                 </div> 
-                 <span asp-validation-for="FormedDate" class="error"></span>
-                   
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label asp-for="SocialAddress1" class="control-label">Social Address-1</label>
-                    <input type="text" class="form-control" asp-for="SocialAddress1">
-                    <span asp-validation-for="SocialAddress1" class="error"></span>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label asp-for="SocialAddress2" class="control-label">Social Address-2</label>
-                    <input type="text" class="form-control" asp-for="SocialAddress2">
-                    <span asp-validation-for="SocialAddress2" class="error"></span>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-12">
-                <div class="form-group">
-                    <label asp-for="Note" class="control-label">Note</label>
-                    <textarea class="form-control autogrow" asp-for="Note"
-                              style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 94px;"></textarea>
-                    <span asp-validation-for="Note" class="error"></span>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-             <div class="col-md-12">
-                <div class="form-group">
-                    <label asp-for="Remark" class="control-label">Remark</label>
-                    <textarea class="form-control autogrow" asp-for="Remark"
-                              style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 94px;"></textarea>
-                    <span asp-validation-for="Remark" class="error"></span>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label asp-for="CompanyRegisterNo" class="control-label">Company Register No</label>
-                    <input type="text" class="form-control" asp-for="CompanyRegisterNo">
-                    <span asp-validation-for="CompanyRegisterNo" class="error"></span>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label asp-for="ParentId" class="control-label">ParentId</label>
-                    <input type="text" class="form-control" asp-for="ParentId">
-                    <span asp-validation-for="ParentId" class="error"></span>
-                </div>
-            </div>
-        </div>
-                    
-        <div class="row">
-            <div class="col-md-12">
-                <div class="form-group">
-                    <label asp-for="LogoPicture" class="control-label">Logo-Picture</label>
-                    <input type="file" class="form-control" asp-for="LogoPicture" accept="image/*">
-                    <span asp-validation-for="LogoPicture" class="error"></span>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label asp-for="LogoPictureAlt" class="control-label">Picture Alternate</label>
-                    <input type="text" class="form-control" asp-for="LogoPictureAlt">
-                    <span asp-validation-for="LogoPictureAlt" class="error"></span>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label asp-for="LogoPictureTitle" class="control-label">Picture Title</label>
-                    <input type="text" class="form-control" asp-for="LogoPictureTitle">
-                    <span asp-validation-for="LogoPictureTitle" class="error"></span>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-12">
-                <div class="form-group">
-                    <label asp-for="Keywords" class="control-label">Keywords</label>
-                    <input type="text" class="form-control" asp-for="Keywords">
-                    <span asp-validation-for="Keywords" class="error"></span>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <div class="form-group">
-                    <label asp-for="Slug" class="control-label">Slug</label>
-                    <input type="text" class="form-control" asp-for="Slug">
-                    <span asp-validation-for="Slug" class="error"></span>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-12">
-                <div class="form-group no-margin">
-                    <label asp-for="MetaDescription" class="control-label">Meta-Description</label>
+                    <label asp-for="MetaDescription" class="control-label">Meta Description</label>
                     <textarea class="form-control autogrow" asp-for="MetaDescription"
-                              style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 94px;"></textarea>
+                    style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 75px;"></textarea>
                     <span asp-validation-for="MetaDescription" class="error"></span>
                 </div>
             </div>
@@ -277,12 +45,33 @@
 
         <div class="row">
             <div class="col-md-12">
-                <div class="form-group no-margin">
-                    <label asp-for="CanonicalAddress" class="control-label">Canonical Address</label>
-                    <input type="text" class="form-control" asp-for="CanonicalAddress">
-                    <span asp-validation-for="CanonicalAddress" class="error"></span>
+                <div class="form-group  element-dir-Fa">
+                    <label asp-for="Keywords" class="control-label" style="font-family:IranianSans">توضیحات</label>
+                    <textarea class="form-control autogrow" asp-for="Keywords"
+                              style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 75px;"></textarea>
+                    <span asp-validation-for="Keywords" class="error"></span>
                 </div>
-            </div>        
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="CountryId" class="control-label">Country</label>
+                    <select type="text" class="form-control" asp-for="CountryId"
+                            asp-items='new SelectList(Model.Countries, "Id", "Name")'>
+                        <option value="0">-Country-</option>
+                    </select>
+                    <span asp-validation-for="CountryId" class="error"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="Slug" class="control-label">Slug</label>
+                    <input type="text" class="form-control" asp-for="Slug">
+                    <span asp-validation-for="Slug" class="error"></span>
+                </div>
+            </div>
         </div>
 
     </div>

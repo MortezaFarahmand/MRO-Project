@@ -57,7 +57,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicDataManagement.Domain"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicDataManagement.Application", "BasicDataManagement.Application\BasicDataManagement.Application.csproj", "{82698101-BEB1-484A-8684-A6A3B60E4F14}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicDataManagement.Application.Contract", "BasicDataManagement.Application.Contract\BasicDataManagement.Application.Contract.csproj", "{BC63F745-9D64-4AC5-BA1D-7EF50F5760DB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicDataManagement.Application.Contracts", "BasicDataManagement.Application.Contract\BasicDataManagement.Application.Contracts.csproj", "{BC63F745-9D64-4AC5-BA1D-7EF50F5760DB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicDataManagement.Configuration", "BasicDataManagement.Configuration\BasicDataManagement.Configuration.csproj", "{D968A5F5-9D52-44A9-A13F-32E3FAC98BF0}"
 EndProject
@@ -148,7 +148,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{E5CDD9C0-B4AE-48DE-B553-CA9DFBB38DB4} = {DBDA3680-2017-4949-A979-27C6844A5D08}
 		{2A878092-F283-41D8-92DB-71BE5BC5DDF1} = {E5CDD9C0-B4AE-48DE-B553-CA9DFBB38DB4}
-		{00403C2C-1E77-4BEC-AAFC-D59AA11F068C} = {E5CDD9C0-B4AE-48DE-B553-CA9DFBB38DB4}
+		{00403C2C-1E77-4BEC-AAFC-D59AA11F068C} = {DBDA3680-2017-4949-A979-27C6844A5D08}
 		{30ADCA54-99D8-478F-956A-CE0676CCDFAC} = {00403C2C-1E77-4BEC-AAFC-D59AA11F068C}
 		{1A2F319F-29D8-4B97-BF12-0157958A27F2} = {00403C2C-1E77-4BEC-AAFC-D59AA11F068C}
 		{9845AEF6-532F-4022-A896-29586A5FCF16} = {DBDA3680-2017-4949-A979-27C6844A5D08}

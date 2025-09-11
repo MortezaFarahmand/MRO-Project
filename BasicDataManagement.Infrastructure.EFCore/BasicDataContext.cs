@@ -1,4 +1,5 @@
-﻿using BasicDataManagement.Domain.CountryAgg;
+﻿using BasicDataManagement.Domain.CityAgg;
+using BasicDataManagement.Domain.CountryAgg;
 using BasicDataManagement.Domain.EntitiAgg;
 using BasicDataManagement.Domain.ProvinceAgg;
 using BasicDataManagement.Infrastructure.EFCore.Mapping;
@@ -11,7 +12,7 @@ namespace BasicDataManagement.Infrastructure.EFCore
         public DbSet<Entiti> Entitis { get; set; }
         public DbSet<Country> Countrys { get; set; }
         public DbSet<Province> Provinces { get; set; }
-
+        public DbSet<City> Citys { get; set; }
 
         public BasicDataContext(DbContextOptions<BasicDataContext> options) : base(options)
         {

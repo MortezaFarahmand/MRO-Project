@@ -22,6 +22,48 @@ namespace BasicDataManagement.Infrastructure.EFCore.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("BasicDataManagement.Domain.CityAgg.City", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DialCode")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("Keywords")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("MetaDescription")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<long>("ProvinceId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Slug")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProvinceId");
+
+                    b.ToTable("Citys", (string)null);
+                });
+
             modelBuilder.Entity("BasicDataManagement.Domain.CountryAgg.Country", b =>
                 {
                     b.Property<long>("Id")
@@ -148,6 +190,17 @@ namespace BasicDataManagement.Infrastructure.EFCore.Migrations
                     b.ToTable("Provinces", (string)null);
                 });
 
+            modelBuilder.Entity("BasicDataManagement.Domain.CityAgg.City", b =>
+                {
+                    b.HasOne("BasicDataManagement.Domain.ProvinceAgg.Province", "Province")
+                        .WithMany("Cities")
+                        .HasForeignKey("ProvinceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Province");
+                });
+
             modelBuilder.Entity("BasicDataManagement.Domain.ProvinceAgg.Province", b =>
                 {
                     b.HasOne("BasicDataManagement.Domain.CountryAgg.Country", "Country")
@@ -162,6 +215,11 @@ namespace BasicDataManagement.Infrastructure.EFCore.Migrations
             modelBuilder.Entity("BasicDataManagement.Domain.CountryAgg.Country", b =>
                 {
                     b.Navigation("Provinces");
+                });
+
+            modelBuilder.Entity("BasicDataManagement.Domain.ProvinceAgg.Province", b =>
+                {
+                    b.Navigation("Cities");
                 });
 #pragma warning restore 612, 618
         }

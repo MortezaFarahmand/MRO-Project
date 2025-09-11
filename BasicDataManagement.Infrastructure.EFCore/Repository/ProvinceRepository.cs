@@ -1,5 +1,5 @@
 ﻿using _0_Framework.Infrastructure;
-using BasicDataManagement.Application.Contract.Province;
+using BasicDataManagement.Application.Contracts.Province;
 using BasicDataManagement.Domain.ProvinceAgg;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;

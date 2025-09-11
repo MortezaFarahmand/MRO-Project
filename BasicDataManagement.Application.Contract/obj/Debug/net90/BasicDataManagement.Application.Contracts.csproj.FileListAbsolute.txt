@@ -1,0 +1,16 @@
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Application.Contract\bin\Debug\net90\BasicDataManagement.Application.Contracts.deps.json
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Application.Contract\bin\Debug\net90\BasicDataManagement.Application.Contracts.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Application.Contract\bin\Debug\net90\BasicDataManagement.Application.Contracts.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Application.Contract\bin\Debug\net90\0_Framework.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Application.Contract\bin\Debug\net90\0_Framework.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Application.Contract\obj\Debug\net90\BasicDataManagement.Application.Contracts.csproj.AssemblyReference.cache
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Application.Contract\obj\Debug\net90\BasicDataManagement.Application.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Application.Contract\obj\Debug\net90\BasicDataManagement.Application.Contracts.AssemblyInfoInputs.cache
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Application.Contract\obj\Debug\net90\BasicDataManagement.Application.Contracts.AssemblyInfo.cs
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Application.Contract\obj\Debug\net90\BasicDataManagement.Application.Contracts.csproj.CoreCompileInputs.cache
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Application.Contract\obj\Debug\net90\BasicDataManagement.Application.Contracts.sourcelink.json
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Application.Contract\obj\Debug\net90\BasicDat.88E21648.Up2Date
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Application.Contract\obj\Debug\net90\BasicDataManagement.Application.Contracts.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Application.Contract\obj\Debug\net90\refint\BasicDataManagement.Application.Contracts.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Application.Contract\obj\Debug\net90\BasicDataManagement.Application.Contracts.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Application.Contract\obj\Debug\net90\ref\BasicDataManagement.Application.Contracts.dll

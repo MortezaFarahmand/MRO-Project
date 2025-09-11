@@ -1,5 +1,5 @@
 ﻿using _0_Framework.Infrastructure;
-using BasicDataManagement.Application.Contract.Entiti;
+using BasicDataManagement.Application.Contracts.Entiti;
 using BasicDataManagement.Domain.EntitiAgg;
 using System.Collections.Generic;
 using System.Linq;

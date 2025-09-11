@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using BasicDataManagement.Application.Contract.Province;
+using BasicDataManagement.Application.Contracts.Province;
 using BasicDataManagement.Application.Contracts.Country;
 
 namespace ServiceHost.Areas.Administration.Pages.BasicData.Provinces

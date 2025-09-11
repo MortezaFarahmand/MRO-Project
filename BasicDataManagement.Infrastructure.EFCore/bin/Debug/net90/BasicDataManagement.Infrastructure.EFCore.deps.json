@@ -2163,14 +2163,14 @@
           }
         }
       },
-      "BasicDataManagement.Application.Contract/1.0.0": {
+      "BasicDataManagement.Application.Contracts/1.0.0": {
         "dependencies": {
           "0_Framework": "1.0.0",
           "Microsoft.AspNetCore.Http": "2.3.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "9.0.0"
         },
         "runtime": {
-          "BasicDataManagement.Application.Contract.dll": {
+          "BasicDataManagement.Application.Contracts.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -2179,7 +2179,7 @@
       "BasicDataManagement.Domain/1.0.0": {
         "dependencies": {
           "0_Framework": "1.0.0",
-          "BasicDataManagement.Application.Contract": "1.0.0"
+          "BasicDataManagement.Application.Contracts": "1.0.0"
         },
         "runtime": {
           "BasicDataManagement.Domain.dll": {
@@ -3342,7 +3342,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "BasicDataManagement.Application.Contract/1.0.0": {
+    "BasicDataManagement.Application.Contracts/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

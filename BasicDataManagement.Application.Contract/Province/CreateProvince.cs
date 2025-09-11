@@ -2,7 +2,7 @@
 using BasicDataManagement.Application.Contracts.Country;
 using System.Collections.Generic;
 
-namespace BasicDataManagement.Application.Contract.Province
+namespace BasicDataManagement.Application.Contracts.Province
 {
     public class CreateProvince
     {

@@ -13,7 +13,7 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\0_Framework\0_Framework.csproj" />
-		<ProjectReference Include="..\BasicDataManagement.Application.Contract\BasicDataManagement.Application.Contract.csproj" />
+		<ProjectReference Include="..\BasicDataManagement.Application.Contract\BasicDataManagement.Application.Contracts.csproj" />
 	</ItemGroup>
 
 </Project>

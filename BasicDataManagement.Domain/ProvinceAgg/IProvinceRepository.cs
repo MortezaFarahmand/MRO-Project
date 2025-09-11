@@ -1,5 +1,5 @@
 ﻿using _0_Framework.Domain;
-using BasicDataManagement.Application.Contract.Province;
+using BasicDataManagement.Application.Contracts.Province;
 using System.Collections.Generic;
 
 namespace BasicDataManagement.Domain.ProvinceAgg

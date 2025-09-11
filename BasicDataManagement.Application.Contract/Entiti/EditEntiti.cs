@@ -1,4 +1,4 @@
-﻿namespace BasicDataManagement.Application.Contract.Entiti
+﻿namespace BasicDataManagement.Application.Contracts.Entiti
 {
     public class EditEntiti : CreateEntiti
     {

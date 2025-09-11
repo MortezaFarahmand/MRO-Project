@@ -151,12 +151,12 @@
         }
       }
     },
-    "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Application.Contract\\BasicDataManagement.Application.Contract.csproj": {
+    "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Application.Contract\\BasicDataManagement.Application.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Application.Contract\\BasicDataManagement.Application.Contract.csproj",
-        "projectName": "BasicDataManagement.Application.Contract",
-        "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Application.Contract\\BasicDataManagement.Application.Contract.csproj",
+        "projectUniqueName": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Application.Contract\\BasicDataManagement.Application.Contracts.csproj",
+        "projectName": "BasicDataManagement.Application.Contracts",
+        "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Application.Contract\\BasicDataManagement.Application.Contracts.csproj",
         "packagesPath": "C:\\Users\\farah\\.nuget\\packages\\",
         "outputPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Application.Contract\\obj\\",
         "projectStyle": "PackageReference",
@@ -258,8 +258,8 @@
           "net9.0": {
             "targetAlias": "net90",
             "projectReferences": {
-              "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Application.Contract\\BasicDataManagement.Application.Contract.csproj": {
-                "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Application.Contract\\BasicDataManagement.Application.Contract.csproj"
+              "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Application.Contract\\BasicDataManagement.Application.Contracts.csproj": {
+                "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Application.Contract\\BasicDataManagement.Application.Contracts.csproj"
               },
               "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Domain\\BasicDataManagement.Domain.csproj": {
                 "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Domain\\BasicDataManagement.Domain.csproj"
@@ -333,8 +333,8 @@
               "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\01_MROQuery\\01_MROQuery.csproj": {
                 "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\01_MROQuery\\01_MROQuery.csproj"
               },
-              "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Application.Contract\\BasicDataManagement.Application.Contract.csproj": {
-                "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Application.Contract\\BasicDataManagement.Application.Contract.csproj"
+              "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Application.Contract\\BasicDataManagement.Application.Contracts.csproj": {
+                "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Application.Contract\\BasicDataManagement.Application.Contracts.csproj"
               },
               "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Application\\BasicDataManagement.Application.csproj": {
                 "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Application\\BasicDataManagement.Application.csproj"
@@ -417,8 +417,8 @@
               "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\0_Framework\\0_Framework.csproj": {
                 "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\0_Framework\\0_Framework.csproj"
               },
-              "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Application.Contract\\BasicDataManagement.Application.Contract.csproj": {
-                "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Application.Contract\\BasicDataManagement.Application.Contract.csproj"
+              "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Application.Contract\\BasicDataManagement.Application.Contracts.csproj": {
+                "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Application.Contract\\BasicDataManagement.Application.Contracts.csproj"
               }
             }
           }

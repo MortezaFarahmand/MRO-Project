@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Pn5auxPUGkY=",
+  "dgSpecHash": "QLt08Nq/DVQ=",
   "success": true,
   "projectFilePath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\ServiceHost\\ServiceHost.csproj",
   "expectedPackageFiles": [
@@ -167,15 +167,5 @@
     "C:\\Users\\farah\\.nuget\\packages\\system.threading.tasks.dataflow\\8.0.0\\system.threading.tasks.dataflow.8.0.0.nupkg.sha512",
     "C:\\Users\\farah\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1900",
-      "level": "Warning",
-      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json.",
-      "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\ServiceHost\\ServiceHost.csproj",
-      "warningLevel": 1,
-      "filePath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\ServiceHost\\ServiceHost.csproj",
-      "targetGraphs": []
-    }
-  ]
+  "logs": []
 }

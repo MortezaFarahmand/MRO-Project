@@ -1,7 +1,9 @@
 ﻿using BasicDataManagement.Application;
-using BasicDataManagement.Application.Contract.Entiti;
-using BasicDataManagement.Application.Contract.Province;
+using BasicDataManagement.Application.Contracts.City;
 using BasicDataManagement.Application.Contracts.Country;
+using BasicDataManagement.Application.Contracts.Entiti;
+using BasicDataManagement.Application.Contracts.Province;
+using BasicDataManagement.Domain.CityAgg;
 using BasicDataManagement.Domain.CountryAgg;
 using BasicDataManagement.Domain.EntitiAgg;
 using BasicDataManagement.Domain.ProvinceAgg;
@@ -24,6 +26,9 @@ namespace BasicDataManagement.Configuration
 
             services.AddTransient<IProvinceApplication, ProvinceApplication>();
             services.AddTransient<IProvinceRepository, ProvinceRepository>();
+
+            services.AddTransient<ICityApplication, CityApplication>();
+            services.AddTransient<ICityRepository, CityRepository>();
 
             services.AddDbContext<BasicDataContext>(x => x.UseSqlServer(connectionString));
         }

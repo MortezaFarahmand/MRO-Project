@@ -2849,7 +2849,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
-          "BasicDataManagement.Application.Contract": "1.0.0",
+          "BasicDataManagement.Application.Contracts": "1.0.0",
           "BasicDataManagement.Domain": "1.0.0"
         },
         "compile": {
@@ -2859,7 +2859,7 @@
           "bin/placeholder/BasicDataManagement.Application.dll": {}
         }
       },
-      "BasicDataManagement.Application.Contract/1.0.0": {
+      "BasicDataManagement.Application.Contracts/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
@@ -2868,10 +2868,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "9.0.0"
         },
         "compile": {
-          "bin/placeholder/BasicDataManagement.Application.Contract.dll": {}
+          "bin/placeholder/BasicDataManagement.Application.Contracts.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BasicDataManagement.Application.Contract.dll": {}
+          "bin/placeholder/BasicDataManagement.Application.Contracts.dll": {}
         }
       },
       "BasicDataManagement.Domain/1.0.0": {
@@ -2879,7 +2879,7 @@
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
           "0_Framework": "1.0.0",
-          "BasicDataManagement.Application.Contract": "1.0.0"
+          "BasicDataManagement.Application.Contracts": "1.0.0"
         },
         "compile": {
           "bin/placeholder/BasicDataManagement.Domain.dll": {}
@@ -7829,10 +7829,10 @@
       "path": "../BasicDataManagement.Application/BasicDataManagement.Application.csproj",
       "msbuildProject": "../BasicDataManagement.Application/BasicDataManagement.Application.csproj"
     },
-    "BasicDataManagement.Application.Contract/1.0.0": {
+    "BasicDataManagement.Application.Contracts/1.0.0": {
       "type": "project",
-      "path": "../BasicDataManagement.Application.Contract/BasicDataManagement.Application.Contract.csproj",
-      "msbuildProject": "../BasicDataManagement.Application.Contract/BasicDataManagement.Application.Contract.csproj"
+      "path": "../BasicDataManagement.Application.Contract/BasicDataManagement.Application.Contracts.csproj",
+      "msbuildProject": "../BasicDataManagement.Application.Contract/BasicDataManagement.Application.Contracts.csproj"
     },
     "BasicDataManagement.Domain/1.0.0": {
       "type": "project",
@@ -7879,7 +7879,7 @@
     "net9.0": [
       "01_MROQuery >= 1.0.0",
       "BasicDataManagement.Application >= 1.0.0",
-      "BasicDataManagement.Application.Contract >= 1.0.0",
+      "BasicDataManagement.Application.Contracts >= 1.0.0",
       "BasicDataManagement.Infrastructure.EFCore >= 1.0.0",
       "Microsoft.Extensions.DependencyInjection.Abstractions >= 9.0.8"
     ]
@@ -7919,8 +7919,8 @@
             "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\01_MROQuery\\01_MROQuery.csproj": {
               "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\01_MROQuery\\01_MROQuery.csproj"
             },
-            "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Application.Contract\\BasicDataManagement.Application.Contract.csproj": {
-              "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Application.Contract\\BasicDataManagement.Application.Contract.csproj"
+            "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Application.Contract\\BasicDataManagement.Application.Contracts.csproj": {
+              "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Application.Contract\\BasicDataManagement.Application.Contracts.csproj"
             },
             "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Application\\BasicDataManagement.Application.csproj": {
               "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Application\\BasicDataManagement.Application.csproj"
@@ -7971,13 +7971,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1900",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json."
-    }
-  ]
+  }
 }

@@ -10,7 +10,7 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\01_MROQuery\01_MROQuery.csproj" />
-		<ProjectReference Include="..\BasicDataManagement.Application.Contract\BasicDataManagement.Application.Contract.csproj" />
+		<ProjectReference Include="..\BasicDataManagement.Application.Contract\BasicDataManagement.Application.Contracts.csproj" />
 		<ProjectReference Include="..\BasicDataManagement.Application\BasicDataManagement.Application.csproj" />
 		<ProjectReference Include="..\BasicDataManagement.Infrastructure.EFCore\BasicDataManagement.Infrastructure.EFCore.csproj" />
 	</ItemGroup>

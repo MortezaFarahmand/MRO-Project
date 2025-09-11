@@ -1,7 +1,7 @@
 ﻿using _0_Framework.Application;
 using System.Collections.Generic;
 
-namespace BasicDataManagement.Application.Contract.Province
+namespace BasicDataManagement.Application.Contracts.Province
 {
     public interface IProvinceApplication
     {

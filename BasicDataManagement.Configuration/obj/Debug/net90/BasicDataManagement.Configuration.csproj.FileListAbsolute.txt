@@ -9,7 +9,6 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Confi
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Configuration\bin\Debug\net90\BasicDataManagement.Configuration.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Configuration\bin\Debug\net90\01_MROQuery.dll
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Configuration\bin\Debug\net90\0_Framework.dll
-D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Configuration\bin\Debug\net90\BasicDataManagement.Application.Contract.dll
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Configuration\bin\Debug\net90\BasicDataManagement.Application.dll
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Configuration\bin\Debug\net90\BasicDataManagement.Domain.dll
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Configuration\bin\Debug\net90\BasicDataManagement.Infrastructure.EFCore.dll
@@ -20,7 +19,6 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Confi
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Configuration\bin\Debug\net90\PersonnelManagement.Domain.dll
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Configuration\bin\Debug\net90\PersonnelManagement.Infrastructure.EFCore.dll
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Configuration\bin\Debug\net90\01_MROQuery.pdb
-D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Configuration\bin\Debug\net90\BasicDataManagement.Application.Contract.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Configuration\bin\Debug\net90\BasicDataManagement.Application.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Configuration\bin\Debug\net90\BasicDataManagement.Infrastructure.EFCore.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Configuration\bin\Debug\net90\0_Framework.pdb
@@ -36,3 +34,5 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Confi
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Configuration\obj\Debug\net90\refint\BasicDataManagement.Configuration.dll
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Configuration\obj\Debug\net90\BasicDataManagement.Configuration.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Configuration\obj\Debug\net90\ref\BasicDataManagement.Configuration.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Configuration\bin\Debug\net90\BasicDataManagement.Application.Contracts.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Configuration\bin\Debug\net90\BasicDataManagement.Application.Contracts.pdb

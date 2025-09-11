@@ -1,4 +1,4 @@
-﻿namespace BasicDataManagement.Application.Contract.Province
+﻿namespace BasicDataManagement.Application.Contracts.Province
 {
     public class ProvinceSearchModel
     {

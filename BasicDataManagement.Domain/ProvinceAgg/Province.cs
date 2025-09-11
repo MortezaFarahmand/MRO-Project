@@ -1,5 +1,7 @@
 ﻿using _0_Framework.Domain;
+using BasicDataManagement.Domain.CityAgg;
 using BasicDataManagement.Domain.CountryAgg;
+using System.Collections.Generic;
 namespace BasicDataManagement.Domain.ProvinceAgg
 {
     public class Province : EntityBase
@@ -11,6 +13,12 @@ namespace BasicDataManagement.Domain.ProvinceAgg
         public string Keywords { get; private set; }
         public long CountryId { get; private set; }
         public Country Country { get; private set; }
+        public List<City> Cities { get; private set; }
+        public Province()
+        {
+            Cities = new List<City>();
+        }
+
 
         public Province(string name, string dialCode, string metaDescription, string slug,
             string keywords, long countryId)

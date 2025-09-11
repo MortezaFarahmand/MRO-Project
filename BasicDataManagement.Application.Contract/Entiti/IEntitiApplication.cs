@@ -2,7 +2,7 @@
 using _0_Framework.Application;
 using System.Collections.Generic;
 
-namespace BasicDataManagement.Application.Contract.Entiti
+namespace BasicDataManagement.Application.Contracts.Entiti
 {
     public interface IEntitiApplication
     {

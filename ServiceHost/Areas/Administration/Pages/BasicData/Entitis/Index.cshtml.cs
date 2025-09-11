@@ -1,5 +1,5 @@
 using BasicDataManagement.Application;
-using BasicDataManagement.Application.Contract.Entiti;
+using BasicDataManagement.Application.Contracts.Entiti;
 using BasicDataManagement.Domain.EntitiAgg;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
