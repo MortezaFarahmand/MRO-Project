@@ -1,11 +1,11 @@
-﻿@model BasicDataManagement.Application.Contracts.Province.EditProvince
+﻿@model BasicDataManagement.Application.Contracts.City.EditCity
 @{
 }
 
 
 <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
-    <h4 class="modal-title" style="font-family:IranianSans">Edit "@Model.Name" Province </h4>
+    <h4 class="modal-title" style="font-family:IranianSans">Edit "@Model.Name" City </h4>
 </div>
 
 <form asp-page="./Index" asp-page-handler="Edit"
@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label asp-for="Name" class="control-label" style="font-family:IranianSans">استان نام</label>
+                    <label asp-for="Name" class="control-label" style="font-family:IranianSans">نام شهر</label>
                     <input type="text" class="form-control" asp-for="Name" style="font-family:IranianSans" onchange="makeSlug('Name','Slug')">
                     <span asp-validation-for="Name" class="error"></span>
                 </div>
@@ -58,12 +58,12 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label asp-for="CountryId" class="control-label">Country</label>
-                    <select type="text" class="form-control" asp-for="CountryId"
-                            asp-items='new SelectList(Model.Countries, "Id", "Name")'>
+                    <label asp-for="ProvinceId" class="control-label">Country</label>
+                    <select type="text" class="form-control" asp-for="ProvinceId"
+                            asp-items='new SelectList(Model.Provincies, "Id", "Name")'>
                         <option value="0">-Country-</option>
                     </select>
-                    <span asp-validation-for="CountryId" class="error"></span>
+                    <span asp-validation-for="ProvinceId" class="error"></span>
                 </div>
             </div>
             <div class="col-md-6">

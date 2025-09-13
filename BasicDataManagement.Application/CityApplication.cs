@@ -62,5 +62,7 @@ namespace BasicDataManagement.Application
         {
             return _cityRepository.Search(searchModel);
         }
+
+       
     }
 }

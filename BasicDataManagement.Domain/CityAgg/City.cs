@@ -1,4 +1,5 @@
 ﻿using _0_Framework.Domain;
+using BasicDataManagement.Domain.CountryAgg;
 using BasicDataManagement.Domain.ProvinceAgg;
 namespace BasicDataManagement.Domain.CityAgg
 {
@@ -11,7 +12,6 @@ namespace BasicDataManagement.Domain.CityAgg
         public string Keywords { get; private set; }
         public long ProvinceId { get; private set; }
         public Province Province { get; private set; }
-
 
         public City(string name, string dialCode, string metaDescription, string slug,
             string keywords, long provinceId)

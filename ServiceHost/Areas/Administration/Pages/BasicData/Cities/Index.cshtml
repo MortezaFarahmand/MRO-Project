@@ -1,0 +1,121 @@
+﻿@page
+@model ServiceHost.Areas.Administration.Pages.BasicData.Cities.IndexModel
+
+@{
+    Layout = "Shared/_AdminLayout";
+    ViewData["title"] = "Citys Management";
+}
+
+
+
+<div class="row">
+    <div class="col-sm-12">
+        <h3 class="page-title pull-left">@ViewData["title"]</h3>
+        <p class="pull-right">
+            <a class="btn btn-success btn-lg" href="#showmodal=@Url.Page("./Index", "Create")">Create New</a>
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Search in Citys</h3>
+            </div>
+            <div class="panel-body ">
+                <form class="form-inline" role="form" method="get">
+                    <div class="form-group">
+                        <label class="sr-only " asp-for="SearchModel.Name"></label>
+                        <input class="form-control " asp-for="SearchModel.Name" style="font-family:IranianSans" placeholder="نام شهر">
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only " asp-for="SearchModel.DialCode"></label>
+                        <input class="form-control " asp-for="SearchModel.DialCode" style="font-family:IranianSans" placeholder="کد شهر">
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" asp-for="SearchModel.ProvinceId"></label>
+                        <select class="form-control " asp-for="SearchModel.ProvinceId" asp-items="Model.Provinces" style="font-family:IranianSans">
+                            <option value="0">-استان-</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" asp-for="SearchModel.CountryId"></label>
+                        <select class="form-control " asp-for="SearchModel.CountryId" asp-items="Model.Countriii" style="font-family:IranianSans">
+                            <option value="0">-کشور-</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-success waves-effect waves-light m-l-10">Search</button>
+                    <a class="btn btn-primary waves-effect waves-light m-l-10" asp-page="./Index">View All</a>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row" id="CityDiv">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">City list</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <table id="datatable" class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th style="font-family:IranianSans">نام شهر</th>
+                                    <th>Dial Code</th>
+                                    <th>Province</th>
+                                    <th>Meta Description</th>
+                                    <th>Slug</th>
+                                    <th>Keywords</th>
+                                    <th>Operation</th>
+                                    <th>Country</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.Citys)
+                                {
+                                    <tr>
+                                        <td>@item.Id</td>
+                                        <td style="font-family:IranianSans">@item.Name</td>
+                                        <td>@item.DialCode</td>
+                                        <td style="font-family:IranianSans" >@item.Province</td>
+                                        <td style="font-family:IranianSans">@item.MetaDescription</td>
+                                        <td style="font-family:IranianSans">@item.Slug</td>
+                                        <td>@item.Keywords</td>
+                                        <td>
+                                            <a class="btn btn-warning waves-effect waves-light w-xs m-b-5 "
+                                               href="#showmodal=@Url.Page("./Index", "Edit", new { id = item.Id })">
+                                                <i class="fa fa-edit"></i> Edit
+                                            </a>
+                                        </td>
+                                        <td>@item.Country</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/AdminTheme/assets/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/AdminTheme/assets/datatables/dataTables.bootstrap.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#datatable').dataTable();
+        });
+    </script>
+}
+

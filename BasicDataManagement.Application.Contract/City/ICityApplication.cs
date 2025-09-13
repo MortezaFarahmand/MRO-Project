@@ -7,6 +7,7 @@ namespace BasicDataManagement.Application.Contracts.City
     {
         OperationResult Create(CreateCity command);
         OperationResult Edit(EditCity command);
+        EditCity GetDetails(long id);
         List<CityViewModel> GetCitys();
         List<CityViewModel> Search(CitySearchModel searchModel); 
     }
