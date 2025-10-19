@@ -1,5 +1,7 @@
-﻿
-using _0_Framework.Application;
+﻿using _0_Framework.Application;
+using BasicDataManagement.Application.Contracts.Country;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace OrganizationManagement.Application.Contracts.OrganizationAviationCode
@@ -15,7 +17,7 @@ namespace OrganizationManagement.Application.Contracts.OrganizationAviationCode
         public string CallSign { get; set; }
         [Range(1, 100000, ErrorMessage = ValidationMessages.IsRequired)]
         public long CountryId { get; set; }
-        //public List<CountryViewModel> Countrys { get; set; }
+        public List<CountryViewModel> Countrys { get; set; }
     }
 
 }

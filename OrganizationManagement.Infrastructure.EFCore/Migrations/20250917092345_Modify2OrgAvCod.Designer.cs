@@ -12,20 +12,20 @@ using OrganizationManagement.Infrastructure.EFCore;
 namespace OrganizationManagement.Infrastructure.EFCore.Migrations
 {
     [DbContext(typeof(OrganizationContext))]
-    [Migration("20230606184519_AviationOrgCode_Added")]
-    partial class AviationOrgCode_Added
+    [Migration("20250917092345_Modify2OrgAvCod")]
+    partial class Modify2OrgAvCod
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.5")
+                .HasAnnotation("ProductVersion", "9.0.8")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("OrganizationManagement.Domain.CountryAgg.Country", b =>
+            modelBuilder.Entity("OrganizationManagement.Domain.ApprovalAutorityAgg.ApprovalAuthority", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -33,41 +33,73 @@ namespace OrganizationManagement.Infrastructure.EFCore.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
-                    b.Property<string>("Alpha2Code")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                    b.Property<string>("Address")
+                        .HasMaxLength(700)
+                        .HasColumnType("nvarchar(700)");
 
-                    b.Property<string>("Alpha3Code")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                    b.Property<string>("CanonicalAddress")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<string>("Code")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<long>("CountryId")
+                        .HasColumnType("bigint");
 
                     b.Property<DateTime>("CreationDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("DialCode")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("Keywords")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<string>("LogoPicture")
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<string>("LogoPictureAlt")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<string>("LogoPictureTitle")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("MetaDescription")
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
+
+                    b.Property<string>("NameEn")
                         .IsRequired()
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
-                    b.Property<string>("Picture")
-                        .HasMaxLength(1000)
-                        .HasColumnType("nvarchar(1000)");
+                    b.Property<string>("NameFa")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
-                    b.Property<string>("TailCode")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                    b.Property<string>("Remark")
+                        .HasMaxLength(1500)
+                        .HasColumnType("nvarchar(1500)");
 
-                    b.Property<string>("UNCode")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                    b.Property<string>("Slug")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("WebSite")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Countrys", (string)null);
+                    b.ToTable("ApprovalAuthorities", (string)null);
                 });
 
             modelBuilder.Entity("OrganizationManagement.Domain.OrganizationAgg.Organization", b =>
@@ -115,7 +147,6 @@ namespace OrganizationManagement.Infrastructure.EFCore.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<bool>("IsActive")
-                        .HasMaxLength(255)
                         .HasColumnType("bit");
 
                     b.Property<string>("Keywords")
@@ -232,10 +263,6 @@ namespace OrganizationManagement.Infrastructure.EFCore.Migrations
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
-                    b.Property<string>("Feild_1")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
-
                     b.Property<string>("IATA")
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
@@ -245,9 +272,10 @@ namespace OrganizationManagement.Infrastructure.EFCore.Migrations
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
-                    b.HasKey("Id");
+                    b.Property<bool>("IsEnabled")
+                        .HasColumnType("bit");
 
-                    b.HasIndex("CountryId");
+                    b.HasKey("Id");
 
                     b.ToTable("OrganizationAviationCodes", (string)null);
                 });
@@ -315,6 +343,9 @@ namespace OrganizationManagement.Infrastructure.EFCore.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
+                    b.Property<long?>("ApprovalAuthorityId")
+                        .HasColumnType("bigint");
+
                     b.Property<DateTime>("CreationDate")
                         .HasColumnType("datetime2");
 
@@ -340,6 +371,8 @@ namespace OrganizationManagement.Infrastructure.EFCore.Migrations
                         .HasColumnType("nvarchar(500)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ApprovalAuthorityId");
 
                     b.HasIndex("OrganizationId");
 
@@ -412,19 +445,12 @@ namespace OrganizationManagement.Infrastructure.EFCore.Migrations
                     b.Navigation("Group");
                 });
 
-            modelBuilder.Entity("OrganizationManagement.Domain.OrganizationAviationCodeAgg.OrganizationAviationCode", b =>
-                {
-                    b.HasOne("OrganizationManagement.Domain.CountryAgg.Country", "Country")
-                        .WithMany("OrganizationAviationCodes")
-                        .HasForeignKey("CountryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Country");
-                });
-
             modelBuilder.Entity("OrganizationManagement.Domain.OrganizationPictureAgg.OrganizationPicture", b =>
                 {
+                    b.HasOne("OrganizationManagement.Domain.ApprovalAutorityAgg.ApprovalAuthority", null)
+                        .WithMany("OrganizationPictures")
+                        .HasForeignKey("ApprovalAuthorityId");
+
                     b.HasOne("OrganizationManagement.Domain.OrganizationAgg.Organization", "Organization")
                         .WithMany("OrganizationPictures")
                         .HasForeignKey("OrganizationId")
@@ -434,9 +460,9 @@ namespace OrganizationManagement.Infrastructure.EFCore.Migrations
                     b.Navigation("Organization");
                 });
 
-            modelBuilder.Entity("OrganizationManagement.Domain.CountryAgg.Country", b =>
+            modelBuilder.Entity("OrganizationManagement.Domain.ApprovalAutorityAgg.ApprovalAuthority", b =>
                 {
-                    b.Navigation("OrganizationAviationCodes");
+                    b.Navigation("OrganizationPictures");
                 });
 
             modelBuilder.Entity("OrganizationManagement.Domain.OrganizationAgg.Organization", b =>

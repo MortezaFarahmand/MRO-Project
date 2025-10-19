@@ -581,6 +581,9 @@
             "projectReferences": {
               "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\0_Framework\\0_Framework.csproj": {
                 "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\0_Framework\\0_Framework.csproj"
+              },
+              "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Application.Contract\\BasicDataManagement.Application.Contracts.csproj": {
+                "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Application.Contract\\BasicDataManagement.Application.Contracts.csproj"
               }
             }
           }
@@ -602,6 +605,10 @@
           "targetAlias": "net90",
           "dependencies": {
             "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.ViewFeatures": {
               "target": "Package",
               "version": "[2.3.0, )"
             },
@@ -738,6 +745,9 @@
           "net9.0": {
             "targetAlias": "net90",
             "projectReferences": {
+              "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Infrastructure.EFCore\\BasicDataManagement.Infrastructure.EFCore.csproj": {
+                "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Infrastructure.EFCore\\BasicDataManagement.Infrastructure.EFCore.csproj"
+              },
               "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\OrganizationManagement.Domain\\OrganizationManagement.Domain.csproj": {
                 "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\OrganizationManagement.Domain\\OrganizationManagement.Domain.csproj"
               }

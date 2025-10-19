@@ -21,6 +21,10 @@ namespace BasicDataManagement.Infrastructure.EFCore.Mapping
             builder.HasOne(x => x.Country)
                 .WithMany(x => x.Provinces)
                 .HasForeignKey(x => x.CountryId);
+
+            builder.HasMany(x => x.Cities)
+                .WithOne(x => x.Province)
+                .HasForeignKey(x => x.ProvinceId);
         }
     }
 }

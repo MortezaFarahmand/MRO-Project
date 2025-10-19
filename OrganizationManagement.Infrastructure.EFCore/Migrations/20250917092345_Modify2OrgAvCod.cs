@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace OrganizationManagement.Infrastructure.EFCore.Migrations
 {
     /// <inheritdoc />
-    public partial class AviationOrgCode_Added : Migration
+    public partial class Modify2OrgAvCod : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -24,24 +24,13 @@ namespace OrganizationManagement.Infrastructure.EFCore.Migrations
                     Description = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true),
                     CallSign = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
                     CountryId = table.Column<long>(type: "bigint", maxLength: 255, nullable: false),
-                    Feild_1 = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
+                    IsEnabled = table.Column<bool>(type: "bit", nullable: false),
                     CreationDate = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_OrganizationAviationCodes", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_OrganizationAviationCodes_Countrys_CountryId",
-                        column: x => x.CountryId,
-                        principalTable: "Countrys",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
                 });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_OrganizationAviationCodes_CountryId",
-                table: "OrganizationAviationCodes",
-                column: "CountryId");
         }
 
         /// <inheritdoc />

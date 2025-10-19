@@ -30,3 +30,9 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PersonnelManagement.Confi
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PersonnelManagement.Configuration\obj\Debug\net90\refint\PersonnelManagement.Configuration.dll
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PersonnelManagement.Configuration\obj\Debug\net90\PersonnelManagement.Configuration.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PersonnelManagement.Configuration\obj\Debug\net90\ref\PersonnelManagement.Configuration.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PersonnelManagement.Configuration\bin\Debug\net90\BasicDataManagement.Application.Contracts.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PersonnelManagement.Configuration\bin\Debug\net90\BasicDataManagement.Domain.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PersonnelManagement.Configuration\bin\Debug\net90\BasicDataManagement.Infrastructure.EFCore.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PersonnelManagement.Configuration\bin\Debug\net90\BasicDataManagement.Application.Contracts.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PersonnelManagement.Configuration\bin\Debug\net90\BasicDataManagement.Domain.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PersonnelManagement.Configuration\bin\Debug\net90\BasicDataManagement.Infrastructure.EFCore.pdb

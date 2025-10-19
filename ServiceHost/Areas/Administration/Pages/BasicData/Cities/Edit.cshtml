@@ -58,10 +58,10 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label asp-for="ProvinceId" class="control-label">Country</label>
+                    <label asp-for="ProvinceId" class="control-label">Province</label>
                     <select type="text" class="form-control" asp-for="ProvinceId"
                             asp-items='new SelectList(Model.Provincies, "Id", "Name")'>
-                        <option value="0">-Country-</option>
+                        <option value="0">-Province-</option>
                     </select>
                     <span asp-validation-for="ProvinceId" class="error"></span>
                 </div>

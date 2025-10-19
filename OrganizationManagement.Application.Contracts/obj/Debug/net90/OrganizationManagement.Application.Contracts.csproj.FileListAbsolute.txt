@@ -14,3 +14,5 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Ap
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Application.Contracts\obj\Debug\net90\refint\OrganizationManagement.Application.Contracts.dll
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Application.Contracts\obj\Debug\net90\OrganizationManagement.Application.Contracts.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Application.Contracts\obj\Debug\net90\ref\OrganizationManagement.Application.Contracts.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Application.Contracts\bin\Debug\net90\BasicDataManagement.Application.Contracts.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\OrganizationManagement.Application.Contracts\bin\Debug\net90\BasicDataManagement.Application.Contracts.pdb

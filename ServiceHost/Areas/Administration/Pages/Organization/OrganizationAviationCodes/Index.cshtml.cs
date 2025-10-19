@@ -13,7 +13,7 @@ namespace ServiceHost.Areas.Administration.Pages.Organization.OrganizationAviati
         public string message { get; set; }
         public OrganizationAviationCodeSearchModel SearchModel;
         public List<OrganizationAviationCodeViewModel> organizationAviationCodes;
-        public SelectList Countries;
+        public SelectList Countrys;
 
         private readonly IOrganizationAviationCodeApplication _organizationAviationCodeApplication;
         private readonly ICountryApplication _countryApplication;
@@ -28,7 +28,7 @@ namespace ServiceHost.Areas.Administration.Pages.Organization.OrganizationAviati
 
         public void OnGet(OrganizationAviationCodeSearchModel searchModel)
         {
-            Countries = new SelectList(_countryApplication.GetCountrys(), "Id", "Name");
+            Countrys = new SelectList(_countryApplication.GetCountrys(), "Id", "Name");
             organizationAviationCodes = _organizationAviationCodeApplication.Search(searchModel);
         }
 
@@ -36,7 +36,7 @@ namespace ServiceHost.Areas.Administration.Pages.Organization.OrganizationAviati
         {
             var command = new CreateOrganizationAviationCode
             {
-                //Countrys = _countryApplication.GetCountrys()
+                Countrys = _countryApplication.GetCountrys()
             };
             return Partial("./Create", command);
         }
@@ -50,7 +50,7 @@ namespace ServiceHost.Areas.Administration.Pages.Organization.OrganizationAviati
         public IActionResult OnGetEdit(long id)
         {
             var organizationAviationCode = _organizationAviationCodeApplication.GetDetails(id);
-            //organizationAviationCode.Countrys = _countryApplication.GetCountrys();
+            organizationAviationCode.Countrys = _countryApplication.GetCountrys();
             return Partial("Edit", organizationAviationCode);
         }
 

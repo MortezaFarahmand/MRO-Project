@@ -12,7 +12,6 @@ namespace OrganizationManagement.Domain.OrganizationAviationCodeAgg
         public string CallSign { get; private set; }
         public long CountryId { get; private set; }
         public bool IsEnabled { get; private set; }
-        //public Country Countries { get; private set; }
         
         
 

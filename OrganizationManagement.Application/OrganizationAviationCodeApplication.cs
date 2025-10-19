@@ -23,8 +23,8 @@ namespace OrganizationManagement.Application
             if (_organizationAviationCodeRepository.Exists(x => x.ICAO == command.ICAO))
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
 
-            var organizationAviationCode = new OrganizationAviationCode(command.ICAO, command.IATA, command.CivilAutority, command.Comment,
-                command.Description, command.CallSign, command.CountryId);
+            var organizationAviationCode = new OrganizationAviationCode(command.ICAO, command.IATA, command.CivilAutority,
+                command.Comment, command.Description, command.CallSign, command.CountryId);
 
             _organizationAviationCodeRepository.Create(organizationAviationCode);
             _organizationAviationCodeRepository.SaveChanges();

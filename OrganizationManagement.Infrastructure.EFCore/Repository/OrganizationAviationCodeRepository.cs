@@ -1,5 +1,5 @@
 ﻿using _0_Framework.Infrastructure;
-using Microsoft.EntityFrameworkCore;
+using BasicDataManagement.Infrastructure.EFCore;
 using OrganizationManagement.Application.Contracts.OrganizationAviationCode;
 using OrganizationManagement.Domain.OrganizationAviationCodeAgg;
 using System.Collections.Generic;
@@ -10,9 +10,11 @@ namespace OrganizationManagement.Infrastructure.EFCore.Repository
     public class OrganizationAviationCodeRepository : RepositoryBase<long, OrganizationAviationCode>, IOrganizationAviationCodeRepository
     {
         private readonly OrganizationContext _context;
-        public OrganizationAviationCodeRepository(OrganizationContext context) : base(context)
+        private readonly BasicDataContext _basicDatacontext;
+        public OrganizationAviationCodeRepository(OrganizationContext context, BasicDataContext basicDataContext) : base(context)
         {
             _context = context;
+            _basicDatacontext = basicDataContext;
         }
 
 
@@ -43,6 +45,7 @@ namespace OrganizationManagement.Infrastructure.EFCore.Repository
 
         public List<OrganizationAviationCodeViewModel> Search(OrganizationAviationCodeSearchModel searchModel)
         {
+            var countrys = _basicDatacontext.Countrys.Select(c => new {c.Id, c.Name}).ToList();
            var query = _context.OrganizationAviationCodes
                 //.Include(x=>x.Countries)
                 .Select(x => new OrganizationAviationCodeViewModel
@@ -66,10 +69,16 @@ namespace OrganizationManagement.Infrastructure.EFCore.Repository
             if (!string.IsNullOrWhiteSpace(searchModel.Description))
                 query=query.Where(x => x.Description.Contains(searchModel.Description));
 
-            if (searchModel.CountryId != 0)
+            if (searchModel.CountryId > 0)
                 query = query.Where(x=> x.CountryId == searchModel.CountryId);
 
-            return query.OrderByDescending(x => x.Id).ToList();
+            var organizationAviationCode = query.OrderByDescending(x => x.Id).ToList();
+
+
+            organizationAviationCode.ForEach(o => o.Country = countrys
+                .FirstOrDefault(x => x.Id == o.CountryId)?.Name);
+
+            return organizationAviationCode;
 
         }
     }

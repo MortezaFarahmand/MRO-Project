@@ -35,13 +35,13 @@ namespace BasicDataManagement.Infrastructure.EFCore.Repository
         {
             return _context.Citys
                 .Include(p => p.Province)
-                   //.ThenInclude(c => c.Country)
+                   .ThenInclude(c => c.Country)
                 .Select(x => new CityViewModel()
             {
                 Id= x.Id,
                 Name = x.Name,
-                //Province = x.Province.Name,
-                //Countri = x.Countrii.Name
+                Province = x.Province.Name,
+                Country = x.Province.Country.Name
             }).ToList();
         }
 
@@ -49,7 +49,7 @@ namespace BasicDataManagement.Infrastructure.EFCore.Repository
         {
             var query = _context.Citys
                 .Include(x => x.Province)
-                   .ThenInclude(c => c.Country)
+                   .ThenInclude(c => c.Country.Name)
                 .Select(x => new CityViewModel()
             {
                 Id = x.Id,
@@ -60,8 +60,8 @@ namespace BasicDataManagement.Infrastructure.EFCore.Repository
                 Keywords = x.Keywords,
                 Province = x.Province.Name,
                 ProvinceId = x.ProvinceId,
-                    CountryId = x.Province.CountryId,
-                    Country = x.Province.Country.Name
+                CountryId = x.Province.CountryId,
+                Country = x.Province.Country.Name
                 });
 
             if (!string.IsNullOrWhiteSpace(searchModel.Name))
