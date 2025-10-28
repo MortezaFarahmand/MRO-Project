@@ -76,6 +76,20 @@
                     <span asp-validation-for="OrganizationAviationCodeId" class="error"></span>
                 </div>
             </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                <label asp-for="EntitiId" class="control-label">Entity Type</label>
+                <select type="text" class="form-control" asp-for="EntitiId"
+                        asp-items='new SelectList(Model.Entitis, "Id", "Name")'>
+                    <option value="0">-Entity-</option>
+                </select>
+                <span asp-validation-for="EntitiId" class="error"></span>
+                </div>
+            </div>
         </div>
 
         <div class="row">

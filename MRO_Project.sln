@@ -54,6 +54,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BDM.Application", "BDM.Application", "{5726E8B3-5C48-4D7B-A13E-414AF2F365DE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicDataManagement.Domain", "BasicDataManagement.Domain\BasicDataManagement.Domain.csproj", "{12D9255B-02B2-490A-BBCA-BDB7F960B9E1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{30ADCA54-99D8-478F-956A-CE0676CCDFAC} = {30ADCA54-99D8-478F-956A-CE0676CCDFAC}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicDataManagement.Application", "BasicDataManagement.Application\BasicDataManagement.Application.csproj", "{82698101-BEB1-484A-8684-A6A3B60E4F14}"
 EndProject

@@ -2160,6 +2160,18 @@
           }
         }
       },
+      "BasicDataManagement.Domain/1.0.0": {
+        "dependencies": {
+          "0_Framework": "1.0.0",
+          "BasicDataManagement.Application.Contracts": "1.0.0"
+        },
+        "runtime": {
+          "BasicDataManagement.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "OrganizationManagement.Application.Contracts/1.0.0": {
         "dependencies": {
           "0_Framework": "1.0.0",
@@ -2178,6 +2190,7 @@
       "OrganizationManagement.Domain/1.0.0": {
         "dependencies": {
           "0_Framework": "1.0.0",
+          "BasicDataManagement.Domain": "1.0.0",
           "OrganizationManagement.Application.Contracts": "1.0.0"
         },
         "runtime": {
@@ -3363,6 +3376,11 @@
       "sha512": ""
     },
     "BasicDataManagement.Application.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BasicDataManagement.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

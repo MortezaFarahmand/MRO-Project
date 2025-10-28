@@ -2607,6 +2607,7 @@
       "OrganizationManagement.Domain/1.0.0": {
         "dependencies": {
           "0_Framework": "1.0.0",
+          "BasicDataManagement.Domain": "1.0.0",
           "OrganizationManagement.Application.Contracts": "1.0.0"
         },
         "runtime": {

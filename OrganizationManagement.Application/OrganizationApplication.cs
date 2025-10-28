@@ -29,7 +29,7 @@ namespace OrganizationManagement.Application
                 command.SocialAddress2, command.MailBox, command.Note, command.Remark, command.OrganizationAviationCodeId,
                 command.CompanyRegisterNo, formedDate, command.ParentId, command.LogoPicture, command.LogoPictureAlt,
                 command.LogoPictureTitle, command.MetaDescription, slug, command.CanonicalAddress, command.Keywords,
-                command.OrganizationGroupId );
+                command.OrganizationGroupId, command.EntitiId );
 
             _organizationRepository.Create(organization);
             _organizationRepository.SaveChanges();
@@ -53,7 +53,7 @@ namespace OrganizationManagement.Application
                 command.SocialAddress2, command.MailBox, command.Note, command.Remark, command.OrganizationAviationCodeId,
                 command.CompanyRegisterNo, formedDate, command.ParentId, command.LogoPicture, command.LogoPictureAlt,
                 command.LogoPictureTitle, command.MetaDescription, slug, command.CanonicalAddress, command.Keywords,
-                command.OrganizationGroupId);
+                command.OrganizationGroupId, command.EntitiId);
             _organizationRepository.SaveChanges();
             return operation.Succeeded();
         }

@@ -1,4 +1,6 @@
-﻿namespace BasicDataManagement.Application.Contracts.Entiti
+﻿using System.Collections.Generic;
+
+namespace BasicDataManagement.Application.Contracts.Entiti
 {
     public class EntitiViewModel
     {

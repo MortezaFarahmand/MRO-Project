@@ -15,6 +15,9 @@ namespace BasicDataManagement.Infrastructure.EFCore.Mapping
             builder.Property(x => x.Title).HasMaxLength(256);
             builder.Property(x => x.Remark).HasMaxLength(500);
             builder.Property(x => x.IsActive);
+
+
+
         }
     }
 }

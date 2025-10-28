@@ -22,6 +22,34 @@ namespace OrganizationManagement.Infrastructure.EFCore.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("BasicDataManagement.Domain.EntitiAgg.Entiti", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Remark")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Entiti");
+                });
+
             modelBuilder.Entity("OrganizationManagement.Domain.ApprovalAutorityAgg.ApprovalAuthority", b =>
                 {
                     b.Property<long>("Id")
@@ -135,6 +163,9 @@ namespace OrganizationManagement.Infrastructure.EFCore.Migrations
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
+                    b.Property<long>("EntitiId")
+                        .HasColumnType("bigint");
+
                     b.Property<string>("Fax")
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
@@ -223,6 +254,8 @@ namespace OrganizationManagement.Infrastructure.EFCore.Migrations
                         .HasColumnType("nvarchar(255)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("EntitiId");
 
                     b.HasIndex("OrganizationGroupId");
 
@@ -433,11 +466,19 @@ namespace OrganizationManagement.Infrastructure.EFCore.Migrations
 
             modelBuilder.Entity("OrganizationManagement.Domain.OrganizationAgg.Organization", b =>
                 {
+                    b.HasOne("BasicDataManagement.Domain.EntitiAgg.Entiti", "Entiti")
+                        .WithMany()
+                        .HasForeignKey("EntitiId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("OrganizationManagement.Domain.OrganizationGroupAgg.OrganizationGroup", "Group")
                         .WithMany("Organizations")
                         .HasForeignKey("OrganizationGroupId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Entiti");
 
                     b.Navigation("Group");
                 });

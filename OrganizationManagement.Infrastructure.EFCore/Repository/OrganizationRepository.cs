@@ -1,5 +1,6 @@
 ﻿using _0_Framework.Application;
 using _0_Framework.Infrastructure;
+using BasicDataManagement.Infrastructure.EFCore;
 using Microsoft.EntityFrameworkCore;
 using OrganizationManagement.Application.Contracts.Organization;
 using OrganizationManagement.Domain.OrganizationAgg;
@@ -12,10 +13,12 @@ namespace OrganizationManagement.Infrastructure.EFCore.Repository
     public class OrganizationRepository : RepositoryBase<long, Organization>, IOrganizationRepository
     {
         private readonly OrganizationContext _context;
+        private readonly BasicDataContext _basicDataContext;
 
-        public OrganizationRepository(OrganizationContext context) : base(context)
+        public OrganizationRepository(OrganizationContext context, BasicDataContext basicDataContext) : base(context)
         {
             _context = context;
+            _basicDataContext = basicDataContext;
         }
 
 
@@ -50,8 +53,10 @@ namespace OrganizationManagement.Infrastructure.EFCore.Repository
                 Slug = x.Slug,
                 CanonicalAddress = x.CanonicalAddress,
                 Keywords = x.Keywords,
-                OrganizationGroupId = x.OrganizationGroupId
-                
+                OrganizationGroupId = x.OrganizationGroupId,
+                EntitiId = x.EntitiId
+                //Entiti = x.Entiti.Name
+
             }).FirstOrDefault(x => x.Id == id);
         }
 
@@ -66,6 +71,7 @@ namespace OrganizationManagement.Infrastructure.EFCore.Repository
 
         public List<OrganizationViewModel> Search(OrganizationSearchModel searchModel)
         {
+            var Entities = _basicDataContext.Entitis.Select(x => new {x.Id, x.Name}).ToList();
             var query = _context.Organizations
                 .Include(x => x.Group)
                 .Select(x => new OrganizationViewModel
@@ -95,7 +101,9 @@ namespace OrganizationManagement.Infrastructure.EFCore.Repository
                     Group = x.Group.Name,
                     OrganizationGroupId = x.OrganizationGroupId,
                     CreationDate = x.CreationDate.ToString(),
-                    IsActive = x.IsActive
+                    IsActive = x.IsActive,
+                    EntitiId = x.EntitiId,
+                    //Entiti = x.Entiti.Name
                 });
 
             if (!string.IsNullOrWhiteSpace(searchModel.NameEn))
@@ -113,7 +121,13 @@ namespace OrganizationManagement.Infrastructure.EFCore.Repository
             if (searchModel.OrganizationGroupId != 0)
                 query = query.Where(x => x.OrganizationGroupId == searchModel.OrganizationGroupId);
 
-            return query.OrderByDescending(x => x.Id).ToList();
+            /////////////////////
+            var organizes = query.OrderByDescending(x => x.Id).ToList();
+            organizes.ForEach
+                (organiz => organiz.Entiti = Entities.FirstOrDefault(x => x.Id == organiz.EntitiId)?.Name);
+            ///////////////////////
+            
+            return organizes;
 
         }
     }

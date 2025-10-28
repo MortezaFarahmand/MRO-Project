@@ -1,5 +1,6 @@
 ﻿
 using _0_Framework.Application;
+using BasicDataManagement.Application.Contracts.Entiti;
 using OrganizationManagement.Application.Contracts.Country;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -44,6 +45,9 @@ namespace OrganizationManagement.Application.Contracts.Organization
         public long OrganizationGroupId { get; set; }
 
         public List<OrganizationGroupViewModel> Groups { get; set; }
+
+        public long EntitiId { get; set; }
+        public List<EntitiViewModel> Entitis { get; set; }
 
     }
 }

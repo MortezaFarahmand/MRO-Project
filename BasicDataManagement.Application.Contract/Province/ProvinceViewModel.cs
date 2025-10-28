@@ -1,4 +1,7 @@
-﻿namespace BasicDataManagement.Application.Contracts.Province
+﻿using BasicDataManagement.Application.Contracts.City;
+using System.Collections.Generic;
+
+namespace BasicDataManagement.Application.Contracts.Province
 {
     public class ProvinceViewModel
     {
@@ -10,5 +13,6 @@
         public string Country { get; set; }
         public long CountryId { get; set; }
         public long Id { get; set; }
+        public List<CityViewModel> Cities { get; set; }
     }
 }

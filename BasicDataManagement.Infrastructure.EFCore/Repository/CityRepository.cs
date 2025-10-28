@@ -1,6 +1,7 @@
 ﻿using _0_Framework.Infrastructure;
 using BasicDataManagement.Application.Contracts.City;
 using BasicDataManagement.Domain.CityAgg;
+using BasicDataManagement.Domain.ProvinceAgg;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
@@ -49,7 +50,8 @@ namespace BasicDataManagement.Infrastructure.EFCore.Repository
         {
             var query = _context.Citys
                 .Include(x => x.Province)
-                   .ThenInclude(c => c.Country.Name)
+                   .ThenInclude(c => c.Country)
+                //.Include(citi => (Province)citi).Country)
                 .Select(x => new CityViewModel()
             {
                 Id = x.Id,

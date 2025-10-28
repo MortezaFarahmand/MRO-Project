@@ -1,4 +1,5 @@
 ﻿using _0_Framework.Domain;
+using BasicDataManagement.Domain.EntitiAgg;
 using OrganizationManagement.Domain.OrganizationGroupAgg;
 using OrganizationManagement.Domain.OrganizationPictureAgg;
 //using OrganizationManagement.Domain.PersonAgg;
@@ -40,6 +41,8 @@ namespace OrganizationManagement.Domain.OrganizationAgg
         //Approval List<Approval>
         public OrganizationGroup Group { get; private set; }
         public List<OrganizationPicture> OrganizationPictures { get; private set; }
+        public long EntitiId { get; private set; }
+        public Entiti Entiti {  get; private set; }
         //public List<Person> Persons { get; private set; } = new List<Person>();
 
 
@@ -47,7 +50,7 @@ namespace OrganizationManagement.Domain.OrganizationAgg
             string addressFa, string tel1, string tel2, string fax, string webSite, string socialAddress1, string socialAddress2,
             string mailBox, string note, string remark, long organizationAviationCodeId, string companyRegisterNo, DateTime formedDate,
             long parentId, string logoPicture, string logoPictureAlt, string logoPictureTitle, string metaDescription, string slug,
-            string canonicalAddress, string keywords, long organizationGroupId)
+            string canonicalAddress, string keywords, long organizationGroupId, long entitiId)
         {
             NameEn = nameEn;
             NameFa = nameFa;
@@ -77,13 +80,14 @@ namespace OrganizationManagement.Domain.OrganizationAgg
             CanonicalAddress = canonicalAddress;
             Keywords = keywords;
             OrganizationGroupId = organizationGroupId;
+            EntitiId = entitiId;
         }
 
         public void Edit(string nameEn, string nameFa, string descriptionEn, string descriptionFa, string addressEn,
             string addressFa, string tel1, string tel2, string fax, string webSite, string socialAddress1, string socialAddress2,
             string mailBox, string note, string remark, long organizationAviationCodeId, string companyRegisterNo, DateTime formedDate,
         long parentId, string logoPicture, string logoPictureAlt, string logoPictureTitle, string metaDescription, string slug,
-            string canonicalAddress, string keywords, long organizationGroupId)
+            string canonicalAddress, string keywords, long organizationGroupId,long entitiId)
         {
             NameEn = nameEn;
             NameFa = nameFa;
@@ -112,6 +116,7 @@ namespace OrganizationManagement.Domain.OrganizationAgg
             CanonicalAddress = canonicalAddress;
             Keywords = keywords;
             OrganizationGroupId= organizationGroupId;
+            EntitiId = entitiId;
         }
 
         public void Active()

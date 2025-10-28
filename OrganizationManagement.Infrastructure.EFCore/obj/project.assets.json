@@ -3605,6 +3605,7 @@
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
           "0_Framework": "1.0.0",
+          "BasicDataManagement.Domain": "1.0.0",
           "OrganizationManagement.Application.Contracts": "1.0.0"
         },
         "compile": {
@@ -9340,13 +9341,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1900",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json."
-    }
-  ]
+  }
 }

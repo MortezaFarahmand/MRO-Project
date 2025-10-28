@@ -1,4 +1,6 @@
 ﻿using _0_Framework.Domain;
+using System.Collections.Generic;
+//using OrganizationManagement.Domain.OrganizationAgg;
 
 namespace BasicDataManagement.Domain.EntitiAgg
 {
@@ -8,6 +10,7 @@ namespace BasicDataManagement.Domain.EntitiAgg
         public string Title { get; private set; }
         public bool IsActive { get; private set; }
         public string Remark { get; private set; }
+        //public List<Organization> Organizations { get; private set; }
 
         public Entiti(string name, string title, string remark)
         {

@@ -1,5 +1,8 @@
 ﻿
+using BasicDataManagement.Application.Contracts.Entiti;
+using OrganizationManagement.Application.Contracts.Country;
 using System;
+using System.Collections.Generic;
 
 namespace OrganizationManagement.Application.Contracts.Organization
 {
@@ -31,6 +34,8 @@ namespace OrganizationManagement.Application.Contracts.Organization
         public long OrganizationGroupId { get; set; }
         public string CreationDate { get; set; }
         public bool IsActive { get; set; }
+        public long EntitiId { get; set; }
+        public string Entiti { get; set; }
         //public string Country { get; set; }
     }
 }

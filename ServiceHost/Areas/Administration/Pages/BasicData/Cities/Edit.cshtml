@@ -20,7 +20,7 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <label asp-for="Name" class="control-label" style="font-family:IranianSans">نام شهر</label>
-                    <input type="text" class="form-control" asp-for="Name" style="font-family:IranianSans" onchange="makeSlug('Name','Slug')">
+                    <input type="text" class="form-control" asp-for="Name" style="font-family:IranianSans" onchange="makeSlug('Name', 'Slug')">
                     <span asp-validation-for="Name" class="error"></span>
                 </div>
             </div>
@@ -60,7 +60,7 @@
                 <div class="form-group">
                     <label asp-for="ProvinceId" class="control-label">Province</label>
                     <select type="text" class="form-control" asp-for="ProvinceId"
-                            asp-items='new SelectList(Model.Provincies, "Id", "Name")'>
+                            asp-items='new SelectList(Model.Provincies, "Id", "Name")' >
                         <option value="0">-Province-</option>
                     </select>
                     <span asp-validation-for="ProvinceId" class="error"></span>
@@ -75,7 +75,10 @@
             </div>
         </div>
 
+        <input type="hidden" asp-for="Id" value="@Model.Id" />
+
     </div>
+
 
 
     <div class="modal-footer">

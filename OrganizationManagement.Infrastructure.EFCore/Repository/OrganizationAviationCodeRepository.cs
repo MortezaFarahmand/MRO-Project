@@ -57,7 +57,8 @@ namespace OrganizationManagement.Infrastructure.EFCore.Repository
                 CountryId = x.CountryId,
                 //Country = x.Countries.Name,
                 Description = x.Description,
-                IsEnabled = x.IsEnabled
+                    CallSign = x.CallSign,
+                    IsEnabled = x.IsEnabled
             });
 
             if (!string.IsNullOrWhiteSpace(searchModel.ICAO))
@@ -74,10 +75,11 @@ namespace OrganizationManagement.Infrastructure.EFCore.Repository
 
             var organizationAviationCode = query.OrderByDescending(x => x.Id).ToList();
 
-
-            organizationAviationCode.ForEach(o => o.Country = countrys
-                .FirstOrDefault(x => x.Id == o.CountryId)?.Name);
-
+            /////////////
+            organizationAviationCode.ForEach
+                (o => o.Country = countrys.FirstOrDefault(x => x.Id == o.CountryId)?.Name);
+            //////////////////
+            
             return organizationAviationCode;
 
         }
