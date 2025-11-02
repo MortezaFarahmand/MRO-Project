@@ -148,6 +148,39 @@ namespace BasicDataManagement.Infrastructure.EFCore.Migrations
                     b.ToTable("Entitis", (string)null);
                 });
 
+            modelBuilder.Entity("BasicDataManagement.Domain.PictureAgg.PictureCategory", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long>("EntitiId")
+                        .HasColumnType("bigint");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("Remark")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EntitiId");
+
+                    b.ToTable("PictureCategorys", (string)null);
+                });
+
             modelBuilder.Entity("BasicDataManagement.Domain.ProvinceAgg.Province", b =>
                 {
                     b.Property<long>("Id")
@@ -199,6 +232,17 @@ namespace BasicDataManagement.Infrastructure.EFCore.Migrations
                         .IsRequired();
 
                     b.Navigation("Province");
+                });
+
+            modelBuilder.Entity("BasicDataManagement.Domain.PictureAgg.PictureCategory", b =>
+                {
+                    b.HasOne("BasicDataManagement.Domain.EntitiAgg.Entiti", "Entiti")
+                        .WithMany()
+                        .HasForeignKey("EntitiId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Entiti");
                 });
 
             modelBuilder.Entity("BasicDataManagement.Domain.ProvinceAgg.Province", b =>

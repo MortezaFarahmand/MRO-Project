@@ -1,5 +1,4 @@
 ﻿using _0_Framework.Domain;
-using BasicDataManagement.Domain.CountryAgg;
 using BasicDataManagement.Domain.ProvinceAgg;
 namespace BasicDataManagement.Domain.CityAgg
 {

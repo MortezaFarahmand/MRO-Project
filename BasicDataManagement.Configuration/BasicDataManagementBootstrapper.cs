@@ -3,9 +3,11 @@ using BasicDataManagement.Application.Contracts.City;
 using BasicDataManagement.Application.Contracts.Country;
 using BasicDataManagement.Application.Contracts.Entiti;
 using BasicDataManagement.Application.Contracts.Province;
+using BasicDataManagement.Application.Contracts.PictureCategory;
 using BasicDataManagement.Domain.CityAgg;
 using BasicDataManagement.Domain.CountryAgg;
 using BasicDataManagement.Domain.EntitiAgg;
+using BasicDataManagement.Domain.PictureCategoryAgg;
 using BasicDataManagement.Domain.ProvinceAgg;
 using BasicDataManagement.Infrastructure.EFCore;
 using BasicDataManagement.Infrastructure.EFCore.Repository;
@@ -29,6 +31,9 @@ namespace BasicDataManagement.Configuration
 
             services.AddTransient<ICityApplication, CityApplication>();
             services.AddTransient<ICityRepository, CityRepository>();
+
+            services.AddTransient<IPictureCategoryApplication, PictureCategoryApplication>();
+            services.AddTransient<IPictureCategoryRepository, PictureCategoryRepository>();
 
             services.AddDbContext<BasicDataContext>(x => x.UseSqlServer(connectionString));
         }
