@@ -1,18 +1,18 @@
 ﻿using _0_Framework.Application;
 using _0_Framework.Infrastructure;
-using OrganizationManagement.Application.Contracts.Slide;
-using OrganizationManagement.Domain.SlideAgg;
+using BasicDataManagement.Application.Contracts.Slide;
+using BasicDataManagement.Domain.SlideAgg;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace OrganizationManagement.Infrastructure.EFCore.Repository
+namespace BasicDataManagement.Infrastructure.EFCore.Repository
 {
     public class SlideRepository : RepositoryBase<long, Slide>, ISlideRepository
     {
-        private readonly OrganizationContext _context;
+        private readonly BasicDataContext _context;
 
-        public SlideRepository(OrganizationContext context) : base(context)
+        public SlideRepository(BasicDataContext context) : base(context)
         {
             _context = context;
         }

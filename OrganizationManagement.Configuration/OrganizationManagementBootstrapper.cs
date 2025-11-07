@@ -9,13 +9,11 @@ using OrganizationManagement.Application.Contracts.Organization;
 using OrganizationManagement.Application.Contracts.OrganizationAviationCode;
 using OrganizationManagement.Application.Contracts.Country;
 using OrganizationManagement.Application.Contracts.OrganizationPicture;
-using OrganizationManagement.Application.Contracts.Slide;
 using OrganizationManagement.Domain.ApprovalAutorityAgg;
 using OrganizationManagement.Domain.OrganizationAgg;
 using OrganizationManagement.Domain.OrganizationAviationCodeAgg;
 using OrganizationManagement.Domain.OrganizationGroupAgg;
 using OrganizationManagement.Domain.OrganizationPictureAgg;
-using OrganizationManagement.Domain.SlideAgg;
 using OrganizationManagement.Infrastructure.EFCore;
 using OrganizationManagement.Infrastructure.EFCore.Repository;
 
@@ -33,9 +31,6 @@ namespace OrganizationManagement.Configuration
 
             services.AddTransient<IOrganizationPictureApplication, OrganizationPictureApplication>();
             services.AddTransient<IOrganizationPictureRepository, OrganizationPictureRepository>();
-
-            services.AddTransient<ISlideApplication, SlideApplication>();
-            services.AddTransient<ISlideRepository, SlideRepository>();
 
             //services.AddTransient<IPersonApplication, CountryApplication>();
             //services.AddTransient<IPersonRepository, CountryRepository>();

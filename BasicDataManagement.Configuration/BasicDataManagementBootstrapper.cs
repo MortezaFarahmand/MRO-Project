@@ -2,13 +2,15 @@
 using BasicDataManagement.Application.Contracts.City;
 using BasicDataManagement.Application.Contracts.Country;
 using BasicDataManagement.Application.Contracts.Entiti;
-using BasicDataManagement.Application.Contracts.Province;
 using BasicDataManagement.Application.Contracts.PictureCategory;
+using BasicDataManagement.Application.Contracts.Province;
+using BasicDataManagement.Application.Contracts.Slide;
 using BasicDataManagement.Domain.CityAgg;
 using BasicDataManagement.Domain.CountryAgg;
 using BasicDataManagement.Domain.EntitiAgg;
 using BasicDataManagement.Domain.PictureCategoryAgg;
 using BasicDataManagement.Domain.ProvinceAgg;
+using BasicDataManagement.Domain.SlideAgg;
 using BasicDataManagement.Infrastructure.EFCore;
 using BasicDataManagement.Infrastructure.EFCore.Repository;
 using Microsoft.EntityFrameworkCore;
@@ -34,6 +36,9 @@ namespace BasicDataManagement.Configuration
 
             services.AddTransient<IPictureCategoryApplication, PictureCategoryApplication>();
             services.AddTransient<IPictureCategoryRepository, PictureCategoryRepository>();
+
+            services.AddTransient<ISlideApplication, SlideApplication>();
+            services.AddTransient<ISlideRepository, SlideRepository>();
 
             services.AddDbContext<BasicDataContext>(x => x.UseSqlServer(connectionString));
         }

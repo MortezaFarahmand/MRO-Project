@@ -3,6 +3,7 @@ using BasicDataManagement.Domain.CountryAgg;
 using BasicDataManagement.Domain.EntitiAgg;
 using BasicDataManagement.Domain.PictureCategoryAgg;
 using BasicDataManagement.Domain.ProvinceAgg;
+using BasicDataManagement.Domain.SlideAgg;
 using BasicDataManagement.Infrastructure.EFCore.Mapping;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,6 +16,8 @@ namespace BasicDataManagement.Infrastructure.EFCore
         public DbSet<Province> Provinces { get; set; }
         public DbSet<City> Citys { get; set; }
         public DbSet<PictureCategory> PictureCategorys { get; set; }
+        public DbSet<Slide> Slides { get; set; }
+
 
         public BasicDataContext(DbContextOptions<BasicDataContext> options) : base(options)
         {

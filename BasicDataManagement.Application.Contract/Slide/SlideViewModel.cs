@@ -1,4 +1,4 @@
-﻿namespace OrganizationManagement.Application.Contracts.Slide
+﻿namespace BasicDataManagement.Application.Contracts.Slide
 {
     public class SlideViewModel
     {

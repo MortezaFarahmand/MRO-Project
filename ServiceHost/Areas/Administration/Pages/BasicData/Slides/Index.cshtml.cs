@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using OrganizationManagement.Application.Contracts.Slide;
+using BasicDataManagement.Application.Contracts.Slide;
 using System.Collections.Generic;
 
-namespace ServiceHost.Areas.Administration.Pages.Organization.Slides
+namespace ServiceHost.Areas.Administration.Pages.BasicData.Slides
 {
     public class IndexModel : PageModel
     {

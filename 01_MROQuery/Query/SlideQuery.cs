@@ -1,19 +1,19 @@
 ﻿using _01_MROQuery.Contracts.Slides;
-using OrganizationManagement.Infrastructure.EFCore;
+using BasicDataManagement.Infrastructure.EFCore;
 
 namespace _01_MROQuery.Query
 {
     public class SlideQuery : ISlideQuery
     {
-        private readonly OrganizationContext _organizationContext;
-        public SlideQuery(OrganizationContext organizationContext)
+        private readonly BasicDataContext _basicDataContext;
+        public SlideQuery(BasicDataContext basicDataContext)
         {
-            _organizationContext = organizationContext;
+            _basicDataContext = basicDataContext;
         }
 
         public List<SlideQueryModel> GetSlides()
         {
-            return _organizationContext.Slides
+            return _basicDataContext.Slides
                 .Where(x => x.IsRemoved == false)
                 .Select(x => new SlideQueryModel
                 {

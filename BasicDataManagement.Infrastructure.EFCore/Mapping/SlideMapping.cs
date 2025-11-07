@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using OrganizationManagement.Domain.SlideAgg;
+using BasicDataManagement.Domain.SlideAgg;
 
-namespace OrganizationManagement.Infrastructure.EFCore.Mapping
+namespace BasicDataManagement.Infrastructure.EFCore.Mapping
 {
     public class SlideMapping : IEntityTypeConfiguration<Slide>
     {
