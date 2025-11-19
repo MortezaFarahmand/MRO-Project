@@ -2137,6 +2137,7 @@
       "System.Threading.Tasks.Extensions/4.6.0": {},
       "0_Framework/1.0.0": {
         "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Abstractions": "2.3.0",
           "Microsoft.EntityFrameworkCore": "9.0.8",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "9.0.0"
         },

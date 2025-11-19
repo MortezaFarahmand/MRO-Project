@@ -34,7 +34,9 @@ namespace BasicDataManagement.Domain.SlideAgg
             if (!string.IsNullOrWhiteSpace(picture))
                 Picture = picture;
 
-            PictureAlt = pictureAlt;
+            if (!string.IsNullOrWhiteSpace(pictureAlt))
+                PictureAlt = pictureAlt;
+
             PictureTitle = pictureTitle;
             Heading = heading;
             Title = title;

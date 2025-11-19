@@ -6,6 +6,7 @@ using Microsoft.Extensions.Hosting;
 using OrganizationManagement.Configuration;
 using PersonManagement.Configuration;
 using BasicDataManagement.Configuration;
+using _0_Framework.Application;
 
 namespace ServiceHost
 {
@@ -26,6 +27,8 @@ namespace ServiceHost
             OrganizationManagementBootstrapper.Configure(services, connectionString);
             PersonnelManagementBootstrapper.Configure(services, connectionString);
             BasicDataManagementBootstrapper.Configure(services, connectionString);
+
+            services.AddTransient<IFileUploader, FileUploader>();
 
             services.AddRazorPages();
             //services.AddWordPress(options => { });

@@ -7,12 +7,12 @@ namespace BasicDataManagement.Application
 {
     public class SlideApplication : ISlideApplication
     {
-        //private readonly IFileUploader _fileUploader;
+        private readonly IFileUploader _fileUploader;
         private readonly ISlideRepository _slideRepository;
 
-        public SlideApplication(ISlideRepository slideRepository)
+        public SlideApplication(ISlideRepository slideRepository, IFileUploader fileUploader)
         {
-            //_fileUploader = fileUploader;
+            _fileUploader = fileUploader;
             _slideRepository = slideRepository;
         }
 
@@ -20,9 +20,12 @@ namespace BasicDataManagement.Application
         {
             var operation = new OperationResult();
 
-            //var pictureName = _fileUploader.Upload(command.Picture, "slides");
+            var slugTitle = command.PictureTitle.Slugify();
+            var picturePath = "SliderPictures";
+            var pictureName = _fileUploader.Upload(command.Picture, picturePath);
+            var pictureAltName = _fileUploader.Upload(command.PictureAlt, picturePath);
 
-            var slide = new Slide(command.Picture, command.PictureAlt, command.PictureTitle,
+            var slide = new Slide(pictureName, pictureAltName, command.PictureTitle,
                 command.Heading, command.Title, command.Text, command.Link, command.BtnText);
 
             _slideRepository.Create(slide);
@@ -37,10 +40,14 @@ namespace BasicDataManagement.Application
             if (slide == null)
                 return operation.Failed(ApplicationMessages.RecordNotFound);
 
-            //var pictureName = _fileUploader.Upload(command.Picture, "slides");
+            
+            var slugTitle = command.PictureTitle.Slugify();
+            var picturePath = "SliderPictures";
+            var pictureName = _fileUploader.Upload(command.Picture, picturePath);
+            var pictureAltName = _fileUploader.Upload(command.PictureAlt, picturePath);
 
-            slide.Edit(command.Picture, command.PictureAlt, command.PictureTitle,
-                command.Heading, command.Title, command.Text, command.Link, command.BtnText);
+            slide.Edit(pictureName, pictureAltName, command.PictureTitle,
+                command.Heading, slugTitle, command.Text, command.Link, command.BtnText);
             _slideRepository.SaveChanges();
             return operation.Succeeded();
         }
