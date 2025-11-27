@@ -18,3 +18,7 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PersonnelManagement.Appli
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PersonnelManagement.Application\obj\Debug\net90\refint\PersonnelManagement.Application.dll
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PersonnelManagement.Application\obj\Debug\net90\PersonnelManagement.Application.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PersonnelManagement.Application\obj\Debug\net90\ref\PersonnelManagement.Application.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PersonnelManagement.Application\bin\Debug\net90\BasicDataManagement.Application.Contracts.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PersonnelManagement.Application\bin\Debug\net90\BasicDataManagement.Domain.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PersonnelManagement.Application\bin\Debug\net90\BasicDataManagement.Application.Contracts.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PersonnelManagement.Application\bin\Debug\net90\BasicDataManagement.Domain.pdb

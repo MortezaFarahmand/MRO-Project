@@ -2477,11 +2477,41 @@
           "bin/placeholder/0_Framework.dll": {}
         }
       },
+      "BasicDataManagement.Application.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "0_Framework": "1.0.0",
+          "Microsoft.AspNetCore.Http": "2.3.0",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "9.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BasicDataManagement.Application.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BasicDataManagement.Application.Contracts.dll": {}
+        }
+      },
+      "BasicDataManagement.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "0_Framework": "1.0.0",
+          "BasicDataManagement.Application.Contracts": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BasicDataManagement.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BasicDataManagement.Domain.dll": {}
+        }
+      },
       "PersonnelManagement.Application.Contracts/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
           "0_Framework": "1.0.0",
+          "BasicDataManagement.Domain": "1.0.0",
           "Microsoft.AspNetCore.Http": "2.3.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "9.0.0"
         },
@@ -6521,6 +6551,16 @@
       "path": "../0_Framework/0_Framework.csproj",
       "msbuildProject": "../0_Framework/0_Framework.csproj"
     },
+    "BasicDataManagement.Application.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../BasicDataManagement.Application.Contract/BasicDataManagement.Application.Contracts.csproj",
+      "msbuildProject": "../BasicDataManagement.Application.Contract/BasicDataManagement.Application.Contracts.csproj"
+    },
+    "BasicDataManagement.Domain/1.0.0": {
+      "type": "project",
+      "path": "../BasicDataManagement.Domain/BasicDataManagement.Domain.csproj",
+      "msbuildProject": "../BasicDataManagement.Domain/BasicDataManagement.Domain.csproj"
+    },
     "PersonnelManagement.Application.Contracts/1.0.0": {
       "type": "project",
       "path": "../PersonnelManagement.Application.Contracts/PersonnelManagement.Application.Contracts.csproj",
@@ -6617,5 +6657,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json."
+    }
+  ]
 }

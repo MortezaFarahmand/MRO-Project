@@ -15,6 +15,10 @@ namespace PersonnelManagement.Infrastructure.EFCore.Mapping
             builder.Property(x => x.Description).HasMaxLength(255).IsRequired();
             builder.Property(x => x.Remark).HasMaxLength(500);
             builder.Property(x => x.IsActive);
+
+            builder.HasMany(x => x.Persons)
+                .WithOne(x => x.Group)
+                .HasForeignKey(x => x.PersonGroupId);
         }
     }
 }

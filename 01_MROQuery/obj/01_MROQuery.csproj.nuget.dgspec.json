@@ -686,6 +686,9 @@
             "projectReferences": {
               "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\0_Framework\\0_Framework.csproj": {
                 "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\0_Framework\\0_Framework.csproj"
+              },
+              "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Domain\\BasicDataManagement.Domain.csproj": {
+                "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Domain\\BasicDataManagement.Domain.csproj"
               }
             }
           }
@@ -843,6 +846,9 @@
           "net9.0": {
             "targetAlias": "net90",
             "projectReferences": {
+              "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Infrastructure.EFCore\\BasicDataManagement.Infrastructure.EFCore.csproj": {
+                "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Infrastructure.EFCore\\BasicDataManagement.Infrastructure.EFCore.csproj"
+              },
               "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\PersonnelManagement.Domain\\PersonnelManagement.Domain.csproj": {
                 "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\PersonnelManagement.Domain\\PersonnelManagement.Domain.csproj"
               }

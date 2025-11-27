@@ -14,6 +14,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\BasicDataManagement.Infrastructure.EFCore\BasicDataManagement.Infrastructure.EFCore.csproj" />
 		<ProjectReference Include="..\PersonnelManagement.Domain\PersonnelManagement.Domain.csproj" />
 	</ItemGroup>
 

@@ -5,6 +5,8 @@ using PersonnelManagement.Application.Contracts.PersonGroup;
 using PersonnelManagement.Domain.PersonGroupAgg;
 using PersonnelManagement.Infrastructure.EFCore.Repository;
 using PersonnelManagement.Infrastructure.EFCore;
+using PersonnelManagement.Application.Contracts.Person;
+using PersonnelManagement.Domain.PersonAgg;
 
 namespace PersonManagement.Configuration
 {
@@ -14,6 +16,9 @@ namespace PersonManagement.Configuration
         {
             services.AddTransient<IPersonGroupApplication, PersonGroupApplication>();
             services.AddTransient<IPersonGroupRepository, PersonGroupRepository>();
+
+            services.AddTransient<IPersonApplication, PersonApplication>();
+            services.AddTransient<IPersonRepository, PersonRepository>();
 
 
 

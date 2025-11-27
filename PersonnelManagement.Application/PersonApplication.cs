@@ -1,139 +1,101 @@
-﻿//using OrganizationManagement.Application.Contracts.Person;
-//using System.Collections.Generic;
-//using _0_Framework.Application;
-//using OrganizationManagement.Domain.PersonAgg;
-//using System.Net.Http.Headers;
-//using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
+﻿using _0_Framework.Application;
+using PersonnelManagement.Application.Contracts.Person;
+using PersonnelManagement.Domain.PersonAgg;
+using System.Collections.Generic;
 
-//namespace OrganizationManagement.Application
-//{
-//    public class PersonApplication : IPersonApplication
-//    {
-//        private readonly IPersonRepository _personRepository;
+namespace PersonnelManagement.Application
+{
+    public class PersonApplication : IPersonApplication
+    {
+        private readonly IPersonRepository _personRepository;
 
-//        public PersonApplication(IPersonRepository personRepository)
-//        {
-//            _personRepository = personRepository;
-//        }
+        public PersonApplication(IPersonRepository personRepository)
+        {
+            _personRepository = personRepository;
+        }
 
-//        public OperationResult Create(CreatePerson command)
-//        {
-//            var operation = new OperationResult();
-//            if (_personRepository.Exists(x => x.NationalCode == command.NationalCode || x.PassportNo == command.PassportNo))
-//                return operation.Failed(ApplicationMessages.DuplicatedRecord);
+        public OperationResult Create(CreatePerson command)
+        {
+            var operation = new OperationResult();
+            if (_personRepository.Exists(x => x.NationalCode == command.NationalCode || x.PassportNo == command.PassportNo))
+                return operation.Failed(ApplicationMessages.DuplicatedRecord);
 
-//            var person = new Person(command.NameEn, command.NameFa, command.FamilyEn, command.FamilyFa, command.FatherName, command.Birthday,
-//                command.PassportNo, command.NationalCode, command.Attachment, command.Picture, command.PictureAlt, command.IDCartNo,
-////                command.Address, command.OrganizationId);
+            var person = new Person(command.NameEn, command.NameFa, command.FamilyEn, command.FamilyFa,
+                command.FatherName, command.Gender, command.Birthday, command.Marriage, command.PassportNo,
+                command.NationalCode, command.NationalCodeOfFather, command.BirthCityId, command.BirthProvinceId,
+                command.BirthCountryId, command.CityId, command.Attachment, command.EducationalDegree,
+                command.EducationalField, command.IDCartNo, command.AddressId, command.MobileNo1,
+                command.MobileNo2, command.PhoneNo, command.MailBoxAddress1, command.MailBoxAddress2,
+                command.SocialAddress1, command.SocialAddress2, command.WorkingStartDate,
+                command.PersonGroupId, command.OrganizationId);
 
-//            _personRepository.Create(person);
-//            _personRepository.SaveChanges();
-//            return operation.Succeeded();
-//        }
-
-//        public OperationResult Edit(EditPerson command)
-//        {
-//            var operation = new OperationResult();
-//            var person = _personRepository.Get(command.Id);
-//            if (person == null)
-//                return operation.Failed(ApplicationMessages.RecordNotFound);
-
-//            if (_personRepository.Exists(x => x.NationalCode == command.NationalCode && x.Id == command.Id))
-//                return operation.Failed(ApplicationMessages.DuplicatedRecord);
-
-//            person.Edit(command.NameEn, command.NameFa, command.FamilyEn, command.FamilyFa, command.FatherName, command.Birthday,
-//                command.PassportNo, command.NationalCode, command.Attachment, command.Picture, command.PictureAlt, command.IDCartNo,
-//                command.Address, command.OrganizationId);
-
-//            _personRepository.SaveChanges();
-//            return operation.Succeeded();
-//        }
-
-//        public EditPerson GetDetails(long id)
-//        {
-//            return _personRepository.GetDetails(id);
-//        }
-
-//        public List<PersonViewModel> GetPerson()
-//        {
-//            return _personRepository.GetPerson();
-//        }
-
-//        public OperationResult IsActive(long id)
-//        {
-//            var operation = new OperationResult();
-//            var person = _personRepository.Get(id);
-//            if (person == null)
-//                return operation.Failed(ApplicationMessages.RecordNotFound);
-
-//            person.IsActive();
-//            _personRepository.SaveChanges();
-//            return operation.Succeeded();
-//        }
-//        public OperationResult IsNotActive(long id)
-//        {
-//            var operation = new OperationResult();
-//            var person = _personRepository.Get(id);
-//            if (person == null)
-//                return operation.Failed(ApplicationMessages.RecordNotFound);
-
-//            person.IsNotActive();
-//            _personRepository.SaveChanges();
-//            return operation.Succeeded();
-//        }
-
-//        public List<PersonViewModel> Search(PersonSearchModel searchModel)
-//        {
-//            return _personRepository.Search(searchModel);
-//        }
+            _personRepository.Create(person);
+            _personRepository.SaveChanges();
+            return operation.Succeeded();
+        }
 
 
+        public OperationResult Edit(EditPerson command)
+        {
+            var operation = new OperationResult();
+            var person = _personRepository.Get(command.Id);
+            if (person == null)
+                return operation.Failed(ApplicationMessages.RecordNotFound);
 
-//        //public OperationResult Create(CreatePerson command)
-//        //{
-//        //    var operation = new OperationResult();
-//        //    if (_personRepository.Exists(x => x.Name == command.Name))
-//        //        return operation.Failed(ApplicationMessages.DuplicatedRecord);
+            if (_personRepository.Exists(x => x.NationalCode == command.NationalCode && x.Id == command.Id))
+                return operation.Failed(ApplicationMessages.DuplicatedRecord);
 
-//        //    var person = new Person(command.Name, command.Alpha2Code, command.Alpha3Code, command.UNCode,
-//        //        command.DialCode, command.Picture, command.TailCode);
+            person.Edit(command.NameEn, command.NameFa, command.FamilyEn, command.FamilyFa,
+                command.FatherName, command.Gender, command.Birthday, command.Marriage, command.PassportNo,
+                command.NationalCode, command.NationalCodeOfFather, command.BirthCityId, command.BirthProvinceId,
+                command.BirthCountryId, command.CityId, command.Attachment, command.EducationalDegree,
+                command.EducationalField, command.IDCartNo, command.AddressId, command.MobileNo1,
+                command.MobileNo2, command.PhoneNo, command.MailBoxAddress1, command.MailBoxAddress2,
+                command.SocialAddress1, command.SocialAddress2, command.WorkingStartDate,
+                command.PersonGroupId, command.OrganizationId);
 
-//        //    _personRepository.Create(person);
-//        //    _personRepository.SaveChanges();
-//        //    return operation.Succeeded();
-//        //}
+            _personRepository.SaveChanges();
+            return operation.Succeeded();
+        }
 
-//        //public OperationResult Edit(EditPerson command)
-//        //{
-//        //    var operation = new OperationResult();
-//        //    var person = _personRepository.Get(command.Id);
-//        //    if (person == null)
-//        //        return operation.Failed(ApplicationMessages.RecordNotFound);
+        public EditPerson GetDetails(long id)
+        {
+            return _personRepository.GetDetails(id);
+        }
 
-//        //    if (_personRepository.Exists(x => x.Name == command.Name && x.Id != command.Id))
-//        //        return operation.Failed(ApplicationMessages.DuplicatedRecord);
+        public List<PersonViewModel> GetPerson()
+        {
+            return _personRepository.GetPerson();
+        }
 
-//        //    person.Edit(command.Name, command.Alpha2Code, command.Alpha3Code, command.UNCode,
-//        //        command.DialCode, command.Picture, command.TailCode);
+        public OperationResult Active(long id)
+        {
+            var operation = new OperationResult();
+            var person = _personRepository.Get(id);
+            if (person == null)
+                return operation.Failed(ApplicationMessages.RecordNotFound);
 
-//        //    _personRepository.SaveChanges();
-//        //    return operation.Succeeded();
+            person.Active();
+            _personRepository.SaveChanges();
+            return operation.Succeeded();
+        }
+        public OperationResult DeActive(long id)
+        {
+            var operation = new OperationResult();
+            var person = _personRepository.Get(id);
+            if (person == null)
+                return operation.Failed(ApplicationMessages.RecordNotFound);
 
-//        //}
+            person.DeActive();
+            _personRepository.SaveChanges();
+            return operation.Succeeded();
+        }
 
-//        //public EditPerson GetDetails(long id)
-//        //{
-//        //    return _personRepository.GetDetails(id);
-//        //}
+        public List<PersonViewModel> Search(PersonSearchModel searchModel)
+        {
+            return _personRepository.Search(searchModel);
+        }
 
-//        //public List<PersonViewModel> GetPersons()
-//        //{
-//        //    return _personRepository.GetPersons();
-//        //}
 
-//        //public List<PersonViewModel> Search(PersonSearchModel searchModel)
-//        //{
-//        //    return _personRepository.Search(searchModel);
-//        //}
-//    }
-//}
+    }
+}

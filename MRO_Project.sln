@@ -40,6 +40,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonnelManagement.Application", "PersonnelManagement.Application\PersonnelManagement.Application.csproj", "{40B40CE6-4B60-4551-BD51-3260A26CDDE3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonnelManagement.Application.Contracts", "PersonnelManagement.Application.Contracts\PersonnelManagement.Application.Contracts.csproj", "{524F82BC-FE35-445C-9C86-D9B7A1AC9A8D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BC63F745-9D64-4AC5-BA1D-7EF50F5760DB} = {BC63F745-9D64-4AC5-BA1D-7EF50F5760DB}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonnelManagement.Configuration", "PersonnelManagement.Configuration\PersonnelManagement.Configuration.csproj", "{961EA37C-0185-45BB-BA43-F9B2FF19549A}"
 EndProject

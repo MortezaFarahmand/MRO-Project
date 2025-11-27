@@ -2537,6 +2537,7 @@
       "PersonnelManagement.Application.Contracts/1.0.0": {
         "dependencies": {
           "0_Framework": "1.0.0",
+          "BasicDataManagement.Domain": "1.0.0",
           "Microsoft.AspNetCore.Http": "2.3.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "9.0.0"
         },
@@ -2561,6 +2562,7 @@
       },
       "PersonnelManagement.Infrastructure.EFCore/1.0.0": {
         "dependencies": {
+          "BasicDataManagement.Infrastructure.EFCore": "1.0.0",
           "Microsoft.EntityFrameworkCore": "9.0.8",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.8",
           "PersonnelManagement.Domain": "1.0.0"

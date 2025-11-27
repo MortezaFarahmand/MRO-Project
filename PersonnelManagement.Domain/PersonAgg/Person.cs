@@ -1,4 +1,8 @@
 ﻿using _0_Framework.Domain;
+using BasicDataManagement.Domain.CityAgg;
+using BasicDataManagement.Domain.CountryAgg;
+using BasicDataManagement.Domain.ProvinceAgg;
+using PersonnelManagement.Domain.PersonGroupAgg;
 using System.Collections.Generic;
 
 namespace PersonnelManagement.Domain.PersonAgg
@@ -17,13 +21,14 @@ namespace PersonnelManagement.Domain.PersonAgg
         public string NationalCode { get; private set; }
         public string NationalCodeOfFather { get; private set; }
         public long BirthCityId { get; private set; }
+        public long BirthProvinceId { get; private set; }//
+        public long BirthCountryId { get; private set; }//
         public long CityId { get; private set; }
-        public long CountryId { get; private set; }
         public string Attachment { get; private set; }
         public string EducationalDegree { get; private set; }
         public string EducationalField { get; private set; }
         public string IDCartNo { get; private set; }
-        public string Address { get; private set; }
+        public long AddressId { get; private set; }
         public string MobileNo1 { get; private set; }
         public string MobileNo2 { get; private set; }
         public string PhoneNo { get; private set; }
@@ -32,62 +37,113 @@ namespace PersonnelManagement.Domain.PersonAgg
         public string SocialAddress1 { get; private set; }
         public string SocialAddress2 { get; private set; }
         public string WorkingStartDate { get; private set; }
-        public bool IsActive { get; private set; }
+        public bool Activate { get; private set; }
         public long PersonGroupId { get; private set; }
+        public PersonGroup Group { get; private set; }
         public long OrganizationId { get; private set; }
-        //public List<Picture> Pictures { get; private set; }
-        //public List<Country> Countrys { get; private set; }
-        //public Person()
-        //{
-        //    Countrys = new List<Country>();
-        //}
+        //public List<PersonPicture> Pictures { get; private set; }
+        public List<Country> Countrys { get; private set; }
+        public List<Province> Provinces { get; private set; }
+        public List<City> Cities { get; private set; }
+        public Person()
+        {
+            Countrys = new List<Country>();
+            Provinces = new List<Province>();
+            Cities = new List<City>();
+        }
 
-        public Person(string nameEn, string nameFa, string familyEn, string familyFa, string fatherName, string birthDay,
-            string passportNo, string nationalCode, string attachment, string iDCartNo,
-             string address, long organizationId, bool Activate)
+        public Person(string nameEn, string nameFa, string familyEn, string familyFa, string fatherName,bool gender,
+            string birthDay, bool marriage, string passportNo, string nationalCode, string nationalCodeOfFather,
+            long birthCityId, long birthProvinceId, long birthCountryId, long cityId, string attachment,string educationalDegree, string educationalFeild,
+            string iDCartNo,long addressId,string mobileNo1, string mobileNo2,string phoneNo,string mailBoxAddress1,
+            string mailBoxAddress2, string socialAddress1, string socialAddress2, string workingStartDate,
+            long personGroupId, long organizationId)
         {
             NameEn = nameEn;
             NameFa = nameFa;
             FamilyEn = familyEn;
             FamilyFa = familyFa;
+            FatherName = fatherName;
+            Gender = gender;
             Birthday = birthDay;
+            Marriage = marriage;
             PassportNo = passportNo;
             NationalCode = nationalCode;
+            NationalCodeOfFather = nationalCodeOfFather;
+            BirthCityId = birthCityId;//
+            BirthProvinceId = birthProvinceId;
+            BirthCountryId = birthCountryId;
+            CityId = cityId;//
             Attachment = attachment;
+            EducationalDegree = educationalDegree;
+            EducationalField = educationalFeild;
             IDCartNo = iDCartNo;
-            Address = address;
-            OrganizationId = organizationId;
+            AddressId = addressId;
+            MobileNo1 = mobileNo1;
+            MobileNo2 = mobileNo2;
+            PhoneNo = phoneNo;
+            MailBoxAddress1 = mailBoxAddress1;
+            MailBoxAddress2 = mailBoxAddress2;
+            SocialAddress1 = socialAddress1;
+            SocialAddress2 = socialAddress2;
+            WorkingStartDate = workingStartDate;
             Activate = true;
+            PersonGroupId = personGroupId;//
+            OrganizationId = organizationId;//
+            
         }
 
-        public void Edit(string nameEn, string nameFa, string familyEn, string familyFa, string fatherName, string birthDay,
-            string passportNo, string nationalCode, string attachment, string picture, string pictureAlt, string iDCartNo,
-             string address, long organizationId)
+        public void Edit(string nameEn, string nameFa, string familyEn, string familyFa, string fatherName, bool gender,
+            string birthDay, bool marriage, string passportNo, string nationalCode, string nationalCodeOfFather,
+            long birthCityId, long birthProvinceId, long birthCountryId, long cityId, string attachment, string educationalDegree, string educationalFeild,
+            string iDCartNo, long addressId, string mobileNo1, string mobileNo2, string phoneNo, string mailBoxAddress1,
+            string mailBoxAddress2, string socialAddress1, string socialAddress2, string workingStartDate,
+            long personGroupId, long organizationId)
         {
             NameEn = nameEn;
             NameFa = nameFa;
             FamilyEn = familyEn;
             FamilyFa = familyFa;
+            FatherName = fatherName;
+            Gender = gender;
             Birthday = birthDay;
+            Marriage = marriage;
             PassportNo = passportNo;
             NationalCode = nationalCode;
+            NationalCodeOfFather = nationalCodeOfFather;
+            BirthCityId = birthCityId;//
+            BirthProvinceId = birthProvinceId;
+            BirthCountryId = birthCountryId;
+            CityId = cityId;//
             Attachment = attachment;
-            //if (!string.IsNullOrWhiteSpace(picture))
-            //    Picture = picture;
-            //PictureAlt = pictureAlt;
+            EducationalDegree = educationalDegree;
+            EducationalField = educationalFeild;
             IDCartNo = iDCartNo;
-            Address = address;
-            OrganizationId = organizationId;
+            AddressId = addressId;
+            MobileNo1 = mobileNo1;
+            MobileNo2 = mobileNo2;
+            PhoneNo = phoneNo;
+            MailBoxAddress1 = mailBoxAddress1;
+            MailBoxAddress2 = mailBoxAddress2;
+            SocialAddress1 = socialAddress1;
+            SocialAddress2 = socialAddress2;
+            WorkingStartDate = workingStartDate;
+            PersonGroupId = personGroupId;//
+            OrganizationId = organizationId;//
+                                            //if (!string.IsNullOrWhiteSpace(picture))
+                                            //    Picture = picture;
+                                            //PictureAlt = pictureAlt;
+
         }
 
-        //public void IsActive()
-        //{
-        //    this.Activate = true;
-        //}
+        public void Active()
+        {
+            this.Activate = true;
+        }
 
-        //public void IsNotActive()
-        //{
-        //    this.Activate = false;
-        //}
+        public void DeActive()
+        {
+            this.Activate = false;
+        }
     }
 }

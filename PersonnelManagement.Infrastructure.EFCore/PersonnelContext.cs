@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using PersonnelManagement.Domain.PersonAgg;
 using PersonnelManagement.Domain.PersonGroupAgg;
 using PersonnelManagement.Infrastructure.EFCore.Mapping;
 
@@ -7,6 +8,9 @@ namespace PersonnelManagement.Infrastructure.EFCore
     public class PersonnelContext : DbContext
     {
         public DbSet<PersonGroup> PersonGroups { get; set; }
+        public DbSet<Person> Persons { get; set; }
+
+
 
         public PersonnelContext(DbContextOptions<PersonnelContext> options) : base(options)
         {

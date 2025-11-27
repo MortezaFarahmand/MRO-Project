@@ -2315,6 +2315,8 @@ wwwroot\Img\SliderPictures\1F-Aerospace_Engineering.png
 wwwroot\Img\SliderPictures\20sp-currents-planes-illo-superJumbo.gif
 wwwroot\Img\SliderPictures\AdobeStock_105252393.jpeg
 wwwroot\Img\SliderPictures\AdobeStock_330643987.jpeg
+wwwroot\Img\SliderPictures\AdobeStock_340782183.jpeg
+wwwroot\Img\SliderPictures\AdobeStock_383927152.jpeg
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
 wwwroot\lib\bootstrap\dist\css\bootstrap.min.css

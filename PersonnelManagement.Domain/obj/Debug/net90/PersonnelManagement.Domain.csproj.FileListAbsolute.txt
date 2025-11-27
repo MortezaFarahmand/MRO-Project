@@ -18,3 +18,7 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PersonnelManagement.Domai
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PersonnelManagement.Domain\obj\Debug\net90\PersonnelManagement.Domain.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PersonnelManagement.Domain\obj\Debug\net90\PersonnelManagement.Domain.genruntimeconfig.cache
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PersonnelManagement.Domain\obj\Debug\net90\ref\PersonnelManagement.Domain.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PersonnelManagement.Domain\bin\Debug\net90\BasicDataManagement.Application.Contracts.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PersonnelManagement.Domain\bin\Debug\net90\BasicDataManagement.Domain.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PersonnelManagement.Domain\bin\Debug\net90\BasicDataManagement.Application.Contracts.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PersonnelManagement.Domain\bin\Debug\net90\BasicDataManagement.Domain.pdb
