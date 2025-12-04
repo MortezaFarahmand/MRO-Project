@@ -1031,6 +1031,7 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution-addons\whiteboard\assets\busy-icons-svg\magnifying-glass.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\av\ic_play_circle_filled_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\action\ic_view_headline_24px.svg
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\AdminTheme\assets\css\select2.css
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\device\ic_battery_charging_90_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\busy-icons-svg\coffee.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\notification\ic_event_busy_24px.svg
@@ -1796,6 +1797,7 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution-addons\whiteboard\assets\busy-icons-svg\chart05.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\social\ic_mood_bad_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\action\ic_perm_data_setting_24px.svg
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\AdminTheme\assets\js\select2.min.js
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\image\ic_camera_alt_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\image\ic_lens_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\AdminTheme\assets\toggles\toggles.min.js
@@ -2029,6 +2031,7 @@ wwwroot\AdminTheme\assets\css\bootstrap-theme.min.css
 wwwroot\AdminTheme\assets\css\helper.css
 wwwroot\AdminTheme\assets\css\material-design-iconic-font.min.css
 wwwroot\AdminTheme\assets\css\persian-datepicker.min.css
+wwwroot\AdminTheme\assets\css\select2.css
 wwwroot\AdminTheme\assets\css\style.css
 wwwroot\AdminTheme\assets\css\style-responsive.css
 wwwroot\AdminTheme\assets\css\waves-effect.css
@@ -2194,6 +2197,7 @@ wwwroot\AdminTheme\assets\js\modernizr.min.js
 wwwroot\AdminTheme\assets\js\npm.js
 wwwroot\AdminTheme\assets\js\persian-date.min.js
 wwwroot\AdminTheme\assets\js\persian-datepicker.min.js
+wwwroot\AdminTheme\assets\js\select2.min.js
 wwwroot\AdminTheme\assets\js\site.js
 wwwroot\AdminTheme\assets\js\skycons.min.js
 wwwroot\AdminTheme\assets\js\waves.js

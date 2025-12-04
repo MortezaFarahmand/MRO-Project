@@ -3,6 +3,7 @@ using BasicDataManagement.Domain.CityAgg;
 using BasicDataManagement.Domain.CountryAgg;
 using BasicDataManagement.Domain.ProvinceAgg;
 using PersonnelManagement.Domain.PersonGroupAgg;
+using System;
 using System.Collections.Generic;
 
 namespace PersonnelManagement.Domain.PersonAgg
@@ -15,7 +16,7 @@ namespace PersonnelManagement.Domain.PersonAgg
         public string FamilyFa { get; private set; }
         public string FatherName { get; private set; }
         public bool Gender { get; private set; }
-        public string Birthday { get; private set; }
+        public DateTime Birthday { get; private set; }
         public bool Marriage { get; private set; }
         public string PassportNo { get; private set; }
         public string NationalCode { get; private set; }
@@ -36,7 +37,7 @@ namespace PersonnelManagement.Domain.PersonAgg
         public string MailBoxAddress2 { get; private set; }
         public string SocialAddress1 { get; private set; }
         public string SocialAddress2 { get; private set; }
-        public string WorkingStartDate { get; private set; }
+        public DateTime WorkingStartDate { get; private set; }
         public bool Activate { get; private set; }
         public long PersonGroupId { get; private set; }
         public PersonGroup Group { get; private set; }
@@ -53,10 +54,10 @@ namespace PersonnelManagement.Domain.PersonAgg
         }
 
         public Person(string nameEn, string nameFa, string familyEn, string familyFa, string fatherName,bool gender,
-            string birthDay, bool marriage, string passportNo, string nationalCode, string nationalCodeOfFather,
+            DateTime birthDay, bool marriage, string passportNo, string nationalCode, string nationalCodeOfFather,
             long birthCityId, long birthProvinceId, long birthCountryId, long cityId, string attachment,string educationalDegree, string educationalFeild,
             string iDCartNo,long addressId,string mobileNo1, string mobileNo2,string phoneNo,string mailBoxAddress1,
-            string mailBoxAddress2, string socialAddress1, string socialAddress2, string workingStartDate,
+            string mailBoxAddress2, string socialAddress1, string socialAddress2, DateTime workingStartDate,
             long personGroupId, long organizationId)
         {
             NameEn = nameEn;
@@ -94,10 +95,10 @@ namespace PersonnelManagement.Domain.PersonAgg
         }
 
         public void Edit(string nameEn, string nameFa, string familyEn, string familyFa, string fatherName, bool gender,
-            string birthDay, bool marriage, string passportNo, string nationalCode, string nationalCodeOfFather,
+            DateTime birthDay, bool marriage, string passportNo, string nationalCode, string nationalCodeOfFather,
             long birthCityId, long birthProvinceId, long birthCountryId, long cityId, string attachment, string educationalDegree, string educationalFeild,
             string iDCartNo, long addressId, string mobileNo1, string mobileNo2, string phoneNo, string mailBoxAddress1,
-            string mailBoxAddress2, string socialAddress1, string socialAddress2, string workingStartDate,
+            string mailBoxAddress2, string socialAddress1, string socialAddress2, DateTime workingStartDate,
             long personGroupId, long organizationId)
         {
             NameEn = nameEn;

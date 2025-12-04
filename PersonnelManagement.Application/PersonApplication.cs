@@ -20,13 +20,15 @@ namespace PersonnelManagement.Application
             if (_personRepository.Exists(x => x.NationalCode == command.NationalCode || x.PassportNo == command.PassportNo))
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
 
+            var birthDay = command.Birthday.ToGeorgianDateTimeEn();
+            var workingStartDate = command.WorkingStartDate.ToGeorgianDateTimeEn();
             var person = new Person(command.NameEn, command.NameFa, command.FamilyEn, command.FamilyFa,
-                command.FatherName, command.Gender, command.Birthday, command.Marriage, command.PassportNo,
+                command.FatherName, command.Gender, birthDay, command.Marriage, command.PassportNo,
                 command.NationalCode, command.NationalCodeOfFather, command.BirthCityId, command.BirthProvinceId,
                 command.BirthCountryId, command.CityId, command.Attachment, command.EducationalDegree,
                 command.EducationalField, command.IDCartNo, command.AddressId, command.MobileNo1,
                 command.MobileNo2, command.PhoneNo, command.MailBoxAddress1, command.MailBoxAddress2,
-                command.SocialAddress1, command.SocialAddress2, command.WorkingStartDate,
+                command.SocialAddress1, command.SocialAddress2, workingStartDate,
                 command.PersonGroupId, command.OrganizationId);
 
             _personRepository.Create(person);
@@ -45,13 +47,15 @@ namespace PersonnelManagement.Application
             if (_personRepository.Exists(x => x.NationalCode == command.NationalCode && x.Id == command.Id))
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
 
+            var birthDay = command.Birthday.ToGeorgianDateTimeEn();
+            var workingStartDate = command.WorkingStartDate.ToGeorgianDateTimeEn();
             person.Edit(command.NameEn, command.NameFa, command.FamilyEn, command.FamilyFa,
-                command.FatherName, command.Gender, command.Birthday, command.Marriage, command.PassportNo,
+                command.FatherName, command.Gender, birthDay, command.Marriage, command.PassportNo,
                 command.NationalCode, command.NationalCodeOfFather, command.BirthCityId, command.BirthProvinceId,
                 command.BirthCountryId, command.CityId, command.Attachment, command.EducationalDegree,
                 command.EducationalField, command.IDCartNo, command.AddressId, command.MobileNo1,
                 command.MobileNo2, command.PhoneNo, command.MailBoxAddress1, command.MailBoxAddress2,
-                command.SocialAddress1, command.SocialAddress2, command.WorkingStartDate,
+                command.SocialAddress1, command.SocialAddress2, workingStartDate,
                 command.PersonGroupId, command.OrganizationId);
 
             _personRepository.SaveChanges();

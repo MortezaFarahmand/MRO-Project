@@ -45,16 +45,27 @@
                     </div>
                     <div class="form-group">
                         <label class="sr-only" asp-for="SearchModel.PersonGroupId"></label>
-                        <select class="form-control " asp-for="SearchModel.PersonGroupId" asp-items="Model.PersonGroups">
+                        <select class="form-control" asp-for="SearchModel.PersonGroupId" asp-items="Model.PersonGroups">
                             <option value="0">-Person Groups-</option>
                         </select>
                     </div>
-                    <div class="form-group">
+                   @*  <div class="form-group">
                         <label class="sr-only" asp-for="SearchModel.BirthCountryId"></label>
                         <select class="form-control " asp-for="SearchModel.BirthCountryId" asp-items="Model.Countries">
-                            <option value="0">-Countrys-</option>
+                            <option value="0">-Countrys-</option> col-sm-6 control-label
                         </select>
-                    </div>
+                    </div> *@
+
+                       <div class="form-group">
+                        <label class="sr-only col-sm-6" asp-for="SearchModel.BirthCountryId"></label>
+                                <select class="select2" asp-for="SearchModel.BirthCountryId"
+                                    asp-items="Model.Countries">
+                                        <option value="0">-Countrys-</option>
+                                </select>   
+                        
+                       </div>
+
+                 
 
                     <button type="submit" class="btn btn-success waves-effect waves-light m-l-10">Search</button>
                     <a class="btn btn-primary waves-effect waves-light m-l-10" asp-page="./Index">View All</a>
@@ -64,6 +75,8 @@
         </div>
     </div>
 </div>
+
+
 
 <div class="row" id="PersonDiv">
     <div class="col-md-12">
@@ -176,11 +189,19 @@
 @section Scripts {
     <script src="~/AdminTheme/assets/datatables/jquery.dataTables.min.js"></script>
     <script src="~/AdminTheme/assets/datatables/dataTables.bootstrap.js"></script>
+    <script src="~/AdminTheme/assets/select2/select2.min.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function () {
             $('#datatable').dataTable();
         });
+
+        $(".select2").select2({
+                width: '100%'
+        });
+
     </script>
+
+   
 }
 

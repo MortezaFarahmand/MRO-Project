@@ -35,11 +35,18 @@ $(document).ready(function () {
     $("#MainModal").on("shown.bs.modal",
         function () {
             window.location.hash = "##";
+
             $('.persianDateInput').persianDatepicker({
                 format: 'DD/MM/YYYY',
                 calendarType: 'gregorian',
                 autoClose: true
             });
+
+            $(".select2").select2({
+                width: '100%'
+            });
+
+
         });
 
     $(document).on("submit",

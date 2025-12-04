@@ -1,5 +1,7 @@
 ﻿
 
+using System;
+
 namespace PersonnelManagement.Application.Contracts.Person
 {
     public class PersonViewModel

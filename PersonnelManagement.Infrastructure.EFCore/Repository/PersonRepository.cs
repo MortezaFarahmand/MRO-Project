@@ -39,7 +39,7 @@ namespace PersonnelManagement.Infrastructure.EFCore.Repository
                 FamilyFa = x.FamilyFa,
                 FatherName = x.FatherName,
                 Gender = x.Gender,
-                Birthday = x.Birthday,
+                Birthday = x.Birthday.ToString(),
                 Marriage = x.Marriage,
                 PassportNo = x.PassportNo,
                 NationalCode = x.NationalCode,
@@ -58,9 +58,11 @@ namespace PersonnelManagement.Infrastructure.EFCore.Repository
                 MailBoxAddress2 = x.MailBoxAddress2,
                 SocialAddress1 = x.SocialAddress1,
                 SocialAddress2 = x.SocialAddress2,
-                WorkingStartDate = x.WorkingStartDate,
+                WorkingStartDate = x.WorkingStartDate.ToString(),
                 PersonGroupId = x.PersonGroupId,//
-                OrganizationId = x.OrganizationId//
+                OrganizationId = x.OrganizationId,
+                BirthProvinceId = x.BirthProvinceId,
+                BirthCountryId = x.BirthCountryId
 
 
             }).FirstOrDefault(x => x.Id == id);   
@@ -77,7 +79,7 @@ namespace PersonnelManagement.Infrastructure.EFCore.Repository
                 FamilyEn = x.FamilyEn,
                 FamilyFa = x.FamilyFa,
                 FatherName = x.FatherName,
-                Birthday = x.Birthday,
+                Birthday = x.Birthday.ToString(),
                 PassportNo = x.PassportNo,
                 NationalCode = x.NationalCode,
                 PersonGroupId = x.PersonGroupId,
@@ -105,7 +107,7 @@ namespace PersonnelManagement.Infrastructure.EFCore.Repository
                 Activate = x.Activate,
                 FamilyFa = x.FamilyFa,
                 FatherName = x.FatherName,
-                Birthday = x.Birthday,
+                Birthday = x.Birthday.ToString(),
                 PassportNo = x.PassportNo,
                 NationalCode = x.NationalCode,
                 PersonGroupId = x.PersonGroupId, 

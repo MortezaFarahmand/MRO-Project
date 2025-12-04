@@ -5,7 +5,7 @@
 
 <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
-    <h4 class="modal-title">Edit "@Model.NameEn" Organization </h4>
+    <h4 class="modal-title">Edit "@Model.NameEn" Person </h4>
 </div>
 
 <form asp-page="./Index" asp-page-handler="Edit"
@@ -72,10 +72,10 @@
             </div>
             <div class="col-md-6">
                 <div class="form-group">
-                    <label asp-for="CityId" class="control-label">Working City</label>
-                    <select type="text" class="form-control" asp-for="CityId"
+                    <label class="sr-only col-sm-6" asp-for="CityId">Working City</label>
+                    <select class="select2" asp-for="CityId"
                             asp-items='new SelectList(Model.Cities, "Id", "Name")'>
-                        <option value="0">-Citys-</option>
+                        <option value="0">-Cities-</option>
                     </select>
                     <span asp-validation-for="CityId" class="error"></span>
                 </div>
@@ -83,20 +83,20 @@
         </div>
 
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="form-group">
-                    <label asp-for="BirthCountryId" class="control-label">Country</label>
-                    <select type="text" class="form-control" asp-for="BirthCountryId"
+                    <label class="sr-only col-sm-6" asp-for="BirthCountryId">Country</label>
+                    <select class="select2" asp-for="BirthCountryId"
                             asp-items='new SelectList(Model.Countrys, "Id", "Name")'>
-                        <option value="0">-Countrys-</option>
+                        <option value="0">-Countries-</option>
                     </select>
                     <span asp-validation-for="BirthCountryId" class="error"></span>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label asp-for="BirthProvinceId" class="control-label">Province</label>
-                    <select type="text" class="form-control" asp-for="BirthProvinceId"
+                    <label class="sr-only col-sm-6" asp-for="BirthProvinceId">Province</label>
+                    <select class="select2" asp-for="BirthProvinceId"
                             asp-items='new SelectList(Model.Provinces, "Id", "Name")'>
                         <option value="0">-Provinces-</option>
                     </select>
@@ -105,8 +105,8 @@
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label asp-for="BirthCityId" class="control-label">City</label>
-                    <select type="text" class="form-control" asp-for="BirthCityId"
+                    <label class="sr-only col-sm-6" asp-for="BirthCityId" >City</label>
+                    <select class="form-control" asp-for="BirthCityId"
                             asp-items='new SelectList(Model.Cities, "Id", "Name")'>
                         <option value="0">-Citys-</option>
                     </select>
@@ -150,7 +150,9 @@
                     <label asp-for="Birthday" class="control-label">Birthday</label>
                     <div class="input-group">
                         <input class="form-control persianDateInput" asp-for="Birthday">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                        <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-calendar"></i>
+                        </span>
                     </div>
                     <span asp-validation-for="Birthday" class="error"></span>
 
@@ -272,7 +274,12 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <label asp-for="WorkingStartDate" class="control-label">Working Start Date</label>
-                    <input type="text" class="form-control" asp-for="WorkingStartDate">
+                    <div class="input-group">
+                        <input class="form-control persianDateInput" asp-for="WorkingStartDate">
+                        <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-calendar"></i>
+                        </span>
+                    </div>
                     <span asp-validation-for="WorkingStartDate" class="error"></span>
                 </div>
             </div>
@@ -286,6 +293,7 @@
             </div>
         </div>
 
+        <input type="hidden" asp-for="Id" value="@Model.Id" />
 
     </div>
 
