@@ -14,6 +14,7 @@
         public long BirthCityId { get; set; }
         public long BirthProvinceId { get; set; }
         public long BirthCountryId { get; set; }
-
+        public string Birthday { get; set; }
+        public string WorkingStartDate { get; set; }
     }
 }

@@ -115,8 +115,10 @@ namespace PersonnelManagement.Infrastructure.EFCore.Repository
                 OrganizationId = x.OrganizationId,
                 BirthCityId = x.BirthCityId,
                 BirthProvinceId = x.BirthProvinceId,
-                BirthCountryId = x.BirthCountryId
-            });
+                BirthCountryId = x.BirthCountryId,
+                WorkingStartDate = x.WorkingStartDate.ToString()
+                
+                });
 
 
             if(!string.IsNullOrWhiteSpace(searchModel.NameFa))

@@ -31,13 +31,13 @@
                         <label class="sr-only " asp-for="SearchModel.NameEn"></label>
                         <input class="form-control " asp-for="SearchModel.NameEn" placeholder="Name">
                     </div>
+                    <div class="form-group">
+                        <label class="sr-only" asp-for="SearchModel.FamilyEn"></label>
+                        <input class="form-control " asp-for="SearchModel.FamilyEn" placeholder="Family">
+                    </div>
                     <div class="form-group  element-dir-Fa">
                         <label class="sr-only " asp-for="SearchModel.NameFa"></label>
                         <input class="form-control " asp-for="SearchModel.NameFa" placeholder="نام">
-                    </div>
-                    <div class="form-group">
-                        <label class="sr-only" asp-for="SearchModel.FamilyEn"></label>
-                        <input class="form-control " asp-for="SearchModel.FamilyEn" placeholder="Family En.">
                     </div>
                     <div class="form-group  element-dir-Fa">
                         <label class="sr-only" asp-for="SearchModel.FamilyFa"></label>
@@ -189,14 +189,14 @@
 @section Scripts {
     <script src="~/AdminTheme/assets/datatables/jquery.dataTables.min.js"></script>
     <script src="~/AdminTheme/assets/datatables/dataTables.bootstrap.js"></script>
-    <script src="~/AdminTheme/assets/select2/select2.min.js"></script>
+    <script src="~/AdminTheme/assets/js/select2.min.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function () {
             $('#datatable').dataTable();
         });
 
-        $(".select2").select2({
+        $('.select22').select2({
                 width: '100%'
         });
 

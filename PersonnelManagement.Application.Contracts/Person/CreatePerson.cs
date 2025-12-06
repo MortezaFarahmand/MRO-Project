@@ -7,6 +7,7 @@ using BasicDataManagement.Domain.CityAgg;
 using BasicDataManagement.Domain.CountryAgg;
 using BasicDataManagement.Domain.ProvinceAgg;
 using PersonnelManagement.Application.Contracts.PersonGroup;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 

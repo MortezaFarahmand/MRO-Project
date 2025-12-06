@@ -15,6 +15,7 @@ SinglePage.LoadModal = function () {
             const newForm = forms[forms.length - 1];
             $.validator.unobtrusive.parse(newForm);
             showModal();
+            
         }).fail(function (error) {
             alert("خطایی رخ داده، لطفا با مدیر سیستم تماس بگیرید.");
         });
@@ -42,7 +43,7 @@ $(document).ready(function () {
                 autoClose: true
             });
 
-            $(".select2").select2({
+            $('.select22').select2({
                 width: '100%'
             });
 

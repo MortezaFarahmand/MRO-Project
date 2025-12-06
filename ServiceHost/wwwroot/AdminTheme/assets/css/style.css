@@ -1881,6 +1881,22 @@ body.fixed-left .side-menu.left {
 .checkbox-success input[type="checkbox"]:checked + label::after {
   color: #fff; 
 }
+
+.checkbox-scale {
+    transform: scale(3.4); /* Scale the checkbox by 1.5 times */
+    -ms-transform: scale(3.5); /* IE 9 */
+    -webkit-transform: scale(2); /* Safari and Chrome */
+    -o-transform: scale(2); /* Opera */
+    -moz-transform: scale(2); /* FF */
+    padding: 10px;
+}
+
+.checkbox-lg {
+    width: 2.5rem; /* Set the width you desire */
+    height: 2.5rem; /* Set the height you desire */
+}
+
+
 .radio {
   padding-left: 20px; 
 }

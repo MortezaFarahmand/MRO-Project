@@ -66,14 +66,14 @@
                 <div class="form-group">
                     <label asp-for="AddressId" class="control-label">Address</label>
                     <textarea class="form-control autogrow" asp-for="AddressId"
-                                  style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 75px;"></textarea>
+                                  style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 35px;"></textarea>
                     <span asp-validation-for="AddressId" class="error"></span>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-group">
-                    <label class="sr-only col-sm-6" asp-for="CityId">Working City</label>
-                    <select class="select2" asp-for="CityId"
+                    <label asp-for="CityId" class="control-label">Working City</label>
+                    <select class="select22" asp-for="CityId"
                             asp-items='new SelectList(Model.Cities, "Id", "Name")'>
                         <option value="0">-Cities-</option>
                     </select>
@@ -86,7 +86,7 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <label class="sr-only" asp-for="BirthCountryId"></label>
-                    <select class="select2" asp-for="BirthCountryId"
+                    <select class="select22" asp-for="BirthCountryId"
                             asp-items='new SelectList(Model.Countrys, "Id", "Name")'>
                         <option value="0">-Countrys-</option>
                     </select>
@@ -95,8 +95,8 @@
             </div>
              <div class="col-md-4">
                 <div class="form-group">
-                    <label asp-for="BirthProvinceId" class="control-label">Province</label>
-                    <select class="form-control" asp-for="BirthProvinceId"
+                    <label class="sr-only" asp-for="BirthProvinceId">Province</label>
+                    <select class="select22" asp-for="BirthProvinceId"
                             asp-items='new SelectList(Model.Provinces, "Id", "Name")'>
                         <option value="0">-Provinces-</option>
                     </select>
@@ -105,8 +105,8 @@
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label asp-for="BirthCityId" class="control-label">City</label>
-                    <select class="form-control" asp-for="BirthCityId"
+                    <label class="sr-only" asp-for="BirthCityId">City</label>
+                    <select class="select22" asp-for="BirthCityId"
                             asp-items='new SelectList(Model.Cities, "Id", "Name")'>
                         <option value="0">-Citys-</option>
                     </select>
@@ -126,23 +126,61 @@
             <div class="col-md-3">
                 <div class="form-group">
                      <p>Gender</p>
+
                     <div class="radio radio-info radio-inline">
-                        <input type="radio" asp-for="Gender" value="true" class="form-control" >
+                        <input type="radio" asp-for="Gender" value="true" class="form-control">
                         <label asp-for="Gender">Male</label>
                     </div>
-                    <div class="radio radio-inline">
+                    <div class="radio radio-info radio-inline">
                         <input type="radio" asp-for="Gender" value="false" class="form-control">
                         <label asp-for="Gender">Female</label>
                     </div>
+
+                    @* @if (Model.Gender)
+                    {
+                        <div class="radio radio-info radio-inline">
+                            <input type="radio" asp-for="Gender" value="true" class="form-control">
+                            <label asp-for="Gender">Male</label>
+                        </div>
+                        <div class="radio radio-info radio-inline">
+                            <input type="radio" asp-for="Gender" value="false" class="form-control">
+                            <label asp-for="Gender">Female</label>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="radio radio-info radio-inline">
+                            <input type="radio" asp-for="Gender" value="false" class="form-control">
+                            <label asp-for="Gender">Male</label>
+                        </div>
+                        <div class="radio radio-info radio-inline">
+                            <input type="radio" asp-for="Gender" value="true" class="form-control">
+                            <label asp-for="Gender">Female</label>
+                        </div>
+                    } *@
+                    
+                    
                     <span asp-validation-for="Gender" class="error"></span>
                 </div>
             </div>
 
             <div class="col-md-3">
-                <div class="form-group">
+                @* <div class="form-group">
                     <label asp-for="Marriage" class="control-label">Marriage</label>
                     <input type="text" class="form-control" asp-for="Marriage">
                     <span asp-validation-for="Marriage" class="error"></span>
+                </div> *@
+                @* <div class="form-group">
+                        <div class="toggle toggle-primary">
+                        <label asp-for="Marriage" class="control-label">Marriage</label>
+                        <input class="form-control" asp-for="Marriage">
+                        </div>
+                </div> *@
+                <div class="form-group">
+                    <input class="form-check-input checkbox-lg" type="checkbox" asp-for="Marriage">
+                    <label class="form-check-label" asp-for="Marriage">
+                        Marriaged
+                    </label>
                 </div>
             </div>
             <div class="col-md-3">
@@ -163,7 +201,7 @@
             <div class="form-group">
                     <label asp-for="MailBoxAddress1" class="control-label">MailBox Address 1</label>
                 <div class="input-group">
-                        <input type="text" class="form-control" asp-for="MailBoxAddress1">
+                        <input type="email" class="form-control" asp-for="MailBoxAddress1">
                    <span class="input-group-addon"><i class="md md-web"></i></span>
                 </div>
                     <span asp-validation-for="MailBoxAddress1" class="error"></span>
@@ -173,7 +211,7 @@
             <div class="form-group">
                     <label asp-for="MailBoxAddress2" class="control-label">MailBox Address 2</label>
                 <div class="input-group">
-                        <input type="text" class="form-control" asp-for="MailBoxAddress2">
+                        <input type="email" class="form-control" asp-for="MailBoxAddress2">
                    <span class="input-group-addon"><i class="md md-mail"></i></span>
                  </div>
                     <span asp-validation-for="MailBoxAddress2" class="error"></span>
@@ -183,7 +221,7 @@
                 <div class="form-group">
                     <label asp-for="SocialAddress1" class="control-label">Social Address 1</label>
                     <div class="input-group">
-                        <input type="text" class="form-control" asp-for="SocialAddress1">
+                        <input type="text" class="form-control" asp-for="SocialAddress1" >
                         <span class="input-group-addon"><i class="md md-mail"></i></span>
                     </div>
                     <span asp-validation-for="SocialAddress1" class="error"></span>
@@ -212,7 +250,7 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <label asp-for="NationalCode" class="control-label">MailBox Address 2</label>
-                    <input type="text" class="form-control" asp-for="NationalCode">
+                    <input type="number" class="form-control" asp-for="NationalCode">
                     <span asp-validation-for="NationalCode" class="error"></span>
                 </div>
             </div>
@@ -229,7 +267,7 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <label asp-for="NationalCodeOfFather" class="control-label">National Code Of Father</label>
-                    <input type="text" class="form-control" asp-for="NationalCodeOfFather">
+                    <input type="number" class="form-control" asp-for="NationalCodeOfFather">
                     <span asp-validation-for="NationalCodeOfFather" class="error"></span>
                 </div>
             </div>
@@ -240,14 +278,14 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <label asp-for="EducationalDegree" class="control-label">Educational Degree</label>
-                    <input type="file" class="form-control" asp-for="EducationalDegree" >
+                    <input type="text" class="form-control" asp-for="EducationalDegree" >
                     <span asp-validation-for="EducationalDegree" class="error"></span>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-group">
                     <label asp-for="EducationalField" class="control-label">Educational Field</label>
-                    <input type="file" class="form-control" asp-for="EducationalField">
+                    <input type="text" class="form-control" asp-for="EducationalField">
                     <span asp-validation-for="EducationalField" class="error"></span>
                 </div>
             </div>
@@ -257,21 +295,22 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <label asp-for="MobileNo1" class="control-label">Mobile No. 1</label>
-                    <input type="text" class="form-control" asp-for="MobileNo1">
+                    <input type="tel" class="form-control" asp-for="MobileNo1" 
+                    placeholder="0912-123-45-67" pattern="[0-9]{4}-[0-9]{3}-[0-9]{2}-[0-9]{2}">
                     <span asp-validation-for="MobileNo1" class="error"></span>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
                     <label asp-for="MobileNo2" class="control-label">Mobile No. 2</label>
-                    <input type="text" class="form-control" asp-for="MobileNo2">
+                    <input type="tel" class="form-control" asp-for="MobileNo2">
                     <span asp-validation-for="MobileNo2" class="error"></span>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="form-group">
                     <label asp-for="PhoneNo" class="control-label">Phone No.</label>
-                    <input type="text" class="form-control" asp-for="PhoneNo">
+                    <input type="tel" class="form-control" asp-for="PhoneNo">
                     <span asp-validation-for="PhoneNo" class="error"></span>
                 </div>
             </div>
@@ -293,22 +332,20 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <label asp-for="Attachment" class="control-label">Attachment</label>
-                    <textarea class="form-control autogrow" asp-for="Attachment"
-                              style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 94px;"></textarea>
+                    <input type="file" class="form-control" asp-for="Attachment">
                     <span asp-validation-for="Attachment" class="error"></span>
                 </div>
             </div>
         </div>
-
+        
        
     </div>
- 
 
     <div class="modal-footer">
         <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
         <button type="submit" class="btn btn-info waves-effect waves-light">Create</button>
     </div>
 
-
+   
 </form>
 

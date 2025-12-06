@@ -2029,6 +2029,10 @@ wwwroot\AdminTheme\assets\css\bootstrap-theme.css
 wwwroot\AdminTheme\assets\css\bootstrap-theme.css.map
 wwwroot\AdminTheme\assets\css\bootstrap-theme.min.css
 wwwroot\AdminTheme\assets\css\helper.css
+wwwroot\AdminTheme\assets\css\img\droparrows.png
+wwwroot\AdminTheme\assets\css\img\select2.png
+wwwroot\AdminTheme\assets\css\img\select2-spinner.gif
+wwwroot\AdminTheme\assets\css\img\select2x2.png
 wwwroot\AdminTheme\assets\css\material-design-iconic-font.min.css
 wwwroot\AdminTheme\assets\css\persian-datepicker.min.css
 wwwroot\AdminTheme\assets\css\select2.css
@@ -2232,10 +2236,6 @@ wwwroot\AdminTheme\assets\peity-chart\jquery.peity.min.js
 wwwroot\AdminTheme\assets\radial\radial.css
 wwwroot\AdminTheme\assets\responsive-table\rwd-table.min.css
 wwwroot\AdminTheme\assets\responsive-table\rwd-table.min.js
-wwwroot\AdminTheme\assets\select2\img\droparrows.png
-wwwroot\AdminTheme\assets\select2\img\select2.png
-wwwroot\AdminTheme\assets\select2\img\select2-spinner.gif
-wwwroot\AdminTheme\assets\select2\img\select2x2.png
 wwwroot\AdminTheme\assets\select2\select2.css
 wwwroot\AdminTheme\assets\select2\select2.min.js
 wwwroot\AdminTheme\assets\spinner\spinner.min.js
