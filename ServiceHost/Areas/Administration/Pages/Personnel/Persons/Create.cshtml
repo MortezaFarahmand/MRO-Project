@@ -177,9 +177,9 @@
                         </div>
                 </div> *@
                 <div class="form-group">
-                    <input class="form-check-input checkbox-lg" type="checkbox" asp-for="Marriage">
+                    <input class="form-check-input" type="checkbox" asp-for="Marriage">
                     <label class="form-check-label" asp-for="Marriage">
-                        Marriaged
+                         Marriaged
                     </label>
                 </div>
             </div>
@@ -276,9 +276,18 @@
                     
         <div class="row">
             <div class="col-md-6">
-                <div class="form-group">
+                <div class="form-group">                   
                     <label asp-for="EducationalDegree" class="control-label">Educational Degree</label>
-                    <input type="text" class="form-control" asp-for="EducationalDegree" >
+                    @* <input type="text" class="form-control" asp-for="EducationalDegree"> *@
+                    <select asp-for="EducationalDegree" class="form-control">
+                        <option value="0" selected>Choose...</option>
+                        <option value="1">Diploma / پایان دوره متوسطه / دیپلم </option>
+                        <option value="2">Associate Degree / مدرک تحصیلی فوق دیپلم / کاردانی </option>
+                        <option value="3">Associate Bachelor's Degree / مدرک تحصیلی لیسانس / کارشناسی </option>
+                        <option value="4">Master's Degree / مدرک تحصیلی فوق لیسانس / کارشناسی ارشد </option>
+                        <option value="5">Doctoral Degree / PhD or مدرک تحصیلی دکترا </option>
+                        <option value="6">Postdoctoral Degree / مدرک تحصیلی فوق دکتری </option>
+                    </select>
                     <span asp-validation-for="EducationalDegree" class="error"></span>
                 </div>
             </div>

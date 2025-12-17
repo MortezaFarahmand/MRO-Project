@@ -41,16 +41,19 @@ namespace PersonnelManagement.Domain.PersonAgg
         public bool Activate { get; private set; }
         public long PersonGroupId { get; private set; }
         public PersonGroup Group { get; private set; }
+        //public List<PersonGroup> PersonGroups { get; private set; }
         public long OrganizationId { get; private set; }
         //public List<PersonPicture> Pictures { get; private set; }
         public List<Country> Countrys { get; private set; }
         public List<Province> Provinces { get; private set; }
         public List<City> Cities { get; private set; }
+
         public Person()
         {
             Countrys = new List<Country>();
             Provinces = new List<Province>();
             Cities = new List<City>();
+            //Groups = new List<PersonGroup>();
         }
 
         public Person(string nameEn, string nameFa, string familyEn, string familyFa, string fatherName,bool gender,

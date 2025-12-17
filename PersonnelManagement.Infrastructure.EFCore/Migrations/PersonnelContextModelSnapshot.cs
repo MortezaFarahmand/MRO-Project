@@ -179,9 +179,8 @@ namespace PersonnelManagement.Infrastructure.EFCore.Migrations
                     b.Property<long>("BirthProvinceId")
                         .HasColumnType("bigint");
 
-                    b.Property<string>("Birthday")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                    b.Property<DateTime>("Birthday")
+                        .HasColumnType("datetime2");
 
                     b.Property<long>("CityId")
                         .HasColumnType("bigint");
@@ -275,9 +274,8 @@ namespace PersonnelManagement.Infrastructure.EFCore.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
-                    b.Property<string>("WorkingStartDate")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
+                    b.Property<DateTime>("WorkingStartDate")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 

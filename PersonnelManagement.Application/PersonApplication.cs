@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace PersonnelManagement.Application
 {
-    public class PersonApplication : IPersonApplication
+    public class PersonApplication : IPersonApplication 
     {
         private readonly IPersonRepository _personRepository;
 
@@ -44,7 +44,7 @@ namespace PersonnelManagement.Application
             if (person == null)
                 return operation.Failed(ApplicationMessages.RecordNotFound);
 
-            if (_personRepository.Exists(x => x.NationalCode == command.NationalCode && x.Id == command.Id))
+            if (_personRepository.Exists(x => x.NationalCode == command.NationalCode && x.Id != command.Id))
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
 
             var birthDay = command.Birthday.ToGeorgianDateTimeEn();

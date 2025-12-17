@@ -1,7 +1,6 @@
 ﻿using _0_Framework.Infrastructure;
 using PersonnelManagement.Application.Contracts.PersonGroup;
 using PersonnelManagement.Domain.PersonGroupAgg;
-using PersonnelManagement.Infrastructure.EFCore;
 using System.Collections.Generic;
 using System.Linq;
 

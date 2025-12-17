@@ -17,12 +17,12 @@ namespace PersonnelManagement.Infrastructure.EFCore.Mapping
             builder.Property(x => x.FamilyFa).HasMaxLength(255);
             builder.Property(x => x.FatherName).HasMaxLength(255);
             //builder.Property(x => x.Gender).IsRequired();
-            builder.Property(x => x.Birthday).HasMaxLength(255);
+            //builder.Property(x => x.Birthday).HasMaxLength(255).IsRequired(false);
             //builder.Property(x => x.Marriage).IsRequired();
             builder.Property(x => x.NationalCode).HasMaxLength(55);
             builder.Property(x => x.PassportNo).HasMaxLength(55);
             builder.Property(x => x.NationalCodeOfFather).HasMaxLength(55);
-            //builder.Property(x => x.BirthCityId).HasMaxLength(255);
+            //builder.Property(x => x.BirthCityId).HasMaxLength(255).IsRequired(false);
             //builder.Property(x => x.CityId).HasMaxLength(255);
             builder.Property(x => x.Attachment).HasMaxLength(1024);
             builder.Property(x => x.EducationalDegree).HasMaxLength(255);
@@ -37,7 +37,7 @@ namespace PersonnelManagement.Infrastructure.EFCore.Mapping
             builder.Property(x => x.MailBoxAddress2).HasMaxLength(255);
             builder.Property(x => x.SocialAddress1).HasMaxLength(255);
             builder.Property(x => x.SocialAddress2).HasMaxLength(255);
-            builder.Property(x => x.WorkingStartDate).HasMaxLength(255);
+            //builder.Property(x => x.WorkingStartDate).HasMaxLength(255);
 
             //builder.Property(x => x.Activate);
 

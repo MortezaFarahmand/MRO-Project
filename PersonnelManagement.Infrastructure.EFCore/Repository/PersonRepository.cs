@@ -1,18 +1,10 @@
 ﻿using _0_Framework.Infrastructure;
-using BasicDataManagement.Domain.CityAgg;
 using BasicDataManagement.Infrastructure.EFCore;
 using Microsoft.EntityFrameworkCore;
 using PersonnelManagement.Application.Contracts.Person;
 using PersonnelManagement.Domain.PersonAgg;
-using PersonnelManagement.Domain.PersonGroupAgg;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
-using System.Net.Mail;
-using System.Text;
-using System.Threading.Tasks;
-using static Azure.Core.HttpHeader;
 
 namespace PersonnelManagement.Infrastructure.EFCore.Repository
 {
@@ -71,20 +63,44 @@ namespace PersonnelManagement.Infrastructure.EFCore.Repository
 
         public List<PersonViewModel> GetPerson()
         {
-            return _context.Persons.Select(x => new PersonViewModel()
+            var Countries = _basicDataContext.Countrys.Select(x => new { x.Id, x.Name }).ToList();
+            var Provinces = _basicDataContext.Provinces.Select(x => new { x.Id, x.Name }).ToList();
+            var Cities = _basicDataContext.Citys.Select(x => new { x.Id, x.Name }).ToList();
+
+            return _context.Persons.Include(x => x.Group).Select(x => new PersonViewModel()
             {
+                //Id = x.Id,
+                //NameEn = x.NameEn,
+                //NameFa = x.NameFa,
+                //FamilyEn = x.FamilyEn,
+                //FamilyFa = x.FamilyFa,
+                //FatherName = x.FatherName,
+                //Birthday = x.Birthday.ToString(),
+                //PassportNo = x.PassportNo,
+                //NationalCode = x.NationalCode,
+                //PersonGroupId = x.PersonGroupId,
+                //OrganizationId = x.OrganizationId,//
                 Id = x.Id,
                 NameEn = x.NameEn,
                 NameFa = x.NameFa,
                 FamilyEn = x.FamilyEn,
+                Activate = x.Activate,
                 FamilyFa = x.FamilyFa,
                 FatherName = x.FatherName,
                 Birthday = x.Birthday.ToString(),
                 PassportNo = x.PassportNo,
                 NationalCode = x.NationalCode,
                 PersonGroupId = x.PersonGroupId,
-                OrganizationId = x.OrganizationId//
-
+                PersonGroup = x.Group.Description,
+                OrganizationId = x.OrganizationId,
+                Organization = x.OrganizationId.ToString(),////
+                BirthCityId = x.BirthCityId,
+                BirthCity = x.Cities.ToString(),/////
+                BirthProvinceId = x.BirthProvinceId,
+                BirthProvince = x.Provinces.ToString(),/////
+                BirthCountryId = x.BirthCountryId,
+                BirthCountry = x.Countrys.ToString(),/////
+                WorkingStartDate = x.WorkingStartDate.ToString()
 
             }).ToList();
         }

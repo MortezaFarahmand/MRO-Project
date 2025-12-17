@@ -3,11 +3,7 @@ using _0_Framework.Application;
 using BasicDataManagement.Application.Contracts.City;
 using BasicDataManagement.Application.Contracts.Country;
 using BasicDataManagement.Application.Contracts.Province;
-using BasicDataManagement.Domain.CityAgg;
-using BasicDataManagement.Domain.CountryAgg;
-using BasicDataManagement.Domain.ProvinceAgg;
 using PersonnelManagement.Application.Contracts.PersonGroup;
-using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -15,10 +11,14 @@ namespace PersonnelManagement.Application.Contracts.Person
 {
     public class CreatePerson
     {
-        [Required(ErrorMessage = ValidationMessages.IsRequired)]
+        //[Required(ErrorMessage = ValidationMessages.IsRequired)]
         public string NameEn { get; set; }
+
         public string NameFa { get; set; }
+
+        //[Required(ErrorMessage = ValidationMessages.IsRequired)]
         public string FamilyEn { get; set; }
+
         public string FamilyFa { get; set; }
         public string FatherName { get; set; }
         public bool Gender { get; set; }
