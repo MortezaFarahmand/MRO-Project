@@ -27,6 +27,6 @@ namespace PersonnelManagement.Application.Contracts.Person
         public long BirthCountryId { get; set; }
         public string BirthCountry { get; set; }
         public string WorkingStartDate { get; set; }
-
+        public string MobileNo1 { get; set; }
     }
 }

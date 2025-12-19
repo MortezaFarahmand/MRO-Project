@@ -5,19 +5,19 @@
 namespace PersonnelManagement.Infrastructure.EFCore.Migrations
 {
     /// <inheritdoc />
-    public partial class RemovePersonAndReCreatre2 : Migration
+    public partial class RemoveForienKeyPersons : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            //migrationBuilder.DropTable(
-            //    name: "Persons");
+            migrationBuilder.DropTable(
+                name: "Persons");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-          
+
         }
     }
 }

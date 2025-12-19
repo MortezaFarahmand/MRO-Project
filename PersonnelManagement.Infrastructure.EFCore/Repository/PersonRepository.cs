@@ -1,4 +1,5 @@
-﻿using _0_Framework.Infrastructure;
+﻿using _0_Framework.Application;
+using _0_Framework.Infrastructure;
 using BasicDataManagement.Infrastructure.EFCore;
 using Microsoft.EntityFrameworkCore;
 using PersonnelManagement.Application.Contracts.Person;
@@ -80,6 +81,7 @@ namespace PersonnelManagement.Infrastructure.EFCore.Repository
                 //NationalCode = x.NationalCode,
                 //PersonGroupId = x.PersonGroupId,
                 //OrganizationId = x.OrganizationId,//
+                //MobileNo1 = x.MobileNo1
                 Id = x.Id,
                 NameEn = x.NameEn,
                 NameFa = x.NameFa,
@@ -100,8 +102,8 @@ namespace PersonnelManagement.Infrastructure.EFCore.Repository
                 BirthProvince = x.Provinces.ToString(),/////
                 BirthCountryId = x.BirthCountryId,
                 BirthCountry = x.Countrys.ToString(),/////
-                WorkingStartDate = x.WorkingStartDate.ToString()
-
+                WorkingStartDate = x.WorkingStartDate.ToString(),
+                MobileNo1 = x.MobileNo1
             }).ToList();
         }
 
@@ -115,29 +117,29 @@ namespace PersonnelManagement.Infrastructure.EFCore.Repository
             var query = _context.Persons
                 .Include(x => x.Group)
                 .Select(x => new PersonViewModel()
-            {
-                Id = x.Id,
-                NameEn = x.NameEn,
-                NameFa = x.NameFa,
-                FamilyEn = x.FamilyEn,
-                Activate = x.Activate,
-                FamilyFa = x.FamilyFa,
-                FatherName = x.FatherName,
-                Birthday = x.Birthday.ToString(),
-                PassportNo = x.PassportNo,
-                NationalCode = x.NationalCode,
-                PersonGroupId = x.PersonGroupId, 
-                PersonGroup = x.Group.Description,
-                OrganizationId = x.OrganizationId,
-                BirthCityId = x.BirthCityId,
-                BirthProvinceId = x.BirthProvinceId,
-                BirthCountryId = x.BirthCountryId,
-                WorkingStartDate = x.WorkingStartDate.ToString()
-                
+                {
+                    Id = x.Id,
+                    NameEn = x.NameEn,
+                    NameFa = x.NameFa,
+                    FamilyEn = x.FamilyEn,
+                    Activate = x.Activate,
+                    FamilyFa = x.FamilyFa,
+                    FatherName = x.FatherName,
+                    Birthday = x.Birthday.ToDiscountFormat(),
+                    PassportNo = x.PassportNo,
+                    NationalCode = x.NationalCode,
+                    PersonGroupId = x.PersonGroupId,
+                    PersonGroup = x.Group.Description,
+                    OrganizationId = x.OrganizationId,
+                    BirthCityId = x.BirthCityId,
+                    BirthProvinceId = x.BirthProvinceId,
+                    BirthCountryId = x.BirthCountryId,
+                    WorkingStartDate = x.WorkingStartDate.ToDiscountFormat()
+
                 });
 
 
-            if(!string.IsNullOrWhiteSpace(searchModel.NameFa))
+            if (!string.IsNullOrWhiteSpace(searchModel.NameFa))
                 query = query.Where(x => x.NameFa.Contains(searchModel.NameFa));
 
             if (!string.IsNullOrWhiteSpace(searchModel.NameEn))
@@ -164,7 +166,7 @@ namespace PersonnelManagement.Infrastructure.EFCore.Repository
             persons.ForEach
                 (persn => persn.BirthCity = Cities.FirstOrDefault(x => x.Id == persn.BirthCityId)?.Name);
 
-            return query.ToList();
+            return persons.ToList();
         }
     }
 }

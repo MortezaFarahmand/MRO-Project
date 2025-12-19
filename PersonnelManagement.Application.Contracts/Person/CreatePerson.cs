@@ -11,12 +11,12 @@ namespace PersonnelManagement.Application.Contracts.Person
 {
     public class CreatePerson
     {
-        //[Required(ErrorMessage = ValidationMessages.IsRequired)]
+        [Required(ErrorMessage = ValidationMessages.IsRequired)]
         public string NameEn { get; set; }
 
         public string NameFa { get; set; }
 
-        //[Required(ErrorMessage = ValidationMessages.IsRequired)]
+        [Required(ErrorMessage = ValidationMessages.IsRequired)]
         public string FamilyEn { get; set; }
 
         public string FamilyFa { get; set; }

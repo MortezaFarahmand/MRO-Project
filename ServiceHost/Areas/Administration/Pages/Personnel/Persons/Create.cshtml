@@ -18,6 +18,20 @@
     <div class="modal-body">
         <div class="row">
             <div class="col-md-3">
+                <div class="form-group">
+                    <label asp-for="NameEn" class="control-label">Name *</label>
+                    <input type="text" class="form-control" asp-for="NameEn">
+                    <span asp-validation-for="NameEn" class="error"></span>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label asp-for="NameFa" class="control-label">Family *</label>
+                    <input type="text" class="form-control" asp-for="FamilyEn">
+                    <span asp-validation-for="NameFa" class="error"></span>
+                </div>
+            </div>
+            <div class="col-md-3">
                 <div class="form-group  element-dir-Fa">
                     <label asp-for="NameFa" class="control-label">نام</label>
                     <input type="text" class="form-control" asp-for="NameFa">
@@ -30,21 +44,7 @@
                     <input type="text" class="form-control" asp-for="FamilyFa">
                     <span asp-validation-for="NameFa" class="error"></span>
                 </div>
-            </div>
-            <div class="col-md-3">
-                <div class="form-group">
-                    <label asp-for="NameEn" class="control-label">Name</label>
-                    <input type="text" class="form-control" asp-for="NameEn" >
-                    <span asp-validation-for="NameEn" class="error"></span>
-                </div>
-            </div>            
-            <div class="col-md-3">
-                <div class="form-group">
-                    <label asp-for="NameFa" class="control-label">Family</label>
-                    <input type="text" class="form-control" asp-for="FamilyEn">
-                    <span asp-validation-for="NameFa" class="error"></span>
-                </div>
-            </div>          
+            </div>        
         </div>
 
 
@@ -85,15 +85,15 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="sr-only" asp-for="BirthCountryId"></label>
-                    <select class="select22" asp-for="BirthCountryId"
-                            asp-items='new SelectList(Model.Countrys, "Id", "Name")'>
-                        <option value="0">-Countrys-</option>
+                    <label class="sr-only" asp-for="BirthCityId">City</label>
+                    <select class="select22" asp-for="BirthCityId"
+                            asp-items='new SelectList(Model.Cities, "Id", "Name")'>
+                        <option value="0">-Citys-</option>
                     </select>
-                    <span asp-validation-for="BirthCountryId" class="error"></span>
+                    <span asp-validation-for="BirthCityId" class="error"></span>
                 </div>
             </div>
-             <div class="col-md-4">
+            <div class="col-md-4">
                 <div class="form-group">
                     <label class="sr-only" asp-for="BirthProvinceId">Province</label>
                     <select class="select22" asp-for="BirthProvinceId"
@@ -105,50 +105,22 @@
             </div>
             <div class="col-md-4">
                 <div class="form-group">
-                    <label class="sr-only" asp-for="BirthCityId">City</label>
-                    <select class="select22" asp-for="BirthCityId"
-                            asp-items='new SelectList(Model.Cities, "Id", "Name")'>
-                        <option value="0">-Citys-</option>
+                    <label class="sr-only" asp-for="BirthCountryId"></label>
+                    <select class="select22" asp-for="BirthCountryId"
+                            asp-items='new SelectList(Model.Countrys, "Id", "Name")'>
+                        <option value="0">-Countrys-</option>
                     </select>
-                    <span asp-validation-for="BirthCityId" class="error"></span>
+                    <span asp-validation-for="BirthCountryId" class="error"></span>
                 </div>
-            </div>
+            </div>    
         </div>
 
         <div class="row">
+            
             <div class="col-md-3">
                 <div class="form-group">
-                    <label asp-for="NationalCode" class="control-label">National Code</label>
-                    <input type="text" class="form-control" asp-for="NationalCode">
-                    <span asp-validation-for="NationalCode" class="error"></span>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="form-group">
-                     <p>Gender</p>
-
-                    <div class="radio radio-info radio-inline">
-                        <input type="radio" asp-for="Gender" value="true" class="form-control">
-                        <label asp-for="Gender">Male</label>
-                    </div>
-                    <div class="radio radio-info radio-inline">
-                        <input type="radio" asp-for="Gender" value="false" class="form-control">
-                        <label asp-for="Gender">Female</label>
-                    </div>
-
-                    @* @if (Model.Gender)
-                    {
-                        <div class="radio radio-info radio-inline">
-                            <input type="radio" asp-for="Gender" value="true" class="form-control">
-                            <label asp-for="Gender">Male</label>
-                        </div>
-                        <div class="radio radio-info radio-inline">
-                            <input type="radio" asp-for="Gender" value="false" class="form-control">
-                            <label asp-for="Gender">Female</label>
-                        </div>
-                    }
-                    else
-                    {
+                    <label class="form-check-label" asp-for="Gender">Gender</label>
+                    <div>
                         <div class="radio radio-info radio-inline">
                             <input type="radio" asp-for="Gender" value="false" class="form-control">
                             <label asp-for="Gender">Male</label>
@@ -157,32 +129,18 @@
                             <input type="radio" asp-for="Gender" value="true" class="form-control">
                             <label asp-for="Gender">Female</label>
                         </div>
-                    } *@
-                    
-                    
+                    </div>
                     <span asp-validation-for="Gender" class="error"></span>
                 </div>
             </div>
 
             <div class="col-md-3">
-                @* <div class="form-group">
-                    <label asp-for="Marriage" class="control-label">Marriage</label>
-                    <input type="text" class="form-control" asp-for="Marriage">
-                    <span asp-validation-for="Marriage" class="error"></span>
-                </div> *@
-                @* <div class="form-group">
-                        <div class="toggle toggle-primary">
-                        <label asp-for="Marriage" class="control-label">Marriage</label>
-                        <input class="form-control" asp-for="Marriage">
-                        </div>
-                </div> *@
+                <label class="form-check-label" asp-for="Marriage">Marriaged</label>
                 <div class="form-group">
                     <input class="form-check-input" type="checkbox" asp-for="Marriage">
-                    <label class="form-check-label" asp-for="Marriage">
-                         Marriaged
-                    </label>
                 </div>
             </div>
+
             <div class="col-md-3">
                 <div class="form-group">
                     <label asp-for="Birthday" class="control-label">Birthday</label>
@@ -194,6 +152,20 @@
 
                 </div>
             </div>
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label asp-for="WorkingStartDate" class="control-label">Working Start Date</label>
+                    <div class="input-group">
+                        <input class="form-control persianDateInput" asp-for="WorkingStartDate">
+                        <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-calendar"></i>
+                        </span>
+                    </div>
+                    <span asp-validation-for="WorkingStartDate" class="error"></span>
+                </div>
+            </div>
+
         </div>
 
         <div class="row">
@@ -242,16 +214,16 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label asp-for="PassportNo" class="control-label">Passport No.</label>
-                    <input type="text" class="form-control" asp-for="PassportNo">
-                    <span asp-validation-for="PassportNo" class="error"></span>
+                    <label asp-for="NationalCode" class="control-label">National Code No.</label>
+                    <input type="text" class="form-control" asp-for="NationalCode">
+                    <span asp-validation-for="NationalCode" class="error"></span>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-group">
-                    <label asp-for="NationalCode" class="control-label">MailBox Address 2</label>
-                    <input type="number" class="form-control" asp-for="NationalCode">
-                    <span asp-validation-for="NationalCode" class="error"></span>
+                    <label asp-for="PassportNo" class="control-label">Passport No.</label>
+                    <input type="text" class="form-control" asp-for="PassportNo">
+                    <span asp-validation-for="PassportNo" class="error"></span>
                 </div>
             </div>
         </div>
@@ -326,19 +298,7 @@
         </div>
 
         <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label asp-for="WorkingStartDate" class="control-label">Working Start Date</label>
-                    <div class="input-group">
-                        <input class="form-control persianDateInput" asp-for="WorkingStartDate">
-                        <span class="input-group-addon">
-                            <i class="glyphicon glyphicon-calendar"></i>
-                        </span>
-                    </div>
-                    <span asp-validation-for="WorkingStartDate" class="error"></span>
-                </div>
-            </div>
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <div class="form-group">
                     <label asp-for="Attachment" class="control-label">Attachment</label>
                     <input type="file" class="form-control" asp-for="Attachment">

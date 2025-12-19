@@ -6,11 +6,27 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace PersonnelManagement.Infrastructure.EFCore.Migrations
 {
     /// <inheritdoc />
-    public partial class Add_Person_Class : Migration
+    public partial class AddAgainPersons : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            //migrationBuilder.CreateTable(
+                //name: "PersonGroups",
+                //columns: table => new
+                //{
+                //    Id = table.Column<long>(type: "bigint", nullable: false)
+                //        .Annotation("SqlServer:Identity", "1, 1"),
+                //    Description = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
+                //    Remark = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true),
+                //    IsActive = table.Column<bool>(type: "bit", nullable: false),
+                //    CreationDate = table.Column<DateTime>(type: "datetime2", nullable: false)
+                //},
+                //constraints: table =>
+                //{
+                //    table.PrimaryKey("PK_PersonGroups", x => x.Id);
+                //});
+
             migrationBuilder.CreateTable(
                 name: "Persons",
                 columns: table => new
@@ -22,19 +38,21 @@ namespace PersonnelManagement.Infrastructure.EFCore.Migrations
                     FamilyEn = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
                     FamilyFa = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
                     FatherName = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
-                    Gender = table.Column<bool>(type: "bit", nullable: false),
-                    Birthday = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
-                    Marriage = table.Column<bool>(type: "bit", nullable: false),
+                    Gender = table.Column<bool>(type: "bit", nullable: true),
+                    Birthday = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    Marriage = table.Column<bool>(type: "bit", nullable: true),
                     PassportNo = table.Column<string>(type: "nvarchar(55)", maxLength: 55, nullable: true),
                     NationalCode = table.Column<string>(type: "nvarchar(55)", maxLength: 55, nullable: true),
                     NationalCodeOfFather = table.Column<string>(type: "nvarchar(55)", maxLength: 55, nullable: true),
-                    BirthCityId = table.Column<long>(type: "bigint", nullable: false),
-                    CityId = table.Column<long>(type: "bigint", nullable: false),
+                    BirthCityId = table.Column<long>(type: "bigint", nullable: true),
+                    BirthProvinceId = table.Column<long>(type: "bigint", nullable: true),
+                    BirthCountryId = table.Column<long>(type: "bigint", nullable: true),
+                    CityId = table.Column<long>(type: "bigint", nullable: true),
                     Attachment = table.Column<string>(type: "nvarchar(1024)", maxLength: 1024, nullable: true),
                     EducationalDegree = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
                     EducationalField = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
                     IDCartNo = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
-                    AddressId = table.Column<long>(type: "bigint", nullable: false),
+                    AddressId = table.Column<long>(type: "bigint", nullable: true),
                     MobileNo1 = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
                     MobileNo2 = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
                     PhoneNo = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
@@ -42,10 +60,10 @@ namespace PersonnelManagement.Infrastructure.EFCore.Migrations
                     MailBoxAddress2 = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
                     SocialAddress1 = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
                     SocialAddress2 = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
-                    WorkingStartDate = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: true),
+                    WorkingStartDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     Activate = table.Column<bool>(type: "bit", nullable: false),
-                    PersonGroupId = table.Column<long>(type: "bigint", nullable: false),
-                    OrganizationId = table.Column<long>(type: "bigint", nullable: false),
+                    PersonGroupId = table.Column<long>(type: "bigint", nullable: true),
+                    OrganizationId = table.Column<long>(type: "bigint", nullable: true),
                     CreationDate = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
@@ -192,8 +210,11 @@ namespace PersonnelManagement.Infrastructure.EFCore.Migrations
             migrationBuilder.DropTable(
                 name: "Country");
 
-            //migrationBuilder.DropTable(
-            //    name: "Persons");
+            migrationBuilder.DropTable(
+                name: "Persons");
+
+            migrationBuilder.DropTable(
+                name: "PersonGroups");
         }
     }
 }
