@@ -4,6 +4,7 @@ using BasicDataManagement.Application.Contracts.City;
 using BasicDataManagement.Application.Contracts.Country;
 using BasicDataManagement.Application.Contracts.Province;
 using PersonnelManagement.Application.Contracts.PersonGroup;
+using PersonnelManagement.Application.Contracts.PersonPicture;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -50,13 +51,14 @@ namespace PersonnelManagement.Application.Contracts.Person
         public long PersonGroupId { get; set; }
         public List<PersonGroupViewModel> Groups { get; set; }
         public long OrganizationId { get; set; }
-        //public List<PersonPicture> Pictures { get; private set; }
         public List<CountryViewModel> Countrys { get; set; }
         public List<ProvinceViewModel> Provinces { get; set; }
         public List<CityViewModel> Cities { get; set; }
+        public string ProfilePicture { get; set; }
+        public List<PersonPictureViewModel> PersonPictures { get; set; }
         //[Required(ErrorMessage=ValidationMessages.IsRequired)]
         //[FileExtentionLimitation(new string[] { ".jpeg", ".jpg", ".png" }, ErrorMessage = ValidationMessages.InvalidFileFormat)]
         //[MaxFileSize(3 * 1024 * 1024, ErrorMessage = ValidationMessages.MaxFileSize)]
-       
+
     }
 }

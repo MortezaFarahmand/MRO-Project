@@ -16,5 +16,6 @@
         public long BirthCountryId { get; set; }
         public string Birthday { get; set; }
         public string WorkingStartDate { get; set; }
+        public string ProfilePicture { get; set; }
     }
 }

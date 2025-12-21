@@ -11,5 +11,6 @@ namespace BasicDataManagement.Application.Contracts.PictureCategory
         OperationResult DeActive(long id);
         EditPictureCategory GetDetails(long id);
         List<PictureCategoryViewModel> Search(PictureCategorySearchModel searchModel);
+        List<PictureCategoryViewModel> GetPictureCategorys();
     }
 }

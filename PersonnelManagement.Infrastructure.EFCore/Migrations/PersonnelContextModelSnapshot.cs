@@ -111,6 +111,69 @@ namespace PersonnelManagement.Infrastructure.EFCore.Migrations
                     b.ToTable("Country");
                 });
 
+            modelBuilder.Entity("BasicDataManagement.Domain.EntitiAgg.Entiti", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Remark")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Entiti");
+                });
+
+            modelBuilder.Entity("BasicDataManagement.Domain.PictureCategoryAgg.PictureCategory", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long>("EntitiId")
+                        .HasColumnType("bigint");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long?>("PersonPictureId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Remark")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EntitiId");
+
+                    b.HasIndex("PersonPictureId");
+
+                    b.ToTable("PictureCategory");
+                });
+
             modelBuilder.Entity("BasicDataManagement.Domain.ProvinceAgg.Province", b =>
                 {
                     b.Property<long>("Id")
@@ -266,6 +329,10 @@ namespace PersonnelManagement.Infrastructure.EFCore.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
+                    b.Property<string>("ProfilePicture")
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
                     b.Property<string>("SocialAddress1")
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
@@ -312,6 +379,50 @@ namespace PersonnelManagement.Infrastructure.EFCore.Migrations
                     b.ToTable("PersonGroups", (string)null);
                 });
 
+            modelBuilder.Entity("PersonnelManagement.Domain.PersonPictureAgg.PersonPicture", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<long>("PersonId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Picture")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<long>("PictureCategoryId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Remark")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("Text")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("Title")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PersonId");
+
+                    b.ToTable("PersonPictures", (string)null);
+                });
+
             modelBuilder.Entity("BasicDataManagement.Domain.CityAgg.City", b =>
                 {
                     b.HasOne("PersonnelManagement.Domain.PersonAgg.Person", null)
@@ -332,6 +443,21 @@ namespace PersonnelManagement.Infrastructure.EFCore.Migrations
                     b.HasOne("PersonnelManagement.Domain.PersonAgg.Person", null)
                         .WithMany("Countrys")
                         .HasForeignKey("PersonId");
+                });
+
+            modelBuilder.Entity("BasicDataManagement.Domain.PictureCategoryAgg.PictureCategory", b =>
+                {
+                    b.HasOne("BasicDataManagement.Domain.EntitiAgg.Entiti", "Entiti")
+                        .WithMany()
+                        .HasForeignKey("EntitiId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("PersonnelManagement.Domain.PersonPictureAgg.PersonPicture", null)
+                        .WithMany("PictureCategories")
+                        .HasForeignKey("PersonPictureId");
+
+                    b.Navigation("Entiti");
                 });
 
             modelBuilder.Entity("BasicDataManagement.Domain.ProvinceAgg.Province", b =>
@@ -360,6 +486,17 @@ namespace PersonnelManagement.Infrastructure.EFCore.Migrations
                     b.Navigation("Group");
                 });
 
+            modelBuilder.Entity("PersonnelManagement.Domain.PersonPictureAgg.PersonPicture", b =>
+                {
+                    b.HasOne("PersonnelManagement.Domain.PersonAgg.Person", "Person")
+                        .WithMany("PersonPictures")
+                        .HasForeignKey("PersonId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Person");
+                });
+
             modelBuilder.Entity("BasicDataManagement.Domain.CountryAgg.Country", b =>
                 {
                     b.Navigation("Provinces");
@@ -376,12 +513,19 @@ namespace PersonnelManagement.Infrastructure.EFCore.Migrations
 
                     b.Navigation("Countrys");
 
+                    b.Navigation("PersonPictures");
+
                     b.Navigation("Provinces");
                 });
 
             modelBuilder.Entity("PersonnelManagement.Domain.PersonGroupAgg.PersonGroup", b =>
                 {
                     b.Navigation("Persons");
+                });
+
+            modelBuilder.Entity("PersonnelManagement.Domain.PersonPictureAgg.PersonPicture", b =>
+                {
+                    b.Navigation("PictureCategories");
                 });
 #pragma warning restore 612, 618
         }

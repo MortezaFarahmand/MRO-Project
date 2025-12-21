@@ -55,8 +55,8 @@ namespace PersonnelManagement.Infrastructure.EFCore.Repository
                 PersonGroupId = x.PersonGroupId,//
                 OrganizationId = x.OrganizationId,
                 BirthProvinceId = x.BirthProvinceId,
-                BirthCountryId = x.BirthCountryId
-
+                BirthCountryId = x.BirthCountryId,
+                ProfilePicture = x.ProfilePicture
 
             }).FirstOrDefault(x => x.Id == id);   
                 
@@ -103,7 +103,8 @@ namespace PersonnelManagement.Infrastructure.EFCore.Repository
                 BirthCountryId = x.BirthCountryId,
                 BirthCountry = x.Countrys.ToString(),/////
                 WorkingStartDate = x.WorkingStartDate.ToString(),
-                MobileNo1 = x.MobileNo1
+                MobileNo1 = x.MobileNo1,
+                ProfilePicture = x.ProfilePicture
             }).ToList();
         }
 
@@ -134,7 +135,8 @@ namespace PersonnelManagement.Infrastructure.EFCore.Repository
                     BirthCityId = x.BirthCityId,
                     BirthProvinceId = x.BirthProvinceId,
                     BirthCountryId = x.BirthCountryId,
-                    WorkingStartDate = x.WorkingStartDate.ToDiscountFormat()
+                    WorkingStartDate = x.WorkingStartDate.ToDiscountFormat(),
+                    ProfilePicture = x.ProfilePicture
 
                 });
 

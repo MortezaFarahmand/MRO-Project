@@ -29,7 +29,7 @@ namespace PersonnelManagement.Application
                 command.EducationalField, command.IDCartNo, command.AddressId, command.MobileNo1,
                 command.MobileNo2, command.PhoneNo, command.MailBoxAddress1, command.MailBoxAddress2,
                 command.SocialAddress1, command.SocialAddress2, workingStartDate,
-                command.PersonGroupId, command.OrganizationId);
+                command.PersonGroupId, command.OrganizationId, command.ProfilePicture);
 
             _personRepository.Create(person);
             _personRepository.SaveChanges();
@@ -56,7 +56,7 @@ namespace PersonnelManagement.Application
                 command.EducationalField, command.IDCartNo, command.AddressId, command.MobileNo1,
                 command.MobileNo2, command.PhoneNo, command.MailBoxAddress1, command.MailBoxAddress2,
                 command.SocialAddress1, command.SocialAddress2, workingStartDate,
-                command.PersonGroupId, command.OrganizationId);
+                command.PersonGroupId, command.OrganizationId, command.ProfilePicture);
 
             _personRepository.SaveChanges();
             return operation.Succeeded();

@@ -8,7 +8,9 @@ namespace PersonnelManagement.Application.Contracts.PersonPicture
         OperationResult Create(CreatePersonPicture cammand);
         OperationResult Edit(EditPersonPicture command);
         EditPersonPicture GetDetails(long id);
-        List<PersonPictureViewModel> GetPersonPictures();
+        List<PersonPictureViewModel> GetList();
         List<PersonPictureViewModel> Search(PersonPictureSearchModel searchModel);
+        OperationResult Remove(long id);
+        OperationResult Restore(long id);
     }
 }

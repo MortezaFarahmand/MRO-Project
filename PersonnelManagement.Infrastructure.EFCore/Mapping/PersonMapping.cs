@@ -38,6 +38,7 @@ namespace PersonnelManagement.Infrastructure.EFCore.Mapping
             builder.Property(x => x.SocialAddress1).HasMaxLength(255);
             builder.Property(x => x.SocialAddress2).HasMaxLength(255);
             //builder.Property(x => x.WorkingStartDate).HasMaxLength(255);
+            builder.Property(x => x.ProfilePicture).HasMaxLength(1000);
 
             //builder.Property(x => x.Activate);
 
@@ -45,6 +46,10 @@ namespace PersonnelManagement.Infrastructure.EFCore.Mapping
             builder.HasOne(x => x.Group)
                 .WithMany(x => x.Persons)
                 .HasForeignKey(x => x.PersonGroupId);
+
+            builder.HasMany(x => x.PersonPictures)
+                .WithOne(x => x.Person)
+                .HasForeignKey(x => x.PersonId);
 
 
 

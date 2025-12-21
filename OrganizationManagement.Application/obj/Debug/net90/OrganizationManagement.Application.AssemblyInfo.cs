@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OrganizationManagement.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b30f0232d0bdfe226cb49b011b831df9c409471")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a03eb5f456e9b820aa8738206bf7f7f4c5941fa8")]
 [assembly: System.Reflection.AssemblyProductAttribute("OrganizationManagement.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OrganizationManagement.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

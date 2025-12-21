@@ -3,6 +3,7 @@ using BasicDataManagement.Domain.CityAgg;
 using BasicDataManagement.Domain.CountryAgg;
 using BasicDataManagement.Domain.ProvinceAgg;
 using PersonnelManagement.Domain.PersonGroupAgg;
+using PersonnelManagement.Domain.PersonPictureAgg;
 using System;
 using System.Collections.Generic;
 
@@ -41,12 +42,12 @@ namespace PersonnelManagement.Domain.PersonAgg
         public bool Activate { get; private set; }
         public long PersonGroupId { get; private set; }
         public PersonGroup Group { get; private set; }
-        //public List<PersonGroup> PersonGroups { get; private set; }
         public long OrganizationId { get; private set; }
-        //public List<PersonPicture> Pictures { get; private set; }
         public List<Country> Countrys { get; private set; }
         public List<Province> Provinces { get; private set; }
         public List<City> Cities { get; private set; }
+        public string ProfilePicture { get; private set; }
+        public List<PersonPicture> PersonPictures { get; private set; }
 
         public Person()
         {
@@ -61,7 +62,7 @@ namespace PersonnelManagement.Domain.PersonAgg
             long birthCityId, long birthProvinceId, long birthCountryId, long cityId, string attachment,string educationalDegree, string educationalFeild,
             string iDCartNo,long addressId,string mobileNo1, string mobileNo2,string phoneNo,string mailBoxAddress1,
             string mailBoxAddress2, string socialAddress1, string socialAddress2, DateTime workingStartDate,
-            long personGroupId, long organizationId)
+            long personGroupId, long organizationId, string profilePicture)
         {
             NameEn = nameEn;
             NameFa = nameFa;
@@ -94,6 +95,8 @@ namespace PersonnelManagement.Domain.PersonAgg
             Activate = true;
             PersonGroupId = personGroupId;//
             OrganizationId = organizationId;//
+            //if (!string.IsNullOrWhiteSpace(ProfilePicture))
+                ProfilePicture = profilePicture;
             
         }
 
@@ -102,7 +105,7 @@ namespace PersonnelManagement.Domain.PersonAgg
             long birthCityId, long birthProvinceId, long birthCountryId, long cityId, string attachment, string educationalDegree, string educationalFeild,
             string iDCartNo, long addressId, string mobileNo1, string mobileNo2, string phoneNo, string mailBoxAddress1,
             string mailBoxAddress2, string socialAddress1, string socialAddress2, DateTime workingStartDate,
-            long personGroupId, long organizationId)
+            long personGroupId, long organizationId, string profilePicture)
         {
             NameEn = nameEn;
             NameFa = nameFa;
@@ -134,9 +137,8 @@ namespace PersonnelManagement.Domain.PersonAgg
             WorkingStartDate = workingStartDate;
             PersonGroupId = personGroupId;//
             OrganizationId = organizationId;//
-                                            //if (!string.IsNullOrWhiteSpace(picture))
-                                            //    Picture = picture;
-                                            //PictureAlt = pictureAlt;
+            //if (!string.IsNullOrWhiteSpace(ProfilePicture))
+                ProfilePicture = profilePicture;
 
         }
 

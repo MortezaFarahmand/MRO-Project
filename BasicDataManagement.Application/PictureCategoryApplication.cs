@@ -76,5 +76,10 @@ namespace BasicDataManagement.Application
         {
             return _pictureCategoryRepository.Search(searchModel);
         }
+
+        public List<PictureCategoryViewModel> GetPictureCategorys()
+        {
+            return _pictureCategoryRepository.GetPictureCategory();
+        }
     }
 }

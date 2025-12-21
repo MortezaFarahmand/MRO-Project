@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PersonnelManagement.Domain.PersonAgg;
 using PersonnelManagement.Domain.PersonGroupAgg;
+using PersonnelManagement.Domain.PersonPictureAgg;
 using PersonnelManagement.Infrastructure.EFCore.Mapping;
 
 namespace PersonnelManagement.Infrastructure.EFCore
@@ -9,6 +10,7 @@ namespace PersonnelManagement.Infrastructure.EFCore
     {
         public DbSet<PersonGroup> PersonGroups { get; set; }
         public DbSet<Person> Persons { get; set; }
+        public DbSet<PersonPicture> PersonPictures { get; set; }
 
 
 
