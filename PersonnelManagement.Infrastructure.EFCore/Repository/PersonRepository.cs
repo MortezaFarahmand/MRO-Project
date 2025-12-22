@@ -86,6 +86,7 @@ namespace PersonnelManagement.Infrastructure.EFCore.Repository
                 NameEn = x.NameEn,
                 NameFa = x.NameFa,
                 FamilyEn = x.FamilyEn,
+                Name = x.NameEn + " " + x.FamilyEn,
                 Activate = x.Activate,
                 FamilyFa = x.FamilyFa,
                 FatherName = x.FatherName,

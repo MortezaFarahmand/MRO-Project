@@ -1,11 +1,11 @@
 ﻿@page
-@model ServiceHost.Areas.Administration.Pages.Personnel.Person.IndexModel
+@model ServiceHost.Areas.Administration.Pages.Personnel.PersonPictures.IndexModel
 
 
 
 @{
     Layout = "Shared/_AdminLayout";
-    ViewData["title"] = "Persons Management";
+    ViewData["title"] = "Person Pictures Management";
 }
 
 
@@ -23,47 +23,30 @@
     <div class="col-md-12">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">Search in Persons</h3>
+                <h3 class="panel-title">Search in Person Pictures</h3>
             </div>
             <div class="panel-body ">
                 <form class="form-inline" role="form" method="get">
                     <div class="form-group">
-                        <label class="sr-only " asp-for="SearchModel.NameEn"></label>
-                        <input class="form-control " asp-for="SearchModel.NameEn" placeholder="Name">
+                        <label class="sr-only " asp-for="SearchModel.Title"></label>
+                        <input class="form-control " asp-for="SearchModel.Title" placeholder="Title">
                     </div>
-                    <div class="form-group">
-                        <label class="sr-only" asp-for="SearchModel.FamilyEn"></label>
-                        <input class="form-control " asp-for="SearchModel.FamilyEn" placeholder="Family">
-                    </div>
-                    <div class="form-group  element-dir-Fa">
-                        <label class="sr-only " asp-for="SearchModel.NameFa"></label>
-                        <input class="form-control " asp-for="SearchModel.NameFa" placeholder="نام">
-                    </div>
-                    <div class="form-group  element-dir-Fa">
-                        <label class="sr-only" asp-for="SearchModel.FamilyFa"></label>
-                        <input class="form-control " asp-for="SearchModel.FamilyFa" placeholder="فامیل">
-                    </div>
-                    <div class="form-group">
-                        <label class="sr-only" asp-for="SearchModel.PersonGroupId"></label>
-                        <select class="form-control" asp-for="SearchModel.PersonGroupId" asp-items="Model.PersonGroups">
-                            <option value="0">-Person Groups-</option>
-                        </select>
-                    </div>
-                   @*  <div class="form-group">
-                        <label class="sr-only" asp-for="SearchModel.BirthCountryId"></label>
-                        <select class="form-control " asp-for="SearchModel.BirthCountryId" asp-items="Model.Countries">
-                            <option value="0">-Countrys-</option> col-sm-6 control-label
-                        </select>
-                    </div> *@
 
-                       <div class="form-group">
-                        <label class="sr-only col-sm-6" asp-for="SearchModel.BirthCountryId"></label>
-                                <select class="select2" asp-for="SearchModel.BirthCountryId"
-                                    asp-items="Model.Countries">
-                                        <option value="0">-Countrys-</option>
-                                </select>   
-                        
-                       </div>
+                    <div class="form-group">
+                        <label class="sr-only col-sm-6" asp-for="SearchModel.PersonId"></label>
+                        <select class="select2" asp-for="SearchModel.PersonId"
+                                asp-items="Model.Persons">
+                            <option value="0">-Persons-</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="sr-only col-sm-6" asp-for="SearchModel.PictureCategoryId"></label>
+                        <select class="select2" asp-for="SearchModel.PictureCategoryId"
+                                    asp-items="Model.PictureCategories">
+                            <option value="0">-Picture Categories-</option>
+                        </select>
+                    </div> 
 
                  
 
@@ -78,11 +61,11 @@
 
 
 
-<div class="row" id="PersonDiv">
+<div class="row" id="PersonPictureDiv">
     <div class="col-md-12">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">Organization list</h3>
+                <h3 class="panel-title">Person Pictures list</h3>
             </div>
             <div class="panel-body">
                 <div class="row">
@@ -92,62 +75,27 @@
                                 <tr>
                                     <th>#</th>
                                     <th>Picture</th>
-                                    <th>Name</th>
-                                    <th class="element-dir-Fa">نام</th>
-                                    <th>Father Name</th>
-                                    <th>Nationality</th>
-                                    <th>Birthday</th>
-                                    <th>National Code</th>
-                                    @*<th>آدرس</th>*@
-                                    @* <th>Telephone-1</th> *@
-                                    @*<th>Telephone-2</th>*@
-                                    @* <th>Fax</th>
-                                    <th>WebSite</th>
-                                    <th>SocialAddress-1</th>
-                                    <th>SocialAddress-2</th>
-                                    <th>MailBox</th>
-                                    <th>Note</th>
-                                    <th>Remark</th>
-                                    <th>Company Register No.</th>*@
-                                    @* <th>Formed Date</th> *@
-                                    <th>Person Group</th>
+                                    <th>Person</th>
+                                    <th>Title</th>
+                                    <th>Category</th>
                                     <th>Activation</th>
-                                    @*<th>Organization GroupId</th>*@
                                     <th>Operation</th>
-
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach (var item in Model.Persons)
+                                @foreach (var item in Model.PersonPictures)
                                 {
                                     <tr>
                                         <td>@item.Id</td>
                                         <td>
-                                            @* ~/Img/ProfilePictureOfPersons/ *@
-                                            <img src="@item.ProfilePicture" style="width: 70px; height: 70px" />
+                                            @* ~/Img/ProfilePictureOfPersons/
+                                            <img src="@item.Picture" style="width: 70px; height: 70px" />
                                         </td>
-                                        <td>@item.NameEn @item.FamilyEn </td>
-                                        <td class="element-dir-Fa">@item.NameFa @item.FamilyFa </td>
-                                        <td>@item.FatherName</td>
-                                        <td>@item.BirthCountry</td>
-                                        @*<td>@item.AddressEn</td>
-                                        <td>@item.AddressFa</td>*@
-                                        @* <td>@item.Tel1</td> *@
-                                        @*<td>@item.Tel2</td>*@
-                                        @*<td>@item.Fax</td>
-                                        <td>@item.WebSite</td>
-                                        <td>@item.SocialAddress1</td>
-                                        <td>@item.SocialAddress2</td>
-                                        <td>@item.MailBox</td>
-                                        <td>@item.Note</td>
-                                        <td>@item.Remark</td>
-                                        <td>@item.CompanyRegisterNo.</td>*@
-                                        @* <td>@item.FormedDateGr.ToString("dd-MM-yyyy")</td> *@
-                                        <td>@item.Birthday</td>
-                                        <td>@item.NationalCode</td>
-                                        <td>@item.PersonGroup</td>
+                                        <td>@item.Person</td>
+                                        <td>@item.Title</td>
+                                        <td>@item.PictureCategory</td>
                                         <td class="text-center">
-                                            @if (item.Activate)
+                                            @if (item.IsActive)
                                             {
                                                 <i class="fa fa-check fa-3x text-success"></i>
                                             }
@@ -156,22 +104,20 @@
                                                 <i class="fa fa-remove fa-3x text-danger"></i>
                                             }
                                         </td>
-                                        @*<td>@item.OrganizationGroupId</td>*@
-                                        @* <td>@item.Entiti</td>
-                                        <td>@item.CreationDate</td> *@
+                                        @* <td>@item.CreationDate</td> *@
                                         <td>
                                             <a class="btn btn-warning waves-effect waves-light w-xs m-b-5 "
                                                href="#showmodal=@Url.Page("./Index", "Edit", new { id = item.Id })">
                                                 <i class="fa fa-edit"></i> Edit
                                             </a>
-                                            @if (item.Activate)
+                                            @if (item.IsActive)
                                             {
-                                                <a asp-page="./Index" asp-page-handler="DeActive" asp-route-id="@item.Id"
+                                                <a asp-page="./Index" asp-page-handler="Remove" asp-route-id="@item.Id"
                                                    class="btn btn-danger waves-effect waves-light w-xs m-b-5">Deactive</a>
                                             }
                                             else
                                             {
-                                                <a asp-page="./Index" asp-page-handler="Active" asp-route-id="@item.Id"
+                                                <a asp-page="./Index" asp-page-handler="Restore" asp-route-id="@item.Id"
                                                    class="btn btn-success waves-effect waves-light w-xs m-b-5">Active</a>
                                             }
 

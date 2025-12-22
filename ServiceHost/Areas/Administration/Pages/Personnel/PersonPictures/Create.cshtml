@@ -17,302 +17,66 @@
 
     <div class="modal-body">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-12">
                 <div class="form-group">
                     <label asp-for="Picture" class="control-label">Picture *</label>
                     <input type="text" class="form-control" asp-for="Picture">
                     <span asp-validation-for="Picture" class="error"></span>
                 </div>
             </div>
-            <div class="col-md-3">
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6">
                 <div class="form-group">
                     <label asp-for="Title" class="control-label">Title</label>
                     <input type="text" class="form-control" asp-for="Title">
                     <span asp-validation-for="Title" class="error"></span>
                 </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-6">
                 <div class="form-group  element-dir-Fa">
                     <label asp-for="Text" class="control-label">Text</label>
                     <input type="text" class="form-control" asp-for="Text">
                     <span asp-validation-for="Text" class="error"></span>
                 </div>
             </div>
-            <div class="col-md-3">
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="PictureCategoryId" class="control-label">Picture Category</label>
+                    <select class="select22" asp-for="PictureCategoryId"
+                            asp-items='new SelectList(Model.PictureCategories, "Id", "Name")'>
+                        <option value="0">-Picture Categories-</option>
+                    </select>
+                    <span asp-validation-for="PictureCategoryId" class="error"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="PersonId" class="control-label">Person Lists</label>
+                    <select type="text" class="form-control" asp-for="PersonId"
+                            asp-items='new SelectList(Model.Persons, "Id", "NameEn" + " " + "FamilyEn")'>
+                        <option value="0">-Persons-</option>
+                    </select>
+                    <span asp-validation-for="PersonId" class="error"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
                 <div class="form-group  element-dir-Fa">
                     <label asp-for="Remark" class="control-label">Remark</label>
                     <input type="text" class="form-control" asp-for="Remark">
                     <span asp-validation-for="Remark" class="error"></span>
                 </div>
-            </div>        
-        </div>
-
-
-        <div class="row">
-            <div class="col-md-12">
-                <div class="form-group">
-                    <label asp-for="PersonId" class="control-label">Person Lists</label>
-                    <select type="text" class="form-control" asp-for="PersonId"
-                            asp-items='new SelectList(Model.Persons, "Id", "Description")'>
-                        <option value="0">-Person Group-</option>
-                    </select>
-                    <span asp-validation-for="PersonGroupId" class="error"></span>
-                </div>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label asp-for="AddressId" class="control-label">Address</label>
-                    <textarea class="form-control autogrow" asp-for="AddressId"
-                                  style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 35px;"></textarea>
-                    <span asp-validation-for="AddressId" class="error"></span>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label asp-for="CityId" class="control-label">Working City</label>
-                    <select class="select22" asp-for="CityId"
-                            asp-items='new SelectList(Model.Cities, "Id", "Name")'>
-                        <option value="0">-Cities-</option>
-                    </select>
-                    <span asp-validation-for="CityId" class="error"></span>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label class="sr-only" asp-for="BirthCityId">City</label>
-                    <select class="select22" asp-for="BirthCityId"
-                            asp-items='new SelectList(Model.Cities, "Id", "Name")'>
-                        <option value="0">-Citys-</option>
-                    </select>
-                    <span asp-validation-for="BirthCityId" class="error"></span>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label class="sr-only" asp-for="BirthProvinceId">Province</label>
-                    <select class="select22" asp-for="BirthProvinceId"
-                            asp-items='new SelectList(Model.Provinces, "Id", "Name")'>
-                        <option value="0">-Provinces-</option>
-                    </select>
-                    <span asp-validation-for="BirthProvinceId" class="error"></span>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label class="sr-only" asp-for="BirthCountryId"></label>
-                    <select class="select22" asp-for="BirthCountryId"
-                            asp-items='new SelectList(Model.Countrys, "Id", "Name")'>
-                        <option value="0">-Countrys-</option>
-                    </select>
-                    <span asp-validation-for="BirthCountryId" class="error"></span>
-                </div>
-            </div>    
-        </div>
-
-        <div class="row">
-            
-            <div class="col-md-3">
-                <div class="form-group">
-                    <label class="form-check-label" asp-for="Gender">Gender</label>
-                    <div>
-                        <div class="radio radio-info radio-inline">
-                            <input type="radio" asp-for="Gender" value="false" class="form-control">
-                            <label asp-for="Gender">Male</label>
-                        </div>
-                        <div class="radio radio-info radio-inline">
-                            <input type="radio" asp-for="Gender" value="true" class="form-control">
-                            <label asp-for="Gender">Female</label>
-                        </div>
-                    </div>
-                    <span asp-validation-for="Gender" class="error"></span>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <label class="form-check-label" asp-for="Marriage">Marriaged</label>
-                <div class="form-group">
-                    <input class="form-check-input" type="checkbox" asp-for="Marriage">
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="form-group">
-                    <label asp-for="Birthday" class="control-label">Birthday</label>
-                    <div class="input-group">
-                        <input class="form-control persianDateInput" asp-for="Birthday">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-                    </div>
-                    <span asp-validation-for="Birthday" class="error"></span>
-
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="form-group">
-                    <label asp-for="WorkingStartDate" class="control-label">Working Start Date</label>
-                    <div class="input-group">
-                        <input class="form-control persianDateInput" asp-for="WorkingStartDate">
-                        <span class="input-group-addon">
-                            <i class="glyphicon glyphicon-calendar"></i>
-                        </span>
-                    </div>
-                    <span asp-validation-for="WorkingStartDate" class="error"></span>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="row">
-            <div class="col-md-3">
-            <div class="form-group">
-                    <label asp-for="MailBoxAddress1" class="control-label">MailBox Address 1</label>
-                <div class="input-group">
-                        <input type="email" class="form-control" asp-for="MailBoxAddress1">
-                   <span class="input-group-addon"><i class="md md-web"></i></span>
-                </div>
-                    <span asp-validation-for="MailBoxAddress1" class="error"></span>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="form-group">
-                    <label asp-for="MailBoxAddress2" class="control-label">MailBox Address 2</label>
-                <div class="input-group">
-                        <input type="email" class="form-control" asp-for="MailBoxAddress2">
-                   <span class="input-group-addon"><i class="md md-mail"></i></span>
-                 </div>
-                    <span asp-validation-for="MailBoxAddress2" class="error"></span>
-            </div>
-        </div>
-            <div class="col-md-3">
-                <div class="form-group">
-                    <label asp-for="SocialAddress1" class="control-label">Social Address 1</label>
-                    <div class="input-group">
-                        <input type="text" class="form-control" asp-for="SocialAddress1" >
-                        <span class="input-group-addon"><i class="md md-mail"></i></span>
-                    </div>
-                    <span asp-validation-for="SocialAddress1" class="error"></span>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="form-group">
-                    <label asp-for="SocialAddress2" class="control-label">Social Address 2</label>
-                    <div class="input-group">
-                        <input type="text" class="form-control" asp-for="SocialAddress2">
-                        <span class="input-group-addon"><i class="md md-mail"></i></span>
-                    </div>
-                    <span asp-validation-for="SocialAddress2" class="error"></span>
-                </div>
-            </div>   
-        </div>
-
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label asp-for="NationalCode" class="control-label">National Code No.</label>
-                    <input type="text" class="form-control" asp-for="NationalCode">
-                    <span asp-validation-for="NationalCode" class="error"></span>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label asp-for="PassportNo" class="control-label">Passport No.</label>
-                    <input type="text" class="form-control" asp-for="PassportNo">
-                    <span asp-validation-for="PassportNo" class="error"></span>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label asp-for="FatherName" class="control-label">Father Name</label>
-                    <input type="text" class="form-control" asp-for="FatherName">
-                    <span asp-validation-for="FatherName" class="error"></span>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label asp-for="NationalCodeOfFather" class="control-label">National Code Of Father</label>
-                    <input type="number" class="form-control" asp-for="NationalCodeOfFather">
-                    <span asp-validation-for="NationalCodeOfFather" class="error"></span>
-                </div>
-            </div>
-            
-        </div>
-                    
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">                   
-                    <label asp-for="EducationalDegree" class="control-label">Educational Degree</label>
-                    @* <input type="text" class="form-control" asp-for="EducationalDegree"> *@
-                    <select asp-for="EducationalDegree" class="form-control">
-                        <option value="0" selected>Choose...</option>
-                        <option value="1">Diploma / پایان دوره متوسطه / دیپلم </option>
-                        <option value="2">Associate Degree / مدرک تحصیلی فوق دیپلم / کاردانی </option>
-                        <option value="3">Associate Bachelor's Degree / مدرک تحصیلی لیسانس / کارشناسی </option>
-                        <option value="4">Master's Degree / مدرک تحصیلی فوق لیسانس / کارشناسی ارشد </option>
-                        <option value="5">Doctoral Degree / PhD or مدرک تحصیلی دکترا </option>
-                        <option value="6">Postdoctoral Degree / مدرک تحصیلی فوق دکتری </option>
-                    </select>
-                    <span asp-validation-for="EducationalDegree" class="error"></span>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label asp-for="EducationalField" class="control-label">Educational Field</label>
-                    <input type="text" class="form-control" asp-for="EducationalField">
-                    <span asp-validation-for="EducationalField" class="error"></span>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label asp-for="MobileNo1" class="control-label">Mobile No. 1</label>
-                    <input type="tel" class="form-control" asp-for="MobileNo1" 
-                    placeholder="0912-123-45-67" pattern="[0-9]{4}-[0-9]{3}-[0-9]{2}-[0-9]{2}">
-                    <span asp-validation-for="MobileNo1" class="error"></span>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label asp-for="MobileNo2" class="control-label">Mobile No. 2</label>
-                    <input type="tel" class="form-control" asp-for="MobileNo2">
-                    <span asp-validation-for="MobileNo2" class="error"></span>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="form-group">
-                    <label asp-for="PhoneNo" class="control-label">Phone No.</label>
-                    <input type="tel" class="form-control" asp-for="PhoneNo">
-                    <span asp-validation-for="PhoneNo" class="error"></span>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label asp-for="Attachment" class="control-label">Attachment</label>
-                    <input type="file" class="form-control" asp-for="Attachment">
-                    <span asp-validation-for="Attachment" class="error"></span>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label asp-for="ProfilePicture" class="control-label">Profile Picture</label>
-                    <input type="text" class="form-control" asp-for="ProfilePicture">
-                    <span asp-validation-for="ProfilePicture" class="error"></span>
-                </div>
-            </div>
-        </div>
         
        
     </div>

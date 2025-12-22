@@ -34,7 +34,7 @@ namespace ServiceHost.Areas.Administration.Pages.Personnel.PersonPictures
 
         public void OnGet(PersonPictureSearchModel searchModel)
         {
-            Persons = new SelectList(_personApplication.GetPerson(), "Id", "Description");
+            Persons = new SelectList(_personApplication.GetPerson(), "Id", "Name");
             PictureCategories = new SelectList(_pictureCategoryApplicaton.GetPictureCategorys(), "Id", "Name");
             PersonPictures = _personPictureApplication.Search(searchModel);
         }
@@ -80,7 +80,7 @@ namespace ServiceHost.Areas.Administration.Pages.Personnel.PersonPictures
             return RedirectToPage("./Index");
         }
 
-        public IActionResult OnGetDeRemove(long id)
+        public IActionResult OnGetRemove(long id)
         {
             var result = _personPictureApplication.Remove(id);
             if (result.IsSucceeded)

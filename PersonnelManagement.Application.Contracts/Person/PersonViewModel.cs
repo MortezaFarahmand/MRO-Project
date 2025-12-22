@@ -29,5 +29,6 @@ namespace PersonnelManagement.Application.Contracts.Person
         public string WorkingStartDate { get; set; }
         public string MobileNo1 { get; set; }
         public string ProfilePicture { get; set; }
+        public string Name { get; set; }
     }
 }
