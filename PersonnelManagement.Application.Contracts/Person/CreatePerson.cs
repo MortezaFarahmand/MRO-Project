@@ -54,7 +54,11 @@ namespace PersonnelManagement.Application.Contracts.Person
         public List<CountryViewModel> Countrys { get; set; }
         public List<ProvinceViewModel> Provinces { get; set; }
         public List<CityViewModel> Cities { get; set; }
+
+        [FileExtentionLimitation(new string[] { ".jpeg", ".jpg", ".png" }, ErrorMessage = ValidationMessages.InvalidFileFormat)]
+        [MaxFileSize(3 * 1024 * 1024, ErrorMessage = ValidationMessages.MaxFileSize)]
         public string ProfilePicture { get; set; }
+
         public List<PersonPictureViewModel> PersonPictures { get; set; }
         //[Required(ErrorMessage=ValidationMessages.IsRequired)]
         //[FileExtentionLimitation(new string[] { ".jpeg", ".jpg", ".png" }, ErrorMessage = ValidationMessages.InvalidFileFormat)]

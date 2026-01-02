@@ -41,9 +41,10 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="sr-only col-sm-6" asp-for="SearchModel.PictureCategoryId"></label>
-                        <select class="select2" asp-for="SearchModel.PictureCategoryId"
-                                    asp-items="Model.PictureCategories">
+                        <span asp-validation-for="SearchModel.PictureCategoryId" class="error"></span>
+                        <label class="sr-only" asp-for="SearchModel.PictureCategoryId"></label>
+                        <select class="form-control" asp-for="SearchModel.PictureCategoryId"
+                                asp-items="Model.PictureCategories">
                             <option value="0">-Picture Categories-</option>
                         </select>
                     </div> 
@@ -88,8 +89,8 @@
                                     <tr>
                                         <td>@item.Id</td>
                                         <td>
-                                            @* ~/Img/ProfilePictureOfPersons/
-                                            <img src="@item.Picture" style="width: 70px; height: 70px" />
+
+                                            <img src="~/Img/PersonPictures/@item.Picture" style="width: 70px; height: 70px" />
                                         </td>
                                         <td>@item.Person</td>
                                         <td>@item.Title</td>
@@ -104,7 +105,7 @@
                                                 <i class="fa fa-remove fa-3x text-danger"></i>
                                             }
                                         </td>
-                                        @* <td>@item.CreationDate</td> *@
+                                         @* <td>@item.CreationDate</td> *@
                                         <td>
                                             <a class="btn btn-warning waves-effect waves-light w-xs m-b-5 "
                                                href="#showmodal=@Url.Page("./Index", "Edit", new { id = item.Id })">

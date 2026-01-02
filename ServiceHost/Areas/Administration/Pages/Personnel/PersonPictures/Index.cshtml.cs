@@ -66,6 +66,10 @@ namespace ServiceHost.Areas.Administration.Pages.Personnel.PersonPictures
 
         public JsonResult OnPostEdit(EditPersonPicture command)
         {
+            if (ModelState.IsValid) 
+            { 
+                
+            }
             var result = _personPictureApplication.Edit(command);
             return new JsonResult(result);
         }

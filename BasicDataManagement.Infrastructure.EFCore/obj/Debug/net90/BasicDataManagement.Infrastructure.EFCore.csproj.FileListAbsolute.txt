@@ -3,9 +3,11 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Infra
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Infrastructure.EFCore\bin\Debug\net90\BasicDataManagement.Infrastructure.EFCore.dll
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Infrastructure.EFCore\bin\Debug\net90\BasicDataManagement.Infrastructure.EFCore.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Infrastructure.EFCore\bin\Debug\net90\0_Framework.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Infrastructure.EFCore\bin\Debug\net90\BasicDataManagement.Application.Contracts.dll
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Infrastructure.EFCore\bin\Debug\net90\BasicDataManagement.Domain.dll
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Infrastructure.EFCore\bin\Debug\net90\BasicDataManagement.Domain.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Infrastructure.EFCore\bin\Debug\net90\0_Framework.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Infrastructure.EFCore\bin\Debug\net90\BasicDataManagement.Application.Contracts.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Infrastructure.EFCore\obj\Debug\net90\BasicDataManagement.Infrastructure.EFCore.csproj.AssemblyReference.cache
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Infrastructure.EFCore\obj\Debug\net90\BasicDataManagement.Infrastructure.EFCore.GeneratedMSBuildEditorConfig.editorconfig
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Infrastructure.EFCore\obj\Debug\net90\BasicDataManagement.Infrastructure.EFCore.AssemblyInfoInputs.cache
@@ -18,5 +20,3 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Infra
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Infrastructure.EFCore\obj\Debug\net90\BasicDataManagement.Infrastructure.EFCore.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Infrastructure.EFCore\obj\Debug\net90\BasicDataManagement.Infrastructure.EFCore.genruntimeconfig.cache
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Infrastructure.EFCore\obj\Debug\net90\ref\BasicDataManagement.Infrastructure.EFCore.dll
-D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Infrastructure.EFCore\bin\Debug\net90\BasicDataManagement.Application.Contracts.dll
-D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Infrastructure.EFCore\bin\Debug\net90\BasicDataManagement.Application.Contracts.pdb

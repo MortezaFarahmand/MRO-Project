@@ -3,7 +3,9 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Domai
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Domain\bin\Debug\net90\BasicDataManagement.Domain.dll
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Domain\bin\Debug\net90\BasicDataManagement.Domain.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Domain\bin\Debug\net90\0_Framework.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Domain\bin\Debug\net90\BasicDataManagement.Application.Contracts.dll
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Domain\bin\Debug\net90\0_Framework.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Domain\bin\Debug\net90\BasicDataManagement.Application.Contracts.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Domain\obj\Debug\net90\BasicDataManagement.Domain.csproj.AssemblyReference.cache
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Domain\obj\Debug\net90\BasicDataManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Domain\obj\Debug\net90\BasicDataManagement.Domain.AssemblyInfoInputs.cache
@@ -16,5 +18,3 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Domai
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Domain\obj\Debug\net90\BasicDataManagement.Domain.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Domain\obj\Debug\net90\BasicDataManagement.Domain.genruntimeconfig.cache
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Domain\obj\Debug\net90\ref\BasicDataManagement.Domain.dll
-D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Domain\bin\Debug\net90\BasicDataManagement.Application.Contracts.dll
-D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Domain\bin\Debug\net90\BasicDataManagement.Application.Contracts.pdb

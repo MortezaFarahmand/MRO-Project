@@ -20,7 +20,7 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <label asp-for="Picture" class="control-label">Picture *</label>
-                    <input type="text" class="form-control" asp-for="Picture">
+                    <input type="file" class="form-control" asp-for="Picture">
                     <span asp-validation-for="Picture" class="error"></span>
                 </div>
             </div>
@@ -48,7 +48,7 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <label asp-for="PictureCategoryId" class="control-label">Picture Category</label>
-                    <select class="select22" asp-for="PictureCategoryId"
+                    <select type="text" class="form-control" asp-for="PictureCategoryId"
                             asp-items='new SelectList(Model.PictureCategories, "Id", "Name")'>
                         <option value="0">-Picture Categories-</option>
                     </select>
@@ -57,9 +57,9 @@
             </div>
             <div class="col-md-6">
                 <div class="form-group">
-                    <label asp-for="PersonId" class="control-label">Person Lists</label>
-                    <select type="text" class="form-control" asp-for="PersonId"
-                            asp-items='new SelectList(Model.Persons, "Id", "NameEn" + " " + "FamilyEn")'>
+                    <label class="control-label" asp-for="PersonId">Person Lists</label>
+                    <select class="select22" asp-for="PersonId"
+                            asp-items='new SelectList(Model.Persons, "Id", "Name")'>
                         <option value="0">-Persons-</option>
                     </select>
                     <span asp-validation-for="PersonId" class="error"></span>

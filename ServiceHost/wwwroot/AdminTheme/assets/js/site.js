@@ -208,15 +208,89 @@ jQuery.validator.addMethod("maxFileSize",
     });
 jQuery.validator.unobtrusive.adapters.addBool("maxFileSize");
 
-//jQuery.validator.addMethod("maxFileSize",
-//    function (value, element, params) {
-//        var size = element.files[0].size;
-//        var maxSize = 3 * 1024 * 1024;
-//        debugger;
-//        if (size > maxSize)
-//            return false;
-//        else {
-//            return true;
+jQuery.validator.addMethod("validExtentions",
+    function (value, element, params) {
+        var AllowExtensions = ["jpeg", "jpg", "png"];
+        debugger;
+        var extension = (/[.]/.exec(value)) ? /[^.]+$/.exec(value) : undefined;
+        if (extension != undefined) {
+            extension = extension[0];
+        }
+        extension = extension;
+        var validExtension = $.inArray(extension, AllowExtensions) !== -1;
+        return validExtension;
+    
+    });
+jQuery.validator.unobtrusive.adapters.addBool("validExtentions");
+
+//function getFileExtension(fileName) {
+//    var extension = (/[.]/.exec(fileName)) ? /[^.]+$/.exec(fileName) : undefined;
+//    if (extension != undefined) {
+//        return extension[0];
+//    }
+//    return extension;
+//};
+// (jQuery);
+
+
+//function validateFileType() {
+//    var selectedFile = document.getElementById('fileInput').files[0];
+//    var allowedTypes = ['image/jpeg', 'image/png', 'application/pdf'];
+
+//    if (!allowedTypes.includes(selectedFile.type)) {
+//        alert('Invalid file type. Please upload a JPEG, PNG, or PDF file.');
+//        document.getElementById('fileInput').value = '';
+//    }
+//}
+
+
+//jQuery.validator.addMethod("selectnic", function (value, element) {
+//    if (/^[0-9]{9}[vVxX]$/.test(value)) {
+//        return false;  // FAIL validation when REGEX matches
+//    } else {
+//        return true;   // PASS validation otherwise
+//    };
+//}, "wrong nic number"); 
+
+//$('#basicDetails').validate({ // initialize the Plugin
+
+//    rules: {
+//        fname: {
+//            required: true,
+//            lettersonly: true,
+//        },
+//        lname: {
+//            required: true,
+//            lettersonly: true,
+//        },
+
+//        nicnumber: {
+//            // other rules,
+//            selectnic: true // <-  declare the rule someplace!
 //        }
-//    });
-//jQuery.validator.unobtrusive.adapters.addBool("maxFileSize");
+
+
+//    },
+
+
+//    messages: {
+
+//        fname: {
+//            required: "Please enter your first name",
+//            lettersonly: "Login format not valid",
+
+//        },
+//        lname: {
+//            required: "Please enter your last name",
+//            lettersonly: "Login format not valid",
+
+//        },
+//    },
+
+
+//    submitHandler: function (form) { // for demo
+//        alert('valid form submitted'); // for demo
+//        return false; // for demo
+//    }
+//});
+

@@ -25,7 +25,7 @@ namespace PersonnelManagement.Infrastructure.EFCore.Repository
             return _context.PersonPictures.Select(x => new EditPersonPicture
             {
                 Id = x.Id,
-                Picture = x.Picture,
+                //Picture = x.Picture,
                 Text = x.Text,
                 Title = x.Title,
                 Remark = x.Remark,
@@ -48,6 +48,7 @@ namespace PersonnelManagement.Infrastructure.EFCore.Repository
                    Text = x.Text,
                    Title = x.Title,
                    Remark = x.Remark,
+                   IsActive = x.IsActive,
                    PictureCategoryId = x.PictureCategoryId,
                    Person = x.Person.NameEn + ' ' + x.Person.FamilyEn
 
@@ -75,6 +76,7 @@ namespace PersonnelManagement.Infrastructure.EFCore.Repository
                    Text = x.Text,
                    Title = x.Title,
                    Remark = x.Remark,
+                   IsActive = x.IsActive,
                    PictureCategoryId = x.PictureCategoryId,
                    Person = x.Person.NameEn + ' ' + x.Person.FamilyEn
 

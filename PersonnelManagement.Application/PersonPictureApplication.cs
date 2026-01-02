@@ -3,6 +3,7 @@ using PersonnelManagement.Application.Contracts.PersonPicture;
 using PersonnelManagement.Domain.PersonPictureAgg;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,17 +14,19 @@ namespace PersonnelManagement.Application
     public class PersonPictureApplication : IPersonPictureApplication
     {
         private readonly IPersonPictureRepository _personPictureRepository;
-        public PersonPictureApplication(IPersonPictureRepository personPictureRepository)
+        private readonly IFileUploader _fileUploader;
+        public PersonPictureApplication(IPersonPictureRepository personPictureRepository, IFileUploader fileUploader)
         {
             _personPictureRepository = personPictureRepository;
+            _fileUploader = fileUploader;
         }
 
 
         public OperationResult Create(CreatePersonPicture command)
         {
             var operation = new OperationResult();
-            var personPicture = new PersonPicture (command.Picture, command.Title, command.Text, 
-                command.Remark, command.PictureCategoryId, command.PictureCategoryId);
+            var personPicture = new PersonPicture(command.Picture.FileName, command.Title, command.Text, 
+                command.Remark, command.PictureCategoryId, command.PersonId);
 
             _personPictureRepository.Create(personPicture);
             _personPictureRepository.SaveChanges();
@@ -37,8 +40,10 @@ namespace PersonnelManagement.Application
             if(personPicture == null) 
                 return operation.Failed(ApplicationMessages.RecordNotFound);
 
-            personPicture.Edit(command.Picture, command.Title, command.Text,
-                command.Remark, command.PictureCategoryId, command.PictureCategoryId);
+            var picturePath = $"PersonPictures/{command.PersonId}/{command.PictureCategoryId}" ;
+            var fileName = _fileUploader.Upload(command.Picture, picturePath);
+            personPicture.Edit(fileName, command.Title, command.Text,
+                command.Remark, command.PictureCategoryId, command.PersonId);
             _personPictureRepository.SaveChanges();
             return operation.Succeeded();
         }

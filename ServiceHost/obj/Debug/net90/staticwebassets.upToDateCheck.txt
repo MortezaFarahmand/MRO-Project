@@ -245,6 +245,7 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution-addons\whiteboard\assets\busy-icons-svg\hat.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\device\ic_battery_full_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\AdminTheme\assets\flot-chart\jquery.flot.tooltip.min.js
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Img\PersonPictures\2\2\index.html
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\image\ic_navigate_next_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution-addons\whiteboard\assets\busy-icons-svg\paper-plane.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\action\ic_print_24px.svg
@@ -442,6 +443,7 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\notification\ic_phone_missed_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\busy-icons-svg\people-structure.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\action\ic_hourglass_empty_24px.svg
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Img\PersonPictures\2\2\saved_resource.html
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution-addons\whiteboard\assets\busy-icons-svg\hand-key.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\image\ic_vignette_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\hardware\ic_keyboard_arrow_down_24px.svg
@@ -936,6 +938,7 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\image\ic_leak_remove_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\busy-icons-svg\calculator3.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\lib\jquery\dist\jquery.min.map
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Img\PersonPictures\2\2\inner.html
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution-addons\whiteboard\assets\busy-icons-svg\scissors.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\image\ic_landscape_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\image\ic_blur_circular_24px.svg
@@ -2315,6 +2318,15 @@ wwwroot\AdminTheme\images\users\avatar-8.jpg
 wwwroot\AdminTheme\images\users\avatar-9.jpg
 wwwroot\AdminTheme\images\users\Thumbs.db
 wwwroot\favicon.ico
+wwwroot\Img\PersonPictures\2\1\لوگو مسجد.png
+wwwroot\Img\PersonPictures\2\2\index.html
+wwwroot\Img\PersonPictures\2\2\inner.html
+wwwroot\Img\PersonPictures\2\2\logo-1684421680469.jpg
+wwwroot\Img\PersonPictures\2\2\logo-1684424171323.jpg
+wwwroot\Img\PersonPictures\2\2\saved_resource.html
+wwwroot\Img\PersonPictures\2\3\logo-1684424157074.png
+wwwroot\Img\PersonPictures\2\Pic Profile\logo-1684423979243.png
+wwwroot\Img\PersonPictures\logo-1684424157074.png
 wwwroot\Img\ProfilePictureOfPersons\FarahmandAx.jpg
 wwwroot\Img\SliderPictures\1F-Aerospace_Engineering.png
 wwwroot\Img\SliderPictures\20sp-currents-planes-illo-superJumbo.gif
