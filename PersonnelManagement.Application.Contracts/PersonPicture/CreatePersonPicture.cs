@@ -9,7 +9,7 @@ namespace PersonnelManagement.Application.Contracts.PersonPicture
 {
     public class CreatePersonPicture
     {
-        [Required(ErrorMessage = ValidationMessages.IsRequired)]
+        //[Required(ErrorMessage = ValidationMessages.IsRequired)]
         [MaxFileSize(3 * 1024 * 1024, ErrorMessage = ValidationMessages.MaxFileSize)]
         [FileExtentionLimitation(new string[] { ".jpeg", ".jpg", ".png" }, ErrorMessage = ValidationMessages.InvalidFileFormat)]
         public IFormFile Picture { get; set; }

@@ -25,7 +25,10 @@ namespace PersonnelManagement.Application
         public OperationResult Create(CreatePersonPicture command)
         {
             var operation = new OperationResult();
-            var personPicture = new PersonPicture(command.Picture.FileName, command.Title, command.Text, 
+
+            var picturePath = $"PersonPictures/{command.PersonId}/{command.PictureCategoryId}";
+            var fileName = _fileUploader.Upload(command.Picture, picturePath);
+            var personPicture = new PersonPicture(fileName, command.Title, command.Text, 
                 command.Remark, command.PictureCategoryId, command.PersonId);
 
             _personPictureRepository.Create(personPicture);
