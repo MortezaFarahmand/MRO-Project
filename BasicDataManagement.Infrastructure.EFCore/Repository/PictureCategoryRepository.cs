@@ -41,6 +41,10 @@ namespace BasicDataManagement.Infrastructure.EFCore.Repository
             }).ToList();
         }
 
+        public string GetPictureCategoryNameById(long id)
+        {
+            return  _context.PictureCategorys.Select(x => new { x.Id, x.Name }).FirstOrDefault(x => x.Id == id).Name;
+        }
 
         public List<PictureCategoryViewModel> Search(PictureCategorySearchModel searchModel)
         {

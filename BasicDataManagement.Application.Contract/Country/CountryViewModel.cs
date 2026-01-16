@@ -11,7 +11,7 @@ namespace BasicDataManagement.Application.Contracts.Country
         public string Alpha3Code { get; set; }
         public string UNCode { get; set; }
         public string DialCode { get; set; }
-        public long PictureId { get; set; }
+        public string Picture { get; set; }
         public string TailCode { get; set; }
         public string CreationDate { get; set; }
         public string MetaDescription { get; set; }

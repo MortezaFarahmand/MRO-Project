@@ -7,7 +7,8 @@ namespace PersonnelManagement.Domain.PersonAgg
     public interface IPersonRepository : IRepository<long, Person>
     {
         List<PersonViewModel> GetPerson();
-        EditPerson GetDetails(long id);
+        EditPerson GetDetails(long id); 
         List<PersonViewModel> Search(PersonSearchModel searchModel);
+        string GetNameAndFamilyById(long id);
     }
 }

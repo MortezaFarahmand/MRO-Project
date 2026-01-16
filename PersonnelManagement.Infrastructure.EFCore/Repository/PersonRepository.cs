@@ -62,6 +62,12 @@ namespace PersonnelManagement.Infrastructure.EFCore.Repository
                 
         }
 
+        public string GetNameAndFamilyById(long id)
+        {
+            var pesonName = _context.Persons.Select(x => new { x.Id, x.NameEn, x.FamilyEn }).FirstOrDefault(x => x.Id == id);
+            return (pesonName.NameEn + pesonName.FamilyEn);
+        }
+
         public List<PersonViewModel> GetPerson()
         {
             var Countries = _basicDataContext.Countrys.Select(x => new { x.Id, x.Name }).ToList();
@@ -106,6 +112,7 @@ namespace PersonnelManagement.Infrastructure.EFCore.Repository
                 WorkingStartDate = x.WorkingStartDate.ToString(),
                 MobileNo1 = x.MobileNo1,
                 ProfilePicture = x.ProfilePicture
+               
             }).ToList();
         }
 

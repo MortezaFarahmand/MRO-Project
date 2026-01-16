@@ -95,7 +95,7 @@ namespace PersonnelManagement.Domain.PersonAgg
             Activate = true;
             PersonGroupId = personGroupId;//
             OrganizationId = organizationId;//
-            //if (!string.IsNullOrWhiteSpace(ProfilePicture))
+            if (!string.IsNullOrWhiteSpace(ProfilePicture))
                 ProfilePicture = profilePicture;
             
         }
@@ -137,7 +137,7 @@ namespace PersonnelManagement.Domain.PersonAgg
             WorkingStartDate = workingStartDate;
             PersonGroupId = personGroupId;//
             OrganizationId = organizationId;//
-            //if (!string.IsNullOrWhiteSpace(ProfilePicture))
+            if (!string.IsNullOrWhiteSpace(ProfilePicture))
                 ProfilePicture = profilePicture;
 
         }

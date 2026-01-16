@@ -92,8 +92,8 @@ namespace PersonnelManagement.Infrastructure.EFCore.Migrations
                     b.Property<long?>("PersonId")
                         .HasColumnType("bigint");
 
-                    b.Property<long>("PictureId")
-                        .HasColumnType("bigint");
+                    b.Property<string>("Picture")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Slug")
                         .HasColumnType("nvarchar(max)");
@@ -397,7 +397,6 @@ namespace PersonnelManagement.Infrastructure.EFCore.Migrations
                         .HasColumnType("bigint");
 
                     b.Property<string>("Picture")
-                        .IsRequired()
                         .HasMaxLength(1000)
                         .HasColumnType("nvarchar(1000)");
 

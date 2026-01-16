@@ -9,5 +9,6 @@ namespace BasicDataManagement.Domain.PictureCategoryAgg
         List<PictureCategoryViewModel> GetPictureCategory();
         EditPictureCategory GetDetails(long id);
         List<PictureCategoryViewModel> Search(PictureCategorySearchModel searchModel);
+        string GetPictureCategoryNameById(long id);
     }
 }

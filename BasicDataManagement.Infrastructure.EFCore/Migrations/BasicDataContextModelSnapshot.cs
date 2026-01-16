@@ -96,8 +96,8 @@ namespace BasicDataManagement.Infrastructure.EFCore.Migrations
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
-                    b.Property<long>("PictureId")
-                        .HasColumnType("bigint");
+                    b.Property<string>("Picture")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Slug")
                         .HasMaxLength(500)

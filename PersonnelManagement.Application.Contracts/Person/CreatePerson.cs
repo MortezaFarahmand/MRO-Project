@@ -40,7 +40,10 @@ namespace PersonnelManagement.Application.Contracts.Person
         public string EducationalField { get; set; }
         public string IDCartNo { get; set; }
         public long AddressId { get; set; }
+
+        [Required(ErrorMessage = ValidationMessages.IsRequired)]
         public string MobileNo1 { get; set; }
+
         public string MobileNo2 { get; set; }
         public string PhoneNo { get; set; }
         public string MailBoxAddress1 { get; set; }

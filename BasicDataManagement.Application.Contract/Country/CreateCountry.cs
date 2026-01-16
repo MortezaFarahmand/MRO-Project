@@ -1,5 +1,6 @@
 ﻿
 using _0_Framework.Application;
+using Microsoft.AspNetCore.Http;
 using System.ComponentModel.DataAnnotations;
 
 namespace BasicDataManagement.Application.Contracts.Country
@@ -15,9 +16,9 @@ namespace BasicDataManagement.Application.Contracts.Country
         public string DialCode { get; set; }
 
         //[Required(ErrorMessage=ValidationMessages.IsRequired)]
-        //[FileExtentionLimitation(new string[] { ".jpeg", ".jpg", ".png" }, ErrorMessage = ValidationMessages.InvalidFileFormat)]
-        //[MaxFileSize(3 * 1024 * 1024, ErrorMessage = ValidationMessages.MaxFileSize)]
-        public long PictureId { get; set; }
+        [FileExtentionLimitation(new string[] { ".jpeg", ".jpg", ".png", ".svg" }, ErrorMessage = ValidationMessages.InvalidFileFormat)]
+        [MaxFileSize(1 * 1024 * 1024, ErrorMessage = ValidationMessages.MaxFileSize)]
+        public IFormFile Picture { get; set; }
 
         public string TailCode { get; set; }
         public string MetaDescription { get; set; }

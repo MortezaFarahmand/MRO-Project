@@ -13,7 +13,7 @@ namespace BasicDataManagement.Domain.CountryAgg
         public string Alpha3Code { get; private set; }
         public string UNCode { get; private set; }
         public string DialCode { get; private set; }
-        public long PictureId { get; private set; }
+        public string Picture { get; private set; }
         public string TailCode { get; private set; }
         public string MetaDescription { get; private set; }
         public string Slug { get; private set; }
@@ -31,30 +31,36 @@ namespace BasicDataManagement.Domain.CountryAgg
 
 
         public Country(string name, string alpha2Code, string alpha3Code, string uNCode,
-            string dialCode, long pictureId, string tailCode, string metaDescription, string slug)
+            string dialCode, string picture, string tailCode, string metaDescription, string slug)
         {
             Name = name;
             Alpha2Code = alpha2Code;
             Alpha3Code = alpha3Code;
             UNCode = uNCode;
             DialCode = dialCode;
-            PictureId = pictureId;
+
+            if (!string.IsNullOrWhiteSpace(picture))
+                Picture = picture;
+
+            Picture = picture;
             TailCode = tailCode;
             MetaDescription = metaDescription;
             Slug = slug;
         }
 
         public void Edit(string name, string alpha2Code, string alpha3Code, string uNCode,
-           string dialCode, long pictureId, string tailCode, string metaDescription, string slug)
+           string dialCode, string picture, string tailCode, string metaDescription, string slug)
         {
             Name = name;
             Alpha2Code = alpha2Code;
             Alpha3Code = alpha3Code;
             UNCode = uNCode;
             DialCode = dialCode;
-            //if (!string.IsNullOrWhiteSpace(picture))
-            //    Picture = picture;
-            PictureId = pictureId;
+
+            if (!string.IsNullOrWhiteSpace(picture))
+                Picture = picture;
+
+            Picture = picture;
             TailCode = tailCode;
             MetaDescription = metaDescription;
             Slug = slug;

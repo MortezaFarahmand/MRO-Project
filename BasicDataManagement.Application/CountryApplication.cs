@@ -7,11 +7,13 @@ namespace BasicDataManagement.Application
 {
     public class CountryApplication : ICountryApplication
     {
+        private readonly IFileUploader _fileUploader;
         private readonly ICountryRepository _countryRepository;
 
-        public CountryApplication(ICountryRepository countryRepository)
-        {
+        public CountryApplication(ICountryRepository countryRepository, IFileUploader fileUploader)
+        { 
             _countryRepository = countryRepository;
+            _fileUploader = fileUploader;
         }
 
 
@@ -22,8 +24,11 @@ namespace BasicDataManagement.Application
             if (_countryRepository.Exists(x => x.Name == command.Name))
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
 
+            var picturePath = $"CountrySlugs";
+            var pictureName = _fileUploader.Upload(command.Picture, picturePath);
+
             var country = new Country(command.Name, command.Alpha2Code, command.Alpha3Code, command.UNCode,
-                command.DialCode, command.PictureId, command.TailCode, command.MetaDescription, command.Slug);
+                command.DialCode, picturePath, command.TailCode, command.MetaDescription, command.Slug);
 
             _countryRepository.Create(country);
             _countryRepository.SaveChanges();
@@ -40,8 +45,11 @@ namespace BasicDataManagement.Application
             if(_countryRepository.Exists(x=>x.Name==command.Name && x.Id != command.Id))
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
 
+            var picturePath = $"CountryFlags";
+            var pictureName = _fileUploader.Upload(command.Picture, picturePath);
+
             country.Edit(command.Name, command.Alpha2Code, command.Alpha3Code, command.UNCode,
-                command.DialCode, command.PictureId, command.TailCode, command.MetaDescription, command.Slug);
+                command.DialCode, pictureName, command.TailCode, command.MetaDescription, command.Slug);
 
             _countryRepository.SaveChanges();
             return operation.Succeeded();

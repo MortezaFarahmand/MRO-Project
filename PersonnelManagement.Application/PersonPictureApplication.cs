@@ -1,5 +1,7 @@
 ﻿using _0_Framework.Application;
+using BasicDataManagement.Domain.PictureCategoryAgg;
 using PersonnelManagement.Application.Contracts.PersonPicture;
+using PersonnelManagement.Domain.PersonAgg;
 using PersonnelManagement.Domain.PersonPictureAgg;
 using System;
 using System.Collections.Generic;
@@ -15,10 +17,16 @@ namespace PersonnelManagement.Application
     {
         private readonly IPersonPictureRepository _personPictureRepository;
         private readonly IFileUploader _fileUploader;
-        public PersonPictureApplication(IPersonPictureRepository personPictureRepository, IFileUploader fileUploader)
+        private readonly IPersonRepository _personRepository;
+        private readonly IPictureCategoryRepository _pictureCategoryRepository;
+
+        public PersonPictureApplication(IPersonPictureRepository personPictureRepository, 
+            IFileUploader fileUploader, IPersonRepository personRepository, IPictureCategoryRepository pictureCategoryRepository)
         {
             _personPictureRepository = personPictureRepository;
             _fileUploader = fileUploader;
+            _personRepository = personRepository;
+            _pictureCategoryRepository = pictureCategoryRepository;
         }
 
 
@@ -26,8 +34,12 @@ namespace PersonnelManagement.Application
         {
             var operation = new OperationResult();
 
-            var picturePath = $"PersonPictures/{command.PersonId}/{command.PictureCategoryId}";
+            var personNamFamily = _personRepository.GetNameAndFamilyById(command.PersonId);
+            var pictureCategoryName = _pictureCategoryRepository.GetPictureCategoryNameById(command.PictureCategoryId);
+
+            var picturePath = $"PersonPictures/{personNamFamily}/{pictureCategoryName}";
             var fileName = _fileUploader.Upload(command.Picture, picturePath);
+
             var personPicture = new PersonPicture(fileName, command.Title, command.Text, 
                 command.Remark, command.PictureCategoryId, command.PersonId);
 
@@ -43,8 +55,12 @@ namespace PersonnelManagement.Application
             if(personPicture == null) 
                 return operation.Failed(ApplicationMessages.RecordNotFound);
 
-            var picturePath = $"PersonPictures/{command.PersonId}/{command.PictureCategoryId}" ;
+            var personNamFamily = _personRepository.GetNameAndFamilyById(command.PersonId);
+            var pictureCategoryName = _pictureCategoryRepository.GetPictureCategoryNameById(command.PictureCategoryId);
+
+            var picturePath = $"PersonPictures/{personNamFamily}/{pictureCategoryName}";
             var fileName = _fileUploader.Upload(command.Picture, picturePath);
+
             personPicture.Edit(fileName, command.Title, command.Text,
                 command.Remark, command.PictureCategoryId, command.PersonId);
             _personPictureRepository.SaveChanges();

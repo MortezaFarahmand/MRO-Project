@@ -210,7 +210,7 @@ jQuery.validator.unobtrusive.adapters.addBool("maxFileSize");
 
 jQuery.validator.addMethod("validExtentions",
     function (value, element, params) {
-        var AllowExtensions = ["jpeg", "jpg", "png"];
+        var AllowExtensions = ["jpeg", "jpg", "png", "svg"];
         debugger;
         var extension = (/[.]/.exec(value)) ? /[^.]+$/.exec(value) : undefined;
         if (extension != undefined) {

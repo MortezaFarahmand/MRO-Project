@@ -57,7 +57,7 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    @* <th>Image</th> *@
+                                    <th>Image</th>
                                     <th>Name</th>
                                     <th>Alpha-2-Code</th>
                                     <th>Alpha-3-Code</th>
@@ -73,9 +73,9 @@
                                 {
                                     <tr>
                                         <td>@item.Id</td>
-                                        @* <td>
-                                      <img src="@item.Picture" style="width: 70px; height: 70px" />
-                                    </td> *@
+                                        <td>
+                                             <img src="~/Img/@item.Picture" style="width: 70px; height: 70px" />
+                                        </td>
                                         <td>@item.Name</td>
                                         <td>@item.Alpha2Code</td>
                                         <td>@item.Alpha3Code</td>

@@ -16,7 +16,7 @@ namespace PersonnelManagement.Infrastructure.EFCore.Mapping
             builder.ToTable("PersonPictures");
             builder.HasKey(p => p.Id);
 
-            builder.Property(x => x.Picture).HasMaxLength(1000).IsRequired();
+            builder.Property(x => x.Picture).HasMaxLength(1000);
             builder.Property(x => x.Title).HasMaxLength(255);
             builder.Property(x => x.Text).HasMaxLength(500);
             builder.Property(x => x.Remark).HasMaxLength(500);

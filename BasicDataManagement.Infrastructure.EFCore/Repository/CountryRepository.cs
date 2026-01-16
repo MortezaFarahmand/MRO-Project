@@ -27,7 +27,7 @@ namespace BasicDataManagement.Infrastructure.EFCore.Repository
                 UNCode = x.UNCode,
                 TailCode = x.TailCode,
                 DialCode = x.DialCode,
-                PictureId =x.PictureId,
+                //Picture = x.Picture,
                 MetaDescription = x.MetaDescription,
                 Slug = x.Slug
 
@@ -45,8 +45,8 @@ namespace BasicDataManagement.Infrastructure.EFCore.Repository
                 Alpha2Code = x.Alpha2Code,
                 Alpha3Code = x.Alpha3Code,
                 UNCode = x.UNCode,
-                DialCode= x.DialCode,
-                PictureId=x.PictureId,
+                DialCode = x.DialCode,
+                Picture = x.Picture,
                 MetaDescription = x.MetaDescription,
                 Slug = x.Slug,
                 CreationDate = x.CreationDate.ToString()
@@ -65,7 +65,7 @@ namespace BasicDataManagement.Infrastructure.EFCore.Repository
                 UNCode = x.UNCode,
                 TailCode = x.TailCode,
                 DialCode = x.DialCode,
-                PictureId=x.PictureId,
+                Picture = x.Picture,
                 MetaDescription = x.MetaDescription,
                 Slug = x.Slug,
 

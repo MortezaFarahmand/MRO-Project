@@ -16,7 +16,7 @@ namespace BasicDataManagement.Infrastructure.EFCore.Mapping
             builder.Property(x => x.Alpha3Code).HasMaxLength(100);
             builder.Property(x => x.UNCode).HasMaxLength(100);
             builder.Property(x => x.DialCode).HasMaxLength(100);
-            builder.Property(x => x.PictureId);
+            builder.Property(x => x.Picture);
             builder.Property(x => x.TailCode).HasMaxLength(100);
             builder.Property(x => x.MetaDescription).HasMaxLength(1024);
             builder.Property(x => x.Slug).HasMaxLength(500);
