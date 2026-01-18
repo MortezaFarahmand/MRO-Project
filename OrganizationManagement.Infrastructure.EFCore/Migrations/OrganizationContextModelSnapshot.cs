@@ -310,6 +310,47 @@ namespace OrganizationManagement.Infrastructure.EFCore.Migrations
                     b.ToTable("OrganizationAviationCodes", (string)null);
                 });
 
+            modelBuilder.Entity("OrganizationManagement.Domain.OrganizationDepartmentAgg.OrganizationDepartment", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(100000)
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MetaDescription")
+                        .HasMaxLength(100000)
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<long>("OrganizationId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("ParentDepartmentId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Slug")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OrganizationId");
+
+                    b.ToTable("OrganizationDepartments", (string)null);
+                });
+
             modelBuilder.Entity("OrganizationManagement.Domain.OrganizationGroupAgg.OrganizationGroup", b =>
                 {
                     b.Property<long>("Id")
@@ -409,61 +450,6 @@ namespace OrganizationManagement.Infrastructure.EFCore.Migrations
                     b.ToTable("OrganizationPictures", (string)null);
                 });
 
-            modelBuilder.Entity("OrganizationManagement.Domain.SlideAgg.Slide", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
-
-                    b.Property<string>("BtnText")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<DateTime>("CreationDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Heading")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
-
-                    b.Property<bool>("IsRemoved")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Link")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Picture")
-                        .IsRequired()
-                        .HasMaxLength(1000)
-                        .HasColumnType("nvarchar(1000)");
-
-                    b.Property<string>("PictureAlt")
-                        .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
-
-                    b.Property<string>("PictureTitle")
-                        .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
-
-                    b.Property<string>("Text")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
-
-                    b.Property<string>("Title")
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Slides", (string)null);
-                });
-
             modelBuilder.Entity("OrganizationManagement.Domain.OrganizationAgg.Organization", b =>
                 {
                     b.HasOne("BasicDataManagement.Domain.EntitiAgg.Entiti", "Entiti")
@@ -481,6 +467,17 @@ namespace OrganizationManagement.Infrastructure.EFCore.Migrations
                     b.Navigation("Entiti");
 
                     b.Navigation("Group");
+                });
+
+            modelBuilder.Entity("OrganizationManagement.Domain.OrganizationDepartmentAgg.OrganizationDepartment", b =>
+                {
+                    b.HasOne("OrganizationManagement.Domain.OrganizationAgg.Organization", "Organization")
+                        .WithMany("OrganizationDepartments")
+                        .HasForeignKey("OrganizationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Organization");
                 });
 
             modelBuilder.Entity("OrganizationManagement.Domain.OrganizationPictureAgg.OrganizationPicture", b =>
@@ -505,6 +502,8 @@ namespace OrganizationManagement.Infrastructure.EFCore.Migrations
 
             modelBuilder.Entity("OrganizationManagement.Domain.OrganizationAgg.Organization", b =>
                 {
+                    b.Navigation("OrganizationDepartments");
+
                     b.Navigation("OrganizationPictures");
                 });
 

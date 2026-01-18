@@ -1,5 +1,6 @@
 ﻿using _0_Framework.Domain;
 using BasicDataManagement.Domain.EntitiAgg;
+using OrganizationManagement.Domain.OrganizationDepartmentAgg;
 using OrganizationManagement.Domain.OrganizationGroupAgg;
 using OrganizationManagement.Domain.OrganizationPictureAgg;
 //using OrganizationManagement.Domain.PersonAgg;
@@ -44,6 +45,7 @@ namespace OrganizationManagement.Domain.OrganizationAgg
         public long EntitiId { get; private set; }
         public Entiti Entiti {  get; private set; }
         //public List<Person> Persons { get; private set; } = new List<Person>();
+        public List<OrganizationDepartment> OrganizationDepartments { get; private set; }
 
 
         public Organization(string nameEn, string nameFa, string descriptionEn, string descriptionFa, string addressEn,

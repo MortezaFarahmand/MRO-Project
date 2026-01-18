@@ -5,13 +5,15 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using OrganizationManagement.Application;
 using OrganizationManagement.Application.Contracts.ApprovalAuthority;
+using OrganizationManagement.Application.Contracts.Country;
 using OrganizationManagement.Application.Contracts.Organization;
 using OrganizationManagement.Application.Contracts.OrganizationAviationCode;
-using OrganizationManagement.Application.Contracts.Country;
+using OrganizationManagement.Application.Contracts.OrganizationDepartment;
 using OrganizationManagement.Application.Contracts.OrganizationPicture;
 using OrganizationManagement.Domain.ApprovalAutorityAgg;
 using OrganizationManagement.Domain.OrganizationAgg;
 using OrganizationManagement.Domain.OrganizationAviationCodeAgg;
+using OrganizationManagement.Domain.OrganizationDepartmentAgg;
 using OrganizationManagement.Domain.OrganizationGroupAgg;
 using OrganizationManagement.Domain.OrganizationPictureAgg;
 using OrganizationManagement.Infrastructure.EFCore;
@@ -41,6 +43,8 @@ namespace OrganizationManagement.Configuration
             services.AddTransient<IApprovalAuthorityApplication, ApprovalAuthorityApplication>();
             services.AddTransient<IApprovalAuthorityRepository, ApprovalAuthorityRepository>();
 
+            services.AddTransient<IOrganizationDepartmentApplication, OrganizationDepartmentApplication>();
+            services.AddTransient<IOrganizationDepartmentRepository, OrganizationDepartmentRepository>();
 
             services.AddTransient<ISlideQuery, SlideQuery>();
             services.AddTransient<IOrganizatonGroupQuery, OrganizationGroupQuery>();
