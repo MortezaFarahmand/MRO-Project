@@ -128,6 +128,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cUGFnZXNcT3JnYW5pemF0aW9uXE9yZ2FuaXphdGlvbkF2aWF0aW9uQ29kZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/ATRIYA ASP.NET PROJECT/MRO_Project/Code/MRO_Project/ServiceHost/Areas/Administration/Pages/Organization/OrganizationDepartments/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cUGFnZXNcT3JnYW5pemF0aW9uXE9yZ2FuaXphdGlvbkRlcGFydG1lbnRzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ATRIYA ASP.NET PROJECT/MRO_Project/Code/MRO_Project/ServiceHost/Areas/Administration/Pages/Organization/OrganizationDepartments/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cUGFnZXNcT3JnYW5pemF0aW9uXE9yZ2FuaXphdGlvbkRlcGFydG1lbnRzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ATRIYA ASP.NET PROJECT/MRO_Project/Code/MRO_Project/ServiceHost/Areas/Administration/Pages/Organization/OrganizationDepartments/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cUGFnZXNcT3JnYW5pemF0aW9uXE9yZ2FuaXphdGlvbkRlcGFydG1lbnRzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/ATRIYA ASP.NET PROJECT/MRO_Project/Code/MRO_Project/ServiceHost/Areas/Administration/Pages/Organization/OrganizationGroups/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cUGFnZXNcT3JnYW5pemF0aW9uXE9yZ2FuaXphdGlvbkdyb3Vwc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

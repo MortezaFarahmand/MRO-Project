@@ -18,7 +18,7 @@ namespace OrganizationManagement.Domain.OrganizationDepartmentAgg
         public long ParentDepartmentId { get; private set; }
         public long OrganizationId { get; private set; }
         public Organization Organization { get; private set; }
-        public OrganizationDepartment OrganizationDepartments {  get; private set; }
+
         //public List<OrganizationPosition> OrganizationPositions { get; private set; }
 
         //public OrganizationDepartment()

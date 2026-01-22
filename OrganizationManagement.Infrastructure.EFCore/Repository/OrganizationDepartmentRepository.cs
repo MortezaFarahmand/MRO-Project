@@ -1,4 +1,6 @@
 ﻿using _0_Framework.Infrastructure;
+using BasicDataManagement.Domain.EntitiAgg;
+using BasicDataManagement.Infrastructure.EFCore;
 using Microsoft.EntityFrameworkCore;
 using OrganizationManagement.Application.Contracts.Country;
 using OrganizationManagement.Application.Contracts.OrganizationDepartment;
@@ -51,6 +53,7 @@ namespace OrganizationManagement.Infrastructure.EFCore.Repository
 
         public List<OrganizationDepartmentViewModel> Search(OrganizationDepartmentSearchModel searchModel)
         {
+            var OrganizationDeparts = _context.OrganizationDepartments.Select(x => new { x.Id, x.Name }).ToList();
             var query = _context.OrganizationDepartments
                 .Include(x => x.Organization)
                 .Select(x => new OrganizationDepartmentViewModel()
@@ -61,7 +64,7 @@ namespace OrganizationManagement.Infrastructure.EFCore.Repository
                 OrganizationId = x.OrganizationId,
                 ParentDepartmentId = x.ParentDepartmentId,
                 Organization = x.Organization.NameEn,
-                ParentDepartment = x.OrganizationDepartments.Name,
+                //ParentDepartment = x.OrganizationDepartments.Name,
                 CreationDate = x.CreationDate.ToString()
 
             });
@@ -72,10 +75,16 @@ namespace OrganizationManagement.Infrastructure.EFCore.Repository
             if (searchModel.OrganizationId != 0)
                 query = query.Where(x => x.OrganizationId == searchModel.OrganizationId);
 
-            if (searchModel.ParentDepartmentId != 0)
-                query = query.Where(x => x.ParentDepartmentId == searchModel.ParentDepartmentId);
+            //if (searchModel.ParentDepartmentId != 0)
+            //    query = query.Where(x => x.ParentDepartmentId == searchModel.ParentDepartmentId);
 
-            return query.OrderByDescending(x => x.Id).ToList();
+            /////////////////////
+            var organizDept = query.OrderByDescending(x => x.Id).ToList();
+            organizDept.ForEach
+                (Dept => Dept.ParentDepartment = OrganizationDeparts.FirstOrDefault(x => x.Id == Dept.ParentDepartmentId)?.Name);
+            ///////////////////////
+
+            return organizDept;
         }
     }
 }
