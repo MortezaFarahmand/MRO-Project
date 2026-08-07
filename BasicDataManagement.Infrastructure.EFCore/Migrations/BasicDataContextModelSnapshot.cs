@@ -278,6 +278,264 @@ namespace BasicDataManagement.Infrastructure.EFCore.Migrations
                     b.ToTable("Slides", (string)null);
                 });
 
+            modelBuilder.Entity("OrganizationManagement.Domain.OrganizationAgg.Organization", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<string>("AddressEn")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AddressFa")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CanonicalAddress")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CompanyRegisterNo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DescriptionEn")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DescriptionFa")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("EntitiId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Fax")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("FormedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Keywords")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LogoPicture")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LogoPictureAlt")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LogoPictureTitle")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MailBox")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MetaDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NameEn")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NameFa")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Note")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("OrganizationAviationCodeId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("OrganizationGroupId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("ParentId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Remark")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Slug")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SocialAddress1")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SocialAddress2")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Tel1")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Tel2")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("WebSite")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EntitiId");
+
+                    b.HasIndex("OrganizationGroupId");
+
+                    b.ToTable("Organization");
+                });
+
+            modelBuilder.Entity("OrganizationManagement.Domain.OrganizationDepartmentAgg.OrganizationDepartment", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MetaDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("OrganizationId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("ParentDepartmentId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Slug")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OrganizationId");
+
+                    b.ToTable("OrganizationDepartment");
+                });
+
+            modelBuilder.Entity("OrganizationManagement.Domain.OrganizationGroupAgg.OrganizationGroup", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Keywords")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MetaDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NameCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Picture")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PictureAlt")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PictureTitle")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Slug")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("OrganizationGroups");
+                });
+
+            modelBuilder.Entity("OrganizationManagement.Domain.OrganizationPictureAgg.OrganizationPicture", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsRemoved")
+                        .HasColumnType("bit");
+
+                    b.Property<long>("OrganizationId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Picture")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PictureAlt")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PictureTitle")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OrganizationId");
+
+                    b.ToTable("OrganizationPicture");
+                });
+
+            modelBuilder.Entity("OrganizationManagement.Domain.OrganizationPositionAgg.OrganizationPosition", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<bool>("Activate")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MetaDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("OrganizationDepartmentId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("ParentPositionId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Slug")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OrganizationDepartmentId");
+
+                    b.ToTable("OrganizationPosition");
+                });
+
             modelBuilder.Entity("BasicDataManagement.Domain.CityAgg.City", b =>
                 {
                     b.HasOne("BasicDataManagement.Domain.ProvinceAgg.Province", "Province")
@@ -311,6 +569,58 @@ namespace BasicDataManagement.Infrastructure.EFCore.Migrations
                     b.Navigation("Country");
                 });
 
+            modelBuilder.Entity("OrganizationManagement.Domain.OrganizationAgg.Organization", b =>
+                {
+                    b.HasOne("BasicDataManagement.Domain.EntitiAgg.Entiti", "Entiti")
+                        .WithMany()
+                        .HasForeignKey("EntitiId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("OrganizationManagement.Domain.OrganizationGroupAgg.OrganizationGroup", "Group")
+                        .WithMany("Organizations")
+                        .HasForeignKey("OrganizationGroupId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Entiti");
+
+                    b.Navigation("Group");
+                });
+
+            modelBuilder.Entity("OrganizationManagement.Domain.OrganizationDepartmentAgg.OrganizationDepartment", b =>
+                {
+                    b.HasOne("OrganizationManagement.Domain.OrganizationAgg.Organization", "Organization")
+                        .WithMany("OrganizationDepartments")
+                        .HasForeignKey("OrganizationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Organization");
+                });
+
+            modelBuilder.Entity("OrganizationManagement.Domain.OrganizationPictureAgg.OrganizationPicture", b =>
+                {
+                    b.HasOne("OrganizationManagement.Domain.OrganizationAgg.Organization", "Organization")
+                        .WithMany("OrganizationPictures")
+                        .HasForeignKey("OrganizationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Organization");
+                });
+
+            modelBuilder.Entity("OrganizationManagement.Domain.OrganizationPositionAgg.OrganizationPosition", b =>
+                {
+                    b.HasOne("OrganizationManagement.Domain.OrganizationDepartmentAgg.OrganizationDepartment", "OrganizationDepartment")
+                        .WithMany("OrganizationPositions")
+                        .HasForeignKey("OrganizationDepartmentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("OrganizationDepartment");
+                });
+
             modelBuilder.Entity("BasicDataManagement.Domain.CountryAgg.Country", b =>
                 {
                     b.Navigation("Provinces");
@@ -319,6 +629,23 @@ namespace BasicDataManagement.Infrastructure.EFCore.Migrations
             modelBuilder.Entity("BasicDataManagement.Domain.ProvinceAgg.Province", b =>
                 {
                     b.Navigation("Cities");
+                });
+
+            modelBuilder.Entity("OrganizationManagement.Domain.OrganizationAgg.Organization", b =>
+                {
+                    b.Navigation("OrganizationDepartments");
+
+                    b.Navigation("OrganizationPictures");
+                });
+
+            modelBuilder.Entity("OrganizationManagement.Domain.OrganizationDepartmentAgg.OrganizationDepartment", b =>
+                {
+                    b.Navigation("OrganizationPositions");
+                });
+
+            modelBuilder.Entity("OrganizationManagement.Domain.OrganizationGroupAgg.OrganizationGroup", b =>
+                {
+                    b.Navigation("Organizations");
                 });
 #pragma warning restore 612, 618
         }

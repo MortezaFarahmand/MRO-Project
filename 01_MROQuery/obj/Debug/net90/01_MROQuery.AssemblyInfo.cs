@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("01_MROQuery")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5e5a7bad204004c5b7a76572d94368d191cabb7e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bdf3ede209042896e06425b8020a754b16d54ec9")]
 [assembly: System.Reflection.AssemblyProductAttribute("01_MROQuery")]
 [assembly: System.Reflection.AssemblyTitleAttribute("01_MROQuery")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

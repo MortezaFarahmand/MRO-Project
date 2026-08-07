@@ -20,6 +20,10 @@ namespace OrganizationManagement.Infrastructure.EFCore.Mapping
             builder.HasOne(x => x.Organization)
                 .WithMany(x => x.OrganizationDepartments)
                 .HasForeignKey(x => x.OrganizationId);
+
+            builder.HasMany(x => x.OrganizationPositions)
+                .WithOne(x => x.OrganizationDepartment)
+                .HasForeignKey(x => x.OrganizationDepartmentId);
         }
     }
 }

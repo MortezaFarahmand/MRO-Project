@@ -1,11 +1,7 @@
 ﻿using _0_Framework.Domain;
 using OrganizationManagement.Domain.OrganizationAgg;
-using System;
+using OrganizationManagement.Domain.OrganizationPositionAgg;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static NuGet.Common.NuGetEventSource;
 
 namespace OrganizationManagement.Domain.OrganizationDepartmentAgg
 {
@@ -19,12 +15,12 @@ namespace OrganizationManagement.Domain.OrganizationDepartmentAgg
         public long OrganizationId { get; private set; }
         public Organization Organization { get; private set; }
 
-        //public List<OrganizationPosition> OrganizationPositions { get; private set; }
+        public List<OrganizationPosition> OrganizationPositions { get; private set; }
 
-        //public OrganizationDepartment()
-        //{
-        //    OrganizationPositions = new List<OrganizationPositions>();
-        //}
+        public OrganizationDepartment()
+        {
+            OrganizationPositions = new List<OrganizationPosition>();
+        }
 
         public OrganizationDepartment(string name, string description, string metaDescription, string slug, 
             long parentDepartmentId, long organizationId)

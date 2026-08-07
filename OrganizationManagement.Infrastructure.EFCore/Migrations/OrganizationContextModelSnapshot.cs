@@ -450,6 +450,50 @@ namespace OrganizationManagement.Infrastructure.EFCore.Migrations
                     b.ToTable("OrganizationPictures", (string)null);
                 });
 
+            modelBuilder.Entity("OrganizationManagement.Domain.OrganizationPositionAgg.OrganizationPosition", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<bool>("Activate")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(100000)
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MetaDescription")
+                        .HasMaxLength(100000)
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<long>("OrganizationDepartmentId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("ParentPositionId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Slug")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OrganizationDepartmentId");
+
+                    b.ToTable("OrganizationPositions", (string)null);
+                });
+
             modelBuilder.Entity("OrganizationManagement.Domain.OrganizationAgg.Organization", b =>
                 {
                     b.HasOne("BasicDataManagement.Domain.EntitiAgg.Entiti", "Entiti")
@@ -495,6 +539,17 @@ namespace OrganizationManagement.Infrastructure.EFCore.Migrations
                     b.Navigation("Organization");
                 });
 
+            modelBuilder.Entity("OrganizationManagement.Domain.OrganizationPositionAgg.OrganizationPosition", b =>
+                {
+                    b.HasOne("OrganizationManagement.Domain.OrganizationDepartmentAgg.OrganizationDepartment", "OrganizationDepartment")
+                        .WithMany("OrganizationPositions")
+                        .HasForeignKey("OrganizationDepartmentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("OrganizationDepartment");
+                });
+
             modelBuilder.Entity("OrganizationManagement.Domain.ApprovalAutorityAgg.ApprovalAuthority", b =>
                 {
                     b.Navigation("OrganizationPictures");
@@ -505,6 +560,11 @@ namespace OrganizationManagement.Infrastructure.EFCore.Migrations
                     b.Navigation("OrganizationDepartments");
 
                     b.Navigation("OrganizationPictures");
+                });
+
+            modelBuilder.Entity("OrganizationManagement.Domain.OrganizationDepartmentAgg.OrganizationDepartment", b =>
+                {
+                    b.Navigation("OrganizationPositions");
                 });
 
             modelBuilder.Entity("OrganizationManagement.Domain.OrganizationGroupAgg.OrganizationGroup", b =>

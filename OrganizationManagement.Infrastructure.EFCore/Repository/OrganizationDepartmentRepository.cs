@@ -1,16 +1,9 @@
 ﻿using _0_Framework.Infrastructure;
-using BasicDataManagement.Domain.EntitiAgg;
-using BasicDataManagement.Infrastructure.EFCore;
 using Microsoft.EntityFrameworkCore;
-using OrganizationManagement.Application.Contracts.Country;
 using OrganizationManagement.Application.Contracts.OrganizationDepartment;
 using OrganizationManagement.Domain.OrganizationDepartmentAgg;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OrganizationManagement.Infrastructure.EFCore.Repository
 {
@@ -51,6 +44,8 @@ namespace OrganizationManagement.Infrastructure.EFCore.Repository
             }).ToList();
         }
 
+        
+
         public List<OrganizationDepartmentViewModel> Search(OrganizationDepartmentSearchModel searchModel)
         {
             var OrganizationDeparts = _context.OrganizationDepartments.Select(x => new { x.Id, x.Name }).ToList();
@@ -85,6 +80,21 @@ namespace OrganizationManagement.Infrastructure.EFCore.Repository
             ///////////////////////
 
             return organizDept;
+        }
+
+        public List<OrganizationDepartmentViewModel> GetDepartmentsByOrganizationId(long id)
+        {
+            var OrganizationDeparts = _context.OrganizationDepartments
+                .Where(x => x.OrganizationId == id).Select(x => new OrganizationDepartmentViewModel()
+                { 
+                    Id = x.Id,
+                    Name = x.Name
+                }).ToList();
+
+            return OrganizationDeparts;
+
+            
+
         }
     }
 }

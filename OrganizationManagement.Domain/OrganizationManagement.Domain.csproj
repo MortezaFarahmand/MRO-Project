@@ -15,6 +15,7 @@
     <ProjectReference Include="..\0_Framework\0_Framework.csproj" />
     <ProjectReference Include="..\BasicDataManagement.Domain\BasicDataManagement.Domain.csproj" />
     <ProjectReference Include="..\OrganizationManagement.Application.Contracts\OrganizationManagement.Application.Contracts.csproj" />
+    <ProjectReference Include="..\PersonnelManagement.Domain\PersonnelManagement.Domain.csproj" />
   </ItemGroup>
 
 </Project>

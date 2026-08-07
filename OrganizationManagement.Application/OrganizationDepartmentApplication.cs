@@ -51,6 +51,11 @@ namespace OrganizationManagement.Application
             return operation.Succeeded();
         }
 
+        public List<OrganizationDepartmentViewModel> GetDepartmentsByOrganizationId(long id)
+        {
+            return _organizationDepartmentRepository.GetDepartmentsByOrganizationId(id);
+        }
+
         public EditOrganizationDepartment GetDetails(long id)
         {
             return _organizationDepartmentRepository.GetDetails(id);

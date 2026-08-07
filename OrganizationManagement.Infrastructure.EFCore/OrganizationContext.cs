@@ -5,6 +5,7 @@ using OrganizationManagement.Domain.OrganizationAviationCodeAgg;
 using OrganizationManagement.Domain.OrganizationDepartmentAgg;
 using OrganizationManagement.Domain.OrganizationGroupAgg;
 using OrganizationManagement.Domain.OrganizationPictureAgg;
+using OrganizationManagement.Domain.OrganizationPositionAgg;
 using OrganizationManagement.Infrastructure.EFCore.Mapping;
 
 namespace OrganizationManagement.Infrastructure.EFCore
@@ -17,6 +18,7 @@ namespace OrganizationManagement.Infrastructure.EFCore
         public DbSet<OrganizationAviationCode> OrganizationAviationCodes { get; set; }
         public DbSet<ApprovalAuthority> ApprovalAuthorities { get; set; }
         public DbSet<OrganizationDepartment> OrganizationDepartments { get; set; }
+        public DbSet<OrganizationPosition> OrganizationPositions { get; set; }
 
         public OrganizationContext(DbContextOptions<OrganizationContext> options) : base(options)
         {

@@ -10,5 +10,6 @@ namespace OrganizationManagement.Application.Contracts.OrganizationDepartment
         EditOrganizationDepartment GetDetails(long id);
         List<OrganizationDepartmentViewModel> GetOrganizationDepartments();
         List<OrganizationDepartmentViewModel> Search(OrganizationDepartmentSearchModel searchModel);
+        List<OrganizationDepartmentViewModel> GetDepartmentsByOrganizationId(long id);
     }
 }

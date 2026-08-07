@@ -2581,7 +2581,8 @@
         "dependencies": {
           "BasicDataManagement.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "9.0.8",
-          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.8"
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.8",
+          "OrganizationManagement.Domain": "1.0.0"
         },
         "runtime": {
           "BasicDataManagement.Infrastructure.EFCore.dll": {
@@ -2609,10 +2610,37 @@
         "dependencies": {
           "0_Framework": "1.0.0",
           "BasicDataManagement.Domain": "1.0.0",
-          "OrganizationManagement.Application.Contracts": "1.0.0"
+          "OrganizationManagement.Application.Contracts": "1.0.0",
+          "PersonnelManagement.Domain": "1.0.0"
         },
         "runtime": {
           "OrganizationManagement.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "PersonnelManagement.Application.Contracts/1.0.0": {
+        "dependencies": {
+          "0_Framework": "1.0.0",
+          "BasicDataManagement.Domain": "1.0.0",
+          "Microsoft.AspNetCore.Http": "2.3.0",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "9.0.0"
+        },
+        "runtime": {
+          "PersonnelManagement.Application.Contracts.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "PersonnelManagement.Domain/1.0.0": {
+        "dependencies": {
+          "0_Framework": "1.0.0",
+          "PersonnelManagement.Application.Contracts": "1.0.0"
+        },
+        "runtime": {
+          "PersonnelManagement.Domain.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -4024,6 +4052,16 @@
       "sha512": ""
     },
     "OrganizationManagement.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PersonnelManagement.Application.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PersonnelManagement.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

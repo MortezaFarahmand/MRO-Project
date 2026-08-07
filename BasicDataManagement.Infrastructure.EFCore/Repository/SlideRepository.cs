@@ -1,5 +1,4 @@
-﻿using _0_Framework.Application;
-using _0_Framework.Infrastructure;
+﻿using _0_Framework.Infrastructure;
 using BasicDataManagement.Application.Contracts.Slide;
 using BasicDataManagement.Domain.SlideAgg;
 using System;

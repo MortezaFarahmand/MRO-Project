@@ -15,6 +15,7 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\BasicDataManagement.Domain\BasicDataManagement.Domain.csproj" />
+		<ProjectReference Include="..\OrganizationManagement.Domain\OrganizationManagement.Domain.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

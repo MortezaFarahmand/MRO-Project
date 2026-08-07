@@ -26,3 +26,7 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PersonnelManagement.Infra
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PersonnelManagement.Infrastructure.EFCore\obj\Debug\net90\PersonnelManagement.Infrastructure.EFCore.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PersonnelManagement.Infrastructure.EFCore\obj\Debug\net90\PersonnelManagement.Infrastructure.EFCore.genruntimeconfig.cache
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PersonnelManagement.Infrastructure.EFCore\obj\Debug\net90\ref\PersonnelManagement.Infrastructure.EFCore.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PersonnelManagement.Infrastructure.EFCore\bin\Debug\net90\OrganizationManagement.Application.Contracts.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PersonnelManagement.Infrastructure.EFCore\bin\Debug\net90\OrganizationManagement.Domain.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PersonnelManagement.Infrastructure.EFCore\bin\Debug\net90\OrganizationManagement.Application.Contracts.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PersonnelManagement.Infrastructure.EFCore\bin\Debug\net90\OrganizationManagement.Domain.pdb

@@ -2510,7 +2510,8 @@
         "dependencies": {
           "BasicDataManagement.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "9.0.8",
-          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.8"
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.8",
+          "OrganizationManagement.Domain": "1.0.0"
         },
         "runtime": {
           "BasicDataManagement.Infrastructure.EFCore.dll": {
@@ -2538,7 +2539,8 @@
         "dependencies": {
           "0_Framework": "1.0.0",
           "BasicDataManagement.Domain": "1.0.0",
-          "OrganizationManagement.Application.Contracts": "1.0.0"
+          "OrganizationManagement.Application.Contracts": "1.0.0",
+          "PersonnelManagement.Domain": "1.0.0"
         },
         "runtime": {
           "OrganizationManagement.Domain.dll": {
