@@ -8,10 +8,12 @@ namespace OrganizationManagement.Application
     public class OrganizationGroupApplication : IOrganizationGroupApplication
     {
         private readonly IOrganizationGroupRepository _organizationGroupRepository;
+        private readonly IFileUploader _fileUploader;
 
-        public OrganizationGroupApplication(IOrganizationGroupRepository organizationGroupRepository)
+        public OrganizationGroupApplication(IOrganizationGroupRepository organizationGroupRepository, IFileUploader fileUploader)
         {
             _organizationGroupRepository = organizationGroupRepository;
+            _fileUploader = fileUploader;
         }
 
 
@@ -22,8 +24,13 @@ namespace OrganizationManagement.Application
             if (_organizationGroupRepository.Exists(x => x.Name == command.Name))
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
 
-            var organizationGroup = new OrganizationGroup(command.Name, command.Description, command.Picture, command.NameCode,
-                command.PictureAlt, command.PictureTitle, command.Keywords, command.MetaDescription, command.Slug);
+            var slugTitle = command.PictureTitle.Slugify();
+            var picturePath = "OrganizationGroupsPictures";
+            var pictureName = _fileUploader.Upload(command.Picture, picturePath);
+            var pictureAltName = _fileUploader.Upload(command.PictureAlt, picturePath);
+
+            var organizationGroup = new OrganizationGroup(command.Name, command.Description, pictureName, command.NameCode,
+                pictureAltName, command.PictureTitle, command.Keywords, command.MetaDescription, command.Slug);
 
             _organizationGroupRepository.Create(organizationGroup);
             _organizationGroupRepository.SaveChanges();
@@ -40,8 +47,13 @@ namespace OrganizationManagement.Application
             if (_organizationGroupRepository.Exists(x => x.Name == command.Name && x.Id != command.Id))
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
 
-            organizationGroup.Edit(command.Name, command.Description, command.Picture, command.NameCode,
-                command.PictureAlt, command.PictureTitle, command.Keywords, command.MetaDescription, command.Slug);
+            var slugTitle = command.PictureTitle.Slugify();
+            var picturePath = "OrganizationGroupsPictures";
+            var pictureName = _fileUploader.Upload(command.Picture, picturePath);
+            var pictureAltName = _fileUploader.Upload(command.PictureAlt, picturePath);
+
+            organizationGroup.Edit(command.Name, command.Description, pictureName, command.NameCode,
+                pictureAltName, command.PictureTitle, command.Keywords, command.MetaDescription, command.Slug);
 
             _organizationGroupRepository.SaveChanges();
             return operation.Succeeded();

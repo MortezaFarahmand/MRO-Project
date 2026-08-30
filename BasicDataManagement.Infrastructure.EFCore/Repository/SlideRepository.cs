@@ -1,7 +1,6 @@
 ﻿using _0_Framework.Infrastructure;
 using BasicDataManagement.Application.Contracts.Slide;
 using BasicDataManagement.Domain.SlideAgg;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 

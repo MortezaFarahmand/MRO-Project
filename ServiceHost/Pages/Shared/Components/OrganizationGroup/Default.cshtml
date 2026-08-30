@@ -1,5 +1,7 @@
-﻿@using _01_MROQuery.Contracts.OrganizationGroup;
-@model List<OrganizationGroupQueryModel>
+﻿@* @using _01_MROQuery.Contracts.OrganizationGroup;
+@model List<OrganizationGroupQueryModel> *@
+
+@model List<_01_MROQuery.Contracts.OrganizationGroup.OrganizationGroupQueryModel>
 
 <section class="p-b100 particles-js" data-color="#fe4c1c,#00c3ff,#0160e7" data-id="i4-1">
     <div class="bg-overlay"></div>
@@ -30,7 +32,7 @@
                                         </span>
                                     </div>
                                     <a asp-page="/OrganizationGroup" asp-route-id="@item.Slug">
-                                        <img src="@item.Picture" alt="@item.PictureAlt" title="@item.PictureTitle" />
+                                        <img src="~/Img/@item.Picture" alt="~/Img/@item.PictureAlt" title="@item.PictureTitle" />
                                     </a>
                                 </div>
                                 <div class="inner-post">

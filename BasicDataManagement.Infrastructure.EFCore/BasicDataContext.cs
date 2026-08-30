@@ -6,7 +6,6 @@ using BasicDataManagement.Domain.ProvinceAgg;
 using BasicDataManagement.Domain.SlideAgg;
 using BasicDataManagement.Infrastructure.EFCore.Mapping;
 using Microsoft.EntityFrameworkCore;
-using OrganizationManagement.Domain.OrganizationGroupAgg;
 
 namespace BasicDataManagement.Infrastructure.EFCore
 {
@@ -18,7 +17,6 @@ namespace BasicDataManagement.Infrastructure.EFCore
         public DbSet<City> Citys { get; set; }
         public DbSet<PictureCategory> PictureCategorys { get; set; }
         public DbSet<Slide> Slides { get; set; }
-        public DbSet<OrganizationGroup> OrganizationGroups { get; set; }
 
 
 

@@ -2851,6 +2851,11 @@ wwwroot\Img\CountryFlags\svg\wales--3506.svg
 wwwroot\Img\CountryFlags\svg\yemen--3724.svg
 wwwroot\Img\CountryFlags\svg\zambia--3524.svg
 wwwroot\Img\CountryFlags\svg\zimbabwe--3503.svg
+wwwroot\Img\OrganizationGroupsPictures\2026-08-30-10-25-18-istockphoto-1153367961-612x612.jpg
+wwwroot\Img\OrganizationGroupsPictures\2026-08-30-10-36-28-istockphoto-678596546-612x612.jpg
+wwwroot\Img\OrganizationGroupsPictures\2026-08-30-10-36-28-istockphoto-900710628-612x612.jpg
+wwwroot\Img\OrganizationGroupsPictures\2026-08-30-10-41-30-1000_F_124388436_JsnZcuMnsmE2tvr6MCn4tVKynWk35aDE.jpg
+wwwroot\Img\OrganizationGroupsPictures\2026-08-30-10-41-30-istockphoto-1268443058-1024x1024.jpg
 wwwroot\Img\PersonPictures\2\1\لوگو مسجد.png
 wwwroot\Img\PersonPictures\2\2\2026-01-03-15-51-13-System.Func`1[System.String]
 wwwroot\Img\PersonPictures\2\2\2026-01-03-15-54-10-System.Func`1[System.String]
@@ -2878,12 +2883,10 @@ wwwroot\Img\PersonPictures\logo-1684424157074.png
 wwwroot\Img\PersonPictures\MortezaFarahmand\Personeli\2026-01-16-07-14-30-لوگو مسجد.png
 wwwroot\Img\PersonPictures\MortezaFarahmand\Personeli\2026-01-16-07-15-49-aps-logo.png
 wwwroot\Img\ProfilePictureOfPersons\FarahmandAx.jpg
-wwwroot\Img\SliderPictures\1F-Aerospace_Engineering.png
-wwwroot\Img\SliderPictures\20sp-currents-planes-illo-superJumbo.gif
-wwwroot\Img\SliderPictures\AdobeStock_105252393.jpeg
-wwwroot\Img\SliderPictures\AdobeStock_330643987.jpeg
-wwwroot\Img\SliderPictures\AdobeStock_340782183.jpeg
-wwwroot\Img\SliderPictures\AdobeStock_383927152.jpeg
+wwwroot\Img\SliderPictures\2026-08-30-08-49-41-AdobeStock_330643987.jpeg
+wwwroot\Img\SliderPictures\2026-08-30-08-49-41-AdobeStock_340782183.jpeg
+wwwroot\Img\SliderPictures\2026-08-30-08-50-32-AdobeStock_105252393.jpeg
+wwwroot\Img\SliderPictures\2026-08-30-08-51-47-AdobeStock_383927152.jpeg
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
 wwwroot\lib\bootstrap\dist\css\bootstrap.min.css

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BasicDataManagement.Infrastructure.EFCore.Migrations
 {
     [DbContext(typeof(BasicDataContext))]
-    [Migration("20260105034020_UpdateCountryPictureUpload")]
-    partial class UpdateCountryPictureUpload
+    [Migration("20260830051320_sliderUpdate002")]
+    partial class sliderUpdate002
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
