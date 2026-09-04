@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.8" />
+  </ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\0_Framework\0_Framework.csproj" />
+	  <ProjectReference Include="..\AccountManagement.Application.Contracts\AccountManagement.Application.Contracts.csproj" />
+	  <ProjectReference Include="..\AccountManagement.Application\AccountManagement.Application.csproj" />
+	  <ProjectReference Include="..\AccountManagement.Domain\AccountManagement.Domain.csproj" />
+	  <ProjectReference Include="..\AccountManagement.Infrastructure.EFCore\AccountManagement.Infrastructure.EFCore.csproj" />
+	</ItemGroup>
+	
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>

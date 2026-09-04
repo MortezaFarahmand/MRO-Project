@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BasicDataManagement.Configuration")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b3f767b5cdd8654836663308b57a1a92578c96d0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dcf5423d3379a8d46e4b03a7c428342d9a6402cb")]
 [assembly: System.Reflection.AssemblyProductAttribute("BasicDataManagement.Configuration")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BasicDataManagement.Configuration")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

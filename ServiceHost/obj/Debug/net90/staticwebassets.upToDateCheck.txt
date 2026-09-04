@@ -2882,6 +2882,8 @@ wwwroot\Img\PersonPictures\KeivanAbbasi\Personeli\2026-01-16-07-46-47-aps-low-re
 wwwroot\Img\PersonPictures\logo-1684424157074.png
 wwwroot\Img\PersonPictures\MortezaFarahmand\Personeli\2026-01-16-07-14-30-لوگو مسجد.png
 wwwroot\Img\PersonPictures\MortezaFarahmand\Personeli\2026-01-16-07-15-49-aps-logo.png
+wwwroot\Img\profilePhotos\2026-09-04-09-21-41-AdobeStock_322356805.jpeg
+wwwroot\Img\profilePhotos\2026-09-04-10-02-03-20d9c9ccfee8b5892a145199e458fc79.gif
 wwwroot\Img\ProfilePictureOfPersons\FarahmandAx.jpg
 wwwroot\Img\SliderPictures\2026-08-30-08-49-41-AdobeStock_330643987.jpeg
 wwwroot\Img\SliderPictures\2026-08-30-08-49-41-AdobeStock_340782183.jpeg

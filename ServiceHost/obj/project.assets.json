@@ -3548,6 +3548,81 @@
           "bin/placeholder/0_Framework.dll": {}
         }
       },
+      "AccountManagement.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "0_Framework": "1.0.0",
+          "AccountManagement.Application.Contracts": "1.0.0",
+          "AccountManagement.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AccountManagement.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AccountManagement.Application.dll": {}
+        }
+      },
+      "AccountManagement.Application.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "0_Framework": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AccountManagement.Application.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AccountManagement.Application.Contracts.dll": {}
+        }
+      },
+      "AccountManagement.Configuration/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "0_Framework": "1.0.0",
+          "AccountManagement.Application": "1.0.0",
+          "AccountManagement.Application.Contracts": "1.0.0",
+          "AccountManagement.Domain": "1.0.0",
+          "AccountManagement.Infrastructure.EFCore": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "bin/placeholder/AccountManagement.Configuration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AccountManagement.Configuration.dll": {}
+        }
+      },
+      "AccountManagement.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "0_Framework": "1.0.0",
+          "AccountManagement.Application.Contracts": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AccountManagement.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AccountManagement.Domain.dll": {}
+        }
+      },
+      "AccountManagement.Infrastructure.EFCore/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "AccountManagement.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "9.0.8",
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.8"
+        },
+        "compile": {
+          "bin/placeholder/AccountManagement.Infrastructure.EFCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AccountManagement.Infrastructure.EFCore.dll": {}
+        }
+      },
       "BasicDataManagement.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -9361,6 +9436,31 @@
       "path": "../0_Framework/0_Framework.csproj",
       "msbuildProject": "../0_Framework/0_Framework.csproj"
     },
+    "AccountManagement.Application/1.0.0": {
+      "type": "project",
+      "path": "../AccountManagement.Application/AccountManagement.Application.csproj",
+      "msbuildProject": "../AccountManagement.Application/AccountManagement.Application.csproj"
+    },
+    "AccountManagement.Application.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../AccountManagement.Application.Contracts/AccountManagement.Application.Contracts.csproj",
+      "msbuildProject": "../AccountManagement.Application.Contracts/AccountManagement.Application.Contracts.csproj"
+    },
+    "AccountManagement.Configuration/1.0.0": {
+      "type": "project",
+      "path": "../AccountManagement.Configuration/AccountManagement.Configuration.csproj",
+      "msbuildProject": "../AccountManagement.Configuration/AccountManagement.Configuration.csproj"
+    },
+    "AccountManagement.Domain/1.0.0": {
+      "type": "project",
+      "path": "../AccountManagement.Domain/AccountManagement.Domain.csproj",
+      "msbuildProject": "../AccountManagement.Domain/AccountManagement.Domain.csproj"
+    },
+    "AccountManagement.Infrastructure.EFCore/1.0.0": {
+      "type": "project",
+      "path": "../AccountManagement.Infrastructure.EFCore/AccountManagement.Infrastructure.EFCore.csproj",
+      "msbuildProject": "../AccountManagement.Infrastructure.EFCore/AccountManagement.Infrastructure.EFCore.csproj"
+    },
     "BasicDataManagement.Application/1.0.0": {
       "type": "project",
       "path": "../BasicDataManagement.Application/BasicDataManagement.Application.csproj",
@@ -9439,6 +9539,7 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "AccountManagement.Configuration >= 1.0.0",
       "BasicDataManagement.Configuration >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.8",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 9.0.0",
@@ -9478,6 +9579,9 @@
         "net9.0": {
           "targetAlias": "net90",
           "projectReferences": {
+            "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\AccountManagement.Configuration\\AccountManagement.Configuration.csproj": {
+              "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\AccountManagement.Configuration\\AccountManagement.Configuration.csproj"
+            },
             "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Configuration\\BasicDataManagement.Configuration.csproj": {
               "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Configuration\\BasicDataManagement.Configuration.csproj"
             },
@@ -9545,7 +9649,7 @@
       "code": "NU1900",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json."
+      "message": "Error occurred while getting package vulnerability data: The HTTP request to 'GET https://api.nuget.org/v3-vulnerabilities/2026.09.02.23.52.57/vulnerability.base.json' has timed out after 100000ms."
     }
   ]
 }

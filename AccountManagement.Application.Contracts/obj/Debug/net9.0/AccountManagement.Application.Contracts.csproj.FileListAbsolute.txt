@@ -1,0 +1,16 @@
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Application.Contracts\bin\Debug\net9.0\AccountManagement.Application.Contracts.deps.json
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Application.Contracts\bin\Debug\net9.0\AccountManagement.Application.Contracts.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Application.Contracts\bin\Debug\net9.0\AccountManagement.Application.Contracts.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Application.Contracts\bin\Debug\net9.0\0_Framework.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Application.Contracts\bin\Debug\net9.0\0_Framework.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Application.Contracts\obj\Debug\net9.0\AccountManagement.Application.Contracts.csproj.AssemblyReference.cache
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Application.Contracts\obj\Debug\net9.0\AccountManagement.Application.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Application.Contracts\obj\Debug\net9.0\AccountManagement.Application.Contracts.AssemblyInfoInputs.cache
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Application.Contracts\obj\Debug\net9.0\AccountManagement.Application.Contracts.AssemblyInfo.cs
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Application.Contracts\obj\Debug\net9.0\AccountManagement.Application.Contracts.csproj.CoreCompileInputs.cache
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Application.Contracts\obj\Debug\net9.0\AccountManagement.Application.Contracts.sourcelink.json
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Application.Contracts\obj\Debug\net9.0\AccountM.C7397A91.Up2Date
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Application.Contracts\obj\Debug\net9.0\AccountManagement.Application.Contracts.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Application.Contracts\obj\Debug\net9.0\refint\AccountManagement.Application.Contracts.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Application.Contracts\obj\Debug\net9.0\AccountManagement.Application.Contracts.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Application.Contracts\obj\Debug\net9.0\ref\AccountManagement.Application.Contracts.dll

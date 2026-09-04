@@ -1,0 +1,303 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\AccountManagement.Application\\AccountManagement.Application.csproj": {}
+  },
+  "projects": {
+    "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\0_Framework\\0_Framework.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\0_Framework\\0_Framework.csproj",
+        "projectName": "0_Framework",
+        "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\0_Framework\\0_Framework.csproj",
+        "packagesPath": "C:\\Users\\farah\\.nuget\\packages\\",
+        "outputPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\0_Framework\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\farah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net90"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net90",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net90",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Abstractions": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.8, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\AccountManagement.Application.Contracts\\AccountManagement.Application.Contracts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\AccountManagement.Application.Contracts\\AccountManagement.Application.Contracts.csproj",
+        "projectName": "AccountManagement.Application.Contracts",
+        "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\AccountManagement.Application.Contracts\\AccountManagement.Application.Contracts.csproj",
+        "packagesPath": "C:\\Users\\farah\\.nuget\\packages\\",
+        "outputPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\AccountManagement.Application.Contracts\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\farah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\0_Framework\\0_Framework.csproj": {
+                "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\0_Framework\\0_Framework.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\AccountManagement.Application\\AccountManagement.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\AccountManagement.Application\\AccountManagement.Application.csproj",
+        "projectName": "AccountManagement.Application",
+        "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\AccountManagement.Application\\AccountManagement.Application.csproj",
+        "packagesPath": "C:\\Users\\farah\\.nuget\\packages\\",
+        "outputPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\AccountManagement.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\farah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\0_Framework\\0_Framework.csproj": {
+                "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\0_Framework\\0_Framework.csproj"
+              },
+              "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\AccountManagement.Application.Contracts\\AccountManagement.Application.Contracts.csproj": {
+                "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\AccountManagement.Application.Contracts\\AccountManagement.Application.Contracts.csproj"
+              },
+              "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\AccountManagement.Domain\\AccountManagement.Domain.csproj": {
+                "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\AccountManagement.Domain\\AccountManagement.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\AccountManagement.Domain\\AccountManagement.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\AccountManagement.Domain\\AccountManagement.Domain.csproj",
+        "projectName": "AccountManagement.Domain",
+        "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\AccountManagement.Domain\\AccountManagement.Domain.csproj",
+        "packagesPath": "C:\\Users\\farah\\.nuget\\packages\\",
+        "outputPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\AccountManagement.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\farah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\0_Framework\\0_Framework.csproj": {
+                "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\0_Framework\\0_Framework.csproj"
+              },
+              "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\AccountManagement.Application.Contracts\\AccountManagement.Application.Contracts.csproj": {
+                "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\AccountManagement.Application.Contracts\\AccountManagement.Application.Contracts.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

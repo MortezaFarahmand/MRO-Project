@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "SZegVfDBEdA=",
+  "dgSpecHash": "kAu8P+P2xeY=",
   "success": true,
   "projectFilePath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\ServiceHost\\ServiceHost.csproj",
   "expectedPackageFiles": [
@@ -204,7 +204,7 @@
     {
       "code": "NU1900",
       "level": "Warning",
-      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json.",
+      "message": "Error occurred while getting package vulnerability data: The HTTP request to 'GET https://api.nuget.org/v3-vulnerabilities/2026.09.02.23.52.57/vulnerability.base.json' has timed out after 100000ms.",
       "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\ServiceHost\\ServiceHost.csproj",
       "warningLevel": 1,
       "filePath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\ServiceHost\\ServiceHost.csproj",

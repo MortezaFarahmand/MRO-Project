@@ -7,6 +7,7 @@ using OrganizationManagement.Configuration;
 using PersonManagement.Configuration;
 using BasicDataManagement.Configuration;
 using _0_Framework.Application;
+using AccountManagement.Configuration;
 
 namespace ServiceHost
 {
@@ -27,9 +28,11 @@ namespace ServiceHost
             OrganizationManagementBootstrapper.Configure(services, connectionString);
             PersonnelManagementBootstrapper.Configure(services, connectionString);
             BasicDataManagementBootstrapper.Configure(services, connectionString);
+            AccountManagementBootstrapper.Configure(services, connectionString);
 
             services.AddTransient<IFileUploader, FileUploader>();
-
+            services.AddSingleton<IPasswordHasher, PasswordHasher>();
+            services.AddTransient<IFileUploader, FileUploader>();
             services.AddRazorPages();
             //services.AddWordPress(options => { });
 

@@ -287,7 +287,6 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\ServiceHost.AssemblyInfoInputs.cache
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\ServiceHost.AssemblyInfo.cs
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\ServiceHost.csproj.CoreCompileInputs.cache
-D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\ServiceHost.MvcApplicationPartsAssemblyInfo.cs
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\ServiceHost.MvcApplicationPartsAssemblyInfo.cache
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\ServiceHost.RazorAssemblyInfo.cache
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\ServiceHost.RazorAssemblyInfo.cs
@@ -2568,3 +2567,14 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\compressed\j0wbtru9va-hlxhs76g0k.gz
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\compressed\43mjc5w0ti-ga9ppsbe13.gz
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\compressed\hjl6r8nic4-kc230cdjuc.gz
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net90\AccountManagement.Application.Contracts.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net90\AccountManagement.Application.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net90\AccountManagement.Configuration.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net90\AccountManagement.Domain.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net90\AccountManagement.Infrastructure.EFCore.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net90\AccountManagement.Configuration.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net90\AccountManagement.Application.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net90\AccountManagement.Application.Contracts.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net90\AccountManagement.Domain.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net90\AccountManagement.Infrastructure.EFCore.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\ServiceHost.MvcApplicationPartsAssemblyInfo.cs
