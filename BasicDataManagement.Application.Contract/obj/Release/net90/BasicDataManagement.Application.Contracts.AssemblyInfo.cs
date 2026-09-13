@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BasicDataManagement.Application.Contracts")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b3f767b5cdd8654836663308b57a1a92578c96d0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b5ed99be35cb87cd36f020c3cbd5a8885b3845f")]
 [assembly: System.Reflection.AssemblyProductAttribute("BasicDataManagement.Application.Contracts")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BasicDataManagement.Application.Contracts")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

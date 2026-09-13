@@ -28,8 +28,33 @@
 /* Document
 	 ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css?family=Red+Hat+Display:400,400i,500,500i,700,700i,900,900i');
-@import url('https://fonts.googleapis.com/css?family=Red+Hat+Text:400,400i,500,500i,700,700i');
+/*@import url('https://fonts.googleapis.com/css?family=Red+Hat+Display:400,400i,500,500i,700,700i,900,900i');
+*//*@import url('https://fonts.googleapis.com/css?family=Red+Hat+Text:400,400i,500,500i,700,700i');*/
+
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('../../fonts/Nunito.eot'), url('../../fonts/Nunito.eot') format('embedded-opentype'), url('../../fonts/Nunito.woff') format('woff'), url('../../fonts/Nunito.ttf') format('truetype'), url('../../fonts/Nunito.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../fonts/Roboto.eot'), url('../../fonts/Roboto.eot') format('embedded-opentype'), url('../../fonts/Roboto.woff') format('woff'), url('../../fonts/Roboto.ttf') format('truetype'), url('../../fonts/Roboto.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IranianSans';
+    src: url('../../fonts/IranianSans.eot'), url('../../fonts/IranianSans.eot') format('embedded-opentype'), url('../../fonts/IranianSans.woff') format('woff'), url('../../fonts/IranianSans.ttf') format('truetype'), url('../../fonts/IranianSans.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
@@ -361,7 +386,7 @@ select,
 optgroup,
 textarea {
   color: #606060;
-  font-family: "Red Hat Text", sans-serif;
+  font-family: 'IranianSans', sans-serif;
   font-size: 16px;
   line-height: 1.875;
   font-weight: 400;
@@ -375,7 +400,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
   margin: 0 0 20px;
   color: #1a1b1e;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 h1 {
@@ -465,7 +490,7 @@ blockquote {
   font-size: 24px;
   line-height: 42px;
   margin: 30px 0;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   padding: 0 30px;
   position: relative;
@@ -580,11 +605,11 @@ big {
 }
 
 .font-main {
-  font-family: "Red Hat Text", sans-serif;
+    font-family: 'IranianSans', sans-serif;
 }
 
 .font-second {
-  font-family: "Red Hat Display", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .section-padd {
@@ -2126,7 +2151,7 @@ td {
   box-sizing: border-box;
   color: #fff;
   position: relative;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: 'Roboto', sans-serif;
   overflow: hidden;
   border-radius: 25px;
   -webkit-border-radius: 25px;
@@ -2294,7 +2319,7 @@ td {
 }
 
 .btn-readmore a {
-  font-family: "Red Hat Display", sans-serif;
+  font-family: 'Roboto', sans-serif;
   transition: all 0.2s ease-out;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
@@ -2470,7 +2495,7 @@ a:hover, a:active {
   border-bottom: 1px solid #e5e5e5;
   color: #a5b7d2;
   font-size: 14px;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
 }
 .header-topbar a {
@@ -2504,7 +2529,7 @@ a:hover, a:active {
   padding-left: 0px;
 }
 .topbar_menu ul li a {
-  font-family: "Red Hat Display", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   line-height: 11.9px;
   font-weight: 500;
@@ -2566,7 +2591,7 @@ a:hover, a:active {
   border: 0px solid #F0F3FB;
   border-radius: 0px;
   padding: 0px 20px 0px 10px;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 500;
   color: #a5b7d2;
@@ -2824,14 +2849,14 @@ a:hover, a:active {
   height: 100%;
 }
 
-.main-navigation ul {
-  font-family: "Red Hat Display", sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  list-style: none;
-  margin: 0px 0px;
-  padding: 0px 0px;
-}
+    .main-navigation ul {
+        font-family: 'IranianSans', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        list-style: none;
+        margin: 0px 0px;
+        padding: 0px 0px;
+    }
 
 .main-navigation > ul > li {
   margin: 0px 20px;
@@ -2952,25 +2977,25 @@ a:hover, a:active {
   padding: 0px 40px;
 }
 
-.main-navigation ul li li a {
-  font-family: "Red Hat Text", sans-serif;
-  font-size: 16px;
-  line-height: 30px;
-  font-weight: 500;
-  color: #1a1b1e;
-  text-align: left;
-  display: block;
-  padding: 5px 0px 5px 0px;
-  position: relative;
-  text-decoration: none;
-  outline: none;
-  text-transform: none;
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
-  -ms-transition: all 0.2s linear;
-  transition: all 0.2s linear;
-}
+    .main-navigation ul li li a {
+        font-family: 'IranianSans', sans-serif;
+        font-size: 16px;
+        line-height: 30px;
+        font-weight: 500;
+        color: #1a1b1e;
+        text-align: left;
+        display: block;
+        padding: 5px 0px 5px 0px;
+        position: relative;
+        text-decoration: none;
+        outline: none;
+        text-transform: none;
+        -webkit-transition: all 0.2s linear;
+        -moz-transition: all 0.2s linear;
+        -o-transition: all 0.2s linear;
+        -ms-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+    }
 
 .main-navigation ul li li a:before {
   position: absolute;
@@ -3291,9 +3316,9 @@ a:hover, a:active {
   padding: 15px 0px 15px 0px;
 }
 
-.header-fullwidth .octf-area-wrap {
-  padding-left: 100px;
-  padding-right: 100px;
+.site-header .octf-area-wrap {
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 /* WooCommerce Header Cart */
@@ -3314,7 +3339,7 @@ a:hover, a:active {
   border-radius: 50%;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 12px;
   font-weight: bold;
 }
@@ -3448,7 +3473,7 @@ a:hover, a:active {
 
   .header_mobile {
     display: block;
-    font-family: "Red Hat Display", sans-serif;
+    font-family: 'Roboto', sans-serif;
     width: 100%;
     background: #fff;
   }
@@ -3657,7 +3682,7 @@ a:hover, a:active {
 .page-header {
   width: 100%;
   height: 300px;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   background: center center no-repeat;
   background-size: cover;
@@ -3839,7 +3864,7 @@ a:hover, a:active {
   border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 600;
@@ -3861,7 +3886,7 @@ a:hover, a:active {
 }
 .post-box .entry-meta {
   text-transform: capitalize;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 14px;
   margin-bottom: 13px;
@@ -3913,7 +3938,7 @@ a:hover, a:active {
 .post-box .link-box a {
   font-size: 24px;
   font-weight: 500;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #1a1b1e;
 }
 .post-box .link-box a:hover {
@@ -4036,7 +4061,7 @@ a:hover, a:active {
 .page-pagination {
   margin-top: 70px;
   margin-bottom: 0;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 .page-pagination li {
   display: inline-block;
@@ -4123,7 +4148,7 @@ a:hover, a:active {
   text-align: center;
   line-height: 40px;
   font-weight: 500;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: 'Roboto', sans-serif;
   border-radius: 19px;
   -webkit-border-radius: 19px;
   -moz-border-radius: 19px;
@@ -4226,7 +4251,7 @@ a:hover, a:active {
 
 .post-nav {
   padding-left: 2px;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 .post-nav a {
   color: #0160e7;
@@ -4461,7 +4486,7 @@ a:hover, a:active {
 /* Simple Like Count */
 .sl-wrapper .sl-count, .sl-wrapper .sl-text {
   font-size: 14px;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   line-height: 1;
   text-transform: capitalize;
@@ -4690,7 +4715,7 @@ a:hover, a:active {
   color: #a5b7d2;
   font-size: 12px;
   font-weight: bold;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 7px;
@@ -4699,7 +4724,7 @@ a:hover, a:active {
   position: absolute;
   top: 0;
   right: 0;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
@@ -4751,7 +4776,7 @@ a:hover, a:active {
   margin-bottom: 0;
 }
 .comment-form .logged-in-as {
-  font-family: "Red Hat Display", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   margin-top: -5px;
 }
@@ -4844,7 +4869,7 @@ a:hover, a:active {
   -moz-border-radius: 50%;
 }
 .widget-area .widget ul:not(.recent-news) > li {
-  font-family: "Red Hat Display", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-size: 14px;
   position: relative;
@@ -4977,7 +5002,7 @@ a:hover, a:active {
   padding-top: 5px;
 }
 .widget .recent-news li {
-  font-family: "Red Hat Display", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 700;
 }
 .widget .recent-news li:not(:last-child) {
@@ -5373,7 +5398,7 @@ object {
   width: 100%;
 }
 .contact-info.text-light h6 {
-  font-family: "Red Hat Display",Sans-serif;
+  font-family: 'Roboto',Sans-serif;
   font-size: 18px;
   color: #9ee8ff;
   font-weight: 400;
@@ -5389,7 +5414,7 @@ object {
 }
 .contact-info.box-style2 p {
   color: #fff;
-  font-family: "Red Hat Display",Sans-serif;
+  font-family: 'Roboto',Sans-serif;
   font-size: 20px;
   font-weight: 500;
   margin-bottom: 15px;
@@ -5436,7 +5461,7 @@ object {
 
 .copyright {
   color: #acebff;
-  font-family: "Red Hat Text",Sans-serif;
+  font-family: 'IranianSans',Sans-serif;
   font-size: 15px;
   font-weight: 400;
   margin-top: 22px;
@@ -5505,7 +5530,7 @@ object {
 
 .site-footer-2 .footer-widget p {
     color: #fff;
-    font-family: "Red Hat Text",Sans-serif;
+    font-family: 'IranianSans',Sans-serif;
     line-height: 30px;
 }
 
@@ -5515,7 +5540,7 @@ object {
 
 .site-footer-2 .footer-widget h5 {
     color: #fff;
-    font-family: "Red Hat Display",Sans-serif;
+    font-family: 'Roboto',Sans-serif;
     font-size: 20px;
     margin-top: 20px;
     margin-bottom: 30px;
@@ -5532,7 +5557,7 @@ object {
 .site-footer-2 .footer-contact-2 ul li {
     line-height: 30px;
     margin-bottom: 12px;
-    font-family: "Red Hat Display",sans-serif;
+    font-family: 'Roboto',sans-serif;
 }
 
 .site-footer-2 .footer-contact-2 ul li strong {
@@ -5547,7 +5572,7 @@ object {
 }
 
 .site-footer-2 .ft-menu-list a {
-    font-family: "Red Hat Text",sans-serif;
+    font-family: 'IranianSans',sans-serif;
     color: #9ee8ff;
 }
 .site-footer-2 .ft-menu-list a:hover {
@@ -5563,7 +5588,7 @@ object {
 .site-footer-2 .footer-bottom .copyright-2 {
     color: #acebff;
     font-size: 15px;
-    font-family: "Red Hat Text",sans-serif;
+    font-family: 'IranianSans',sans-serif;
 }
 
 @media only screen and (max-width: 768px) {
@@ -5632,7 +5657,7 @@ object {
   bottom: -13px;
   font-size: 88px;
   font-weight: 900;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 1;
   color: rgba(165, 183, 210, 0.2);
   z-index: -1;
@@ -5696,7 +5721,7 @@ object {
   line-height: 50px;
   text-align: center;
   color: #00c3ff;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: bold;
   font-size: 20px;
   border-radius: 50%;
@@ -6316,7 +6341,7 @@ object {
   top: 32px;
   left: 32px;
   text-align: center;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 900;
   font-size: 28px;
   color: #1a1b1e;
@@ -6364,7 +6389,7 @@ object {
   top: 30px;
   left: 0;
   font-size: 13px;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: bold;
   text-transform: uppercase;
   color: #fff;
@@ -6735,7 +6760,7 @@ object {
 }
 
 .ot-counter {
-  font-family: "Red Hat Display", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 900;
   color: #1a1b1e;
   display: inline-block;
@@ -6796,7 +6821,7 @@ object {
   color: #fff;
   font-size: 24px;
   font-weight: 900;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: 'Roboto', sans-serif;
   display: inline-block;
   position: absolute;
   left: 50%;
@@ -7325,7 +7350,7 @@ input:checked + .slider:before {
   text-transform: uppercase;
   font-weight: 800;
   color: #1a1b1e;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: 'Roboto', sans-serif;
   letter-spacing: 0.5px;
 }
 .video-popup .btn-inner {
@@ -7594,7 +7619,7 @@ div .custom.tp-bullets .tp-bullet {
   border-bottom: 5px solid transparent;
   text-align: center;
   font-weight: bold;
-  font-family: "Red Hat Display";
+  font-family: 'Roboto';
   transition: all 0.3s;
 }
 
@@ -7797,7 +7822,7 @@ div.elementor-widget-wrap > .elementor-element.btn-inline {
 }
 .projects-box .portfolio-info h5 {
   color: #fff;
-  font-family: "Red Hat Text", sans-serif;
+  font-family: 'IranianSans', sans-serif;
   font-size: 20px;
   font-weight: 500;
   margin-bottom: 10px;
@@ -7808,7 +7833,7 @@ div.elementor-widget-wrap > .elementor-element.btn-inline {
 }
 .projects-box .portfolio-info .portfolio-cates {
   color: #95e1fa;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-size: 13px;
   text-transform: uppercase;
@@ -7897,7 +7922,7 @@ div.elementor-widget-wrap > .elementor-element.btn-inline {
   -moz-box-shadow: 8px 8px 30px 0px rgba(42, 67, 113, 0.15);
 }
 .projects-style-2 .projects-box .portfolio-info h5 a {
-  font-family: "Red Hat Display", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 700;
   color: #1a1b1e;
 }
@@ -7934,7 +7959,7 @@ div.elementor-widget-wrap > .elementor-element.btn-inline {
   position: relative;
   display: inline-block;
   letter-spacing: 1px;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 700;
   line-height: 1;
@@ -8177,7 +8202,7 @@ div.elementor-widget-wrap > .elementor-element.btn-inline {
 .ot-countdown li span {
   font-size: 100px;
   font-weight: 900;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: 'Roboto', sans-serif;
   display: block;
   margin-bottom: 23px;
 }
@@ -8216,7 +8241,7 @@ body .elementor-widget:not(:last-child) {
 div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
   color: #1a1b1e;
   font-weight: 900;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .elementor .elementor-section.elementor-section-boxed > .elementor-container {
@@ -8225,7 +8250,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
 
 .elementor-page .elementor-widget-text-editor,
 .elementor-page .elementor-widget-icon-list .elementor-icon-list-text {
-  font-family: "Red Hat Text", sans-serif;
+  font-family: 'IranianSans', sans-serif;
   color: #606060;
 }
 .elementor-page .mf-category-tabs .tabs-title {
@@ -8256,7 +8281,7 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
 }
 
 .elementor-default .elementor-widget-text-editor {
-  font-family: "Red Hat Text", sans-serif;
+  font-family: 'IranianSans', sans-serif;
   color: #606060;
 }
 
@@ -8477,14 +8502,14 @@ div.elementor-widget-heading.elementor-widget-heading .elementor-heading-title {
     font-weight: 700;
     line-height: 72px;
     letter-spacing: 1px;
-    font-family: "Red Hat Display",sans-serif;
+    font-family: 'Roboto',sans-serif;
 }
 .banner .banner-stitle {
     color: #fff;
     font-size: 72px;
     font-weight: 900;
     line-height: 80px;
-    font-family: "Red Hat Display",sans-serif;
+    font-family: 'Roboto',sans-serif;
 }
 .about-home {
     padding-bottom: 360px;
@@ -8661,7 +8686,7 @@ img {
 .cta-content h2 {
     color: #1a1b1e;
     font-weight: 900;
-    font-family: "Red Hat Display",sans-serif;
+    font-family: 'Roboto',sans-serif;
     font-size: 48px;
     line-height: 72px;
 }
@@ -8670,7 +8695,7 @@ img {
     font-size: 22px;
     margin-bottom: 55px;
     font-weight: 400;
-    font-family: "Red Hat Display",sans-serif;
+    font-family: 'Roboto',sans-serif;
 }
 .woocommerce-mini-cart__empty-message {
     margin-bottom: 0;
@@ -8797,7 +8822,7 @@ div.tp-bullets{
 .font-p2 {
     color: #1a1b1e;
     font-size: 20px;
-    font-family: "Red Hat Text",sans-serif;
+    font-family: 'IranianSans',sans-serif;
     font-weight: 400;
 }
 .home2-team {
@@ -8889,7 +8914,7 @@ div.tp-bullets{
     margin-top: calc(6px/2);
 }
 .site-footer-2.site-footer-home2 .ft-menu-list a {
-    font-family: "Red Hat Text",sans-serif;
+    font-family: 'IranianSans',sans-serif;
 }
 /* Index 3 */
 .home3-top {
@@ -8935,7 +8960,7 @@ div.tp-bullets{
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-family: "Red Hat Display",sans-serif;
+    font-family: 'Roboto',sans-serif;
     line-height: 1;
     margin-bottom: 24px;
     padding-top: 80px;
@@ -8946,14 +8971,14 @@ div.tp-bullets{
     line-height: 72px;
     font-weight: 900;
     margin-bottom: 25px;
-    font-family: "Red Hat Display",sans-serif;
+    font-family: 'Roboto',sans-serif;
 }
 .home3-top .home3-top-left p {
     margin-bottom: 50px;
     color: #fff;
     font-size: 22px;
     line-height: 36px;
-    font-family: "Red Hat Text",sans-serif;
+    font-family: 'IranianSans',sans-serif;
 }
 .home3-top .ot-button, .home3-top .video-popup {
     width: auto;
@@ -9217,18 +9242,18 @@ div.tp-bullets{
     margin-bottom: 10px;
     text-transform: uppercase;
     line-height: 1.4em;
-    font-family: "Red Hat Display",sans-serif;
+    font-family: 'Roboto',sans-serif;
 }
 .home4-top-right h2 {
     color: #1a1b1e;
     font-weight: 900;
-    font-family: "Red Hat Display",sans-serif;
+    font-family: 'Roboto',sans-serif;
     font-size: 56px;
     line-height: 72px;
     margin-bottom: 25px;
 }
 .home4-top-right p {
-    font-family: "Red Hat Text",sans-serif;
+    font-family: 'IranianSans',sans-serif;
     color: #606060;
     font-weight: 400;
     font-size: 22px;
@@ -9417,14 +9442,14 @@ div.tp-bullets{
     margin-bottom: 0;
     padding: 10px 0 20px 0;
     line-height: 1.4em;
-    font-family: "Red Hat Display",sans-serif;
+    font-family: 'Roboto',sans-serif;
 }
 .benefits-block .number {
     color: #00C3FF;
     line-height: 1;
     padding: 0;
     font-weight: 900;
-    font-family: "Red Hat Display",sans-serif;
+    font-family: 'Roboto',sans-serif;
 }
 .benefits-block p {
     margin-bottom: 20px;
@@ -9508,7 +9533,7 @@ div.tp-bullets{
     font-size: 18px;
     font-weight: 700;
     line-height: 24px;
-    font-family: "Red Hat Display",sans-serif;
+    font-family: 'Roboto',sans-serif;
     color: #1a1b1e;
     padding: 0;
     margin: 0;
@@ -9517,7 +9542,7 @@ div.tp-bullets{
 .mics-testimonials span {
     color: #1a1b1e;
     font-weight: 400;
-    font-family: "Red Hat Display",sans-serif;
+    font-family: 'Roboto',sans-serif;
     line-height: 1;
 }
 .home4-testimonial-right {
@@ -9547,7 +9572,7 @@ div.tp-bullets{
     line-height: 60px;
     font-weight: 900;
     margin-bottom: 30px;
-    font-family: "Red Hat Display",sans-serif;
+    font-family: 'Roboto',sans-serif;
 }
 /* Index 5 */
 .site-footer-5 {
@@ -10258,7 +10283,7 @@ div.tp-bullets{
     text-transform: uppercase;
     margin-bottom: 10px;
     line-height: 1.4em;
-    font-family: "Red Hat Display",sans-serif;
+    font-family: 'Roboto',sans-serif;
 }
 .home7-top-block h2 {
     font-size: 56px;
@@ -10266,7 +10291,7 @@ div.tp-bullets{
     color: #1a1b1e;
     margin-bottom: 60px;
     font-weight: 900;
-    font-family: "Red Hat Display",sans-serif;
+    font-family: 'Roboto',sans-serif;
 }
 .home7-partners {
     padding: 0 0 110px 0;
@@ -10480,18 +10505,18 @@ div.tp-bullets{
     font-weight: 700;
     text-transform: uppercase;
     line-height: 1.4em;
-    font-family: "Red Hat Display",sans-serif;
+    font-family: 'Roboto',sans-serif;
 }
 .home8-top-right-block h2 {
     color: #1a1b1e;
     font-weight: 900;
-    font-family: "Red Hat Display",sans-serif;
+    font-family: 'Roboto',sans-serif;
     font-size: 56px;
     line-height: 72px;
     margin-bottom: 25px;
 }
 .home8-top-right-block p {
-    font-family: "Red Hat Text",sans-serif;
+    font-family: 'IranianSans',sans-serif;
     font-size: 22px;
     line-height: 36px;
     margin-bottom: 28px;
@@ -10705,14 +10730,14 @@ div.tp-bullets{
     font-weight: 700;
     line-height: 1;
     margin-bottom: 10px;
-    font-family: "Red Hat Display",sans-serif;
+    font-family: 'Roboto',sans-serif;
 }
 .newsletter-text p {
     color: #FFF;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.4em;
-    font-family: "Red Hat Display",sans-serif;
+    font-family: 'Roboto',sans-serif;
 }
 /* About */
 .about-swrap-top-1 {
@@ -10788,7 +10813,7 @@ div.tp-bullets{
     font-weight: 700;
     letter-spacing: .5px;
     margin-bottom: 17px;
-    font-family: "Red Hat Display",sans-serif;
+    font-family: 'Roboto',sans-serif;
 }
 .steam-name {
     font-size: 42px;
@@ -10796,7 +10821,7 @@ div.tp-bullets{
     color: #1a1b1e;
     line-height: 1;
     margin-bottom: 25px;
-    font-family: "Red Hat Display",sans-serif;
+    font-family: 'Roboto',sans-serif;
 }
 .steam-desc {
     margin-bottom: 40px;
@@ -10888,7 +10913,7 @@ div.tp-bullets{
     text-align: center;
 }
 .project-detail {
-    font-family: "Red Hat Display",Sans-serif;
+    font-family: 'Roboto',Sans-serif;
     font-weight: 700;
     line-height: 30px;
     color: #1a1b1e;
@@ -11026,7 +11051,7 @@ div.tp-bullets{
     color: #fff;
     font-size: 48px;
     font-weight: 900;
-    font-family: "Red Hat Display",sans-serif;
+    font-family: 'Roboto',sans-serif;
 }
 .services-video .video-popup a span {
     z-index: 1;
@@ -11086,7 +11111,7 @@ div.tp-bullets{
   color: #fff;
   font-size: 48px;
   font-weight: 900;
-  font-family: "Red Hat Display",sans-serif;
+  font-family: 'Roboto',sans-serif;
   margin-bottom:40px;
   padding-top: 80px;
   line-height: 1;
@@ -11113,7 +11138,7 @@ div.tp-bullets{
   line-height: 60px;
   margin-bottom: 30px;
   font-weight: 900;
-  font-family: "Red Hat Display",sans-serif;
+  font-family: 'Roboto',sans-serif;
 }/* Contact */
 .our-contact {
     padding: 60px;
@@ -11180,7 +11205,7 @@ div.tp-bullets{
     color: #1a1b1e;
     font-weight: 900;
     line-height: 1;
-    font-family: "Red Hat Display",sans-serif;
+    font-family: 'Roboto',sans-serif;
 }
 .icon-box.s2:before {
     background-color: rgba(0,0,0,0);
@@ -11294,7 +11319,7 @@ div.tp-bullets{
   overflow: hidden;
   color: #fff;
   line-height: 24px;
-  font-family: "Red Hat Display", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 400;
 }
@@ -11369,7 +11394,7 @@ div.tp-bullets{
   color: #9ee8ff;
 }
 .site-footer-2 .ft-menu-list a {
-  font-family: "Red Hat Display",Sans-serif;
+  font-family: 'Roboto',Sans-serif;
 }
 
 .footer-menu ul {
@@ -11381,7 +11406,7 @@ div.tp-bullets{
   margin: 0px 29px;
 }
 .footer-menu ul li a {
-  font-family: "Red Hat Display", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 500;
   color: #fff;
@@ -11449,7 +11474,7 @@ div.tp-bullets{
   padding-bottom: 110px;
   font-weight: 900;
   line-height: 1;
-  font-family: "Red Hat Display",sans-serif;
+  font-family: 'Roboto',sans-serif;
 }
 .cs-subtitle {
   color: #fff;
@@ -11458,7 +11483,7 @@ div.tp-bullets{
   line-height: 1;
   padding-top: 90px;
   margin-bottom: 0;
-  font-family: "Red Hat Display",sans-serif
+  font-family: 'Roboto',sans-serif
 }
 .coming-soon .octf-btn-icon i {
   background: rgba(255,255,255,.2);

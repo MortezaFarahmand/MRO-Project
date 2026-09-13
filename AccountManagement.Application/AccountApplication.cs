@@ -9,10 +9,12 @@ namespace AccountManagement.Application
         private readonly IFileUploader _fileUploader;
         private readonly IPasswordHasher _passwordHasher;
         private readonly IAccountRepository _accountRepository;
+        private readonly IAuthHelper _authHelper;
 
         public AccountApplication(IAccountRepository accountRepository, IPasswordHasher passwordHasher, 
-            IFileUploader fileUploader) 
-        { 
+            IFileUploader fileUploader, IAuthHelper authHelper)
+        {
+            _authHelper = authHelper;
             _accountRepository = accountRepository;
             _passwordHasher = passwordHasher;
             _fileUploader = fileUploader;
@@ -37,7 +39,7 @@ namespace AccountManagement.Application
             return operation.Succeeded();
         }
 
-        public OperationResult Create(CreateAccount command)
+        public OperationResult Register(RegisterAccount command)
         {
             var operation = new OperationResult();
 
@@ -80,6 +82,28 @@ namespace AccountManagement.Application
         public EditAccount GetDetails(long id)
         {
             return _accountRepository.GetDetails(id);
+        }
+
+        public OperationResult Login(Login command)
+        {
+            var operation = new OperationResult();
+            var account = _accountRepository.GetBy(command.Username);
+            if (account == null)
+                return operation.Failed(ApplicationMessages.WrongUserPass);
+
+            (bool Verified, bool NeedsUpgrade) result = _passwordHasher.Check(account.Password, command.Password);
+            if(!result.Verified)
+                return operation.Failed(ApplicationMessages.WrongUserPass);
+
+            var authViewModel = new AuthViewModel(account.Id, account.RoleId,account.Fullname, 
+                account.Username);
+            _authHelper.Signin(authViewModel);
+            return operation.Succeeded();
+        }
+
+        public void Logout()
+        {
+            _authHelper.SignOut();
         }
 
         public List<AccountViewModel> Search(AccountSearchModel searchModel)

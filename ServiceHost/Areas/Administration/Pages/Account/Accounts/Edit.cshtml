@@ -45,14 +45,14 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <label asp-for="RoleId" class="control-label element-dir-Fa">نقش کاربر</label>
-                    @* <select type="text" class="form-control" asp-for="RoleId"
+                    <select type="text" class="form-control" asp-for="RoleId"
                            asp-items='new SelectList(Model.Roles, "Id", "Name")'>
                         <option value="0">-Roles-</option>
-                    </select> *@
-                    <select asp-for="RoleId" class="form-control">
+                    </select>
+                    @* <select asp-for="RoleId" class="form-control">
                         <option value="1">مدیر سیستم</option>
                         <option value="2">کاربر 1 سیستم</option>
-                    </select>
+                    </select> *@
 
                     <span asp-validation-for="RoleId" class="error"></span>
                 </div>

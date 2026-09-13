@@ -4341,3 +4341,24 @@
 .fab {
    font-family: 'Font Awesome 5 Brands'; 
 }
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('../../fonts/Nunito.eot'), url('../../fonts/Nunito.eot') format('embedded-opentype'), url('../../fonts/Nunito.woff') format('woff'), url('../../fonts/Nunito.ttf') format('truetype'), url('../../fonts/Nunito.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../fonts/Roboto.eot'), url('../../fonts/Roboto.eot') format('embedded-opentype'), url('../../fonts/Roboto.woff') format('woff'), url('../../fonts/Roboto.ttf') format('truetype'), url('../../fonts/Roboto.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IranianSans';
+    src: url('../../fonts/IranianSans.eot'), url('../../fonts/IranianSans.eot') format('embedded-opentype'), url('../../fonts/IranianSans.woff') format('woff'), url('../../fonts/IranianSans.ttf') format('truetype'), url('../../fonts/IranianSans.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -7,5 +7,7 @@ namespace _0_Framework.Application
         public const string RecordNotFound = "رکورد با اطلاعات درخواست شده یافت نشد. لطفا مجدد تلاش فرمایید.";
 
         public const string PasswordsNotMatch = "رمز عبور و تکرار آن با هم مطابقت ندارند";
+
+        public const string WrongUserPass = "نام کاربری و یا رمز عبور صحیح نمی باشد";
     }
 }

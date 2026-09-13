@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using BasicDataManagement.Application.Contracts.Entiti;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -8,8 +9,10 @@ using OrganizationManagement.Application.Contracts.Organization;
 
 namespace ServiceHost.Areas.Administration.Pages.Organization.Organizations
 {
+    //[Authorize(Roles = "1, 3")]
     public class IndexModel : PageModel
     {
+        
         [TempData]
         public string Message { get; set; }
         public OrganizationSearchModel SearchModel;

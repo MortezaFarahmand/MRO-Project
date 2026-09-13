@@ -7,6 +7,7 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Img\CountryFlags\svg\palau--3669.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\image\ic_blur_linear_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\busy-icons-svg\chart10.svg
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\fonts\Flaticon.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\content\ic_flag_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution-addons\whiteboard\assets\busy-icons-svg\fire.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\content\ic_link_24px.svg
@@ -51,7 +52,6 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\action\ic_track_changes_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\busy-icons-svg\person-scales.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\maps\ic_person_pin_24px.svg
-D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\fonts\Roboto.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution-addons\whiteboard\assets\busy-icons-svg\scales.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\navigation\ic_unfold_less_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\social\ic_notifications_24px.svg
@@ -282,6 +282,7 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\content\ic_font_download_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\hardware\ic_speaker_group_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\busy-icons-svg\chess-knight.svg
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\fonts\fa-regular-400.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Img\CountryFlags\svg\zimbabwe--3503.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\navigation\ic_arrow_drop_up_36px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\editor\ic_border_vertical_24px.svg
@@ -370,6 +371,7 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\css\navigation-skins\dione.css
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution-addons\whiteboard\assets\busy-icons-svg\chat.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution-addons\whiteboard\assets\busy-icons-svg\character05.svg
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\fonts\Material-Design-Iconic-Font.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\js\extensions\source\revolution.extension.actions.js
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution-addons\whiteboard\assets\busy-icons-svg\people-search01.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\maps\ic_directions_run_24px.svg
@@ -438,6 +440,7 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Img\CountryFlags\svg\bolivia--3641.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution-addons\countdown\revolution.addon.countdown.min.js
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Img\CountryFlags\svg\philippines--3683.svg
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\css\style.css
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\busy-icons-svg\atm-cash.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\css\woocommerce.css
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\img\LOGO\logo-icon.svg
@@ -495,6 +498,7 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\maps\ic_directions_bus_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\av\ic_videocam_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\navigation\ic_arrow_forward_36px.svg
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\fonts\slick.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\action\ic_perm_phone_msg_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\image\ic_nature_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Img\CountryFlags\svg\aland-islands--3579.svg
@@ -588,7 +592,6 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\busy-icons-svg\safe.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution-addons\whiteboard\assets\busy-icons-svg\strategy03.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\action\ic_backup_24px.svg
-D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\fonts\fa-regular-400.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\editor\ic_format_line_spacing_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\social\ic_pages_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\AdminTheme\assets\easypie-chart\jquery.easypiechart.min.js
@@ -617,7 +620,6 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution-addons\whiteboard\assets\busy-icons-svg\glasses-moustache.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\lib\jquery-validation\LICENSE.md
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\busy-icons-svg\head-compass.svg
-D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\fonts\glyphicons-halflings-regular.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Img\CountryFlags\svg\european-union--3751.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\busy-icons-svg\rocket2.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\navigation\ic_arrow_upward_24px.svg
@@ -724,7 +726,6 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\content\ic_select_all_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\image\ic_timer_10_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\busy-icons-svg\bookmark.svg
-D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\fonts\Flaticon.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution-addons\whiteboard\assets\busy-icons-svg\hours.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\AdminTheme\assets\datatables\jquery.dataTables.min.css
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\action\ic_update_24px.svg
@@ -746,7 +747,6 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution-addons\whiteboard\assets\busy-icons-svg\laptop-cart.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\busy-icons-svg\fire.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\social\ic_school_24px.svg
-D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\fonts\slick.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\device\ic_battery_60_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Img\CountryFlags\svg\northern-cyprus--3593.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\AdminTheme\fonts\Roboto.svg
@@ -919,7 +919,6 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Img\C
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution-addons\whiteboard\assets\busy-icons-svg\dollar.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution-addons\whiteboard\assets\busy-icons-svg\calendar5.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\image\ic_view_comfy_24px.svg
-D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\fonts\Nunito.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\editor\ic_format_align_center_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Img\CountryFlags\svg\libya--3723.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Img\CountryFlags\svg\trinidad-and-tobago--3672.svg
@@ -1013,7 +1012,6 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\busy-icons-svg\bank.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\communication\ic_call_missed_outgoing_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\img\_logo\AirPulseSystem_WithoutLogo_1.svg
-D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\fonts\IranianSans.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution-addons\snow\revolution.addon.snow.min.js
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution-addons\whiteboard\assets\busy-icons-svg\arrow-left.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\maps\ic_local_movies_24px.svg
@@ -1136,6 +1134,7 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Img\CountryFlags\svg\honduras--3516.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\action\ic_redeem_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution-addons\whiteboard\assets\busy-icons-svg\megaphone.svg
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\fonts\fa-brands-400.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\action\ic_offline_pin_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\notification\ic_airline_seat_flat_24px.svg
@@ -1237,6 +1236,7 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\busy-icons-svg\badge01.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution-addons\whiteboard\assets\busy-icons-svg\chart11.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution-addons\whiteboard\assets\busy-icons-svg\money6.svg
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\fonts\Nunito.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\busy-icons-svg\plant-money.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\busy-icons-svg\person-idea02.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\notification\ic_tap_and_play_24px.svg
@@ -1419,7 +1419,6 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution-addons\whiteboard\assets\busy-icons-svg\brain.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Img\CountryFlags\svg\cambodia--3650.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\AdminTheme\assets\flot-chart\jquery.flot.selection.js
-D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\fonts\fa-solid-900.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution-addons\whiteboard\assets\busy-icons-svg\chart15.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution-addons\whiteboard\assets\busy-icons-svg\tablet-article.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\hardware\ic_security_24px.svg
@@ -1641,6 +1640,7 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\av\ic_hearing_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\device\ic_signal_wifi_statusbar_connected_no_internet_3_26x24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\action\ic_settings_overscan_24px.svg
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\fonts\fa-solid-900.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\device\ic_signal_wifi_4_bar_lock_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution-addons\whiteboard\assets\busy-icons-svg\gauge2.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\notification\ic_sync_24px.svg
@@ -1929,7 +1929,6 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\busy-icons-svg\award3.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\av\ic_replay_30_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\image\ic_crop_original_24px.svg
-D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\fonts\Material-Design-Iconic-Font.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\editor\ic_insert_link_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\css\bootstrap.css
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Img\CountryFlags\svg\england--3707.svg
@@ -2060,6 +2059,7 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\notification\ic_sms_failed_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\av\ic_forward_30_24px.svg
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\fonts\Roboto.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\action\ic_query_builder_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\busy-icons-svg\speaker.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\css\navigation-skins\gyges.css
@@ -2172,7 +2172,6 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Img\CountryFlags\svg\mozambique--3588.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\action\ic_turned_in_not_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution-addons\whiteboard\assets\busy-icons-svg\newspaper.svg
-D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\style.css
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution-addons\whiteboard\assets\busy-icons-svg\chart19.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Img\CountryFlags\svg\norfolk-island--3684.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution-addons\whiteboard\js\source\revolution.addon.whiteboard.js
@@ -2242,6 +2241,7 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution-addons\whiteboard\assets\busy-icons-svg\chess-knight.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\editor\ic_space_bar_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\busy-icons-svg\chess-rook.svg
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\fonts\IranianSans.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\content\ic_drafts_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution-addons\whiteboard\assets\busy-icons-svg\euro.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\navigation\ic_unfold_more_24px.svg
@@ -2256,8 +2256,8 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution-addons\whiteboard\assets\busy-icons-svg\chart12.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution-addons\whiteboard\assets\busy-icons-svg\people-structure02.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution-addons\whiteboard\assets\busy-icons-svg\tablet-chart3.svg
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\fonts\glyphicons-halflings-regular.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\action\ic_thumb_up_24px.svg
-D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\fonts\fa-brands-400.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\navigation\ic_expand_less_36px.svg
 wwwroot\AdminTheme\assets\bootstrap3-editable\bootstrap-editable.css
 wwwroot\AdminTheme\assets\bootstrap3-editable\bootstrap-editable.js
@@ -2884,6 +2884,12 @@ wwwroot\Img\PersonPictures\MortezaFarahmand\Personeli\2026-01-16-07-14-30-لوگ
 wwwroot\Img\PersonPictures\MortezaFarahmand\Personeli\2026-01-16-07-15-49-aps-logo.png
 wwwroot\Img\profilePhotos\2026-09-04-09-21-41-AdobeStock_322356805.jpeg
 wwwroot\Img\profilePhotos\2026-09-04-10-02-03-20d9c9ccfee8b5892a145199e458fc79.gif
+wwwroot\Img\profilePhotos\2026-09-07-06-35-42-AdobeStock_105252393.jpeg
+wwwroot\Img\profilePhotos\2026-09-11-16-22-52-AdobeStock_218990661_Preview.jpeg
+wwwroot\Img\profilePhotos\2026-09-11-16-23-59-AdobeStock_218990806_Preview.jpeg
+wwwroot\Img\profilePhotos\2026-09-11-16-28-15-AdobeStock_283536436_Preview.jpeg
+wwwroot\Img\profilePhotos\2026-09-11-16-31-42-AdobeStock_283536436_Preview.jpeg
+wwwroot\Img\profilePhotos\2026-09-12-18-01-55-AdobeStock_218990661_Preview.jpeg
 wwwroot\Img\ProfilePictureOfPersons\FarahmandAx.jpg
 wwwroot\Img\SliderPictures\2026-08-30-08-49-41-AdobeStock_330643987.jpeg
 wwwroot\Img\SliderPictures\2026-08-30-08-49-41-AdobeStock_340782183.jpeg
@@ -2930,55 +2936,8 @@ wwwroot\Theme\assets\css\magnific-popup.css
 wwwroot\Theme\assets\css\royal-preload.css
 wwwroot\Theme\assets\css\slick.css
 wwwroot\Theme\assets\css\slick-theme.css
+wwwroot\Theme\assets\css\style.css
 wwwroot\Theme\assets\css\woocommerce.css
-wwwroot\Theme\assets\fonts\fa-brands-400.eot
-wwwroot\Theme\assets\fonts\fa-brands-400.svg
-wwwroot\Theme\assets\fonts\fa-brands-400.ttf
-wwwroot\Theme\assets\fonts\fa-brands-400.woff
-wwwroot\Theme\assets\fonts\fa-brands-400.woff2
-wwwroot\Theme\assets\fonts\fa-regular-400.eot
-wwwroot\Theme\assets\fonts\fa-regular-400.svg
-wwwroot\Theme\assets\fonts\fa-regular-400.ttf
-wwwroot\Theme\assets\fonts\fa-regular-400.woff
-wwwroot\Theme\assets\fonts\fa-regular-400.woff2
-wwwroot\Theme\assets\fonts\fa-solid-900.eot
-wwwroot\Theme\assets\fonts\fa-solid-900.svg
-wwwroot\Theme\assets\fonts\fa-solid-900.ttf
-wwwroot\Theme\assets\fonts\fa-solid-900.woff
-wwwroot\Theme\assets\fonts\fa-solid-900.woff2
-wwwroot\Theme\assets\fonts\Flaticon.eot
-wwwroot\Theme\assets\fonts\Flaticon.svg
-wwwroot\Theme\assets\fonts\Flaticon.ttf
-wwwroot\Theme\assets\fonts\Flaticon.woff
-wwwroot\Theme\assets\fonts\Flaticon.woff2
-wwwroot\Theme\assets\fonts\glyphicons-halflings-regular.eot
-wwwroot\Theme\assets\fonts\glyphicons-halflings-regular.svg
-wwwroot\Theme\assets\fonts\glyphicons-halflings-regular.ttf
-wwwroot\Theme\assets\fonts\glyphicons-halflings-regular.woff
-wwwroot\Theme\assets\fonts\glyphicons-halflings-regular.woff2
-wwwroot\Theme\assets\fonts\IranianSans.eot
-wwwroot\Theme\assets\fonts\IranianSans.svg
-wwwroot\Theme\assets\fonts\IranianSans.ttf
-wwwroot\Theme\assets\fonts\IranianSans.woff
-wwwroot\Theme\assets\fonts\IranianSans.woff2
-wwwroot\Theme\assets\fonts\Material-Design-Iconic-Font.eot
-wwwroot\Theme\assets\fonts\Material-Design-Iconic-Font.svg
-wwwroot\Theme\assets\fonts\Material-Design-Iconic-Font.ttf
-wwwroot\Theme\assets\fonts\Material-Design-Iconic-Font.woff
-wwwroot\Theme\assets\fonts\Nunito.eot
-wwwroot\Theme\assets\fonts\Nunito.svg
-wwwroot\Theme\assets\fonts\Nunito.ttf
-wwwroot\Theme\assets\fonts\Nunito.woff
-wwwroot\Theme\assets\fonts\Nunito.woff2
-wwwroot\Theme\assets\fonts\Roboto.eot
-wwwroot\Theme\assets\fonts\Roboto.svg
-wwwroot\Theme\assets\fonts\Roboto.ttf
-wwwroot\Theme\assets\fonts\Roboto.woff
-wwwroot\Theme\assets\fonts\Roboto.woff2
-wwwroot\Theme\assets\fonts\slick.eot
-wwwroot\Theme\assets\fonts\slick.svg
-wwwroot\Theme\assets\fonts\slick.ttf
-wwwroot\Theme\assets\fonts\slick.woff
 wwwroot\Theme\assets\img\_logo\AirPulseSystem_WithoutLogo_1.svg
 wwwroot\Theme\assets\img\_logo\Layer.png
 wwwroot\Theme\assets\img\_logo\Logo_0.svg
@@ -4968,4 +4927,51 @@ wwwroot\Theme\assets\plugins\revolution\revolution-addons\whiteboard\assets\inde
 wwwroot\Theme\assets\plugins\revolution\revolution-addons\whiteboard\js\index.php
 wwwroot\Theme\assets\plugins\revolution\revolution-addons\whiteboard\js\revolution.addon.whiteboard.min.js
 wwwroot\Theme\assets\plugins\revolution\revolution-addons\whiteboard\js\source\revolution.addon.whiteboard.js
-wwwroot\Theme\assets\style.css
+wwwroot\Theme\fonts\fa-brands-400.eot
+wwwroot\Theme\fonts\fa-brands-400.svg
+wwwroot\Theme\fonts\fa-brands-400.ttf
+wwwroot\Theme\fonts\fa-brands-400.woff
+wwwroot\Theme\fonts\fa-brands-400.woff2
+wwwroot\Theme\fonts\fa-regular-400.eot
+wwwroot\Theme\fonts\fa-regular-400.svg
+wwwroot\Theme\fonts\fa-regular-400.ttf
+wwwroot\Theme\fonts\fa-regular-400.woff
+wwwroot\Theme\fonts\fa-regular-400.woff2
+wwwroot\Theme\fonts\fa-solid-900.eot
+wwwroot\Theme\fonts\fa-solid-900.svg
+wwwroot\Theme\fonts\fa-solid-900.ttf
+wwwroot\Theme\fonts\fa-solid-900.woff
+wwwroot\Theme\fonts\fa-solid-900.woff2
+wwwroot\Theme\fonts\Flaticon.eot
+wwwroot\Theme\fonts\Flaticon.svg
+wwwroot\Theme\fonts\Flaticon.ttf
+wwwroot\Theme\fonts\Flaticon.woff
+wwwroot\Theme\fonts\Flaticon.woff2
+wwwroot\Theme\fonts\glyphicons-halflings-regular.eot
+wwwroot\Theme\fonts\glyphicons-halflings-regular.svg
+wwwroot\Theme\fonts\glyphicons-halflings-regular.ttf
+wwwroot\Theme\fonts\glyphicons-halflings-regular.woff
+wwwroot\Theme\fonts\glyphicons-halflings-regular.woff2
+wwwroot\Theme\fonts\IranianSans.eot
+wwwroot\Theme\fonts\IranianSans.svg
+wwwroot\Theme\fonts\IranianSans.ttf
+wwwroot\Theme\fonts\IranianSans.woff
+wwwroot\Theme\fonts\IranianSans.woff2
+wwwroot\Theme\fonts\Material-Design-Iconic-Font.eot
+wwwroot\Theme\fonts\Material-Design-Iconic-Font.svg
+wwwroot\Theme\fonts\Material-Design-Iconic-Font.ttf
+wwwroot\Theme\fonts\Material-Design-Iconic-Font.woff
+wwwroot\Theme\fonts\Nunito.eot
+wwwroot\Theme\fonts\Nunito.svg
+wwwroot\Theme\fonts\Nunito.ttf
+wwwroot\Theme\fonts\Nunito.woff
+wwwroot\Theme\fonts\Nunito.woff2
+wwwroot\Theme\fonts\Roboto.eot
+wwwroot\Theme\fonts\Roboto.svg
+wwwroot\Theme\fonts\Roboto.ttf
+wwwroot\Theme\fonts\Roboto.woff
+wwwroot\Theme\fonts\Roboto.woff2
+wwwroot\Theme\fonts\slick.eot
+wwwroot\Theme\fonts\slick.svg
+wwwroot\Theme\fonts\slick.ttf
+wwwroot\Theme\fonts\slick.woff

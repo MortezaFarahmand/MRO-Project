@@ -122,9 +122,13 @@
         "net9.0": {
           "targetAlias": "net90",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.Cookies": {
+              "target": "Package",
+              "version": "[2.3.13, )"
+            },
             "Microsoft.AspNetCore.Mvc.Abstractions": {
               "target": "Package",
-              "version": "[2.3.0, )"
+              "version": "[2.3.13, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -593,9 +597,13 @@
         "net9.0": {
           "targetAlias": "net90",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.Cookies": {
+              "target": "Package",
+              "version": "[2.3.13, )"
+            },
             "Microsoft.AspNetCore.Http": {
               "target": "Package",
-              "version": "[2.3.0, )"
+              "version": "[2.3.13, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
@@ -1001,7 +1009,7 @@
           "dependencies": {
             "Microsoft.AspNetCore.Http": {
               "target": "Package",
-              "version": "[2.3.0, )"
+              "version": "[2.3.13, )"
             },
             "Microsoft.AspNetCore.Mvc.ViewFeatures": {
               "target": "Package",
@@ -1417,7 +1425,7 @@
           "dependencies": {
             "Microsoft.AspNetCore.Http": {
               "target": "Package",
-              "version": "[2.3.0, )"
+              "version": "[2.3.13, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",

@@ -2,9 +2,12 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using BasicDataManagement.Application.Contracts.Country;
+using Microsoft.AspNetCore.Authorization;
+using _0_Framework.Infrastructure;
 
 namespace ServiceHost.Areas.Administration.Pages.BasicData.Countrys
 {
+    //[Authorize(Roles = Roles.Administrator)]
     public class IndexModel : PageModel
     {
         public CountrySearchModel SearchModel;

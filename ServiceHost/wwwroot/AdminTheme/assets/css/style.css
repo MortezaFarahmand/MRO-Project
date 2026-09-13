@@ -620,7 +620,7 @@ a:focus {
   background: #FFF;
   box-shadow: none;
 }
-
+   /*2.6.1 TextInputFa*/
 .element-dir-Fa {
     font-family: 'IranianSans', sans-serif;
     direction: rtl;
