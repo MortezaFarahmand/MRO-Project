@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+using _0_Framework.Infrastructure;
 using BasicDataManagement.Application.Contracts.Entiti;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using OrganizationManagement.Application.Contracts.Country;
 using OrganizationManagement.Application.Contracts.Organization;
+using OrganizationManagement.Configuration.Permissions;
+using System.Collections.Generic;
 
 namespace ServiceHost.Areas.Administration.Pages.Organization.Organizations
 {
@@ -32,7 +34,7 @@ namespace ServiceHost.Areas.Administration.Pages.Organization.Organizations
         }
 
 
-
+        [NeedsPermission(OrganizationPermissions.ListOrganization)]
         public void OnGet(OrganizationSearchModel searchModel)
         {
             OrganizationGroups = new SelectList(_organizationGroupApplication.GetOrganizationGroups(), "Id", "Name");
@@ -50,6 +52,7 @@ namespace ServiceHost.Areas.Administration.Pages.Organization.Organizations
             return Partial("./Create", command);
         }
 
+        [NeedsPermission(OrganizationPermissions.CreateOrganization)]
         public JsonResult OnPostCreate(CreateOrganization command)
         {
             var result = _organizationApplication.Create(command);
@@ -64,6 +67,7 @@ namespace ServiceHost.Areas.Administration.Pages.Organization.Organizations
             return Partial("Edit", organization);
         }
 
+        [NeedsPermission(OrganizationPermissions.EditOrganization)] 
         public JsonResult OnPostEdit(EditOrganization command)
         {
             var result = _organizationApplication.Edit(command);

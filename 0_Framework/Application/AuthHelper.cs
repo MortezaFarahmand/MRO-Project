@@ -87,7 +87,7 @@ namespace _0_Framework.Application
                 new Claim(ClaimTypes.Role, account.RoleId.ToString()),
                 new Claim("Username", account.Username), // Or Use ClaimTypes.NameIdentifier
                 //new Claim("ProfilePhoto", account.ProfilePhoto)
-                //new Claim("permissions", permissions),
+                new Claim("permissions", permissions)
                 //new Claim("Mobile", account.Mobile)
             };
 

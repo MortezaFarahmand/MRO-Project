@@ -1,4 +1,5 @@
-﻿using _01_MROQuery.Contracts.OrganizationGroup;
+﻿using _0_Framework.Infrastructure;
+using _01_MROQuery.Contracts.OrganizationGroup;
 using _01_MROQuery.Contracts.Slides;
 using _01_MROQuery.Query;
 using BasicDataManagement.Application;
@@ -8,6 +9,7 @@ using BasicDataManagement.Application.Contracts.Entiti;
 using BasicDataManagement.Application.Contracts.PictureCategory;
 using BasicDataManagement.Application.Contracts.Province;
 using BasicDataManagement.Application.Contracts.Slide;
+using BasicDataManagement.Configuration.Permissions;
 using BasicDataManagement.Domain.CityAgg;
 using BasicDataManagement.Domain.CountryAgg;
 using BasicDataManagement.Domain.EntitiAgg;
@@ -45,6 +47,8 @@ namespace BasicDataManagement.Configuration
 
             services.AddTransient<ISlideQuery, SlideQuery>();
             services.AddTransient<IOrganizatonGroupQuery, OrganizationGroupQuery>();
+
+            services.AddTransient<IPermissionExposer, BasicDataPermissionExposer>();
 
             services.AddDbContext<BasicDataContext>(x => x.UseSqlServer(connectionString));
         }

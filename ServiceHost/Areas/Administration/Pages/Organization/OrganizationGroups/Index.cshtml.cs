@@ -1,7 +1,9 @@
-using System.Collections.Generic;
+using _0_Framework.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using OrganizationManagement.Application.Contracts.Country;
+using OrganizationManagement.Configuration.Permissions;
+using System.Collections.Generic;
 
 namespace ServiceHost.Areas.Administration.Pages.Organization.OrganizationGroups
 {
@@ -18,7 +20,7 @@ namespace ServiceHost.Areas.Administration.Pages.Organization.OrganizationGroups
         }
 
 
-
+        [NeedsPermission(OrganizationPermissions.ListOrganizationGroup)]
         public void OnGet(OrganizationGroupSearchModel searchModel)
         {
             OrganizationGroups = _organizationGroupApplication.Search(searchModel);
@@ -29,6 +31,7 @@ namespace ServiceHost.Areas.Administration.Pages.Organization.OrganizationGroups
             return Partial("./Create", new CreateOrganizationGroup());
         }
 
+        [NeedsPermission(OrganizationPermissions.CreateOrganizationGroup)]
         public JsonResult OnPostCreate(CreateOrganizationGroup command)
         {
             var result = _organizationGroupApplication.Create(command);
@@ -41,6 +44,7 @@ namespace ServiceHost.Areas.Administration.Pages.Organization.OrganizationGroups
             return Partial("Edit", organizationGroup);
         }
 
+        [NeedsPermission(OrganizationPermissions.EditOrganizationGroup)]
         public JsonResult OnPostEdit(EditOrganizationGroup command)
         {
             var result = _organizationGroupApplication.Edit(command);

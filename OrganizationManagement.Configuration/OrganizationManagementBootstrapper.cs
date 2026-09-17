@@ -1,4 +1,5 @@
-﻿using _01_MROQuery.Contracts.OrganizationGroup;
+﻿using _0_Framework.Infrastructure;
+using _01_MROQuery.Contracts.OrganizationGroup;
 using _01_MROQuery.Contracts.Slides;
 using _01_MROQuery.Query;
 using Microsoft.EntityFrameworkCore;
@@ -11,6 +12,7 @@ using OrganizationManagement.Application.Contracts.OrganizationAviationCode;
 using OrganizationManagement.Application.Contracts.OrganizationDepartment;
 using OrganizationManagement.Application.Contracts.OrganizationPicture;
 using OrganizationManagement.Application.Contracts.OrganizationPosition;
+using OrganizationManagement.Configuration.Permissions;
 using OrganizationManagement.Domain.ApprovalAutorityAgg;
 using OrganizationManagement.Domain.OrganizationAgg;
 using OrganizationManagement.Domain.OrganizationAviationCodeAgg;
@@ -51,9 +53,9 @@ namespace OrganizationManagement.Configuration
             services.AddTransient<IOrganizationPositionApplication, OrganizationPositionApplication>();
             services.AddTransient<IOrganizationPositionRepository, OrganizationPositionRepository>();
 
-            
 
 
+            services.AddTransient<IPermissionExposer, OrganizationPermissionExposer>();
 
             services.AddDbContext<OrganizationContext>(x => x.UseSqlServer(connectionString));
         }

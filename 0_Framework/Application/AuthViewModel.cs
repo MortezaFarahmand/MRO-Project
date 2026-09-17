@@ -11,13 +11,14 @@ namespace _0_Framework.Application
         public string Username { get; set; }
         public string Mobile { get; set; }
         public string ProfilePhoto { get; set; }
+
         public List<int> Permissions { get; set; }
 
         public AuthViewModel()
         {
         }
 
-        public AuthViewModel(long id, long roleId, string fullname, string username)
+        public AuthViewModel(long id, long roleId, string fullname, string username, List<int> permissions)
         {
             Id = id;
             RoleId = roleId;
@@ -25,7 +26,7 @@ namespace _0_Framework.Application
             Username = username;
             //ProfilePhoto = profilePhoto;
             //Mobile = mobile;
-            //Permissions = permissions;
+            Permissions = permissions;
         }
     }
 }
