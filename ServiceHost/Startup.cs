@@ -10,6 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using OrganizationManagement.Configuration;
+using OrganizationManagement.Presentation.Api;
+using PartManagement.Configuration;
 using PersonManagement.Configuration;
 using System.Collections.Generic;
 using System.Text.Encodings.Web;
@@ -35,6 +37,7 @@ namespace ServiceHost
             PersonnelManagementBootstrapper.Configure(services, connectionString);
             BasicDataManagementBootstrapper.Configure(services, connectionString);
             AccountManagementBootstrapper.Configure(services, connectionString);
+            PartManagementBootstrapper.Configure(services, connectionString);
 
 
             services.AddTransient<IFileUploader, FileUploader>();
@@ -77,6 +80,9 @@ namespace ServiceHost
 
                     options.AddPolicy("account", builder =>
                     builder.RequireRole(new List<string> { Roles.Administrator, Roles.SystemUser }));
+
+                    options.AddPolicy("Part", builder =>
+                   builder.RequireRole(new List<string> { Roles.Administrator, Roles.SystemUser }));
                 });
 
             services.AddRazorPages()
@@ -87,8 +93,11 @@ namespace ServiceHost
                     options.Conventions.AuthorizeAreaFolder("Administration", "/Organization", "Organize");
                     options.Conventions.AuthorizeAreaFolder("Administration", "/BasicData", "basicData");
                     options.Conventions.AuthorizeAreaFolder("Administration", "/Account", "account");
+                    options.Conventions.AuthorizeAreaFolder("Administration", "/Part", "part");
 
-                });
+                })
+                .AddApplicationPart(typeof(OrganizationController).Assembly)
+                ;
 
         }
             //services.AddWordPress(options => { });
@@ -122,9 +131,12 @@ namespace ServiceHost
 
             app.UseAuthorization();
 
+
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
+                endpoints.MapControllers();
             });
         }
     }

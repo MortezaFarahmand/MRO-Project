@@ -8,6 +8,8 @@
     <ProjectReference Include="..\AccountManagement.Configuration\AccountManagement.Configuration.csproj" />
     <ProjectReference Include="..\BasicDataManagement.Configuration\BasicDataManagement.Configuration.csproj" />
     <ProjectReference Include="..\OrganizationManagement.Configuration\OrganizationManagement.Configuration.csproj" />
+    <ProjectReference Include="..\OrganizationManagement.Presentation.Api\OrganizationManagement.Presentation.Api.csproj" />
+    <ProjectReference Include="..\PartManagement.Infrastructure.Configuration\PartManagement.Infrastructure.Configuration.csproj" />
     <ProjectReference Include="..\PersonnelManagement.Configuration\PersonnelManagement.Configuration.csproj" />
   </ItemGroup>
 
@@ -57,6 +59,7 @@
   <ItemGroup>
     <Folder Include="Areas\Administration\Pages\BasicData\PictureCategories\" />
     <Folder Include="Areas\Administration\Pages\BasicData\Pictures\" />
+    <Folder Include="Areas\Administration\Pages\Part\Part\" />
     <Folder Include="wwwroot\AdminTheme\images\NewFolder\" />
     <Folder Include="wwwroot\Img\CountryFlags\" />
     <Folder Include="wwwroot\Img\PersonPictures\" />

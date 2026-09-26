@@ -3821,6 +3821,92 @@
           "bin/placeholder/OrganizationManagement.Infrastructure.EFCore.dll": {}
         }
       },
+      "OrganizationManagement.Presentation.Api/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "OrganizationManagement.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/OrganizationManagement.Presentation.Api.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OrganizationManagement.Presentation.Api.dll": {}
+        }
+      },
+      "PartManagement.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "PartManagement.Application.Contracts": "1.0.0",
+          "PartManagement.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PartManagement.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PartManagement.Application.dll": {}
+        }
+      },
+      "PartManagement.Application.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "0_Framework": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PartManagement.Application.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PartManagement.Application.Contracts.dll": {}
+        }
+      },
+      "PartManagement.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "0_Framework": "1.0.0",
+          "PartManagement.Application.Contracts": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PartManagement.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PartManagement.Domain.dll": {}
+        }
+      },
+      "PartManagement.Infrastructure.Configuration/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
+          "PartManagement.Application": "1.0.0",
+          "PartManagement.Application.Contracts": "1.0.0",
+          "PartManagement.Domain": "1.0.0",
+          "PartManagement.Infrastructure.EFCore": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PartManagement.Infrastructure.Configuration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PartManagement.Infrastructure.Configuration.dll": {}
+        }
+      },
+      "PartManagement.Infrastructure.EFCore/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "9.0.8",
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.8",
+          "PartManagement.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PartManagement.Infrastructure.EFCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PartManagement.Infrastructure.EFCore.dll": {}
+        }
+      },
       "PersonnelManagement.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -9580,6 +9666,36 @@
       "path": "../OrganizationManagement.Infrastructure.EFCore/OrganizationManagement.Infrastructure.EFCore.csproj",
       "msbuildProject": "../OrganizationManagement.Infrastructure.EFCore/OrganizationManagement.Infrastructure.EFCore.csproj"
     },
+    "OrganizationManagement.Presentation.Api/1.0.0": {
+      "type": "project",
+      "path": "../OrganizationManagement.Presentation.Api/OrganizationManagement.Presentation.Api.csproj",
+      "msbuildProject": "../OrganizationManagement.Presentation.Api/OrganizationManagement.Presentation.Api.csproj"
+    },
+    "PartManagement.Application/1.0.0": {
+      "type": "project",
+      "path": "../PartManagement.Application/PartManagement.Application.csproj",
+      "msbuildProject": "../PartManagement.Application/PartManagement.Application.csproj"
+    },
+    "PartManagement.Application.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../PartManagement.Application.Contracts/PartManagement.Application.Contracts.csproj",
+      "msbuildProject": "../PartManagement.Application.Contracts/PartManagement.Application.Contracts.csproj"
+    },
+    "PartManagement.Domain/1.0.0": {
+      "type": "project",
+      "path": "../PartManagement.Domain/PartManagement.Domain.csproj",
+      "msbuildProject": "../PartManagement.Domain/PartManagement.Domain.csproj"
+    },
+    "PartManagement.Infrastructure.Configuration/1.0.0": {
+      "type": "project",
+      "path": "../PartManagement.Infrastructure.Configuration/PartManagement.Infrastructure.Configuration.csproj",
+      "msbuildProject": "../PartManagement.Infrastructure.Configuration/PartManagement.Infrastructure.Configuration.csproj"
+    },
+    "PartManagement.Infrastructure.EFCore/1.0.0": {
+      "type": "project",
+      "path": "../PartManagement.Infrastructure.EFCore/PartManagement.Infrastructure.EFCore.csproj",
+      "msbuildProject": "../PartManagement.Infrastructure.EFCore/PartManagement.Infrastructure.EFCore.csproj"
+    },
     "PersonnelManagement.Application/1.0.0": {
       "type": "project",
       "path": "../PersonnelManagement.Application/PersonnelManagement.Application.csproj",
@@ -9613,6 +9729,8 @@
       "Microsoft.EntityFrameworkCore.Design >= 9.0.8",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 9.0.0",
       "OrganizationManagement.Configuration >= 1.0.0",
+      "OrganizationManagement.Presentation.Api >= 1.0.0",
+      "PartManagement.Infrastructure.Configuration >= 1.0.0",
       "PersonnelManagement.Configuration >= 1.0.0"
     ]
   },
@@ -9656,6 +9774,12 @@
             },
             "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\OrganizationManagement.Configuration\\OrganizationManagement.Configuration.csproj": {
               "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\OrganizationManagement.Configuration\\OrganizationManagement.Configuration.csproj"
+            },
+            "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\OrganizationManagement.Presentation.Api\\OrganizationManagement.Presentation.Api.csproj": {
+              "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\OrganizationManagement.Presentation.Api\\OrganizationManagement.Presentation.Api.csproj"
+            },
+            "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\PartManagement.Infrastructure.Configuration\\PartManagement.Infrastructure.Configuration.csproj": {
+              "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\PartManagement.Infrastructure.Configuration\\PartManagement.Infrastructure.Configuration.csproj"
             },
             "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\PersonnelManagement.Configuration\\PersonnelManagement.Configuration.csproj": {
               "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\PersonnelManagement.Configuration\\PersonnelManagement.Configuration.csproj"

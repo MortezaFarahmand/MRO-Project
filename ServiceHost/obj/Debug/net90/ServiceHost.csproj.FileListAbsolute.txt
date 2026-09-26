@@ -2578,3 +2578,15 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\compressed\jbxtci10hu-lgimcf22vc.gz
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\compressed\wur4fjee9g-o0eds0n1d2.gz
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\compressed\7iam4ttj9b-ky7l2t7l4j.gz
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net90\OrganizationManagement.Presentation.Api.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net90\OrganizationManagement.Presentation.Api.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net90\PartManagement.Application.Contracts.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net90\PartManagement.Application.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net90\PartManagement.Domain.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net90\PartManagement.Infrastructure.Configuration.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net90\PartManagement.Infrastructure.EFCore.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net90\PartManagement.Infrastructure.Configuration.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net90\PartManagement.Application.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net90\PartManagement.Application.Contracts.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net90\PartManagement.Domain.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net90\PartManagement.Infrastructure.EFCore.pdb

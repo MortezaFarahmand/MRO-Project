@@ -1,0 +1,16 @@
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Application.Contracts\bin\Debug\net9.0\PartManagement.Application.Contracts.deps.json
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Application.Contracts\bin\Debug\net9.0\PartManagement.Application.Contracts.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Application.Contracts\bin\Debug\net9.0\PartManagement.Application.Contracts.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Application.Contracts\bin\Debug\net9.0\0_Framework.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Application.Contracts\bin\Debug\net9.0\0_Framework.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Application.Contracts\obj\Debug\net9.0\PartManagement.Application.Contracts.csproj.AssemblyReference.cache
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Application.Contracts\obj\Debug\net9.0\PartManagement.Application.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Application.Contracts\obj\Debug\net9.0\PartManagement.Application.Contracts.AssemblyInfoInputs.cache
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Application.Contracts\obj\Debug\net9.0\PartManagement.Application.Contracts.AssemblyInfo.cs
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Application.Contracts\obj\Debug\net9.0\PartManagement.Application.Contracts.csproj.CoreCompileInputs.cache
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Application.Contracts\obj\Debug\net9.0\PartManagement.Application.Contracts.sourcelink.json
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Application.Contracts\obj\Debug\net9.0\PartMana.EC8773B8.Up2Date
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Application.Contracts\obj\Debug\net9.0\PartManagement.Application.Contracts.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Application.Contracts\obj\Debug\net9.0\refint\PartManagement.Application.Contracts.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Application.Contracts\obj\Debug\net9.0\PartManagement.Application.Contracts.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Application.Contracts\obj\Debug\net9.0\ref\PartManagement.Application.Contracts.dll

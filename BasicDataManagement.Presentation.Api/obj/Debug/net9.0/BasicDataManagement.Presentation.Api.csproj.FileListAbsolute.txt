@@ -1,0 +1,13 @@
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Presentation.Api\bin\Debug\net9.0\BasicDataManagement.Presentation.Api.deps.json
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Presentation.Api\bin\Debug\net9.0\BasicDataManagement.Presentation.Api.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Presentation.Api\bin\Debug\net9.0\BasicDataManagement.Presentation.Api.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Presentation.Api\obj\Debug\net9.0\BasicDataManagement.Presentation.Api.csproj.AssemblyReference.cache
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Presentation.Api\obj\Debug\net9.0\BasicDataManagement.Presentation.Api.GeneratedMSBuildEditorConfig.editorconfig
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Presentation.Api\obj\Debug\net9.0\BasicDataManagement.Presentation.Api.AssemblyInfoInputs.cache
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Presentation.Api\obj\Debug\net9.0\BasicDataManagement.Presentation.Api.AssemblyInfo.cs
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Presentation.Api\obj\Debug\net9.0\BasicDataManagement.Presentation.Api.csproj.CoreCompileInputs.cache
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Presentation.Api\obj\Debug\net9.0\BasicDataManagement.Presentation.Api.sourcelink.json
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Presentation.Api\obj\Debug\net9.0\BasicDataManagement.Presentation.Api.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Presentation.Api\obj\Debug\net9.0\refint\BasicDataManagement.Presentation.Api.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Presentation.Api\obj\Debug\net9.0\BasicDataManagement.Presentation.Api.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Presentation.Api\obj\Debug\net9.0\ref\BasicDataManagement.Presentation.Api.dll

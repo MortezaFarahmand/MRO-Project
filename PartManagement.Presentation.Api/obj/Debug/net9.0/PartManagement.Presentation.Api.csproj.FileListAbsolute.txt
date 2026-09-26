@@ -1,0 +1,12 @@
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Presentation.Api\bin\Debug\net9.0\PartManagement.Presentation.Api.deps.json
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Presentation.Api\bin\Debug\net9.0\PartManagement.Presentation.Api.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Presentation.Api\bin\Debug\net9.0\PartManagement.Presentation.Api.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Presentation.Api\obj\Debug\net9.0\PartManagement.Presentation.Api.GeneratedMSBuildEditorConfig.editorconfig
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Presentation.Api\obj\Debug\net9.0\PartManagement.Presentation.Api.AssemblyInfoInputs.cache
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Presentation.Api\obj\Debug\net9.0\PartManagement.Presentation.Api.AssemblyInfo.cs
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Presentation.Api\obj\Debug\net9.0\PartManagement.Presentation.Api.csproj.CoreCompileInputs.cache
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Presentation.Api\obj\Debug\net9.0\PartManagement.Presentation.Api.sourcelink.json
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Presentation.Api\obj\Debug\net9.0\PartManagement.Presentation.Api.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Presentation.Api\obj\Debug\net9.0\refint\PartManagement.Presentation.Api.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Presentation.Api\obj\Debug\net9.0\PartManagement.Presentation.Api.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Presentation.Api\obj\Debug\net9.0\ref\PartManagement.Presentation.Api.dll

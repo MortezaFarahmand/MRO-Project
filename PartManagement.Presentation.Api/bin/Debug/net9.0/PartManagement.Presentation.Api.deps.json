@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "PartManagement.Presentation.Api/1.0.0": {
+        "runtime": {
+          "PartManagement.Presentation.Api.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PartManagement.Presentation.Api/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

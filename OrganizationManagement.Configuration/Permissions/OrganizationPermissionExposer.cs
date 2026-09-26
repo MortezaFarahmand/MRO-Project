@@ -15,7 +15,7 @@ namespace OrganizationManagement.Configuration.Permissions
                          new PermissionDto(OrganizationPermissions.SearchOrganization, "SearchOrganizations"),
                          new PermissionDto(OrganizationPermissions.ListOrganization, "ListOrganizations"),
                          new PermissionDto(OrganizationPermissions.CreateOrganization, "CreateOrganizations"),
-                         new PermissionDto(OrganizationPermissions.EditOrganization, "EditOrganizations"),
+                         new PermissionDto(OrganizationPermissions.EditOrganization, "EditOrganizations")
                      }
                 },
                 {
@@ -24,7 +24,7 @@ namespace OrganizationManagement.Configuration.Permissions
                          new PermissionDto(OrganizationPermissions.SearchOrganizationGroup, "SearchOrganizationGroups"),
                          new PermissionDto(OrganizationPermissions.ListOrganizationGroup, "ListOrganizationGroups"),
                          new PermissionDto(OrganizationPermissions.CreateOrganizationGroup, "CreateOrganizationGroups"),
-                         new PermissionDto(OrganizationPermissions.EditOrganizationGroup, "EditOrganizationGroups"),
+                         new PermissionDto(OrganizationPermissions.EditOrganizationGroup, "EditOrganizationGroups")
                      }
                 }
                
