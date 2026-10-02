@@ -26,8 +26,17 @@ namespace PartManagement.Configuration.Permissions
                          new PermissionDto(PartPermissions.CreateStockType, "CreateStockTypes"),
                          new PermissionDto(PartPermissions.EditStockType, "EditStockTypes")
                      }
+                },
+                {
+                    "EquipmentType", new List<PermissionDto>
+                     {
+                         new PermissionDto(PartPermissions.SearchEquipmentType, "SearchEquipmentTypes"),
+                         new PermissionDto(PartPermissions.ListEquipmentType, "ListEquipmentTypes"),
+                         new PermissionDto(PartPermissions.CreateEquipmentType, "CreateEquipmentTypes"),
+                         new PermissionDto(PartPermissions.EditEquipmentType, "EditEquipmentTypes")
+                     }
                 }
-               
+
             };
         }
     }

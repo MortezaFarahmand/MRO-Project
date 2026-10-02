@@ -13,5 +13,11 @@
         public const int SearchStockType = 221;
         public const int CreateStockType = 222;
         public const int EditStockType = 223;
+
+        //Equipmenttype
+        public const int ListEquipmentType = 230;
+        public const int SearchEquipmentType = 231;
+        public const int CreateEquipmentType = 232;
+        public const int EditEquipmentType = 233;
     }
 }

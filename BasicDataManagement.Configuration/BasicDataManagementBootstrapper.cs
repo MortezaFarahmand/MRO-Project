@@ -3,6 +3,7 @@ using _01_MROQuery.Contracts.OrganizationGroup;
 using _01_MROQuery.Contracts.Slides;
 using _01_MROQuery.Query;
 using BasicDataManagement.Application;
+using BasicDataManagement.Application.Contracts.Airport;
 using BasicDataManagement.Application.Contracts.City;
 using BasicDataManagement.Application.Contracts.Country;
 using BasicDataManagement.Application.Contracts.Entiti;
@@ -10,6 +11,7 @@ using BasicDataManagement.Application.Contracts.PictureCategory;
 using BasicDataManagement.Application.Contracts.Province;
 using BasicDataManagement.Application.Contracts.Slide;
 using BasicDataManagement.Configuration.Permissions;
+using BasicDataManagement.Domain.AirportAgg;
 using BasicDataManagement.Domain.CityAgg;
 using BasicDataManagement.Domain.CountryAgg;
 using BasicDataManagement.Domain.EntitiAgg;
@@ -44,6 +46,9 @@ namespace BasicDataManagement.Configuration
 
             services.AddTransient<ISlideApplication, SlideApplication>();
             services.AddTransient<ISlideRepository, SlideRepository>();
+
+            services.AddTransient<IAirportApplication, AirportApplication>();
+            services.AddTransient<IAirportRepository, AirportRepository>();
 
             services.AddTransient<ISlideQuery, SlideQuery>();
             services.AddTransient<IOrganizatonGroupQuery, OrganizationGroupQuery>();

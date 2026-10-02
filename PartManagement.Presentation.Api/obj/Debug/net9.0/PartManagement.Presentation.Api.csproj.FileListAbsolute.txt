@@ -10,3 +10,11 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Presentati
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Presentation.Api\obj\Debug\net9.0\refint\PartManagement.Presentation.Api.dll
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Presentation.Api\obj\Debug\net9.0\PartManagement.Presentation.Api.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Presentation.Api\obj\Debug\net9.0\ref\PartManagement.Presentation.Api.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Presentation.Api\bin\Debug\net9.0\0_Framework.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Presentation.Api\bin\Debug\net9.0\PartManagement.Application.Contracts.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Presentation.Api\bin\Debug\net9.0\PartManagement.Domain.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Presentation.Api\bin\Debug\net9.0\PartManagement.Domain.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Presentation.Api\bin\Debug\net9.0\0_Framework.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Presentation.Api\bin\Debug\net9.0\PartManagement.Application.Contracts.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Presentation.Api\obj\Debug\net9.0\PartManagement.Presentation.Api.csproj.AssemblyReference.cache
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Presentation.Api\obj\Debug\net9.0\PartMana.F0CF0EA4.Up2Date

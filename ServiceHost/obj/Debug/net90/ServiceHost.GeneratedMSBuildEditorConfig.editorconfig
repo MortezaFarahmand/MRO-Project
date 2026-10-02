@@ -56,6 +56,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cUGFnZXNcQWNjb3VudFxSb2xlc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/ATRIYA ASP.NET PROJECT/MRO_Project/Code/MRO_Project/ServiceHost/Areas/Administration/Pages/BasicData/Airports/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cUGFnZXNcQmFzaWNEYXRhXEFpcnBvcnRzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ATRIYA ASP.NET PROJECT/MRO_Project/Code/MRO_Project/ServiceHost/Areas/Administration/Pages/BasicData/Airports/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cUGFnZXNcQmFzaWNEYXRhXEFpcnBvcnRzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ATRIYA ASP.NET PROJECT/MRO_Project/Code/MRO_Project/ServiceHost/Areas/Administration/Pages/BasicData/Airports/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cUGFnZXNcQmFzaWNEYXRhXEFpcnBvcnRzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/ATRIYA ASP.NET PROJECT/MRO_Project/Code/MRO_Project/ServiceHost/Areas/Administration/Pages/BasicData/Cities/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cUGFnZXNcQmFzaWNEYXRhXENpdGllc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -214,6 +226,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/ATRIYA ASP.NET PROJECT/MRO_Project/Code/MRO_Project/ServiceHost/Areas/Administration/Pages/Organization/Organizations/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cUGFnZXNcT3JnYW5pemF0aW9uXE9yZ2FuaXphdGlvbnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ATRIYA ASP.NET PROJECT/MRO_Project/Code/MRO_Project/ServiceHost/Areas/Administration/Pages/Part/Basic_data/EquipmentTypes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cUGFnZXNcUGFydFxCYXNpY19kYXRhXEVxdWlwbWVudFR5cGVzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ATRIYA ASP.NET PROJECT/MRO_Project/Code/MRO_Project/ServiceHost/Areas/Administration/Pages/Part/Basic_data/EquipmentTypes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cUGFnZXNcUGFydFxCYXNpY19kYXRhXEVxdWlwbWVudFR5cGVzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ATRIYA ASP.NET PROJECT/MRO_Project/Code/MRO_Project/ServiceHost/Areas/Administration/Pages/Part/Basic_data/EquipmentTypes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5pc3RyYXRpb25cUGFnZXNcUGFydFxCYXNpY19kYXRhXEVxdWlwbWVudFR5cGVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/ATRIYA ASP.NET PROJECT/MRO_Project/Code/MRO_Project/ServiceHost/Areas/Administration/Pages/Part/Stock/StockTypes/Create.cshtml]

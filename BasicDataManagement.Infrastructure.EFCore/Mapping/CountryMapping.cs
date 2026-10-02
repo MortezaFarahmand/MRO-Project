@@ -11,7 +11,7 @@ namespace BasicDataManagement.Infrastructure.EFCore.Mapping
             builder.ToTable("Countrys");
             builder.HasKey(x => x.Id);
 
-            builder.Property(x=>x.Name).HasMaxLength(256).IsRequired();
+            builder.Property(x => x.Name).HasMaxLength(256).IsRequired();
             builder.Property(x => x.Alpha2Code).HasMaxLength(100);
             builder.Property(x => x.Alpha3Code).HasMaxLength(100);
             builder.Property(x => x.UNCode).HasMaxLength(100);

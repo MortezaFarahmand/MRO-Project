@@ -1,4 +1,5 @@
-﻿using BasicDataManagement.Domain.CityAgg;
+﻿using BasicDataManagement.Domain.AirportAgg;
+using BasicDataManagement.Domain.CityAgg;
 using BasicDataManagement.Domain.CountryAgg;
 using BasicDataManagement.Domain.EntitiAgg;
 using BasicDataManagement.Domain.PictureCategoryAgg;
@@ -17,6 +18,7 @@ namespace BasicDataManagement.Infrastructure.EFCore
         public DbSet<City> Citys { get; set; }
         public DbSet<PictureCategory> PictureCategorys { get; set; }
         public DbSet<Slide> Slides { get; set; }
+        public DbSet<Airport> Airports { get; set; }
 
 
 

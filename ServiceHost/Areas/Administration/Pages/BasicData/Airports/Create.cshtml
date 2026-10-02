@@ -1,0 +1,151 @@
+﻿@model BasicDataManagement.Application.Contracts.Airport.CreateAirport
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h4 class="modal-title">Create New Airport</h4>
+</div>
+
+<form asp-page="./Index" asp-page-handler="Create"
+      method="post"
+      data-ajax="true"
+      data-callback=""
+      data-action="Refresh"
+      enctype="multipart/form-data">
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label">Name</label>
+                    <input type="text" class="form-control" asp-for="Name" >
+                    <span asp-validation-for="Ident" class="error"></span>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label asp-for="Ident" class="control-label">Ident</label>
+                    <input type="text" class="form-control" asp-for="Type" >
+                    <span asp-validation-for="Ident" class="error"></span>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label">Type</label>
+                    <input type="text" class="form-control" asp-for="Type" accept="image/*">
+                    <span asp-validation-for="Type" class="error"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Latitude_deg" class="control-label">Latitude(deg.)</label>
+                    <input type="text" class="form-control" asp-for="Latitude_deg" >
+                    <span asp-validation-for="Latitude_deg" class="error"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Longitude_deg" class="control-label">Longitude(deg.)</label>
+                    <input type="text" class="form-control" asp-for="Longitude_deg">
+                    <span asp-validation-for="Longitude_deg" class="error"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Elevation_ft" class="control-label">Elevation(ft)</label>
+                    <input type="text" class="form-control" asp-for="Elevation_ft">
+                    <span asp-validation-for="Elevation_ft" class="error"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label asp-for="Continent" class="control-label">Continent</label>
+                    <input type="text" class="form-control" asp-for="Continent">
+                    <span asp-validation-for="Continent" class="error"></span>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label asp-for="Iso_country" class="control-label">ISO Country</label>
+                    <input type="text" class="form-control" asp-for="Iso_country">
+                    <span asp-validation-for="Iso_country" class="error"></span>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label asp-for="Iso_region" class="control-label">ISO Region</label>
+                    <input type="text" class="form-control" asp-for="Iso_region">
+                    <span asp-validation-for="Iso_region" class="error"></span>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label asp-for="Municipality" class="control-label">Municipality</label>
+                    <input type="text" class="form-control" asp-for="Municipality">
+                    <span asp-validation-for="Municipality" class="error"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label asp-for="Icao_code" class="control-label">ICAO Code</label>
+                    <input type="text" class="form-control" asp-for="Icao_code">
+                    <span asp-validation-for="Icao_code" class="error"></span>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label asp-for="Iata_code" class="control-label">IATA Code</label>
+                    <input type="text" class="form-control" asp-for="Iata_code">
+                    <span asp-validation-for="Iata_code" class="error"></span>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label asp-for="Local_code" class="control-label">Local Code</label>
+                    <input type="text" class="form-control" asp-for="Local_code">
+                    <span asp-validation-for="Local_code" class="error"></span>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label asp-for="Gps_code" class="control-label">GPS Code</label>
+                    <input type="text" class="form-control" asp-for="Gps_code">
+                    <span asp-validation-for="Gps_code" class="error"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="Home_link" class="control-label">Home Link</label>
+                    <input type="text" class="form-control" asp-for="Home_link">
+                    <span asp-validation-for="Home_link" class="error"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="Wikipedia_link" class="control-label">Wikipedia Link</label>
+                    <input type="text" class="form-control" asp-for="Home_link">
+                    <span asp-validation-for="Wikipedia_link" class="error"></span>
+                </div>
+            </div>
+        </div>
+        <dev>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label asp-for="Keywords" class="control-label">Keywords</label>
+                    <input type="text" class="form-control" asp-for="Keywords">
+                    <span asp-validation-for="Keywords" class="error"></span>
+                </div>
+            </div>
+        </dev>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-info waves-effect waves-light">Create</button>
+    </div>
+</form>
