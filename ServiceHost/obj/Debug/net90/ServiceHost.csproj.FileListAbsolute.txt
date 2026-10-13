@@ -503,7 +503,6 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\compressed\1iqj0rq4mb-4dm14o4hmc.gz
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\compressed\9c9502p0yr-x0q3zqp4vz.gz
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\compressed\k9n33xrlr1-ukz1g2vv03.gz
-D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\compressed\pnimjwxohg-rm8d4uw1xt.gz
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\compressed\gwsbpyx37m-dsw5v3fbc5.gz
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\compressed\xulp2my7v6-afgyafcsqt.gz
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\compressed\uvwal74ih6-ts9nxzrnt3.gz
@@ -2590,3 +2589,4 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net90\PartManagement.Application.Contracts.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net90\PartManagement.Domain.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\bin\Debug\net90\PartManagement.Infrastructure.EFCore.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\obj\Debug\net90\compressed\pnimjwxohg-85qkwe6ad8.gz

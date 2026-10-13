@@ -17,10 +17,11 @@ namespace PartManagement.Application.StockApplications
         public OperationResult Create(CreateStockType command)
         {
             var operation = new OperationResult();
-            if(_stockTypeRepository.Exists(x => x.Name == command.Name || x.Code == command.Code || x.ColorCode == command.ColorCode))
+            if(_stockTypeRepository.Exists(x => (x.Name == command.Name || x.Code == command.Code 
+                  || x.ColorCode == command.ColorCode) && x.OrganizationId == command.OrganizationId) )
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
 
-            var stockType = new StockType(command.Name, command.Code, command.ColorCode);
+            var stockType = new StockType(command.Name, command.Code, command.ColorCode, command.OrganizationId);
             _stockTypeRepository.Create(stockType);
             _stockTypeRepository.SaveChanges();
             return operation.Succeeded();
@@ -34,11 +35,12 @@ namespace PartManagement.Application.StockApplications
             if (stockType == null)
                 return operation.Failed(ApplicationMessages.RecordNotFound);
 
-            if (_stockTypeRepository.Exists(x => x.Id == command.Id && x.Name == command.Name && x.Code == command.Code))
+            if (_stockTypeRepository.Exists(x => x.Id == command.Id && x.Name == command.Name
+                && x.Code == command.Code && x.OrganizationId == command.OrganizationId))
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
 
 
-            stockType.Edit(command.Name, command.Code, command.ColorCode);
+            stockType.Edit(command.Name, command.Code, command.ColorCode, command.OrganizationId);
             _stockTypeRepository.SaveChanges();
             return operation.Succeeded();
         }
@@ -49,7 +51,7 @@ namespace PartManagement.Application.StockApplications
             return _stockTypeRepository.Getdetails(id);
         }
 
-        public List<StockTypeViewModel> GetStockTypes(StockTypeViewModel viewModel)
+        public List<StockTypeViewModel> GetStockTypes()
         {
             return _stockTypeRepository.GetStockTypes();
         }

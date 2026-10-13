@@ -189,6 +189,9 @@
             "projectReferences": {
               "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\0_Framework\\0_Framework.csproj": {
                 "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\0_Framework\\0_Framework.csproj"
+              },
+              "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\OrganizationManagement.Application.Contracts\\OrganizationManagement.Application.Contracts.csproj": {
+                "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\OrganizationManagement.Application.Contracts\\OrganizationManagement.Application.Contracts.csproj"
               }
             }
           }
@@ -1469,6 +1472,9 @@
             "projectReferences": {
               "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\0_Framework\\0_Framework.csproj": {
                 "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\0_Framework\\0_Framework.csproj"
+              },
+              "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\OrganizationManagement.Application.Contracts\\OrganizationManagement.Application.Contracts.csproj": {
+                "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\OrganizationManagement.Application.Contracts\\OrganizationManagement.Application.Contracts.csproj"
               }
             }
           }
@@ -1764,6 +1770,9 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
+              "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\OrganizationManagement.Infrastructure.EFCore\\OrganizationManagement.Infrastructure.EFCore.csproj": {
+                "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\OrganizationManagement.Infrastructure.EFCore\\OrganizationManagement.Infrastructure.EFCore.csproj"
+              },
               "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\PartManagement.Domain\\PartManagement.Domain.csproj": {
                 "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\PartManagement.Domain\\PartManagement.Domain.csproj"
               }

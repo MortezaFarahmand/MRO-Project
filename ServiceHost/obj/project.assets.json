@@ -3608,7 +3608,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
-          "0_Framework": "1.0.0"
+          "0_Framework": "1.0.0",
+          "OrganizationManagement.Application.Contracts": "1.0.0"
         },
         "compile": {
           "bin/placeholder/AccountManagement.Application.Contracts.dll": {}
@@ -3852,7 +3853,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
-          "0_Framework": "1.0.0"
+          "0_Framework": "1.0.0",
+          "OrganizationManagement.Application.Contracts": "1.0.0"
         },
         "compile": {
           "bin/placeholder/PartManagement.Application.Contracts.dll": {}
@@ -3898,6 +3900,7 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "9.0.8",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.8",
+          "OrganizationManagement.Infrastructure.EFCore": "1.0.0",
           "PartManagement.Domain": "1.0.0"
         },
         "compile": {

@@ -18,3 +18,7 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Applica
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Application\obj\Debug\net9.0\refint\AccountManagement.Application.dll
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Application\obj\Debug\net9.0\AccountManagement.Application.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Application\obj\Debug\net9.0\ref\AccountManagement.Application.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Application\bin\Debug\net9.0\BasicDataManagement.Application.Contracts.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Application\bin\Debug\net9.0\OrganizationManagement.Application.Contracts.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Application\bin\Debug\net9.0\BasicDataManagement.Application.Contracts.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Application\bin\Debug\net9.0\OrganizationManagement.Application.Contracts.pdb

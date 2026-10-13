@@ -10,11 +10,13 @@ namespace AccountManagement.Domain.AccountAgg
         public string Password { get; private set; }
         public string Mobile { get; private set; }
         public long RoleId { get; private set; }
+        public long OrganizationId { get; private set; }
         public Role Role { get; private set; }
+        //public List<Role> PrivateAccountRoles { get; private set; }
         public string ProfilePhoto { get; private set; }
 
         public Account(string fullname, string username, string password, 
-            string mobile, long roleId, string profilePhoto)
+            string mobile, long roleId, string profilePhoto, long organizationId)
         {
             Fullname = fullname;
             Username = username;
@@ -26,16 +28,17 @@ namespace AccountManagement.Domain.AccountAgg
                 RoleId = 2;
 
             ProfilePhoto = profilePhoto;
+            OrganizationId = organizationId;
         }
 
         public void Edit(string fullname, string username, 
-            string mobile, long roleId, string profilePhoto)
+            string mobile, long roleId, string profilePhoto, long organizationId)
         {
             Fullname = fullname;
             Username = username;
             Mobile = mobile;
             RoleId = roleId;
-
+            OrganizationId = organizationId;
             if (!string.IsNullOrWhiteSpace(profilePhoto))
                 ProfilePhoto = profilePhoto;
         }

@@ -26,9 +26,8 @@ namespace _0_Framework.Application
         public void AddValidation(ClientModelValidationContext context)
         {
             context.Attributes.Add("data-val", "true");
-            context.Attributes.Add("data-val-maxFileSize", ErrorMessage);
+            context.Attributes.Add("data-val-maxFileSize", ErrorMessage ?? $"Maximum file size is {_maxFileSize} bytes.");
+            context.Attributes.Add("data-val-maxFileSize-size", _maxFileSize.ToString());
         }
-
-
     }
 }

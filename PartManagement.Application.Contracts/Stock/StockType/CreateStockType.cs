@@ -11,6 +11,9 @@ namespace PartManagement.Application.Contracts.Stock.StockType
         [Required(ErrorMessage = ValidationMessages.IsRequired)]
         public string Code { get; set; }
 
+        [Required(ErrorMessage = ValidationMessages.IsRequired)]
+        public long OrganizationId { get; set; }
+
         public string ColorCode { get; set; }
 
         public string CreationDate { get; set; }

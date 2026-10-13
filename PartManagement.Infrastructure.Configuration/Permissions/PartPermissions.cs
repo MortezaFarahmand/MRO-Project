@@ -8,6 +8,12 @@
         public const int CreatePart = 102;
         public const int EditPart = 103;
 
+        //Store
+        public const int ListStore = 210;
+        public const int SearchStore = 211;
+        public const int CreateStore = 213;
+        public const int EditStore = 214;
+
         //Stocktype
         public const int ListStockType = 220;
         public const int SearchStockType = 221;

@@ -7,7 +7,7 @@ namespace PartManagement.Application.Contracts.Stock.StockType
         OperationResult Create(CreateStockType command);
         OperationResult Edit(EditStockType command);
         EditStockType GetDetails(long id);
-        List<StockTypeViewModel> GetStockTypes(StockTypeViewModel viewModel);
+        List<StockTypeViewModel> GetStockTypes();
         List<StockTypeViewModel> Search(StockTypeSearchModel searchModel);
 
     }

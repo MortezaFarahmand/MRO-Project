@@ -28,8 +28,12 @@ namespace _0_Framework.Application
 
         public void AddValidation(ClientModelValidationContext context)
         {
-            //context.Attributes.Add("data-val", "true");
-            context.Attributes.Add("data-val-validExtentions", ErrorMessage);
+            // Tell unobtrusive validation to parse this element
+            context.Attributes.Add("data-val", "true");
+
+            // Use the standard file extensions adapter name ("fileextensions")
+            context.Attributes.Add("data-val-fileextensions", ErrorMessage ?? "Invalid file extension.");
+            context.Attributes.Add("data-val-fileextensions-extensions", string.Join(",", _validExtentions.Select(e => e.TrimStart('.'))));
         }
     }
 }

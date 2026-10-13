@@ -40,10 +40,6 @@ namespace ServiceHost
             PartManagementBootstrapper.Configure(services, connectionString);
 
 
-            services.AddTransient<IFileUploader, FileUploader>();
-            services.AddSingleton<IPasswordHasher, PasswordHasher>();
-            services.AddTransient<IFileUploader, FileUploader>();
-            services.AddTransient<IAuthHelper, AuthHelper>();
 
             services.AddSingleton(HtmlEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.Arabic));
             services.AddSingleton<IPasswordHasher, PasswordHasher>();
@@ -72,7 +68,7 @@ namespace ServiceHost
                     options.AddPolicy("AdminAera", builder =>
                     builder.RequireRole(new List<string> { Roles.Administrator, Roles.SystemUser }));
 
-                    options.AddPolicy("Organize", builder =>
+                    options.AddPolicy("organize", builder =>
                     builder.RequireRole(new List<string> { Roles.Administrator, Roles.SystemUser }));
 
                     options.AddPolicy("basicData", builder =>
@@ -81,7 +77,7 @@ namespace ServiceHost
                     options.AddPolicy("account", builder =>
                     builder.RequireRole(new List<string> { Roles.Administrator, Roles.SystemUser }));
 
-                    options.AddPolicy("Part", builder =>
+                    options.AddPolicy("part", builder =>
                    builder.RequireRole(new List<string> { Roles.Administrator, Roles.SystemUser }));
                 });
 
@@ -90,7 +86,7 @@ namespace ServiceHost
                 .AddRazorPagesOptions(options =>
                 {
                     options.Conventions.AuthorizeAreaFolder("Administration", "/", "AdminAera");
-                    options.Conventions.AuthorizeAreaFolder("Administration", "/Organization", "Organize");
+                    options.Conventions.AuthorizeAreaFolder("Administration", "/Organization", "organize");
                     options.Conventions.AuthorizeAreaFolder("Administration", "/BasicData", "basicData");
                     options.Conventions.AuthorizeAreaFolder("Administration", "/Account", "account");
                     options.Conventions.AuthorizeAreaFolder("Administration", "/Part", "part");

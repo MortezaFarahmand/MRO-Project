@@ -34,7 +34,7 @@ namespace ServiceHost.Areas.Administration.Pages.Organization.Organizations
         }
 
 
-        [NeedsPermission(OrganizationPermissions.ListOrganization)]
+        //[NeedsPermission(OrganizationPermissions.ListOrganization)]
         public void OnGet(OrganizationSearchModel searchModel)
         {
             OrganizationGroups = new SelectList(_organizationGroupApplication.GetOrganizationGroups(), "Id", "Name");

@@ -22,9 +22,9 @@ namespace ServiceHost.Areas.Administration.Pages.Part.Stock.StockType
 
 
         //[NeedsPermission(PartPermissions.SearchStockType)]
-        public void OnGet(StockTypeViewModel viewModel)
+        public void OnGet()
         {
-            StockTypes = _stockTypeApplication.GetStockTypes(viewModel);
+            StockTypes = _stockTypeApplication.GetStockTypes();
         }
 
         public IActionResult OnGetCreate()

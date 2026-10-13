@@ -24,7 +24,7 @@
                 <h3 class="panel-title">Search in Accounts</h3>
             </div>
             <div class="panel-body ">
-                <form class="form-inline" role="form" method="get">
+                <form class="form-inline" role="form" method="get" novalidate>
                     <div class="form-group">
                             <label class="sr-only " asp-for="SearchModel.Fullname"></label>
                             <input class="form-control " asp-for="SearchModel.Fullname" placeholder="Name">
@@ -44,8 +44,14 @@
                             <option value="0">-Roles-</option>
                         </select>
                     </div>
+                    <div class="form-group">
+                        <label class="sr-only" asp-for="SearchModel.OrganizationId"></label>
+                        <select class="form-control " asp-for="SearchModel.OrganizationId" asp-items="Model.Organizations">
+                            <option value="0">-Organizations-</option>
+                        </select>
+                    </div>
 
-                        <button type="submit" class="btn btn-success waves-effect waves-light m-l-10">Search</button>
+                        <button type="submit" formnovalidate class="btn btn-success waves-effect waves-light m-l-10">Search</button>
                         <a class="btn btn-primary waves-effect waves-light m-l-10" asp-page="./Index">View All</a>
                    
                 </form>
@@ -54,7 +60,7 @@
     </div>
 </div>
 
-<div class="row" id="OrganizationDiv">
+<div class="row" id="AccountDiv">
     <div class="col-md-12">
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -73,6 +79,7 @@
                                     <th>UserName</th>
                                     <th>Mobile No.</th>
                                     <th>Role</th>
+                                    <th>Organization</th>
                                     <th>Creation Date</th>
                                     <th>Operation</th>
 
@@ -91,7 +98,7 @@
                                         <td>@item.Username</td>
                                         <td>@item.Mobile</td>
                                         <td>@item.Role</td>
-                                        @* <td>@item.FormedDateGr.ToString("dd-MM-yyyy")</td> *@
+                                        <td>@item.OrganizationId</td> 
                                         <td>@item.CreationDate</td>
                                     <td >
                                             <a class="btn btn-warning waves-effect waves-light w-xs m-b-5 "

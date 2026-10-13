@@ -1,4 +1,5 @@
-﻿@model AccountManagement.Application.Contracts.Account.RegisterAccount
+﻿@using AccountManagement.Configuration.Permissions
+@model AccountManagement.Application.Contracts.Account.RegisterAccount
 @{
 }
 
@@ -51,21 +52,27 @@
         </div>
 
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6">
                 <div class="form-group">
                     <label asp-for="RoleId" class="control-label element-dir-Fa">نقش کاربر</label>
                     <select type="text" class="form-control" asp-for="RoleId"
                            asp-items='new SelectList(Model.Roles, "Id", "Name")'>
                         <option value="0">-Roles-</option>
                     </select> 
-                    @* <select asp-for="RoleId" class="form-control">
-                        <option value="1">مدیر سیستم</option>
-                        <option value="2">کاربر 1 سیستم</option>
-                    </select> *@
-
                     <span asp-validation-for="RoleId" class="error"></span>
                 </div>
             </div>
+
+            <div class="col-md-6" permission="AccountPermissions.AccountOrganizationId">
+                <div class="form-group">
+                    <label asp-for="OrganizationId" class="control-label element-dir-Fa">سازمان کاربر</label>
+                    <select type="text" class="form-control" asp-for="OrganizationId"
+                            asp-items='new SelectList(Model.Organizations, "Id", "NameEn")'>
+                        <option value="0">-Organizations-</option>
+                    </select>
+                    <span asp-validation-for="OrganizationId" class="error"></span>
+                </div>
+            </div> 
         </div>
                     
         <div class="row">

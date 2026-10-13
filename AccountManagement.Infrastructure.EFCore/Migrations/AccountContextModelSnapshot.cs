@@ -43,6 +43,9 @@ namespace AccountManagement.Infrastructure.EFCore.Migrations
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
+                    b.Property<long>("OrganizationId")
+                        .HasColumnType("bigint");
+
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasMaxLength(1000)
@@ -112,6 +115,9 @@ namespace AccountManagement.Infrastructure.EFCore.Migrations
 
                             b1.Property<int>("Code")
                                 .HasColumnType("int");
+
+                            b1.Property<long>("OrganizationId")
+                                .HasColumnType("bigint");
 
                             b1.Property<long>("RoleId")
                                 .HasColumnType("bigint");

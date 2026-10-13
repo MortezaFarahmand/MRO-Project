@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PartManagement.Domain.Basic_data.EquipmentTypeAgg;
 using PartManagement.Domain.Stock.StockTypeAgg;
+using PartManagement.Domain.Stock.StoreAgg;
 using PartManagement.Infrastructure.EFCore.Mapping;
 
 namespace PartManagement.Infrastructure.EFCore
@@ -9,6 +10,7 @@ namespace PartManagement.Infrastructure.EFCore
     {
         public DbSet<StockType> StockTypes { get; set; }
         public DbSet<EquipmentType> EquipmentTypes { get; set; }
+        public DbSet<Store> Stores { get; set; }
 
         public PartContext(DbContextOptions<PartContext> options) : base(options)
         {

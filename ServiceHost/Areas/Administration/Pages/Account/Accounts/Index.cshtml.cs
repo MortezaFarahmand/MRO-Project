@@ -1,9 +1,11 @@
 using System.Collections.Generic;
+using _0_Framework.Application;
 using AccountManagement.Application.Contracts.Account;
 using AccountManagement.Application.Contracts.Role;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using OrganizationManagement.Application.Contracts.Organization;
 
 namespace ServiceHost.Areas.Administration.Pages.Account.Accounts
 {
@@ -11,32 +13,44 @@ namespace ServiceHost.Areas.Administration.Pages.Account.Accounts
     {
         [TempData]
         public string Message { get; set; }
-        public AccountSearchModel SearchModel;
-        public List<AccountViewModel> Accounts;
-        public SelectList Roles;
+
+        [BindProperty(SupportsGet = true)]
+        public AccountSearchModel SearchModel { get; set; } = new AccountSearchModel();
+
+        public List<AccountViewModel> Accounts { get; set; }
+        public SelectList Roles { get; set; }
+        public SelectList Organizations { get; set; }
 
         private readonly IRoleApplication _roleApplication;
         private readonly IAccountApplication _accountApplication;
+        private readonly IOrganizationApplication _organizationApplication;
+        private readonly IAuthHelper _authHelper;
 
-        public IndexModel(IAccountApplication accountApplication, IRoleApplication roleApplication)
+        public IndexModel(IAccountApplication accountApplication, IRoleApplication roleApplication
+            , IOrganizationApplication organizationApplication, IAuthHelper authHelper)
         {
             _accountApplication = accountApplication;
             _roleApplication = roleApplication;
+            _organizationApplication = organizationApplication;
+            _authHelper = authHelper;
         }
 
 
 
-        public void OnGet(AccountSearchModel searchModel)
+        public void OnGet()
         {
             Roles = new SelectList(_roleApplication.List(), "Id", "Name");
-            Accounts = _accountApplication.Search(searchModel);
+            Organizations = new SelectList(_organizationApplication.GetOrganizations(), "Id", "NameEn");
+            long organizationId = _authHelper.CurrentAccountOrganizationId();
+            Accounts = _accountApplication.Search(SearchModel ?? new AccountSearchModel(), organizationId);
         }
 
         public IActionResult OnGetCreate()
         {
             var command = new RegisterAccount
             {
-                Roles = _roleApplication.List()
+                Roles = _roleApplication.List(),
+                Organizations = _organizationApplication.GetOrganizations()
             };
             return Partial("./Create", command);
         }
@@ -51,6 +65,7 @@ namespace ServiceHost.Areas.Administration.Pages.Account.Accounts
         {
             var account = _accountApplication.GetDetails(id);
             account.Roles = _roleApplication.List();
+            account.Organizations = _organizationApplication.GetOrganizations();
             return Partial("Edit", account);
         }
 

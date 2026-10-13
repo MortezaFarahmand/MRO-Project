@@ -25,12 +25,39 @@ namespace _0_Framework.Application
             if (!IsAuthenticated())
                 return result;
 
+            //var claims = _contextAccessor.HttpContext.User.Claims.ToList();
+            //result.Id = long.Parse(claims.FirstOrDefault(x => x.Type == "AccountId").Value);
+            //result.Username = claims.FirstOrDefault(x => x.Type == "Username").Value;
+            //result.RoleId = long.Parse(claims.FirstOrDefault(x => x.Type == ClaimTypes.Role).Value);
+            //result.Fullname = claims.FirstOrDefault(x => x.Type == ClaimTypes.Name).Value;
+            //result.Role = Roles.GetRoleById(result.RoleId);
+            //result.OrganizationId = long.Parse(claims.FirstOrDefault(x => x.Type == "OrganizationId").Value);
             var claims = _contextAccessor.HttpContext.User.Claims.ToList();
-            result.Id = long.Parse(claims.FirstOrDefault(x => x.Type == "AccountId").Value);
-            result.Username = claims.FirstOrDefault(x => x.Type == "Username").Value;
-            result.RoleId = long.Parse(claims.FirstOrDefault(x => x.Type == ClaimTypes.Role).Value);
-            result.Fullname = claims.FirstOrDefault(x => x.Type == ClaimTypes.Name).Value;
-            result.Role = Roles.GetRoleById(result.RoleId);
+
+            // Safely parse AccountId
+            var accountIdClaim = claims.FirstOrDefault(x => x.Type == "AccountId")?.Value;
+            result.Id = long.TryParse(accountIdClaim, out long accId) ? accId : 0; // Default to 0 if missing/invalid
+
+            // Safely get Username
+            result.Username = claims.FirstOrDefault(x => x.Type == "Username")?.Value ?? "Guest"; // Default string
+
+            // Safely parse RoleId
+            var roleIdClaim = claims.FirstOrDefault(x => x.Type == ClaimTypes.Role)?.Value;
+            result.RoleId = long.TryParse(roleIdClaim, out long rId) ? rId : 0;
+
+            // Safely get Fullname
+            result.Fullname = claims.FirstOrDefault(x => x.Type == ClaimTypes.Name)?.Value ?? "Unknown User";
+
+            // Get Role by Id (only if a valid RoleId was found)
+            if (result.RoleId >= 0)
+            {
+                result.Role = Roles.GetRoleById(result.RoleId);
+            }
+
+            // Safely parse OrganizationId (Fixes your current crash)
+            var orgIdClaim = claims.FirstOrDefault(x => x.Type == "OrganizationId")?.Value;
+            result.OrganizationId = long.TryParse(orgIdClaim, out long oId) ? oId : 0;
+
             //result.ProfilePhoto = claims.FirstOrDefault(x => x.Type == "ProfilePhoto").Value;
 
             return result;
@@ -67,6 +94,13 @@ namespace _0_Framework.Application
             return null;
         }
 
+        public long CurrentAccountOrganizationId()
+        {
+            return IsAuthenticated()
+                ? long.Parse(_contextAccessor.HttpContext.User.Claims.First(x => x.Type == "OrganizationId")?.Value)
+                : 0;
+        }
+
         public bool IsAuthenticated()
         {
             return _contextAccessor.HttpContext.User.Identity.IsAuthenticated;
@@ -86,6 +120,7 @@ namespace _0_Framework.Application
                 new Claim(ClaimTypes.Name, account.Fullname),
                 new Claim(ClaimTypes.Role, account.RoleId.ToString()),
                 new Claim("Username", account.Username), // Or Use ClaimTypes.NameIdentifier
+                new Claim("OrganizationId", account.OrganizationId.ToString()),
                 //new Claim("ProfilePhoto", account.ProfilePhoto)
                 new Claim("permissions", permissions)
                 //new Claim("Mobile", account.Mobile)
@@ -107,5 +142,6 @@ namespace _0_Framework.Application
         {
             _contextAccessor.HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
         }
+
     }
 }

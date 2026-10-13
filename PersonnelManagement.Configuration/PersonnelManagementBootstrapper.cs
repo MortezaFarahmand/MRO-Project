@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using _0_Framework.Infrastructure;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using PersonnelManagement.Application;
 using PersonnelManagement.Application.Contracts.Person;
@@ -25,7 +26,7 @@ namespace PersonManagement.Configuration
             services.AddTransient<IPersonPictureApplication, PersonPictureApplication>();
             services.AddTransient<IPersonPictureRepository, PersonPictureRepository>();
 
-
+            //services.AddTransient<IPermissionExposer, PersonnelPermissionExposer>();
 
             services.AddDbContext<PersonnelContext>(x => x.UseSqlServer(connectionString));
         }

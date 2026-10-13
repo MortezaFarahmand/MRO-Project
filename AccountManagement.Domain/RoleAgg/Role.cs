@@ -8,6 +8,8 @@ namespace AccountManagement.Domain.RoleAgg
         public string  Name { get; private set; }
         public List<Permission> Permissions { get; private set; }
         public List<Account> Accounts { get; private set; }
+        //public long PrivateAccountId { get; private set; }
+        //public Account PrivateAccount { get; private set; }
 
         protected Role() 
         { 

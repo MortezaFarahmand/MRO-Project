@@ -1,6 +1,7 @@
 ﻿using _0_Framework.Application;
 using AccountManagement.Application.Contracts.Role;
 using Microsoft.AspNetCore.Http;
+using OrganizationManagement.Application.Contracts.Organization;
 using System.ComponentModel.DataAnnotations;
 
 namespace AccountManagement.Application.Contracts.Account
@@ -24,5 +25,8 @@ namespace AccountManagement.Application.Contracts.Account
 
         public IFormFile ProfilePhoto { get; set; }
         public List<RoleViewModel> Roles { get; set; }
+
+        public long OrganizationId { get; set; }
+        public List<OrganizationViewModel> Organizations { get; set; }
     }
 }

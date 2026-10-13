@@ -12,5 +12,6 @@ namespace _0_Framework.Application
         List<int> GetPermissions();
         long CurrentAccountId();
         string CurrentAccountMobile();
+        long CurrentAccountOrganizationId();
     }
 }

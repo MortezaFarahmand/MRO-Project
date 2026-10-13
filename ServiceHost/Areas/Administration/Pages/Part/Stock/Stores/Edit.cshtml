@@ -1,0 +1,176 @@
+﻿@model PartManagement.Application.Contracts.Stock.Store.EditStore
+@{
+}
+
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+    <h4 class="modal-title">Edit "@Model.Name" Store </h4>
+</div>
+
+<form asp-page="./Index" asp-page-handler="Edit"
+      method="post"
+      data-ajax="true"
+      data-callback=""
+      data-action="Refresh"
+      enctype="multipart/form-data">
+
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label">Name</label>
+                    <input type="text" class="form-control" asp-for="Name">
+                    <span asp-validation-for="Name" class="error"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group  element-dir-Fa">
+                    <label asp-for="NameFa" class="control-label">نام</label>
+                    <input type="text" class="form-control" asp-for="NameFa">
+                    <span asp-validation-for="NameFa" class="error"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Code" class="control-label">Abbraviation Code(4-digit)</label>
+                    <input type="text" class="form-control" asp-for="Code">
+                    <span asp-validation-for="Code" class="error"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label asp-for="Description" class="control-label">Description</label>
+                    <textarea class="form-control autogrow" asp-for="Description"
+                              style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 75px;"></textarea>
+                    <span asp-validation-for="Description" class="error"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="OrganizationId" class="control-label">Organization</label>
+                    <select type="text" class="form-control" asp-for="OrganizationId"
+                            asp-items='new SelectList(Model.Organizations, "Id", "NameEn")'>
+                        <option value="0">-Organization-</option>
+                    </select>
+                    <span asp-validation-for="OrganizationId" class="error"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="StockTypeId" class="control-label">Store Type</label>
+                    <select type="text" class="form-control" asp-for="StockTypeId"
+                            asp-items='new SelectList(Model.StockTypes, "Id", "Name")'>
+                        <option value="0">-Store type-</option>
+                    </select>
+                    <span asp-validation-for="StockTypeId" class="error"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="ColorCode" class="control-label">Color Code #</label>
+                    <input type="text" class="form-control" asp-for="ColorCode">
+                    <span asp-validation-for="ColorCode" class="error"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="DefaultValueOfStockMovement" class="control-label">Default value of stock Movement</label>
+                    <input type="text" class="form-control" asp-for="DefaultValueOfStockMovement">
+                    <span asp-validation-for="DefaultValueOfStockMovement" class="error"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="CityId" class="control-label">City</label>
+                    <select type="text" class="form-control" asp-for="CityId"
+                            asp-items='new SelectList(Model.StockTypes, "Id", "Name")'>
+                        <option value="0">-City-</option>
+                    </select>
+                    <span asp-validation-for="CityId" class="error"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="StationId" class="control-label">Airport station</label>
+                    <select type="text" class="form-control" asp-for="StationId"
+                            asp-items='new SelectList(Model.StockTypes, "Id", "Name")'>
+                        <option value="0">-Airport station's-</option>
+                    </select>
+                    <span asp-validation-for="StationId" class="error"></span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="ParentId" class="control-label">Parent of store</label>
+                    <select type="text" class="form-control" asp-for="ParentId"
+                            asp-items='new SelectList(Model.StockTypes, "Id", "Name")'>
+                        <option value="0">-Store's-</option>
+                    </select>
+                    <span asp-validation-for="ParentId" class="error"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="ProviderId" class="control-label">Provider</label>
+                    <select type="text" class="form-control" asp-for="ProviderId"
+                            asp-items='new SelectList(Model.Organizations, "Id", "Name")'>
+                        <option value="0">-Provider's-</option>
+                    </select>
+                    <span asp-validation-for="ProviderId" class="error"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label class="form-check-label" asp-for="NotToSearchBySpecificStore">Unable to search by specific store</label>
+                    <div>
+                        <div class="radio radio-info radio-inline">
+                            <input type="radio" asp-for="NotToSearchBySpecificStore" value="false" class="form-control">
+                            <label asp-for="NotToSearchBySpecificStore">No searchable</label>
+                        </div>
+                        <div class="radio radio-info radio-inline">
+                            <input type="radio" asp-for="NotToSearchBySpecificStore" value="true" class="form-control">
+                            <label asp-for="NotToSearchBySpecificStore">searchable</label>
+                        </div>
+                    </div>
+                    <span asp-validation-for="NotToSearchBySpecificStore" class="error"></span>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <label class="form-check-label" asp-for="AutomaticRequestOrder">Automatic Request Order</label>
+                <div class="form-group">
+                    <input class="form-check-input" type="checkbox" asp-for="AutomaticRequestOrder">
+                </div>
+            </div>
+        </div>
+    
+        <input type="hidden" asp-for="Id" value="@Model.Id" />
+
+    </div>
+
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-info waves-effect waves-light">Edit</button>
+    </div>
+</form>
