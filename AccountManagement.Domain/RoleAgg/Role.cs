@@ -6,10 +6,8 @@ namespace AccountManagement.Domain.RoleAgg
     public class Role : EntityBase
     {
         public string  Name { get; private set; }
-        public List<Permission> Permissions { get; private set; }
-        public List<Account> Accounts { get; private set; }
-        //public long PrivateAccountId { get; private set; }
-        //public Account PrivateAccount { get; private set; }
+        public List<Permission> Permissions { get; private set; } = new();
+        public ICollection<AccountRole> AccountRoles { get; private set; }
 
         protected Role() 
         { 
@@ -19,7 +17,6 @@ namespace AccountManagement.Domain.RoleAgg
         public Role(string name, List<Permission> permissions)
         {
             Name = name;
-            Accounts = new List<Account>();
             Permissions = permissions;
         }
 

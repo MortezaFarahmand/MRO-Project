@@ -1,5 +1,4 @@
 ﻿using _0_Framework.Domain;
-using AccountManagement.Domain.RoleAgg;
 
 namespace AccountManagement.Domain.AccountAgg
 {
@@ -9,43 +8,54 @@ namespace AccountManagement.Domain.AccountAgg
         public string Username { get; private set; }
         public string Password { get; private set; }
         public string Mobile { get; private set; }
-        public long RoleId { get; private set; }
+        //public long RoleId { get; private set; }
         public long OrganizationId { get; private set; }
-        public Role Role { get; private set; }
-        //public List<Role> PrivateAccountRoles { get; private set; }
+        //public Role Role { get; private set; }
+        public ICollection<AccountRole> AccountRoles { get; private set; } 
         public string ProfilePhoto { get; private set; }
 
+        public Account()
+        {
+            
+        }
         public Account(string fullname, string username, string password, 
-            string mobile, long roleId, string profilePhoto, long organizationId)
+            string mobile, string profilePhoto, long organizationId )
         {
             Fullname = fullname;
             Username = username;
             Password = password;
             Mobile = mobile;
-            RoleId = roleId;
-
-            if(roleId == 0)
-                RoleId = 2;
-
             ProfilePhoto = profilePhoto;
             OrganizationId = organizationId;
         }
 
         public void Edit(string fullname, string username, 
-            string mobile, long roleId, string profilePhoto, long organizationId)
+            string mobile, string profilePhoto, long organizationId)
         {
             Fullname = fullname;
             Username = username;
             Mobile = mobile;
-            RoleId = roleId;
             OrganizationId = organizationId;
             if (!string.IsNullOrWhiteSpace(profilePhoto))
                 ProfilePhoto = profilePhoto;
+            //AccountRoles = accountRoles;
         }
 
         public void ChangePassword(string password)
         {
             Password = password;
+        }
+
+        public void AddRoles(AccountRole accountRole)
+        {
+            AccountRoles.Add(accountRole);
+        }
+
+        public void SetRoles(List<AccountRole> roles)
+        {
+            AccountRoles.Clear();
+            foreach (var r in roles)
+                AccountRoles.Add(r);
         }
     }
 }

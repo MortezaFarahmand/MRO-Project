@@ -18,7 +18,7 @@ namespace ServiceHost.Areas.Administration.Pages.Account.Accounts
         public AccountSearchModel SearchModel { get; set; } = new AccountSearchModel();
 
         public List<AccountViewModel> Accounts { get; set; }
-        public SelectList Roles { get; set; }
+        //public SelectList Roles { get; set; }
         public SelectList Organizations { get; set; }
 
         private readonly IRoleApplication _roleApplication;
@@ -39,7 +39,7 @@ namespace ServiceHost.Areas.Administration.Pages.Account.Accounts
 
         public void OnGet()
         {
-            Roles = new SelectList(_roleApplication.List(), "Id", "Name");
+            //Roles = new SelectList(_roleApplication.List(), "Id", "Name");
             Organizations = new SelectList(_organizationApplication.GetOrganizations(), "Id", "NameEn");
             long organizationId = _authHelper.CurrentAccountOrganizationId();
             Accounts = _accountApplication.Search(SearchModel ?? new AccountSearchModel(), organizationId);
@@ -47,11 +47,9 @@ namespace ServiceHost.Areas.Administration.Pages.Account.Accounts
 
         public IActionResult OnGetCreate()
         {
-            var command = new RegisterAccount
-            {
-                Roles = _roleApplication.List(),
-                Organizations = _organizationApplication.GetOrganizations()
-            };
+            var command = new RegisterAccount();
+            command.Roles = _roleApplication.List(); // مهم: List باید PermissionCodeNames رو پر کرده باشه
+            command.Organizations = _organizationApplication.GetOrganizations();
             return Partial("./Create", command);
         }
 

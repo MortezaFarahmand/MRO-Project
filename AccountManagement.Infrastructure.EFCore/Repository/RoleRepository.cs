@@ -39,6 +39,8 @@ namespace AccountManagement.Infrastructure.EFCore.Repository
             {
                 Id = x.Id,
                 Name = x.Name,
+                PermissionCodeNames = x.Permissions
+                    .Select(p => new PermissionDto(p.Code, p.Name)).ToList(),
                 CreationDate = x.CreationDate.ToShortDateString(),
             }).ToList();
         }

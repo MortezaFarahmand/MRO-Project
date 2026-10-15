@@ -5,7 +5,7 @@ namespace _0_Framework.Application
     public class AuthViewModel
     {
         public long Id { get; set; }
-        public long RoleId { get; set; }
+        public List<long> RoleIds { get; set; } = new();
         public string Role { get; set; }
         public string Fullname { get; set; }
         public string Username { get; set; }
@@ -13,17 +13,17 @@ namespace _0_Framework.Application
         public string ProfilePhoto { get; set; }
         public long OrganizationId { get; set; }
 
-        public List<int> Permissions { get; set; }
+        public List<int> Permissions { get; set; } = new();
 
         public AuthViewModel()
         {
         }
 
-        public AuthViewModel(long id, long roleId, string fullname, string username
+        public AuthViewModel(long id, List<long> roleIds, string fullname, string username
             , List<int> permissions, long organizationId)
         {
             Id = id;
-            RoleId = roleId;
+            RoleIds = roleIds;
             Fullname = fullname;
             Username = username;
             //ProfilePhoto = profilePhoto;

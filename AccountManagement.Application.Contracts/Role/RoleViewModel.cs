@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using _0_Framework.Infrastructure;
 
 namespace AccountManagement.Application.Contracts.Role
 {
@@ -11,5 +7,7 @@ namespace AccountManagement.Application.Contracts.Role
         public long Id { get; set; }
         public string Name { get; set; }
         public string CreationDate { get; set; }
+        public List<long> PermissionIds { get; set; } = new();
+        public List<PermissionDto> PermissionCodeNames { get; set; } = new();
     }
 }

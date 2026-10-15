@@ -45,34 +45,41 @@ namespace AccountManagement.Application
         public OperationResult Register(RegisterAccount command)
         {
             var operation = new OperationResult();
-            long accountOrganizationId = 0 ;
             if (_accountRepository.Exists(x => x.Username == command.Username || x.Mobile == command.Mobile))
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
 
             // اگر آیدی سازمان اکانت وارد شده صفر باشد یعنی ادمین کل سیستم وارد شده باشد، همان آیدی که در
             // سلکت لیست سازمان در پنجره ایجاد اکانت انتخاب شده باشد ثبت خواهد شد، در غیر این صورت آیدی سازمان
             // اکانتی که ایجاد میشود همان آیدی سازمان اکانتی است که قصد ایجاد اکانت را دارد ثبت خواهد شد.
+            //...
+            long accountOrganizationId;
             if (_authHelper.CurrentAccountOrganizationId() == 0)
-                accountOrganizationId = command.OrganizationId; 
-            accountOrganizationId = _authHelper.CurrentAccountOrganizationId();
+                accountOrganizationId = command.OrganizationId;
+            else
+                accountOrganizationId = _authHelper.CurrentAccountOrganizationId();
 
             var password = _passwordHasher.Hash(command.Password);
             var path = $"profilePhotos";
             var picturePath = _fileUploader.Upload(command.ProfilePhoto, path);
 
-            var account = new Account(command.Fullname, command.Username, password, command.Mobile, 
-                command.RoleId, picturePath, accountOrganizationId);
+            
 
+            var account = new Account(command.Fullname, command.Username, password, command.Mobile, 
+                 picturePath, accountOrganizationId);
+            // مهم: سینک نقش‌ها
+            foreach (var roleId in command.RoleIds)
+            {
+                var accountRole = new AccountRole(account.Id, roleId);
+                account.AddRoles(accountRole);
+            }
             _accountRepository.Create(account);
             _accountRepository.SaveChanges();
             return operation.Succeeded();
-
         }
 
         public OperationResult Edit(EditAccount command)
         {
             var operation = new OperationResult();
-            long accountOrganizationId = 0;
             var account = _accountRepository.Get(command.Id);
             if (account == null)
                 return operation.Failed(ApplicationMessages.RecordNotFound);
@@ -80,15 +87,24 @@ namespace AccountManagement.Application
             if (_accountRepository.Exists(x => (x.Username == command.Username || x.Mobile == command.Mobile) && x.Id != command.Id))
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
             //...
+            long accountOrganizationId;
             if (_authHelper.CurrentAccountOrganizationId() == 0)
-                 accountOrganizationId = command.OrganizationId;
-            accountOrganizationId = _authHelper.CurrentAccountOrganizationId();
+                accountOrganizationId = command.OrganizationId;
+            else
+                accountOrganizationId = _authHelper.CurrentAccountOrganizationId();
+
 
             var path = $"profilePhotos";
             var picturePath = _fileUploader.Upload(command.ProfilePhoto, path);
 
-            account.Edit(command.Fullname, command.Username, command.Mobile, command.RoleId, picturePath
-                , accountOrganizationId);
+            // مهم: سینک نقش‌ها
+            var accountRoles = command.RoleIds
+                .Select(roleId => new AccountRole(account.Id, roleId))
+                .ToList();
+            account.SetRoles(accountRoles);
+
+            account.Edit(command.Fullname, command.Username, command.Mobile,
+                picturePath, accountOrganizationId);
 
             _accountRepository.SaveChanges();
 
@@ -110,13 +126,21 @@ namespace AccountManagement.Application
             var result = _passwordHasher.Check(account.Password, command.Password);
             if(!result.Verified)
                 return operation.Failed(ApplicationMessages.WrongUserPass);
-        
-            var permissions = _roleRepository.Get(account.RoleId)
-                .Permissions
-                .Select(x => x.Code)
+
+            // SelectMany پهن کردن دسترسی همه نقش‌ها توی یه لیست
+            // DistinctBy حذف تکراری‌ها
+            // Select تبدیل به DTO برای نمایش
+            var permissions = account.AccountRoles
+                .SelectMany(ar => ar.Role.Permissions)
+                .DistinctBy(p => p.Code)
+                .Select(p => p.Code)
                 .ToList();
 
-            var authViewModel = new AuthViewModel(account.Id, account.RoleId,account.Fullname, 
+            var roleIds = account.AccountRoles
+                .Select(ar => ar.RoleId)
+                .ToList();
+
+            var authViewModel = new AuthViewModel(account.Id, roleIds ,account.Fullname, 
                 account.Username, permissions, account.OrganizationId);
             _authHelper.Signin(authViewModel);
             return operation.Succeeded();

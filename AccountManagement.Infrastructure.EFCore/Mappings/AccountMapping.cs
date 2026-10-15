@@ -1,4 +1,5 @@
 ﻿using AccountManagement.Domain.AccountAgg;
+using AccountManagement.Domain.RoleAgg;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -17,8 +18,6 @@ namespace AccountManagement.Infrastructure.EFCore.Mappings
             builder.Property(x => x.Mobile).HasMaxLength(20).IsRequired();
             builder.Property(x => x.ProfilePhoto).HasMaxLength(500).IsRequired();
             builder.Property(x => x.OrganizationId).IsRequired();
-
-            builder.HasOne(x => x.Role).WithMany(x => x.Accounts).HasForeignKey(x => x.RoleId);
         }
     }
 }

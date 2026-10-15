@@ -16,10 +16,11 @@ namespace AccountManagement.Infrastructure.EFCore.Mappings
 
             builder.OwnsMany(x => x.Permissions, navigationBuilder =>
             {
-                navigationBuilder.HasKey(x => x.Id);
                 navigationBuilder.ToTable("RolePermissions");
-                navigationBuilder.Ignore(x => x.Name);
-                navigationBuilder.WithOwner(x => x.Role);
+                navigationBuilder.HasKey(x => x.Id);
+                navigationBuilder.WithOwner(x => x.Role).HasForeignKey(x => x.RoleId);
+                navigationBuilder.Property(x => x.Code).IsRequired();
+                navigationBuilder.Property(x => x.Name).HasMaxLength(100);
             });
         }
     }

@@ -2892,6 +2892,7 @@ wwwroot\Img\profilePhotos\2026-09-11-16-31-42-AdobeStock_283536436_Preview.jpeg
 wwwroot\Img\profilePhotos\2026-09-12-18-01-55-AdobeStock_218990661_Preview.jpeg
 wwwroot\Img\profilePhotos\2026-10-11-13-08-05-AdobeStock_105252393.jpeg
 wwwroot\Img\profilePhotos\2026-10-11-13-09-47-AdobeStock_105252393.jpeg
+wwwroot\Img\profilePhotos\2026-10-12-14-58-38-61cf0885fb6a107a23fc1342_Aircraft-Maintenance-p-1080.jpeg
 wwwroot\Img\ProfilePictureOfPersons\FarahmandAx.jpg
 wwwroot\Img\SliderPictures\2026-08-30-08-49-41-AdobeStock_330643987.jpeg
 wwwroot\Img\SliderPictures\2026-08-30-08-49-41-AdobeStock_340782183.jpeg

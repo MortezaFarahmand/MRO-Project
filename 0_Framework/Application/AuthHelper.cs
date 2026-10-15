@@ -25,40 +25,41 @@ namespace _0_Framework.Application
             if (!IsAuthenticated())
                 return result;
 
-            //var claims = _contextAccessor.HttpContext.User.Claims.ToList();
-            //result.Id = long.Parse(claims.FirstOrDefault(x => x.Type == "AccountId").Value);
-            //result.Username = claims.FirstOrDefault(x => x.Type == "Username").Value;
-            //result.RoleId = long.Parse(claims.FirstOrDefault(x => x.Type == ClaimTypes.Role).Value);
-            //result.Fullname = claims.FirstOrDefault(x => x.Type == ClaimTypes.Name).Value;
-            //result.Role = Roles.GetRoleById(result.RoleId);
-            //result.OrganizationId = long.Parse(claims.FirstOrDefault(x => x.Type == "OrganizationId").Value);
             var claims = _contextAccessor.HttpContext.User.Claims.ToList();
 
-            // Safely parse AccountId
             var accountIdClaim = claims.FirstOrDefault(x => x.Type == "AccountId")?.Value;
-            result.Id = long.TryParse(accountIdClaim, out long accId) ? accId : 0; // Default to 0 if missing/invalid
+            result.Id = long.TryParse(accountIdClaim, out long accId) ? accId : 0;
 
-            // Safely get Username
-            result.Username = claims.FirstOrDefault(x => x.Type == "Username")?.Value ?? "Guest"; // Default string
-
-            // Safely parse RoleId
-            var roleIdClaim = claims.FirstOrDefault(x => x.Type == ClaimTypes.Role)?.Value;
-            result.RoleId = long.TryParse(roleIdClaim, out long rId) ? rId : 0;
-
-            // Safely get Fullname
+            result.Username = claims.FirstOrDefault(x => x.Type == "Username")?.Value ?? "Guest";
             result.Fullname = claims.FirstOrDefault(x => x.Type == ClaimTypes.Name)?.Value ?? "Unknown User";
 
-            // Get Role by Id (only if a valid RoleId was found)
-            if (result.RoleId >= 0)
-            {
-                result.Role = Roles.GetRoleById(result.RoleId);
-            }
-
-            // Safely parse OrganizationId (Fixes your current crash)
             var orgIdClaim = claims.FirstOrDefault(x => x.Type == "OrganizationId")?.Value;
             result.OrganizationId = long.TryParse(orgIdClaim, out long oId) ? oId : 0;
 
-            //result.ProfilePhoto = claims.FirstOrDefault(x => x.Type == "ProfilePhoto").Value;
+            // نقش‌ها: اول کلیم جدید roles (آرایه JSON)، اگر نبود fallback به ClaimTypes.Role تکی قدیمی
+            result.RoleIds = new List<long>();
+            var rolesJson = claims.FirstOrDefault(x => x.Type == "roles")?.Value;
+            if (!string.IsNullOrWhiteSpace(rolesJson))
+            {
+                try { result.RoleIds = JsonConvert.DeserializeObject<List<long>>(rolesJson) ?? new List<long>(); }
+                catch { result.RoleIds = new List<long>(); }
+            }
+            if (result.RoleIds.Count == 0)
+            {
+                // سازگاری با کوکی قدیمی + چند Claim تکراری Role
+                foreach (var rc in claims.Where(x => x.Type == ClaimTypes.Role).Select(x => x.Value))
+                {
+                    if (long.TryParse(rc, out long rId))
+                        result.RoleIds.Add(rId);
+                }
+            }
+
+            // دسترسی‌ها
+            result.Permissions = GetPermissions();
+
+            // برای نمایش (فقط نقش اول)
+            if (result.RoleIds.Count > 0)
+                result.Role = Roles.GetRoleById(result.RoleIds[0]);
 
             return result;
         }
@@ -68,23 +69,31 @@ namespace _0_Framework.Application
             if (!IsAuthenticated())
                 return new List<int>();
 
-            var permissions = _contextAccessor.HttpContext.User.Claims.FirstOrDefault(x => x.Type == "permissions")
-                ?.Value;
-            return JsonConvert.DeserializeObject<List<int>>(permissions);
+            var permissions = _contextAccessor.HttpContext.User.Claims.FirstOrDefault(x => x.Type == "permissions")?.Value;
+            if (string.IsNullOrWhiteSpace(permissions))
+                return new List<int>();
+            try
+            {
+                return JsonConvert.DeserializeObject<List<int>>(permissions) ?? new List<int>();
+            }
+            catch
+            {
+                return new List<int>();
+            }
         }
 
         public long CurrentAccountId()
         {
-            return IsAuthenticated()
-                ? long.Parse(_contextAccessor.HttpContext.User.Claims.First(x => x.Type == "AccountId")?.Value)
-                : 0;
+            if (!IsAuthenticated()) return 0;
+            var v = _contextAccessor.HttpContext.User.Claims.FirstOrDefault(x => x.Type == "AccountId")?.Value;
+            return long.TryParse(v, out long id) ? id : 0;
         }
 
         public string CurrentAccountMobile()
         {
-            return IsAuthenticated()
-                ? _contextAccessor.HttpContext.User.Claims.First(x => x.Type == "Mobile")?.Value
-                : "";
+            if (!IsAuthenticated()) return "";
+            // کلیم Mobile در Signin ست نمی‌شود، پس خالی برمی‌گردانیم تا خطا ندهد
+            return _contextAccessor.HttpContext.User.Claims.FirstOrDefault(x => x.Type == "Mobile")?.Value ?? "";
         }
 
         public string CurrentAccountRole()
@@ -94,37 +103,55 @@ namespace _0_Framework.Application
             return null;
         }
 
+        public List<long> CurrentAccountRoles()
+        {
+            if (!IsAuthenticated()) return new List<long>();
+            var claims = _contextAccessor.HttpContext.User.Claims.ToList();
+            var rolesJson = claims.FirstOrDefault(x => x.Type == "roles")?.Value;
+            if (!string.IsNullOrWhiteSpace(rolesJson))
+            {
+                try
+                {
+                    var list = JsonConvert.DeserializeObject<List<long>>(rolesJson);
+                    if (list != null && list.Count > 0) return list;
+                }
+                catch { }
+            }
+            return claims.Where(x => x.Type == ClaimTypes.Role)
+                .Select(x => long.TryParse(x.Value, out long r) ? (long?)r : null)
+                .Where(x => x.HasValue).Select(x => x.Value).ToList();
+        }
+
         public long CurrentAccountOrganizationId()
         {
-            return IsAuthenticated()
-                ? long.Parse(_contextAccessor.HttpContext.User.Claims.First(x => x.Type == "OrganizationId")?.Value)
-                : 0;
+            if (!IsAuthenticated()) return 0;
+            var v = _contextAccessor.HttpContext.User.Claims.FirstOrDefault(x => x.Type == "OrganizationId")?.Value;
+            return long.TryParse(v, out long id) ? id : 0;
         }
 
         public bool IsAuthenticated()
         {
-            return _contextAccessor.HttpContext.User.Identity.IsAuthenticated;
-            //var claims = _contextAccessor.HttpContext.User.Claims.ToList();
-            ////if (claims.Count > 0)
-            ////    return true;
-            ////return false;
-            //return claims.Count > 0;
+            return _contextAccessor.HttpContext?.User?.Identity?.IsAuthenticated == true;
         }
 
         public void Signin(AuthViewModel account)
         {
-            var permissions = JsonConvert.SerializeObject(account.Permissions);  
+            var permissions = JsonConvert.SerializeObject(account.Permissions ?? new List<int>());
+            var roles = JsonConvert.SerializeObject(account.RoleIds ?? new List<long>());
+
             var claims = new List<Claim>
             {
                 new Claim("AccountId", account.Id.ToString()),
-                new Claim(ClaimTypes.Name, account.Fullname),
-                new Claim(ClaimTypes.Role, account.RoleId.ToString()),
-                new Claim("Username", account.Username), // Or Use ClaimTypes.NameIdentifier
+                new Claim(ClaimTypes.Name, account.Fullname ?? ""),
+                new Claim("Username", account.Username ?? ""),
                 new Claim("OrganizationId", account.OrganizationId.ToString()),
-                //new Claim("ProfilePhoto", account.ProfilePhoto)
-                new Claim("permissions", permissions)
-                //new Claim("Mobile", account.Mobile)
+                new Claim("permissions", permissions),
+                new Claim("roles", roles)
             };
+
+            // برای سازگاری با کدهای قدیمی که فقط ClaimTypes.Role تکی می‌خوانند
+            foreach (var roleId in (account.RoleIds ?? new List<long>()))
+                claims.Add(new Claim(ClaimTypes.Role, roleId.ToString()));
 
             var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
 
@@ -142,6 +169,5 @@ namespace _0_Framework.Application
         {
             _contextAccessor.HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
         }
-
     }
 }

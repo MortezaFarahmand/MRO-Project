@@ -13,5 +13,6 @@ namespace _0_Framework.Application
         long CurrentAccountId();
         string CurrentAccountMobile();
         long CurrentAccountOrganizationId();
+        List<long> CurrentAccountRoles();
     }
 }

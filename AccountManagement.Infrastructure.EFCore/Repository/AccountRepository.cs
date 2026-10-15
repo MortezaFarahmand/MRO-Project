@@ -1,5 +1,6 @@
 ﻿using _0_Framework.Infrastructure;
 using AccountManagement.Application.Contracts.Account;
+using AccountManagement.Application.Contracts.Role;
 using AccountManagement.Domain.AccountAgg;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,32 +16,86 @@ namespace AccountManagement.Infrastructure.EFCore.Repository
 
         public Account GetBy(string username)
         {
-            return _context.Accounts.FirstOrDefault(x => x.Username == username);
+            return _context.Accounts
+                .Include(x => x.AccountRoles)
+                    .ThenInclude(ar => ar.Role)
+                        .ThenInclude(r => r.Permissions)
+                .FirstOrDefault(x => x.Username == username);
+            //return _context.Accounts.FirstOrDefault(x => x.Username == username);
         }
-
+        
         public EditAccount GetDetails(long id)
         {
-            return _context.Accounts.Select(x => new EditAccount
+            //var account = _context.Accounts
+            //.Include(ar => ar.AccountRoles.Where(x => x.AccountId == id) )
+            //    .ThenInclude(r => r.Role)
+            //        .ThenInclude(p => p.Permissions)
+
+            var account = _context.Accounts
+                .Include(x => x.AccountRoles)
+                    .ThenInclude(ar => ar.Role)
+                        .ThenInclude(r => r.Permissions)
+                .FirstOrDefault(x => x.Id == id);
+
+            return new EditAccount
             {
-                Id = x.Id,  
-                Fullname = x.Fullname,
-                Mobile = x.Mobile,
-                RoleId = x.RoleId,
-                Username = x.Username,
-                OrganizationId = x.OrganizationId
-            }).FirstOrDefault(x => x.Id == id);
+                Id = account.Id,
+                Fullname = account.Fullname,
+                Username = account.Username,
+                Mobile = account.Mobile,
+                OrganizationId = account.OrganizationId,
+                RoleIds = account.AccountRoles.Select(ar => ar.RoleId).ToList(),
+                // لیست سطح دوم، فقط برای نمایش
+                MappedAccountPermissions = account.AccountRoles
+                    .SelectMany(ar => ar.Role.Permissions)
+                        .DistinctBy(p => p.Code)
+                    .Select(p => new PermissionDto(p.Code, p.Name))
+                    .ToList()
+            };
+
+            //.Select(x => new EditAccount
+            //{
+            //    Id = x.Id,  
+            //    Fullname = x.Fullname,
+            //    Mobile = x.Mobile,
+            //    Username = x.Username,
+            //    OrganizationId = x.OrganizationId,
+            //    Roles = x.AccountRoles.Select(ar => new RoleViewModel 
+            //    { 
+            //        Id = ar.RoleId,
+            //        Name = ar.Role.Name,
+            //        // پر کردن مستقیم لیست سطح دوم بدون نیاز به متد خارجی
+            //        PermissionIds = ar.Role.Permissions.Select(p => p.Id).ToList()
+            //    }).ToList()
+
+            //}).FirstOrDefault(x => x.Id == id);
+
+            //return account;
         }
 
         public List<AccountViewModel> Search(AccountSearchModel searchModel, long organizationId)
         {
-            var query = _context.Accounts.Include(x => x.Role).Select(x => new AccountViewModel
+            var query = _context.Accounts
+                .Include(ar => ar.AccountRoles)
+                .ThenInclude(r => r.Role)
+                    .ThenInclude(p => p.Permissions)
+                .Select(x => new AccountViewModel
             {
                 Id = x.Id,
                 Fullname = x.Fullname,
                 Mobile = x.Mobile,
                 ProfilePhoto = x.ProfilePhoto,
-                Role = x.Role.Name,
-                RoleId = x.Role.Id,
+                Roles = x.AccountRoles.Select(ar => new RoleViewModel
+                {
+                    Id = ar.RoleId,
+                    Name = ar.Role.Name,
+                    // پر کردن مستقیم لیست سطح دوم بدون نیاز به متد خارجی
+                    PermissionCodeNames = ar.Role.Permissions.Select(p => new PermissionDto
+                    {
+                        Code = p.Code,
+                        Name = p.Name 
+                    }).ToList()
+                }).ToList(),
                 Username = x.Username,
                 CreationDate = x.CreationDate.ToShortDateString(),
                 OrganizationId = x.OrganizationId
@@ -55,8 +110,8 @@ namespace AccountManagement.Infrastructure.EFCore.Repository
             if (!string.IsNullOrWhiteSpace(searchModel.Mobile))
                 query = query.Where(x => x.Mobile.Contains(searchModel.Mobile));
 
-            if (searchModel.RoleId != 0)
-                query = query.Where(x => x.RoleId == searchModel.RoleId);
+            //if (searchModel.RoleId != 0)
+            //    query = query.Where(x => x.RoleId == searchModel.RoleId);
 
             // در این شرط در صورتی که آی دی سازمان اکانت وارد شده صفر باشد دسترسی به تمام اکانت هایی که آیدی آنها غیر صفر است دارد و
             // در غیر این صورت یعنی زمانی که آیدی سازمان اکانت وارد شده صفر نباشد فقط اکانت هایی را میتواند مشاهده کند که 

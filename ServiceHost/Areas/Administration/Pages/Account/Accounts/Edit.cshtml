@@ -1,8 +1,8 @@
 ﻿@using AccountManagement.Configuration.Permissions
+@using System.Text.Json
 @model AccountManagement.Application.Contracts.Account.EditAccount
 @{
 }
-
 
 <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="form-group ">
+                <div class="form-group">
                     <label asp-for="Username" class="control-label element-dir-Fa">نام کاربری</label>
                     <input type="text" class="form-control" asp-for="Username">
                     <span asp-validation-for="Username" class="error"></span>
@@ -43,32 +43,18 @@
                     <span asp-validation-for="Mobile" class="error"></span>
                 </div>
             </div>
-        </div>
-
-        <div class="row">
-                <div class="col-md-6" permission="AccountPermissions.AccountOrganizationId">
-                    <div class="form-group">
-                        <label asp-for="OrganizationId" class="control-label element-dir-Fa">نقش کاربر</label>
-                        <select type="text" class="form-control" asp-for="OrganizationId"
-                                asp-items='new SelectList(Model.Organizations, "Id", "NameEn")'>
-                            <option value="0">-Organizations-</option>
-                        </select>
-                        <span asp-validation-for="OrganizationId" class="error"></span>
-                    </div>
-                </div>
-                <div class="col-md-6" permission="AccountPermissions.AccountOrganizationId">
-                    <div class="form-group">
-                        <label asp-for="OrganizationId" class="control-label element-dir-Fa">سازمان کاربر</label>
-                        <select type="text" class="form-control" asp-for="OrganizationId"
-                                asp-items='new SelectList(Model.Organizations, "Id", "NameEn")'>
-                            <option value="0">-Organizations-</option>
-                        </select>
-                        <span asp-validation-for="OrganizationId" class="error"></span>
-                    </div>
+            <div class="col-md-6" permission="AccountPermissions.AccountOrganizationId">
+                <div class="form-group">
+                    <label asp-for="OrganizationId" class="control-label element-dir-Fa">سازمان کاربر</label>
+                    <select type="text" class="form-control" asp-for="OrganizationId"
+                            asp-items='new SelectList(Model.Organizations, "Id", "NameEn")'>
+                        <option value="0">-Organizations-</option>
+                    </select>
+                    <span asp-validation-for="OrganizationId" class="error"></span>
                 </div>
             </div>
+        </div>
 
-      
         <div class="row">
             <div class="col-md-12">
                 <div class="form-group">
@@ -79,13 +65,103 @@
             </div>
         </div>
 
+        @* ===== انتخاب نقش (وظیفه) با چک‌باکس ===== *@
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="control-label element-dir-Fa">نقش‌های کاربر (وظایف)</label>
+                    <div class="role-checkbox-list" style="border:1px solid #eee; border-radius:6px; padding:10px; max-height:180px; overflow-y:auto;">
+                        @if (Model.Roles == null || !Model.Roles.Any())
+                        {
+                            <span class="text-danger">هیچ نقشی تعریف نشده.</span>
+                        }
+                        else
+                        {
+                            @foreach (var role in Model.Roles)
+                            {
+                                var isChecked = Model.RoleIds != null && Model.RoleIds.Contains(role.Id);
+                                <div class="checkbox" style="margin:6px 0;">
+                                    <label style="font-weight:normal; cursor:pointer;">
+                                        <input type="checkbox"
+                                               name="RoleIds"
+                                               value="@role.Id"
+                                               class="role-checkbox"
+                                               @(isChecked ? "checked" : "") />
+                                        <strong>@role.Name</strong>
+                                        <small class="text-muted">(@(role.PermissionCodeNames?.Count ?? 0) دسترسی)</small>
+                                    </label>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <input type="hidden" asp-for="Id" value="@Model.Id"/>
+        @* ===== نمایش زنده دسترسی‌ها ===== *@
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-info" style="margin-bottom:0;">
+                    <div class="panel-heading">
+                        <h3 class="panel-title element-dir-Fa">دسترسی‌های منتج شده از نقش‌ها (زنده)</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div id="livePermissionsEdit" style="display:flex; flex-wrap:wrap; gap:6px;"></div>
+                        <small id="noPermMsgEdit" class="text-muted element-dir-Fa">هنوز نقشی انتخاب نشده.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <input type="hidden" asp-for="Id" value="@Model.Id" />
     </div>
-
 
     <div class="modal-footer">
         <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
         <button type="submit" class="btn btn-info waves-effect waves-light">Edit</button>
     </div>
 </form>
+
+<script>
+    (function () {
+        var rolePermissions = @Html.Raw(JsonSerializer.Serialize(
+                        (Model.Roles ?? new List<AccountManagement.Application.Contracts.Role.RoleViewModel>())
+                                .ToDictionary(r => r.Id.ToString(), r => r.PermissionCodeNames ?? new List<_0_Framework.Infrastructure.PermissionDto>())
+                ));
+
+        function getPerms(roleId) {
+            return rolePermissions[roleId] || rolePermissions[String(roleId)] || [];
+        }
+
+        function refreshLive() {
+            var checkedIds = $(".role-checkbox:checked").map(function () { return $(this).val(); }).get();
+            var uniq = {};
+            checkedIds.forEach(function (id) {
+                getPerms(id).forEach(function (p) {
+                    var code = (p.Code !== undefined ? p.Code : p.code);
+                    var name = (p.Name !== undefined ? p.Name : p.name);
+                    if (code !== undefined && !uniq[code]) {
+                        uniq[code] = name || code;
+                    }
+                });
+            });
+
+            var box = $("#livePermissionsEdit");
+            box.empty();
+            var keys = Object.keys(uniq);
+            if (keys.length === 0) {
+                $("#noPermMsgEdit").show();
+            } else {
+                $("#noPermMsgEdit").hide();
+                keys.forEach(function (code) {
+                    var badge = $('<span class="label label-success" style="font-size:12px; padding:5px 10px; display:inline-block;"></span>');
+                    badge.text(uniq[code] + " (" + code + ")");
+                    box.append(badge);
+                });
+            }
+        }
+
+        $(document).off("change.roleLiveEdit").on("change.roleLiveEdit", ".role-checkbox", refreshLive);
+        refreshLive();
+    })();
+</script>

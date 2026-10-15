@@ -56,9 +56,6 @@ namespace AccountManagement.Infrastructure.EFCore.Migrations
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
-                    b.Property<long>("RoleId")
-                        .HasColumnType("bigint");
-
                     b.Property<string>("Username")
                         .IsRequired()
                         .HasMaxLength(100)
@@ -66,9 +63,30 @@ namespace AccountManagement.Infrastructure.EFCore.Migrations
 
                     b.HasKey("Id");
 
+                    b.ToTable("Accounts", (string)null);
+                });
+
+            modelBuilder.Entity("AccountManagement.Domain.AccountAgg.AccountRole", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<long>("AccountId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("RoleId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AccountId");
+
                     b.HasIndex("RoleId");
 
-                    b.ToTable("Accounts", (string)null);
+                    b.ToTable("AccountRoles", (string)null);
                 });
 
             modelBuilder.Entity("AccountManagement.Domain.RoleAgg.Role", b =>
@@ -92,13 +110,21 @@ namespace AccountManagement.Infrastructure.EFCore.Migrations
                     b.ToTable("Roles", (string)null);
                 });
 
-            modelBuilder.Entity("AccountManagement.Domain.AccountAgg.Account", b =>
+            modelBuilder.Entity("AccountManagement.Domain.AccountAgg.AccountRole", b =>
                 {
+                    b.HasOne("AccountManagement.Domain.AccountAgg.Account", "Account")
+                        .WithMany("AccountRoles")
+                        .HasForeignKey("AccountId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("AccountManagement.Domain.RoleAgg.Role", "Role")
-                        .WithMany("Accounts")
+                        .WithMany("AccountRoles")
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Account");
 
                     b.Navigation("Role");
                 });
@@ -115,6 +141,11 @@ namespace AccountManagement.Infrastructure.EFCore.Migrations
 
                             b1.Property<int>("Code")
                                 .HasColumnType("int");
+
+                            b1.Property<string>("Name")
+                                .IsRequired()
+                                .HasMaxLength(100)
+                                .HasColumnType("nvarchar(100)");
 
                             b1.Property<long>("OrganizationId")
                                 .HasColumnType("bigint");
@@ -137,9 +168,14 @@ namespace AccountManagement.Infrastructure.EFCore.Migrations
                     b.Navigation("Permissions");
                 });
 
+            modelBuilder.Entity("AccountManagement.Domain.AccountAgg.Account", b =>
+                {
+                    b.Navigation("AccountRoles");
+                });
+
             modelBuilder.Entity("AccountManagement.Domain.RoleAgg.Role", b =>
                 {
-                    b.Navigation("Accounts");
+                    b.Navigation("AccountRoles");
                 });
 #pragma warning restore 612, 618
         }
