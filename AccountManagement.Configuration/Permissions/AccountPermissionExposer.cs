@@ -18,7 +18,14 @@ namespace AccountManagement.Configuration.Permissions
                          new PermissionDto(AccountPermissions.AccountOrganizationId, "AccountOrganizationId"),
                      }
                 },
-                
+                {
+                     "role", new List<PermissionDto>
+                     {
+                         new PermissionDto(AccountPermissions.ListRoles, "ListRoles"),
+                         new PermissionDto(AccountPermissions.CreateRoles, "CreateRoles"),
+                         new PermissionDto(AccountPermissions.EditRoles, "EditRoles"),
+                     }
+                },
 
             };
         }

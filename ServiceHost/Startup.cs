@@ -77,6 +77,9 @@ namespace ServiceHost
                     options.AddPolicy("account", builder =>
                     builder.RequireRole(new List<string> { Roles.Administrator, Roles.SystemUser }));
 
+                    options.AddPolicy("role", builder =>
+                    builder.RequireRole(new List<string> { Roles.Administrator, Roles.SystemUser }));
+
                     options.AddPolicy("part", builder =>
                    builder.RequireRole(new List<string> { Roles.Administrator, Roles.SystemUser }));
                 });

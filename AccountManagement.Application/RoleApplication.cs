@@ -1,23 +1,20 @@
 ﻿using _0_Framework.Application;
+using _0_Framework.Infrastructure;
 using AccountManagement.Application.Contracts.Role;
 using AccountManagement.Domain.RoleAgg;
-using Microsoft.EntityFrameworkCore.Metadata;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AccountManagement.Application
 {
     public class RoleApplication : IRoleApplication
     {
         private readonly IRoleRepository _roleRepository;
-        public RoleApplication(IRoleRepository roleRepository)
+        private readonly IEnumerable<IPermissionExposer> _exposers;
+
+        public RoleApplication(IRoleRepository roleRepository, IEnumerable<IPermissionExposer> exposers)
         {
             _roleRepository = roleRepository;
+            _exposers = exposers;
         }
-
 
         public OperationResult Create(CreateRole command)
         {
@@ -25,7 +22,8 @@ namespace AccountManagement.Application
             if (_roleRepository.Exists(x => x.Name == command.Name))
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
 
-            var role = new Role(command.Name, new List<Permission>()); 
+            var permissions = MapCodesToPermissions(command.Permissions);
+            var role = new Role(command.Name, permissions);
             _roleRepository.Create(role);
             _roleRepository.SaveChanges();
             return operation.Succeeded();
@@ -35,28 +33,38 @@ namespace AccountManagement.Application
         {
             var operation = new OperationResult();
             var role = _roleRepository.Get(command.Id);
-            if(role == null)
+            if (role == null)
                 return operation.Failed(ApplicationMessages.RecordNotFound);
 
             if (_roleRepository.Exists(x => x.Name == command.Name && x.Id != command.Id))
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
 
-            var permission = new List<Permission>();
-            command.Permissions.ForEach(code => permission.Add(new Permission(code)));
-
-            role.Edit(command.Name, permission);
+            var permissions = MapCodesToPermissions(command.Permissions);
+            role.Edit(command.Name, permissions);
             _roleRepository.SaveChanges();
             return operation.Succeeded();
         }
 
-        public EditRole GetDetails(long id)
+        private List<Permission> MapCodesToPermissions(List<int> codes)
         {
-            return _roleRepository.GetDetails(id);
+            var result = new List<Permission>();
+            if (codes == null) return result;
+
+            // جمع کردن همه دسترسی‌های همه ماژول‌ها از همه Exposer ها
+            var all = _exposers
+                .SelectMany(x => x.Expose().SelectMany(kv => kv.Value))
+                .ToList();
+
+            foreach (var code in codes.Distinct())
+            {
+                var dto = all.FirstOrDefault(x => x.Code == code);
+                var name = dto?.Name ?? code.ToString();
+                result.Add(new Permission(code, name));
+            }
+            return result;
         }
 
-        public List<RoleViewModel> List()
-        {
-            return _roleRepository.List();
-        }
+        public EditRole GetDetails(long id) => _roleRepository.GetDetails(id);
+        public List<RoleViewModel> List() => _roleRepository.List();
     }
 }
