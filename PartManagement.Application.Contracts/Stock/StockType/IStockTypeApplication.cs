@@ -1,4 +1,5 @@
 ﻿using _0_Framework.Application;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor;
 
 namespace PartManagement.Application.Contracts.Stock.StockType
 {
@@ -7,8 +8,10 @@ namespace PartManagement.Application.Contracts.Stock.StockType
         OperationResult Create(CreateStockType command);
         OperationResult Edit(EditStockType command);
         EditStockType GetDetails(long id);
-        List<StockTypeViewModel> GetStockTypes();
-        List<StockTypeViewModel> Search(StockTypeSearchModel searchModel);
+        CreateStockType GetStockTypesBy();
+
+        List<StockTypeViewModel> GetStockTypesBy(long? organizationId);
+        List<StockTypeViewModel> Search(StockTypeSearchModel searchModel, long? organizationId);
 
     }
 }

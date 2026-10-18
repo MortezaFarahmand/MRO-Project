@@ -5,7 +5,7 @@ namespace OrganizationManagement.Domain.OrganizationPictureAgg
 {
     public class OrganizationPicture : EntityBase
     {
-        public long OrganizationId  { get; private set; }
+        public long OrganizationId { get; private set; }
         public string Picture { get; private set; }
         public string PictureAlt { get; private set; }
         public string PictureTitle { get; private set; }
@@ -32,7 +32,7 @@ namespace OrganizationManagement.Domain.OrganizationPictureAgg
 
         public void Remove()
         {
-            IsRemoved=true;
+            IsRemoved = true;
         }
 
         public void Restore()

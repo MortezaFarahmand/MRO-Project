@@ -7,18 +7,25 @@ namespace PartManagement.Application.StockApplications
     public class StockTypeApplication : IStockTypeApplication
     {
         private readonly IStockTypeRepository _stockTypeRepository;
+        private readonly IAuthHelper _authHelper;
 
-        public StockTypeApplication(IStockTypeRepository stockTypeRepository)
+
+        public StockTypeApplication(IStockTypeRepository stockTypeRepository, IAuthHelper authHelper)
         {
             _stockTypeRepository = stockTypeRepository;
+            _authHelper = authHelper;
         }
 
 
         public OperationResult Create(CreateStockType command)
         {
             var operation = new OperationResult();
-            if(_stockTypeRepository.Exists(x => (x.Name == command.Name || x.Code == command.Code 
-                  || x.ColorCode == command.ColorCode) && x.OrganizationId == command.OrganizationId) )
+            var orgId = _authHelper.CurrentAccountOrganizationId();
+            if (orgId != 0)
+                command.OrganizationId = orgId;
+
+            if (_stockTypeRepository.Exists(x => (x.Name == command.Name || x.Code == command.Code
+                  || x.ColorCode == command.ColorCode) && x.OrganizationId == command.OrganizationId))
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
 
             var stockType = new StockType(command.Name, command.Code, command.ColorCode, command.OrganizationId);
@@ -30,6 +37,10 @@ namespace PartManagement.Application.StockApplications
         public OperationResult Edit(EditStockType command)
         {
             var operation = new OperationResult();
+            var orgId = _authHelper.CurrentAccountOrganizationId();
+            if (orgId != 0)
+                command.OrganizationId = orgId;
+
             var stockType = _stockTypeRepository.Get(command.Id);
 
             if (stockType == null)
@@ -51,14 +62,19 @@ namespace PartManagement.Application.StockApplications
             return _stockTypeRepository.Getdetails(id);
         }
 
-        public List<StockTypeViewModel> GetStockTypes()
+        public List<StockTypeViewModel> GetStockTypesBy(long? organizationId)
         {
-            return _stockTypeRepository.GetStockTypes();
+            return _stockTypeRepository.GetStockTypesBy(organizationId);
         }
 
-        public List<StockTypeViewModel> Search(StockTypeSearchModel searchModel)
+        public CreateStockType GetStockTypesBy()
         {
-            return _stockTypeRepository.Search(searchModel);
+            return new CreateStockType();
+        }
+
+        public List<StockTypeViewModel> Search(StockTypeSearchModel searchModel, long? organizationId)
+        {
+            return _stockTypeRepository.Search(searchModel, organizationId);
         }
     }
 }

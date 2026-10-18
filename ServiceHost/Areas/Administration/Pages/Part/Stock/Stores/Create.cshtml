@@ -1,4 +1,5 @@
-﻿@model PartManagement.Application.Contracts.Stock.Store.CreateStore
+﻿@using System.Text.Json
+@model PartManagement.Application.Contracts.Stock.Store.CreateStore
 @{
 }
 
@@ -151,3 +152,49 @@
         <button type="submit" class="btn btn-info waves-effect waves-light">Create</button>
     </div>
 </form>
+
+
+<script>
+    (function () {
+        // نقش -> لیست نوع انبار ‌ها (از سرور)
+        var rolePermissions = @Html.Raw(JsonSerializer.Serialize(
+                                                (Model.StockTypes ?? new List<PartManagement.Application.Contracts.Stock.StockType.StockTypeViewModel>())
+                                                                .ToDictionary(st => st.Id.ToString(), st => st.Name.ToString())
+                                ));
+
+        function getPerms(roleId) {
+            return rolePermissions[roleId] || rolePermissions[String(roleId)] || [];
+        }
+
+        function refreshLive() {
+            var checkedIds = $(".role-checkbox:checked").map(function () { return $(this).val(); }).get();
+            var uniq = {};
+            checkedIds.forEach(function (id) {
+                getPerms(id).forEach(function (p) {
+                    var code = (p.Code !== undefined ? p.Code : p.code);
+                    var name = (p.Name !== undefined ? p.Name : p.name);
+                    if (code !== undefined && !uniq[code]) {
+                        uniq[code] = name || code;
+                    }
+                });
+            });
+
+            var box = $("#livePermissions");
+            box.empty();
+            var keys = Object.keys(uniq);
+            if (keys.length === 0) {
+                $("#noPermMsg").show();
+            } else {
+                $("#noPermMsg").hide();
+                keys.forEach(function (code) {
+                    var badge = $('<span class="label label-success" style="font-size:12px; padding:5px 10px; display:inline-block;"></span>');
+                    badge.text(uniq[code] + " (" + code + ")");
+                    box.append(badge);
+                });
+            }
+        }
+
+        $(document).off("change.roleLiveCreate").on("change.roleLiveCreate", ".role-checkbox", refreshLive);
+        refreshLive();
+    })();
+</script>

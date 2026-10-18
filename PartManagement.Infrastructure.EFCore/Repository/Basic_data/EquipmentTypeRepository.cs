@@ -15,7 +15,8 @@ namespace PartManagement.Infrastructure.EFCore.Repository.Basic_data
 
         public EditEquipmentType Getdetails(long id)
         {
-            return _context.EquipmentTypes.Select(x => new EditEquipmentType() {
+            return _context.EquipmentTypes.Select(x => new EditEquipmentType()
+            {
                 Id = x.Id,
                 Name = x.Name,
                 Description = x.Description,

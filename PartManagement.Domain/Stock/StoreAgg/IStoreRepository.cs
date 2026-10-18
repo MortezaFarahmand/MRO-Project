@@ -7,9 +7,8 @@ namespace PartManagement.Domain.Stock.StoreAgg
     {
 
         EditStore GetDetails(long id);
-        List<StoreViewModel> GetStoresByOrganizationId(StoreViewModel storeViewModel,long organizationId);
+        Store GetStoresBy(long organizationId);
 
-        List<StoreViewModel> Search(StoreSearchModel searchModel);
-
+        List<StoreViewModel> Search(StoreSearchModel searchModel, long? organizationId);
     }
 }

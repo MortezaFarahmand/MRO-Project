@@ -18,11 +18,11 @@ namespace BasicDataManagement.Application
         public OperationResult Create(CreateCity command)
         {
             var operation = new OperationResult();
-            if(_cityRepository.Exists(x => x.Name == command.Name)) 
+            if (_cityRepository.Exists(x => x.Name == command.Name))
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
 
             var slug = command.Slug.Slugify();
-            var city = new City(command.Name, command.DialCode, 
+            var city = new City(command.Name, command.DialCode,
                 command.MetaDescription, slug, command.Keywords, command.ProvinceId);
             _cityRepository.Create(city);
             _cityRepository.SaveChanges();
@@ -63,6 +63,6 @@ namespace BasicDataManagement.Application
             return _cityRepository.Search(searchModel);
         }
 
-       
+
     }
 }

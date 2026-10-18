@@ -23,7 +23,7 @@ namespace PersonnelManagement.Domain.PersonPictureAgg
         }
 
 
-        public PersonPicture(string picture, string title, string text, string remark, 
+        public PersonPicture(string picture, string title, string text, string remark,
             long pictureCategoryId, long personId)
         {
             if (!string.IsNullOrWhiteSpace(picture))
@@ -37,11 +37,11 @@ namespace PersonnelManagement.Domain.PersonPictureAgg
             PersonId = personId;
         }
 
-        public void Edit(string picture, string title, string text, string remark, 
+        public void Edit(string picture, string title, string text, string remark,
             long pictureCategoryId, long personId)
         {
-            if(!string.IsNullOrWhiteSpace(picture))
-               Picture = picture;
+            if (!string.IsNullOrWhiteSpace(picture))
+                Picture = picture;
 
             Title = title;
             Text = text;

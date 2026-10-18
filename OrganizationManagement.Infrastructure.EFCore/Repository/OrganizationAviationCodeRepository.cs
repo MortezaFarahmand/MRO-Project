@@ -20,17 +20,17 @@ namespace OrganizationManagement.Infrastructure.EFCore.Repository
 
         public EditOrganizationAviationCode GetDetails(long id)
         {
-            return _context.OrganizationAviationCodes.Select(x=>new EditOrganizationAviationCode
+            return _context.OrganizationAviationCodes.Select(x => new EditOrganizationAviationCode
             {
-                Id=x.Id,
-                ICAO=x.ICAO,
-                IATA=x.IATA,
-                CallSign=x.CallSign,
-                CivilAutority=x.CivilAutority,
-                Comment=x.Comment,
-                CountryId=x.CountryId,
-                Description=x.Description,
-            }).FirstOrDefault(x=>x.Id == id);
+                Id = x.Id,
+                ICAO = x.ICAO,
+                IATA = x.IATA,
+                CallSign = x.CallSign,
+                CivilAutority = x.CivilAutority,
+                Comment = x.Comment,
+                CountryId = x.CountryId,
+                Description = x.Description,
+            }).FirstOrDefault(x => x.Id == id);
         }
 
         public List<OrganizationAviationCodeViewModel> GetOrganizationAviationCodes()
@@ -45,21 +45,21 @@ namespace OrganizationManagement.Infrastructure.EFCore.Repository
 
         public List<OrganizationAviationCodeViewModel> Search(OrganizationAviationCodeSearchModel searchModel)
         {
-            var countrys = _basicDatacontext.Countrys.Select(c => new {c.Id, c.Name}).ToList();
-           var query = _context.OrganizationAviationCodes
-                //.Include(x=>x.Countries)
-                .Select(x => new OrganizationAviationCodeViewModel
-            {
-                Id = x.Id,
-                ICAO = x.ICAO,
-                IATA = x.IATA,
-                CivilAutority = x.CivilAutority,
-                CountryId = x.CountryId,
-                //Country = x.Countries.Name,
-                Description = x.Description,
-                    CallSign = x.CallSign,
-                    IsEnabled = x.IsEnabled
-            });
+            var countrys = _basicDatacontext.Countrys.Select(c => new { c.Id, c.Name }).ToList();
+            var query = _context.OrganizationAviationCodes
+                 //.Include(x=>x.Countries)
+                 .Select(x => new OrganizationAviationCodeViewModel
+                 {
+                     Id = x.Id,
+                     ICAO = x.ICAO,
+                     IATA = x.IATA,
+                     CivilAutority = x.CivilAutority,
+                     CountryId = x.CountryId,
+                     //Country = x.Countries.Name,
+                     Description = x.Description,
+                     CallSign = x.CallSign,
+                     IsEnabled = x.IsEnabled
+                 });
 
             if (!string.IsNullOrWhiteSpace(searchModel.ICAO))
                 query = query.Where(x => x.ICAO.Contains(searchModel.ICAO));
@@ -68,10 +68,10 @@ namespace OrganizationManagement.Infrastructure.EFCore.Repository
                 query = query.Where(x => x.CivilAutority.Contains(searchModel.CivilAutority));
 
             if (!string.IsNullOrWhiteSpace(searchModel.Description))
-                query=query.Where(x => x.Description.Contains(searchModel.Description));
+                query = query.Where(x => x.Description.Contains(searchModel.Description));
 
             if (searchModel.CountryId > 0)
-                query = query.Where(x=> x.CountryId == searchModel.CountryId);
+                query = query.Where(x => x.CountryId == searchModel.CountryId);
 
             var organizationAviationCode = query.OrderByDescending(x => x.Id).ToList();
 
@@ -79,7 +79,7 @@ namespace OrganizationManagement.Infrastructure.EFCore.Repository
             organizationAviationCode.ForEach
                 (o => o.Country = countrys.FirstOrDefault(x => x.Id == o.CountryId)?.Name);
             //////////////////
-            
+
             return organizationAviationCode;
 
         }

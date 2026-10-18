@@ -19,9 +19,9 @@ namespace ServiceHost
         {
             if (file == null) return "";
 
-            var directoryPath = $"{_webHostEnvironment.WebRootPath}//Img//{path}" ;
+            var directoryPath = $"{_webHostEnvironment.WebRootPath}//Img//{path}";
 
-            if (!Directory.Exists(directoryPath)) 
+            if (!Directory.Exists(directoryPath))
                 Directory.CreateDirectory(directoryPath);
 
             var fileName = $"{DateTime.Now.ToFileName()}-{file.FileName}";
@@ -30,7 +30,7 @@ namespace ServiceHost
             using var output = File.Create(filePath);
             file.CopyTo(output);
 
-            return $"{path}/{fileName}"; 
+            return $"{path}/{fileName}";
         }
     }
 }

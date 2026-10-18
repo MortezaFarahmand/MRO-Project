@@ -3,6 +3,6 @@ namespace OrganizationManagement.Application.Contracts.OrganizationPicture
 {
     public class OrganizationPictureSearchModel
     {
-        public long OrganizationId { get; set; }    
+        public long OrganizationId { get; set; }
     }
 }

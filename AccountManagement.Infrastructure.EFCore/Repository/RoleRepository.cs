@@ -17,7 +17,8 @@ namespace AccountManagement.Infrastructure.EFCore.Repository
 
         public EditRole GetDetails(long id)
         {
-            var role = _accountContext.Roles.Select(x => new EditRole {
+            var role = _accountContext.Roles.Select(x => new EditRole
+            {
                 Id = x.Id,
                 Name = x.Name,
                 MappedPermissions = MapPermissions(x.Permissions)
@@ -33,7 +34,7 @@ namespace AccountManagement.Infrastructure.EFCore.Repository
             return permissions.Select(x => new PermissionDto(x.Code, x.Name)).ToList();
         }
 
-        public List<RoleViewModel> List()
+        public List<RoleViewModel> GetRoles()
         {
             return _accountContext.Roles.Select(x => new RoleViewModel
             {

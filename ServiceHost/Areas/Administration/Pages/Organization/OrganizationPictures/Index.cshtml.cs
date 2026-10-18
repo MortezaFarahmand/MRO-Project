@@ -50,7 +50,7 @@ namespace ServiceHost.Areas.Administration.Pages.Organization.OrganizationPictur
         public IActionResult OnGetEdit(long id)
         {
             var organizationPicture = _organizationPictureApplication.GetDetails(id);
-            organizationPicture.Organizations = _organizationApplication.GetOrganizations(); 
+            organizationPicture.Organizations = _organizationApplication.GetOrganizations();
             return Partial("Edit", organizationPicture);
         }
 
@@ -62,8 +62,8 @@ namespace ServiceHost.Areas.Administration.Pages.Organization.OrganizationPictur
 
         public IActionResult OnGetRemove(long id)
         {
-            var result = _organizationPictureApplication.Remove(id); 
-            if(result.IsSucceeded)
+            var result = _organizationPictureApplication.Remove(id);
+            if (result.IsSucceeded)
                 return RedirectToPage("./Index");
             Message = result.Message;
             return RedirectToPage("./Index");

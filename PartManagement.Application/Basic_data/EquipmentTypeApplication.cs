@@ -18,7 +18,7 @@ namespace PartManagement.Application.Basic_data
         public OperationResult Create(CreateEquipmentType command)
         {
             var operation = new OperationResult();
-            if(_equipmentTypeRepository.Exists(x => x.Name == command.Name || x.Code == command.Code || x.ColorCode == command.ColorCode)) 
+            if (_equipmentTypeRepository.Exists(x => x.Name == command.Name || x.Code == command.Code || x.ColorCode == command.ColorCode))
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
 
             var equipmentType = new EquipmentType(command.Name, command.Code, command.Description,
@@ -32,9 +32,9 @@ namespace PartManagement.Application.Basic_data
         public OperationResult Edit(EditEquipmentType command)
         {
             var operation = new OperationResult();
-            var equipmentType = _equipmentTypeRepository.Get(command.Id);  
+            var equipmentType = _equipmentTypeRepository.Get(command.Id);
 
-            if(equipmentType != null)
+            if (equipmentType != null)
                 return operation.Failed(ApplicationMessages.RecordNotFound);
 
             if (_equipmentTypeRepository.Exists(x => x.Id == command.Id && x.Name == command.Name && x.Code == command.Code))

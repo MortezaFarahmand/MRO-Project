@@ -18,12 +18,12 @@ namespace ServiceHost
 
         public void OnPageHandlerExecuted(PageHandlerExecutedContext context)
         {
-            
+
         }
 
         public void OnPageHandlerExecuting(PageHandlerExecutingContext context)
         {
-            var handlerPermission = 
+            var handlerPermission =
                 (NeedsPermissionAttribute)context.HandlerMethod.MethodInfo
                 .GetCustomAttribute(typeof(NeedsPermissionAttribute));
 
@@ -39,7 +39,7 @@ namespace ServiceHost
 
         public void OnPageHandlerSelected(PageHandlerSelectedContext context)
         {
-            
+
         }
     }
 }

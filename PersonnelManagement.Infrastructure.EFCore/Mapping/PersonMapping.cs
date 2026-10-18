@@ -30,7 +30,7 @@ namespace PersonnelManagement.Infrastructure.EFCore.Mapping
             builder.Property(x => x.IDCartNo).HasMaxLength(255);
             //builder.Property(x => x.AddressId).HasMaxLength(255);
             builder.Property(x => x.FatherName).HasMaxLength(255);
-            builder.Property(x => x.MobileNo1).HasMaxLength(255); 
+            builder.Property(x => x.MobileNo1).HasMaxLength(255);
             builder.Property(x => x.MobileNo2).HasMaxLength(255);
             builder.Property(x => x.PhoneNo).HasMaxLength(255);
             builder.Property(x => x.MailBoxAddress1).HasMaxLength(255);

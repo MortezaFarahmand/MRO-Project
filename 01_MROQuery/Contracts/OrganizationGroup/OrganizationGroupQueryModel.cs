@@ -3,7 +3,7 @@ namespace _01_MROQuery.Contracts.OrganizationGroup
 {
     public class OrganizationGroupQueryModel
     {
-        public long Id { get; set; }    
+        public long Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public string Picture { get; set; }

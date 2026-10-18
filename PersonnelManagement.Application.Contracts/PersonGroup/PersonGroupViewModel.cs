@@ -6,6 +6,6 @@ namespace PersonnelManagement.Application.Contracts.PersonGroup
         public long Id { get; set; }
         public string Description { get; set; }
         public string Remark { get; set; }
-        public bool IsActive    { get; set; }
+        public bool IsActive { get; set; }
     }
 }

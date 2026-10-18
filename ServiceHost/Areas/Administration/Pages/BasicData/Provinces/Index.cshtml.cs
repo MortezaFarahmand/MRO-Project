@@ -50,7 +50,7 @@ namespace ServiceHost.Areas.Administration.Pages.BasicData.Provinces
         public IActionResult OnGetEdit(long id)
         {
             var province = _provinceApplication.GetDetails(id);
-            province.Countries = _countryApplication.GetCountrys(); 
+            province.Countries = _countryApplication.GetCountrys();
             return Partial("Edit", province);
         }
 

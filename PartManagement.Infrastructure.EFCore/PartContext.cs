@@ -11,10 +11,11 @@ namespace PartManagement.Infrastructure.EFCore
         public DbSet<StockType> StockTypes { get; set; }
         public DbSet<EquipmentType> EquipmentTypes { get; set; }
         public DbSet<Store> Stores { get; set; }
+        public DbSet<StoreStockType> StoreStockTypes { get; set; }
 
         public PartContext(DbContextOptions<PartContext> options) : base(options)
         {
-            
+
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

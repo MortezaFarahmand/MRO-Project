@@ -22,7 +22,7 @@ namespace OrganizationManagement.Application
         public OperationResult Create(CreateOrganizationDepartment command)
         {
             var organization = new OperationResult();
-            if(_organizationDepartmentRepository.Exists(x => x.Name == command.Name)) 
+            if (_organizationDepartmentRepository.Exists(x => x.Name == command.Name))
                 return organization.Failed(ApplicationMessages.DuplicatedRecord);
 
             var OrganizationDepartment = new OrganizationDepartment(command.Name, command.Description,
@@ -40,7 +40,7 @@ namespace OrganizationManagement.Application
             if (organizationDepartment == null)
                 return operation.Failed(ApplicationMessages.RecordNotFound);
 
-            if (_organizationDepartmentRepository.Exists(x => x.Name == command.Name 
+            if (_organizationDepartmentRepository.Exists(x => x.Name == command.Name
                     && x.Id != command.Id && x.OrganizationId == command.OrganizationId))
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
 

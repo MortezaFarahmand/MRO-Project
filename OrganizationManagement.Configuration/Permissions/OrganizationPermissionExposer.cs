@@ -27,7 +27,7 @@ namespace OrganizationManagement.Configuration.Permissions
                          new PermissionDto(OrganizationPermissions.EditOrganizationGroup, "EditOrganizationGroups")
                      }
                 }
-               
+
             };
         }
     }

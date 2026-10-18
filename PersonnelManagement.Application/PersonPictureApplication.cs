@@ -20,7 +20,7 @@ namespace PersonnelManagement.Application
         private readonly IPersonRepository _personRepository;
         private readonly IPictureCategoryRepository _pictureCategoryRepository;
 
-        public PersonPictureApplication(IPersonPictureRepository personPictureRepository, 
+        public PersonPictureApplication(IPersonPictureRepository personPictureRepository,
             IFileUploader fileUploader, IPersonRepository personRepository, IPictureCategoryRepository pictureCategoryRepository)
         {
             _personPictureRepository = personPictureRepository;
@@ -40,7 +40,7 @@ namespace PersonnelManagement.Application
             var picturePath = $"PersonPictures/{personNamFamily}/{pictureCategoryName}";
             var fileName = _fileUploader.Upload(command.Picture, picturePath);
 
-            var personPicture = new PersonPicture(fileName, command.Title, command.Text, 
+            var personPicture = new PersonPicture(fileName, command.Title, command.Text,
                 command.Remark, command.PictureCategoryId, command.PersonId);
 
             _personPictureRepository.Create(personPicture);
@@ -52,7 +52,7 @@ namespace PersonnelManagement.Application
         {
             var operation = new OperationResult();
             var personPicture = _personPictureRepository.Get(command.Id);
-            if(personPicture == null) 
+            if (personPicture == null)
                 return operation.Failed(ApplicationMessages.RecordNotFound);
 
             var personNamFamily = _personRepository.GetNameAndFamilyById(command.PersonId);

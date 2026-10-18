@@ -12,20 +12,20 @@ namespace PersonnelManagement.Infrastructure.EFCore.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             //migrationBuilder.CreateTable(
-                //name: "PersonGroups",
-                //columns: table => new
-                //{
-                //    Id = table.Column<long>(type: "bigint", nullable: false)
-                //        .Annotation("SqlServer:Identity", "1, 1"),
-                //    Description = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
-                //    Remark = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true),
-                //    IsActive = table.Column<bool>(type: "bit", nullable: false),
-                //    CreationDate = table.Column<DateTime>(type: "datetime2", nullable: false)
-                //},
-                //constraints: table =>
-                //{
-                //    table.PrimaryKey("PK_PersonGroups", x => x.Id);
-                //});
+            //name: "PersonGroups",
+            //columns: table => new
+            //{
+            //    Id = table.Column<long>(type: "bigint", nullable: false)
+            //        .Annotation("SqlServer:Identity", "1, 1"),
+            //    Description = table.Column<string>(type: "nvarchar(255)", maxLength: 255, nullable: false),
+            //    Remark = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: true),
+            //    IsActive = table.Column<bool>(type: "bit", nullable: false),
+            //    CreationDate = table.Column<DateTime>(type: "datetime2", nullable: false)
+            //},
+            //constraints: table =>
+            //{
+            //    table.PrimaryKey("PK_PersonGroups", x => x.Id);
+            //});
 
             migrationBuilder.CreateTable(
                 name: "Persons",

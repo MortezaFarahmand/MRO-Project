@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace BasicDataManagement.Domain.ProvinceAgg
 {
-    public interface IProvinceRepository : IRepository<long, Province> 
+    public interface IProvinceRepository : IRepository<long, Province>
     {
         List<ProvinceViewModel> GetProvinces();
         EditProvince GetDetails(long id);

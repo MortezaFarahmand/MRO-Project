@@ -5,12 +5,12 @@ namespace AccountManagement.Domain.RoleAgg
 {
     public class Role : EntityBase
     {
-        public string  Name { get; private set; }
+        public string Name { get; private set; }
         public List<Permission> Permissions { get; private set; } = new();
         public ICollection<AccountRole> AccountRoles { get; private set; }
 
-        protected Role() 
-        { 
+        protected Role()
+        {
 
         }
 

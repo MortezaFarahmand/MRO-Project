@@ -9,6 +9,6 @@
         public string NameCode { get; set; }
         public string CreationDate { get; set; }
         //public int OrganizationCount { get; set; }
-        
+
     }
 }

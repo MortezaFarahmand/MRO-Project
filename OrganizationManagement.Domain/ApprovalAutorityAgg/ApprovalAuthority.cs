@@ -25,7 +25,7 @@ namespace OrganizationManagement.Domain.ApprovalAutorityAgg
         public List<OrganizationPicture> OrganizationPictures { get; private set; }
 
 
-        public ApprovalAuthority(string nameEn, string nameFa, string description, string address, string webSite, 
+        public ApprovalAuthority(string nameEn, string nameFa, string description, string address, string webSite,
             string remark, string code, string logoPicture, string logoPictureAlt, string logoPictureTitle,
             string metaDescription, string slug, string canonicalAddress, string keywords, long countryId)
         {

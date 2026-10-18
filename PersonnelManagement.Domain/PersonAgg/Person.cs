@@ -57,10 +57,10 @@ namespace PersonnelManagement.Domain.PersonAgg
             //Groups = new List<PersonGroup>();
         }
 
-        public Person(string nameEn, string nameFa, string familyEn, string familyFa, string fatherName,bool gender,
+        public Person(string nameEn, string nameFa, string familyEn, string familyFa, string fatherName, bool gender,
             DateTime birthDay, bool marriage, string passportNo, string nationalCode, string nationalCodeOfFather,
-            long birthCityId, long birthProvinceId, long birthCountryId, long cityId, string attachment,string educationalDegree, string educationalFeild,
-            string iDCartNo,long addressId,string mobileNo1, string mobileNo2,string phoneNo,string mailBoxAddress1,
+            long birthCityId, long birthProvinceId, long birthCountryId, long cityId, string attachment, string educationalDegree, string educationalFeild,
+            string iDCartNo, long addressId, string mobileNo1, string mobileNo2, string phoneNo, string mailBoxAddress1,
             string mailBoxAddress2, string socialAddress1, string socialAddress2, DateTime workingStartDate,
             long personGroupId, long organizationId, string profilePicture)
         {
@@ -97,7 +97,7 @@ namespace PersonnelManagement.Domain.PersonAgg
             OrganizationId = organizationId;//
             if (!string.IsNullOrWhiteSpace(ProfilePicture))
                 ProfilePicture = profilePicture;
-            
+
         }
 
         public void Edit(string nameEn, string nameFa, string familyEn, string familyFa, string fatherName, bool gender,

@@ -63,7 +63,7 @@ namespace ServiceHost.Areas.Administration.Pages.Organization.OrganizationAviati
         public IActionResult OnGetEnabled(long id)
         {
             var result = _organizationAviationCodeApplication.IsEnable(id);
-            if(result.IsSucceeded)
+            if (result.IsSucceeded)
                 return RedirectToPage("./Index");
 
             message = result.Message;

@@ -16,7 +16,7 @@ namespace BasicDataManagement.Infrastructure.EFCore.Repository
         }
 
 
-        
+
         public EditPictureCategory GetDetails(long id)
         {
             return _context.PictureCategorys.Select(x => new EditPictureCategory
@@ -34,16 +34,16 @@ namespace BasicDataManagement.Infrastructure.EFCore.Repository
             return _context.PictureCategorys.Select(x => new PictureCategoryViewModel
             {
                 Id = x.Id,
-                Name= x.Name,
-                Remark= x.Remark,
-                EntitiId= x.EntitiId,
+                Name = x.Name,
+                Remark = x.Remark,
+                EntitiId = x.EntitiId,
                 IsActive = x.IsActive
             }).ToList();
         }
 
         public string GetPictureCategoryNameById(long id)
         {
-            return  _context.PictureCategorys.Select(x => new { x.Id, x.Name }).FirstOrDefault(x => x.Id == id).Name;
+            return _context.PictureCategorys.Select(x => new { x.Id, x.Name }).FirstOrDefault(x => x.Id == id).Name;
         }
 
         public List<PictureCategoryViewModel> Search(PictureCategorySearchModel searchModel)
@@ -58,7 +58,7 @@ namespace BasicDataManagement.Infrastructure.EFCore.Repository
                 IsActive = x.IsActive
             });
 
-            if(searchModel.EntitiId != 0)
+            if (searchModel.EntitiId != 0)
                 query = query.Where(x => x.EntitiId == searchModel.EntitiId);
 
             /////////////////////

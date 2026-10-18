@@ -9,17 +9,17 @@ namespace AccountManagement.Domain.AccountAgg
         public string Password { get; private set; }
         public string Mobile { get; private set; }
         //public long RoleId { get; private set; }
-        public long OrganizationId { get; private set; }
+        public long? OrganizationId { get; private set; }
         //public Role Role { get; private set; }
-        public ICollection<AccountRole> AccountRoles { get; private set; } 
+        public ICollection<AccountRole> AccountRoles { get; private set; } = new List<AccountRole>();
         public string ProfilePhoto { get; private set; }
 
         public Account()
         {
-            
+
         }
-        public Account(string fullname, string username, string password, 
-            string mobile, string profilePhoto, long organizationId )
+        public Account(string fullname, string username, string password,
+            string mobile, string profilePhoto, long? organizationId)
         {
             Fullname = fullname;
             Username = username;
@@ -29,8 +29,8 @@ namespace AccountManagement.Domain.AccountAgg
             OrganizationId = organizationId;
         }
 
-        public void Edit(string fullname, string username, 
-            string mobile, string profilePhoto, long organizationId)
+        public void Edit(string fullname, string username,
+            string mobile, string profilePhoto, long? organizationId)
         {
             Fullname = fullname;
             Username = username;

@@ -3,7 +3,7 @@
 
 @{
     Layout = "Shared/_AdminLayout";
-    ViewData["title"] = "Stock Type (Stock Room) Management";
+    ViewData["title"] = "Stock Type (Store Room) Management";
 }
 
 
@@ -12,35 +12,42 @@
     <div class="col-sm-12">
         <h3 class="page-title pull-left">@ViewData["title"]</h3>
         <p class="pull-right">
-            <a class="btn btn-success btn-lg" href="#showmodal=@Url.Page("./Index", "Create")" >Create New</a>
+            <a class="btn btn-success btn-lg" href="#showmodal=@Url.Page("./Index", "Create")">Create New</a>
         </p>
     </div>
 </div>
 
-@* <div class="row">
+<div class="row">
     <div class="col-md-12">
         <div class="panel panel-default">
-             <div class="panel-heading">
-                <h3 class="panel-title">Search in  Stock Type(Room)</h3>
+            <div class="panel-heading">
+                <h3 class="panel-title">Search in Stock Types (Store Rooms)</h3>
             </div>
-            <div class="panel-body "> 
-                 <form class="form-inline" role="form" method="get">
+            <div class="panel-body ">
+                <form class="form-inline" role="form" method="get">
                     <div class="form-group">
-                        
-                                <label class="sr-only " asp-for="SearchModel.Name"></label>
-                                <input class="form-control " asp-for="SearchModel.Name" placeholder="Name">
-
-                                <button type="submit" class="btn btn-success waves-effect waves-light m-l-10">Search</button>
-                                <a class="btn btn-primary waves-effect waves-light m-l-10" asp-page="./Index">View All</a>
-                          
+                        <label class="sr-only " asp-for="SearchModel.Name"></label>
+                        <input class="form-control " asp-for="SearchModel.Name" placeholder="Stock type (Store room name)">
                     </div>
-                   
-                </form> 
+                    <div class="form-group">
+                        <label class="sr-only" asp-for="SearchModel.OrganizationId"></label>
+                        <select class="form-control " asp-for="SearchModel.OrganizationId"
+                                asp-items="Model.Organizations" disabled="@(!Model.IsAdmin)">
+                            <option value="0">-Organizations-</option>
+                        </select>
+                        @if (!Model.IsAdmin)
+                        {
+                            <input type="hidden" asp-for="SearchModel.OrganizationId" />
+                        }
+                    </div>
+                    <button type="submit" class="btn btn-success waves-effect waves-light m-l-10">Search</button>
+                    <a class="btn btn-primary waves-effect waves-light m-l-10" asp-page="./Index">View All</a>
+
+                </form>
             </div>
         </div>
     </div>
 </div>
- *@
 <div class="row" id="StockTypeDiv">
     <div class="col-md-12">
         <div class="panel panel-default">
@@ -56,6 +63,8 @@
                                     <th>#</th>
                                     <th>Type(Room)</th>
                                     <th>Code</th>
+                                    <th>Store</th>
+                                    <th>Organization</th>
                                     <th>Color Code</th>
                                     <th>Creation Date</th>
                                     <th>Operation</th>
@@ -64,20 +73,21 @@
                             <tbody>
                                 @foreach (var item in Model.StockTypes)
                                 {
-                                <tr>
-                                    
+                                    <tr>
                                         <td>@item.Id</td>
                                         <td>@item.Name</td>
                                         <td>@item.Code</td>
+                                        <td>@(item.Store?.Name ?? "-")</td> @*یعنی : اگه استور نال بود کرش نکن، یه - نشون بده*@
+                                        <td>@item.OrganizationId</td>
                                         <td>@item.ColorCode</td>
                                         <td>@item.CreationDate</td>
-                                    <td>
-                                        <a class="btn btn-warning pull-left m-rl-5"
-                                           href="#showmodal=@Url.Page("./Index", "Edit", new {id = item.Id})">
-                                            <i class="fa fa-edit"></i> Edit
-                                        </a>
-                                    </td>
-                                </tr>
+                                        <td>
+                                            <a class="btn btn-warning pull-left m-rl-5"
+                                               href="#showmodal=@Url.Page("./Index", "Edit", new { id = item.Id })">
+                                                <i class="fa fa-edit"></i> Edit
+                                            </a>
+                                        </td>
+                                    </tr>
                                 }
                             </tbody>
                         </table>

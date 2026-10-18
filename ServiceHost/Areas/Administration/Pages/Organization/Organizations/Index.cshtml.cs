@@ -14,7 +14,7 @@ namespace ServiceHost.Areas.Administration.Pages.Organization.Organizations
     //[Authorize(Roles = "1, 3")]
     public class IndexModel : PageModel
     {
-        
+
         [TempData]
         public string Message { get; set; }
         public OrganizationSearchModel SearchModel;
@@ -67,7 +67,7 @@ namespace ServiceHost.Areas.Administration.Pages.Organization.Organizations
             return Partial("Edit", organization);
         }
 
-        [NeedsPermission(OrganizationPermissions.EditOrganization)] 
+        [NeedsPermission(OrganizationPermissions.EditOrganization)]
         public JsonResult OnPostEdit(EditOrganization command)
         {
             var result = _organizationApplication.Edit(command);
@@ -76,8 +76,8 @@ namespace ServiceHost.Areas.Administration.Pages.Organization.Organizations
 
         public IActionResult OnGetNotActive(long id)
         {
-            var result =  _organizationApplication.NotActive(id); 
-            if(result.IsSucceeded)
+            var result = _organizationApplication.NotActive(id);
+            if (result.IsSucceeded)
                 return RedirectToPage("./Index");
             Message = result.Message;
             return RedirectToPage("./Index");

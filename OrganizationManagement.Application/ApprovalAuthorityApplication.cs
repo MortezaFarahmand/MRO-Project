@@ -31,7 +31,7 @@ namespace OrganizationManagement.Application
                 command.Address, command.WebSite, command.Remark, command.Code, command.LogoPicture, command.LogoPictureAlt,
                 command.LogoPictureTitle, command.MetaDescription, slug, command.CanonicalAddress,
                 command.Keywords, command.CountryId);
-            
+
             _approvalAuthorityRepository.Create(approvalAuthority);
             _approvalAuthorityRepository.SaveChanges();
             return operation.Succeeded();

@@ -17,9 +17,10 @@ namespace PartManagement.Infrastructure.EFCore.Mapping
             builder.Property(x => x.ColorCode).HasMaxLength(20);
             builder.Property(x => x.Description).HasMaxLength(500);
 
-            builder.HasOne(x => x.StockType)
-                .WithMany(x => x.Stores)
-                .HasForeignKey(x => x.StockTypeId);
+            builder.HasOne(x => x.DefaultStockType)
+                .WithMany(x => x.Stores_DefaultStockType)
+                .HasForeignKey(x => x.DefaultStockTypeId)
+                .OnDelete(DeleteBehavior.Restrict); // خیلی مهم;
         }
     }
 }

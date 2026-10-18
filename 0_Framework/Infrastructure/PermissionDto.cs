@@ -7,12 +7,12 @@
 
         public PermissionDto()
         {
-            
+
         }
         public PermissionDto(int code, string name)
         {
             Name = name;
-            Code= code;
+            Code = code;
         }
     }
 }

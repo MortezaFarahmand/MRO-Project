@@ -128,6 +128,9 @@ namespace PartManagement.Infrastructure.EFCore.Migrations
                     b.Property<DateTime>("CreationDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<long>("DefaultStockTypeId")
+                        .HasColumnType("bigint");
+
                     b.Property<string>("DefaultValueOfStockMovement")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -165,30 +168,68 @@ namespace PartManagement.Infrastructure.EFCore.Migrations
                     b.Property<long>("StationId")
                         .HasColumnType("bigint");
 
-                    b.Property<long>("StockTypeId")
-                        .HasColumnType("bigint");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("StockTypeId");
+                    b.HasIndex("DefaultStockTypeId");
 
                     b.ToTable("Stores", (string)null);
                 });
 
+            modelBuilder.Entity("PartManagement.Domain.Stock.StoreAgg.StoreStockType", b =>
+                {
+                    b.Property<long>("StoreId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("StockTypeId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("StoreId", "StockTypeId");
+
+                    b.HasIndex("StockTypeId");
+
+                    b.ToTable("StoreStockTypes", (string)null);
+                });
+
             modelBuilder.Entity("PartManagement.Domain.Stock.StoreAgg.Store", b =>
                 {
+                    b.HasOne("PartManagement.Domain.Stock.StockTypeAgg.StockType", "DefaultStockType")
+                        .WithMany("Stores_DefaultStockType")
+                        .HasForeignKey("DefaultStockTypeId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("DefaultStockType");
+                });
+
+            modelBuilder.Entity("PartManagement.Domain.Stock.StoreAgg.StoreStockType", b =>
+                {
                     b.HasOne("PartManagement.Domain.Stock.StockTypeAgg.StockType", "StockType")
-                        .WithMany("Stores")
+                        .WithMany("StoreStockTypes")
                         .HasForeignKey("StockTypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("PartManagement.Domain.Stock.StoreAgg.Store", "Store")
+                        .WithMany("StoreStockTypes")
+                        .HasForeignKey("StoreId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("StockType");
+
+                    b.Navigation("Store");
                 });
 
             modelBuilder.Entity("PartManagement.Domain.Stock.StockTypeAgg.StockType", b =>
                 {
-                    b.Navigation("Stores");
+                    b.Navigation("StoreStockTypes");
+
+                    b.Navigation("Stores_DefaultStockType");
+                });
+
+            modelBuilder.Entity("PartManagement.Domain.Stock.StoreAgg.Store", b =>
+                {
+                    b.Navigation("StoreStockTypes");
                 });
 #pragma warning restore 612, 618
         }

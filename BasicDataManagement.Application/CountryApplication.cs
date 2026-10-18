@@ -11,7 +11,7 @@ namespace BasicDataManagement.Application
         private readonly ICountryRepository _countryRepository;
 
         public CountryApplication(ICountryRepository countryRepository, IFileUploader fileUploader)
-        { 
+        {
             _countryRepository = countryRepository;
             _fileUploader = fileUploader;
         }
@@ -42,7 +42,7 @@ namespace BasicDataManagement.Application
             if (country == null)
                 return operation.Failed(ApplicationMessages.RecordNotFound);
 
-            if(_countryRepository.Exists(x=>x.Name==command.Name && x.Id != command.Id))
+            if (_countryRepository.Exists(x => x.Name == command.Name && x.Id != command.Id))
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
 
             var picturePath = $"CountryFlags";

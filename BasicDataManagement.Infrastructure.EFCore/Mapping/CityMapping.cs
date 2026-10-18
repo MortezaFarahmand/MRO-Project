@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace BasicDataManagement.Infrastructure.EFCore.Mapping
 {
-    public class CityMapping : IEntityTypeConfiguration<City> 
+    public class CityMapping : IEntityTypeConfiguration<City>
     {
-        public void Configure(EntityTypeBuilder<City> builder) 
+        public void Configure(EntityTypeBuilder<City> builder)
         {
             builder.ToTable("Citys");
             builder.HasKey(x => x.Id);

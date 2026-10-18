@@ -12,14 +12,14 @@ namespace AccountManagement.Domain.AccountAgg
         public Account Account { get; private set; }
 
 
-        public AccountRole(long accountId, long roleId) 
+        public AccountRole(long accountId, long roleId)
         {
             AccountId = accountId;
             //if(RoleId == 0)
             //    RoleId = 2;
             RoleId = roleId;
         }
-       
-        
+
+
     }
 }

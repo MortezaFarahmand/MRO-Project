@@ -40,7 +40,7 @@ namespace BasicDataManagement.Application
             if (slide == null)
                 return operation.Failed(ApplicationMessages.RecordNotFound);
 
-            
+
             var slugTitle = command.PictureTitle.Slugify();
             var picturePath = "SliderPictures";
             var pictureName = _fileUploader.Upload(command.Picture, picturePath);

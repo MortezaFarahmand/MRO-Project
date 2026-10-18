@@ -25,7 +25,7 @@ namespace BasicDataManagement.Infrastructure.EFCore.Repository
                 Title = x.Title,
                 IsActive = x.IsActive
 
-            } ).FirstOrDefault(x => x.Id == id);
+            }).FirstOrDefault(x => x.Id == id);
         }
 
         public List<EntitiViewModel> GetEntitis()

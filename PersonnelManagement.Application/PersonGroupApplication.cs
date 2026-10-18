@@ -43,7 +43,7 @@ namespace PersonnelManagement.Application
 
         public EditPersonGroup GetDetails(long id)
         {
-            return  _personGroupRepository.GetDetails(id);
+            return _personGroupRepository.GetDetails(id);
         }
 
         public List<PersonGroupViewModel> GetPersonGroups()

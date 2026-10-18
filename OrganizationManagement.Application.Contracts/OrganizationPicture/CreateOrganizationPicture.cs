@@ -11,7 +11,7 @@ namespace OrganizationManagement.Application.Contracts.OrganizationPicture
         [Range(1, 100000, ErrorMessage = ValidationMessages.IsRequired)]
         public long OrganizationId { get; set; }
 
-        [Required(ErrorMessage = ValidationMessages.IsRequired)]    
+        [Required(ErrorMessage = ValidationMessages.IsRequired)]
         public string Picture { get; set; }
 
         [Required(ErrorMessage = ValidationMessages.IsRequired)]

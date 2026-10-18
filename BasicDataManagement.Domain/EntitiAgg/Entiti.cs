@@ -17,7 +17,7 @@ namespace BasicDataManagement.Domain.EntitiAgg
             Name = name;
             Title = title;
             Remark = remark;
-            
+
             IsActive = true;
         }
 

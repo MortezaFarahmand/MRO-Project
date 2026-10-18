@@ -21,7 +21,7 @@ namespace ServiceHost
             if (!_authHelper.IsAuthenticated())
             {
                 output.SuppressOutput();
-                return;  
+                return;
             }
             var permission = _authHelper.GetPermissions();
             if (permission.Any(x => x != Permission))

@@ -30,7 +30,7 @@ namespace OrganizationManagement.Domain.ApprovalAgg
 
 
         public Approval(string nameEn, string nameFa, string description, string address, string webSite,
-            string remark, string codeNo, string referenceNo, string attachment, string issueDate , int issueCount,
+            string remark, string codeNo, string referenceNo, string attachment, string issueDate, int issueCount,
             int issueInterval, string picture, string pictureAlt, string pictureTitle, string metaDescription,
             string slug, string canonicalAddress, string keywords, string approvedBy)
         {

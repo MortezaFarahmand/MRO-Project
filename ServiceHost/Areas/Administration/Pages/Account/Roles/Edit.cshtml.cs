@@ -43,12 +43,12 @@ namespace ServiceHost.Areas.Administration.Pages.Account.Roles
                             Group = group
                         };
 
-                        if (Command.MappedPermissions.Any(x => x.Code == permission.Code)) 
+                        if (Command.MappedPermissions.Any(x => x.Code == permission.Code))
                             item.Selected = true;
 
                         Permissions.Add(item);
                     }
-                    
+
                 }
             }
         }

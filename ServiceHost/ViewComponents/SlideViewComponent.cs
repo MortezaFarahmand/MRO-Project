@@ -9,14 +9,14 @@ namespace ServiceHost.ViewComponents
 
         public SlideViewComponent(ISlideQuery slideQuery)
         {
-            _slideQuery = slideQuery;   
+            _slideQuery = slideQuery;
         }
 
 
         public IViewComponentResult Invoke()
         {
             var slides = _slideQuery.GetSlides();
-            return View(slides); 
+            return View(slides);
         }
     }
 }

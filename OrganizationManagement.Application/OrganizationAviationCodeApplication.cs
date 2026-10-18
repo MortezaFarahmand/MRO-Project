@@ -35,7 +35,7 @@ namespace OrganizationManagement.Application
         {
             var operation = new OperationResult();
             var organizationCode = _organizationAviationCodeRepository.Get(command.Id);
-            if (organizationCode == null)   
+            if (organizationCode == null)
                 return operation.Failed(ApplicationMessages.RecordNotFound);
 
             if (_organizationAviationCodeRepository.Exists(x => x.ICAO == command.ICAO && x.Id != command.Id))
@@ -86,7 +86,7 @@ namespace OrganizationManagement.Application
             _organizationAviationCodeRepository.SaveChanges();
             return operation.Succeeded();
         }
-        
+
 
     }
 }

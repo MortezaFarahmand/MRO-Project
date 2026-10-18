@@ -8,8 +8,8 @@ namespace OrganizationManagement.Domain.OrganizationGroupAgg
     {
         public string Name { get; private set; }
         public string Description { get; private set; }
-        public string Picture { get;  private set; }
-        public string NameCode { get;  private set; }
+        public string Picture { get; private set; }
+        public string NameCode { get; private set; }
         public string PictureAlt { get; private set; }
         public string PictureTitle { get; private set; }
         public string Keywords { get; private set; }
@@ -22,7 +22,7 @@ namespace OrganizationManagement.Domain.OrganizationGroupAgg
             Organizations = new List<Organization>();
         }
 
-        public OrganizationGroup(string name, string description, string picture, string nameCode, 
+        public OrganizationGroup(string name, string description, string picture, string nameCode,
             string pictureAlt, string pictureTitle, string keywords, string metaDescription, string slug)
         {
             Name = name;

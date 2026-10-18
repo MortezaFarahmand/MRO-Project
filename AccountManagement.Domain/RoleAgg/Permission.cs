@@ -6,10 +6,10 @@
         public int Code { get; private set; }
         public string Name { get; private set; }
         public long RoleId { get; private set; }
-        public long OrganizationId { get; private set; }
         public Role Role { get; private set; }
-        private Permission() 
-        { 
+        public long OrganizationId { get; private set; }
+        private Permission()
+        {
 
         }
 

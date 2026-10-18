@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using _0_Framework.Application;
 using AccountManagement.Application.Contracts.Account;
 using AccountManagement.Application.Contracts.Role;
@@ -6,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using OrganizationManagement.Application.Contracts.Organization;
+using System.Collections.Generic;
 
 namespace ServiceHost.Areas.Administration.Pages.Account.Accounts
 {
@@ -16,6 +16,8 @@ namespace ServiceHost.Areas.Administration.Pages.Account.Accounts
 
         [BindProperty(SupportsGet = true)]
         public AccountSearchModel SearchModel { get; set; } = new AccountSearchModel();
+        public long? currentOrganizationId { get; set; }
+        public bool IsAdmin => currentOrganizationId == 0;
 
         public List<AccountViewModel> Accounts { get; set; }
         //public SelectList Roles { get; set; }
@@ -41,8 +43,14 @@ namespace ServiceHost.Areas.Administration.Pages.Account.Accounts
         {
             //Roles = new SelectList(_roleApplication.List(), "Id", "Name");
             Organizations = new SelectList(_organizationApplication.GetOrganizations(), "Id", "NameEn");
-            long organizationId = _authHelper.CurrentAccountOrganizationId();
-            Accounts = _accountApplication.Search(SearchModel ?? new AccountSearchModel(), organizationId);
+            currentOrganizationId = _authHelper.CurrentAccountOrganizationId();
+            // ۳. اگه کاربر عادیه، سرچ رو قفل کن روی سازمان خودش
+            if (currentOrganizationId != 0)
+            {
+                SearchModel.OrganizationId = currentOrganizationId;
+            }
+            SearchModel ??= new AccountSearchModel();
+            Accounts = _accountApplication.Search(SearchModel, currentOrganizationId);
         }
 
         public IActionResult OnGetCreate()
@@ -75,7 +83,7 @@ namespace ServiceHost.Areas.Administration.Pages.Account.Accounts
 
         public IActionResult OnGetChangePassword(long id)
         {
-            var command = new ChangePassword { Id = id};
+            var command = new ChangePassword { Id = id };
             return Partial("ChangePassword", command);
         }
 

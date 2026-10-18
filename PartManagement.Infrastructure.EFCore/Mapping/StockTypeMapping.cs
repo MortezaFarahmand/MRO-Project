@@ -14,11 +14,11 @@ namespace PartManagement.Infrastructure.EFCore.Mapping
             builder.Property(x => x.Name).HasMaxLength(100).IsRequired();
             builder.Property(x => x.Code).HasMaxLength(5).IsRequired();
             builder.Property(x => x.ColorCode).HasMaxLength(20);
-            builder.Property(x => x.CreationDate).HasMaxLength(50);  
+            builder.Property(x => x.CreationDate).HasMaxLength(50);
 
-            builder.HasMany(x => x.Stores)
-                .WithOne(x => x.StockType)
-                .HasForeignKey(x => x.StockTypeId);
+            builder.HasMany(x => x.Stores_DefaultStockType)
+                .WithOne(x => x.DefaultStockType)
+                .HasForeignKey(x => x.DefaultStockTypeId);
         }
     }
 }

@@ -13,5 +13,5 @@ namespace _0_Framework.Domain
         }
     }
 
-    
+
 }

@@ -12,8 +12,8 @@ namespace OrganizationManagement.Domain.OrganizationAviationCodeAgg
         public string CallSign { get; private set; }
         public long CountryId { get; private set; }
         public bool IsEnabled { get; private set; }
-        
-        
+
+
 
         public OrganizationAviationCode(string iCAO, string iATA, string civilAutority, string comment,
             string description, string callSign, long countryId)
@@ -31,11 +31,11 @@ namespace OrganizationManagement.Domain.OrganizationAviationCodeAgg
         public void Edit(string iCAO, string iATA, string civilAutority, string comment,
             string description, string callSign, long countryId)
         {
-            ICAO= iCAO;
-            IATA= iATA;
+            ICAO = iCAO;
+            IATA = iATA;
             CivilAutority = civilAutority;
-            Comment = comment;  
-            Description = description;  
+            Comment = comment;
+            Description = description;
             CallSign = callSign;
             CountryId = countryId;
         }
@@ -45,8 +45,8 @@ namespace OrganizationManagement.Domain.OrganizationAviationCodeAgg
             IsEnabled = true;
         }
 
-        public void Disabled() 
-        { 
+        public void Disabled()
+        {
             IsEnabled = false;
         }
     }

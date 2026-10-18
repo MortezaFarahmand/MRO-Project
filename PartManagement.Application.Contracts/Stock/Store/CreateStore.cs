@@ -18,7 +18,7 @@ namespace PartManagement.Application.Contracts.Stock.Store
         public string ColorCode { get; set; }
         public string Description { get; set; }
         public string DefaultValueOfStockMovement { get; set; }
-        public long OrganizationId { get; set; }
+        public long? OrganizationId { get; set; }
         public List<OrganizationViewModel> Organizations { get; set; }
         public long CityId { get; set; }
         public long StationId { get; set; }
@@ -32,6 +32,7 @@ namespace PartManagement.Application.Contracts.Stock.Store
         public long ProviderId { get; set; }
         public bool NotToSearchBySpecificStore { get; set; }
         public bool AutomaticRequestOrder { get; set; }
+        public List<long> StockTypeIds { get; set; } = new();
 
         //public class AddStockType
         //{

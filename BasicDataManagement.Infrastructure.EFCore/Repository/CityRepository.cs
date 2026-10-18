@@ -38,12 +38,12 @@ namespace BasicDataManagement.Infrastructure.EFCore.Repository
                 .Include(p => p.Province)
                    .ThenInclude(c => c.Country)
                 .Select(x => new CityViewModel()
-            {
-                Id= x.Id,
-                Name = x.Name,
-                Province = x.Province.Name,
-                Country = x.Province.Country.Name
-            }).ToList();
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    Province = x.Province.Name,
+                    Country = x.Province.Country.Name
+                }).ToList();
         }
 
         public List<CityViewModel> Search(CitySearchModel searchModel)
@@ -53,23 +53,23 @@ namespace BasicDataManagement.Infrastructure.EFCore.Repository
                    .ThenInclude(c => c.Country)
                 //.Include(citi => (Province)citi).Country)
                 .Select(x => new CityViewModel()
-            {
-                Id = x.Id,
-                Name = x.Name,
-                DialCode = x.DialCode,
-                MetaDescription = x.MetaDescription,
-                Slug = x.Slug,
-                Keywords = x.Keywords,
-                Province = x.Province.Name,
-                ProvinceId = x.ProvinceId,
-                CountryId = x.Province.CountryId,
-                Country = x.Province.Country.Name
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    DialCode = x.DialCode,
+                    MetaDescription = x.MetaDescription,
+                    Slug = x.Slug,
+                    Keywords = x.Keywords,
+                    Province = x.Province.Name,
+                    ProvinceId = x.ProvinceId,
+                    CountryId = x.Province.CountryId,
+                    Country = x.Province.Country.Name
                 });
 
             if (!string.IsNullOrWhiteSpace(searchModel.Name))
                 query = query.Where(x => x.Name.Contains(searchModel.Name));
 
-            if(searchModel.ProvinceId !=0)
+            if (searchModel.ProvinceId != 0)
                 query = query.Where(x => x.ProvinceId == searchModel.ProvinceId);
 
             if (searchModel.CountryId != 0)

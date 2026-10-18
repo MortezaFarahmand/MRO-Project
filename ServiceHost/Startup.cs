@@ -72,7 +72,7 @@ namespace ServiceHost
                     builder.RequireRole(new List<string> { Roles.Administrator, Roles.SystemUser }));
 
                     options.AddPolicy("basicData", builder =>
-                    builder.RequireRole(new List<string> { Roles.Administrator}));
+                    builder.RequireRole(new List<string> { Roles.Administrator }));
 
                     options.AddPolicy("account", builder =>
                     builder.RequireRole(new List<string> { Roles.Administrator, Roles.SystemUser }));
@@ -99,9 +99,9 @@ namespace ServiceHost
                 ;
 
         }
-            //services.AddWordPress(options => { });
+        //services.AddWordPress(options => { });
 
-        
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

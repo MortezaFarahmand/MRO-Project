@@ -12,9 +12,9 @@ namespace AccountManagement.Infrastructure.EFCore
         public DbSet<AccountRole> AccountRoles { get; set; }
 
 
-        public AccountContext(DbContextOptions<AccountContext> options) : base(options) 
+        public AccountContext(DbContextOptions<AccountContext> options) : base(options)
         {
-            
+
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

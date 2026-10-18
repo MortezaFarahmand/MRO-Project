@@ -11,7 +11,7 @@ namespace OrganizationManagement.Infrastructure.EFCore.Repository
     {
         private readonly OrganizationContext _context;
         public OrganizationDepartmentRepository(OrganizationContext context) : base(context)
-        { 
+        {
             _context = context;
         }
 
@@ -44,7 +44,7 @@ namespace OrganizationManagement.Infrastructure.EFCore.Repository
             }).ToList();
         }
 
-        
+
 
         public List<OrganizationDepartmentViewModel> Search(OrganizationDepartmentSearchModel searchModel)
         {
@@ -52,17 +52,17 @@ namespace OrganizationManagement.Infrastructure.EFCore.Repository
             var query = _context.OrganizationDepartments
                 .Include(x => x.Organization)
                 .Select(x => new OrganizationDepartmentViewModel()
-            {
-                Id = x.Id,
-                Name = x.Name,
-                Description = x.Description,
-                OrganizationId = x.OrganizationId,
-                ParentDepartmentId = x.ParentDepartmentId,
-                Organization = x.Organization.NameEn,
-                //ParentDepartment = x.OrganizationDepartments.Name,
-                CreationDate = x.CreationDate.ToString()
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    Description = x.Description,
+                    OrganizationId = x.OrganizationId,
+                    ParentDepartmentId = x.ParentDepartmentId,
+                    Organization = x.Organization.NameEn,
+                    //ParentDepartment = x.OrganizationDepartments.Name,
+                    CreationDate = x.CreationDate.ToString()
 
-            });
+                });
 
             if (!string.IsNullOrWhiteSpace(searchModel.Name))
                 query = query.Where(x => x.Name.Contains(searchModel.Name));
@@ -86,14 +86,14 @@ namespace OrganizationManagement.Infrastructure.EFCore.Repository
         {
             var OrganizationDeparts = _context.OrganizationDepartments
                 .Where(x => x.OrganizationId == id).Select(x => new OrganizationDepartmentViewModel()
-                { 
+                {
                     Id = x.Id,
                     Name = x.Name
                 }).ToList();
 
             return OrganizationDeparts;
 
-            
+
 
         }
     }

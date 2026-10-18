@@ -11,9 +11,9 @@ namespace OrganizationManagement.Infrastructure.EFCore.Mapping
             builder.ToTable("OrganizationGroups");
             builder.HasKey(x => x.Id);
 
-            builder.Property(x=>x.Name).HasMaxLength(255).IsRequired();
+            builder.Property(x => x.Name).HasMaxLength(255).IsRequired();
             builder.Property(x => x.Description).HasMaxLength(100000).IsRequired();
-            builder.Property(x=>x.Picture).HasMaxLength(1000);
+            builder.Property(x => x.Picture).HasMaxLength(1000);
             builder.Property(x => x.NameCode).HasMaxLength(20).IsRequired();
             builder.Property(x => x.PictureAlt).HasMaxLength(255);
             builder.Property(x => x.PictureTitle).HasMaxLength(500);
@@ -21,9 +21,9 @@ namespace OrganizationManagement.Infrastructure.EFCore.Mapping
             builder.Property(x => x.MetaDescription).HasMaxLength(100000);
             builder.Property(x => x.Slug).HasMaxLength(500);
 
-            builder.HasMany(x=>x.Organizations)
-                .WithOne(x=>x.Group)
-                .HasForeignKey(x=>x.OrganizationGroupId);
+            builder.HasMany(x => x.Organizations)
+                .WithOne(x => x.Group)
+                .HasForeignKey(x => x.OrganizationGroupId);
         }
     }
 }

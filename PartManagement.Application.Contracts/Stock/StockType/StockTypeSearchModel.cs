@@ -2,8 +2,10 @@
 {
     public class StockTypeSearchModel
     {
-        public string Name { get; set; }
-        public long StoreId { get; set; }
-        public long OrganizationId { get; set; }
+        public string? Name { get; set; }
+        public long? StoreId { get; set; }
+        public long? OrganizationId { get; set; }
+
+        // مدل سرچ نباید Required داشته باشه، چون قراره خالی هم سرچ بشه (یعنی نمایش همه). ?
     }
 }

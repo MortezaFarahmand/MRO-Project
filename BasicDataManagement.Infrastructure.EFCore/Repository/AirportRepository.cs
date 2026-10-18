@@ -10,7 +10,7 @@ namespace BasicDataManagement.Infrastructure.EFCore.Repository
     {
         private readonly BasicDataContext _context;
 
-        public AirportRepository(BasicDataContext context) : base(context) 
+        public AirportRepository(BasicDataContext context) : base(context)
         {
             _context = context;
         }
@@ -83,9 +83,9 @@ namespace BasicDataManagement.Infrastructure.EFCore.Repository
                 Iata_code = x.Iata_code,
                 Local_code = x.Local_code,
                 IsActive = x.IsActive
-                
 
-            });  
+
+            });
 
             if (!string.IsNullOrWhiteSpace(searchModel.Name))
                 query = query.Where(x => x.Name.Contains(searchModel.Name));
@@ -95,17 +95,17 @@ namespace BasicDataManagement.Infrastructure.EFCore.Repository
             if (searchModel.Elevation_ft > 0 || searchModel.Elevation_ft <= 0)
                 query = query.Where(x => x.Elevation_ft.Equals(searchModel.Elevation_ft));
             if (!string.IsNullOrWhiteSpace(searchModel.Continent))
-                query = query.Where(x => x.Continent.Contains(searchModel.Continent)); 
+                query = query.Where(x => x.Continent.Contains(searchModel.Continent));
             if (!string.IsNullOrWhiteSpace(searchModel.Iso_country))
-                query = query.Where(x => x.Iso_country.Contains(searchModel.Iso_country)); 
+                query = query.Where(x => x.Iso_country.Contains(searchModel.Iso_country));
             if (!string.IsNullOrWhiteSpace(searchModel.Iso_region))
-                query = query.Where(x => x.Iso_region.Contains(searchModel.Iso_region)); 
+                query = query.Where(x => x.Iso_region.Contains(searchModel.Iso_region));
             if (!string.IsNullOrWhiteSpace(searchModel.Municipality))
-                query = query.Where(x => x.Municipality.Contains(searchModel.Municipality)); 
+                query = query.Where(x => x.Municipality.Contains(searchModel.Municipality));
             if (!string.IsNullOrWhiteSpace(searchModel.Icao_code))
-                query = query.Where(x => x.Icao_code.Contains(searchModel.Icao_code)); 
+                query = query.Where(x => x.Icao_code.Contains(searchModel.Icao_code));
             if (!string.IsNullOrWhiteSpace(searchModel.Iata_code))
-                query = query.Where(x => x.Iata_code.Contains(searchModel.Iata_code)); 
+                query = query.Where(x => x.Iata_code.Contains(searchModel.Iata_code));
             if (!string.IsNullOrWhiteSpace(searchModel.Local_code))
                 query = query.Where(x => x.Local_code.Contains(searchModel.Local_code));
 

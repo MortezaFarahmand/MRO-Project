@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace OrganizationManagement.Application.Contracts.Organization
 {
-    public interface IOrganizationApplication 
+    public interface IOrganizationApplication
     {
         OperationResult Create(CreateOrganization command);
         OperationResult Edit(EditOrganization command);

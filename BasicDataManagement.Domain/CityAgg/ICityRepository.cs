@@ -10,6 +10,6 @@ namespace BasicDataManagement.Domain.CityAgg
         List<CityViewModel> GetCitys();
         EditCity GetDetails(long id);
         List<CityViewModel> Search(CitySearchModel searchModel);
-        
+
     }
 }

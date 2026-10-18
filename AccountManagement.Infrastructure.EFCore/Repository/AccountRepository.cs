@@ -9,7 +9,7 @@ namespace AccountManagement.Infrastructure.EFCore.Repository
     public class AccountRepository : RepositoryBase<long, Account>, IAccountRepository
     {
         private readonly AccountContext _context;
-        public AccountRepository(AccountContext context) : base(context) 
+        public AccountRepository(AccountContext context) : base(context)
         {
             _context = context;
         }
@@ -23,7 +23,7 @@ namespace AccountManagement.Infrastructure.EFCore.Repository
                 .FirstOrDefault(x => x.Username == username);
             //return _context.Accounts.FirstOrDefault(x => x.Username == username);
         }
-        
+
         public EditAccount GetDetails(long id)
         {
             //var account = _context.Accounts
@@ -73,33 +73,10 @@ namespace AccountManagement.Infrastructure.EFCore.Repository
             //return account;
         }
 
-        public List<AccountViewModel> Search(AccountSearchModel searchModel, long organizationId)
+        public List<AccountViewModel> Search(AccountSearchModel searchModel, long? organizationId)
         {
-            var query = _context.Accounts
-                .Include(ar => ar.AccountRoles)
-                .ThenInclude(r => r.Role)
-                    .ThenInclude(p => p.Permissions)
-                .Select(x => new AccountViewModel
-            {
-                Id = x.Id,
-                Fullname = x.Fullname,
-                Mobile = x.Mobile,
-                ProfilePhoto = x.ProfilePhoto,
-                Roles = x.AccountRoles.Select(ar => new RoleViewModel
-                {
-                    Id = ar.RoleId,
-                    Name = ar.Role.Name,
-                    // پر کردن مستقیم لیست سطح دوم بدون نیاز به متد خارجی
-                    PermissionCodeNames = ar.Role.Permissions.Select(p => new PermissionDto
-                    {
-                        Code = p.Code,
-                        Name = p.Name 
-                    }).ToList()
-                }).ToList(),
-                Username = x.Username,
-                CreationDate = x.CreationDate.ToShortDateString(),
-                OrganizationId = x.OrganizationId
-            });
+            searchModel ??= new AccountSearchModel();
+            var query = _context.Accounts.AsQueryable();
 
             if (!string.IsNullOrWhiteSpace(searchModel.Fullname))
                 query = query.Where(x => x.Fullname.Contains(searchModel.Fullname));
@@ -110,21 +87,49 @@ namespace AccountManagement.Infrastructure.EFCore.Repository
             if (!string.IsNullOrWhiteSpace(searchModel.Mobile))
                 query = query.Where(x => x.Mobile.Contains(searchModel.Mobile));
 
-            //if (searchModel.RoleId != 0)
-            //    query = query.Where(x => x.RoleId == searchModel.RoleId);
-
             // در این شرط در صورتی که آی دی سازمان اکانت وارد شده صفر باشد دسترسی به تمام اکانت هایی که آیدی آنها غیر صفر است دارد و
             // در غیر این صورت یعنی زمانی که آیدی سازمان اکانت وارد شده صفر نباشد فقط اکانت هایی را میتواند مشاهده کند که 
             // آیدی سازمان آن با آیدی سازمان لیست اکانت ها یکی باشد.
+
+            // اگه کاربر عادیه (سازمان داره) -> فقط سازمان خودش، سرچ نادیده گرفته میشه (مهم برای امنیت)
             if (organizationId != 0)
+            {
                 query = query.Where(x => x.OrganizationId == organizationId);
+            }
+            // اگه ادمینه (صفر) -> همه رو نشون بده، مگر اینکه خودش فیلتر انتخاب کرده باشه
+            else
+            {
+                if (searchModel.OrganizationId.HasValue && searchModel.OrganizationId.Value != 0)
+                    query = query.Where(x => x.OrganizationId == searchModel.OrganizationId.Value);
+            }
 
-            if (organizationId == 0 && searchModel.OrganizationId != 0)
-                    query = query.Where(x => x.OrganizationId == searchModel.OrganizationId);
 
-                
+            return query.OrderByDescending(x => x.Id)
+                .Include(ar => ar.AccountRoles)
+                .ThenInclude(r => r.Role)
+                    .ThenInclude(p => p.Permissions)
+                .Select(x => new AccountViewModel
+                {
+                    Id = x.Id,
+                    Fullname = x.Fullname,
+                    Mobile = x.Mobile,
+                    ProfilePhoto = x.ProfilePhoto,
+                    Roles = x.AccountRoles.Select(ar => new RoleViewModel
+                    {
+                        Id = ar.RoleId,
+                        Name = ar.Role.Name,
+                        // پر کردن مستقیم لیست سطح دوم بدون نیاز به متد خارجی
+                        PermissionCodeNames = ar.Role.Permissions.Select(p => new PermissionDto
+                        {
+                            Code = p.Code,
+                            Name = p.Name
+                        }).ToList()
+                    }).ToList(),
+                    Username = x.Username,
+                    CreationDate = x.CreationDate.ToShortDateString(),
+                    OrganizationId = x.OrganizationId
+                }).ToList();
 
-            return query.OrderByDescending(x => x.Id).ToList();
         }
     }
 }

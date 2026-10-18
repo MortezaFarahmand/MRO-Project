@@ -71,7 +71,7 @@ namespace OrganizationManagement.Infrastructure.EFCore.Repository
 
         public List<OrganizationViewModel> Search(OrganizationSearchModel searchModel)
         {
-            var Entities = _basicDataContext.Entitis.Select(x => new {x.Id, x.Name}).ToList();
+            var Entities = _basicDataContext.Entitis.Select(x => new { x.Id, x.Name }).ToList();
             var query = _context.Organizations
                 .Include(x => x.Group)
                 .Select(x => new OrganizationViewModel
@@ -126,7 +126,7 @@ namespace OrganizationManagement.Infrastructure.EFCore.Repository
             organizes.ForEach
                 (organiz => organiz.Entiti = Entities.FirstOrDefault(x => x.Id == organiz.EntitiId)?.Name);
             ///////////////////////
-            
+
             return organizes;
 
         }

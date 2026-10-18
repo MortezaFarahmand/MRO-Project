@@ -5,7 +5,7 @@ namespace AccountManagement.Domain.RoleAgg
 {
     public interface IRoleRepository : IRepository<long, Role>
     {
-        List<RoleViewModel> List();
+        List<RoleViewModel> GetRoles();
         EditRole GetDetails(long id);
     }
 }

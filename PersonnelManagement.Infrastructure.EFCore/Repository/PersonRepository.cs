@@ -9,7 +9,7 @@ using System.Linq;
 
 namespace PersonnelManagement.Infrastructure.EFCore.Repository
 {
-    public class PersonRepository : RepositoryBase <long, Person>, IPersonRepository
+    public class PersonRepository : RepositoryBase<long, Person>, IPersonRepository
     {
         private readonly PersonnelContext _context;
         private readonly BasicDataContext _basicDataContext;
@@ -23,8 +23,8 @@ namespace PersonnelManagement.Infrastructure.EFCore.Repository
 
         public EditPerson GetDetails(long id)
         {
-            return _context.Persons.Select(x =>  new EditPerson() 
-            { 
+            return _context.Persons.Select(x => new EditPerson()
+            {
                 Id = x.Id,
                 NameEn = x.NameEn,
                 NameFa = x.NameFa,
@@ -58,8 +58,8 @@ namespace PersonnelManagement.Infrastructure.EFCore.Repository
                 BirthCountryId = x.BirthCountryId,
                 ProfilePicture = x.ProfilePicture
 
-            }).FirstOrDefault(x => x.Id == id);   
-                
+            }).FirstOrDefault(x => x.Id == id);
+
         }
 
         public string GetNameAndFamilyById(long id)
@@ -112,7 +112,7 @@ namespace PersonnelManagement.Infrastructure.EFCore.Repository
                 WorkingStartDate = x.WorkingStartDate.ToString(),
                 MobileNo1 = x.MobileNo1,
                 ProfilePicture = x.ProfilePicture
-               
+
             }).ToList();
         }
 

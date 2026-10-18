@@ -65,6 +65,6 @@ namespace AccountManagement.Application
         }
 
         public EditRole GetDetails(long id) => _roleRepository.GetDetails(id);
-        public List<RoleViewModel> List() => _roleRepository.List();
+        public List<RoleViewModel> List() => _roleRepository.GetRoles();
     }
 }

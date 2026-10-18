@@ -16,7 +16,7 @@ namespace BasicDataManagement.Infrastructure.EFCore.Migrations
                 columns: table => new
                 {
                     Id = table.Column<long>(type: "bigint", nullable: false),
-                        //.Annotation("SqlServer:Identity", "1, 1"),
+                    //.Annotation("SqlServer:Identity", "1, 1"),
                     Ident = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Type = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Name = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),

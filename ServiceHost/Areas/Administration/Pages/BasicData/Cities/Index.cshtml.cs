@@ -56,7 +56,7 @@ namespace ServiceHost.Areas.Administration.Pages.BasicData.Cities
         public IActionResult OnGetEdit(long id)
         {
             var city = _cityApplication.GetDetails(id);
-            city.Provincies = _provinceApplication.GetProvinces(); 
+            city.Provincies = _provinceApplication.GetProvinces();
             return Partial("Edit", city);
         }
 

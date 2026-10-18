@@ -25,15 +25,15 @@ namespace OrganizationManagement.Infrastructure.EFCore.Repository
         {
             return _context.ApprovalAuthorities
                 .Select(x => new ApprovalAuthorityViewModel
-            {
-                Id = x.Id,
-                NameEn = x.NameEn,
-                NameFa = x.NameFa,
-                Description = x.Description,
-                Remark = x.Remark,
-                Code = x.Code,
-                LogoPicture = x.LogoPicture,
-            }).ToList();
+                {
+                    Id = x.Id,
+                    NameEn = x.NameEn,
+                    NameFa = x.NameFa,
+                    Description = x.Description,
+                    Remark = x.Remark,
+                    Code = x.Code,
+                    LogoPicture = x.LogoPicture,
+                }).ToList();
         }
 
         //public ApprovalAuthority GetApprovalAutorityWithCountry(long id)
@@ -68,20 +68,20 @@ namespace OrganizationManagement.Infrastructure.EFCore.Repository
             var query = _context.ApprovalAuthorities
                 //.Include(x => x.Country)
                 .Select(x => new ApprovalAuthorityViewModel()
-            {
-                Id = x.Id,
-                NameEn = x.NameEn,
-                NameFa = x.NameFa,
-                Description = x.Description,
-                Remark = x.Remark,
-                Code = x.Code,
-                LogoPicture = x.LogoPicture,
-                CountryId = x.CountryId,
-                //Country = x.Country.Name
+                {
+                    Id = x.Id,
+                    NameEn = x.NameEn,
+                    NameFa = x.NameFa,
+                    Description = x.Description,
+                    Remark = x.Remark,
+                    Code = x.Code,
+                    LogoPicture = x.LogoPicture,
+                    CountryId = x.CountryId,
+                    //Country = x.Country.Name
                 });
 
-            if(!string.IsNullOrWhiteSpace(searchModel.NameEn)) 
-                query = query.Where(x=>x.NameEn.Contains(searchModel.NameEn));
+            if (!string.IsNullOrWhiteSpace(searchModel.NameEn))
+                query = query.Where(x => x.NameEn.Contains(searchModel.NameEn));
 
             if (!string.IsNullOrWhiteSpace(searchModel.Description))
                 query = query.Where(x => x.Description.Contains(searchModel.Description));

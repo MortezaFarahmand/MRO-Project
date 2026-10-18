@@ -17,30 +17,47 @@
     <div class="modal-body">
 
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="form-group">
                     <label asp-for="Name" class="control-label">Type(Room)</label>
                     <input type="text" class="form-control" asp-for="Name" />
                     <span asp-validation-for="Name" class="error"></span>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="form-group">
                     <label asp-for="Code" class="control-label">Abbraviation(2-digit) Code</label>
-                    <input type="text" class="form-control" asp-for="Code"/>
+                    <input type="text" class="form-control" asp-for="Code" />
                     <span asp-validation-for="Code" class="error"></span>
                 </div>
             </div>
-            <div class="col-md-4">
+        </div>
+        <div class="row">
+            <div class="col-md-6">
                 <div class="form-group">
                     <label asp-for="ColorCode" class="control-label">Color-Code #</label>
                     <input type="text" class="form-control" asp-for="ColorCode" />
                     <span asp-validation-for="ColorCode" class="error"></span>
                 </div>
             </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="OrganizationId">Related Organization</label>
+                    <select class="form-control" asp-for="OrganizationId"
+                            asp-items="Model.Organizations" disabled="@(!Model.IsAdmin)">
+                        <option value="0">-Organizations-</option>
+                    </select>
+                    @if (!Model.IsAdmin)
+                    {
+                        <input type="hidden" asp-for="OrganizationId" />
+                    }
+                    <span asp-validation-for="OrganizationId"></span>
+                </div>
+            </div>
         </div>
+    </div>
 
-       
+
     </div>
 
     <div class="modal-footer">

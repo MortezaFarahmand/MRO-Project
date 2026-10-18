@@ -15,7 +15,7 @@ namespace PartManagement.Application.Contracts.Basic_data.EquipmentType
 
         public string Description { get; set; }
 
-        public string Picture {  get; set; }
+        public string Picture { get; set; }
         public string CreationDate { get; set; }
     }
 }

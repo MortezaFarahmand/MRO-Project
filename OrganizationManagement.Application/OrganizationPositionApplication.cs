@@ -18,12 +18,12 @@ namespace OrganizationManagement.Application
         public OperationResult Create(CreateOrganizationPosition command)
         {
             var organization = new OperationResult();
-            if(_organizationPositionRepository.Exists(x => x.Name == command.Name &&
-                       x.OrganizationDepartmentId == command.OrganizationDepartmentId)) 
+            if (_organizationPositionRepository.Exists(x => x.Name == command.Name &&
+                       x.OrganizationDepartmentId == command.OrganizationDepartmentId))
                 return organization.Failed(ApplicationMessages.DuplicatedRecord);
 
             var organizationPosition = new OrganizationPosition(command.Name, command.Description,
-                command.MetaDescription, command.Slug,command.ParentPositionId, command.OrganizationDepartmentId);
+                command.MetaDescription, command.Slug, command.ParentPositionId, command.OrganizationDepartmentId);
 
             _organizationPositionRepository.Create(organizationPosition);
             _organizationPositionRepository.SaveChanges();
@@ -37,7 +37,7 @@ namespace OrganizationManagement.Application
             if (organizationPosition == null)
                 return operation.Failed(ApplicationMessages.RecordNotFound);
 
-            if (_organizationPositionRepository.Exists(x => x.Name == command.Name 
+            if (_organizationPositionRepository.Exists(x => x.Name == command.Name
                     && x.Id != command.Id && x.OrganizationDepartmentId == command.OrganizationDepartmentId))
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
 

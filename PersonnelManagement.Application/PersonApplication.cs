@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace PersonnelManagement.Application
 {
-    public class PersonApplication : IPersonApplication 
+    public class PersonApplication : IPersonApplication
     {
         private readonly IPersonRepository _personRepository;
 

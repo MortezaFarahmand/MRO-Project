@@ -38,12 +38,12 @@ namespace OrganizationManagement.Domain.OrganizationAgg
         public string Slug { get; private set; }
         public string CanonicalAddress { get; private set; }
         public string Keywords { get; private set; }
-        public long OrganizationGroupId { get; private set; }   
+        public long OrganizationGroupId { get; private set; }
         //Approval List<Approval>
         public OrganizationGroup Group { get; private set; }
         public List<OrganizationPicture> OrganizationPictures { get; private set; }
         public long EntitiId { get; private set; }
-        public Entiti Entiti {  get; private set; }
+        public Entiti Entiti { get; private set; }
         //public List<Person> Persons { get; private set; } = new List<Person>();
         public List<OrganizationDepartment> OrganizationDepartments { get; private set; }
 
@@ -89,7 +89,7 @@ namespace OrganizationManagement.Domain.OrganizationAgg
             string addressFa, string tel1, string tel2, string fax, string webSite, string socialAddress1, string socialAddress2,
             string mailBox, string note, string remark, long organizationAviationCodeId, string companyRegisterNo, DateTime formedDate,
         long parentId, string logoPicture, string logoPictureAlt, string logoPictureTitle, string metaDescription, string slug,
-            string canonicalAddress, string keywords, long organizationGroupId,long entitiId)
+            string canonicalAddress, string keywords, long organizationGroupId, long entitiId)
         {
             NameEn = nameEn;
             NameFa = nameFa;
@@ -117,7 +117,7 @@ namespace OrganizationManagement.Domain.OrganizationAgg
             Slug = slug;
             CanonicalAddress = canonicalAddress;
             Keywords = keywords;
-            OrganizationGroupId= organizationGroupId;
+            OrganizationGroupId = organizationGroupId;
             EntitiId = entitiId;
         }
 

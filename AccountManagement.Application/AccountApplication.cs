@@ -1,7 +1,6 @@
 ﻿using _0_Framework.Application;
 using AccountManagement.Application.Contracts.Account;
 using AccountManagement.Domain.AccountAgg;
-using AccountManagement.Domain.RoleAgg;
 
 namespace AccountManagement.Application
 {
@@ -11,16 +10,14 @@ namespace AccountManagement.Application
         private readonly IPasswordHasher _passwordHasher;
         private readonly IAccountRepository _accountRepository;
         private readonly IAuthHelper _authHelper;
-        private readonly IRoleRepository _roleRepository;
 
-        public AccountApplication(IAccountRepository accountRepository, IPasswordHasher passwordHasher, 
-            IFileUploader fileUploader, IAuthHelper authHelper, IRoleRepository roleRepository)
+        public AccountApplication(IAccountRepository accountRepository, IPasswordHasher passwordHasher,
+            IFileUploader fileUploader, IAuthHelper authHelper)
         {
             _authHelper = authHelper;
             _accountRepository = accountRepository;
             _passwordHasher = passwordHasher;
             _fileUploader = fileUploader;
-            _roleRepository = roleRepository;
         }
 
 
@@ -29,7 +26,7 @@ namespace AccountManagement.Application
         {
             var operation = new OperationResult();
             var account = _accountRepository.Get(command.Id);
-            if (account == null) 
+            if (account == null)
                 return operation.Failed(ApplicationMessages.RecordNotFound);
 
             if (command.Password == command.RePassword)
@@ -52,7 +49,7 @@ namespace AccountManagement.Application
             // سلکت لیست سازمان در پنجره ایجاد اکانت انتخاب شده باشد ثبت خواهد شد، در غیر این صورت آیدی سازمان
             // اکانتی که ایجاد میشود همان آیدی سازمان اکانتی است که قصد ایجاد اکانت را دارد ثبت خواهد شد.
             //...
-            long accountOrganizationId;
+            long? accountOrganizationId;
             if (_authHelper.CurrentAccountOrganizationId() == 0)
                 accountOrganizationId = command.OrganizationId;
             else
@@ -62,9 +59,9 @@ namespace AccountManagement.Application
             var path = $"profilePhotos";
             var picturePath = _fileUploader.Upload(command.ProfilePhoto, path);
 
-            
 
-            var account = new Account(command.Fullname, command.Username, password, command.Mobile, 
+
+            var account = new Account(command.Fullname, command.Username, password, command.Mobile,
                  picturePath, accountOrganizationId);
             // مهم: سینک نقش‌ها
             foreach (var roleId in command.RoleIds)
@@ -87,7 +84,7 @@ namespace AccountManagement.Application
             if (_accountRepository.Exists(x => (x.Username == command.Username || x.Mobile == command.Mobile) && x.Id != command.Id))
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
             //...
-            long accountOrganizationId;
+            long? accountOrganizationId;
             if (_authHelper.CurrentAccountOrganizationId() == 0)
                 accountOrganizationId = command.OrganizationId;
             else
@@ -124,7 +121,7 @@ namespace AccountManagement.Application
                 return operation.Failed(ApplicationMessages.WrongUserPass);
 
             var result = _passwordHasher.Check(account.Password, command.Password);
-            if(!result.Verified)
+            if (!result.Verified)
                 return operation.Failed(ApplicationMessages.WrongUserPass);
 
             // SelectMany پهن کردن دسترسی همه نقش‌ها توی یه لیست
@@ -140,7 +137,7 @@ namespace AccountManagement.Application
                 .Select(ar => ar.RoleId)
                 .ToList();
 
-            var authViewModel = new AuthViewModel(account.Id, roleIds ,account.Fullname, 
+            var authViewModel = new AuthViewModel(account.Id, roleIds, account.Fullname,
                 account.Username, permissions, account.OrganizationId);
             _authHelper.Signin(authViewModel);
             return operation.Succeeded();
@@ -151,7 +148,7 @@ namespace AccountManagement.Application
             _authHelper.SignOut();
         }
 
-        public List<AccountViewModel> Search(AccountSearchModel searchModel, long organizationId)
+        public List<AccountViewModel> Search(AccountSearchModel searchModel, long? organizationId)
         {
             return _accountRepository.Search(searchModel, organizationId);
         }

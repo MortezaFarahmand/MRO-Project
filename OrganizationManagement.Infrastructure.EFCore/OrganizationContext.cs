@@ -22,7 +22,7 @@ namespace OrganizationManagement.Infrastructure.EFCore
 
         public OrganizationContext(DbContextOptions<OrganizationContext> options) : base(options)
         {
-            
+
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

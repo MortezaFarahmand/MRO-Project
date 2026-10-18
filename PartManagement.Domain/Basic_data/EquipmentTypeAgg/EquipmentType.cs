@@ -11,8 +11,8 @@ namespace PartManagement.Domain.Basic_data.EquipmentTypeAgg
         public string Picture { get; private set; }
         public bool IsActive { get; private set; }
 
-        public EquipmentType() 
-        { 
+        public EquipmentType()
+        {
 
         }
 

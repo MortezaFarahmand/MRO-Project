@@ -20,7 +20,7 @@ namespace BasicDataManagement.Application
             if (_pictureCategoryRepository.Exists(x => x.Name == command.Name))
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
 
-            var pictureCategory = new PictureCategory(command.Name ,command.Remark, command.EntitiId);
+            var pictureCategory = new PictureCategory(command.Name, command.Remark, command.EntitiId);
 
             _pictureCategoryRepository.Create(pictureCategory);
             _pictureCategoryRepository.SaveChanges();

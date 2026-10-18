@@ -14,7 +14,7 @@ namespace AccountManagement.Application.Contracts.Account
         public string Account { get; set; }
         public string ProfilePhoto { get; set; }
         public string CreationDate { get; set; }
-        public long OrganizationId { get; set; }
+        public long? OrganizationId { get; set; }
         public string Organization { get; set; }
     }
 }

@@ -2,111 +2,126 @@
 @model ServiceHost.Pages.AccountModel
 @{
     ViewData["Title"] = "ورود و ثبت نام";
+    var isRegister = Model.RegisterMessage != null;
 }
 
-<div class="breadcrumb-area section-space--half">
-    <div class="container wide">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="breadcrumb-wrapper breadcrumb-bg">
-                    <div class="breadcrumb-content">
-                        <h2 class="breadcrumb-content__title">ورود و ثبت نام</h2>
-                        <ul class="breadcrumb-content__page-map">
-                            <li><a asp-page="/Index">صفحه اصلی</a></li>
-                            <li class="active">ورود - ثبت نام</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+<div class="container">
+    <div class="auth-wrap" id="authWrap">
+        <h2 class="auth-title" data-i18n="pageTitle">ورود و ثبت نام</h2>
+        <ul class="auth-breadcrumb">
+            <li><a asp-page="/Index" data-i18n="home">صفحه اصلی</a></li>
+            <li>/</li>
+            <li data-i18n="current">ورود - ثبت نام</li>
+        </ul>
+
+        <div class="lang-row">
+            <label class="auth-lang">
+                <span>فارسی</span>
+                <input type="checkbox" id="langToggle" class="auth-lang-input">
+                <span class="auth-lang-track"><span class="auth-lang-thumb"></span></span>
+                <span>EN</span>
+            </label>
         </div>
-    </div>
-</div>
 
-<div class="page-content-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="page-wrapper">
-                    <div class="page-content-wrapper">
-                        <div class="row">
-                            <div class="col-sm-12 col-md-12 col-xs-12 col-lg-6">
-                                @if (Model.LoginMessage != null)
-                                {
-                                    <div class="alert alert-danger">@Model.LoginMessage</div>
-                                }
-                                <form method="post" asp-page-handler="Login">
-                                    <div class="login-form">
-                                        <h4 class="login-title">ورود</h4>
-                                        <div class="row">
-                                            <div class="col-md-12 col-12">
-                                                <label>نام کاربری</label>
-                                                <input type="text" name="username" placeholder="نام کاربری">
-                                            </div>
-                                            <div class="col-12">
-                                                <label>کلمه رمز</label>
-                                                <input type="password" name="password" placeholder="کلمه رمز">
-                                            </div>
+        <div class="auth-card">
+            <div class="auth-tab-header">
+                <button type="button" class="auth-tab-btn @(isRegister ? "" : "active")" data-tab="tab-login" data-i18n="loginTab">ورود</button>
+                <button type="button" class="auth-tab-btn @(isRegister ? "active" : "")" data-tab="tab-register" data-i18n="registerTab">ثبت نام</button>
+            </div>
 
-                                            @*<div class="col-sm-6">
-                                                    <div class="check-box d-inline-block ml-0 ml-md-2">
-                                                        <input type="checkbox" id="remember_me">
-                                                        <label for="remember_me">Remember me</label>
-                                                    </div>
-                                                </div>*@
+            <div id="tab-login" class="auth-pane @(isRegister ? "" : "active")">
+                @if (Model.LoginMessage != null)
+                {
+                    <div class="alert alert-danger">@Model.LoginMessage</div>
+                }
+                <form method="post" asp-page-handler="Login">
+                    <label data-i18n="username">نام کاربری</label>
+                    <input type="text" name="username" placeholder="نام کاربری" data-i18n-ph="username" required>
+                    <label data-i18n="password">کلمه رمز</label>
+                    <input type="password" name="password" placeholder="کلمه رمز" data-i18n-ph="password" required>
+                    <div style="margin-bottom:10px;">
+                        <a href="#" class="forget-link" data-i18n="forget">رمز را فراموش کرده اید؟</a>
+                    </div>
+                    <button type="submit" class="octf-btn octf-btn-third" data-i18n="loginBtn">ورود</button>
+                </form>
+            </div>
 
-                                            <div class="col-sm-6 text-left text-sm-right">
-                                                <a href="#" class="forget-pass-link">رمز را فراموش کرده اید؟</a>
-                                            </div>
-
-                                            <div class="col-md-12">
-                                                <button class="register-button">ورود</button>
-                                            </div>
-
-                                        </div>
-                                    </div>
-
-                                </form>
-                            </div>
-                            <div class="col-sm-12 col-md-12 col-lg-6 col-xs-12">
-                                @if (Model.RegisterMessage != null)
-                                {
-                                    <div class="alert alert-danger">@Model.RegisterMessage</div>
-                                }
-                                <form method="post" asp-page-handler="Register">
-                                    <div class="login-form">
-                                        <h4 class="login-title">ثبت نام</h4>
-                                        <div class="row">
-                                            <div class="col-md-6 col-12 mb-20">
-                                                <label>نام کامل</label>
-                                                <input type="text" name="fullname" placeholder="نام کامل">
-                                            </div>
-                                            <div class="col-md-6 col-12 mb-20">
-                                                <label>نام کاربری</label>
-                                                <input type="text" name="username" placeholder="نام کاربری">
-                                            </div>
-                                            <div class="col-md-12 mb-20">
-                                                <label>موبایل</label>
-                                                <input type="number" name="mobile" placeholder="موبایل">
-                                            </div>
-                                            <div class="col-md-6 mb-20">
-                                                <label>کلمه رمز</label>
-                                                <input type="password" name="password" placeholder="کلمه رمز">
-                                            </div>
-                                            <div class="col-md-6 mb-20">
-                                                <label>تایید کلمه رمز</label>
-                                                <input type="password" name="rePassword" placeholder="تایید کلمه رمز">
-                                            </div>
-                                            <div class="col-12">
-                                                <button class="register-button mt-0">ثبت نام</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
+            <div id="tab-register" class="auth-pane @(isRegister ? "active" : "")">
+                @if (Model.RegisterMessage != null)
+                {
+                    <div class="alert alert-danger">@Model.RegisterMessage</div>
+                }
+                <form method="post" asp-page-handler="Register">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label data-i18n="fullname">نام کامل</label>
+                            <input type="text" name="fullname" placeholder="نام کامل" data-i18n-ph="fullname" required>
+                        </div>
+                        <div class="col-sm-6">
+                            <label data-i18n="username">نام کاربری</label>
+                            <input type="text" name="username" placeholder="نام کاربری" data-i18n-ph="username" required>
                         </div>
                     </div>
-                </div>
+                    <label data-i18n="mobile">موبایل</label>
+                    <input type="tel" inputmode="numeric" name="mobile" placeholder="0912..." data-i18n-ph="mobilePh" required>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label data-i18n="password">کلمه رمز</label>
+                            <input type="password" name="password" placeholder="کلمه رمز" data-i18n-ph="password" required>
+                        </div>
+                        <div class="col-sm-6">
+                            <label data-i18n="confirm">تایید کلمه رمز</label>
+                            <input type="password" name="rePassword" placeholder="تایید کلمه رمز" data-i18n-ph="confirm" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="octf-btn octf-btn-primary" data-i18n="registerBtn">ثبت نام</button>
+                </form>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    (function () {
+        var btns = document.querySelectorAll('.auth-tab-btn');
+        btns.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                btns.forEach(function (b) { b.classList.remove('active'); });
+                document.querySelectorAll('.auth-pane').forEach(function (p) { p.classList.remove('active'); });
+                btn.classList.add('active');
+                document.getElementById(btn.getAttribute('data-tab')).classList.add('active');
+            });
+        });
+
+        var dict = {
+            fa: { pageTitle: 'ورود و ثبت نام', home: 'صفحه اصلی', current: 'ورود - ثبت نام', loginTab: 'ورود', registerTab: 'ثبت نام', username: 'نام کاربری', password: 'کلمه رمز', fullname: 'نام کامل', mobile: 'موبایل', confirm: 'تایید کلمه رمز', forget: 'رمز را فراموش کرده اید؟', loginBtn: 'ورود', registerBtn: 'ثبت نام', mobilePh: '0912...' },
+            en: { pageTitle: 'Sign In / Sign Up', home: 'Home', current: 'Sign - Register', loginTab: 'Sign In', registerTab: 'Sign Up', username: 'Username', password: 'Password', fullname: 'Full Name', mobile: 'Mobile', confirm: 'Confirm Password', forget: 'Forgot password?', loginBtn: 'Sign In', registerBtn: 'Sign Up', mobilePh: '09...' }
+        };
+
+        var wrap = document.getElementById('authWrap');
+        var toggle = document.getElementById('langToggle');
+
+        function applyLang(lang) {
+            var t = dict[lang] || dict.fa;
+            document.querySelectorAll('[data-i18n]').forEach(function (el) {
+                var k = el.getAttribute('data-i18n');
+                if (t[k]) el.textContent = t[k];
+            });
+            document.querySelectorAll('[data-i18n-ph]').forEach(function (el) {
+                var k = el.getAttribute('data-i18n-ph');
+                if (t[k]) el.setAttribute('placeholder', t[k]);
+            });
+            if (lang === 'en') { wrap.classList.add('en'); toggle.checked = true; }
+            else { wrap.classList.remove('en'); toggle.checked = false; }
+            try { localStorage.setItem('authLang', lang); } catch (e) {}
+        }
+
+        toggle.addEventListener('change', function () {
+            applyLang(toggle.checked ? 'en' : 'fa');
+        });
+
+        var saved = null;
+        try { saved = localStorage.getItem('authLang'); } catch (e) {}
+        if (saved === 'en' || saved === 'fa') applyLang(saved);
+    })();
+</script>

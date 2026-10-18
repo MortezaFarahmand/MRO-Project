@@ -5,9 +5,9 @@ namespace PartManagement.Domain.Stock.StockTypeAgg
 {
     public interface IStockTypeRepository : IRepository<long, StockType>
     {
-        List<StockTypeViewModel> GetStockTypes();
+        List<StockTypeViewModel> GetStockTypesBy(long? organizationId);
         EditStockType Getdetails(long id);
-        List<StockTypeViewModel> Search(StockTypeSearchModel searchModel);
+        List<StockTypeViewModel> Search(StockTypeSearchModel searchModel, long? organizationId);
 
     }
 }

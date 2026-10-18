@@ -11,7 +11,7 @@ namespace _0_Framework.Application
         public string Username { get; set; }
         public string Mobile { get; set; }
         public string ProfilePhoto { get; set; }
-        public long OrganizationId { get; set; }
+        public long? OrganizationId { get; set; }
 
         public List<int> Permissions { get; set; } = new();
 
@@ -20,7 +20,7 @@ namespace _0_Framework.Application
         }
 
         public AuthViewModel(long id, List<long> roleIds, string fullname, string username
-            , List<int> permissions, long organizationId)
+            , List<int> permissions, long? organizationId)
         {
             Id = id;
             RoleIds = roleIds;

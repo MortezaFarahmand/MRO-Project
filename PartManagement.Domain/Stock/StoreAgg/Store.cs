@@ -11,25 +11,25 @@ namespace PartManagement.Domain.Stock.StoreAgg
         public string ColorCode { get; private set; }
         public string Description { get; private set; }
         public string DefaultValueOfStockMovement { get; private set; }
-        public long OrganizationId { get; private set; }
+        public long? OrganizationId { get; private set; }
         public long CityId { get; private set; }
         public long StationId { get; private set; }
-        public long StockTypeId { get; private set; }
-        //public List<StoreRoom> StoreRooms { get; private set; }
-        public StockType StockType { get; private set; }
+        public long DefaultStockTypeId { get; private set; }
+        public StockType DefaultStockType { get; private set; }
         public long ParentId { get; private set; }
-        public  long ProviderId { get; private set; }
+        public long ProviderId { get; private set; }
         public bool NotToSearchBySpecificStore { get; private set; }
         public bool AutomaticRequestOrder { get; private set; }
         public bool IsActive { get; private set; }
+        public ICollection<StoreStockType> StoreStockTypes { get; private set; } = new List<StoreStockType>();
 
         public Store()
         {
             //StoreRooms = new List<StoreRoom>();
         }
 
-        public Store(string name, string nameFa, string code, string colorCode, 
-            string description, long organizationId, long cityId, long stationId, long stockTypeId, 
+        public Store(string name, string nameFa, string code, string colorCode,
+            string description, long? organizationId, long cityId, long stationId, long stockTypeId,
             long parentId, long providerId, string defaultValueOfStockMovement)
         {
             Name = name;
@@ -40,7 +40,7 @@ namespace PartManagement.Domain.Stock.StoreAgg
             OrganizationId = organizationId;
             CityId = cityId;
             StationId = stationId;
-            StockTypeId = stockTypeId;
+            DefaultStockTypeId = stockTypeId;
             ParentId = parentId;
             ProviderId = providerId;
             DefaultValueOfStockMovement = defaultValueOfStockMovement;
@@ -51,7 +51,7 @@ namespace PartManagement.Domain.Stock.StoreAgg
         }
 
         public void Edit(string name, string nameFa, string code, string colorCode,
-            string description, long organizationId, long cityId, long stationId, long stockTypeId,
+            string description, long? organizationId, long cityId, long stationId, long stockTypeId,
             long parentId, long providerId, string defaultValueOfStockMovement)
         {
             Name = name;
@@ -62,20 +62,22 @@ namespace PartManagement.Domain.Stock.StoreAgg
             OrganizationId = organizationId;
             CityId = cityId;
             StationId = stationId;
-            StockTypeId = stockTypeId;
+            DefaultStockTypeId = stockTypeId;
             ParentId = parentId;
             ProviderId = providerId;
             DefaultValueOfStockMovement = defaultValueOfStockMovement;
         }
 
-        //public void AddRoomToStore(StockType room)
-        //{
-        //    StockRooms.Add(room);
-        //}
-        //public void RemoveRoomFromStore(StockType room)
-        //{
-        //    StockRooms.Remove(room);
-        //}
+        public void AddRooms(StoreStockType storeStockType)
+        {
+            StoreStockTypes.Add(storeStockType);
+        }
+        public void SetRooms(List<StoreStockType> storeStockTypes)
+        {
+            StoreStockTypes.Clear();
+            foreach (var st in storeStockTypes)
+                StoreStockTypes.Add(st);
+        }
 
         public void ForbidSearchOfStore()
         {

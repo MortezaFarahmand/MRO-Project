@@ -18,12 +18,12 @@ namespace BasicDataManagement.Application
         public OperationResult Create(CreateAirport command)
         {
             var operation = new OperationResult();
-            if(_airportRepository.Exists(x => x.Name == command.Name || x.Iata_code == command.Iata_code 
+            if (_airportRepository.Exists(x => x.Name == command.Name || x.Iata_code == command.Iata_code
             || x.Icao_code == command.Icao_code))
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
-            
-            var airport = new Airport(command.Ident, command.Type, command.Name, command.Latitude_deg, 
-                command.Longitude_deg, command.Elevation_ft, command.Continent, command.Iso_country, 
+
+            var airport = new Airport(command.Ident, command.Type, command.Name, command.Latitude_deg,
+                command.Longitude_deg, command.Elevation_ft, command.Continent, command.Iso_country,
                 command.Iso_region, command.Municipality, command.Scheduled_service, command.Icao_code,
                 command.Iata_code, command.Gps_code, command.Local_code, command.Home_link, command.Wikipedia_link,
                 command.Keywords);
@@ -33,14 +33,14 @@ namespace BasicDataManagement.Application
             return operation.Succeeded();
         }
 
-       
+
         public OperationResult Edit(EditAirport command)
         {
             var operation = new OperationResult();
             var airport = _airportRepository.Get(command.Id);
             if (airport == null)
                 return operation.Failed(ApplicationMessages.RecordNotFound);
-            if(_airportRepository.Exists(x => (x.Name == command.Name || x.Iata_code == command.Iata_code
+            if (_airportRepository.Exists(x => (x.Name == command.Name || x.Iata_code == command.Iata_code
             || x.Icao_code == command.Icao_code) && x.Id != command.Id))
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
 

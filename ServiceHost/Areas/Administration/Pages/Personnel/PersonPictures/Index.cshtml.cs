@@ -21,8 +21,8 @@ namespace ServiceHost.Areas.Administration.Pages.Personnel.PersonPictures
         private readonly IPersonApplication _personApplication;
         private readonly IPictureCategoryApplication _pictureCategoryApplicaton;
 
-        public IndexModel(IPersonApplication personApplication, 
-            IPersonPictureApplication personPictureApplicaton, 
+        public IndexModel(IPersonApplication personApplication,
+            IPersonPictureApplication personPictureApplicaton,
             IPictureCategoryApplication pictureCategoryApplication)
         {
             _personApplication = personApplication;
@@ -55,8 +55,8 @@ namespace ServiceHost.Areas.Administration.Pages.Personnel.PersonPictures
             return new JsonResult(result);
         }
 
-        public IActionResult OnGetEdit(long id)  
-        { 
+        public IActionResult OnGetEdit(long id)
+        {
             var personPictures = _personPictureApplication.GetDetails(id);
             personPictures.Persons = _personApplication.GetPerson();
             personPictures.PictureCategories = _pictureCategoryApplicaton.GetPictureCategorys();
@@ -66,16 +66,16 @@ namespace ServiceHost.Areas.Administration.Pages.Personnel.PersonPictures
 
         public JsonResult OnPostEdit(EditPersonPicture command)
         {
-            if (ModelState.IsValid) 
-            { 
-                
+            if (ModelState.IsValid)
+            {
+
             }
             var result = _personPictureApplication.Edit(command);
             return new JsonResult(result);
         }
 
-        public IActionResult OnGetRestore(long id) 
-        { 
+        public IActionResult OnGetRestore(long id)
+        {
             var result = _personPictureApplication.Restore(id);
             if (result.IsSucceeded)
                 return RedirectToPage("./Index");

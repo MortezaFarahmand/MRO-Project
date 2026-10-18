@@ -67,8 +67,8 @@ namespace ServiceHost.Areas.Administration.Pages.Personnel.Person
             return new JsonResult(result);
         }
 
-        public IActionResult OnGetEdit(long id)  
-        { 
+        public IActionResult OnGetEdit(long id)
+        {
             var persons = _personApplication.GetDetails(id);
             persons.Groups = _personGroupApplicaton.GetPersonGroups();
             persons.Countrys = _countryApplicaton.GetCountrys();
@@ -84,8 +84,8 @@ namespace ServiceHost.Areas.Administration.Pages.Personnel.Person
             return new JsonResult(result);
         }
 
-        public IActionResult OnGetActive(long id) 
-        { 
+        public IActionResult OnGetActive(long id)
+        {
             var result = _personApplication.Active(id);
             if (result.IsSucceeded)
                 return RedirectToPage("./Index");

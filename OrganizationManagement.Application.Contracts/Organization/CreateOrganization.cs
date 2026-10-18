@@ -9,7 +9,7 @@ namespace OrganizationManagement.Application.Contracts.Organization
 {
     public class CreateOrganization
     {
-        [Required(ErrorMessage =ValidationMessages.IsRequired)]
+        [Required(ErrorMessage = ValidationMessages.IsRequired)]
         public string NameEn { get; set; }
 
         public string NameFa { get; set; }

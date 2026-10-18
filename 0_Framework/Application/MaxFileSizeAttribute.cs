@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace _0_Framework.Application
 {
-    public class MaxFileSizeAttribute : ValidationAttribute , IClientModelValidator
+    public class MaxFileSizeAttribute : ValidationAttribute, IClientModelValidator
     {
         private readonly int _maxFileSize;
 
@@ -15,7 +15,7 @@ namespace _0_Framework.Application
 
         public override bool IsValid(object value)
         {
-            var file = value as IFormFile; 
+            var file = value as IFormFile;
             if (file == null) return true;
             //if(file.Length > _maxFileSize) 
             //    return false;

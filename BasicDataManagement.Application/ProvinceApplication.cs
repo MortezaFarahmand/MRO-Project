@@ -18,11 +18,11 @@ namespace BasicDataManagement.Application
         public OperationResult Create(CreateProvince command)
         {
             var operation = new OperationResult();
-            if(_provinceRepository.Exists(x => x.Name == command.Name)) 
+            if (_provinceRepository.Exists(x => x.Name == command.Name))
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
 
             var slug = command.Slug.Slugify();
-            var province = new Province(command.Name, command.DialCode, 
+            var province = new Province(command.Name, command.DialCode,
                 command.MetaDescription, slug, command.Keywords, command.CountryId);
             _provinceRepository.Create(province);
             _provinceRepository.SaveChanges();

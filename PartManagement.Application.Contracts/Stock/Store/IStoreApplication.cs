@@ -2,13 +2,12 @@
 
 namespace PartManagement.Application.Contracts.Stock.Store
 {
-    public interface IStoreApplication 
+    public interface IStoreApplication
     {
         OperationResult Create(CreateStore command);
         OperationResult Edit(EditStore command);
         EditStore GetDetails(long id);
-        List<StoreViewModel> GetStoresByOrganizationId(StoreViewModel storeViewModel);
-        List<StoreViewModel> Search(StoreSearchModel searchModel);
+        List<StoreViewModel> Search(StoreSearchModel searchModel, long? organizationId);
         OperationResult Activate(long id);
         OperationResult Deactivate(long id);
         //OperationResult AddRoom(List<AddRemoveStoreRoom> command);
@@ -16,7 +15,7 @@ namespace PartManagement.Application.Contracts.Stock.Store
         //OperationResult RemoveRoom(List<AddRemoveStoreRoom> command);
         //OperationResult RemoveRoom(AddRemoveStoreRoom command);
         OperationResult ForbidSearchOfStore(long id);
-        OperationResult AllowSearchOfStore(long id); 
+        OperationResult AllowSearchOfStore(long id);
         OperationResult SetAutoRequestOrder(long id);
         OperationResult DisableAutoRequestOrder(long id);
 

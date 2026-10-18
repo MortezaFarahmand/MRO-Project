@@ -2,7 +2,7 @@
 {
     public class EditOrganizationAviationCode : CreateOrganizationAviationCode
     {
-            public long Id { get; set; }
-        }
+        public long Id { get; set; }
+    }
 
 }

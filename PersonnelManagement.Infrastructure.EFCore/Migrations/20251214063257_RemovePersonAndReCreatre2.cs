@@ -17,7 +17,7 @@ namespace PersonnelManagement.Infrastructure.EFCore.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-          
+
         }
     }
 }

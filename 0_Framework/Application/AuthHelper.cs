@@ -122,7 +122,7 @@ namespace _0_Framework.Application
                 .Where(x => x.HasValue).Select(x => x.Value).ToList();
         }
 
-        public long CurrentAccountOrganizationId()
+        public long? CurrentAccountOrganizationId()
         {
             if (!IsAuthenticated()) return 0;
             var v = _contextAccessor.HttpContext.User.Claims.FirstOrDefault(x => x.Type == "OrganizationId")?.Value;

@@ -16,6 +16,6 @@
         public string Local_code { get; set; }
         public string Home_link { get; set; }
         public string CreationDate { get; set; }
-        public  bool IsActive { get; set; }
+        public bool IsActive { get; set; }
     }
 }

@@ -10,7 +10,7 @@ namespace AccountManagement.Infrastructure.EFCore.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-           
+
         }
 
         /// <inheritdoc />

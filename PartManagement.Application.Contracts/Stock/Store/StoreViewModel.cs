@@ -1,4 +1,6 @@
-﻿namespace PartManagement.Application.Contracts.Stock.Store
+﻿using PartManagement.Application.Contracts.Stock.StockType;
+
+namespace PartManagement.Application.Contracts.Stock.Store
 {
     public class StoreViewModel
     {
@@ -12,9 +14,10 @@
         public string Parent { get; set; }
         public string Provider { get; set; }
         public long StockTypeId { get; set; }
-        public long OrganizationId { get; set; }
+        public long? OrganizationId { get; set; }
         public string CreationDate { get; set; }
 
         public bool IsActive { get; set; }
+        public List<StockTypeViewModel> StockTypes { get; set; } = new();
     }
 }

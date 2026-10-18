@@ -35,7 +35,7 @@ namespace BasicDataManagement.Infrastructure.EFCore.Repository
         {
             return _context.Provinces.Select(x => new ProvinceViewModel()
             {
-                Id= x.Id,
+                Id = x.Id,
                 Name = x.Name
             }).ToList();
         }
@@ -45,21 +45,21 @@ namespace BasicDataManagement.Infrastructure.EFCore.Repository
             var query = _context.Provinces
                 .Include(x => x.Country)
                 .Select(x => new ProvinceViewModel()
-            {
-                Id = x.Id,
-                Name = x.Name,
-                DialCode = x.DialCode,
-                MetaDescription = x.MetaDescription,
-                Slug = x.Slug,
-                Keywords = x.Keywords,
-                Country = x.Country.Name,
-                CountryId = x.CountryId
-            });
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    DialCode = x.DialCode,
+                    MetaDescription = x.MetaDescription,
+                    Slug = x.Slug,
+                    Keywords = x.Keywords,
+                    Country = x.Country.Name,
+                    CountryId = x.CountryId
+                });
 
             if (!string.IsNullOrWhiteSpace(searchModel.Name))
                 query = query.Where(x => x.Name.Contains(searchModel.Name));
 
-            if(searchModel.CountryId !=0)
+            if (searchModel.CountryId != 0)
                 query = query.Where(x => x.CountryId == searchModel.CountryId);
 
             return query.OrderByDescending(x => x.Id).ToList();

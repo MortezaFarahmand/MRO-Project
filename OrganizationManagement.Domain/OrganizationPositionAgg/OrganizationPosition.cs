@@ -22,7 +22,7 @@ namespace OrganizationManagement.Domain.OrganizationPositionAgg
         //    Persons = new List<Person>();
         //}
 
-        public OrganizationPosition(string name, string description, string metaDescription, string slug, 
+        public OrganizationPosition(string name, string description, string metaDescription, string slug,
               long parentPositionId, long organizationDepartmentId)
         {
             Name = name;

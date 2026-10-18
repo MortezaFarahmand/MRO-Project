@@ -27,8 +27,8 @@ namespace ServiceHost.Areas.Administration.Pages.Personnel.PersonGroup
             return Partial("./Create", new CreatePersonGroup());
         }
 
-        public JsonResult OnPostCreate(CreatePersonGroup command) 
-        { 
+        public JsonResult OnPostCreate(CreatePersonGroup command)
+        {
             var result = _personGroupApplication.Create(command);
             return new JsonResult(result);
         }

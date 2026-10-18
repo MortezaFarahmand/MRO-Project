@@ -4,12 +4,12 @@ namespace BasicDataManagement.Domain.AirportAgg
 {
     public class Airport : EntityBase
     {
-        public string  Ident { get; private set; }
+        public string Ident { get; private set; }
         public string Type { get; private set; }
-        public  string Name { get; private set; }
+        public string Name { get; private set; }
         public float Latitude_deg { get; private set; }
-        public float Longitude_deg { get; private set;}
-        public int Elevation_ft  { get; private set; }
+        public float Longitude_deg { get; private set; }
+        public int Elevation_ft { get; private set; }
         public string Continent { get; private set; }
         public string Iso_country { get; private set; }
         public string Iso_region { get; private set; }
@@ -26,13 +26,13 @@ namespace BasicDataManagement.Domain.AirportAgg
 
         public Airport()
         {
-            
+
         }
 
-        public Airport(string ident, string type, string name, float latitude_deg, float longitude_deg, 
-            int elevation_ft, string continent, string iso_country, string iso_region, 
-            string municipality, bool scheduled_service, string icao_code, 
-            string iata_code, string gps_code, string local_code, string home_link, 
+        public Airport(string ident, string type, string name, float latitude_deg, float longitude_deg,
+            int elevation_ft, string continent, string iso_country, string iso_region,
+            string municipality, bool scheduled_service, string icao_code,
+            string iata_code, string gps_code, string local_code, string home_link,
             string wikipedia_link, string keywords)
         {
             Ident = ident;
@@ -87,8 +87,8 @@ namespace BasicDataManagement.Domain.AirportAgg
             IsActive = true;
         }
 
-        public void Deactive() 
-        { 
+        public void Deactive()
+        {
             IsActive = false;
         }
     }

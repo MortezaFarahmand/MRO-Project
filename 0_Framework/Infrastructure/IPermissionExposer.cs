@@ -2,7 +2,7 @@
 
 namespace _0_Framework.Infrastructure
 {
-    public interface IPermissionExposer 
+    public interface IPermissionExposer
     {
         Dictionary<string, List<PermissionDto>> Expose();
     }

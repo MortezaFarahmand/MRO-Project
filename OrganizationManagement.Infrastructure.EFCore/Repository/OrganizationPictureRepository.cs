@@ -21,11 +21,12 @@ namespace OrganizationManagement.Infrastructure.EFCore.Repository
 
         public EditOrganizationPicture GetDetails(long id)
         {
-            return _context.OrganizationPictures.Select(x => new EditOrganizationPicture {
+            return _context.OrganizationPictures.Select(x => new EditOrganizationPicture
+            {
                 Id = x.Id,
                 Picture = x.Picture,
                 PictureAlt = x.PictureAlt,
-                PictureTitle = x.PictureTitle,  
+                PictureTitle = x.PictureTitle,
                 OrganizationId = x.OrganizationId
             }).FirstOrDefault(x => x.Id == id);
         }
@@ -34,17 +35,17 @@ namespace OrganizationManagement.Infrastructure.EFCore.Repository
         {
             var query = _context.OrganizationPictures
                 .Include(x => x.Organization)
-                .Select(x => new OrganizationPictureViewModel 
-            {
-                Id = x.Id,
-                Organization = x.Organization.NameEn,
-                CreationDate = x.CreationDate.ToString(),
-                Picture = x.Picture,
-                OrganizationId = x.OrganizationId,
-                IsRemoved = x.IsRemoved
-            });
+                .Select(x => new OrganizationPictureViewModel
+                {
+                    Id = x.Id,
+                    Organization = x.Organization.NameEn,
+                    CreationDate = x.CreationDate.ToString(),
+                    Picture = x.Picture,
+                    OrganizationId = x.OrganizationId,
+                    IsRemoved = x.IsRemoved
+                });
 
-            if(searchModel.OrganizationId != 0)
+            if (searchModel.OrganizationId != 0)
                 query = query.Where(x => x.OrganizationId == searchModel.OrganizationId);
 
             return query.OrderByDescending(x => x.Id).ToList();

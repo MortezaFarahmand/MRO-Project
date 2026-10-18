@@ -20,12 +20,12 @@ namespace ServiceHost.Areas.Administration.Pages.Organization.OrganizationPositi
         private readonly IOrganizationApplication _organizationApplication;
         private readonly IOrganizationDepartmentApplication _organizationDepartmentApplication;
 
-        public IndexModel(IOrganizationPositionApplication organizationPositionApplication, 
-            IOrganizationApplication organizationApplication,IOrganizationDepartmentApplication organizationDepartmentApplication)
+        public IndexModel(IOrganizationPositionApplication organizationPositionApplication,
+            IOrganizationApplication organizationApplication, IOrganizationDepartmentApplication organizationDepartmentApplication)
         {
             _organizationPositionApplication = organizationPositionApplication;
             _organizationApplication = organizationApplication;
-            _organizationDepartmentApplication = organizationDepartmentApplication; 
+            _organizationDepartmentApplication = organizationDepartmentApplication;
         }
 
 

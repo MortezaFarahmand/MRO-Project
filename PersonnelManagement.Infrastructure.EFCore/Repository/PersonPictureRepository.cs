@@ -36,7 +36,7 @@ namespace PersonnelManagement.Infrastructure.EFCore.Repository
 
         public List<PersonPictureViewModel> GetList()
         {
-            var pictureCategory = _basicDataContext.PictureCategorys.Select(x => new {x.Id, x.Name}).ToList();
+            var pictureCategory = _basicDataContext.PictureCategorys.Select(x => new { x.Id, x.Name }).ToList();
 
             var query = _context.PersonPictures
                .Include(x => x.Person)
@@ -53,7 +53,7 @@ namespace PersonnelManagement.Infrastructure.EFCore.Repository
                    Person = x.Person.NameEn + ' ' + x.Person.FamilyEn
 
                });
-            
+
             var personPic = query.ToList();
 
             personPic.ForEach(pp => pp.PictureCategory = pictureCategory
@@ -82,13 +82,13 @@ namespace PersonnelManagement.Infrastructure.EFCore.Repository
 
                });
 
-            if(!string.IsNullOrWhiteSpace(searchModel.Title))
+            if (!string.IsNullOrWhiteSpace(searchModel.Title))
                 query = query.Where(x => x.Title.Contains(searchModel.Title));
 
             if (searchModel.PictureCategoryId != 0)
                 query = query.Where(x => x.PictureCategoryId == searchModel.PictureCategoryId);
 
-            if(searchModel.PersonId != 0)
+            if (searchModel.PersonId != 0)
                 query = query.Where(x => x.PersonId == searchModel.PersonId);
 
             ////////////////

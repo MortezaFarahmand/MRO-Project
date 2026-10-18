@@ -16,17 +16,17 @@ namespace _01_MROQuery.Query
 
         List<OrganizationGroupQueryModel> IOrganizatonGroupQuery.GetOrganizationGroups()
         {
-            return _context.OrganizationGroups.Select(x => new OrganizationGroupQueryModel 
+            return _context.OrganizationGroups.Select(x => new OrganizationGroupQueryModel
             {
-              Id = x.Id,
-              Name = x.Name,
-              Description = x.Description,
-              Picture = x.Picture,
-              PictureAlt = x.PictureAlt,
-              PictureTitle = x.PictureTitle,
-              Slug = x.Slug,
-              Keywords = x.Keywords,
-              CreationDate = x.CreationDate.ToShortDateString()
+                Id = x.Id,
+                Name = x.Name,
+                Description = x.Description,
+                Picture = x.Picture,
+                PictureAlt = x.PictureAlt,
+                PictureTitle = x.PictureTitle,
+                Slug = x.Slug,
+                Keywords = x.Keywords,
+                CreationDate = x.CreationDate.ToShortDateString()
             }).ToList();
         }
     }

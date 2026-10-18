@@ -10,7 +10,7 @@ namespace PersonnelManagement.Infrastructure.EFCore.Repository
     {
         private readonly PersonnelContext _context;
 
-        public PersonGroupRepository(PersonnelContext context) : base(context)  
+        public PersonGroupRepository(PersonnelContext context) : base(context)
         {
             _context = context;
         }

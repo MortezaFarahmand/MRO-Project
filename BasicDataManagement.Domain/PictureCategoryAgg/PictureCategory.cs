@@ -5,7 +5,7 @@ namespace BasicDataManagement.Domain.PictureCategoryAgg
 {
     public class PictureCategory : EntityBase
     {
-        public string  Name { get; private set; }
+        public string Name { get; private set; }
         public bool IsActive { get; private set; }
         public string Remark { get; private set; }
         public long EntitiId { get; private set; }
@@ -29,7 +29,7 @@ namespace BasicDataManagement.Domain.PictureCategoryAgg
         }
 
         public void DeActive()
-        { 
+        {
             IsActive = false;
         }
 

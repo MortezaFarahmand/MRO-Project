@@ -46,9 +46,14 @@
                     </div> *@
                     <div class="form-group">
                         <label class="sr-only" asp-for="SearchModel.OrganizationId"></label>
-                        <select class="form-control " asp-for="SearchModel.OrganizationId" asp-items="Model.Organizations">
+                        <select class="form-control " asp-for="SearchModel.OrganizationId" 
+                                asp-items="Model.Organizations" disabled="@(!Model.IsAdmin)">
                             <option value="0">-Organizations-</option>
                         </select>
+                        @if (!Model.IsAdmin)
+                        {
+                            <input type="hidden" asp-for="SearchModel.OrganizationId" />
+                        }
                     </div>
 
                         <button type="submit" formnovalidate class="btn btn-success waves-effect waves-light m-l-10">Search</button>

@@ -17,8 +17,8 @@ namespace BasicDataManagement.Application
 
         public OperationResult Create(CreateEntiti command)
         {
-            var operation  = new OperationResult();
-            if(_entitiRepository.Exists(x => x.Name == command.Name))
+            var operation = new OperationResult();
+            if (_entitiRepository.Exists(x => x.Name == command.Name))
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
 
             var entiti = new Entiti(command.Name, command.Title, command.Remark);
@@ -31,7 +31,7 @@ namespace BasicDataManagement.Application
         {
             var operation = new OperationResult();
             var entiti = _entitiRepository.Get(command.Id);
-            if(entiti == null)
+            if (entiti == null)
                 return operation.Failed(ApplicationMessages.RecordNotFound);
 
             if (_entitiRepository.Exists(x => x.Name == command.Name && x.Id != command.Id))
