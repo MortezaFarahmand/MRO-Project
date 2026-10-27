@@ -31,6 +31,9 @@ namespace AccountManagement.Application.Contracts.Account
 
         public long? OrganizationId { get; set; }
         public List<OrganizationViewModel> Organizations { get; set; } = new List<OrganizationViewModel>();
+        // پرچم دسترسی
+        public bool? isSysAdmin { get; set; }
+        public bool? isOrgAdmin { get; set; }
 
         //public List<long> AccountRoles { get; set; } = new List<long>();
 

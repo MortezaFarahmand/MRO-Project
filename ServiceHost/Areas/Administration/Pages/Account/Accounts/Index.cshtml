@@ -47,10 +47,10 @@
                     <div class="form-group">
                         <label class="sr-only" asp-for="SearchModel.OrganizationId"></label>
                         <select class="form-control " asp-for="SearchModel.OrganizationId" 
-                                asp-items="Model.Organizations" disabled="@(!Model.IsAdmin)">
+                                asp-items="Model.Organizations" disabled="@(!Model.SearchModel.IsSystemAdmin)">
                             <option value="0">-Organizations-</option>
                         </select>
-                        @if (!Model.IsAdmin)
+                        @if (!Model.SearchModel.IsSystemAdmin)
                         {
                             <input type="hidden" asp-for="SearchModel.OrganizationId" />
                         }

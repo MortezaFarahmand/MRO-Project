@@ -5,7 +5,8 @@ namespace AccountManagement.Domain.RoleAgg
 {
     public interface IRoleRepository : IRepository<long, Role>
     {
-        List<RoleViewModel> GetRoles();
-        EditRole GetDetails(long id);
+        List<RoleViewModel> GetRoles(RoleQueryDto query);
+        EditRole GetDetails(long id, RoleQueryDto query);
+        Role GetForEdit(long id, RoleQueryDto query);   // برای Edit واقعی
     }
 }

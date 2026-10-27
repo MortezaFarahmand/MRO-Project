@@ -3,17 +3,17 @@
     public static class AccountPermissions
     {
         //Accounts
-        public const int ListAccounts = 1;
-        public const int SearchAccounts = 2;
+        public const long ListAccounts = 1;
+        public const long SearchAccounts = 2;
 
-        public static int CreateAccounts = 3;
-        public static int EditAccounts = 4;
+        public static long CreateAccounts = 3;
+        public static long EditAccounts = 4;
 
-        public static int AccountOrganizationId = 5;
+        public static long AccountOrganizationId = 5;
 
         //Roles
-        public const int ListRoles = 7;
-        public const int CreateRoles = 8;
-        public const int EditRoles = 9;
+        public const long ListRoles = 7;
+        public const long CreateRoles = 8;
+        public const long EditRoles = 9;
     }
 }

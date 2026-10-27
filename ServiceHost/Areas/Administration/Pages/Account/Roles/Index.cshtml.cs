@@ -22,7 +22,7 @@ namespace ServiceHost.Areas.Administration.Pages.Account.Roles
 
         public void OnGet()
         {
-            Roles = _roleApplication.List();
+            Roles = _roleApplication.GetRoles();
         }
 
 

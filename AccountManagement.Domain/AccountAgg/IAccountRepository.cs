@@ -7,7 +7,7 @@ namespace AccountManagement.Domain.AccountAgg
     {
         Account GetBy(string username);
         EditAccount GetDetails(long id);
-        List<AccountViewModel> Search(AccountSearchModel searchModel, long? organizationId);
+        List<AccountViewModel> Search(AccountSearchModel searchMode, long? currentOrgId);
 
     }
 }

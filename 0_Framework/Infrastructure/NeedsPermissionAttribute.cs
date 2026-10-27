@@ -4,9 +4,9 @@ namespace _0_Framework.Infrastructure
 {
     public class NeedsPermissionAttribute : Attribute
     {
-        public int Permission { get; set; }
+        public long Permission { get; set; }
 
-        public NeedsPermissionAttribute(int permission)
+        public NeedsPermissionAttribute(long permission)
         {
             Permission = permission;
         }

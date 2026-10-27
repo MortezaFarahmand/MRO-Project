@@ -5,9 +5,13 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Infrast
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Infrastructure.EFCore\bin\Debug\net9.0\0_Framework.dll
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Infrastructure.EFCore\bin\Debug\net9.0\AccountManagement.Application.Contracts.dll
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Infrastructure.EFCore\bin\Debug\net9.0\AccountManagement.Domain.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Infrastructure.EFCore\bin\Debug\net9.0\BasicDataManagement.Application.Contracts.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Infrastructure.EFCore\bin\Debug\net9.0\OrganizationManagement.Application.Contracts.dll
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Infrastructure.EFCore\bin\Debug\net9.0\AccountManagement.Domain.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Infrastructure.EFCore\bin\Debug\net9.0\0_Framework.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Infrastructure.EFCore\bin\Debug\net9.0\AccountManagement.Application.Contracts.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Infrastructure.EFCore\bin\Debug\net9.0\BasicDataManagement.Application.Contracts.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Infrastructure.EFCore\bin\Debug\net9.0\OrganizationManagement.Application.Contracts.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Infrastructure.EFCore\obj\Debug\net9.0\AccountManagement.Infrastructure.EFCore.csproj.AssemblyReference.cache
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Infrastructure.EFCore\obj\Debug\net9.0\AccountManagement.Infrastructure.EFCore.GeneratedMSBuildEditorConfig.editorconfig
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Infrastructure.EFCore\obj\Debug\net9.0\AccountManagement.Infrastructure.EFCore.AssemblyInfoInputs.cache
@@ -20,7 +24,3 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Infrast
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Infrastructure.EFCore\obj\Debug\net9.0\AccountManagement.Infrastructure.EFCore.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Infrastructure.EFCore\obj\Debug\net9.0\AccountManagement.Infrastructure.EFCore.genruntimeconfig.cache
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Infrastructure.EFCore\obj\Debug\net9.0\ref\AccountManagement.Infrastructure.EFCore.dll
-D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Infrastructure.EFCore\bin\Debug\net9.0\BasicDataManagement.Application.Contracts.dll
-D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Infrastructure.EFCore\bin\Debug\net9.0\OrganizationManagement.Application.Contracts.dll
-D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Infrastructure.EFCore\bin\Debug\net9.0\BasicDataManagement.Application.Contracts.pdb
-D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Infrastructure.EFCore\bin\Debug\net9.0\OrganizationManagement.Application.Contracts.pdb

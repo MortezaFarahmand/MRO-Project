@@ -7,5 +7,6 @@
         public string Code { get; set; }
         public long StockTypeId { get; set; }
         public long? OrganizationId { get; set; }
+        public bool IsAdmin { get; set; }
     }
 }

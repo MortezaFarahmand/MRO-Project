@@ -2,6 +2,7 @@
 using AccountManagement.Application.Contracts.Account;
 using AccountManagement.Application.Contracts.Role;
 using AccountManagement.Domain.AccountAgg;
+using AccountManagement.Domain.RoleAgg;
 using Microsoft.EntityFrameworkCore;
 
 namespace AccountManagement.Infrastructure.EFCore.Repository
@@ -26,16 +27,15 @@ namespace AccountManagement.Infrastructure.EFCore.Repository
 
         public EditAccount GetDetails(long id)
         {
-            //var account = _context.Accounts
-            //.Include(ar => ar.AccountRoles.Where(x => x.AccountId == id) )
-            //    .ThenInclude(r => r.Role)
-            //        .ThenInclude(p => p.Permissions)
-
             var account = _context.Accounts
-                .Include(x => x.AccountRoles)
-                    .ThenInclude(ar => ar.Role)
-                        .ThenInclude(r => r.Permissions)
-                .FirstOrDefault(x => x.Id == id);
+        .AsNoTracking()
+        .Include(x => x.AccountRoles)
+            .ThenInclude(ar => ar.Role)
+                .ThenInclude(r => r.Permissions)
+        .FirstOrDefault(x => x.Id == id);
+
+            if (account == null)
+                return null;
 
             return new EditAccount
             {
@@ -45,39 +45,26 @@ namespace AccountManagement.Infrastructure.EFCore.Repository
                 Mobile = account.Mobile,
                 OrganizationId = account.OrganizationId,
                 RoleIds = account.AccountRoles.Select(ar => ar.RoleId).ToList(),
-                // لیست سطح دوم، فقط برای نمایش
+                IsSystemAdmin = account.IsSystemAdmin,
+                IsOrganizationAdmin = account.IsOrganizationAdmin,
                 MappedAccountPermissions = account.AccountRoles
                     .SelectMany(ar => ar.Role.Permissions)
-                        .DistinctBy(p => p.Code)
+                    .DistinctBy(p => p.Code)
                     .Select(p => new PermissionDto(p.Code, p.Name))
                     .ToList()
             };
-
-            //.Select(x => new EditAccount
-            //{
-            //    Id = x.Id,  
-            //    Fullname = x.Fullname,
-            //    Mobile = x.Mobile,
-            //    Username = x.Username,
-            //    OrganizationId = x.OrganizationId,
-            //    Roles = x.AccountRoles.Select(ar => new RoleViewModel 
-            //    { 
-            //        Id = ar.RoleId,
-            //        Name = ar.Role.Name,
-            //        // پر کردن مستقیم لیست سطح دوم بدون نیاز به متد خارجی
-            //        PermissionIds = ar.Role.Permissions.Select(p => p.Id).ToList()
-            //    }).ToList()
-
-            //}).FirstOrDefault(x => x.Id == id);
-
-            //return account;
         }
 
-        public List<AccountViewModel> Search(AccountSearchModel searchModel, long? organizationId)
+        public List<AccountViewModel> Search(AccountSearchModel searchModel, long? currentOrgId)
         {
-            searchModel ??= new AccountSearchModel();
             var query = _context.Accounts.AsQueryable();
-
+            // IsSystemAdmin Check...
+            if (!searchModel.IsSystemAdmin)
+                query = query.Where(x => x.OrganizationId == currentOrgId);
+            else if(searchModel.IsSystemAdmin && searchModel.OrganizationId.HasValue 
+                                                    && searchModel.OrganizationId != 0)
+                query = query.Where(x => x.OrganizationId == searchModel.OrganizationId);
+            ////////////////////////
             if (!string.IsNullOrWhiteSpace(searchModel.Fullname))
                 query = query.Where(x => x.Fullname.Contains(searchModel.Fullname));
 
@@ -86,23 +73,6 @@ namespace AccountManagement.Infrastructure.EFCore.Repository
 
             if (!string.IsNullOrWhiteSpace(searchModel.Mobile))
                 query = query.Where(x => x.Mobile.Contains(searchModel.Mobile));
-
-            // در این شرط در صورتی که آی دی سازمان اکانت وارد شده صفر باشد دسترسی به تمام اکانت هایی که آیدی آنها غیر صفر است دارد و
-            // در غیر این صورت یعنی زمانی که آیدی سازمان اکانت وارد شده صفر نباشد فقط اکانت هایی را میتواند مشاهده کند که 
-            // آیدی سازمان آن با آیدی سازمان لیست اکانت ها یکی باشد.
-
-            // اگه کاربر عادیه (سازمان داره) -> فقط سازمان خودش، سرچ نادیده گرفته میشه (مهم برای امنیت)
-            if (organizationId != 0)
-            {
-                query = query.Where(x => x.OrganizationId == organizationId);
-            }
-            // اگه ادمینه (صفر) -> همه رو نشون بده، مگر اینکه خودش فیلتر انتخاب کرده باشه
-            else
-            {
-                if (searchModel.OrganizationId.HasValue && searchModel.OrganizationId.Value != 0)
-                    query = query.Where(x => x.OrganizationId == searchModel.OrganizationId.Value);
-            }
-
 
             return query.OrderByDescending(x => x.Id)
                 .Include(ar => ar.AccountRoles)
@@ -127,7 +97,9 @@ namespace AccountManagement.Infrastructure.EFCore.Repository
                     }).ToList(),
                     Username = x.Username,
                     CreationDate = x.CreationDate.ToShortDateString(),
-                    OrganizationId = x.OrganizationId
+                    OrganizationId = x.OrganizationId,
+                    IsSyatemAdmin = x.IsSystemAdmin,
+                    IsOrganizationAdmin = x.IsOrganizationAdmin
                 }).ToList();
 
         }

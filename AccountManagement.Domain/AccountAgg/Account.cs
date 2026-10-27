@@ -11,6 +11,8 @@ namespace AccountManagement.Domain.AccountAgg
         //public long RoleId { get; private set; }
         public long? OrganizationId { get; private set; }
         //public Role Role { get; private set; }
+        public bool? IsSystemAdmin { get; private set; }
+        public bool IsOrganizationAdmin { get; private set; }
         public ICollection<AccountRole> AccountRoles { get; private set; } = new List<AccountRole>();
         public string ProfilePhoto { get; private set; }
 
@@ -27,10 +29,13 @@ namespace AccountManagement.Domain.AccountAgg
             Mobile = mobile;
             ProfilePhoto = profilePhoto;
             OrganizationId = organizationId;
+            IsSystemAdmin = false;
+            IsOrganizationAdmin = false;
         }
 
         public void Edit(string fullname, string username,
-            string mobile, string profilePhoto, long? organizationId)
+            string mobile, string profilePhoto, long? organizationId, 
+            bool? isSystemAdmin, bool isOrganizationAdmin)
         {
             Fullname = fullname;
             Username = username;
@@ -38,6 +43,8 @@ namespace AccountManagement.Domain.AccountAgg
             OrganizationId = organizationId;
             if (!string.IsNullOrWhiteSpace(profilePhoto))
                 ProfilePhoto = profilePhoto;
+            IsSystemAdmin = isSystemAdmin;
+            IsOrganizationAdmin = isOrganizationAdmin;
             //AccountRoles = accountRoles;
         }
 

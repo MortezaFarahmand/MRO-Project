@@ -19,5 +19,8 @@ namespace PartManagement.Application.Contracts.Stock.Store
 
         public bool IsActive { get; set; }
         public List<StockTypeViewModel> StockTypes { get; set; } = new();
+        public long CityId { get; set; }
+        public long StationId { get; set; }
+        public long ParentId { get; set; }
     }
 }

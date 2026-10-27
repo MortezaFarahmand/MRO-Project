@@ -10,7 +10,16 @@ namespace AccountManagement.Infrastructure.EFCore.Mappings
         {
             builder.ToTable("AccountRoles");
             builder.HasKey(x => x.Id);
-            builder.HasOne(x => x.Account).WithMany(x => x.AccountRoles).HasForeignKey(x => x.AccountId);
+
+            builder.HasOne(x => x.Account)
+                   .WithMany(x => x.AccountRoles)
+                   .HasForeignKey(x => x.AccountId);
+            //.OnDelete(DeleteBehavior.Cascade);
+
+            builder.HasOne(x => x.Role)
+                   .WithMany(x => x.AccountRoles)
+                   .HasForeignKey(x => x.RoleId);
+                   //.OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

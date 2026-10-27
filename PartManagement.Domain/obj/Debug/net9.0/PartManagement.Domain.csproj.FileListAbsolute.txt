@@ -2,9 +2,13 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Domain\bin
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Domain\bin\Debug\net9.0\PartManagement.Domain.dll
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Domain\bin\Debug\net9.0\PartManagement.Domain.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Domain\bin\Debug\net9.0\0_Framework.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Domain\bin\Debug\net9.0\BasicDataManagement.Application.Contracts.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Domain\bin\Debug\net9.0\OrganizationManagement.Application.Contracts.dll
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Domain\bin\Debug\net9.0\PartManagement.Application.Contracts.dll
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Domain\bin\Debug\net9.0\0_Framework.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Domain\bin\Debug\net9.0\PartManagement.Application.Contracts.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Domain\bin\Debug\net9.0\BasicDataManagement.Application.Contracts.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Domain\bin\Debug\net9.0\OrganizationManagement.Application.Contracts.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Domain\obj\Debug\net9.0\PartManagement.Domain.csproj.AssemblyReference.cache
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Domain\obj\Debug\net9.0\PartManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Domain\obj\Debug\net9.0\PartManagement.Domain.AssemblyInfoInputs.cache
@@ -16,7 +20,3 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Domain\obj
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Domain\obj\Debug\net9.0\refint\PartManagement.Domain.dll
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Domain\obj\Debug\net9.0\PartManagement.Domain.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Domain\obj\Debug\net9.0\ref\PartManagement.Domain.dll
-D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Domain\bin\Debug\net9.0\BasicDataManagement.Application.Contracts.dll
-D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Domain\bin\Debug\net9.0\OrganizationManagement.Application.Contracts.dll
-D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Domain\bin\Debug\net9.0\BasicDataManagement.Application.Contracts.pdb
-D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Domain\bin\Debug\net9.0\OrganizationManagement.Application.Contracts.pdb

@@ -3,27 +3,27 @@
     public static class PartPermissions
     {
         //Part
-        public const int ListPart = 100;
-        public const int SearchPart = 101;
-        public const int CreatePart = 102;
-        public const int EditPart = 103;
+        public const long ListPart = 100;
+        public const long SearchPart = 101;
+        public const long CreatePart = 102;
+        public const long EditPart = 103;
 
         //Store
-        public const int ListStore = 210;
-        public const int SearchStore = 211;
-        public const int CreateStore = 213;
-        public const int EditStore = 214;
+        public const long ListStore = 210;
+        public const long SearchStore = 211;
+        public const long CreateStore = 213;
+        public const long EditStore = 214;
 
         //Stocktype
-        public const int ListStockType = 220;
-        public const int SearchStockType = 221;
-        public const int CreateStockType = 222;
-        public const int EditStockType = 223;
+        public const long ListStockType = 220;
+        public const long SearchStockType = 221;
+        public const long CreateStockType = 222;
+        public const long EditStockType = 223;
 
         //Equipmenttype
-        public const int ListEquipmentType = 230;
-        public const int SearchEquipmentType = 231;
-        public const int CreateEquipmentType = 232;
-        public const int EditEquipmentType = 233;
+        public const long ListEquipmentType = 230;
+        public const long SearchEquipmentType = 231;
+        public const long CreateEquipmentType = 232;
+        public const long EditEquipmentType = 233;
     }
 }

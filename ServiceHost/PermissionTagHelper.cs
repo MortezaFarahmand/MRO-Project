@@ -7,7 +7,7 @@ namespace ServiceHost
     [HtmlTargetElement(Attributes = "Permission")]
     public class PermissionTagHelper : TagHelper
     {
-        public int Permission { get; set; }
+        public long Permission { get; set; }
 
         private readonly IAuthHelper _authHelper;
 
@@ -24,7 +24,7 @@ namespace ServiceHost
                 return;
             }
             var permission = _authHelper.GetPermissions();
-            if (permission.Any(x => x != Permission))
+            if (!permission.Contains(Permission))
             {
                 output.SuppressOutput();
                 return;

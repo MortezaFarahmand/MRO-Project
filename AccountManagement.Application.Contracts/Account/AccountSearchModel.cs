@@ -7,5 +7,6 @@
         public string Mobile { get; set; }
         public long RoleId { get; set; }
         public long? OrganizationId { get; set; }
+        public bool IsSystemAdmin { get; set; }
     }
 }

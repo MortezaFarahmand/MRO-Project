@@ -6,5 +6,7 @@ namespace AccountManagement.Application.Contracts.Account
     {
         public long Id { get; set; }
         public List<PermissionDto> MappedAccountPermissions { get; set; } = new();
+        public bool? IsSystemAdmin { get; set; }
+        public bool IsOrganizationAdmin { get; set; }
     }
 }

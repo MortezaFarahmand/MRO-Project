@@ -38,6 +38,12 @@ namespace AccountManagement.Infrastructure.EFCore.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
+                    b.Property<bool>("IsOrganizationAdmin")
+                        .HasColumnType("bit");
+
+                    b.Property<bool?>("IsSystemAdmin")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Mobile")
                         .IsRequired()
                         .HasMaxLength(20)
@@ -105,6 +111,9 @@ namespace AccountManagement.Infrastructure.EFCore.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
+                    b.Property<int>("Scope")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.ToTable("Roles", (string)null);
@@ -139,15 +148,15 @@ namespace AccountManagement.Infrastructure.EFCore.Migrations
 
                             SqlServerPropertyBuilderExtensions.UseIdentityColumn(b1.Property<long>("Id"));
 
-                            b1.Property<int>("Code")
-                                .HasColumnType("int");
+                            b1.Property<long>("Code")
+                                .HasColumnType("bigint");
 
                             b1.Property<string>("Name")
                                 .IsRequired()
                                 .HasMaxLength(100)
                                 .HasColumnType("nvarchar(100)");
 
-                            b1.Property<long>("OrganizationId")
+                            b1.Property<long?>("OrganizationId")
                                 .HasColumnType("bigint");
 
                             b1.Property<long>("RoleId")

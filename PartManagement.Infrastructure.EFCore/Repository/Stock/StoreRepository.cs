@@ -47,32 +47,10 @@ namespace PartManagement.Infrastructure.EFCore.Repository.Stock
         }
 
 
-        public List<StoreViewModel> Search(StoreSearchModel searchModel, long? organizationId)
+        public List<StoreViewModel> Search(StoreSearchModel searchModel)
         {
-            var organizations = _organizationContext.Organizations.Select(x => new { x.Id, x.NameEn }).ToList();
-            var query = _partContext.Stores
-               .Include(s => s.StoreStockTypes)
-                   .ThenInclude(sst => sst.StockType)
-                .Select(x => new StoreViewModel
-                {
-                    Id = x.Id,
-                    Name = x.Name,
-                    Code = x.Code,
-                    //CityId = x.CityId,
-                    //StationId = x.StationId,
-                    StockTypeId = x.DefaultStockTypeId,
-                    StockType = x.DefaultStockType.Name,
-                    StockTypes = x.StoreStockTypes.Select(sst => new StockTypeViewModel
-                    {
-                        Name = sst.StockType.Name,
-                        Code = sst.StockType.Code
-                    }).ToList(),
-                    //ParentId = x.ParentId,
-                    //ProviderId = x.ProviderId 
-                    IsActive = x.IsActive,
-                    CreationDate = x.CreationDate.ToShortDateString(),
-                    OrganizationId = x.OrganizationId
-                });
+            searchModel ??= new StoreSearchModel();
+            var query = _partContext.Stores.AsQueryable();
 
             if (!string.IsNullOrWhiteSpace(searchModel.Name))
                 query = query.Where(x => x.Name == searchModel.Name);
@@ -81,18 +59,47 @@ namespace PartManagement.Infrastructure.EFCore.Repository.Stock
                 query = query.Where(x => x.Code == searchModel.Code);
 
             if (searchModel.StockTypeId != 0)
-                query = query.Where(x => x.StockTypeId == searchModel.StockTypeId);
-
-            var store = query.OrderByDescending(x => x.Id).ToList();
+                query = query.Where(x => x.DefaultStockTypeId == searchModel.StockTypeId);
 
             // در این شرط در صورتی که آی دی سازمان اکانت وارد شده صفر باشد دسترسی به تمام استورهایی که آیدی آنها غیر صفر است دارد و
             // در غیر این صورت یعنی زمانی که آیدی سازمان اکانت وارد شده صفر نباشد فقط استورهایی را میتواند مشاهده کند که 
             // آیدی سازمان آن با آیدی سازمان انتخاب شده از سلکتور لیست استورها یکی باشد.
-            if (organizationId != 0)
-                query = query.Where(x => x.OrganizationId == organizationId);
+            //if (organizationId != 0)
+            //    query = query.Where(x => x.OrganizationId == organizationId);
 
-            if (organizationId == 0 && searchModel.OrganizationId != 0)
-                query = query.Where(x => x.OrganizationId == searchModel.OrganizationId);
+            //if (organizationId == 0 && searchModel.OrganizationId != 0)
+            //    query = query.Where(x => x.OrganizationId == searchModel.OrganizationId);
+            if (searchModel.OrganizationId.HasValue && searchModel.OrganizationId.Value != 0)
+                query = query.Where(x => x.OrganizationId == searchModel.OrganizationId.Value);
+
+
+            var organizations = _organizationContext.Organizations.Select(x => new { x.Id, x.NameEn }).ToList();
+            
+            var store = query.OrderByDescending(x => x.Id)
+               .Include(s => s.StoreStockTypes)
+                   .ThenInclude(sst => sst.StockType)
+                .Select(x => new StoreViewModel
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    Code = x.Code,
+                    CityId = x.CityId,
+                    StationId = x.StationId,
+                    StockTypeId = x.DefaultStockTypeId,
+                    StockType = x.DefaultStockType.Name,
+                    StockTypes = x.StoreStockTypes.Select(sst => new StockTypeViewModel
+                    {
+                        Name = sst.StockType.Name,
+                        Code = sst.StockType.Code
+                    }).ToList(),
+                    ParentId = x.ParentId,
+                    //ProviderId = x.ProviderId 
+                    IsActive = x.IsActive,
+                    CreationDate = x.CreationDate.ToShortDateString(),
+                    OrganizationId = x.OrganizationId
+                }).ToList();
+
+            //var store = query.OrderByDescending(x => x.Id).ToList();
 
             store.ForEach(item =>
             {

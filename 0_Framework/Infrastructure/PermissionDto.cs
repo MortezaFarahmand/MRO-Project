@@ -3,13 +3,13 @@
     public class PermissionDto
     {
         public string Name { get; set; }
-        public int Code { get; set; }
+        public long Code { get; set; }
 
         public PermissionDto()
         {
 
         }
-        public PermissionDto(int code, string name)
+        public PermissionDto(long code, string name)
         {
             Name = name;
             Code = code;

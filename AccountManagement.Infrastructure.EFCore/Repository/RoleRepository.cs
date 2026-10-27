@@ -8,42 +8,61 @@ namespace AccountManagement.Infrastructure.EFCore.Repository
     public class RoleRepository : RepositoryBase<long, Role>, IRoleRepository
     {
         private readonly AccountContext _accountContext;
+
         public RoleRepository(AccountContext accountContext) : base(accountContext)
         {
             _accountContext = accountContext;
         }
 
-
-
-        public EditRole GetDetails(long id)
+        public List<RoleViewModel> GetRoles(RoleQueryDto query)
         {
-            var role = _accountContext.Roles.Select(x => new EditRole
+            var roles = _accountContext.Roles
+                .AsNoTracking()
+                .Where(r => r.Scope <= query.MaxScope)
+                .Include(r => r.Permissions)
+                .ToList();
+
+            return roles.Select(r => new RoleViewModel
             {
-                Id = x.Id,
-                Name = x.Name,
-                MappedPermissions = MapPermissions(x.Permissions)
-            }).AsNoTracking().FirstOrDefault(x => x.Id == id);
-
-            role.Permissions = role.MappedPermissions.Select(x => x.Code).ToList();
-
-            return role;
-        }
-
-        private static List<PermissionDto> MapPermissions(IEnumerable<Permission> permissions)
-        {
-            return permissions.Select(x => new PermissionDto(x.Code, x.Name)).ToList();
-        }
-
-        public List<RoleViewModel> GetRoles()
-        {
-            return _accountContext.Roles.Select(x => new RoleViewModel
-            {
-                Id = x.Id,
-                Name = x.Name,
-                PermissionCodeNames = x.Permissions
-                    .Select(p => new PermissionDto(p.Code, p.Name)).ToList(),
-                CreationDate = x.CreationDate.ToShortDateString(),
+                Id = r.Id,
+                Name = r.Name,
+                CreationDate = r.CreationDate.ToShortDateString(),
+                Scope = r.Scope,
+                PermissionIds = r.Permissions.Select(p => p.Id).ToList(),
+                PermissionCodeNames = r.Permissions
+                    .Select(p => new PermissionDto(p.Code, p.Name))
+                    .ToList()
             }).ToList();
+        }
+
+        public EditRole GetDetails(long id, RoleQueryDto query)
+        {
+            var role = _accountContext.Roles
+                .AsNoTracking()
+                .Include(r => r.Permissions)
+                .FirstOrDefault(r => r.Id == id && r.Scope <= query.MaxScope);
+
+            if (role == null)
+                return null;
+
+            return new EditRole
+            {
+                Id = role.Id,
+                Name = role.Name,
+                Scope = role.Scope,
+                PermissionCodes = role.Permissions.Select(p => p.Code).ToList(),
+                MappedPermissions = role.Permissions
+                    .Select(p => new PermissionDto(p.Code, p.Name))
+                    .ToList()
+            };
+        }
+
+        public Role GetForEdit(long id, RoleQueryDto query)
+        {
+            return _accountContext.Roles
+                .Include(r => r.Permissions)
+                .FirstOrDefault(r => r.Id == id && r.Scope <= query.MaxScope);
         }
     }
 }
+

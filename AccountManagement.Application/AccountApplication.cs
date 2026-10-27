@@ -1,6 +1,9 @@
 ﻿using _0_Framework.Application;
 using AccountManagement.Application.Contracts.Account;
 using AccountManagement.Domain.AccountAgg;
+using Microsoft.CodeAnalysis.Elfie.Diagnostics;
+using System.Security.Principal;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace AccountManagement.Application
 {
@@ -42,35 +45,37 @@ namespace AccountManagement.Application
         public OperationResult Register(RegisterAccount command)
         {
             var operation = new OperationResult();
-            if (_accountRepository.Exists(x => x.Username == command.Username || x.Mobile == command.Mobile))
-                return operation.Failed(ApplicationMessages.DuplicatedRecord);
-
             // اگر آیدی سازمان اکانت وارد شده صفر باشد یعنی ادمین کل سیستم وارد شده باشد، همان آیدی که در
             // سلکت لیست سازمان در پنجره ایجاد اکانت انتخاب شده باشد ثبت خواهد شد، در غیر این صورت آیدی سازمان
             // اکانتی که ایجاد میشود همان آیدی سازمان اکانتی است که قصد ایجاد اکانت را دارد ثبت خواهد شد.
             //...
-            long? accountOrganizationId;
-            if (_authHelper.CurrentAccountOrganizationId() == 0)
-                accountOrganizationId = command.OrganizationId;
-            else
-                accountOrganizationId = _authHelper.CurrentAccountOrganizationId();
+            long? accountOrgId = _authHelper.SetOrganizationId(command.OrganizationId);
+            bool? accountIsSysAdmin = _authHelper.CurrentAccountIsSystemAdminOrNull();
+            bool accountIsOrgAdmin = _authHelper.CurrentAccountIsOrganizationAdmin();
+
+            if (accountIsSysAdmin is null)
+                return operation.Failed(ApplicationMessages.NotAllowToCreate);
+
+            if (accountIsSysAdmin == false || !(accountIsOrgAdmin && accountOrgId == command.OrganizationId))
+                return operation.Failed(ApplicationMessages.NotAllowToCreate);
+
+            if (_accountRepository.Exists(x => x.Username == command.Username || x.Mobile == command.Mobile))
+                return operation.Failed(ApplicationMessages.DuplicatedRecord);
 
             var password = _passwordHasher.Hash(command.Password);
             var path = $"profilePhotos";
             var picturePath = _fileUploader.Upload(command.ProfilePhoto, path);
 
-
-
-            var account = new Account(command.Fullname, command.Username, password, command.Mobile,
-                 picturePath, accountOrganizationId);
-            // مهم: سینک نقش‌ها
-            foreach (var roleId in command.RoleIds)
+            var account = new Account(command.Fullname, command.Username, password,
+                              command.Mobile, picturePath, accountOrgId);
+            // نقش‌ها را بعد از ساخت Account اضافه کن (نه قبل از Save)
+            foreach (var roleId in command.RoleIds.Distinct())
             {
-                var accountRole = new AccountRole(account.Id, roleId);
-                account.AddRoles(accountRole);
+                account.AddRoles(new AccountRole(account.Id, roleId)); // Id هنوز صفر است اما...
             }
+
             _accountRepository.Create(account);
-            _accountRepository.SaveChanges();
+            _accountRepository.SaveChanges();   // حالا Id واقعی تولید می‌شود
             return operation.Succeeded();
         }
 
@@ -78,18 +83,31 @@ namespace AccountManagement.Application
         {
             var operation = new OperationResult();
             var account = _accountRepository.Get(command.Id);
+
+            long? accountOrgId = _authHelper.SetOrganizationId(command.OrganizationId);
+            bool? accountIsSysAdmin = _authHelper.CurrentAccountIsSystemAdminOrNull();
+            bool accountIsOrgAdmin = _authHelper.CurrentAccountIsOrganizationAdmin();
+
             if (account == null)
+                return operation.Failed(ApplicationMessages.RecordNotFound);
+
+            if (accountIsSysAdmin is null)
                 return operation.Failed(ApplicationMessages.RecordNotFound);
 
             if (_accountRepository.Exists(x => (x.Username == command.Username || x.Mobile == command.Mobile) && x.Id != command.Id))
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
             //...
-            long? accountOrganizationId;
-            if (_authHelper.CurrentAccountOrganizationId() == 0)
-                accountOrganizationId = command.OrganizationId;
+            if (accountIsSysAdmin == true || (accountIsOrgAdmin 
+                    && accountOrgId == command.OrganizationId))
+                accountIsOrgAdmin = command.IsOrganizationAdmin;
             else
-                accountOrganizationId = _authHelper.CurrentAccountOrganizationId();
+                accountIsOrgAdmin = account.IsOrganizationAdmin;
 
+            if (accountIsSysAdmin == true)
+                accountIsSysAdmin = command.IsSystemAdmin;
+            else
+                accountIsSysAdmin = account.IsSystemAdmin;
+            //
 
             var path = $"profilePhotos";
             var picturePath = _fileUploader.Upload(command.ProfilePhoto, path);
@@ -101,7 +119,7 @@ namespace AccountManagement.Application
             account.SetRoles(accountRoles);
 
             account.Edit(command.Fullname, command.Username, command.Mobile,
-                picturePath, accountOrganizationId);
+                picturePath, accountOrgId, accountIsSysAdmin, accountIsOrgAdmin);
 
             _accountRepository.SaveChanges();
 
@@ -133,12 +151,25 @@ namespace AccountManagement.Application
                 .Select(p => p.Code)
                 .ToList();
 
-            var roleIds = account.AccountRoles
-                .Select(ar => ar.RoleId)
+            var roleIds = account.AccountRoles.Select(ar => ar.RoleId).ToList();
+
+            // محاسبه Scopeهای نقش‌های کاربر
+            var roleScopes = account.AccountRoles
+                .Select(ar => ar.Role.Scope)
+                .Distinct()
                 .ToList();
 
-            var authViewModel = new AuthViewModel(account.Id, roleIds, account.Fullname,
-                account.Username, permissions, account.OrganizationId);
+            var authViewModel = new AuthViewModel(
+                account.Id,
+                roleIds,
+                account.Fullname,
+                account.Username,
+                permissions,                 // List<long>
+                account.OrganizationId,
+                account.IsSystemAdmin,
+                account.IsOrganizationAdmin)
+            { RoleScopes = roleScopes };     // ← اضافه شد
+
             _authHelper.Signin(authViewModel);
             return operation.Succeeded();
         }
@@ -148,9 +179,31 @@ namespace AccountManagement.Application
             _authHelper.SignOut();
         }
 
-        public List<AccountViewModel> Search(AccountSearchModel searchModel, long? organizationId)
+        public List<AccountViewModel> Search(AccountSearchModel searchModel)
         {
-            return _accountRepository.Search(searchModel, organizationId);
+            //// برای کاربر عادی و ادمین سازمان، سازمان خودش را در دراپ‌داون انتخاب کن
+            //long? currentOrgId = _authHelper.CurrentAccountOrganizationId();
+            //bool isSystemAdmin = _authHelper.CurrentAccountIsSystemAdmin();
+
+            //searchModel.IsSystemAdmin = isSystemAdmin;
+            //if (!isSystemAdmin)
+            //{ currentOrgId = searchModel.OrganizationId; }
+
+            //return _accountRepository.Search(searchModel, currentOrgId);
+            bool? isSystemAdmin = _authHelper.CurrentAccountIsSystemAdminOrNull();
+            long? currentOrgId = _authHelper.CurrentAccountOrganizationId();
+
+            if (isSystemAdmin is null)
+                return new List<AccountViewModel>();
+
+            searchModel.IsSystemAdmin = isSystemAdmin.Value;
+
+            if (isSystemAdmin == false)
+                 searchModel.OrganizationId = currentOrgId;
+
+            return _accountRepository.Search(searchModel, currentOrgId);
         }
+
+        
     }
 }

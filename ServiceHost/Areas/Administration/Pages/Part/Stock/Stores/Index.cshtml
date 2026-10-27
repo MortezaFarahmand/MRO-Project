@@ -34,15 +34,21 @@
                     </div>
                     <div class="form-group">
                         <label class="sr-only" asp-for="SearchModel.StockTypeId"></label>
-                        <select class="form-control " asp-for="SearchModel.StockTypeId" asp-items="Model.StockTypes">
+                        <select class="form-control " asp-for="SearchModel.StockTypeId" 
+                                asp-items="Model.StockTypes">
                             <option value="0">-Stock Type-</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label class="sr-only" asp-for="SearchModel.OrganizationId"></label>
-                        <select class="form-control " asp-for="SearchModel.OrganizationId" asp-items="Model.Organizations">
-                            <option value="0">-Organization Group-</option>
+                        <select class="form-control " asp-for="SearchModel.OrganizationId" 
+                                asp-items="Model.Organizations" disabled="@(!Model.SearchModel.IsAdmin)">
+                            <option value="0">-Organizations-</option>
                         </select>
+                        @if (!Model.SearchModel.IsAdmin)
+                        {
+                            <input type="hidden" asp-for="SearchModel.OrganizationId" />
+                        }
                     </div>
 
                     <button type="submit" class="btn btn-success waves-effect waves-light m-l-10">Search</button>
@@ -72,11 +78,12 @@
                                     <th>Code</th>
                                     <th>Organization</th>
                                     <th>Type</th>
-                                    @* <th>City</th> *@
-                                    @* <th>Station</th> *@
-                                    @* <th>Store Parent</th> *@
-                                    @* <th>Provider</th> *@
+                                    <th>City</th>
+                                    <th>Station</th>
+                                    <th>Parent Store</th>
+                                    <th>Type</th>
                                     <th>Creation Date</th>
+                                    <th>Activation</th>
                                     <th>Operation</th>
 
                                 </tr>
@@ -91,10 +98,10 @@
                                         <td>@item.Code</td>
                                         <td>@item.Organization</td>
                                         <td>@item.StockType</td>
-                                        @* <td>@item.City</td>
-                                        <td>@item.Station</td>
-                                        <td>@item.Parent</td>
-                                        <td>@item.Provider</td> *@
+                                        <td>@item.City</td>
+                                        <td>@item.StationId</td>
+                                        <td>@item.ParentId</td>
+                                        <td>@item.StockTypeId</td>
                                         <td>@item.CreationDate</td>
                                         <td class="text-center">
                                             @if (item.IsActive)

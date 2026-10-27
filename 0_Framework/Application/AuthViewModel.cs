@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using _0_Framework.Infrastructure;
+using System.Collections.Generic;
 
 namespace _0_Framework.Application
 {
@@ -12,15 +13,18 @@ namespace _0_Framework.Application
         public string Mobile { get; set; }
         public string ProfilePhoto { get; set; }
         public long? OrganizationId { get; set; }
+        public bool? IsSystemAdmin { get; set; }
+        public bool IsOrganizationAdmin { get; set; }
 
-        public List<int> Permissions { get; set; } = new();
+        public List<long> Permissions { get; set; } = new();
+        public List<RoleScope> RoleScopes { get; set; } = new();
 
         public AuthViewModel()
         {
         }
 
         public AuthViewModel(long id, List<long> roleIds, string fullname, string username
-            , List<int> permissions, long? organizationId)
+            , List<long> permissions, long? organizationId, bool? isSystemAdmin, bool isOrganizationAdmin)
         {
             Id = id;
             RoleIds = roleIds;
@@ -30,6 +34,8 @@ namespace _0_Framework.Application
             //Mobile = mobile;
             Permissions = permissions;
             OrganizationId = organizationId;
+            IsSystemAdmin = isSystemAdmin;
+            IsOrganizationAdmin = isOrganizationAdmin;
         }
     }
 }

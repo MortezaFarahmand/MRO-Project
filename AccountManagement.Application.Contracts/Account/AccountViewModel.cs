@@ -16,5 +16,7 @@ namespace AccountManagement.Application.Contracts.Account
         public string CreationDate { get; set; }
         public long? OrganizationId { get; set; }
         public string Organization { get; set; }
+        public bool? IsSyatemAdmin { get; set; }
+        public bool IsOrganizationAdmin { get; set; }
     }
 }

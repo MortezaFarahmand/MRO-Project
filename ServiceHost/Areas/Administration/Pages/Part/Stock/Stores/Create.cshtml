@@ -1,4 +1,5 @@
 ﻿@using System.Text.Json
+@using PartManagement.Application.Contracts.Stock.StockType
 @model PartManagement.Application.Contracts.Stock.Store.CreateStore
 @{
 }
@@ -54,20 +55,33 @@
 
         <div class="row">
             <div class="col-md-6">
-                <div class="form-group">
+                @* <div class="form-group">
                     <label asp-for="OrganizationId" class="control-label">Organization</label>
                     <select type="text" class="form-control" asp-for="OrganizationId"
-                           asp-items='new SelectList(Model.Organizations, "Id", "NameEn")'>
+                           asp-items='new SelectList(Model.Organizations ?? new(), "Id", "NameEn")'>
                         <option value="0">-Organization-</option>
                     </select>
                     <span asp-validation-for="OrganizationId" class="error"></span>
-                </div>
+                </div> *@
+                @if (Model.IsAdmin)
+                {
+                    <div class="form-group">
+                        <label asp-for="OrganizationId">سازمان</label>
+
+                        <select asp-for="OrganizationId"
+                                asp-items="@(new SelectList(Model.Organizations ?? new(), "Id", "NameEn"))"
+                                id="organizationSelect"
+                                class="form-control">
+                            <option value="0">انتخاب سازمان</option>
+                        </select>
+                    </div>
+                }
             </div>
             <div class="col-md-6">
                 <div class="form-group">
                     <label asp-for="StockTypeId" class="control-label">Store Type</label>
                     <select type="text" class="form-control" asp-for="StockTypeId"
-                            asp-items='new SelectList(Model.StockTypes, "Id", "Name")'>
+                            asp-items='new SelectList(Model.StockTypes ?? new(), "Id", "Name")'>
                         <option value="0">-Store type-</option>
                     </select>
                     <span asp-validation-for="StockTypeId" class="error"></span>
@@ -97,7 +111,7 @@
                 <div class="form-group">
                     <label asp-for="CityId" class="control-label">City</label>
                     <select type="text" class="form-control" asp-for="CityId"
-                            asp-items='new SelectList(Model.StockTypes, "Id", "Name")'>
+                            asp-items='new SelectList(Model.StockTypes ?? new(), "Id", "Name")'>
                         <option value="0">-City-</option>
                     </select>
                     <span asp-validation-for="CityId" class="error"></span>
@@ -107,7 +121,7 @@
                 <div class="form-group">
                     <label asp-for="StationId" class="control-label">Airport station</label>
                     <select type="text" class="form-control" asp-for="StationId"
-                            asp-items='new SelectList(Model.StockTypes, "Id", "Name")'>
+                            asp-items='new SelectList(Model.StockTypes ?? new(), "Id", "Name")'>
                         <option value="0">-Airport station's-</option>
                     </select>
                     <span asp-validation-for="StationId" class="error"></span>
@@ -121,7 +135,7 @@
                 <div class="form-group">
                     <label asp-for="ParentId" class="control-label">Parent of store</label>
                     <select type="text" class="form-control" asp-for="ParentId"
-                            asp-items='new SelectList(Model.StockTypes, "Id", "Name")'>
+                            asp-items='new SelectList(Model.StockTypes ?? new(), "Id", "Name")'>
                         <option value="0">-Store's-</option>
                     </select>
                     <span asp-validation-for="ParentId" class="error"></span>
@@ -131,7 +145,7 @@
                 <div class="form-group">
                     <label asp-for="ProviderId" class="control-label">Provider</label>
                     <select type="text" class="form-control" asp-for="ProviderId"
-                            asp-items='new SelectList(Model.Organizations, "Id", "Name")'>
+                            asp-items='new SelectList(Model.Organizations ?? new(), "Id", "NameEn")'>
                         <option value="0">-Provider's-</option>
                     </select>
                     <span asp-validation-for="ProviderId" class="error"></span>
@@ -140,10 +154,37 @@
         </div>
 
         <div class="row">
-            
-        </div>
-              
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="stockTypeSelect">نوع‌های انبار</label>
 
+                    <select id="stockTypeSelect"
+                            class="form-control"
+                            multiple
+                            size="6">
+                    @foreach (var stockType in Model.StockTypes ?? new List<StockTypeViewModel>())
+                        {
+                            <option value="@stockType.Id">@stockType.Name</option>
+                        }
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div id="selectedStockTypes" class="selected-stock-types"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="stockTypeIdInputs">
+            @foreach (var id in Model.StockTypeIds ?? new List<long>())
+            {
+                <input type="hidden" name="StockTypeIds" value="@id" />
+            }
+        </div>
+
+@*         <div id="selectedStockTypes" class="selected-stock-types"></div>
+ *@
     </div>
  
 
@@ -153,8 +194,127 @@
     </div>
 </form>
 
+<style>
+    .selected-stock-types {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        min-height: 48px;
+        padding: 8px;
+        border: 1px solid #ced4da;
+        border-radius: 4px;
+        margin-top: 8px;
+    }
+
+    .stock-type-tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 5px 10px;
+        color: #fff;
+        background: #2878d0;
+        border-radius: 3px;
+    }
+
+        .stock-type-tag button {
+            border: 0;
+            color: #fff;
+            background: transparent;
+            cursor: pointer;
+            font-size: 16px;
+            line-height: 1;
+            padding: 0;
+        }
+</style>
 
 <script>
+    (() => {
+        const select = document.getElementById("stockTypeSelect");
+        const tagsContainer = document.getElementById("selectedStockTypes");
+        const inputsContainer = document.getElementById("stockTypeIdInputs");
+        const organizationSelect = document.getElementById("organizationSelect");
+
+        // کلیدها، شناسه‌ی StockType هستند و مقدارها، نام نمایشی آن.
+        const selected = new Map();
+
+        function renderTags() {
+            tagsContainer.innerHTML = "";
+            inputsContainer.innerHTML = "";
+
+            for (const [id, name] of selected) {
+                const tag = document.createElement("span");
+                tag.className = "stock-type-tag";
+                tag.append(document.createTextNode(name));
+
+                const removeButton = document.createElement("button");
+                removeButton.type = "button";
+                removeButton.textContent = "×";
+                removeButton.setAttribute("aria-label", `حذف ${name}`);
+                removeButton.addEventListener("click", () => {
+                    selected.delete(id);
+                    renderTags();
+                });
+
+                tag.appendChild(removeButton);
+                tagsContainer.appendChild(tag);
+
+                const hiddenInput = document.createElement("input");
+                hiddenInput.type = "hidden";
+                hiddenInput.name = "StockTypeIds";
+                hiddenInput.value = id;
+                inputsContainer.appendChild(hiddenInput);
+            }
+        }
+
+        select.addEventListener("change", () => {
+            const option = select.options[select.selectedIndex];
+
+            if (option && option.value) {
+                selected.set(option.value, option.text);
+                renderTags();
+            }
+
+            // امکان انتخاب دوباره‌ی همان مورد را هم می‌دهد.
+            select.selectedIndex = -1;
+        });
+
+        if (organizationSelect) {
+            organizationSelect.addEventListener("change", async () => {
+                selected.clear();
+                renderTags();
+                select.innerHTML = "";
+
+                if (!organizationSelect.value) {
+                    return;
+                }
+
+                const url = new URL(window.location.href);
+                url.searchParams.set("handler", "StockTypes");
+                url.searchParams.set("organizationId", organizationSelect.value);
+
+                const response = await fetch(url);
+
+                if (!response.ok) {
+                    alert("دریافت نوع‌های موجودی با خطا روبه‌رو شد.");
+                    return;
+                }
+
+                const stockTypes = await response.json();
+
+                for (const item of stockTypes) {
+                    const option = document.createElement("option");
+                    option.value = item.id;
+                    option.textContent = item.name;
+                    select.appendChild(option);
+                }
+            });
+        }
+
+        renderTags();
+    })();
+</script>
+
+@* <script>
     (function () {
         // نقش -> لیست نوع انبار ‌ها (از سرور)
         var rolePermissions = @Html.Raw(JsonSerializer.Serialize(
@@ -197,4 +357,4 @@
         $(document).off("change.roleLiveCreate").on("change.roleLiveCreate", ".role-checkbox", refreshLive);
         refreshLive();
     })();
-</script>
+</script> *@

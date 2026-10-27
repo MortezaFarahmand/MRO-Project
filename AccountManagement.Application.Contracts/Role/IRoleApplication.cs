@@ -6,7 +6,10 @@ namespace AccountManagement.Application.Contracts.Role
     {
         OperationResult Create(CreateRole command);
         OperationResult Edit(EditRole command);
-        List<RoleViewModel> List();
+        // ✅ نسخه‌ی جدید: هم جزئیات را میدهد هم AllowedScopes را پر میکند
         EditRole GetDetails(long id);
+
+        // ✅ لیست بر اساس سقف دسترسی کاربر
+        List<RoleViewModel> GetRoles();
     }
 }

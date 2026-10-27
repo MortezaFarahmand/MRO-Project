@@ -20,15 +20,14 @@ namespace PartManagement.Application.StockApplications
         public OperationResult Create(CreateStockType command)
         {
             var operation = new OperationResult();
-            var orgId = _authHelper.CurrentAccountOrganizationId();
-            if (orgId != 0)
-                command.OrganizationId = orgId;
+
+            var orgId = _authHelper.SetOrganizationId(command.OrganizationId);
 
             if (_stockTypeRepository.Exists(x => (x.Name == command.Name || x.Code == command.Code
                   || x.ColorCode == command.ColorCode) && x.OrganizationId == command.OrganizationId))
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
 
-            var stockType = new StockType(command.Name, command.Code, command.ColorCode, command.OrganizationId);
+            var stockType = new StockType(command.Name, command.Code, command.ColorCode, orgId);
             _stockTypeRepository.Create(stockType);
             _stockTypeRepository.SaveChanges();
             return operation.Succeeded();
@@ -37,9 +36,8 @@ namespace PartManagement.Application.StockApplications
         public OperationResult Edit(EditStockType command)
         {
             var operation = new OperationResult();
-            var orgId = _authHelper.CurrentAccountOrganizationId();
-            if (orgId != 0)
-                command.OrganizationId = orgId;
+
+            var orgId = _authHelper.SetOrganizationId(command.OrganizationId);
 
             var stockType = _stockTypeRepository.Get(command.Id);
 
@@ -51,7 +49,7 @@ namespace PartManagement.Application.StockApplications
                 return operation.Failed(ApplicationMessages.DuplicatedRecord);
 
 
-            stockType.Edit(command.Name, command.Code, command.ColorCode, command.OrganizationId);
+            stockType.Edit(command.Name, command.Code, command.ColorCode, orgId);
             _stockTypeRepository.SaveChanges();
             return operation.Succeeded();
         }
@@ -64,17 +62,31 @@ namespace PartManagement.Application.StockApplications
 
         public List<StockTypeViewModel> GetStockTypesBy(long? organizationId)
         {
-            return _stockTypeRepository.GetStockTypesBy(organizationId);
+            var searchModel = new StockTypeSearchModel();
+            searchModel.OrganizationId = _authHelper.SetOrganizationId(organizationId);
+            // برای کاربر عادی، سازمان خودش را در دراپ‌داون انتخاب کن
+            searchModel.IsAdmin = _authHelper.CurrentAccountIsAdmin();
+            //if (!searchModel.IsAdmin)
+            //{ searchModel.OrganizationId = currentOrganizationId; }
+
+            return _stockTypeRepository.GetStockTypesBy(searchModel.OrganizationId);
         }
 
-        public CreateStockType GetStockTypesBy()
-        {
-            return new CreateStockType();
-        }
+        //public CreateStockType GetStockTypesBy()
+        //{
+        //    return new CreateStockType();
+        //}
 
-        public List<StockTypeViewModel> Search(StockTypeSearchModel searchModel, long? organizationId)
+        public List<StockTypeViewModel> Search(StockTypeSearchModel searchModel)
         {
-            return _stockTypeRepository.Search(searchModel, organizationId);
+            searchModel ??= new StockTypeSearchModel();
+            long? currentOrganizationId = _authHelper.SetOrganizationId(searchModel.OrganizationId);
+            // برای کاربر عادی، سازمان خودش را در دراپ‌داون انتخاب کن
+            searchModel.IsAdmin = _authHelper.CurrentAccountIsAdmin();
+            if (!searchModel.IsAdmin) 
+            { searchModel.OrganizationId = currentOrganizationId; }
+
+            return _stockTypeRepository.Search(searchModel);
         }
     }
 }

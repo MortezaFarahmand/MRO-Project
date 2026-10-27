@@ -1,7 +1,6 @@
 ﻿@page
 @model ServiceHost.Areas.Administration.Pages.Account.Roles.EditModel
 
-
 <div class="row">
     <div class="col-md-12">
         <div class="panel panel-default">
@@ -12,21 +11,34 @@
                 <div class="row">
                     <form method="post">
                         <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label asp-for="Command.Name" class="control-label element-dir-Fa">نقش</label>
-                                    <input type="text" class="form-control" asp-for="Command.Name">
-                                    <span asp-validation-for="Command.Name" class="error"></span>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="Command.Name" class="control-label element-dir-Fa">نقش</label>
+                                        <input type="text" class="form-control" asp-for="Command.Name">
+                                        <span asp-validation-for="Command.Name" class="error"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="Command.Scope" class="control-label element-dir-Fa">سطح نقش (Scope)</label>
+                                        <select class="form-control" asp-for="Command.Scope" asp-items="Model.ScopesList">
+                                            <option value="">-- انتخاب سطح --</option>
+                                        </select>
+                                        <span asp-validation-for="Command.Scope" class="error"></span>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="row">
                             <div class="col-md-6">
                                 <label class="control-label col-md-3">انتخاب دسترسی ها</label>
                                 <div class="col-md-12">
-                                    <select asp-for="Command.Permissions"  asp-items="Model.Permissions" 
+                                    <select asp-for="Command.PermissionCodes"  asp-items="Model.Permissions" 
                                              class="multi-select" multiple="multiple" id="my_multi_select3">
                                     </select>
                                 </div>
-                                <input type="hidden" asp-for="Command.Id" value="@Model.Command.Id" />
+                                
+                            </div>
                             </div>
                             <input type="hidden" asp-for="Command.Id" value="@Model.Command.Id" />
                         </div>

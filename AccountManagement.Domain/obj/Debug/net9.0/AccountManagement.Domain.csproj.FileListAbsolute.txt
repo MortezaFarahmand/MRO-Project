@@ -3,8 +3,12 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Domain\
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Domain\bin\Debug\net9.0\AccountManagement.Domain.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Domain\bin\Debug\net9.0\0_Framework.dll
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Domain\bin\Debug\net9.0\AccountManagement.Application.Contracts.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Domain\bin\Debug\net9.0\BasicDataManagement.Application.Contracts.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Domain\bin\Debug\net9.0\OrganizationManagement.Application.Contracts.dll
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Domain\bin\Debug\net9.0\0_Framework.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Domain\bin\Debug\net9.0\AccountManagement.Application.Contracts.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Domain\bin\Debug\net9.0\BasicDataManagement.Application.Contracts.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Domain\bin\Debug\net9.0\OrganizationManagement.Application.Contracts.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Domain\obj\Debug\net9.0\AccountManagement.Domain.csproj.AssemblyReference.cache
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Domain\obj\Debug\net9.0\AccountManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Domain\obj\Debug\net9.0\AccountManagement.Domain.AssemblyInfoInputs.cache
@@ -16,7 +20,3 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Domain\
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Domain\obj\Debug\net9.0\refint\AccountManagement.Domain.dll
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Domain\obj\Debug\net9.0\AccountManagement.Domain.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Domain\obj\Debug\net9.0\ref\AccountManagement.Domain.dll
-D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Domain\bin\Debug\net9.0\BasicDataManagement.Application.Contracts.dll
-D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Domain\bin\Debug\net9.0\OrganizationManagement.Application.Contracts.dll
-D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Domain\bin\Debug\net9.0\BasicDataManagement.Application.Contracts.pdb
-D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\AccountManagement.Domain\bin\Debug\net9.0\OrganizationManagement.Application.Contracts.pdb

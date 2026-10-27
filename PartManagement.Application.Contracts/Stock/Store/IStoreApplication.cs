@@ -7,7 +7,7 @@ namespace PartManagement.Application.Contracts.Stock.Store
         OperationResult Create(CreateStore command);
         OperationResult Edit(EditStore command);
         EditStore GetDetails(long id);
-        List<StoreViewModel> Search(StoreSearchModel searchModel, long? organizationId);
+        List<StoreViewModel> Search(StoreSearchModel searchModel);
         OperationResult Activate(long id);
         OperationResult Deactivate(long id);
         //OperationResult AddRoom(List<AddRemoveStoreRoom> command);

@@ -7,7 +7,7 @@ namespace PartManagement.Domain.Stock.StockTypeAgg
     {
         List<StockTypeViewModel> GetStockTypesBy(long? organizationId);
         EditStockType Getdetails(long id);
-        List<StockTypeViewModel> Search(StockTypeSearchModel searchModel, long? organizationId);
+        List<StockTypeViewModel> Search(StockTypeSearchModel searchModel);
 
     }
 }

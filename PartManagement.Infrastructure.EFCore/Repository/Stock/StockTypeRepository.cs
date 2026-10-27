@@ -1,10 +1,7 @@
 ﻿using _0_Framework.Infrastructure;
-using Microsoft.EntityFrameworkCore;
-using OrganizationManagement.Domain.OrganizationAgg;
 using PartManagement.Application.Contracts.Stock.StockType;
 using PartManagement.Application.Contracts.Stock.Store;
 using PartManagement.Domain.Stock.StockTypeAgg;
-using PartManagement.Domain.Stock.StoreAgg;
 namespace PartManagement.Infrastructure.EFCore.Repository.Stock
 {
     public class StockTypeRepository : RepositoryBase<long, StockType>, IStockTypeRepository
@@ -25,50 +22,57 @@ namespace PartManagement.Infrastructure.EFCore.Repository.Stock
                 Name = x.Name,
                 Code = x.Code,
                 ColorCode = x.ColorCode,
+                OrganizationId = x.OrganizationId,
                 CreationDate = x.CreationDate.ToString()
             }).FirstOrDefault(x => x.Id == id);
         }
 
         public List<StockTypeViewModel> GetStockTypesBy(long? organizationId)
         {
-            var query = _partContext.StockTypes
-                .Where(x => x.OrganizationId == organizationId)
-                .Select(x => new StockTypeViewModel()
+            var query = _partContext.StockTypes.AsQueryable();
+
+            // اگه کاربر عادیه (سازمان داره) -> فقط سازمان خودش، سرچ نادیده گرفته میشه (مهم برای امنیت)
+            //  یا اگر ورودی متد نال بود بهش میگیم ایدی سازمانی که نال هست رو نشون بده که چون آیدی نال در دیتابیس نداریم چیزی رانشان نخواهد داد
+            //if (organizationId != 0 || organizationId == null)
+            //{
+            //    query = query.Where(x => x.OrganizationId == organizationId);
+            //}
+            if (!organizationId.HasValue || organizationId.Value != 0)
+                query = query.Where(x => x.OrganizationId == organizationId.Value);
+
+            query = query.Where(x => x != null); // برای آنکه رکوردهای نال را بر نگرداند
+
+            return query.OrderByDescending(x => x.Id).Select(x => new StockTypeViewModel()
                 {
                     Id = x.Id,
                     Name = x.Name,
                     Code = x.Code,
                     ColorCode = x.ColorCode,
-                    OrganizationId = organizationId
+                    OrganizationId = x.OrganizationId
                     //Store = x.Store.Name,
-                }).ToList();
-
-
-            return query;
+                }).ToList() ?? new List<StockTypeViewModel>();
         }
 
-        public List<StockTypeViewModel> Search(StockTypeSearchModel searchModel, long? organizationId)
+        public List<StockTypeViewModel> Search(StockTypeSearchModel searchModel)
         {
             searchModel ??= new StockTypeSearchModel();
 
             var query = _partContext.StockTypes.AsQueryable();
 
-            // در این شرط در صورتی که آی دی سازمان اکانت وارد شده صفر باشد دسترسی به تمام نوع استاک هایی که آیدی آنها غیر صفر است دارد و
-            // در غیر این صورت یعنی زمانی که آیدی سازمان اکانت وارد شده صفر نباشد فقط نوع استاک هایی را میتواند مشاهده کند که 
-            // آیدی سازمان آن با آیدی سازمان انتخاب شده از سلکتور لیست نوع استاک ها یکی باشد.
+            
 
             // اگه کاربر عادیه (سازمان داره) -> فقط سازمان خودش، سرچ نادیده گرفته میشه (مهم برای امنیت)
-            if (organizationId != 0)
-            {
-                query = query.Where(x => x.OrganizationId == organizationId);
-            }
+            //if (searchModel.OrganizationId != 0)
+            //{
+            //    query = query.Where(x => x.OrganizationId == searchModel.OrganizationId);
+            //}
 
             // اگه ادمینه (صفر) -> همه رو نشون بده، مگر اینکه خودش فیلتر انتخاب کرده باشه
-            else
-            {
+            //else
+            //{
                 if (searchModel.OrganizationId.HasValue && searchModel.OrganizationId.Value != 0)
                     query = query.Where(x => x.OrganizationId == searchModel.OrganizationId.Value);
-            }
+            //}
 
             if (!string.IsNullOrWhiteSpace(searchModel.Name))
                 query = query.Where(x => x.Name.Contains(searchModel.Name));
@@ -91,7 +95,7 @@ namespace PartManagement.Infrastructure.EFCore.Repository.Stock
                     Code = x.Code ?? "-",
                     ColorCode = x.ColorCode ?? "-",
                     CreationDate = x.CreationDate.ToShortDateString() ?? "-",
-                    OrganizationId = x.OrganizationId ?? 0,
+                    OrganizationId = x.OrganizationId ?? null,
 
                     Store = x.Stores_DefaultStockType
                         .Select(s => new StoreViewModel()

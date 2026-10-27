@@ -1,4 +1,5 @@
 using _0_Framework.Application;
+using AccountManagement.Application.Contracts.Account;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -17,7 +18,7 @@ namespace ServiceHost.Areas.Administration.Pages.Part.Stock.StockType
         public StockTypeSearchModel SearchModel { get; set; }
 
         public long? currentOrganizationId { get; set; }
-        public bool IsAdmin => currentOrganizationId == 0;
+        //public bool IsAdmin;
 
 
         public List<StockTypeViewModel> StockTypes;
@@ -41,27 +42,16 @@ namespace ServiceHost.Areas.Administration.Pages.Part.Stock.StockType
         public void OnGet()
         {
             Organizations = new SelectList(_organizationApplication.GetOrganizations(), "Id", "NameEn");
-            currentOrganizationId = _authHelper.CurrentAccountOrganizationId();
-            // ۳. اگه کاربر عادیه، سرچ رو قفل کن روی سازمان خودش
-            if (currentOrganizationId != 0)
-            {
-                SearchModel.OrganizationId = currentOrganizationId;
-            }
-
-            SearchModel ??= new StockTypeSearchModel();
-            StockTypes = _stockTypeApplication.Search(SearchModel, currentOrganizationId);
+            StockTypes = _stockTypeApplication.Search(SearchModel);
         }
 
         public IActionResult OnGetCreate()
         {
-
-            var stockType = _stockTypeApplication.GetStockTypesBy();
+            var stockType = new CreateStockType(); 
             currentOrganizationId = _authHelper.CurrentAccountOrganizationId();
-            // ۳. اگه کاربر عادیه، سرچ رو قفل کن روی سازمان خودش
-            if (currentOrganizationId != 0)
-                stockType.OrganizationId = currentOrganizationId;
-
-            stockType.IsAdmin = this.IsAdmin;
+            // ۳. اگه کاربر عادیه، لیست رو قفل کن روی سازمان خودش
+            stockType.OrganizationId = _authHelper.SetOrganizationId(currentOrganizationId);
+            stockType.IsAdmin = _authHelper.CurrentAccountIsAdmin();
             FillOrganizations(stockType);
             return Partial("./Create", stockType);
         }
@@ -69,16 +59,6 @@ namespace ServiceHost.Areas.Administration.Pages.Part.Stock.StockType
         //[NeedsPermission(PartPermissions.CreateStockType)]
         public JsonResult OnPostCreate(CreateStockType command)
         {
-            if (!ModelState.IsValid)
-            {
-                return new JsonResult(new OperationResult().Failed("اطلاعات وارد شده معتبر نیست"));
-            }
-
-            currentOrganizationId = _authHelper.CurrentAccountOrganizationId();
-            // ۳. اگه کاربر عادیه، سرچ رو قفل کن روی سازمان خودش
-            if (currentOrganizationId != 0)
-                command.OrganizationId = currentOrganizationId;
-
             var result = _stockTypeApplication.Create(command);
             return new JsonResult(result);
         }
@@ -87,15 +67,14 @@ namespace ServiceHost.Areas.Administration.Pages.Part.Stock.StockType
         {
             var stockType = _stockTypeApplication.GetDetails(id);
             if (stockType == null) return NotFound();
-
             currentOrganizationId = _authHelper.CurrentAccountOrganizationId();
-            // ۳. اگه کاربر عادیه، سرچ رو قفل کن روی سازمان خودش
-            if (currentOrganizationId != 0)
-                stockType.OrganizationId = currentOrganizationId;
-
-            // پرچم از همین PageModel می‌آید، نه از query string
-            stockType.IsAdmin = this.IsAdmin;
-
+            //  اگه کاربر عادیه، لیست رو قفل کن روی سازمان خودش
+            // البته فقط برای کاربر غیرادمین، سازمان را به سازمان کاربر محدود می‌کنیم
+            if (!_authHelper.CurrentAccountIsAdmin())
+            {
+                stockType.OrganizationId = _authHelper.CurrentAccountOrganizationId().GetValueOrDefault();
+            }
+            stockType.IsAdmin = _authHelper.CurrentAccountIsAdmin();
             FillOrganizations(stockType);
             return Partial("Edit", stockType);
 
@@ -104,11 +83,6 @@ namespace ServiceHost.Areas.Administration.Pages.Part.Stock.StockType
         //[NeedsPermission(PartPermissions.EditStockType)]
         public JsonResult OnPostEdit(EditStockType command)
         {
-            currentOrganizationId = _authHelper.CurrentAccountOrganizationId();
-            // ۳. اگه کاربر عادیه، سرچ رو قفل کن روی سازمان خودش
-            if (currentOrganizationId != 0)
-                command.OrganizationId = currentOrganizationId;
-
             var result = _stockTypeApplication.Edit(command);
             return new JsonResult(result);
         }
