@@ -7,8 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\01_MROQuery\01_MROQuery.csproj" />
     <ProjectReference Include="..\PartManagement.Application.Contracts\PartManagement.Application.Contracts.csproj" />
-    <ProjectReference Include="..\PartManagement.Domain\PartManagement.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Inventory\CommandHandlers\" />
   </ItemGroup>
 
 </Project>

@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using OrganizationManagement.Application.Contracts.Country;
 using OrganizationManagement.Application.Contracts.Organization;
 using OrganizationManagement.Configuration.Permissions;
+using OrganizationManagement.Domain.OrganizationAgg;
 using PartManagement.Application.Contracts.Stock.StockType;
 using PartManagement.Application.Contracts.Stock.Store;
 using PartManagement.Configuration.Permissions;
@@ -60,11 +61,13 @@ namespace ServiceHost.Areas.Administration.Pages.Part.Stock.Stores
         {
             //برای کاربر عادی، سازمان از حساب کاربری تعیین می‌شود. برای ادمین، سازمان باید
             // در فرم انتخاب شود؛ بنابراین تا زمان انتخاب سازمان، فهرست StockTypeها خالی می‌ماند.
+            var organizations = _organizationApplication.GetOrganizations()
+                .Select(o => new OrganizationSimpleDto { Id = o.Id, NameEn = o.NameEn }).ToList();
+
             var command = new CreateStore
             {
                 OrganizationId = _authHelper.CurrentAccountOrganizationId(),
-                Organizations = _organizationApplication.GetOrganizations()
-                                ?? new List<OrganizationViewModel>(),
+                Organizations = organizations,
                 IsAdmin = _authHelper.CurrentAccountIsAdmin(),
                 StockTypeIds = new List<long>(),
                 StockTypes = new List<StockTypeViewModel>(),
@@ -78,7 +81,7 @@ namespace ServiceHost.Areas.Administration.Pages.Part.Stock.Stores
             }
 
             command.StockTypeIds = new List<long>();
-            command.Organizations ??= new List<OrganizationViewModel>();
+            command.Organizations ??= new List<OrganizationSimpleDto>();
 
             
             return Partial("./Create", command);
@@ -96,7 +99,8 @@ namespace ServiceHost.Areas.Administration.Pages.Part.Stock.Stores
             long? organizationId = _authHelper.CurrentAccountOrganizationId();
             var store = _storeApplication.GetDetails(id);
             store.StockTypes = _stockTypeApplication.GetStockTypesBy(organizationId);
-            store.Organizations = _organizationApplication.GetOrganizations();
+            store.Organizations = _organizationApplication.GetOrganizations()
+                .Select(o => new OrganizationSimpleDto { Id = o.Id, NameEn = o.NameEn }).ToList();
             return Partial("Edit", store);
         }
 

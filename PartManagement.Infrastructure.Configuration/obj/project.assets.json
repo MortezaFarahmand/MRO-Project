@@ -3453,6 +3453,20 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
+      "01_MROQuery/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "OrganizationManagement.Infrastructure.EFCore": "1.0.0",
+          "PersonnelManagement.Infrastructure.EFCore": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/01_MROQuery.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/01_MROQuery.dll": {}
+        }
+      },
       "0_Framework/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -3568,8 +3582,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
-          "PartManagement.Application.Contracts": "1.0.0",
-          "PartManagement.Domain": "1.0.0"
+          "01_MROQuery": "1.0.0",
+          "PartManagement.Application.Contracts": "1.0.0"
         },
         "compile": {
           "bin/placeholder/PartManagement.Application.dll": {}
@@ -3583,7 +3597,8 @@
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
           "0_Framework": "1.0.0",
-          "OrganizationManagement.Application.Contracts": "1.0.0"
+          "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.3.0",
+          "PartManagement.Domain": "1.0.0"
         },
         "compile": {
           "bin/placeholder/PartManagement.Application.Contracts.dll": {}
@@ -3596,8 +3611,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
-          "0_Framework": "1.0.0",
-          "PartManagement.Application.Contracts": "1.0.0"
+          "0_Framework": "1.0.0"
         },
         "compile": {
           "bin/placeholder/PartManagement.Domain.dll": {}
@@ -3612,7 +3626,7 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "9.0.8",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.8",
-          "OrganizationManagement.Infrastructure.EFCore": "1.0.0",
+          "PartManagement.Application.Contracts": "1.0.0",
           "PartManagement.Domain": "1.0.0"
         },
         "compile": {
@@ -3650,6 +3664,22 @@
         },
         "runtime": {
           "bin/placeholder/PersonnelManagement.Domain.dll": {}
+        }
+      },
+      "PersonnelManagement.Infrastructure.EFCore/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "BasicDataManagement.Infrastructure.EFCore": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "9.0.8",
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.8",
+          "PersonnelManagement.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PersonnelManagement.Infrastructure.EFCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PersonnelManagement.Infrastructure.EFCore.dll": {}
         }
       }
     }
@@ -9145,6 +9175,11 @@
         "system.threading.tasks.extensions.nuspec"
       ]
     },
+    "01_MROQuery/1.0.0": {
+      "type": "project",
+      "path": "../01_MROQuery/01_MROQuery.csproj",
+      "msbuildProject": "../01_MROQuery/01_MROQuery.csproj"
+    },
     "0_Framework/1.0.0": {
       "type": "project",
       "path": "../0_Framework/0_Framework.csproj",
@@ -9209,10 +9244,16 @@
       "type": "project",
       "path": "../PersonnelManagement.Domain/PersonnelManagement.Domain.csproj",
       "msbuildProject": "../PersonnelManagement.Domain/PersonnelManagement.Domain.csproj"
+    },
+    "PersonnelManagement.Infrastructure.EFCore/1.0.0": {
+      "type": "project",
+      "path": "../PersonnelManagement.Infrastructure.EFCore/PersonnelManagement.Infrastructure.EFCore.csproj",
+      "msbuildProject": "../PersonnelManagement.Infrastructure.EFCore/PersonnelManagement.Infrastructure.EFCore.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "01_MROQuery >= 1.0.0",
       "Microsoft.Extensions.DependencyInjection.Abstractions >= 9.0.8",
       "PartManagement.Application >= 1.0.0",
       "PartManagement.Application.Contracts >= 1.0.0",
@@ -9252,6 +9293,9 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
+            "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\01_MROQuery\\01_MROQuery.csproj": {
+              "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\01_MROQuery\\01_MROQuery.csproj"
+            },
             "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\PartManagement.Application.Contracts\\PartManagement.Application.Contracts.csproj": {
               "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\PartManagement.Application.Contracts\\PartManagement.Application.Contracts.csproj"
             },

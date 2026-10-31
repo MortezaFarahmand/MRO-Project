@@ -3742,6 +3742,78 @@
           "bin/placeholder/BasicDataManagement.Infrastructure.EFCore.dll": {}
         }
       },
+      "FleetManagement.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "01_MROQuery": "1.0.0",
+          "0_Framework": "1.0.0",
+          "FleetManagement.Application.Contracts": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/FleetManagement.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FleetManagement.Application.dll": {}
+        }
+      },
+      "FleetManagement.Application.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "FleetManagement.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/FleetManagement.Application.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FleetManagement.Application.Contracts.dll": {}
+        }
+      },
+      "FleetManagement.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "0_Framework": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/FleetManagement.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FleetManagement.Domain.dll": {}
+        }
+      },
+      "FleetManagement.Infrastructure.Configuration/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "FleetManagement.Application": "1.0.0",
+          "FleetManagement.Application.Contracts": "1.0.0",
+          "FleetManagement.Infrastructure.EFCore": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "compile": {
+          "bin/placeholder/FleetManagement.Infrastructure.Configuration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FleetManagement.Infrastructure.Configuration.dll": {}
+        }
+      },
+      "FleetManagement.Infrastructure.EFCore/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "FleetManagement.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "9.0.8",
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.8"
+        },
+        "compile": {
+          "bin/placeholder/FleetManagement.Infrastructure.EFCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FleetManagement.Infrastructure.EFCore.dll": {}
+        }
+      },
       "OrganizationManagement.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -3839,8 +3911,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
-          "PartManagement.Application.Contracts": "1.0.0",
-          "PartManagement.Domain": "1.0.0"
+          "01_MROQuery": "1.0.0",
+          "PartManagement.Application.Contracts": "1.0.0"
         },
         "compile": {
           "bin/placeholder/PartManagement.Application.dll": {}
@@ -3854,7 +3926,8 @@
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
           "0_Framework": "1.0.0",
-          "OrganizationManagement.Application.Contracts": "1.0.0"
+          "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.3.0",
+          "PartManagement.Domain": "1.0.0"
         },
         "compile": {
           "bin/placeholder/PartManagement.Application.Contracts.dll": {}
@@ -3867,8 +3940,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
-          "0_Framework": "1.0.0",
-          "PartManagement.Application.Contracts": "1.0.0"
+          "0_Framework": "1.0.0"
         },
         "compile": {
           "bin/placeholder/PartManagement.Domain.dll": {}
@@ -3881,6 +3953,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
+          "01_MROQuery": "1.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
           "PartManagement.Application": "1.0.0",
           "PartManagement.Application.Contracts": "1.0.0",
@@ -3900,7 +3973,7 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "9.0.8",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.8",
-          "OrganizationManagement.Infrastructure.EFCore": "1.0.0",
+          "PartManagement.Application.Contracts": "1.0.0",
           "PartManagement.Domain": "1.0.0"
         },
         "compile": {
@@ -9644,6 +9717,31 @@
       "path": "../BasicDataManagement.Infrastructure.EFCore/BasicDataManagement.Infrastructure.EFCore.csproj",
       "msbuildProject": "../BasicDataManagement.Infrastructure.EFCore/BasicDataManagement.Infrastructure.EFCore.csproj"
     },
+    "FleetManagement.Application/1.0.0": {
+      "type": "project",
+      "path": "../FleetManagement.Application/FleetManagement.Application.csproj",
+      "msbuildProject": "../FleetManagement.Application/FleetManagement.Application.csproj"
+    },
+    "FleetManagement.Application.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../FleetManagement.Application.Contracts/FleetManagement.Application.Contracts.csproj",
+      "msbuildProject": "../FleetManagement.Application.Contracts/FleetManagement.Application.Contracts.csproj"
+    },
+    "FleetManagement.Domain/1.0.0": {
+      "type": "project",
+      "path": "../FleetManagement.Domain/FleetManagement.Domain.csproj",
+      "msbuildProject": "../FleetManagement.Domain/FleetManagement.Domain.csproj"
+    },
+    "FleetManagement.Infrastructure.Configuration/1.0.0": {
+      "type": "project",
+      "path": "../FleetManagement.Infrastructure.Configuration/FleetManagement.Infrastructure.Configuration.csproj",
+      "msbuildProject": "../FleetManagement.Infrastructure.Configuration/FleetManagement.Infrastructure.Configuration.csproj"
+    },
+    "FleetManagement.Infrastructure.EFCore/1.0.0": {
+      "type": "project",
+      "path": "../FleetManagement.Infrastructure.EFCore/FleetManagement.Infrastructure.EFCore.csproj",
+      "msbuildProject": "../FleetManagement.Infrastructure.EFCore/FleetManagement.Infrastructure.EFCore.csproj"
+    },
     "OrganizationManagement.Application/1.0.0": {
       "type": "project",
       "path": "../OrganizationManagement.Application/OrganizationManagement.Application.csproj",
@@ -9729,6 +9827,8 @@
     "net9.0": [
       "AccountManagement.Configuration >= 1.0.0",
       "BasicDataManagement.Configuration >= 1.0.0",
+      "FleetManagement.Infrastructure.Configuration >= 1.0.0",
+      "FleetManagement.Infrastructure.EFCore >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.8",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 9.0.0",
       "OrganizationManagement.Configuration >= 1.0.0",
@@ -9774,6 +9874,12 @@
             },
             "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Configuration\\BasicDataManagement.Configuration.csproj": {
               "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\BasicDataManagement.Configuration\\BasicDataManagement.Configuration.csproj"
+            },
+            "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\FleetManagement.Infrastructure.Configuration\\FleetManagement.Infrastructure.Configuration.csproj": {
+              "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\FleetManagement.Infrastructure.Configuration\\FleetManagement.Infrastructure.Configuration.csproj"
+            },
+            "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\FleetManagement.Infrastructure.EFCore\\FleetManagement.Infrastructure.EFCore.csproj": {
+              "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\FleetManagement.Infrastructure.EFCore\\FleetManagement.Infrastructure.EFCore.csproj"
             },
             "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\OrganizationManagement.Configuration\\OrganizationManagement.Configuration.csproj": {
               "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\OrganizationManagement.Configuration\\OrganizationManagement.Configuration.csproj"

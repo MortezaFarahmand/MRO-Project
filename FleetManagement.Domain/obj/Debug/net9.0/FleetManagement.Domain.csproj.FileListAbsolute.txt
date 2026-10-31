@@ -1,0 +1,16 @@
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\FleetManagement.Domain\bin\Debug\net9.0\FleetManagement.Domain.deps.json
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\FleetManagement.Domain\bin\Debug\net9.0\FleetManagement.Domain.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\FleetManagement.Domain\bin\Debug\net9.0\FleetManagement.Domain.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\FleetManagement.Domain\bin\Debug\net9.0\0_Framework.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\FleetManagement.Domain\bin\Debug\net9.0\0_Framework.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\FleetManagement.Domain\obj\Debug\net9.0\FleetManagement.Domain.csproj.AssemblyReference.cache
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\FleetManagement.Domain\obj\Debug\net9.0\FleetManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\FleetManagement.Domain\obj\Debug\net9.0\FleetManagement.Domain.AssemblyInfoInputs.cache
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\FleetManagement.Domain\obj\Debug\net9.0\FleetManagement.Domain.AssemblyInfo.cs
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\FleetManagement.Domain\obj\Debug\net9.0\FleetManagement.Domain.csproj.CoreCompileInputs.cache
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\FleetManagement.Domain\obj\Debug\net9.0\FleetManagement.Domain.sourcelink.json
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\FleetManagement.Domain\obj\Debug\net9.0\FleetMan.996F36F0.Up2Date
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\FleetManagement.Domain\obj\Debug\net9.0\FleetManagement.Domain.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\FleetManagement.Domain\obj\Debug\net9.0\refint\FleetManagement.Domain.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\FleetManagement.Domain\obj\Debug\net9.0\FleetManagement.Domain.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\FleetManagement.Domain\obj\Debug\net9.0\ref\FleetManagement.Domain.dll

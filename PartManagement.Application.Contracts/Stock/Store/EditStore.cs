@@ -3,5 +3,6 @@
     public class EditStore : CreateStore
     {
         public long Id { get; set; }
+        
     }
 }

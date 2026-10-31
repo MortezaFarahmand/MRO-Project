@@ -7,7 +7,7 @@ namespace PartManagement.Application.Contracts.Stock.Store
         public long Id { get; set; }
         public string Name { get; set; }
         public string Code { get; set; }
-        public string Organization { get; set; }
+        public string? OrganizationName { get; set; }
         public string City { get; set; }
         public string Station { get; set; }
         public string StockType { get; set; }

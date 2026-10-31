@@ -8,7 +8,30 @@
 
   <ItemGroup>
     <ProjectReference Include="..\0_Framework\0_Framework.csproj" />
-    <ProjectReference Include="..\OrganizationManagement.Application.Contracts\OrganizationManagement.Application.Contracts.csproj" />
+    <ProjectReference Include="..\PartManagement.Domain\PartManagement.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="QueryHandlers\Common\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Part\Queries\GetPartByIdQuery.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>GetPartByIdQuery.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Part\Queries\GetPartByIdQuery.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GetPartByIdQuery.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Permissions\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FleetManagement.Application.Contracts\FleetManagement.Application.Contracts.csproj" />
+    <ProjectReference Include="..\FleetManagement.Application\FleetManagement.Application.csproj" />
+    <ProjectReference Include="..\FleetManagement.Infrastructure.EFCore\FleetManagement.Infrastructure.EFCore.csproj" />
+  </ItemGroup>
+
+</Project>

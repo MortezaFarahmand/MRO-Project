@@ -10,6 +10,8 @@
         "dependencies": {
           "AccountManagement.Configuration": "1.0.0",
           "BasicDataManagement.Configuration": "1.0.0",
+          "FleetManagement.Infrastructure.Configuration": "1.0.0",
+          "FleetManagement.Infrastructure.EFCore": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "9.0.8",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "9.0.0",
           "OrganizationManagement.Configuration": "1.0.0",
@@ -2469,6 +2471,68 @@
           }
         }
       },
+      "FleetManagement.Application/1.0.0": {
+        "dependencies": {
+          "01_MROQuery": "1.0.0",
+          "0_Framework": "1.0.0",
+          "FleetManagement.Application.Contracts": "1.0.0"
+        },
+        "runtime": {
+          "FleetManagement.Application.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "FleetManagement.Application.Contracts/1.0.0": {
+        "dependencies": {
+          "FleetManagement.Domain": "1.0.0"
+        },
+        "runtime": {
+          "FleetManagement.Application.Contracts.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "FleetManagement.Domain/1.0.0": {
+        "dependencies": {
+          "0_Framework": "1.0.0"
+        },
+        "runtime": {
+          "FleetManagement.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "FleetManagement.Infrastructure.Configuration/1.0.0": {
+        "dependencies": {
+          "FleetManagement.Application": "1.0.0",
+          "FleetManagement.Application.Contracts": "1.0.0",
+          "FleetManagement.Infrastructure.EFCore": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
+        },
+        "runtime": {
+          "FleetManagement.Infrastructure.Configuration.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "FleetManagement.Infrastructure.EFCore/1.0.0": {
+        "dependencies": {
+          "FleetManagement.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "9.0.8",
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.8"
+        },
+        "runtime": {
+          "FleetManagement.Infrastructure.EFCore.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "OrganizationManagement.Application/1.0.0": {
         "dependencies": {
           "OrganizationManagement.Application.Contracts": "1.0.0",
@@ -2552,8 +2616,8 @@
       },
       "PartManagement.Application/1.0.0": {
         "dependencies": {
-          "PartManagement.Application.Contracts": "1.0.0",
-          "PartManagement.Domain": "1.0.0"
+          "01_MROQuery": "1.0.0",
+          "PartManagement.Application.Contracts": "1.0.0"
         },
         "runtime": {
           "PartManagement.Application.dll": {
@@ -2565,7 +2629,8 @@
       "PartManagement.Application.Contracts/1.0.0": {
         "dependencies": {
           "0_Framework": "1.0.0",
-          "OrganizationManagement.Application.Contracts": "1.0.0"
+          "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.3.0",
+          "PartManagement.Domain": "1.0.0"
         },
         "runtime": {
           "PartManagement.Application.Contracts.dll": {
@@ -2576,8 +2641,7 @@
       },
       "PartManagement.Domain/1.0.0": {
         "dependencies": {
-          "0_Framework": "1.0.0",
-          "PartManagement.Application.Contracts": "1.0.0"
+          "0_Framework": "1.0.0"
         },
         "runtime": {
           "PartManagement.Domain.dll": {
@@ -2588,6 +2652,7 @@
       },
       "PartManagement.Infrastructure.Configuration/1.0.0": {
         "dependencies": {
+          "01_MROQuery": "1.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8",
           "PartManagement.Application": "1.0.0",
           "PartManagement.Application.Contracts": "1.0.0",
@@ -2605,7 +2670,7 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "9.0.8",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.8",
-          "OrganizationManagement.Infrastructure.EFCore": "1.0.0",
+          "PartManagement.Application.Contracts": "1.0.0",
           "PartManagement.Domain": "1.0.0"
         },
         "runtime": {
@@ -4125,6 +4190,31 @@
       "sha512": ""
     },
     "BasicDataManagement.Infrastructure.EFCore/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FleetManagement.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FleetManagement.Application.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FleetManagement.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FleetManagement.Infrastructure.Configuration/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FleetManagement.Infrastructure.EFCore/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

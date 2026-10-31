@@ -11,7 +11,7 @@
           "Microsoft.EntityFrameworkCore": "9.0.8",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.8",
           "Microsoft.EntityFrameworkCore.Tools": "9.0.8",
-          "OrganizationManagement.Infrastructure.EFCore": "1.0.0",
+          "PartManagement.Application.Contracts": "1.0.0",
           "PartManagement.Domain": "1.0.0"
         },
         "runtime": {
@@ -596,9 +596,9 @@
       "Microsoft.AspNetCore.Antiforgery/2.3.0": {
         "dependencies": {
           "Microsoft.AspNetCore.DataProtection": "2.3.11",
-          "Microsoft.AspNetCore.Http.Abstractions": "2.3.12",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.3.11",
           "Microsoft.AspNetCore.Http.Extensions": "2.3.11",
-          "Microsoft.AspNetCore.WebUtilities": "2.3.12",
+          "Microsoft.AspNetCore.WebUtilities": "2.3.10",
           "Microsoft.Extensions.ObjectPool": "8.0.11"
         },
         "runtime": {
@@ -612,7 +612,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.Core": "2.3.11",
           "Microsoft.AspNetCore.DataProtection": "2.3.11",
-          "Microsoft.AspNetCore.Http": "2.3.13",
+          "Microsoft.AspNetCore.Http": "2.3.11",
           "Microsoft.AspNetCore.Http.Extensions": "2.3.11",
           "Microsoft.Extensions.Logging.Abstractions": "9.0.8",
           "Microsoft.Extensions.Options": "9.0.8",
@@ -628,7 +628,7 @@
       },
       "Microsoft.AspNetCore.Authentication.Abstractions/2.3.10": {
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Abstractions": "2.3.12",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.3.11",
           "Microsoft.Extensions.Logging.Abstractions": "9.0.8",
           "Microsoft.Extensions.Options": "9.0.8"
         },
@@ -654,7 +654,7 @@
       "Microsoft.AspNetCore.Authentication.Core/2.3.11": {
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.Abstractions": "2.3.10",
-          "Microsoft.AspNetCore.Http": "2.3.13",
+          "Microsoft.AspNetCore.Http": "2.3.11",
           "Microsoft.AspNetCore.Http.Extensions": "2.3.11"
         },
         "runtime": {
@@ -734,7 +734,7 @@
       "Microsoft.AspNetCore.Hosting.Abstractions/2.3.10": {
         "dependencies": {
           "Microsoft.AspNetCore.Hosting.Server.Abstractions": "2.3.9",
-          "Microsoft.AspNetCore.Http.Abstractions": "2.3.12",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.3.11",
           "Microsoft.Extensions.Hosting.Abstractions": "8.0.1"
         },
         "runtime": {
@@ -746,7 +746,7 @@
       },
       "Microsoft.AspNetCore.Hosting.Server.Abstractions/2.3.9": {
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Features": "2.3.11",
+          "Microsoft.AspNetCore.Http.Features": "2.3.10",
           "Microsoft.Extensions.Configuration.Abstractions": "9.0.8"
         },
         "runtime": {
@@ -767,36 +767,36 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Http/2.3.13": {
+      "Microsoft.AspNetCore.Http/2.3.11": {
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Abstractions": "2.3.12",
-          "Microsoft.AspNetCore.WebUtilities": "2.3.12",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.3.11",
+          "Microsoft.AspNetCore.WebUtilities": "2.3.10",
           "Microsoft.Extensions.ObjectPool": "8.0.11",
           "Microsoft.Extensions.Options": "9.0.8",
           "Microsoft.Net.Http.Headers": "2.3.12"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Http.dll": {
-            "assemblyVersion": "2.3.13.0",
-            "fileVersion": "2.3.13.26246"
+            "assemblyVersion": "2.3.11.0",
+            "fileVersion": "2.3.11.26141"
           }
         }
       },
-      "Microsoft.AspNetCore.Http.Abstractions/2.3.12": {
+      "Microsoft.AspNetCore.Http.Abstractions/2.3.11": {
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Features": "2.3.11",
+          "Microsoft.AspNetCore.Http.Features": "2.3.10",
           "System.Text.Encodings.Web": "8.0.0"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.dll": {
-            "assemblyVersion": "2.3.12.0",
-            "fileVersion": "2.3.12.26216"
+            "assemblyVersion": "2.3.11.0",
+            "fileVersion": "2.3.11.26141"
           }
         }
       },
       "Microsoft.AspNetCore.Http.Extensions/2.3.11": {
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Abstractions": "2.3.12",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.3.11",
           "Microsoft.Extensions.FileProviders.Abstractions": "8.0.0",
           "Microsoft.Net.Http.Headers": "2.3.12",
           "System.Buffers": "4.6.0"
@@ -808,14 +808,14 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Http.Features/2.3.11": {
+      "Microsoft.AspNetCore.Http.Features/2.3.10": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "9.0.8"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {
-            "assemblyVersion": "2.3.11.0",
-            "fileVersion": "2.3.11.26141"
+            "assemblyVersion": "2.3.10.0",
+            "fileVersion": "2.3.10.26110"
           }
         }
       },
@@ -848,7 +848,7 @@
           "Microsoft.AspNetCore.Authentication.Core": "2.3.11",
           "Microsoft.AspNetCore.Authorization.Policy": "2.3.0",
           "Microsoft.AspNetCore.Hosting.Abstractions": "2.3.10",
-          "Microsoft.AspNetCore.Http": "2.3.13",
+          "Microsoft.AspNetCore.Http": "2.3.11",
           "Microsoft.AspNetCore.Http.Extensions": "2.3.11",
           "Microsoft.AspNetCore.Mvc.Abstractions": "2.3.13",
           "Microsoft.AspNetCore.ResponseCaching.Abstractions": "2.3.0",
@@ -947,7 +947,7 @@
       },
       "Microsoft.AspNetCore.Routing.Abstractions/2.3.12": {
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Abstractions": "2.3.12"
+          "Microsoft.AspNetCore.Http.Abstractions": "2.3.11"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Routing.Abstractions.dll": {
@@ -956,15 +956,15 @@
           }
         }
       },
-      "Microsoft.AspNetCore.WebUtilities/2.3.12": {
+      "Microsoft.AspNetCore.WebUtilities/2.3.10": {
         "dependencies": {
           "Microsoft.Net.Http.Headers": "2.3.12",
           "System.Text.Encodings.Web": "8.0.0"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.dll": {
-            "assemblyVersion": "2.3.12.0",
-            "fileVersion": "2.3.12.26216"
+            "assemblyVersion": "2.3.10.0",
+            "fileVersion": "2.3.10.26110"
           }
         }
       },
@@ -2583,93 +2583,11 @@
           }
         }
       },
-      "BasicDataManagement.Application.Contracts/1.0.0": {
-        "dependencies": {
-          "0_Framework": "1.0.0",
-          "Microsoft.AspNetCore.Authentication.Cookies": "2.3.13",
-          "Microsoft.AspNetCore.Http": "2.3.13",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "9.0.0"
-        },
-        "runtime": {
-          "BasicDataManagement.Application.Contracts.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "BasicDataManagement.Domain/1.0.0": {
-        "dependencies": {
-          "0_Framework": "1.0.0",
-          "BasicDataManagement.Application.Contracts": "1.0.0"
-        },
-        "runtime": {
-          "BasicDataManagement.Domain.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "BasicDataManagement.Infrastructure.EFCore/1.0.0": {
-        "dependencies": {
-          "BasicDataManagement.Domain": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "9.0.8",
-          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.8",
-          "OrganizationManagement.Domain": "1.0.0"
-        },
-        "runtime": {
-          "BasicDataManagement.Infrastructure.EFCore.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "OrganizationManagement.Application.Contracts/1.0.0": {
-        "dependencies": {
-          "0_Framework": "1.0.0",
-          "BasicDataManagement.Application.Contracts": "1.0.0",
-          "Microsoft.AspNetCore.Http": "2.3.13",
-          "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.3.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "9.0.0"
-        },
-        "runtime": {
-          "OrganizationManagement.Application.Contracts.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "OrganizationManagement.Domain/1.0.0": {
-        "dependencies": {
-          "0_Framework": "1.0.0",
-          "BasicDataManagement.Domain": "1.0.0",
-          "OrganizationManagement.Application.Contracts": "1.0.0",
-          "PersonnelManagement.Domain": "1.0.0"
-        },
-        "runtime": {
-          "OrganizationManagement.Domain.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "OrganizationManagement.Infrastructure.EFCore/1.0.0": {
-        "dependencies": {
-          "BasicDataManagement.Infrastructure.EFCore": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "9.0.8",
-          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.8",
-          "OrganizationManagement.Domain": "1.0.0"
-        },
-        "runtime": {
-          "OrganizationManagement.Infrastructure.EFCore.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
       "PartManagement.Application.Contracts/1.0.0": {
         "dependencies": {
           "0_Framework": "1.0.0",
-          "OrganizationManagement.Application.Contracts": "1.0.0"
+          "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.3.0",
+          "PartManagement.Domain": "1.0.0"
         },
         "runtime": {
           "PartManagement.Application.Contracts.dll": {
@@ -2680,37 +2598,10 @@
       },
       "PartManagement.Domain/1.0.0": {
         "dependencies": {
-          "0_Framework": "1.0.0",
-          "PartManagement.Application.Contracts": "1.0.0"
+          "0_Framework": "1.0.0"
         },
         "runtime": {
           "PartManagement.Domain.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "PersonnelManagement.Application.Contracts/1.0.0": {
-        "dependencies": {
-          "0_Framework": "1.0.0",
-          "BasicDataManagement.Domain": "1.0.0",
-          "Microsoft.AspNetCore.Http": "2.3.13",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "9.0.0"
-        },
-        "runtime": {
-          "PersonnelManagement.Application.Contracts.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "PersonnelManagement.Domain/1.0.0": {
-        "dependencies": {
-          "0_Framework": "1.0.0",
-          "PersonnelManagement.Application.Contracts": "1.0.0"
-        },
-        "runtime": {
-          "PersonnelManagement.Domain.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -3186,19 +3077,19 @@
       "path": "microsoft.aspnetcore.html.abstractions/2.3.0",
       "hashPath": "microsoft.aspnetcore.html.abstractions.2.3.0.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Http/2.3.13": {
+    "Microsoft.AspNetCore.Http/2.3.11": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-6dSurGknKDspLgtKkqGw5SlDp8qpeaZ31P9RWiDsdT+CnecbNP8HgXPrAQthsIuV25FIKzfwF7VCC0JTRHtRqA==",
-      "path": "microsoft.aspnetcore.http/2.3.13",
-      "hashPath": "microsoft.aspnetcore.http.2.3.13.nupkg.sha512"
+      "sha512": "sha512-3H7dPd3knHBMQRvVPYsGlAd7cPI4wk0Hf5H5qhoxoQiEkJ0QdJDNIr34GcKA4CtOw0akQ7US67UpRxWMUeCy2w==",
+      "path": "microsoft.aspnetcore.http/2.3.11",
+      "hashPath": "microsoft.aspnetcore.http.2.3.11.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Http.Abstractions/2.3.12": {
+    "Microsoft.AspNetCore.Http.Abstractions/2.3.11": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Mc1UKKSU8PmOWqpNdfpRYmqotmoQlsL1SAYwLHIIlTDayjyKng3UVn5+b+mPAEp31vU4ozy0CYeRYvCPqzdxZw==",
-      "path": "microsoft.aspnetcore.http.abstractions/2.3.12",
-      "hashPath": "microsoft.aspnetcore.http.abstractions.2.3.12.nupkg.sha512"
+      "sha512": "sha512-sNpm9t4l5Axt5qMzfD9pYVm7dWHys12TtIbtQ2VVMfKN8eCJiqtZX8ZhC1mhttWOfCuNOMtd+Hh+HoA7VLyoqw==",
+      "path": "microsoft.aspnetcore.http.abstractions/2.3.11",
+      "hashPath": "microsoft.aspnetcore.http.abstractions.2.3.11.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Http.Extensions/2.3.11": {
       "type": "package",
@@ -3207,12 +3098,12 @@
       "path": "microsoft.aspnetcore.http.extensions/2.3.11",
       "hashPath": "microsoft.aspnetcore.http.extensions.2.3.11.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Http.Features/2.3.11": {
+    "Microsoft.AspNetCore.Http.Features/2.3.10": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-TRQWR0vHBUUAEynbgCI3/MRf4+xRj8TsljoUPYxqiombhYhoEYHnr1sowozU1L/OyJHkPdm2IscJ9JBa0kcgbw==",
-      "path": "microsoft.aspnetcore.http.features/2.3.11",
-      "hashPath": "microsoft.aspnetcore.http.features.2.3.11.nupkg.sha512"
+      "sha512": "sha512-AktSafL1PkmbIoG0nx7van7bcvEvxnS4WBrIDaKvNr3uBxEj3epgT3DLbxIT1IjZKrubaV1xasXASdyaKSJlMA==",
+      "path": "microsoft.aspnetcore.http.features/2.3.10",
+      "hashPath": "microsoft.aspnetcore.http.features.2.3.10.nupkg.sha512"
     },
     "Microsoft.AspNetCore.JsonPatch/2.3.0": {
       "type": "package",
@@ -3284,12 +3175,12 @@
       "path": "microsoft.aspnetcore.routing.abstractions/2.3.12",
       "hashPath": "microsoft.aspnetcore.routing.abstractions.2.3.12.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.WebUtilities/2.3.12": {
+    "Microsoft.AspNetCore.WebUtilities/2.3.10": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-wzbAsF9N+9Eftg7+daZwPbfuT8wFQlD1duV/OPHNw5twVVgWkSjjens9QQ4ZrXSY6sd1nRYE6RZGUtZt5NaENA==",
-      "path": "microsoft.aspnetcore.webutilities/2.3.12",
-      "hashPath": "microsoft.aspnetcore.webutilities.2.3.12.nupkg.sha512"
+      "sha512": "sha512-7LpnJixI2B3uh+enEw/6xKJS6s7A/N5gRWIMc0NZsKjKXJ64mn7bA09KtjWuSE/SnMpgycLPudFCNtMipRp6yQ==",
+      "path": "microsoft.aspnetcore.webutilities/2.3.10",
+      "hashPath": "microsoft.aspnetcore.webutilities.2.3.10.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
       "type": "package",
@@ -4115,52 +4006,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "BasicDataManagement.Application.Contracts/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "BasicDataManagement.Domain/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "BasicDataManagement.Infrastructure.EFCore/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "OrganizationManagement.Application.Contracts/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "OrganizationManagement.Domain/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "OrganizationManagement.Infrastructure.EFCore/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "PartManagement.Application.Contracts/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "PartManagement.Domain/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "PersonnelManagement.Application.Contracts/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "PersonnelManagement.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

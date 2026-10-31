@@ -8,5 +8,6 @@
         public long StockTypeId { get; set; }
         public long? OrganizationId { get; set; }
         public bool IsAdmin { get; set; }
+        public bool? IsActive { get; set; }
     }
 }

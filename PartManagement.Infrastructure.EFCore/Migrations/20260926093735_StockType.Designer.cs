@@ -25,7 +25,7 @@ namespace PartManagement.Infrastructure.EFCore.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("PartManagement.Domain.Stock.StockTypeAgg.StockType", b =>
+            modelBuilder.Entity("PartManagement.Domain.StockAgg.StockTypeAgg.StockType", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()

@@ -7,6 +7,8 @@
   <ItemGroup>
     <ProjectReference Include="..\AccountManagement.Configuration\AccountManagement.Configuration.csproj" />
     <ProjectReference Include="..\BasicDataManagement.Configuration\BasicDataManagement.Configuration.csproj" />
+    <ProjectReference Include="..\FleetManagement.Infrastructure.Configuration\FleetManagement.Infrastructure.Configuration.csproj" />
+    <ProjectReference Include="..\FleetManagement.Infrastructure.EFCore\FleetManagement.Infrastructure.EFCore.csproj" />
     <ProjectReference Include="..\OrganizationManagement.Configuration\OrganizationManagement.Configuration.csproj" />
     <ProjectReference Include="..\OrganizationManagement.Presentation.Api\OrganizationManagement.Presentation.Api.csproj" />
     <ProjectReference Include="..\PartManagement.Infrastructure.Configuration\PartManagement.Infrastructure.Configuration.csproj" />

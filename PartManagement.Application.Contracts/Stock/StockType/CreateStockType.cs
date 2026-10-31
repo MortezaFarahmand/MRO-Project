@@ -1,6 +1,5 @@
 ﻿using _0_Framework.Application;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using OrganizationManagement.Application.Contracts.Organization;
 using System.ComponentModel.DataAnnotations;
 
 namespace PartManagement.Application.Contracts.Stock.StockType

@@ -840,14 +840,14 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Http/2.3.13": {
+      "Microsoft.AspNetCore.Http/2.3.11": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Abstractions": "2.3.12",
-          "Microsoft.AspNetCore.WebUtilities": "2.3.12",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.3.10",
+          "Microsoft.AspNetCore.WebUtilities": "2.3.10",
           "Microsoft.Extensions.ObjectPool": "8.0.11",
           "Microsoft.Extensions.Options": "8.0.2",
-          "Microsoft.Net.Http.Headers": "2.3.12"
+          "Microsoft.Net.Http.Headers": "2.3.10"
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Http.dll": {
@@ -860,10 +860,10 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Http.Abstractions/2.3.12": {
+      "Microsoft.AspNetCore.Http.Abstractions/2.3.11": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Features": "2.3.11",
+          "Microsoft.AspNetCore.Http.Features": "2.3.10",
           "System.Text.Encodings.Web": "8.0.0"
         },
         "compile": {
@@ -896,7 +896,7 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Http.Features/2.3.11": {
+      "Microsoft.AspNetCore.Http.Features/2.3.10": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Primitives": "8.0.0"
@@ -1095,10 +1095,10 @@
           }
         }
       },
-      "Microsoft.AspNetCore.WebUtilities/2.3.12": {
+      "Microsoft.AspNetCore.WebUtilities/2.3.10": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Net.Http.Headers": "2.3.11",
+          "Microsoft.Net.Http.Headers": "2.3.9",
           "System.Text.Encodings.Web": "8.0.0"
         },
         "compile": {
@@ -3005,37 +3005,17 @@
           "bin/placeholder/0_Framework.dll": {}
         }
       },
-      "BasicDataManagement.Application.Contracts/1.0.0": {
+      "PartManagement.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
-          "0_Framework": "1.0.0",
-          "Microsoft.AspNetCore.Authentication.Cookies": "2.3.13",
-          "Microsoft.AspNetCore.Http": "2.3.13",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "9.0.0"
+          "0_Framework": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/BasicDataManagement.Application.Contracts.dll": {}
+          "bin/placeholder/PartManagement.Domain.dll": {}
         },
         "runtime": {
-          "bin/placeholder/BasicDataManagement.Application.Contracts.dll": {}
-        }
-      },
-      "OrganizationManagement.Application.Contracts/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "dependencies": {
-          "0_Framework": "1.0.0",
-          "BasicDataManagement.Application.Contracts": "1.0.0",
-          "Microsoft.AspNetCore.Http": "2.3.13",
-          "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.3.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "9.0.0"
-        },
-        "compile": {
-          "bin/placeholder/OrganizationManagement.Application.Contracts.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/OrganizationManagement.Application.Contracts.dll": {}
+          "bin/placeholder/PartManagement.Domain.dll": {}
         }
       }
     }
@@ -3969,29 +3949,29 @@
         "microsoft.aspnetcore.html.abstractions.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Http/2.3.13": {
-      "sha512": "6dSurGknKDspLgtKkqGw5SlDp8qpeaZ31P9RWiDsdT+CnecbNP8HgXPrAQthsIuV25FIKzfwF7VCC0JTRHtRqA==",
+    "Microsoft.AspNetCore.Http/2.3.11": {
+      "sha512": "3H7dPd3knHBMQRvVPYsGlAd7cPI4wk0Hf5H5qhoxoQiEkJ0QdJDNIr34GcKA4CtOw0akQ7US67UpRxWMUeCy2w==",
       "type": "package",
-      "path": "microsoft.aspnetcore.http/2.3.13",
+      "path": "microsoft.aspnetcore.http/2.3.11",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Microsoft.AspNetCore.Http.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Http.xml",
-        "microsoft.aspnetcore.http.2.3.13.nupkg.sha512",
+        "microsoft.aspnetcore.http.2.3.11.nupkg.sha512",
         "microsoft.aspnetcore.http.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Http.Abstractions/2.3.12": {
-      "sha512": "Mc1UKKSU8PmOWqpNdfpRYmqotmoQlsL1SAYwLHIIlTDayjyKng3UVn5+b+mPAEp31vU4ozy0CYeRYvCPqzdxZw==",
+    "Microsoft.AspNetCore.Http.Abstractions/2.3.11": {
+      "sha512": "sNpm9t4l5Axt5qMzfD9pYVm7dWHys12TtIbtQ2VVMfKN8eCJiqtZX8ZhC1mhttWOfCuNOMtd+Hh+HoA7VLyoqw==",
       "type": "package",
-      "path": "microsoft.aspnetcore.http.abstractions/2.3.12",
+      "path": "microsoft.aspnetcore.http.abstractions/2.3.11",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.xml",
-        "microsoft.aspnetcore.http.abstractions.2.3.12.nupkg.sha512",
+        "microsoft.aspnetcore.http.abstractions.2.3.11.nupkg.sha512",
         "microsoft.aspnetcore.http.abstractions.nuspec"
       ]
     },
@@ -4008,16 +3988,16 @@
         "microsoft.aspnetcore.http.extensions.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.Http.Features/2.3.11": {
-      "sha512": "TRQWR0vHBUUAEynbgCI3/MRf4+xRj8TsljoUPYxqiombhYhoEYHnr1sowozU1L/OyJHkPdm2IscJ9JBa0kcgbw==",
+    "Microsoft.AspNetCore.Http.Features/2.3.10": {
+      "sha512": "AktSafL1PkmbIoG0nx7van7bcvEvxnS4WBrIDaKvNr3uBxEj3epgT3DLbxIT1IjZKrubaV1xasXASdyaKSJlMA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.http.features/2.3.11",
+      "path": "microsoft.aspnetcore.http.features/2.3.10",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.xml",
-        "microsoft.aspnetcore.http.features.2.3.11.nupkg.sha512",
+        "microsoft.aspnetcore.http.features.2.3.10.nupkg.sha512",
         "microsoft.aspnetcore.http.features.nuspec"
       ]
     },
@@ -4153,16 +4133,16 @@
         "microsoft.aspnetcore.routing.abstractions.nuspec"
       ]
     },
-    "Microsoft.AspNetCore.WebUtilities/2.3.12": {
-      "sha512": "wzbAsF9N+9Eftg7+daZwPbfuT8wFQlD1duV/OPHNw5twVVgWkSjjens9QQ4ZrXSY6sd1nRYE6RZGUtZt5NaENA==",
+    "Microsoft.AspNetCore.WebUtilities/2.3.10": {
+      "sha512": "7LpnJixI2B3uh+enEw/6xKJS6s7A/N5gRWIMc0NZsKjKXJ64mn7bA09KtjWuSE/SnMpgycLPudFCNtMipRp6yQ==",
       "type": "package",
-      "path": "microsoft.aspnetcore.webutilities/2.3.12",
+      "path": "microsoft.aspnetcore.webutilities/2.3.10",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.dll",
         "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.xml",
-        "microsoft.aspnetcore.webutilities.2.3.12.nupkg.sha512",
+        "microsoft.aspnetcore.webutilities.2.3.10.nupkg.sha512",
         "microsoft.aspnetcore.webutilities.nuspec"
       ]
     },
@@ -7739,21 +7719,17 @@
       "path": "../0_Framework/0_Framework.csproj",
       "msbuildProject": "../0_Framework/0_Framework.csproj"
     },
-    "BasicDataManagement.Application.Contracts/1.0.0": {
+    "PartManagement.Domain/1.0.0": {
       "type": "project",
-      "path": "../BasicDataManagement.Application.Contract/BasicDataManagement.Application.Contracts.csproj",
-      "msbuildProject": "../BasicDataManagement.Application.Contract/BasicDataManagement.Application.Contracts.csproj"
-    },
-    "OrganizationManagement.Application.Contracts/1.0.0": {
-      "type": "project",
-      "path": "../OrganizationManagement.Application.Contracts/OrganizationManagement.Application.Contracts.csproj",
-      "msbuildProject": "../OrganizationManagement.Application.Contracts/OrganizationManagement.Application.Contracts.csproj"
+      "path": "../PartManagement.Domain/PartManagement.Domain.csproj",
+      "msbuildProject": "../PartManagement.Domain/PartManagement.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
       "0_Framework >= 1.0.0",
-      "OrganizationManagement.Application.Contracts >= 1.0.0"
+      "Microsoft.AspNetCore.Mvc.ViewFeatures >= 2.3.0",
+      "PartManagement.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -7791,8 +7767,8 @@
             "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\0_Framework\\0_Framework.csproj": {
               "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\0_Framework\\0_Framework.csproj"
             },
-            "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\OrganizationManagement.Application.Contracts\\OrganizationManagement.Application.Contracts.csproj": {
-              "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\OrganizationManagement.Application.Contracts\\OrganizationManagement.Application.Contracts.csproj"
+            "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\PartManagement.Domain\\PartManagement.Domain.csproj": {
+              "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\PartManagement.Domain\\PartManagement.Domain.csproj"
             }
           }
         }
@@ -7812,6 +7788,12 @@
     "frameworks": {
       "net9.0": {
         "targetAlias": "net9.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.ViewFeatures": {
+            "target": "Package",
+            "version": "[2.3.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

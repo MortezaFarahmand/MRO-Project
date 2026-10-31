@@ -1,9 +1,6 @@
 ﻿using _0_Framework.Application;
 using AccountManagement.Application.Contracts.Account;
 using AccountManagement.Domain.AccountAgg;
-using Microsoft.CodeAnalysis.Elfie.Diagnostics;
-using System.Security.Principal;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace AccountManagement.Application
 {

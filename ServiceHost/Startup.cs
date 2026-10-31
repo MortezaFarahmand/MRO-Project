@@ -38,6 +38,7 @@ namespace ServiceHost
             BasicDataManagementBootstrapper.Configure(services, connectionString);
             AccountManagementBootstrapper.Configure(services, connectionString);
             PartManagementBootstrapper.Configure(services, connectionString);
+            FleetManagementBootstrapper.Configure(services, connectionString);
 
 
 

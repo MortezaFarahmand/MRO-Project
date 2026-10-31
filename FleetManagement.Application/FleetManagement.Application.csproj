@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\01_MROQuery\01_MROQuery.csproj" />
+    <ProjectReference Include="..\0_Framework\0_Framework.csproj" />
+    <ProjectReference Include="..\FleetManagement.Application.Contracts\FleetManagement.Application.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

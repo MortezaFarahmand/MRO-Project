@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\01_MROQuery\01_MROQuery.csproj" />
     <ProjectReference Include="..\PartManagement.Application.Contracts\PartManagement.Application.Contracts.csproj" />
     <ProjectReference Include="..\PartManagement.Application\PartManagement.Application.csproj" />
     <ProjectReference Include="..\PartManagement.Domain\PartManagement.Domain.csproj" />

@@ -40,6 +40,9 @@ namespace PartManagement.Infrastructure.EFCore.Migrations
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
+                    b.Property<long?>("CreatedBy")
+                        .HasColumnType("bigint");
+
                     b.Property<DateTime>("CreationDate")
                         .HasMaxLength(50)
                         .HasColumnType("datetime2");
@@ -51,6 +54,15 @@ namespace PartManagement.Infrastructure.EFCore.Migrations
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("ModifiedBy")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -64,6 +76,527 @@ namespace PartManagement.Infrastructure.EFCore.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("EquipmentTypes", (string)null);
+                });
+
+            modelBuilder.Entity("PartManagement.Domain.Basic_dataAgg.PrimaryUtilisationAgg.PrimaryUtilisation", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long?>("CreatedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("ModifiedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PrimaryUtilisation");
+                });
+
+            modelBuilder.Entity("PartManagement.Domain.InventoryAgg.InventoryItemAgg.InventoryItem", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<long?>("AircraftId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("BatchNumber")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<long?>("CreatedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("CyclesAtInstall")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("ExpireDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal?>("FlightHoursAtInstall")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime?>("InstallDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("LotNumber")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime?>("ManufactureDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("ModifiedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Note")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<long?>("OwnerOrganizationId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("PartId")
+                        .HasColumnType("bigint");
+
+                    b.Property<decimal>("Quantity")
+                        .HasPrecision(18, 4)
+                        .HasColumnType("decimal(18,4)");
+
+                    b.Property<string>("SerialNumber")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<long?>("StoreId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BatchNumber");
+
+                    b.HasIndex("SerialNumber");
+
+                    b.HasIndex("PartId", "Status");
+
+                    b.ToTable("InventoryItems", (string)null);
+                });
+
+            modelBuilder.Entity("PartManagement.Domain.InventoryAgg.StockMovementAgg.StockMovement", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<string>("BatchNumber")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<long?>("CreatedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("FromStoreId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("InventoryItemId")
+                        .HasColumnType("bigint");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("ModifiedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("MovementDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("MovementNumber")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<int>("MovementType")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Note")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<long?>("OrganizationId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("PartId")
+                        .HasColumnType("bigint");
+
+                    b.Property<decimal>("Quantity")
+                        .HasPrecision(18, 4)
+                        .HasColumnType("decimal(18,4)");
+
+                    b.Property<long?>("RelatedDocumentId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("RelatedDocumentType")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("SerialNumber")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<long?>("ToStoreId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MovementDate");
+
+                    b.HasIndex("MovementNumber");
+
+                    b.HasIndex("PartId");
+
+                    b.ToTable("StockMovements", (string)null);
+                });
+
+            modelBuilder.Entity("PartManagement.Domain.PartAgg.Part", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<decimal?>("AveragePrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<long?>("ClassificationId")
+                        .HasColumnType("bigint");
+
+                    b.Property<int>("ControlType")
+                        .HasColumnType("int");
+
+                    b.Property<long?>("CreatedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(512)
+                        .HasColumnType("nvarchar(512)");
+
+                    b.Property<long?>("EquipmentTypeId")
+                        .HasColumnType("bigint");
+
+                    b.Property<decimal?>("FloatQuantity")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsEngineRelated")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsGlobal")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsUncontrolled")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Keyword")
+                        .IsRequired()
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("ModifiedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Note")
+                        .IsRequired()
+                        .HasMaxLength(1024)
+                        .HasColumnType("nvarchar(1024)");
+
+                    b.Property<long?>("OwnerOrganizationId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("PartNumber")
+                        .IsRequired()
+                        .HasMaxLength(64)
+                        .HasColumnType("nvarchar(64)");
+
+                    b.Property<long?>("PartTypeId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("PurchaseUnitId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Revision")
+                        .IsRequired()
+                        .HasMaxLength(32)
+                        .HasColumnType("nvarchar(32)");
+
+                    b.Property<string>("Specification")
+                        .IsRequired()
+                        .HasMaxLength(512)
+                        .HasColumnType("nvarchar(512)");
+
+                    b.Property<long?>("StockPolicyId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("StorageUnitId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PartNumber")
+                        .IsUnique();
+
+                    b.ToTable("Parts", (string)null);
+                });
+
+            modelBuilder.Entity("PartManagement.Domain.PartAgg.PartHierarchy", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<long>("ChildPartId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("CreatedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Level")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("ModifiedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("ParentPartId")
+                        .HasColumnType("bigint");
+
+                    b.Property<decimal>("Quantity")
+                        .HasPrecision(18, 4)
+                        .HasColumnType("decimal(18,4)");
+
+                    b.Property<int>("RelationType")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ChildPartId");
+
+                    b.HasIndex("ParentPartId");
+
+                    b.ToTable("PartHierarchies", (string)null);
+                });
+
+            modelBuilder.Entity("PartManagement.Domain.PartAgg.PartManufacturer", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<long?>("CreatedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsPrimary")
+                        .HasColumnType("bit");
+
+                    b.Property<long>("ManufacturerId")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("ModifiedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Note")
+                        .IsRequired()
+                        .HasMaxLength(512)
+                        .HasColumnType("nvarchar(512)");
+
+                    b.Property<long>("PartId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PartId");
+
+                    b.ToTable("PartManufacturers", (string)null);
+                });
+
+            modelBuilder.Entity("PartManagement.Domain.PartAgg.PartOrganization", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<bool>("CanLease")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("CanPurchase")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("CanRepair")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("CanSell")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("CanShip")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("CanUse")
+                        .HasColumnType("bit");
+
+                    b.Property<long?>("CreatedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsOwner")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("ModifiedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Note")
+                        .IsRequired()
+                        .HasMaxLength(512)
+                        .HasColumnType("nvarchar(512)");
+
+                    b.Property<long>("OrganizationId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("PartId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PartId", "OrganizationId")
+                        .IsUnique();
+
+                    b.ToTable("PartOrganizations", (string)null);
+                });
+
+            modelBuilder.Entity("PartManagement.Domain.PartAgg.PartUtilisation", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<long?>("CreatedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsPrimary")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("ModifiedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Note")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<long>("PartId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("PrimaryUtilisationId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PrimaryUtilisationId");
+
+                    b.HasIndex("PartId", "PrimaryUtilisationId")
+                        .IsUnique();
+
+                    b.ToTable("PartUtilisations", (string)null);
                 });
 
             modelBuilder.Entity("PartManagement.Domain.Stock.StockTypeAgg.StockType", b =>
@@ -84,16 +617,28 @@ namespace PartManagement.Infrastructure.EFCore.Migrations
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
+                    b.Property<long?>("CreatedBy")
+                        .HasColumnType("bigint");
+
                     b.Property<DateTime>("CreationDate")
                         .HasMaxLength(50)
                         .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("ModifiedBy")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<long>("OrganizationId")
+                    b.Property<long?>("OrganizationId")
                         .HasColumnType("bigint");
 
                     b.HasKey("Id");
@@ -125,6 +670,9 @@ namespace PartManagement.Infrastructure.EFCore.Migrations
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
+                    b.Property<long?>("CreatedBy")
+                        .HasColumnType("bigint");
+
                     b.Property<DateTime>("CreationDate")
                         .HasColumnType("datetime2");
 
@@ -143,6 +691,15 @@ namespace PartManagement.Infrastructure.EFCore.Migrations
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("ModifiedBy")
+                        .HasColumnType("bigint");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(256)
@@ -156,7 +713,7 @@ namespace PartManagement.Infrastructure.EFCore.Migrations
                     b.Property<bool>("NotToSearchBySpecificStore")
                         .HasColumnType("bit");
 
-                    b.Property<long>("OrganizationId")
+                    b.Property<long?>("OrganizationId")
                         .HasColumnType("bigint");
 
                     b.Property<long>("ParentId")
@@ -190,6 +747,84 @@ namespace PartManagement.Infrastructure.EFCore.Migrations
                     b.ToTable("StoreStockTypes", (string)null);
                 });
 
+            modelBuilder.Entity("PartManagement.Domain.InventoryAgg.InventoryItemAgg.InventoryItem", b =>
+                {
+                    b.HasOne("PartManagement.Domain.PartAgg.Part", "Part")
+                        .WithMany()
+                        .HasForeignKey("PartId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Part");
+                });
+
+            modelBuilder.Entity("PartManagement.Domain.InventoryAgg.StockMovementAgg.StockMovement", b =>
+                {
+                    b.HasOne("PartManagement.Domain.PartAgg.Part", "Part")
+                        .WithMany()
+                        .HasForeignKey("PartId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Part");
+                });
+
+            modelBuilder.Entity("PartManagement.Domain.PartAgg.PartHierarchy", b =>
+                {
+                    b.HasOne("PartManagement.Domain.PartAgg.Part", "ChildPart")
+                        .WithMany("Parents")
+                        .HasForeignKey("ChildPartId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("PartManagement.Domain.PartAgg.Part", "ParentPart")
+                        .WithMany("Children")
+                        .HasForeignKey("ParentPartId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("ChildPart");
+
+                    b.Navigation("ParentPart");
+                });
+
+            modelBuilder.Entity("PartManagement.Domain.PartAgg.PartManufacturer", b =>
+                {
+                    b.HasOne("PartManagement.Domain.PartAgg.Part", null)
+                        .WithMany("Manufacturers")
+                        .HasForeignKey("PartId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("PartManagement.Domain.PartAgg.PartOrganization", b =>
+                {
+                    b.HasOne("PartManagement.Domain.PartAgg.Part", null)
+                        .WithMany("Organizations")
+                        .HasForeignKey("PartId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("PartManagement.Domain.PartAgg.PartUtilisation", b =>
+                {
+                    b.HasOne("PartManagement.Domain.PartAgg.Part", "Part")
+                        .WithMany("Utilisations")
+                        .HasForeignKey("PartId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("PartManagement.Domain.Basic_dataAgg.PrimaryUtilisationAgg.PrimaryUtilisation", "PrimaryUtilisation")
+                        .WithMany()
+                        .HasForeignKey("PrimaryUtilisationId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Part");
+
+                    b.Navigation("PrimaryUtilisation");
+                });
+
             modelBuilder.Entity("PartManagement.Domain.Stock.StoreAgg.Store", b =>
                 {
                     b.HasOne("PartManagement.Domain.Stock.StockTypeAgg.StockType", "DefaultStockType")
@@ -218,6 +853,19 @@ namespace PartManagement.Infrastructure.EFCore.Migrations
                     b.Navigation("StockType");
 
                     b.Navigation("Store");
+                });
+
+            modelBuilder.Entity("PartManagement.Domain.PartAgg.Part", b =>
+                {
+                    b.Navigation("Children");
+
+                    b.Navigation("Manufacturers");
+
+                    b.Navigation("Organizations");
+
+                    b.Navigation("Parents");
+
+                    b.Navigation("Utilisations");
                 });
 
             modelBuilder.Entity("PartManagement.Domain.Stock.StockTypeAgg.StockType", b =>

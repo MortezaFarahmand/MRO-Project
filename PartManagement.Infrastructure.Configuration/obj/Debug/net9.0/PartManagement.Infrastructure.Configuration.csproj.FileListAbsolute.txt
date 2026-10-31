@@ -1,6 +1,7 @@
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Infrastructure.Configuration\bin\Debug\net9.0\PartManagement.Infrastructure.Configuration.deps.json
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Infrastructure.Configuration\bin\Debug\net9.0\PartManagement.Infrastructure.Configuration.dll
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Infrastructure.Configuration\bin\Debug\net9.0\PartManagement.Infrastructure.Configuration.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Infrastructure.Configuration\bin\Debug\net9.0\01_MROQuery.dll
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Infrastructure.Configuration\bin\Debug\net9.0\0_Framework.dll
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Infrastructure.Configuration\bin\Debug\net9.0\BasicDataManagement.Application.Contracts.dll
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Infrastructure.Configuration\bin\Debug\net9.0\BasicDataManagement.Domain.dll
@@ -14,6 +15,8 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Infrastruc
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Infrastructure.Configuration\bin\Debug\net9.0\PartManagement.Infrastructure.EFCore.dll
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Infrastructure.Configuration\bin\Debug\net9.0\PersonnelManagement.Application.Contracts.dll
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Infrastructure.Configuration\bin\Debug\net9.0\PersonnelManagement.Domain.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Infrastructure.Configuration\bin\Debug\net9.0\PersonnelManagement.Infrastructure.EFCore.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Infrastructure.Configuration\bin\Debug\net9.0\01_MROQuery.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Infrastructure.Configuration\bin\Debug\net9.0\PartManagement.Application.Contracts.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Infrastructure.Configuration\bin\Debug\net9.0\PartManagement.Application.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Infrastructure.Configuration\bin\Debug\net9.0\PartManagement.Domain.pdb
@@ -27,6 +30,7 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Infrastruc
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Infrastructure.Configuration\bin\Debug\net9.0\OrganizationManagement.Infrastructure.EFCore.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Infrastructure.Configuration\bin\Debug\net9.0\PersonnelManagement.Application.Contracts.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Infrastructure.Configuration\bin\Debug\net9.0\PersonnelManagement.Domain.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Infrastructure.Configuration\bin\Debug\net9.0\PersonnelManagement.Infrastructure.EFCore.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Infrastructure.Configuration\obj\Debug\net9.0\PartManagement.Infrastructure.Configuration.csproj.AssemblyReference.cache
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Infrastructure.Configuration\obj\Debug\net9.0\PartManagement.Infrastructure.Configuration.GeneratedMSBuildEditorConfig.editorconfig
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Infrastructure.Configuration\obj\Debug\net9.0\PartManagement.Infrastructure.Configuration.AssemblyInfoInputs.cache
