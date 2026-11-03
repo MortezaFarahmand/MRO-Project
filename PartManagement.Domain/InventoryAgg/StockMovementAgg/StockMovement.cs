@@ -14,15 +14,15 @@ namespace PartManagement.Domain.InventoryAgg.StockMovementAgg
         public long? FromStoreId { get; private set; }
         public long? ToStoreId { get; private set; }
 
-        public decimal Quantity { get; private set; }
-        public string SerialNumber { get; private set; }
-        public string BatchNumber { get; private set; }
+        public decimal? Quantity { get; private set; }
+        public string? SerialNumber { get; private set; }
+        public string? BatchNumber { get; private set; }
 
         public long? RelatedDocumentId { get; private set; }   // مثلاً WorkOrderId یا PurchaseOrderId
-        public string RelatedDocumentType { get; private set; } // "WorkOrder", "PurchaseOrder", ...
+        public string? RelatedDocumentType { get; private set; } // "WorkOrder", "PurchaseOrder", ...
 
         public long? OrganizationId { get; private set; }
-        public string Note { get; private set; }
+        public string? Note { get; private set; }
         public DateTime MovementDate { get; private set; }
 
         // Navigation

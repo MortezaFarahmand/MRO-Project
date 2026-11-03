@@ -1,0 +1,150 @@
+﻿@page
+@model ServiceHost.Areas.Administration.Pages.Part.PartAlternates.IndexModel
+@using PartManagement.Domain.PartAgg.Enum
+@{
+    ViewData["Title"] = "Alternate Parts";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        @if (TempData["Success"] != null)
+        {
+            <div class="alert alert-success">@TempData["Success"]</div>
+        }
+        @if (TempData["Error"] != null)
+        {
+            <div class="alert alert-danger">@TempData["Error"]</div>
+        }
+
+        <div class="panel panel-default search-panel">
+            <div class="panel-heading">
+                <h3 class="panel-title element-dir-Fa">جستجو</h3>
+            </div>
+            <div class="panel-body">
+                <form method="get">
+                    <div class="row element-dir-Fa">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <input asp-for="SearchModel.PartNumber" class="form-control"
+                                       placeholder="اصلی یا جایگزین" />
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <select asp-for="SearchModel.AlternateCategory" class="form-control"
+                                        asp-items="Html.GetEnumSelectList<AlternateCategory>()">
+                                    <option value="">-- Select Alternate Category --</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <select asp-for="SearchModel.IsApproved" class="form-control">
+                                    <option value="">— تاییدیه —</option>
+                                    <option value="true">بله</option>
+                                    <option value="false">خیر</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <a asp-page="./Index" class="btn btn-default btn-lg">Show All</a>
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <i class="fa fa-search"></i> Search
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading clearfix">
+                <a class="btn btn-success btn-lg" asp-page="./Create">New Alternate Relation</a>
+            </div>
+            <div class="panel-body">
+                <table class="table table-bordered table-striped table-hover">
+                    <thead class="element-dir-Fa ">
+                        <tr>
+                            <th>#</th>
+                            <th>قطعه اصلی</th>
+                            <th>قطعه جایگزین</th>
+                            <th>نوع رابطه</th>
+                            <th>گروه رابطه</th>
+                            <th>اولویت</th>
+                            <th>تأیید</th>
+                            <th style="min-width:240px">عملیات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.Alternates != null && Model.Alternates.Any())
+                        {
+                            foreach (var item in Model.Alternates)
+                            {
+                                <tr>
+                                    <td>@item.Id</td>
+                                    <td>@item.PrimaryPartNumber</td>
+                                    <td>@item.AlternatePartNumber</td>
+                                    <td>@item.RelationType</td>
+                                    <td>@item.AlternateCategory</td>
+                                    <td>@item.PreferenceLevel</td>
+                                    <td class="text-center">
+                                        @if (item.IsApproved == true)
+                                        {
+                                            <i class="fa fa-check fa-3x text-success"></i>
+                                        }
+                                        else
+                                        {
+                                            <i class="fa fa-remove fa-3x text-danger"></i>
+                                        }
+                                    </td>
+                                    <td class="text-center" style="white-space:nowrap;">
+                                        <a class="btn btn-warning btn-xs btn-action element-dir-Fa"
+                                           asp-page="./Edit"
+                                           asp-route-primaryPartId="@item.PrimaryPartId">
+                                            ویرایش روابط
+                                        </a>
+
+                                        @if (item.IsApproved != true)
+                                        {
+                                            <form method="post" asp-page-handler="Approve" asp-route-id="@item.Id"
+                                                  style="display:inline-block; margin:0 3px;">
+                                                <button type="submit" class="btn btn-success btn-xs 
+                                                    btn-action element-dir-Fa">تأیید</button>
+                                            </form>
+                                        }
+                                        else
+                                        {
+                                            <form method="post" asp-page-handler="Unapprove" asp-route-id="@item.Id"
+                                                  style="display:inline-block; margin:0 3px;">
+                                                <button type="submit" class="btn btn-default btn-xs
+                                                    btn-action element-dir-Fa">لغو تأیید</button>
+                                            </form>
+                                        }
+
+                                        <form method="post" asp-page-handler="Remove" asp-route-id="@item.Id"
+                                              style="display:inline-block; margin:0 3px;" class="element-dir-Fa"
+                                              onsubmit="return confirm('حذف این رابطه؟');">
+                                            <button type="submit" class="btn btn-danger btn-xs btn-action element-dir-Fa">حذف</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="8" class="text-center element-dir-Fa">موردی یافت نشد.</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

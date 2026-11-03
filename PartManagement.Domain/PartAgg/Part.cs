@@ -10,10 +10,10 @@ namespace PartManagement.Domain.PartAgg
         // ۱. Properties (فیلدها)
         // ========================================
         public string PartNumber { get; private set; }
-        public string Revision { get; private set; }
+        public string? Revision { get; private set; }
         public string Description { get; private set; }
-        public string Keyword { get; private set; }
-        public string Specification { get; private set; }
+        public string? Keyword { get; private set; }
+        public string? Specification { get; private set; }
 
         public PartControlType ControlType { get; private set; }
         public bool IsEngineRelated { get; private set; }
@@ -31,7 +31,7 @@ namespace PartManagement.Domain.PartAgg
 
         public decimal? FloatQuantity { get; private set; }
         public decimal? AveragePrice { get; private set; }
-        public string Note { get; private set; }
+        public string? Note { get; private set; }
 
         // Collections
         public ICollection<PartManufacturer> Manufacturers { get; private set; } = new List<PartManufacturer>();
@@ -53,10 +53,12 @@ namespace PartManagement.Domain.PartAgg
         public static Part Create(
             string partNumber,
             string description,
+            string keyword,
             PartControlType controlType,
             bool isGlobal,
             long? ownerOrganizationId,
-            long createdBy)
+            long createdBy,
+            string note)
         {
             if (string.IsNullOrWhiteSpace(partNumber))
                 throw new DomainException("شماره قطعه الزامی است");
@@ -68,10 +70,12 @@ namespace PartManagement.Domain.PartAgg
             {
                 PartNumber = partNumber.Trim().ToUpper(),
                 Description = description?.Trim(),
+                Keyword = keyword,
                 ControlType = controlType,
                 IsGlobal = isGlobal,
                 OwnerOrganizationId = isGlobal ? null : ownerOrganizationId,
-                CreatedBy = createdBy
+                CreatedBy = createdBy,
+                Note = note
             };
 
             return part;

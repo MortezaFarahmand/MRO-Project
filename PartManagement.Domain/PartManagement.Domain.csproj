@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="PartAgg\NewFolder\**" />
+    <EmbeddedResource Remove="PartAgg\NewFolder\**" />
+    <None Remove="PartAgg\NewFolder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\0_Framework\0_Framework.csproj" />
 
   </ItemGroup>

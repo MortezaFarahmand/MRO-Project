@@ -44,7 +44,8 @@ $(document).ready(function () {
             });
 
             $('.select22').select2({
-                width: '100%'
+                width: '100%',
+                dropdownParent: $('#MainModal')
             });
 
 

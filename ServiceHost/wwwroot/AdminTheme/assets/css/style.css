@@ -402,6 +402,51 @@ a:focus {
 .panel-fill.panel-inverse {
   background-color: #4a4a4a;
 }
+.panel-body label {
+    font-weight: 600;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.panel-body .form-control {
+    height: 38px;
+}
+
+.panel-body .btn-md {
+    height: 38px;
+    padding: 8px 16px;
+    font-size: 14px;
+}
+/*SearchPanels*/
+.search-panel .form-group {
+    margin-bottom: 15px;
+}
+
+.search-panel label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.search-panel .form-control {
+    height: 40px;
+    width: 100%;
+}
+
+.search-panel .search-actions {
+    padding-top: 24px; /* هم‌تراز با فیلدها وقتی label دارند */
+}
+
+.search-panel .search-actions .btn {
+    height: 40px;
+    min-width: 120px;
+    margin-left: 8px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    padding: 8px 16px;
+}
+
+
 
 /* 2.2 Buttons */
 .btn{
@@ -2635,6 +2680,23 @@ div.dataTables_info {
   padding-top: 38px;
 }
 
+.table td .btn-sm {
+    margin: 2px 2px;
+    padding: 5px 10px;
+}
+table.table td .btn {
+    font-size: 13px !important;
+    padding: 6px 12px !important;
+    margin: 2px 3px;
+    line-height: 1.4;
+    border-radius: 3px;
+}
+
+table.table td form {
+    display: inline-block;
+    margin: 0;
+}
+
 
 
 /********* 15. CHARTS *******************/
@@ -3558,4 +3620,18 @@ th {
         background-color: #B20000;
         box-shadow: 0 0 3px #B20000;
     }
+}
+
+/**//*/**//**//**//**/
+.popover {
+    max-width: 420px !important; /* یا 450px */
+    width: auto !important;
+}
+
+.popover-content {
+    direction: rtl;
+    text-align: right;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.7;
 }

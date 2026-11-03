@@ -34,6 +34,9 @@ namespace BasicDataManagement.Infrastructure.EFCore.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
+                    b.Property<long?>("CreatedBy")
+                        .HasColumnType("bigint");
+
                     b.Property<DateTime>("CreationDate")
                         .HasColumnType("datetime2");
 
@@ -63,6 +66,9 @@ namespace BasicDataManagement.Infrastructure.EFCore.Migrations
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Iso_country")
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
@@ -84,6 +90,12 @@ namespace BasicDataManagement.Infrastructure.EFCore.Migrations
 
                     b.Property<float>("Longitude_deg")
                         .HasColumnType("real");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("ModifiedBy")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Municipality")
                         .HasMaxLength(256)
@@ -117,12 +129,18 @@ namespace BasicDataManagement.Infrastructure.EFCore.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
+                    b.Property<long?>("CreatedBy")
+                        .HasColumnType("bigint");
+
                     b.Property<DateTime>("CreationDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("DialCode")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Keywords")
                         .HasMaxLength(256)
@@ -131,6 +149,12 @@ namespace BasicDataManagement.Infrastructure.EFCore.Migrations
                     b.Property<string>("MetaDescription")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("ModifiedBy")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -167,6 +191,9 @@ namespace BasicDataManagement.Infrastructure.EFCore.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
+                    b.Property<long?>("CreatedBy")
+                        .HasColumnType("bigint");
+
                     b.Property<DateTime>("CreationDate")
                         .HasColumnType("datetime2");
 
@@ -174,9 +201,18 @@ namespace BasicDataManagement.Infrastructure.EFCore.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
                     b.Property<string>("MetaDescription")
                         .HasMaxLength(1024)
                         .HasColumnType("nvarchar(1024)");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("ModifiedBy")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -211,11 +247,23 @@ namespace BasicDataManagement.Infrastructure.EFCore.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
+                    b.Property<long?>("CreatedBy")
+                        .HasColumnType("bigint");
+
                     b.Property<DateTime>("CreationDate")
                         .HasColumnType("datetime2");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("ModifiedBy")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -243,6 +291,9 @@ namespace BasicDataManagement.Infrastructure.EFCore.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
+                    b.Property<long?>("CreatedBy")
+                        .HasColumnType("bigint");
+
                     b.Property<DateTime>("CreationDate")
                         .HasColumnType("datetime2");
 
@@ -251,6 +302,15 @@ namespace BasicDataManagement.Infrastructure.EFCore.Migrations
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("ModifiedBy")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -279,12 +339,18 @@ namespace BasicDataManagement.Infrastructure.EFCore.Migrations
                     b.Property<long>("CountryId")
                         .HasColumnType("bigint");
 
+                    b.Property<long?>("CreatedBy")
+                        .HasColumnType("bigint");
+
                     b.Property<DateTime>("CreationDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("DialCode")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Keywords")
                         .HasMaxLength(256)
@@ -293,6 +359,12 @@ namespace BasicDataManagement.Infrastructure.EFCore.Migrations
                     b.Property<string>("MetaDescription")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("ModifiedBy")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -323,6 +395,9 @@ namespace BasicDataManagement.Infrastructure.EFCore.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
+                    b.Property<long?>("CreatedBy")
+                        .HasColumnType("bigint");
+
                     b.Property<DateTime>("CreationDate")
                         .HasColumnType("datetime2");
 
@@ -331,11 +406,20 @@ namespace BasicDataManagement.Infrastructure.EFCore.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
                     b.Property<bool>("IsRemoved")
                         .HasColumnType("bit");
 
                     b.Property<string>("Link")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("ModifiedBy")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Picture")
                         .IsRequired()
@@ -363,6 +447,37 @@ namespace BasicDataManagement.Infrastructure.EFCore.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Slides", (string)null);
+                });
+
+            modelBuilder.Entity("BasicDataManagement.Infrastructure.EFCore.Repository.DocumentSequence.DocumentSequence", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<int?>("BaseId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("DocumentType")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<long>("LastValue")
+                        .HasColumnType("bigint");
+
+                    b.Property<int>("Year")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DocumentType", "Year", "BaseId")
+                        .IsUnique()
+                        .HasFilter("[BaseId] IS NOT NULL");
+
+                    b.ToTable("DocumentSequences", (string)null);
                 });
 
             modelBuilder.Entity("BasicDataManagement.Domain.CityAgg.City", b =>

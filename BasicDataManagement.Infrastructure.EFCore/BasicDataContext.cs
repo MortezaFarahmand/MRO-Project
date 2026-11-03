@@ -6,6 +6,7 @@ using BasicDataManagement.Domain.PictureCategoryAgg;
 using BasicDataManagement.Domain.ProvinceAgg;
 using BasicDataManagement.Domain.SlideAgg;
 using BasicDataManagement.Infrastructure.EFCore.Mapping;
+using BasicDataManagement.Infrastructure.EFCore.Repository.DocumentSequence;
 using Microsoft.EntityFrameworkCore;
 
 namespace BasicDataManagement.Infrastructure.EFCore
@@ -19,7 +20,7 @@ namespace BasicDataManagement.Infrastructure.EFCore
         public DbSet<PictureCategory> PictureCategorys { get; set; }
         public DbSet<Slide> Slides { get; set; }
         public DbSet<Airport> Airports { get; set; }
-
+        public DbSet<DocumentSequence> DocumentSequences { get; set; }
 
 
         public BasicDataContext(DbContextOptions<BasicDataContext> options) : base(options)

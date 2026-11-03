@@ -1,4 +1,6 @@
-﻿using _0_Framework.Infrastructure;
+﻿using _0_Framework.Application;
+using _0_Framework.Domain;
+using _0_Framework.Infrastructure;
 using _01_MROQuery.Contracts.Organization;
 using _01_MROQuery.Query;
 using Microsoft.EntityFrameworkCore;
@@ -12,6 +14,7 @@ using PartManagement.Application.Contracts.Part;
 using PartManagement.Application.Contracts.Stock.StockType;
 using PartManagement.Application.Contracts.Stock.Store;
 using PartManagement.Application.Inventory;
+using PartManagement.Application.Part;
 using PartManagement.Application.Stock;
 using PartManagement.Application.StockApplications;
 using PartManagement.Configuration.Permissions;
@@ -50,11 +53,14 @@ namespace PartManagement.Configuration
             services.AddTransient<IStockMovementApplication, StockMovementApplication>();
             services.AddTransient<IStockMovementRepository, StockMovementRepository>();
 
+            services.AddTransient<IPartAlternateApplication, PartAlternateApplication>();
+            services.AddTransient<IPartAlternateRepository, PartAlternateRepository>();
+
             services.AddTransient<IOrganizationQuery, OrganizationQuery>();
 
             services.AddTransient<IPermissionExposer, PartPermissionExposer>();
 
-
+            services.AddTransient<IDomainEventDispatcher, NullDomainEventDispatcher>();
 
 
             services.AddDbContext<PartContext>(x => x.UseSqlServer(connectionString));

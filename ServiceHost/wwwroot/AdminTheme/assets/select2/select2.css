@@ -728,3 +728,70 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
         background-position: 100% -21px !important;
     }
 }
+
+
+/* =====================================================
+   Fix: hide original <select> after Select2 init
+   (prevents double UI with Bootstrap .form-control)
+   ===================================================== */
+
+select.select2-offscreen,
+select.select2-container,
+select.form-control.select2-offscreen {
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    display: block !important; /* keep in layout for form submit; visually hidden */
+}
+
+/* Ensure Select2 container takes full width of form groups */
+.select2-container {
+    width: 100% !important;
+    display: block;
+    vertical-align: middle;
+}
+
+    .select2-container .select2-choice {
+        height: 38px;
+        line-height: 34px;
+        padding: 2px 12px;
+    }
+
+        .select2-container .select2-choice .select2-arrow {
+            top: 0;
+            height: 100%;
+        }
+
+/* Always keep search box area usable in dropdown */
+.select2-drop .select2-search {
+    display: block !important;
+    width: 100%;
+    padding: 6px 4px;
+}
+
+    .select2-drop .select2-search input {
+        width: 100% !important;
+        min-height: 30px;
+        box-sizing: border-box;
+    }
+
+select.select2-offscreen,
+select[name="Command.PrimaryPartId"] {
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    width: 1px !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}

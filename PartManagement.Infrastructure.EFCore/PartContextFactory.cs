@@ -11,7 +11,7 @@ namespace PartManagement.Infrastructure.EFCore
 
             // Connection string را مستقیم بگذارید (فقط برای Migration)
             optionsBuilder.UseSqlServer(
-                "Server=.;Database=MRO_DB;Trusted_Connection=True;TrustServerCertificate=True");
+                "Server=.;Database=MROdb;Trusted_Connection=True;TrustServerCertificate=True");
 
             return new PartContext(optionsBuilder.Options);
         }

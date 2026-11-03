@@ -38,6 +38,11 @@ namespace _0_Framework.Infrastructure
             return _context.Set<T>().ToList();
         }
 
+        public void Remove(T entity)
+        {
+            _context.Set<T>().Remove(entity);
+        }
+
         public void SaveChanges()
         {
             _context.SaveChanges();

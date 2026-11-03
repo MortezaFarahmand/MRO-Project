@@ -30,6 +30,9 @@ namespace AccountManagement.Infrastructure.EFCore.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
+                    b.Property<long?>("CreatedBy")
+                        .HasColumnType("bigint");
+
                     b.Property<DateTime>("CreationDate")
                         .HasColumnType("datetime2");
 
@@ -37,6 +40,9 @@ namespace AccountManagement.Infrastructure.EFCore.Migrations
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<bool>("IsOrganizationAdmin")
                         .HasColumnType("bit");
@@ -48,6 +54,12 @@ namespace AccountManagement.Infrastructure.EFCore.Migrations
                         .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("ModifiedBy")
+                        .HasColumnType("bigint");
 
                     b.Property<long>("OrganizationId")
                         .HasColumnType("bigint");
@@ -103,8 +115,20 @@ namespace AccountManagement.Infrastructure.EFCore.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
+                    b.Property<long?>("CreatedBy")
+                        .HasColumnType("bigint");
+
                     b.Property<DateTime>("CreationDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("ModifiedBy")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Name")
                         .IsRequired()

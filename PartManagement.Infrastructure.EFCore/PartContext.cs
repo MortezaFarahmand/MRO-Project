@@ -18,6 +18,7 @@ namespace PartManagement.Infrastructure.EFCore
         public DbSet<Part> Parts { get; set; }
         public DbSet<InventoryItem> InventoryItems { get; set; }
         public DbSet<StockMovement> StockMovements { get; set; }
+        public DbSet<PartAlternate> PartAlternates { get; set; }
 
         public PartContext(DbContextOptions<PartContext> options) : base(options)
         {
@@ -26,7 +27,7 @@ namespace PartManagement.Infrastructure.EFCore
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            var assembly = typeof(StockTypeMapping).Assembly;
+            var assembly = typeof(PartAlternateMapping).Assembly;
             modelBuilder.ApplyConfigurationsFromAssembly(assembly);
             base.OnModelCreating(modelBuilder);
         }

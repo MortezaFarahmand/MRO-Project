@@ -3548,7 +3548,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
-          "FleetManagement.Domain": "1.0.0"
+          "FleetManagement.Domain": "1.0.0",
+          "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.3.0"
         },
         "compile": {
           "bin/placeholder/FleetManagement.Application.Contracts.dll": {}

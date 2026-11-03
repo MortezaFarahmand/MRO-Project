@@ -1,0 +1,58 @@
+﻿@model FleetManagement.Application.Contracts.Aircraft.Commands.CreateAircraftCommand
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">X</button>
+    <h4 class="modal-title">New Aircraft</h4>
+</div>
+
+<form asp-page="./Index" asp-page-handler="Create"
+      method="post" data-ajax="true" data-action="Refresh">
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Registration">Registration</label>
+                    <input class="form-control" asp-for="Registration" placeholder="EP-XXX" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="SerialNumber">Serial Number (MSN)</label>
+                    <input class="form-control" asp-for="SerialNumber" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="AircraftModelId">Model</label>
+                    <select class="form-control select2" asp-for="AircraftModelId" asp-items="Model.AircraftModels">
+                        <option value="">-- Select Model --</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="ManufactureDate">Manufacture Date</label>
+                    <input class="form-control persianDateInput" asp-for="ManufactureDate" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="DeliveryDate">Delivery Date</label>
+                    <input class="form-control persianDateInput" asp-for="DeliveryDate" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Note">Note</label>
+                    <input class="form-control" asp-for="Note" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-info">Create</button>
+    </div>
+</form>

@@ -1,0 +1,70 @@
+﻿@model PartManagement.Application.Contracts.Part.Commands.CreatePartCommand
+@using PartManagement.Domain.PartAgg.Enum
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">X</button>
+    <h4 class="modal-title">New Part</h4>
+</div>
+
+<form asp-page="./Index" asp-page-handler="Create"
+      method="post" data-ajax="true" data-action="Refresh">
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="PartNumber">Part Number</label>
+                    <input class="form-control" asp-for="PartNumber" />
+                    <span asp-validation-for="PartNumber" class="error"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Description">Description</label>
+                    <input class="form-control" asp-for="Description" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="ControlType">Control Type</label>
+                    <select class="form-control" asp-for="ControlType"
+                            asp-items="Html.GetEnumSelectList<PartControlType>()">
+                        <option value="">-- Select --</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Keyword">Keyword</label>
+                    <input class="form-control" asp-for="Keyword" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Specification">Specification</label>
+                    <input class="form-control" asp-for="Specification" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="IsGlobal">Is Global</label>
+                    <div>
+                        <input type="checkbox" asp-for="IsGlobal" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Note">Note</label>
+            <textarea class="form-control" asp-for="Note"></textarea>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-info">Create</button>
+    </div>
+</form>

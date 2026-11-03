@@ -1,0 +1,52 @@
+﻿@model FleetManagement.Application.Contracts.AircraftModel.Commands.CreateAircraftModelCommand
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">X</button>
+    <h4 class="modal-title">New Aircraft Model</h4>
+</div>
+
+<form asp-page="./Index" asp-page-handler="Create"
+      method="post" data-ajax="true" data-action="Refresh">
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Code">Code</label>
+                    <input class="form-control" asp-for="Code" placeholder="B737-800" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Name">Name</label>
+                    <input class="form-control" asp-for="Name" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="AircraftTypeId">Aircraft Type</label>
+                    <select class="form-control select2" asp-for="AircraftTypeId" asp-items="Model.AircraftTypes">
+                        <option value="">-- Select Type --</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="Manufacturer">Manufacturer</label>
+                    <input class="form-control" asp-for="Manufacturer" placeholder="Boeing, Airbus, ..." />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="Description">Description</label>
+                    <input class="form-control" asp-for="Description" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-info">Create</button>
+    </div>
+</form>

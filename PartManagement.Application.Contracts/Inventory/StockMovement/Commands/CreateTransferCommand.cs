@@ -1,4 +1,6 @@
-﻿namespace PartManagement.Application.Contracts.Inventory.StockMovement.Commands
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+
+namespace PartManagement.Application.Contracts.Inventory.StockMovement.Commands
 {
     public class CreateTransferCommand
     {
@@ -12,5 +14,7 @@
         public long? InventoryItemId { get; set; }
         public long? OrganizationId { get; set; }
         public string Note { get; set; }
+        public List<SelectListItem> Parts { get; set; }
+        public List<SelectListItem> Stores { get; set; }
     }
 }

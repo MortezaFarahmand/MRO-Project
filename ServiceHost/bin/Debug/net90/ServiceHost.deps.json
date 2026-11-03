@@ -2486,7 +2486,8 @@
       },
       "FleetManagement.Application.Contracts/1.0.0": {
         "dependencies": {
-          "FleetManagement.Domain": "1.0.0"
+          "FleetManagement.Domain": "1.0.0",
+          "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.3.0"
         },
         "runtime": {
           "FleetManagement.Application.Contracts.dll": {

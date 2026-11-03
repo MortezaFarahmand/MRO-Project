@@ -1,4 +1,6 @@
-﻿using FleetManagement.Application;
+﻿using _0_Framework.Domain;
+using _0_Framework.Infrastructure;
+using FleetManagement.Application;
 using FleetManagement.Application.Basic_data;
 using FleetManagement.Application.Contracts.Aircraft;
 using FleetManagement.Application.Contracts.AircraftModel;
@@ -27,6 +29,8 @@ namespace PartManagement.Configuration
             services.AddTransient<IAircraftModelApplication, AircraftModelApplication>();
             services.AddTransient<IAircraftModelRepository, AircraftModelRepository>();
             //services.AddTransient<IPermissionExposer, PartPermissionExposer>();
+
+            services.AddTransient<IDomainEventDispatcher, NullDomainEventDispatcher>();
 
             services.AddDbContext<FleetContext>(x => x.UseSqlServer(connectionString));
         }

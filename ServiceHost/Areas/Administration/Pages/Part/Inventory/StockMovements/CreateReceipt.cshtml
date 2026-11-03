@@ -1,0 +1,67 @@
+﻿@model PartManagement.Application.Contracts.Inventory.StockMovement.Commands.CreateReceiptCommand
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">X</button>
+    <h4 class="modal-title">Stock Receipt</h4>
+</div>
+
+<form asp-page="./Index" asp-page-handler="CreateReceipt"
+      method="post" data-ajax="true" data-action="Refresh">
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="MovementNumber">Movement Number</label>
+                    <input class="form-control" asp-for="MovementNumber" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="PartId">Part</label>
+                    <select class="form-control select2" asp-for="PartId" asp-items="Model.Parts">
+                        <option value="">-- Select Part --</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="ToStoreId">To Store</label>
+                    <select class="form-control select2" asp-for="ToStoreId" asp-items="Model.Stores">
+                        <option value="">-- Select Store --</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Quantity">Quantity</label>
+                    <input class="form-control" asp-for="Quantity" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="SerialNumber">Serial</label>
+                    <input class="form-control" asp-for="SerialNumber" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="BatchNumber">Batch</label>
+                    <input class="form-control" asp-for="BatchNumber" />
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Note">Note</label>
+            <textarea class="form-control" asp-for="Note"></textarea>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-info">Save Receipt</button>
+    </div>
+</form>

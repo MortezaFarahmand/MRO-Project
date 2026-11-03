@@ -34,10 +34,12 @@ namespace PartManagement.Application
             var part = PartManagement.Domain.PartAgg.Part.Create(
                 command.PartNumber,
                 command.Description,
+                command.Keyword,
                 command.ControlType,
                 command.IsGlobal,
                 command.OwnerOrganizationId,
-                _authHelper.CurrentAccountId());
+                _authHelper.CurrentAccountId(),
+                command.Note);
 
             _partRepository.Create(part);
             _partRepository.SaveChanges();

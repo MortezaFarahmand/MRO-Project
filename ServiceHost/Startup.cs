@@ -1,4 +1,5 @@
 using _0_Framework.Application;
+using _0_Framework.Domain;
 using _0_Framework.Infrastructure;
 using AccountManagement.Configuration;
 using BasicDataManagement.Configuration;
@@ -46,6 +47,7 @@ namespace ServiceHost
             services.AddSingleton<IPasswordHasher, PasswordHasher>();
             services.AddTransient<IFileUploader, FileUploader>();
             services.AddTransient<IAuthHelper, AuthHelper>();
+            services.AddTransient<IDomainEventDispatcher, NullDomainEventDispatcher>();
             //services.AddTransient<IZarinPalFactory, ZarinPalFactory>();
             //services.AddTransient<ISmsService, SmsService>();
             //services.AddTransient<IEmailService, EmailService>();

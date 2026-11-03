@@ -1,4 +1,5 @@
-﻿using _0_Framework.Infrastructure;
+﻿using _0_Framework.Application;
+using _0_Framework.Infrastructure;
 using _01_MROQuery.Contracts.OrganizationGroup;
 using _01_MROQuery.Contracts.Slides;
 using _01_MROQuery.Query;
@@ -20,6 +21,7 @@ using BasicDataManagement.Domain.ProvinceAgg;
 using BasicDataManagement.Domain.SlideAgg;
 using BasicDataManagement.Infrastructure.EFCore;
 using BasicDataManagement.Infrastructure.EFCore.Repository;
+using BasicDataManagement.Infrastructure.EFCore.Repository.DocumentSequence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -52,6 +54,8 @@ namespace BasicDataManagement.Configuration
 
             services.AddTransient<ISlideQuery, SlideQuery>();
             services.AddTransient<IOrganizatonGroupQuery, OrganizationGroupQuery>();
+
+            services.AddTransient<IDocumentNumberGenerator, DocumentNumberGenerator>();
 
             services.AddTransient<IPermissionExposer, BasicDataPermissionExposer>();
 

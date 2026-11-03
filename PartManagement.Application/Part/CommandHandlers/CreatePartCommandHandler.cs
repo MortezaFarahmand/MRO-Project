@@ -31,10 +31,12 @@ namespace PartManagement.Application.Part.CommandHandlers
             var part = PartManagement.Domain.PartAgg.Part.Create(
                 command.PartNumber,
                 command.Description,
+                command.Keyword,
                 command.ControlType,
                 command.IsGlobal,
                 command.OwnerOrganizationId,
-                currentUserId);
+                currentUserId,
+                command.Note);
 
             // مقداردهی فیلدهای اضافی (اگر متدهای مربوطه را در Domain نوشته‌اید)
             // part.SetAdditionalInfo(...);

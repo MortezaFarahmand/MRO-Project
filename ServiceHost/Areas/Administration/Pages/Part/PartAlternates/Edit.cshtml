@@ -1,0 +1,196 @@
+﻿@page
+@using PartManagement.Domain.PartAgg.Enum
+@model ServiceHost.Areas.Administration.Pages.Part.PartAlternates.EditModel
+@{
+    ViewData["Title"] = "ویرایش رابطه جایگزین قطعات";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    Edit alternate relations for P/N:  
+                    <strong style="font-size: 1.4em; font-weight: 700; color: #c9302c;">@Model.PrimaryPartNumber</strong>
+                    
+                    <i class="fa fa-info-circle text-info"
+                       style="cursor: pointer; margin-right: 8px; font-size: 16px;"
+                       data-toggle="popover"
+                       data-placement="left"
+                       data-trigger="hover"
+                       data-html="true"
+                       title="Edit Info."
+                       data-content="
+                        <div style='direction:rtl; text-align:right; font-family:Tahoma, Arial; font-size:13px; line-height:1.8;'>
+                            <ul style='padding-right:18px; margin:0; list-style-type:disc;'>
+                                <li>موارد انتخاب‌شده = روابط فعلی</li>
+                                <li>حذف از لیست + ذخیره = حذف رابطه</li>
+                                <li>TwoWay: رابطه دوطرفه ساخته/حذف می‌شود</li>
+                                <li>گروه SuperSession معمولاً OneWay است</li>
+                                <li>اولویت عدد کوچکتر = ترجیح بالاتر</li>
+                            </ul>
+                        </div>">
+                    </i>
+
+                </h3>
+            </div>
+            <div class="panel-body">
+                <form method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="Command.PrimaryPartId" />
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="element-dir-Fa">قطعه اصلی</label>
+                                <input type="text" class="form-control" value="@Model.PrimaryPartNumber" readonly />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="control-label element-dir-Fa">قطعات جایگزین</label>
+                            <div class="col-md-12" style="padding-left:0; padding-right:0;">
+                                <select asp-for="Command.AlternatePartIds"
+                                        asp-items="Model.PartsSelectList"
+                                        class="multi-select"
+                                        multiple="multiple"
+                                        id="my_multi_select_parts">
+                                </select>
+                            </div>
+                            <span class="help-block element-dir-Fa">
+                                موارد انتخاب‌شده روابط فعلی هستند. با حذف از لیست و ذخیره، آن رابطه حذف می‌شود.
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-top:15px;">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="element-dir-Fa">نوع رابطه جایگزینی</label>
+                                <select asp-for="Command.RelationType" class="form-control">
+                                    <option value="TwoWay">TwoWay</option>
+                                    <option value="OneWay">OneWay</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="element-dir-Fa">گروه / دسته بندی رابطه جایگزینی</label>
+                                <select asp-for="Command.AlternateCategory" class="form-control"
+                                        asp-items="Html.GetEnumSelectList<PartManagement.Domain.PartAgg.Enum.AlternateCategory>()">
+                                    <option value="" class="element-dir-Fa">-- انتخاب گروه جایگزینی --</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="element-dir-Fa">اولویت</label>
+                                <input asp-for="Command.PreferenceLevel" type="number" class="form-control" min="1" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group element-dir-Fa">
+                                <label class="element-dir-Fa">آیا رابطه بین دو شماره فنی مورد تایید است؟</label>
+                                <label class="mr-5">
+                                    <input type="radio" name="Command.IsApproved" value="true"
+                                           @(Model?.Command?.IsApproved == true ? "checked" : "") /> تأیید شده
+                                </label>
+                                <label class="mr-5">
+                                    <input type="radio" name="Command.IsApproved" value=""
+                                           @(Model?.Command?.IsApproved == null ? "checked" : "") /> نامشخص
+                                </label>
+                                <label class="mr-5">
+                                    <input type="radio" name="Command.IsApproved" value="false"
+                                           @(Model?.Command?.IsApproved == false ? "checked" : "") /> تأیید نشده
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="element-dir-Fa">از تاریخ</label>
+                                <input asp-for="Command.EffectiveFrom" type="date" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="element-dir-Fa">تا تاریخ</label>
+                                <input asp-for="Command.EffectiveTo" type="date" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group">
+                            <label class="element-dir-Fa">یادداشت</label>
+                            <textarea asp-for="Command.Notes" class="form-control" rows="2"></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-info element-dir-Fa">ذخیره تغییرات</button>
+                    <a asp-page="./Index" class="btn btn-dark element-dir-Fa">بازگشت</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Css {
+    <link href="~/AdminTheme/assets/jquery-multi-select/multi-select.css" rel="stylesheet" type="text/css" />
+}
+
+@section Scripts {
+    <script src="~/AdminTheme/assets/jquery-multi-select/jquery.multi-select.js"></script>
+    <script src="~/AdminTheme/assets/jquery-multi-select/jquery.quicksearch.js"></script>
+
+    <script>
+        jQuery(document).ready(function () {
+            // ----- جایگزین‌ها: multiSelect -----
+            $('#my_multi_select_parts').multiSelect({
+                selectableHeader:
+                    "<input type='text' class='form-control search-input' autocomplete='off' placeholder='search...'>",
+                selectionHeader:
+                    "<input type='text' class='form-control search-input' autocomplete='off' placeholder='search...'>",
+                afterInit: function (ms) {
+                    var that = this,
+                        $selectableSearch = that.$selectableUl.prev(),
+                        $selectionSearch = that.$selectionUl.prev(),
+                        selectableSearchString =
+                            '#' + that.$container.attr('id') + ' .ms-elem-selectable:not(.ms-selected)',
+                        selectionSearchString =
+                            '#' + that.$container.attr('id') + ' .ms-elem-selection.ms-selected';
+
+                    that.qs1 = $selectableSearch.quicksearch(selectableSearchString)
+                        .on('keydown', function (e) {
+                            if (e.which === 40) {
+                                that.$selectableUl.focus();
+                                return false;
+                            }
+                        });
+
+                    that.qs2 = $selectionSearch.quicksearch(selectionSearchString)
+                        .on('keydown', function (e) {
+                            if (e.which === 40) {
+                                that.$selectionUl.focus();
+                                return false;
+                            }
+                        });
+                },
+                afterSelect: function () {
+                    this.qs1.cache();
+                    this.qs2.cache();
+                },
+                afterDeselect: function () {
+                    this.qs1.cache();
+                    this.qs2.cache();
+                }
+            });
+        });
+
+        $(function () {
+            $('[data-toggle="popover"]').popover();
+        });
+
+    </script>
+}

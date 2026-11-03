@@ -1,4 +1,5 @@
 ﻿using _0_Framework.Infrastructure;
+using Microsoft.EntityFrameworkCore;
 using PartManagement.Domain.InventoryAgg.StockMovementAgg;
 using PartManagement.Domain.InventoryAgg.StockMovementAgg.Enums;
 
@@ -63,7 +64,7 @@ namespace PartManagement.Infrastructure.EFCore.Repository
             if (toDate.HasValue)
                 query = query.Where(x => x.MovementDate <= toDate.Value);
 
-            return query
+            return query.Include(x => x.Part)
                 .OrderByDescending(x => x.MovementDate)
                 .ToList();
         }

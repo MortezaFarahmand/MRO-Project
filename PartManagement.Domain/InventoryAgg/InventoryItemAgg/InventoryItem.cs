@@ -10,11 +10,11 @@ namespace PartManagement.Domain.InventoryAgg.InventoryItemAgg
         public long? StoreId { get; private set; }
         public long? AircraftId { get; private set; }          // اگر نصب شده باشد
 
-        public string SerialNumber { get; private set; }       // برای Serialized
-        public string BatchNumber { get; private set; }        // برای Batch
-        public string LotNumber { get; private set; }
+        public string? SerialNumber { get; private set; }       // برای Serialized
+        public string? BatchNumber { get; private set; }        // برای Batch
+        public string? LotNumber { get; private set; }
 
-        public decimal Quantity { get; private set; }          // برای Consumable / Uncontrolled
+        public decimal? Quantity { get; private set; }          // برای Consumable / Uncontrolled
         public InventoryStatus Status { get; private set; }
 
         public DateTime? ManufactureDate { get; private set; }
@@ -24,7 +24,7 @@ namespace PartManagement.Domain.InventoryAgg.InventoryItemAgg
         public decimal? FlightHoursAtInstall { get; private set; }
         public int? CyclesAtInstall { get; private set; }
 
-        public string Note { get; private set; }
+        public string? Note { get; private set; }
         public long? OwnerOrganizationId { get; private set; }
 
         public Part Part { get; private set; }

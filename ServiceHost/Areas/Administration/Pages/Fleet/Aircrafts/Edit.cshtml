@@ -1,0 +1,85 @@
+﻿@model FleetManagement.Application.Contracts.Aircraft.Commands.EditAircraftCommand
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+    <h4 class="modal-title">Edit Aircraft</h4>
+</div>
+
+<form asp-page="./Index" asp-page-handler="Edit"
+      method="post"
+      data-ajax="true"
+      data-callback=""
+      data-action="Refresh">
+
+    <div class="modal-body">
+        <input type="hidden" asp-for="Id" />
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Registration">Registration</label>
+                    <input class="form-control" asp-for="Registration" />
+                    <span asp-validation-for="Registration" class="error"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="LineNumber">Line Number</label>
+                    <input class="form-control" asp-for="LineNumber" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="VariableNumber">Variable Number</label>
+                    <input class="form-control" asp-for="VariableNumber" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="ManufactureDate">Manufacture Date</label>
+                    <input class="form-control persianDateInput" asp-for="ManufactureDate" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="DeliveryDate">Delivery Date</label>
+                    <input class="form-control persianDateInput" asp-for="DeliveryDate" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="RegistrationDate">Registration Date</label>
+                    <input class="form-control persianDateInput" asp-for="RegistrationDate" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="OwnerOrganizationId">Owner Organization Id</label>
+                    <input class="form-control" asp-for="OwnerOrganizationId" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="OperatorOrganizationId">Operator Organization Id</label>
+                    <input class="form-control" asp-for="OperatorOrganizationId" />
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Note">Note</label>
+            <textarea class="form-control" asp-for="Note" rows="3"></textarea>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-info waves-effect waves-light">Save</button>
+    </div>
+</form>

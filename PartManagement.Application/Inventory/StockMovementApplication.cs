@@ -1,4 +1,5 @@
 ﻿using _0_Framework.Application;
+using _0_Framework.Infrastructure;
 using PartManagement.Application.Contracts.Inventory.StockMovement;
 using PartManagement.Application.Contracts.Inventory.StockMovement.Commands;
 using PartManagement.Application.Contracts.Inventory.StockMovement.DTOs;
@@ -11,17 +12,22 @@ namespace PartManagement.Application.Inventory
     {
         private readonly IStockMovementRepository _repository;
         private readonly IAuthHelper _authHelper;
+        private readonly IDocumentNumberGenerator _documentNumberGenerator;
 
-        public StockMovementApplication(IStockMovementRepository repository, IAuthHelper authHelper)
+        public StockMovementApplication(IStockMovementRepository repository, 
+            IAuthHelper authHelper, IDocumentNumberGenerator documentNumberGenerator)
         {
             _repository = repository;
             _authHelper = authHelper;
+            _documentNumberGenerator = documentNumberGenerator;
         }
 
         public OperationResult CreateReceipt(CreateReceiptCommand command)
         {
+            var movementNumber = _documentNumberGenerator.Next("SM");
+            // 
             var movement = StockMovement.CreateReceipt(
-                command.MovementNumber,
+                movementNumber,
                 command.PartId,
                 command.ToStoreId,
                 command.Quantity,
@@ -112,6 +118,7 @@ namespace PartManagement.Application.Inventory
                 MovementNumber = entity.MovementNumber,
                 MovementType = entity.MovementType.ToString(),
                 PartId = entity.PartId,
+                PartNumber = entity.Part?.PartNumber,
                 FromStoreId = entity.FromStoreId,
                 ToStoreId = entity.ToStoreId,
                 Quantity = entity.Quantity,

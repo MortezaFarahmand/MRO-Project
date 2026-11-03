@@ -8,7 +8,7 @@ using PartManagement.Application.Contracts.Stock.StockType;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ServiceHost.Areas.Administration.Pages.Part.Stock.StockType
+namespace ServiceHost.Areas.Administration.Pages.Part.Stock.StockTypes
 {
     public class IndexModel : PageModel
     {

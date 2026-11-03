@@ -1,4 +1,6 @@
-﻿namespace PartManagement.Application.Contracts.Inventory.StockMovement.Commands
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+
+namespace PartManagement.Application.Contracts.Inventory.StockMovement.Commands
 {
     public class CreateIssueCommand
     {
@@ -13,5 +15,7 @@
         public long? RelatedDocumentId { get; set; }
         public string RelatedDocumentType { get; set; }
         public string Note { get; set; }
+        public List<SelectListItem> Parts { get; set; }
+        public List<SelectListItem> Stores { get; set; }
     }
 }

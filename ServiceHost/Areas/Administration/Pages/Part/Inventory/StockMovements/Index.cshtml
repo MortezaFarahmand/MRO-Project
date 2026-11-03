@@ -1,0 +1,91 @@
+﻿@page
+@using PartManagement.Domain.InventoryAgg.StockMovementAgg.Enums
+@model ServiceHost.Areas.Administration.Pages.Part.Inventory.StockMovements.IndexModel
+@{
+    Layout = "Shared/_AdminLayout";
+    ViewData["title"] = "Stock Movements";
+}
+
+<div class="row">
+    <div class="col-sm-12">
+        <h3 class="page-title pull-left">@ViewData["title"]</h3>
+        <p class="pull-right">
+            <a class="btn btn-success btn-lg" href="#showmodal=@Url.Page("./Index", "CreateReceipt")">Receipt</a>
+            <a class="btn btn-warning btn-lg" href="#showmodal=@Url.Page("./Index", "CreateIssue")">Issue</a>
+            <a class="btn btn-info btn-lg" href="#showmodal=@Url.Page("./Index", "CreateTransfer")">Transfer</a>
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading"><h3 class="panel-title">Search</h3></div>
+            <div class="panel-body">
+                <form method="get" class="form-inline">
+                    <input class="form-control" asp-for="SearchModel.MovementNumber" placeholder="Movement No" />
+                    <select class="form-control" asp-for="SearchModel.MovementType">
+                        <option value="">- Type -</option>
+                        @foreach (var t in Enum.GetValues(typeof(StockMovementType)))
+                        {
+                            <option value="@t">@t</option>
+                        }
+                    </select>
+                    <button type="submit" class="btn btn-success m-l-10">Search</button>
+                    <a class="btn btn-primary m-l-10" asp-page="./Index">View All</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Movements (@Model.Movements.Count)</h3>
+            </div>
+            <div class="panel-body">
+                <table id="datatable" class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Number</th>
+                            <th>Type</th>
+                            <th>Part No.</th>
+                            <th>Serial/Batch</th>
+                            <th>Qty</th>
+                            <th>From</th>
+                            <th>To</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Movements)
+                        {
+                            <tr>
+                                <td>@item.Id</td>
+                                <td>@item.MovementNumber</td>
+                                <td>@item.MovementType</td>
+                                <td>@item.PartNumber</td>
+                                <td>@(item.SerialNumber ?? item.BatchNumber)</td>
+                                <td>@item.Quantity</td>
+                                <td>@item.FromStoreId</td>
+                                <td>@item.ToStoreId</td>
+                                <td>@item.MovementDate.ToShortDateString()</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/AdminTheme/assets/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/AdminTheme/assets/datatables/dataTables.bootstrap.js"></script>
+    <script>
+        $(function () { $('#datatable').dataTable(); });
+    </script>
+}

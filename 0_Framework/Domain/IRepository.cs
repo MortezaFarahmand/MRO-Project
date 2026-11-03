@@ -11,5 +11,7 @@ namespace _0_Framework.Domain
         void Create(T entity);
         bool Exists(Expression<Func<T, bool>> expression);
         void SaveChanges();
+
+        void Remove(T entity);
     }
 }

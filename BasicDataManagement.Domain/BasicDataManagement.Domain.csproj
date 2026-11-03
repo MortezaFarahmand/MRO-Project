@@ -16,4 +16,8 @@
 		<ProjectReference Include="..\BasicDataManagement.Application.Contract\BasicDataManagement.Application.Contracts.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="DocumentSequenceAgg\" />
+	</ItemGroup>
+
 </Project>

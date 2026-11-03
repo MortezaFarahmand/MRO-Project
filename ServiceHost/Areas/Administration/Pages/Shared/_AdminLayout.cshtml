@@ -386,37 +386,29 @@ aria-hidden="true" style="display: none; padding-right: 17px;" >
     <script src="~/AdminTheme/assets/js/persian-date.min.js"></script>
     <script src="~/AdminTheme/assets/js/persian-datepicker.min.js"></script>
 
+
     <script src="~/AdminTheme/assets/js/select2.min.js"></script>
-    @* <script src="~/AdminTheme/assets/select2/select2.min.js"></script> *@
 
     @RenderSection("Scripts", false)
 
+    <script>
+        $(function () {
+            // Persian Datepicker
+            $('.persianDateInput').persianDatepicker({
+                format: "DD/MM/YYYY",
+                autoClose: true
+            });
 
-    <script >
-        $('.persianDateInput').persianDatepicker ({
-          format: "DD/MM/YYYY", 
-          autoClose: true
+            // Select2
+            $('.select2-part').select2({
+                width: '100%',
+                placeholder: '— Select Part —',
+                allowClear: true,
+                minimumResultsForSearch: 0,
+                dir: 'rtl'
+            });
         });
-
-        $('.select2').select2({
-            width: '100%' 
-        });
-
     </script>
-
-   
-
-    <!-- <script type="text/javascript"> -->
-    <!-- /* ============================================== -->
-    <!-- Counter Up -->
-    <!-- =============================================== */ -->
-    <!-- jQuery(document).ready(function($) { -->
-    <!-- $('.counter').counterUp({ -->
-    <!-- delay: 100, -->
-    <!-- time: 1200 -->
-    <!-- }); -->
-    <!-- }); -->
-    <!-- </script> -->
 
 </body>
 </html>

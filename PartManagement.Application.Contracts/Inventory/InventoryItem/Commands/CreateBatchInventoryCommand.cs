@@ -1,4 +1,6 @@
-﻿namespace PartManagement.Application.Contracts.Inventory.InventoryItem.Commands
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+
+namespace PartManagement.Application.Contracts.Inventory.InventoryItem.Commands
 {
     public class CreateBatchInventoryCommand
     {
@@ -10,5 +12,9 @@
         public DateTime? ManufactureDate { get; set; }
         public DateTime? ExpireDate { get; set; }
         public string Note { get; set; }
+
+
+        public List<SelectListItem> Parts { get; set; }
+        public List<SelectListItem> Stores { get; set; }
     }
 }

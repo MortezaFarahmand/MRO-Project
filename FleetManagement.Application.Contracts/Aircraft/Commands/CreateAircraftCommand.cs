@@ -1,4 +1,5 @@
 ﻿using FleetManagement.Domain.AircraftAgg.Enums;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace FleetManagement.Application.Contracts.Aircraft.Commands
 {
@@ -14,5 +15,6 @@ namespace FleetManagement.Application.Contracts.Aircraft.Commands
         public string LineNumber { get; set; }
         public string VariableNumber { get; set; }
         public string Note { get; set; }
+        public List<SelectListItem> AircraftModels { get; set; }
     }
 }

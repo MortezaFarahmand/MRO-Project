@@ -61,7 +61,6 @@
   <ItemGroup>
     <Folder Include="Areas\Administration\Pages\BasicData\PictureCategories\" />
     <Folder Include="Areas\Administration\Pages\BasicData\Pictures\" />
-    <Folder Include="Areas\Administration\Pages\Part\Part\" />
     <Folder Include="wwwroot\AdminTheme\images\NewFolder\" />
     <Folder Include="wwwroot\Img\CountryFlags\" />
     <Folder Include="wwwroot\Img\PersonPictures\" />

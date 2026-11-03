@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,5 +14,6 @@ namespace FleetManagement.Application.Contracts.AircraftModel.Commands
         public long AircraftTypeId { get; set; }
         public string Manufacturer { get; set; }
         public string Description { get; set; }
+        public List<SelectListItem> AircraftTypes { get; set; }
     }
 }

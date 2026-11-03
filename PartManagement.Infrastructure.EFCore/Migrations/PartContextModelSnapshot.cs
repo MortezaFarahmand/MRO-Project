@@ -133,7 +133,6 @@ namespace PartManagement.Infrastructure.EFCore.Migrations
                         .HasColumnType("bigint");
 
                     b.Property<string>("BatchNumber")
-                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
@@ -160,7 +159,6 @@ namespace PartManagement.Infrastructure.EFCore.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("LotNumber")
-                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
@@ -174,7 +172,6 @@ namespace PartManagement.Infrastructure.EFCore.Migrations
                         .HasColumnType("bigint");
 
                     b.Property<string>("Note")
-                        .IsRequired()
                         .HasMaxLength(1000)
                         .HasColumnType("nvarchar(1000)");
 
@@ -184,12 +181,11 @@ namespace PartManagement.Infrastructure.EFCore.Migrations
                     b.Property<long>("PartId")
                         .HasColumnType("bigint");
 
-                    b.Property<decimal>("Quantity")
+                    b.Property<decimal?>("Quantity")
                         .HasPrecision(18, 4)
                         .HasColumnType("decimal(18,4)");
 
                     b.Property<string>("SerialNumber")
-                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
@@ -219,7 +215,6 @@ namespace PartManagement.Infrastructure.EFCore.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
                     b.Property<string>("BatchNumber")
-                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
@@ -256,7 +251,6 @@ namespace PartManagement.Infrastructure.EFCore.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Note")
-                        .IsRequired()
                         .HasMaxLength(1000)
                         .HasColumnType("nvarchar(1000)");
 
@@ -266,7 +260,7 @@ namespace PartManagement.Infrastructure.EFCore.Migrations
                     b.Property<long>("PartId")
                         .HasColumnType("bigint");
 
-                    b.Property<decimal>("Quantity")
+                    b.Property<decimal?>("Quantity")
                         .HasPrecision(18, 4)
                         .HasColumnType("decimal(18,4)");
 
@@ -274,12 +268,10 @@ namespace PartManagement.Infrastructure.EFCore.Migrations
                         .HasColumnType("bigint");
 
                     b.Property<string>("RelatedDocumentType")
-                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("SerialNumber")
-                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
@@ -344,7 +336,6 @@ namespace PartManagement.Infrastructure.EFCore.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("Keyword")
-                        .IsRequired()
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
@@ -355,7 +346,6 @@ namespace PartManagement.Infrastructure.EFCore.Migrations
                         .HasColumnType("bigint");
 
                     b.Property<string>("Note")
-                        .IsRequired()
                         .HasMaxLength(1024)
                         .HasColumnType("nvarchar(1024)");
 
@@ -374,12 +364,10 @@ namespace PartManagement.Infrastructure.EFCore.Migrations
                         .HasColumnType("bigint");
 
                     b.Property<string>("Revision")
-                        .IsRequired()
                         .HasMaxLength(32)
                         .HasColumnType("nvarchar(32)");
 
                     b.Property<string>("Specification")
-                        .IsRequired()
                         .HasMaxLength(512)
                         .HasColumnType("nvarchar(512)");
 
@@ -395,6 +383,69 @@ namespace PartManagement.Infrastructure.EFCore.Migrations
                         .IsUnique();
 
                     b.ToTable("Parts", (string)null);
+                });
+
+            modelBuilder.Entity("PartManagement.Domain.PartAgg.PartAlternate", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<int?>("AlternateCategory")
+                        .HasMaxLength(50)
+                        .HasColumnType("int");
+
+                    b.Property<long>("AlternatePartId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("CreatedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("EffectiveFrom")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("EffectiveTo")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool?>("IsApproved")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("ModifiedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Notes")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<int?>("PreferenceLevel")
+                        .HasColumnType("int");
+
+                    b.Property<long>("PrimaryPartId")
+                        .HasColumnType("bigint");
+
+                    b.Property<int>("RelationType")
+                        .HasMaxLength(20)
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AlternatePartId");
+
+                    b.HasIndex("PrimaryPartId", "AlternatePartId")
+                        .IsUnique();
+
+                    b.ToTable("PartAlternates", (string)null);
                 });
 
             modelBuilder.Entity("PartManagement.Domain.PartAgg.PartHierarchy", b =>
@@ -767,6 +818,25 @@ namespace PartManagement.Infrastructure.EFCore.Migrations
                         .IsRequired();
 
                     b.Navigation("Part");
+                });
+
+            modelBuilder.Entity("PartManagement.Domain.PartAgg.PartAlternate", b =>
+                {
+                    b.HasOne("PartManagement.Domain.PartAgg.Part", "AlternatePart")
+                        .WithMany()
+                        .HasForeignKey("AlternatePartId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("PartManagement.Domain.PartAgg.Part", "PrimaryPart")
+                        .WithMany()
+                        .HasForeignKey("PrimaryPartId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("AlternatePart");
+
+                    b.Navigation("PrimaryPart");
                 });
 
             modelBuilder.Entity("PartManagement.Domain.PartAgg.PartHierarchy", b =>

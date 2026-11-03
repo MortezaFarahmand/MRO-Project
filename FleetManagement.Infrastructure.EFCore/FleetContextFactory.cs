@@ -9,7 +9,7 @@ namespace FleetManagement.Infrastructure.EFCore
         {
             var optionsBuilder = new DbContextOptionsBuilder<FleetContext>();
             optionsBuilder.UseSqlServer(
-                "Server=.;Database=MRO_DB;Trusted_Connection=True;TrustServerCertificate=True");
+                "Server=.;Database=MROdb;Trusted_Connection=True;TrustServerCertificate=True");
 
             return new FleetContext(optionsBuilder.Options);
         }
