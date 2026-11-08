@@ -1,4 +1,5 @@
 ﻿using BasicDataManagement.Domain.AirportAgg;
+using BasicDataManagement.Domain.ATAChapterAgg;
 using BasicDataManagement.Domain.CityAgg;
 using BasicDataManagement.Domain.CountryAgg;
 using BasicDataManagement.Domain.EntitiAgg;
@@ -21,6 +22,10 @@ namespace BasicDataManagement.Infrastructure.EFCore
         public DbSet<Slide> Slides { get; set; }
         public DbSet<Airport> Airports { get; set; }
         public DbSet<DocumentSequence> DocumentSequences { get; set; }
+        public DbSet<AtaChapter> AtaChapters { get; set; }
+        public DbSet<AtaSection> AtaSections { get; set; }
+        public DbSet<AtaSubject> AtaSubjects { get; set; }
+        public DbSet<MaintenancePageBlock> MaintenancePageBlocks { get; set; }
 
 
         public BasicDataContext(DbContextOptions<BasicDataContext> options) : base(options)

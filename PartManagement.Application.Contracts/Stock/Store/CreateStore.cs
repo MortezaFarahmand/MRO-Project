@@ -1,4 +1,5 @@
 ﻿using _0_Framework.Application;
+using PartManagement.Application.Contracts.Stock.DTOs;
 using PartManagement.Application.Contracts.Stock.StockType;
 using System.ComponentModel.DataAnnotations;
 

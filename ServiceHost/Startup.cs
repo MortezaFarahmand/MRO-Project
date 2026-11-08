@@ -3,6 +3,8 @@ using _0_Framework.Domain;
 using _0_Framework.Infrastructure;
 using AccountManagement.Configuration;
 using BasicDataManagement.Configuration;
+using BasicDataManagement.Infrastructure.EFCore;
+using BasicDataManagement.Infrastructure.EFCore.Seeders;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -140,6 +142,14 @@ namespace ServiceHost
                 endpoints.MapRazorPages();
                 endpoints.MapControllers();
             });
+
+            /////Seeders/////
+            using (var scope = app.ApplicationServices.CreateScope())
+            {
+                var dbContext = scope.ServiceProvider.GetRequiredService<BasicDataContext>();
+                AtaChapterDataSeeder.SeedAsync(dbContext).GetAwaiter().GetResult();
+            }
+            ////////////////
         }
     }
 }

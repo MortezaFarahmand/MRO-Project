@@ -1,6 +1,7 @@
 ﻿using _0_Framework.Domain;
 using PartManagement.Domain.PartAgg.Enum;
 using PartManagement.Domain.PartAgg.Events;
+using PartManagement.Domain.StockAgg.StoreAgg.Enum;
 
 namespace PartManagement.Domain.PartAgg
 {
@@ -32,6 +33,13 @@ namespace PartManagement.Domain.PartAgg
         public decimal? FloatQuantity { get; private set; }
         public decimal? AveragePrice { get; private set; }
         public string? Note { get; private set; }
+
+        public long? AtaChapterId { get; private set; }   // BasicData
+        public decimal? WeightKg { get; private set; }
+        public decimal? LengthCm { get; private set; }
+        public decimal? WidthCm { get; private set; }
+        public decimal? HeightCm { get; private set; }
+        public EnvironmentalClass? PreferredEnvironment { get; private set; }
 
         // Collections
         public ICollection<PartManufacturer> Manufacturers { get; private set; } = new List<PartManufacturer>();

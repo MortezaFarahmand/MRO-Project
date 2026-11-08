@@ -38,3 +38,7 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Applicatio
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Application\obj\Debug\net9.0\refint\PartManagement.Application.dll
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Application\obj\Debug\net9.0\PartManagement.Application.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Application\obj\Debug\net9.0\ref\PartManagement.Application.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Application\bin\Debug\net9.0\FleetManagement.Domain.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Application\bin\Debug\net9.0\FleetManagement.Infrastructure.EFCore.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Application\bin\Debug\net9.0\FleetManagement.Domain.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\PartManagement.Application\bin\Debug\net9.0\FleetManagement.Infrastructure.EFCore.pdb

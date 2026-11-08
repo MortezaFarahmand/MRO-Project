@@ -32,6 +32,9 @@
           "net9.0": {
             "targetAlias": "net90",
             "projectReferences": {
+              "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\FleetManagement.Infrastructure.EFCore\\FleetManagement.Infrastructure.EFCore.csproj": {
+                "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\FleetManagement.Infrastructure.EFCore\\FleetManagement.Infrastructure.EFCore.csproj"
+              },
               "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\OrganizationManagement.Infrastructure.EFCore\\OrganizationManagement.Infrastructure.EFCore.csproj": {
                 "projectPath": "D:\\ATRIYA ASP.NET PROJECT\\MRO_Project\\Code\\MRO_Project\\OrganizationManagement.Infrastructure.EFCore\\OrganizationManagement.Infrastructure.EFCore.csproj"
               },
@@ -379,6 +382,10 @@
               "target": "Package",
               "version": "[9.0.8, )"
             },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[9.0.8, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[9.0.8, )"
@@ -386,6 +393,18 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.8, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[9.0.8, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[9.0.8, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
               "version": "[9.0.8, )"
             }

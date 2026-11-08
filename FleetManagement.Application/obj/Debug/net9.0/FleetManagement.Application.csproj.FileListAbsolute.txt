@@ -38,3 +38,5 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\FleetManagement.Applicati
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\FleetManagement.Application\obj\Debug\net9.0\refint\FleetManagement.Application.dll
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\FleetManagement.Application\obj\Debug\net9.0\FleetManagement.Application.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\FleetManagement.Application\obj\Debug\net9.0\ref\FleetManagement.Application.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\FleetManagement.Application\bin\Debug\net9.0\FleetManagement.Infrastructure.EFCore.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\FleetManagement.Application\bin\Debug\net9.0\FleetManagement.Infrastructure.EFCore.pdb

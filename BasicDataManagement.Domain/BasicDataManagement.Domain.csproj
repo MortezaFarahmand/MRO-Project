@@ -17,6 +17,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Folder Include="ATAChapterAgg\Event\" />
 	  <Folder Include="DocumentSequenceAgg\" />
 	</ItemGroup>
 

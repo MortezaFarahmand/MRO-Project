@@ -1,5 +1,7 @@
 ﻿using _0_Framework.Domain;
 using PartManagement.Domain.Stock.StockTypeAgg;
+using PartManagement.Domain.StockAgg.StoreAgg;
+using PartManagement.Domain.StockAgg.StoreAgg.Enum;
 
 namespace PartManagement.Domain.Stock.StoreAgg
 {
@@ -22,6 +24,11 @@ namespace PartManagement.Domain.Stock.StoreAgg
         public bool AutomaticRequestOrder { get; private set; }
         public bool IsActive { get; private set; }
         public ICollection<StoreStockType> StoreStockTypes { get; private set; } = new List<StoreStockType>();
+        // داخل PartManagement.Domain/StockAgg/StoreAgg/Store.cs  (اضافه به کلاس فعلی)
+
+        public StoreReceivingPolicy ReceivingPolicy { get; private set; }
+        public StorePlacementPolicy PlacementPolicy { get; private set; }
+
 
         public Store()
         {
@@ -109,6 +116,45 @@ namespace PartManagement.Domain.Stock.StoreAgg
             IsActive = false;
         }
 
+
+        public void SetReceivingPolicy(
+            InspectionMode mode,
+            int? deadlineHours,
+            bool allowOneStep,
+            long? holdZoneId)
+        {
+            if (ReceivingPolicy == null)
+                ReceivingPolicy = new StoreReceivingPolicy(Id, mode, deadlineHours, allowOneStep, holdZoneId);
+            else
+                ReceivingPolicy.Update(mode, deadlineHours, allowOneStep, holdZoneId);
+        }
+
+        public void SetPlacementPolicy(
+            PlacementPolicyMode mode,
+            bool useAta = false,
+            bool useKeyword = false,
+            bool useStockType = false,
+            bool useAircraftModel = false,
+            bool usePartPhysical = false,
+            bool useLocationKind = false,
+            bool useEnvironmentalClass = false)
+        {
+            if (PlacementPolicy == null)
+                PlacementPolicy = new StorePlacementPolicy(
+                    Id, mode, useAta, useKeyword, useStockType,
+                    useAircraftModel, usePartPhysical, useLocationKind, useEnvironmentalClass);
+            else
+                PlacementPolicy.Update(
+                    mode, useAta, useKeyword, useStockType,
+                    useAircraftModel, usePartPhysical, useLocationKind, useEnvironmentalClass);
+        }
+
+        /// <summary>هنگام ایجاد Store فراخوانی شود</summary>
+        public void EnsureDefaultPolicies()
+        {
+            ReceivingPolicy ??= new StoreReceivingPolicy(Id);
+            PlacementPolicy ??= new StorePlacementPolicy(Id);
+        }
 
     }
 }

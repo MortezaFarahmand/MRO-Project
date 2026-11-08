@@ -32,3 +32,7 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\01_MROQuery\obj\Debug\net
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\01_MROQuery\obj\Debug\net90\refint\01_MROQuery.dll
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\01_MROQuery\obj\Debug\net90\01_MROQuery.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\01_MROQuery\obj\Debug\net90\ref\01_MROQuery.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\01_MROQuery\bin\Debug\net90\FleetManagement.Domain.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\01_MROQuery\bin\Debug\net90\FleetManagement.Infrastructure.EFCore.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\01_MROQuery\bin\Debug\net90\FleetManagement.Infrastructure.EFCore.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\01_MROQuery\bin\Debug\net90\FleetManagement.Domain.pdb

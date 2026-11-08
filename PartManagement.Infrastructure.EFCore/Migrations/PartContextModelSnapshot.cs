@@ -142,6 +142,9 @@ namespace PartManagement.Infrastructure.EFCore.Migrations
                     b.Property<DateTime>("CreationDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<long?>("CurrentZoneId")
+                        .HasColumnType("bigint");
+
                     b.Property<int?>("CyclesAtInstall")
                         .HasColumnType("int");
 
@@ -151,6 +154,9 @@ namespace PartManagement.Infrastructure.EFCore.Migrations
                     b.Property<decimal?>("FlightHoursAtInstall")
                         .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("InspectionStatus")
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("InstallDate")
                         .HasColumnType("datetime2");
@@ -204,6 +210,197 @@ namespace PartManagement.Infrastructure.EFCore.Migrations
                     b.HasIndex("PartId", "Status");
 
                     b.ToTable("InventoryItems", (string)null);
+                });
+
+            modelBuilder.Entity("PartManagement.Domain.InventoryAgg.ReceivingInspectionAgg.ReceivingInspectionCheck", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<DateTime?>("AnsweredAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("AnsweredByUserId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("InspectionItemId")
+                        .HasColumnType("bigint");
+
+                    b.Property<int>("Outcome")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Remark")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<long>("ResultId")
+                        .HasColumnType("bigint");
+
+                    b.Property<int>("StepIndex")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("InspectionItemId");
+
+                    b.HasIndex("ResultId");
+
+                    b.ToTable("ReceivingInspectionChecks", (string)null);
+                });
+
+            modelBuilder.Entity("PartManagement.Domain.InventoryAgg.ReceivingInspectionAgg.ReceivingInspectionItem", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<bool>("AllowNotApplicable")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("ApplicableKeyword")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<long?>("CreatedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<int>("DisplayOrder")
+                        .HasColumnType("int");
+
+                    b.Property<string>("HelpText")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsMandatory")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("ModifiedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("StockTypeId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(250)
+                        .HasColumnType("nvarchar(250)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Code")
+                        .IsUnique();
+
+                    b.ToTable("ReceivingInspectionItems", (string)null);
+                });
+
+            modelBuilder.Entity("PartManagement.Domain.InventoryAgg.ReceivingInspectionAgg.ReceivingInspectionResult", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<int>("CompletedSteps")
+                        .HasColumnType("int");
+
+                    b.Property<long?>("CreatedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("CurrentStepIndex")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("DeadlineAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("InspectedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("InspectorUserId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("InventoryItemId")
+                        .HasColumnType("bigint");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsOverridden")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("ModifiedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Notes")
+                        .IsRequired()
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)");
+
+                    b.Property<DateTime?>("OverrideAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("OverrideByUserId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("OverrideReason")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<long>("ReceiptId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("ReceiptLineId")
+                        .HasColumnType("bigint");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<long>("StoreId")
+                        .HasColumnType("bigint");
+
+                    b.Property<int>("TotalSteps")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ReceivingInspectionResults", (string)null);
                 });
 
             modelBuilder.Entity("PartManagement.Domain.InventoryAgg.StockMovementAgg.StockMovement", b =>
@@ -297,6 +494,9 @@ namespace PartManagement.Infrastructure.EFCore.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
+                    b.Property<long?>("AtaChapterId")
+                        .HasColumnType("bigint");
+
                     b.Property<decimal?>("AveragePrice")
                         .HasColumnType("decimal(18,2)");
 
@@ -323,6 +523,9 @@ namespace PartManagement.Infrastructure.EFCore.Migrations
                     b.Property<decimal?>("FloatQuantity")
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<decimal?>("HeightCm")
+                        .HasColumnType("decimal(18,2)");
+
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
@@ -338,6 +541,9 @@ namespace PartManagement.Infrastructure.EFCore.Migrations
                     b.Property<string>("Keyword")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
+
+                    b.Property<decimal?>("LengthCm")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<DateTime?>("ModifiedAt")
                         .HasColumnType("datetime2");
@@ -360,6 +566,9 @@ namespace PartManagement.Infrastructure.EFCore.Migrations
                     b.Property<long?>("PartTypeId")
                         .HasColumnType("bigint");
 
+                    b.Property<int?>("PreferredEnvironment")
+                        .HasColumnType("int");
+
                     b.Property<long?>("PurchaseUnitId")
                         .HasColumnType("bigint");
 
@@ -376,6 +585,12 @@ namespace PartManagement.Infrastructure.EFCore.Migrations
 
                     b.Property<long?>("StorageUnitId")
                         .HasColumnType("bigint");
+
+                    b.Property<decimal?>("WeightKg")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal?>("WidthCm")
+                        .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
 
@@ -798,6 +1013,79 @@ namespace PartManagement.Infrastructure.EFCore.Migrations
                     b.ToTable("StoreStockTypes", (string)null);
                 });
 
+            modelBuilder.Entity("PartManagement.Domain.StockAgg.StoreAgg.StoreZone", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<long?>("AircraftModelId")
+                        .HasColumnType("bigint");
+
+                    b.Property<int?>("AtaChapterId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<long?>("CreatedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("EnvironmentalClass")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("KeywordGroup")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<int?>("LocationKind")
+                        .HasColumnType("int");
+
+                    b.Property<decimal?>("MaxVolumeM3")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal?>("MaxWeightKg")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("ModifiedBy")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<long>("StoreId")
+                        .HasColumnType("bigint");
+
+                    b.Property<int>("ZoneType")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("StoreId", "Code")
+                        .IsUnique();
+
+                    b.ToTable("StoreZones", (string)null);
+                });
+
             modelBuilder.Entity("PartManagement.Domain.InventoryAgg.InventoryItemAgg.InventoryItem", b =>
                 {
                     b.HasOne("PartManagement.Domain.PartAgg.Part", "Part")
@@ -807,6 +1095,21 @@ namespace PartManagement.Infrastructure.EFCore.Migrations
                         .IsRequired();
 
                     b.Navigation("Part");
+                });
+
+            modelBuilder.Entity("PartManagement.Domain.InventoryAgg.ReceivingInspectionAgg.ReceivingInspectionCheck", b =>
+                {
+                    b.HasOne("PartManagement.Domain.InventoryAgg.ReceivingInspectionAgg.ReceivingInspectionItem", null)
+                        .WithMany()
+                        .HasForeignKey("InspectionItemId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("PartManagement.Domain.InventoryAgg.ReceivingInspectionAgg.ReceivingInspectionResult", null)
+                        .WithMany("Checks")
+                        .HasForeignKey("ResultId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("PartManagement.Domain.InventoryAgg.StockMovementAgg.StockMovement", b =>
@@ -903,7 +1206,87 @@ namespace PartManagement.Infrastructure.EFCore.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
+                    b.OwnsOne("PartManagement.Domain.StockAgg.StoreAgg.StorePlacementPolicy", "PlacementPolicy", b1 =>
+                        {
+                            b1.Property<long>("StoreId1")
+                                .HasColumnType("bigint");
+
+                            b1.Property<int>("Mode")
+                                .HasColumnType("int")
+                                .HasColumnName("Placement_Mode");
+
+                            b1.Property<bool>("UseAircraftModel")
+                                .HasColumnType("bit")
+                                .HasColumnName("Placement_UseAircraftModel");
+
+                            b1.Property<bool>("UseAtaChapter")
+                                .HasColumnType("bit")
+                                .HasColumnName("Placement_UseAta");
+
+                            b1.Property<bool>("UseEnvironmentalClass")
+                                .HasColumnType("bit")
+                                .HasColumnName("Placement_UseEnvClass");
+
+                            b1.Property<bool>("UseKeywordGroup")
+                                .HasColumnType("bit")
+                                .HasColumnName("Placement_UseKeyword");
+
+                            b1.Property<bool>("UseLocationKind")
+                                .HasColumnType("bit")
+                                .HasColumnName("Placement_UseLocationKind");
+
+                            b1.Property<bool>("UsePartPhysical")
+                                .HasColumnType("bit")
+                                .HasColumnName("Placement_UsePartPhysical");
+
+                            b1.Property<bool>("UseStockType")
+                                .HasColumnType("bit")
+                                .HasColumnName("Placement_UseStockType");
+
+                            b1.HasKey("StoreId1");
+
+                            b1.ToTable("Stores");
+
+                            b1.WithOwner()
+                                .HasForeignKey("StoreId1");
+                        });
+
+                    b.OwnsOne("PartManagement.Domain.StockAgg.StoreAgg.StoreReceivingPolicy", "ReceivingPolicy", b1 =>
+                        {
+                            b1.Property<long>("StoreId1")
+                                .HasColumnType("bigint");
+
+                            b1.Property<bool>("AllowOneStepReceiveAndInspect")
+                                .HasColumnType("bit")
+                                .HasColumnName("Receiving_AllowOneStep");
+
+                            b1.Property<long?>("DefaultReceivingHoldZoneId")
+                                .HasColumnType("bigint")
+                                .HasColumnName("Receiving_HoldZoneId");
+
+                            b1.Property<int?>("InspectionDeadlineHours")
+                                .HasColumnType("int")
+                                .HasColumnName("Receiving_DeadlineHours");
+
+                            b1.Property<int>("InspectionMode")
+                                .HasColumnType("int")
+                                .HasColumnName("Receiving_InspectionMode");
+
+                            b1.HasKey("StoreId1");
+
+                            b1.ToTable("Stores");
+
+                            b1.WithOwner()
+                                .HasForeignKey("StoreId1");
+                        });
+
                     b.Navigation("DefaultStockType");
+
+                    b.Navigation("PlacementPolicy")
+                        .IsRequired();
+
+                    b.Navigation("ReceivingPolicy")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("PartManagement.Domain.Stock.StoreAgg.StoreStockType", b =>
@@ -923,6 +1306,11 @@ namespace PartManagement.Infrastructure.EFCore.Migrations
                     b.Navigation("StockType");
 
                     b.Navigation("Store");
+                });
+
+            modelBuilder.Entity("PartManagement.Domain.InventoryAgg.ReceivingInspectionAgg.ReceivingInspectionResult", b =>
+                {
+                    b.Navigation("Checks");
                 });
 
             modelBuilder.Entity("PartManagement.Domain.PartAgg.Part", b =>

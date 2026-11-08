@@ -1448,9 +1448,28 @@ body.fixed-left .side-menu.left {
 .button-menu-mobile:hover {
   color: #eee;
 }
+
 .sidebar-inner {
-  height: 100%;
+    height: calc(100vh - 70px); /* ارتفاع صفحه منهای هدر */
+    overflow-y: auto;
+    overflow-x: hidden;
 }
+
+    /* استایل زیباتر برای اسکرول‌بار */
+    .sidebar-inner::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .sidebar-inner::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .sidebar-inner::-webkit-scrollbar-thumb {
+        background: #98a6ad;
+        border-radius: 3px;
+    }
+
+
 #sidebar-menu,
 #sidebar-menu ul,
 #sidebar-menu li,

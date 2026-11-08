@@ -8,8 +8,11 @@
 
   <ItemGroup>
     <Compile Remove="PartAgg\NewFolder\**" />
+    <Compile Remove="StockAgg\StoreAgg\NewFolder\**" />
     <EmbeddedResource Remove="PartAgg\NewFolder\**" />
+    <EmbeddedResource Remove="StockAgg\StoreAgg\NewFolder\**" />
     <None Remove="PartAgg\NewFolder\**" />
+    <None Remove="StockAgg\StoreAgg\NewFolder\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,6 +22,8 @@
 
   <ItemGroup>
     <Folder Include="InventoryAgg\InventoryItemAgg\Events\" />
+    <Folder Include="StockAgg\StockTypeAgg\Enum\" />
+    <Folder Include="StockAgg\StockTypeAgg\Events\" />
   </ItemGroup>
 
 </Project>

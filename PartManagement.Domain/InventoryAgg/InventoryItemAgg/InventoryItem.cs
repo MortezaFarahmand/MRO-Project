@@ -1,5 +1,6 @@
 ﻿using _0_Framework.Domain;
 using PartManagement.Domain.InventoryAgg.InventoryItemAgg.Enum;
+using PartManagement.Domain.InventoryAgg.ReceivingInspectionAgg.Enum;
 using PartManagement.Domain.PartAgg;
 
 namespace PartManagement.Domain.InventoryAgg.InventoryItemAgg
@@ -26,6 +27,13 @@ namespace PartManagement.Domain.InventoryAgg.InventoryItemAgg
 
         public string? Note { get; private set; }
         public long? OwnerOrganizationId { get; private set; }
+        // ...
+        public InspectionStatus InspectionStatus { get; private set; }
+        public long? CurrentZoneId { get; private set; }
+
+        public void SetInspectionStatus(InspectionStatus status) => InspectionStatus = status;
+        public void MoveToZone(long? zoneId) => CurrentZoneId = zoneId;
+
 
         public Part Part { get; private set; }
 
@@ -128,6 +136,18 @@ namespace PartManagement.Domain.InventoryAgg.InventoryItemAgg
         {
             Status = InventoryStatus.Scrapped;
             Note = reason;
+        }
+
+        public bool CanProceedToPlacement()
+        {
+            return InspectionStatus == InspectionStatus.NotRequired
+                || InspectionStatus == InspectionStatus.Approved
+                || InspectionStatus == InspectionStatus.Overridden;
+        }
+
+        public void ApplyInspectionOutcome(InspectionStatus status)
+        {
+            InspectionStatus = status;
         }
     }
 }

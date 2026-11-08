@@ -22,6 +22,176 @@ namespace BasicDataManagement.Infrastructure.EFCore.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("BasicDataManagement.Domain.ATAChapterAgg.AtaChapter", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(4)
+                        .HasColumnType("nvarchar(4)");
+
+                    b.Property<string>("Description")
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<int>("DisplayOrder")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Group")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("TitleEn")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("TitleFa")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Code")
+                        .IsUnique();
+
+                    b.ToTable("AtaChapters", (string)null);
+                });
+
+            modelBuilder.Entity("BasicDataManagement.Domain.ATAChapterAgg.AtaSection", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("AtaChapterId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(4)
+                        .HasColumnType("nvarchar(4)");
+
+                    b.Property<string>("FullCode")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.Property<string>("TitleEn")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("TitleFa")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AtaChapterId");
+
+                    b.HasIndex("FullCode")
+                        .IsUnique();
+
+                    b.ToTable("AtaSections", (string)null);
+                });
+
+            modelBuilder.Entity("BasicDataManagement.Domain.ATAChapterAgg.AtaSubject", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("AtaSectionId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(4)
+                        .HasColumnType("nvarchar(4)");
+
+                    b.Property<string>("FullCode")
+                        .IsRequired()
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
+
+                    b.Property<string>("IpcChapterSection")
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
+
+                    b.Property<string>("TitleEn")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("TitleFa")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("WdmChapterSection")
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AtaSectionId");
+
+                    b.HasIndex("FullCode")
+                        .IsUnique();
+
+                    b.ToTable("AtaSubjects", (string)null);
+                });
+
+            modelBuilder.Entity("BasicDataManagement.Domain.ATAChapterAgg.MaintenancePageBlock", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.Property<int>("DisplayOrder")
+                        .HasColumnType("int");
+
+                    b.Property<int>("EndPage")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StartPage")
+                        .HasColumnType("int");
+
+                    b.Property<string>("TitleEn")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("TitleFa")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Code")
+                        .IsUnique();
+
+                    b.ToTable("MaintenancePageBlocks", (string)null);
+                });
+
             modelBuilder.Entity("BasicDataManagement.Domain.AirportAgg.Airport", b =>
                 {
                     b.Property<long>("Id")
@@ -480,6 +650,28 @@ namespace BasicDataManagement.Infrastructure.EFCore.Migrations
                     b.ToTable("DocumentSequences", (string)null);
                 });
 
+            modelBuilder.Entity("BasicDataManagement.Domain.ATAChapterAgg.AtaSection", b =>
+                {
+                    b.HasOne("BasicDataManagement.Domain.ATAChapterAgg.AtaChapter", "Chapter")
+                        .WithMany("Sections")
+                        .HasForeignKey("AtaChapterId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Chapter");
+                });
+
+            modelBuilder.Entity("BasicDataManagement.Domain.ATAChapterAgg.AtaSubject", b =>
+                {
+                    b.HasOne("BasicDataManagement.Domain.ATAChapterAgg.AtaSection", "Section")
+                        .WithMany("Subjects")
+                        .HasForeignKey("AtaSectionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Section");
+                });
+
             modelBuilder.Entity("BasicDataManagement.Domain.CityAgg.City", b =>
                 {
                     b.HasOne("BasicDataManagement.Domain.ProvinceAgg.Province", "Province")
@@ -511,6 +703,16 @@ namespace BasicDataManagement.Infrastructure.EFCore.Migrations
                         .IsRequired();
 
                     b.Navigation("Country");
+                });
+
+            modelBuilder.Entity("BasicDataManagement.Domain.ATAChapterAgg.AtaChapter", b =>
+                {
+                    b.Navigation("Sections");
+                });
+
+            modelBuilder.Entity("BasicDataManagement.Domain.ATAChapterAgg.AtaSection", b =>
+                {
+                    b.Navigation("Subjects");
                 });
 
             modelBuilder.Entity("BasicDataManagement.Domain.CountryAgg.Country", b =>

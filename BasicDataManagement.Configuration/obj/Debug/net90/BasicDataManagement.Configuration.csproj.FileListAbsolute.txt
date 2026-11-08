@@ -36,3 +36,7 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Confi
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Configuration\obj\Debug\net90\refint\BasicDataManagement.Configuration.dll
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Configuration\obj\Debug\net90\BasicDataManagement.Configuration.pdb
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Configuration\obj\Debug\net90\ref\BasicDataManagement.Configuration.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Configuration\bin\Debug\net90\FleetManagement.Domain.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Configuration\bin\Debug\net90\FleetManagement.Infrastructure.EFCore.dll
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Configuration\bin\Debug\net90\FleetManagement.Domain.pdb
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\BasicDataManagement.Configuration\bin\Debug\net90\FleetManagement.Infrastructure.EFCore.pdb

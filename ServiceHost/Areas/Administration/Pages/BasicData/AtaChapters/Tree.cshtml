@@ -1,0 +1,25 @@
+﻿@page "{code}"
+@model ServiceHost.Areas.Administration.Pages.BasicData.AtaChapters.TreeModel
+@{
+    ViewData["Title"] = "درخت فصل " + Model.Chapter!.Code;
+}
+
+<h2>@Model.Chapter.Code — @Model.Chapter.TitleEn</h2>
+
+<ul>
+@foreach (var ataSection in Model.Chapter.Sections)
+{
+    <li>
+        <strong>@ataSection.FullCode — @ataSection.TitleEn</strong>
+        <ul>
+        @foreach (var ataSubject in ataSection.Subjects)
+        {
+            <li>@ataSubject.FullCode — @ataSubject.TitleEn
+                @(ataSubject.WdmChapterSection is not null ? $" | WDM: {ataSubject.WdmChapterSection}" : "")
+                @(ataSubject.IpcChapterSection is not null ? $" | IPC: {ataSubject.IpcChapterSection}" : "")
+            </li>
+        }
+        </ul>
+    </li>
+}
+</ul>

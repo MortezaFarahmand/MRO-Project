@@ -1,7 +1,6 @@
 ﻿@page
 @using PartManagement.Configuration.Permissions
 @model ServiceHost.Areas.Administration.Pages.Part.Stock.Stores.IndexModel
-
 @{
     Layout = "Shared/_AdminLayout";
     ViewData["title"] = "Stores Management";
@@ -16,32 +15,36 @@
     </div>
 </div>
 
+@if (!string.IsNullOrWhiteSpace(Model.Message))
+{
+    <div class="alert alert-info">@Model.Message</div>
+}
+
 <div class="row">
     <div class="col-md-12">
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h3 class="panel-title">Search in Stores</h3>
             </div>
-            <div class="panel-body ">
+            <div class="panel-body">
                 <form class="form-inline" role="form" method="get">
                     <div class="form-group">
-                        <label class="sr-only " asp-for="SearchModel.Name"></label>
-                        <input class="form-control " asp-for="SearchModel.Name" placeholder="Name">
+                        <label class="sr-only" asp-for="SearchModel.Name"></label>
+                        <input class="form-control" asp-for="SearchModel.Name" placeholder="Name">
                     </div>
-                    <div class="form-group  element-dir-Fa">
-                        <label class="sr-only " asp-for="SearchModel.Code"></label>
-                        <input class="form-control " asp-for="SearchModel.Code" placeholder="Code">
+                    <div class="form-group element-dir-Fa">
+                        <label class="sr-only" asp-for="SearchModel.Code"></label>
+                        <input class="form-control" asp-for="SearchModel.Code" placeholder="Code">
                     </div>
                     <div class="form-group">
                         <label class="sr-only" asp-for="SearchModel.StockTypeId"></label>
-                        <select class="form-control " asp-for="SearchModel.StockTypeId" 
-                                asp-items="Model.StockTypes">
+                        <select class="form-control" asp-for="SearchModel.StockTypeId" asp-items="Model.StockTypes">
                             <option value="0">-Stock Type-</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label class="sr-only" asp-for="SearchModel.OrganizationId"></label>
-                        <select class="form-control " asp-for="SearchModel.OrganizationId" 
+                        <select class="form-control" asp-for="SearchModel.OrganizationId"
                                 asp-items="Model.Organizations" disabled="@(!Model.SearchModel.IsAdmin)">
                             <option value="0">-Organizations-</option>
                         </select>
@@ -50,10 +53,8 @@
                             <input type="hidden" asp-for="SearchModel.OrganizationId" />
                         }
                     </div>
-
                     <button type="submit" class="btn btn-success waves-effect waves-light m-l-10">Search</button>
                     <a class="btn btn-primary waves-effect waves-light m-l-10" asp-page="./Index">View All</a>
-
                 </form>
             </div>
         </div>
@@ -64,7 +65,7 @@
     <div class="col-md-12">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">Store list (@Model.Stores.Count)</h3>
+                <h3 class="panel-title">Store list (@(Model.Stores?.Count ?? 0))</h3>
             </div>
             <div class="panel-body">
                 <div class="row">
@@ -74,7 +75,6 @@
                                 <tr>
                                     <th>#</th>
                                     <th>Name</th>
-                                    @* <th class="element-dir-Fa" >نام</th> *@
                                     <th>Code</th>
                                     <th>Organization</th>
                                     <th>Type</th>
@@ -85,7 +85,6 @@
                                     <th>Creation Date</th>
                                     <th>Activation</th>
                                     <th>Operation</th>
-
                                 </tr>
                             </thead>
                             <tbody>
@@ -94,7 +93,6 @@
                                     <tr>
                                         <td>@item.Id</td>
                                         <td>@item.Name</td>
-                                        @* <td class="element-dir-Fa" >@item.NameFa</td> *@
                                         <td>@item.Code</td>
                                         <td>@item.OrganizationName</td>
                                         <td>@item.StockType</td>
@@ -113,14 +111,23 @@
                                                 <i class="fa fa-remove fa-3x text-danger"></i>
                                             }
                                         </td>
-                                        <td>
-                                            <a class="btn btn-warning waves-effect waves-light w-xs m-b-5 "
+                                        <td style="white-space: nowrap;">
+                                            <a class="btn btn-warning waves-effect waves-light w-xs m-b-5"
                                                href="#showmodal=@Url.Page("./Index", "Edit", new { id = item.Id })">
                                                 <i class="fa fa-edit"></i> Edit
                                             </a>
+                                            <a class="btn btn-info waves-effect waves-light w-xs m-b-5"
+                                               href="#showmodal=@Url.Page("./Index", "Policies", new { id = item.Id })">
+                                                <i class="fa fa-cogs"></i> Policies
+                                            </a>
+                                            <a class="btn btn-default waves-effect waves-light w-xs m-b-5"
+                                               asp-page="/Part/Stock/StockZones/Index"
+                                               asp-route-StoreId="@item.Id">
+                                                Zones
+                                            </a>
                                             @if (item.IsActive)
                                             {
-                                                <a asp-page="./Index" asp-page-handler="NotActive" asp-route-id="@item.Id"
+                                                <a asp-page="./Index" asp-page-handler="Deactive" asp-route-id="@item.Id"
                                                    class="btn btn-danger waves-effect waves-light w-xs m-b-5">Disable</a>
                                             }
                                             else
@@ -128,7 +135,6 @@
                                                 <a asp-page="./Index" asp-page-handler="IsActive" asp-route-id="@item.Id"
                                                    class="btn btn-success waves-effect waves-light w-xs m-b-5">Activate</a>
                                             }
-
                                         </td>
                                     </tr>
                                 }
@@ -144,7 +150,6 @@
 @section Scripts {
     <script src="~/AdminTheme/assets/datatables/jquery.dataTables.min.js"></script>
     <script src="~/AdminTheme/assets/datatables/dataTables.bootstrap.js"></script>
-
     <script type="text/javascript">
         $(document).ready(function () {
             $('#datatable').dataTable();

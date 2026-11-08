@@ -1,4 +1,5 @@
 ﻿using PartManagement.Application.Contracts.Stock.StockType;
+using PartManagement.Domain.StockAgg.StoreAgg.Enum;
 
 namespace PartManagement.Application.Contracts.Stock.Store
 {
@@ -22,5 +23,20 @@ namespace PartManagement.Application.Contracts.Stock.Store
         public long CityId { get; set; }
         public long StationId { get; set; }
         public long ParentId { get; set; }
+
+        // روی EditStore یا StoreViewModel جزئیات
+        public InspectionMode? ReceivingInspectionMode { get; set; }
+        public int? InspectionDeadlineHours { get; set; }
+        public bool? AllowOneStepReceiveAndInspect { get; set; }
+        public long? DefaultReceivingHoldZoneId { get; set; }
+
+        public PlacementPolicyMode? PlacementMode { get; set; }
+        public bool? UseAtaChapter { get; set; }
+        public bool? UseKeywordGroup { get; set; }
+        public bool? UseStockType { get; set; }
+        public bool? UseAircraftModel { get; set; }
+        public bool? UsePartPhysical { get; set; }
+        public bool? UseLocationKind { get; set; }
+        public bool? UseEnvironmentalClass { get; set; }
     }
 }

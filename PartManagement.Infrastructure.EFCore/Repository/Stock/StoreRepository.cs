@@ -13,7 +13,7 @@ namespace PartManagement.Infrastructure.EFCore.Repository.Stock
             _partContext = partContext;
         }
 
-        public Store GetByOrganizationId(long organizationId)
+        public Store GetByOrganizationId(long? organizationId)
         {
             return _partContext.Stores
                 .Include(s => s.StoreStockTypes)
@@ -24,6 +24,7 @@ namespace PartManagement.Infrastructure.EFCore.Repository.Stock
         public List<Store> Search(string name, string code, long? organizationId, bool? isActive = null)
         {
             var query = _partContext.Stores
+                .Include(s => s.DefaultStockType)
                 .Include(s => s.StoreStockTypes)
                     .ThenInclude(sst => sst.StockType)
                 .AsQueryable();

@@ -1,7 +1,10 @@
 ﻿using _0_Framework.Application;
 using _01_MROQuery.Contracts.Organization;
+using PartManagement.Application.Contracts.Stock.Commands;
+using PartManagement.Application.Contracts.Stock.StockType;
 using PartManagement.Application.Contracts.Stock.Store;
 using PartManagement.Domain.Stock.StoreAgg;
+using PartManagement.Domain.StockAgg.StoreAgg;
 
 namespace PartManagement.Application.Stock
 {
@@ -10,15 +13,18 @@ namespace PartManagement.Application.Stock
         private readonly IStoreRepository _storeRepository;
         private readonly IAuthHelper _authHelper;
         private readonly IOrganizationQuery _organizationQuery;   // برای گرفتن نام سازمان
+        private readonly IStoreZoneRepository _storeZoneRepository;
 
         public StoreApplication(
             IStoreRepository storeRepository,
             IAuthHelper authHelper,
-            IOrganizationQuery organizationQuery)
+            IOrganizationQuery organizationQuery,
+            IStoreZoneRepository storeZoneRepository)
         {
             _storeRepository = storeRepository;
             _authHelper = authHelper;
             _organizationQuery = organizationQuery;
+            _storeZoneRepository = storeZoneRepository;
         }
 
         public OperationResult Create(CreateStore command)
@@ -53,6 +59,9 @@ namespace PartManagement.Application.Stock
             }
 
             _storeRepository.Create(store);
+            _storeRepository.SaveChanges();
+
+            store.EnsureDefaultPolicies();
             _storeRepository.SaveChanges();
 
             return operation.Succeeded();
@@ -118,18 +127,32 @@ namespace PartManagement.Application.Stock
                 Description = store.Description,
                 DefaultValueOfStockMovement = store.DefaultValueOfStockMovement,
                 OrganizationId = store.OrganizationId,
-                OrganizationName = organizationName,          // نام سازمان
+                OrganizationName = organizationName,
                 CityId = store.CityId,
                 StationId = store.StationId,
                 StockTypeId = store.DefaultStockTypeId,
                 ParentId = store.ParentId,
                 ProviderId = store.ProviderId,
                 StockTypeIds = store.StoreStockTypes?
-                    .Select(x => x.StockTypeId)
-                    .ToList() ?? new List<long>()
+                    .Select(x => x.StockTypeId).ToList() ?? new List<long>(),
+                NotToSearchBySpecificStore = store.NotToSearchBySpecificStore,
+                AutomaticRequestOrder = store.AutomaticRequestOrder,
+
+                ReceivingInspectionMode = store.ReceivingPolicy?.InspectionMode,
+                InspectionDeadlineHours = store.ReceivingPolicy?.InspectionDeadlineHours,
+                AllowOneStepReceiveAndInspect = store.ReceivingPolicy?.AllowOneStepReceiveAndInspect,
+                DefaultReceivingHoldZoneId = store.ReceivingPolicy?.DefaultReceivingHoldZoneId,
+
+                PlacementMode = store.PlacementPolicy?.Mode,
+                UseAtaChapter = store.PlacementPolicy?.UseAtaChapter,
+                UseKeywordGroup = store.PlacementPolicy?.UseKeywordGroup,
+                UseStockType = store.PlacementPolicy?.UseStockType,
+                UseAircraftModel = store.PlacementPolicy?.UseAircraftModel,
+                UsePartPhysical = store.PlacementPolicy?.UsePartPhysical,
+                UseLocationKind = store.PlacementPolicy?.UseLocationKind,
+                UseEnvironmentalClass = store.PlacementPolicy?.UseEnvironmentalClass
             };
         }
-
         public List<StoreViewModel> Search(StoreSearchModel searchModel)
         {
             searchModel ??= new StoreSearchModel();
@@ -164,6 +187,7 @@ namespace PartManagement.Application.Stock
                     CityId = store.CityId,
                     StationId = store.StationId,
                     StockTypeId = store.DefaultStockTypeId,
+                    StockType = store.DefaultStockType?.Name,
                     ParentId = store.ParentId,
                     IsActive = store.IsActive,
                     CreationDate = store.CreationDate.ToShortDateString()
@@ -250,5 +274,96 @@ namespace PartManagement.Application.Stock
             _storeRepository.SaveChanges();
             return operation.Succeeded();
         }
+
+        public OperationResult UpdateReceivingPolicy(UpdateStoreReceivingPolicyCommand command)
+        {
+            var result = new OperationResult();
+            var store = _storeRepository.Get(command.StoreId);
+
+            if (!_authHelper.CurrentAccountIsAdmin()
+                && store.OrganizationId != _authHelper.CurrentAccountOrganizationId())
+                return result.Failed("دسترسی مجاز نیست.");
+
+            if (store == null) return result.Failed("انبار یافت نشد.");
+
+            if (command.DefaultReceivingHoldZoneId.HasValue)
+            {
+                var zone = _storeZoneRepository.Get(command.DefaultReceivingHoldZoneId.Value);
+                if (zone == null || zone.StoreId != command.StoreId || !zone.IsReceivingHold)
+                    return result.Failed("Zone نگهداری موقت نامعتبر است.");
+            }
+
+            store.SetReceivingPolicy(
+                command.InspectionMode,
+                command.InspectionDeadlineHours,
+                command.AllowOneStepReceiveAndInspect,
+                command.DefaultReceivingHoldZoneId);
+
+            _storeRepository.SaveChanges();
+            return result.Succeeded("سیاست دریافت ذخیره شد.");
+        }
+
+        public OperationResult UpdatePlacementPolicy(UpdateStorePlacementPolicyCommand command)
+        {
+            var result = new OperationResult();
+            var store = _storeRepository.Get(command.StoreId);
+
+            if (!_authHelper.CurrentAccountIsAdmin()
+                && store.OrganizationId != _authHelper.CurrentAccountOrganizationId())
+                return result.Failed("دسترسی مجاز نیست.");
+
+            if (store == null) return result.Failed("انبار یافت نشد.");
+
+            store.SetPlacementPolicy(
+                command.Mode,
+                command.UseAtaChapter,
+                command.UseKeywordGroup,
+                command.UseStockType,
+                command.UseAircraftModel,
+                command.UsePartPhysical,
+                command.UseLocationKind,
+                command.UseEnvironmentalClass);
+
+            _storeRepository.SaveChanges();
+            return result.Succeeded("سیاست چیدمان ذخیره شد.");
+        }
+
+        public List<StoreViewModel> GetStoresBy(long? organizationId)
+        {
+            var orgId = _authHelper.SetOrganizationId(organizationId);
+
+            var stores = _storeRepository.Search(
+                name: null,
+                code: null,
+                organizationId: orgId,
+                isActive: true);
+
+            return stores.Select(store => new StoreViewModel
+            {
+                Id = store.Id,
+                Name = store.Name,
+                Code = store.Code,
+                OrganizationId = store.OrganizationId,
+                OrganizationName = store.OrganizationId.HasValue
+                    ? _organizationQuery.GetNameEn(store.OrganizationId.Value)
+                    : null,
+                IsActive = store.IsActive
+            }).ToList();
+        }
+
+        //public List<StoreViewModel> GetStoresBy(long? organizationId)
+        //{
+        //    var orgId = _authHelper.SetOrganizationId(organizationId);
+
+        //    var stores = _storeRepository.GetByOrganizationId(orgId);
+
+        //    return stores.Select(x => new StoreViewModel
+        //    {
+        //        Id = x.Id,
+        //        Name = x.Name,
+        //        Code = x.Code,
+        //        OrganizationId = x.OrganizationId
+        //    }).ToList();
+        //}
     }
 }

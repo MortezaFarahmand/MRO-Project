@@ -1,4 +1,5 @@
 ﻿using _0_Framework.Application;
+using PartManagement.Application.Contracts.Stock.Commands;
 
 namespace PartManagement.Application.Contracts.Stock.Store
 {
@@ -8,6 +9,7 @@ namespace PartManagement.Application.Contracts.Stock.Store
         OperationResult Edit(EditStore command);
         EditStore GetDetails(long id);
         List<StoreViewModel> Search(StoreSearchModel searchModel);
+        List<StoreViewModel> GetStoresBy(long? organizationId);
         OperationResult Activate(long id);
         OperationResult Deactivate(long id);
         //OperationResult AddRoom(List<AddRemoveStoreRoom> command);
@@ -18,6 +20,9 @@ namespace PartManagement.Application.Contracts.Stock.Store
         OperationResult AllowSearchOfStore(long id);
         OperationResult SetAutoRequestOrder(long id);
         OperationResult DisableAutoRequestOrder(long id);
+
+        OperationResult UpdateReceivingPolicy(UpdateStoreReceivingPolicyCommand command);
+        OperationResult UpdatePlacementPolicy(UpdateStorePlacementPolicyCommand command);
 
     }
 }

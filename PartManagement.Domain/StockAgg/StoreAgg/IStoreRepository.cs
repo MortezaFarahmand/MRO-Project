@@ -5,7 +5,7 @@ namespace PartManagement.Domain.Stock.StoreAgg
 {
     public interface IStoreRepository : IRepository<long, Store>
     {
-        Store GetByOrganizationId(long organizationId);
+        Store GetByOrganizationId(long? organizationId);
         List<Store> Search(string name, string code, long? organizationId, bool? isActive = null);
     }
 }

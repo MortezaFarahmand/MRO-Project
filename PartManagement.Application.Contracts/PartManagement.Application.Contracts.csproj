@@ -12,7 +12,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Inventory\ReceivingInspection\Queries\" />
     <Folder Include="QueryHandlers\Common\" />
+    <Folder Include="Stock\Queries\" />
   </ItemGroup>
 
   <ItemGroup>
