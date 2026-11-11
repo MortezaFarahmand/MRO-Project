@@ -37,8 +37,9 @@ namespace ServiceHost.Areas.Administration.Pages.Part.Stock.Stores
         public List<StoreViewModel> Stores { get; set; }
         public SelectList StockTypes { get; set; }
         public SelectList Organizations { get; set; }
-        public SelectList Stations { get; set; }
-        public SelectList Cities { get; set; }
+        public SelectList StoreParents { get; set; }
+        //public SelectList Stations { get; set; }
+        //public SelectList Cities { get; set; }
 
         private readonly IStoreApplication _storeApplication;
         private readonly IStockTypeApplication _stockTypeApplication;
@@ -80,7 +81,8 @@ namespace ServiceHost.Areas.Administration.Pages.Part.Stock.Stores
                 .Select(o => new OrganizationSimpleDto { Id = o.Id, NameEn = o.NameEn }).ToList();
             var cities = _cityQuery.GetAll().Select(c => new CitySimpleDto { Id = c.Id, Display = c.Display }).ToList();
             //var stations = _stationQuery.GetAll().Select(c => new StationSimpleDto { Id = c.Id, Display = c.Display }).ToList();
-
+            // لیست انبارها برای Parent
+            
             var command = new CreateStore
             {
                 OrganizationId = _authHelper.CurrentAccountOrganizationId(),
@@ -90,6 +92,8 @@ namespace ServiceHost.Areas.Administration.Pages.Part.Stock.Stores
                 StockTypes = new List<StockTypeViewModel>(),
                 Cities = cities,
                 //Stations = stations
+                ParentStores = _storeApplication.GetStoresForParent
+                                (_authHelper.CurrentAccountOrganizationId())
 
             };
 
@@ -110,15 +114,6 @@ namespace ServiceHost.Areas.Administration.Pages.Part.Stock.Stores
             return new JsonResult(result);
         }
 
-        //public IActionResult OnGetEdit(long id)
-        //{
-        //    long? organizationId = _authHelper.CurrentAccountOrganizationId();
-        //    var store = _storeApplication.GetDetails(id);
-        //    store.StockTypes = _stockTypeApplication.GetStockTypesBy(organizationId);
-        //    store.Organizations = _organizationApplication.GetOrganizations()
-        //        .Select(o => new OrganizationSimpleDto { Id = o.Id, NameEn = o.NameEn }).ToList();
-        //    return Partial("Edit", store);
-        //}
         public IActionResult OnGetEdit(long id)
         {
             var store = _storeApplication.GetDetails(id);
@@ -138,13 +133,24 @@ namespace ServiceHost.Areas.Administration.Pages.Part.Stock.Stores
                 .Select(o => new OrganizationSimpleDto { Id = o.Id, NameEn = o.NameEn })
                 .ToList();
 
+            // شهرها
+            store.Cities = _cityQuery.GetAll()
+                .Select(c => new CitySimpleDto { Id = c.Id, Display = c.Display })
+                .ToList();
+
+            // نمایش ایستگاه فعلی (برای tom-select-ajax)
+            if (store.StationId > 0)
+            {
+                var station = _stationQuery.GetById(store.StationId); 
+                store.StationDisplay = station?.Display;
+            }
+
+            store.ParentStores = _storeApplication.GetStoresForParent(
+                                store.OrganizationId, excludeStoreId: store.Id);   // خودش را حذف می‌کنیم
+
             store.IsAdmin = _authHelper.CurrentAccountIsAdmin();
 
-            //// حذف آیتم‌های null احتمالی
-            //store.StockTypes = store.StockTypes.Where(x => x != null).ToList();
-            //store.Organizations = store.Organizations.Where(x => x != null).ToList();
-
-            return Partial("./Edit", store); 
+            return Partial("./Edit", store);
         }
 
         public JsonResult OnPostEdit(EditStore command)

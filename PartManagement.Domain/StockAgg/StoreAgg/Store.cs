@@ -58,7 +58,7 @@ namespace PartManagement.Domain.Stock.StoreAgg
         }
 
         public void Edit(string name, string nameFa, string code, string colorCode,
-            string description, long? organizationId, long cityId, long stationId, long stockTypeId,
+            string description, long? organizationId, long cityId, long stationId, long defaultStockTypeId,
             long parentId, long providerId, string defaultValueOfStockMovement)
         {
             Name = name;
@@ -69,7 +69,7 @@ namespace PartManagement.Domain.Stock.StoreAgg
             OrganizationId = organizationId;
             CityId = cityId;
             StationId = stationId;
-            DefaultStockTypeId = stockTypeId;
+            DefaultStockTypeId = defaultStockTypeId;
             ParentId = parentId;
             ProviderId = providerId;
             DefaultValueOfStockMovement = defaultValueOfStockMovement;
@@ -84,6 +84,30 @@ namespace PartManagement.Domain.Stock.StoreAgg
             StoreStockTypes.Clear();
             foreach (var st in storeStockTypes)
                 StoreStockTypes.Add(st);
+        }
+        public void SetStockTypes(List<long> stockTypeIds)
+        {
+            stockTypeIds ??= new List<long>();
+            stockTypeIds = stockTypeIds.Distinct().ToList();
+
+            // ۱. حذف مواردی که دیگر انتخاب نشده‌اند
+            var toRemove = StoreStockTypes
+                .Where(x => !stockTypeIds.Contains(x.StockTypeId))
+                .ToList();
+
+            foreach (var item in toRemove)
+            {
+                StoreStockTypes.Remove(item);
+            }
+
+            // ۲. فقط مواردی را اضافه کن که هنوز وجود ندارند
+            foreach (var stockTypeId in stockTypeIds)
+            {
+                if (!StoreStockTypes.Any(x => x.StockTypeId == stockTypeId))
+                {
+                    StoreStockTypes.Add(new StoreStockType(Id, stockTypeId));
+                }
+            }
         }
 
         public void ForbidSearchOfStore()

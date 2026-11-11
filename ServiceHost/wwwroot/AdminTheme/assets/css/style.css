@@ -3662,7 +3662,7 @@ th {
 
 /*//////////////////*/
 /* ===== Tom Select global ===== */
-/* ===== Tom Select Final Fix ===== */
+/* ===== Tom Select Final ===== */
 .ts-wrapper {
     width: 100%;
     position: relative;
@@ -3695,22 +3695,68 @@ th {
         line-height: 36px !important;
     }
 
-    /* فونت و جهت */
-    .ts-wrapper.ts-rtl .ts-control,
-    .ts-wrapper.ts-rtl .ts-control .item,
-    .ts-wrapper.ts-rtl .ts-control input {
-        font-family: 'IranianSans', Tahoma, sans-serif !important;
-        direction: rtl !important;
-        text-align: right !important;
+    /* Multi */
+    .ts-wrapper.multi .ts-control {
+        min-height: 42px !important;
+        height: auto !important;
+        padding: 6px 10px !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 6px !important;
+        align-items: center !important;
     }
 
-    .ts-wrapper.ts-ltr .ts-control,
-    .ts-wrapper.ts-ltr .ts-control .item,
-    .ts-wrapper.ts-ltr .ts-control input {
-        font-family: 'Nunito', 'Roboto', Arial, sans-serif !important;
-        direction: ltr !important;
-        text-align: left !important;
+        .ts-wrapper.multi .ts-control .item {
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 6px !important;
+            background: #2878d0 !important;
+            color: #fff !important;
+            border: none !important;
+            border-radius: 4px !important;
+            padding: 4px 8px !important;
+            margin: 0 !important;
+            font-size: 13px !important;
+            line-height: 1.4 !important;
+            animation: tagSlideIn 0.25s ease-out;
+        }
+
+            .ts-wrapper.multi .ts-control .item .remove {
+                color: rgba(255, 255, 255, 0.85) !important;
+                border-left: 1px solid rgba(255, 255, 255, 0.3) !important;
+                margin-left: 4px !important;
+                padding-left: 6px !important;
+                cursor: pointer !important;
+            }
+
+@keyframes tagSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-6px) scale(0.95);
     }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* جهت و فونت */
+.ts-wrapper.ts-rtl .ts-control,
+.ts-wrapper.ts-rtl .ts-control .item,
+.ts-wrapper.ts-rtl .ts-control input {
+    font-family: 'IranianSans', Tahoma, sans-serif !important;
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+.ts-wrapper.ts-ltr .ts-control,
+.ts-wrapper.ts-ltr .ts-control .item,
+.ts-wrapper.ts-ltr .ts-control input {
+    font-family: 'Nunito', 'Roboto', Arial, sans-serif !important;
+    direction: ltr !important;
+    text-align: left !important;
+}
 
 .ts-dropdown .option.ts-rtl {
     font-family: 'IranianSans', Tahoma, sans-serif !important;
@@ -3737,7 +3783,7 @@ th {
     left: auto !important;
 }
 
-/* Dropdown وقتی به body منتقل شده */
+/* Dropdown در body */
 body > .ts-dropdown {
     z-index: 10060 !important;
     position: absolute !important;

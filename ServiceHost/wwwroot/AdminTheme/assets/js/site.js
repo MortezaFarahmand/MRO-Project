@@ -44,7 +44,7 @@ function hideModal() {
 }
 
 // =========================
-// Tom Select – RTL/LTR
+// Tom Select – RTL/LTR + Multi
 // =========================
 function isRtlText(text) {
     if (!text) return false;
@@ -66,15 +66,14 @@ function applyDirToTomSelect(ts) {
         var text = "";
         try {
             var v = ts.getValue();
-            if (v !== null && v !== undefined && v !== "") {
+            if (Array.isArray(v) && v.length > 0) {
+                var opt = ts.options[v[0]];
+                text = (opt && (opt.text || opt.label)) || "";
+            } else if (v !== null && v !== undefined && v !== "") {
                 var opt = ts.options[v];
                 text = (opt && (opt.text || opt.label)) || "";
             } else {
-                text = (ts.settings && ts.settings.placeholder) ||
-                    (ts.input && ts.input.querySelector("option[value='']"))?.textContent ||
-                    ts.control_input?.getAttribute("placeholder") ||
-                    ts.wrapper.querySelector(".ts-control")?.textContent ||
-                    "";
+                text = (ts.settings && ts.settings.placeholder) || "";
             }
         } catch (e) { text = ""; }
         setWrapperDir(isRtlText(text));
@@ -84,21 +83,13 @@ function applyDirToTomSelect(ts) {
         if (!ts.dropdown) return;
         ts.dropdown.querySelectorAll(".option").forEach(function (el) {
             var t = (el.textContent || "").trim();
-            var rtl = isRtlText(t);
-            el.classList.toggle("ts-rtl", rtl);
-            el.classList.toggle("ts-ltr", !rtl);
+            el.classList.toggle("ts-rtl", isRtlText(t));
+            el.classList.toggle("ts-ltr", !isRtlText(t));
         });
     }
 
     ts.on("change", updateControlDir);
-    ts.on("type", function (str) {
-        setWrapperDir(isRtlText(str));
-    });
     ts.on("dropdown_open", markOptionsDir);
-    ts.on("load", function () {
-        setTimeout(markOptionsDir, 30);
-    });
-
     updateControlDir();
 }
 
@@ -133,6 +124,7 @@ function initTomSelectStatic($root) {
 
         var fixedDir = el.getAttribute("data-dir");
         var noSearch = el.getAttribute("data-no-search") === "true";
+        var isMultiple = el.hasAttribute("multiple");
 
         destroyTomSelect(el);
 
@@ -142,19 +134,27 @@ function initTomSelectStatic($root) {
             maxOptions: null,
             dropdownParent: document.body,
             closeAfterSelect: true,
-            hideSelected: false,
-            openOnFocus: true,
+            hideSelected: isMultiple,
+            selectOnTab: true,
+            plugins: isMultiple ? ['remove_button'] : [],
+            maxItems: isMultiple ? null : 1
         };
 
-        // فقط وقتی می‌خواهیم سرچ نداشته باشیم
         if (noSearch) {
             settings.controlInput = null;
         }
 
         var ts = new TomSelect(el, settings);
 
+        // موقعیت‌دهی
         ts.on("dropdown_open", function () {
             positionDropdown(ts);
+        });
+
+        // اطمینان از انتخاب با کلیک و Enter
+        ts.on("item_add", function (value) {
+            ts.close();
+            ts.blur();
         });
 
         if (fixedDir === "rtl" || fixedDir === "ltr") {
@@ -191,7 +191,7 @@ function initTomSelectAjax($root) {
             loadThrottle: 250,
             dropdownParent: document.body,
             closeAfterSelect: true,
-            openOnFocus: true,
+            selectOnTab: true,
             shouldLoad: function (query) {
                 return query && query.length >= minLen;
             },
@@ -218,8 +218,15 @@ function initTomSelectAjax($root) {
 
         var ts = new TomSelect(el, settings);
 
+        // موقعیت‌دهی
         ts.on("dropdown_open", function () {
             positionDropdown(ts);
+        });
+
+        // اطمینان از انتخاب با کلیک و Enter
+        ts.on("item_add", function (value) {
+            ts.close();
+            ts.blur();
         });
 
         if (fixedDir === "rtl" || fixedDir === "ltr") {
@@ -234,7 +241,6 @@ function initTomSelectAjax($root) {
 function initAllTomSelect($root) {
     var $scope = $root && $root.length ? $root : $(document);
 
-    // نابود کردن نمونه‌های قبلی
     $scope.find("select.tom-select, select.tom-select-ajax").each(function () {
         destroyTomSelect(this);
     });

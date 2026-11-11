@@ -41,5 +41,6 @@ namespace PartManagement.Application.Contracts.Stock.Store
         //public List<AirportViewModel> Stations { get; set; } = new();
         public List<StoreViewModel> Stores { get; set; } = new();
         public string? OrganizationName { get; set; }
+        public List<StoreSimpleDto> ParentStores { get; set; } = new();
     }
 }

@@ -11,6 +11,8 @@ namespace PartManagement.Domain.Stock.StoreAgg
         public long StockTypeId { get; private set; }
         public StockType StockType { get; private set; }
 
+        protected StoreStockType() { }
+
         public StoreStockType(long storeId, long stockTypeId)
         {
             StoreId = storeId;

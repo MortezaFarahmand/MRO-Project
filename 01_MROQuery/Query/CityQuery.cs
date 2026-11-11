@@ -2,6 +2,7 @@
 using BasicDataManagement.Domain.CityAgg;
 using BasicDataManagement.Infrastructure.EFCore;
 using Microsoft.EntityFrameworkCore;
+using OrganizationManagement.Domain.OrganizationAgg;
 
 namespace _01_MROQuery.Query
 {
@@ -41,5 +42,13 @@ namespace _01_MROQuery.Query
                 ? "0"
                 : $"{x.Province} {x.Name}"
         };
+
+        public string GetDisplay(long cityId)
+        {
+            return _context.Citys
+                .Where(x => x.Id == cityId)
+                .Select(x => x.Name)
+                .FirstOrDefault();
+        }
     }
 }

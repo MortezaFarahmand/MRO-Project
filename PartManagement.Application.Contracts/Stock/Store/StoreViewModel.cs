@@ -9,10 +9,10 @@ namespace PartManagement.Application.Contracts.Stock.Store
         public string Name { get; set; }
         public string Code { get; set; }
         public string? OrganizationName { get; set; }
-        public string City { get; set; }
-        public string Station { get; set; }
-        public string StockType { get; set; }
-        public string Parent { get; set; }
+        public string? City { get; set; }
+        public string? Station { get; set; }
+        public string? StockType { get; set; }
+        public string? Parent { get; set; }
         public string Provider { get; set; }
         public long StockTypeId { get; set; }
         public long? OrganizationId { get; set; }

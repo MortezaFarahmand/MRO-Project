@@ -1,5 +1,7 @@
 ﻿using _0_Framework.Application;
+using _01_MROQuery.Contracts.City;
 using _01_MROQuery.Contracts.Organization;
+using _01_MROQuery.Contracts.Station;
 using PartManagement.Application.Contracts.Stock.Commands;
 using PartManagement.Application.Contracts.Stock.DTOs;
 using PartManagement.Application.Contracts.Stock.StockType;
@@ -15,17 +17,22 @@ namespace PartManagement.Application.Stock
         private readonly IAuthHelper _authHelper;
         private readonly IOrganizationQuery _organizationQuery;   // برای گرفتن نام سازمان
         private readonly IStoreZoneRepository _storeZoneRepository;
+        private readonly ICityQuery _cityQuery;
+        private readonly IStationQuery _stationQuery;
 
         public StoreApplication(
             IStoreRepository storeRepository,
             IAuthHelper authHelper,
             IOrganizationQuery organizationQuery,
-            IStoreZoneRepository storeZoneRepository)
+            IStoreZoneRepository storeZoneRepository,
+            ICityQuery cityQuery, IStationQuery stationQuery)
         {
             _storeRepository = storeRepository;
             _authHelper = authHelper;
             _organizationQuery = organizationQuery;
             _storeZoneRepository = storeZoneRepository;
+            _cityQuery = cityQuery;
+            _stationQuery = stationQuery;
         }
 
         public OperationResult Create(CreateStore command)
@@ -71,7 +78,7 @@ namespace PartManagement.Application.Stock
         public OperationResult Edit(EditStore command)
         {
             var operation = new OperationResult();
-            var store = _storeRepository.Get(command.Id);
+            var store = _storeRepository.GetWithDetails(command.Id);
 
             if (store == null)
                 return operation.Failed(ApplicationMessages.RecordNotFound);
@@ -84,11 +91,8 @@ namespace PartManagement.Application.Stock
 
             long? storeOrganizationId = _authHelper.SetOrganizationId(command.OrganizationId);
 
-            var storeStockTypes = command.StockTypeIds
-                .Select(stockTypeId => new StoreStockType(store.Id, stockTypeId))
-                .ToList();
-
-            store.SetRooms(storeStockTypes);
+            // به‌روزرسانی انواع مجاز انبار
+            store.SetStockTypes(command.StockTypeIds ?? new List<long>());
 
             store.Edit(
                 command.Name,
@@ -99,8 +103,8 @@ namespace PartManagement.Application.Stock
                 storeOrganizationId,
                 command.CityId,
                 command.StationId,
-                command.StockTypeId,
-                command.ParentId,
+                command.StockTypeId,       // این DefaultStockTypeId است
+                command.ParentId,         
                 command.ProviderId,
                 command.DefaultValueOfStockMovement);
 
@@ -180,6 +184,24 @@ namespace PartManagement.Application.Stock
                 var organizationName = store.OrganizationId.HasValue
                     ? _organizationQuery.GetNameEn(store.OrganizationId.Value)
                     : null;
+                // نام شهر
+                string cityName = null;
+                if (store.CityId > 0)
+                    cityName = _cityQuery.GetDisplay(store.CityId);   // یا متد مناسب خودت
+
+                // نام ایستگاه
+                string stationIata_code = null;
+                if (store.StationId > 0)
+                    stationIata_code = _stationQuery.GetDisplay(store.StationId);  // یا متد مناسب خودت
+
+                // نام انبار والد
+                string parentName = null;
+                if (store.ParentId > 0)
+                {
+                    var parent = stores.FirstOrDefault(x => x.Id == store.ParentId)
+                                 ?? _storeRepository.Get(store.ParentId);
+                    parentName = parent?.Name;
+                }
 
                 result.Add(new StoreViewModel
                 {
@@ -188,11 +210,11 @@ namespace PartManagement.Application.Stock
                     Code = store.Code,
                     OrganizationId = store.OrganizationId,
                     OrganizationName = organizationName,     // نام سازمان
-                    CityId = store.CityId,
-                    StationId = store.StationId,
+                    City = cityName,
+                    Station = stationIata_code,
                     StockTypeId = store.DefaultStockTypeId,
                     StockType = store.DefaultStockType?.Name,
-                    ParentId = store.ParentId,
+                    Parent = parentName,
                     IsActive = store.IsActive,
                     CreationDate = store.CreationDate.ToShortDateString()
                 });
@@ -355,20 +377,27 @@ namespace PartManagement.Application.Stock
             }).ToList();
         }
 
+        public List<StoreSimpleDto> GetStoresForParent(long? organizationId, long? excludeStoreId = null)
+        {
+            var orgId = _authHelper.SetOrganizationId(organizationId);
 
-        //public List<StoreViewModel> GetStoresBy(long? organizationId)
-        //{
-        //    var orgId = _authHelper.SetOrganizationId(organizationId);
+            var stores = _storeRepository.Search(
+                name: null,
+                code: null,
+                organizationId: orgId,
+                isActive: true);
 
-        //    var stores = _storeRepository.GetByOrganizationId(orgId);
-
-        //    return stores.Select(x => new StoreViewModel
-        //    {
-        //        Id = x.Id,
-        //        Name = x.Name,
-        //        Code = x.Code,
-        //        OrganizationId = x.OrganizationId
-        //    }).ToList();
-        //}
+            return stores
+                .Where(x => !excludeStoreId.HasValue || x.Id != excludeStoreId.Value)
+                .Select(x => new StoreSimpleDto
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    Code = x.Code,
+                    DefaultStockType = x.DefaultStockType?.Name
+                })
+                .OrderBy(x => x.Name)
+                .ToList();
+        }
     }
 }

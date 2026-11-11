@@ -82,7 +82,13 @@ namespace _01_MROQuery.Query
                 : $"{x.Icao_code} {x.Name}"
         };
 
-        
+        public string GetDisplay(long stationId)
+        {
+            return _context.Airports
+                 .Where(x => x.Id == stationId)
+                 .Select(x => x.Iata_code)
+                 .FirstOrDefault();
+        }
     }
 
 }

@@ -6,5 +6,6 @@ namespace _01_MROQuery.Contracts.City
         List<CityQueryModel> GetAll();
         CityQueryModel GetById(long id);
         List<CityQueryModel> GetByProvinceId(long provinceId);
+        string GetDisplay(long cityId);
     }
 }

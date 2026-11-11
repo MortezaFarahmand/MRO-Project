@@ -1,5 +1,6 @@
 ﻿using _0_Framework.Application;
 using PartManagement.Application.Contracts.Stock.Commands;
+using PartManagement.Application.Contracts.Stock.DTOs;
 
 namespace PartManagement.Application.Contracts.Stock.Store
 {
@@ -12,6 +13,7 @@ namespace PartManagement.Application.Contracts.Stock.Store
         List<StoreViewModel> GetStoresBy(long? organizationId);
         OperationResult Activate(long id);
         OperationResult Deactivate(long id);
+        List<StoreSimpleDto> GetStoresForParent(long? organizationId, long? excludeStoreId = null);
         //OperationResult AddRoom(List<AddRemoveStoreRoom> command);
         //OperationResult AddRoom(AddRemoveStoreRoom command);
         //OperationResult RemoveRoom(List<AddRemoveStoreRoom> command);

@@ -11,5 +11,6 @@ namespace _01_MROQuery.Contracts.Station
         //List<StationQueryModel> Search(string term, int take);
         List<LookupItemDto> Search(string term, int take = 30);
         LookupItemDto GetLookupById(long id);
+        string GetDisplay(long stationId);
     }
 }
