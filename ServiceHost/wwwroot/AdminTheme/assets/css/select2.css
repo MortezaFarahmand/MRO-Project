@@ -11,6 +11,10 @@ Version: 3.5.0 Timestamp: Mon Jun 16 19:29:44 EDT 2014
     vertical-align: middle;
 }
 
+.select2-drop .select2-search {
+    display: block !important;
+}
+
 .select2-container,
 .select2-drop,
 .select2-search,
@@ -224,7 +228,7 @@ html[dir="rtl"] .select2-container .select2-choice .select2-arrow b {
     background-position: 2px 1px;
 }
 
-.select2-search {
+/*.select2-search {
     display: inline-block;
     width: 100%;
     min-height: 26px;
@@ -257,7 +261,14 @@ html[dir="rtl"] .select2-container .select2-choice .select2-arrow b {
 
     background: #fff url('img/select2.png') no-repeat 100% -22px;
     margin-top: 5px;
+}*/
+.select2-search {
+    padding: 4px;
 }
+
+    .select2-search input {
+        width: 100% !important;
+    }
 
 html[dir="rtl"] .select2-search input {
     padding: 4px 5px 4px 20px;
@@ -727,4 +738,51 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
     .select2-search input {
         background-position: 100% -21px !important;
     }
+}
+/*////////////////////*/
+#MainModal .select2-container.form-control {
+    border: none !important;
+    padding: 0 !important;
+    height: auto !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+#MainModal .select2-container .select2-choice {
+    height: 38px;
+    line-height: 36px;
+    border: 1px solid #eee;
+    background-color: #fafafa;
+    border-radius: 2px;
+}
+
+/* ===== Select2 global fonts (from style.css @font-face) ===== */
+
+/* کنترل بسته */
+.select2-container .select2-choice,
+.select2-container .select2-chosen,
+.select2-container-multi .select2-choices {
+    font-family: 'IranianSans', 'Nunito', 'Roboto', Tahoma, sans-serif !important;
+    font-size: 14px;
+}
+
+/* لیست باز و آیتم‌ها */
+.select2-drop,
+.select2-results,
+.select2-results .select2-result-label,
+.select2-results .select2-highlighted {
+    font-family: 'IranianSans', 'Nunito', 'Roboto', Tahoma, sans-serif !important;
+    font-size: 14px;
+}
+
+/* فیلد سرچ داخل دراپ‌داون */
+.select2-search input,
+.select2-container-multi .select2-choices .select2-search-field input {
+    font-family: 'IranianSans', 'Nunito', 'Roboto', Tahoma, sans-serif !important;
+    font-size: 14px;
+}
+
+/* چندانتخابی – تگ‌ها */
+.select2-container-multi .select2-search-choice {
+    font-family: 'IranianSans', 'Nunito', 'Roboto', Tahoma, sans-serif !important;
 }

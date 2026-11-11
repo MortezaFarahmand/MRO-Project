@@ -1,4 +1,5 @@
 ﻿@using System.Text.Json
+@using PartManagement.Application.Contracts.Stock.DTOs
 @using PartManagement.Application.Contracts.Stock.StockType
 @model PartManagement.Application.Contracts.Stock.Store.CreateStore
 @{
@@ -66,13 +67,13 @@
                 @if (Model.IsAdmin)
                 {
                     <div class="form-group">
-                        <label asp-for="OrganizationId">سازمان</label>
-
+                        <label asp-for="OrganizationId" class="element-dir-Fa">سازمان</label>
                         <select asp-for="OrganizationId"
                                 asp-items="@(new SelectList(Model.Organizations ?? new(), "Id", "NameEn"))"
                                 id="organizationSelect"
-                                class="form-control">
-                            <option value="0">انتخاب سازمان</option>
+                                class="tom-select"
+                                data-no-search="true">
+                            <option value="">انتخاب سازمان</option>
                         </select>
                     </div>
                 }
@@ -110,9 +111,11 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <label asp-for="CityId" class="control-label">City</label>
-                    <select type="text" class="form-control" asp-for="CityId"
-                            asp-items='new SelectList(Model.StockTypes ?? new(), "Id", "Name")'>
-                        <option value="0">-City-</option>
+                    <select asp-for="CityId"
+                            asp-items="@(new SelectList(Model.Cities ?? new List<CitySimpleDto>(), "Id", "Display"))"
+                            id="citySelect"
+                            class="tom-select">
+                        <option value="">— Select City —</option>
                     </select>
                     <span asp-validation-for="CityId" class="error"></span>
                 </div>
@@ -120,11 +123,21 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <label asp-for="StationId" class="control-label">Airport station</label>
-                    <select type="text" class="form-control" asp-for="StationId"
-                            asp-items='new SelectList(Model.StockTypes ?? new(), "Id", "Name")'>
-                        <option value="0">-Airport station's-</option>
+                    <select asp-for="StationId"
+                            id="stationSelect"
+                            class="tom-select-ajax"
+                            data-url="/Administration/Lookups?handler=Stations"
+                            data-min-length="1"
+                            placeholder="— Station —">
+                        @if (Model.StationId > 0 && !string.IsNullOrEmpty(Model.StationDisplay))
+                        {
+                            <option value="@Model.StationId" selected>@Model.StationDisplay</option>
+                        }
+                        else
+                        {
+                            <option value="">— Station —</option>
+                        }
                     </select>
-                    <span asp-validation-for="StationId" class="error"></span>
                 </div>
             </div>
             
@@ -313,48 +326,3 @@
         renderTags();
     })();
 </script>
-
-@* <script>
-    (function () {
-        // نقش -> لیست نوع انبار ‌ها (از سرور)
-        var rolePermissions = @Html.Raw(JsonSerializer.Serialize(
-                                                (Model.StockTypes ?? new List<PartManagement.Application.Contracts.Stock.StockType.StockTypeViewModel>())
-                                                                .ToDictionary(st => st.Id.ToString(), st => st.Name.ToString())
-                                ));
-
-        function getPerms(roleId) {
-            return rolePermissions[roleId] || rolePermissions[String(roleId)] || [];
-        }
-
-        function refreshLive() {
-            var checkedIds = $(".role-checkbox:checked").map(function () { return $(this).val(); }).get();
-            var uniq = {};
-            checkedIds.forEach(function (id) {
-                getPerms(id).forEach(function (p) {
-                    var code = (p.Code !== undefined ? p.Code : p.code);
-                    var name = (p.Name !== undefined ? p.Name : p.name);
-                    if (code !== undefined && !uniq[code]) {
-                        uniq[code] = name || code;
-                    }
-                });
-            });
-
-            var box = $("#livePermissions");
-            box.empty();
-            var keys = Object.keys(uniq);
-            if (keys.length === 0) {
-                $("#noPermMsg").show();
-            } else {
-                $("#noPermMsg").hide();
-                keys.forEach(function (code) {
-                    var badge = $('<span class="label label-success" style="font-size:12px; padding:5px 10px; display:inline-block;"></span>');
-                    badge.text(uniq[code] + " (" + code + ")");
-                    box.append(badge);
-                });
-            }
-        }
-
-        $(document).off("change.roleLiveCreate").on("change.roleLiveCreate", ".role-checkbox", refreshLive);
-        refreshLive();
-    })();
-</script> *@

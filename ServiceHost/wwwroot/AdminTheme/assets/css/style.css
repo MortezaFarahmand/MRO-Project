@@ -3654,3 +3654,92 @@ th {
     font-size: 13px;
     line-height: 1.7;
 }
+
+
+
+
+
+
+/*//////////////////*/
+/* ===== Tom Select global ===== */
+/* ===== Tom Select Final Fix ===== */
+.ts-wrapper {
+    width: 100%;
+    position: relative;
+    overflow: visible !important;
+}
+
+    .ts-wrapper .ts-control {
+        min-height: 38px !important;
+        height: 38px !important;
+        border: 1px solid #eee !important;
+        background-color: #fafafa !important;
+        border-radius: 2px !important;
+        padding: 0 12px !important;
+        line-height: 36px !important;
+        display: flex !important;
+        align-items: center !important;
+        overflow: hidden !important;
+    }
+
+    .ts-wrapper.single .ts-control .item {
+        display: block !important;
+        width: 100% !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: transparent !important;
+        border: none !important;
+        line-height: 36px !important;
+    }
+
+    /* فونت و جهت */
+    .ts-wrapper.ts-rtl .ts-control,
+    .ts-wrapper.ts-rtl .ts-control .item,
+    .ts-wrapper.ts-rtl .ts-control input {
+        font-family: 'IranianSans', Tahoma, sans-serif !important;
+        direction: rtl !important;
+        text-align: right !important;
+    }
+
+    .ts-wrapper.ts-ltr .ts-control,
+    .ts-wrapper.ts-ltr .ts-control .item,
+    .ts-wrapper.ts-ltr .ts-control input {
+        font-family: 'Nunito', 'Roboto', Arial, sans-serif !important;
+        direction: ltr !important;
+        text-align: left !important;
+    }
+
+.ts-dropdown .option.ts-rtl {
+    font-family: 'IranianSans', Tahoma, sans-serif !important;
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+.ts-dropdown .option.ts-ltr {
+    font-family: 'Nunito', 'Roboto', Arial, sans-serif !important;
+    direction: ltr !important;
+    text-align: left !important;
+}
+
+/* فلش */
+.ts-wrapper.single .ts-control.rtl::after,
+.ts-wrapper.ts-rtl.single .ts-control::after {
+    left: 15px !important;
+    right: auto !important;
+}
+
+.ts-wrapper.single .ts-control:not(.rtl)::after,
+.ts-wrapper.ts-ltr.single .ts-control::after {
+    right: 15px !important;
+    left: auto !important;
+}
+
+/* Dropdown وقتی به body منتقل شده */
+body > .ts-dropdown {
+    z-index: 10060 !important;
+    position: absolute !important;
+    box-sizing: border-box;
+}

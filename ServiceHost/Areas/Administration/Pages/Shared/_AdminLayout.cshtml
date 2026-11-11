@@ -41,8 +41,9 @@
         <link href="assets/timepicker/bootstrap-datepicker.min.css" rel="stylesheet" />
         <link href="assets/colorpicker/colorpicker.css" rel="stylesheet" type="text/css" />
         <link href="assets/jquery-multi-select/multi-select.css"  rel="stylesheet" type="text/css" /> *@
-        <link href="~/AdminTheme/assets/css/select2.css" rel="stylesheet" type="text/css"/>
-    @* <link href="~/AdminTheme/assets/select2/select2.css" rel="stylesheet" type="text/css" /> *@
+        <link href="~/AdminTheme/assets/css/select2.css" rel="stylesheet" />
+        <link href="~/AdminTheme/assets/tom-select/tom-select.default.css" rel="stylesheet" />    
+        @* <link href="~/AdminTheme/assets/select2/select2.css" rel="stylesheet" type="text/css" /> *@
      
 
     <!-- Custom Files -->
@@ -381,13 +382,15 @@ aria-hidden="true" style="display: none; padding-right: 17px;" >
     <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script/>
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script/>
 
+    <script src="~/AdminTheme/assets/js/select2.min.js"></script>
+    <script src="~/AdminTheme/assets/tom-select/tom-select.complete.min.js"></script>
     <script src="~/AdminTheme/assets/js/site.js"></script>
 
     <script src="~/AdminTheme/assets/js/persian-date.min.js"></script>
     <script src="~/AdminTheme/assets/js/persian-datepicker.min.js"></script>
 
 
-    <script src="~/AdminTheme/assets/js/select2.min.js"></script>
+    
 
     @RenderSection("Scripts", false)
 
@@ -399,6 +402,7 @@ aria-hidden="true" style="display: none; padding-right: 17px;" >
                 autoClose: true
             });
 
+            
             // Select2
             $('.select2-part').select2({
                 width: '100%',
@@ -408,6 +412,7 @@ aria-hidden="true" style="display: none; padding-right: 17px;" >
                 dir: 'rtl'
             });
         });
+
     </script>
 
 </body>

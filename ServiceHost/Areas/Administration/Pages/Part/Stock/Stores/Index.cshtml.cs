@@ -1,5 +1,7 @@
 using _0_Framework.Application;
 using _0_Framework.Infrastructure;
+using _01_MROQuery.Contracts.City;
+using _01_MROQuery.Contracts.Station;
 using BasicDataManagement.Application.Contracts.Entiti;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -35,32 +37,40 @@ namespace ServiceHost.Areas.Administration.Pages.Part.Stock.Stores
         public List<StoreViewModel> Stores { get; set; }
         public SelectList StockTypes { get; set; }
         public SelectList Organizations { get; set; }
+        public SelectList Stations { get; set; }
+        public SelectList Cities { get; set; }
 
         private readonly IStoreApplication _storeApplication;
         private readonly IStockTypeApplication _stockTypeApplication;
         private readonly IOrganizationApplication _organizationApplication;
         private readonly IAuthHelper _authHelper;
         private readonly IStoreZoneApplication _storeZoneApplication;
+        private readonly ICityQuery _cityQuery;
+        private readonly IStationQuery _stationQuery;
 
         public IndexModel(
             IStoreApplication storeApplication,
             IStockTypeApplication stockTypeApplication,
             IOrganizationApplication organizationApplication,
             IAuthHelper authHelper,
-            IStoreZoneApplication storeZoneApplication)
+            IStoreZoneApplication storeZoneApplication,
+            ICityQuery cityQuery, IStationQuery stationQuery)
         {
             _storeApplication = storeApplication;
             _stockTypeApplication = stockTypeApplication;
             _organizationApplication = organizationApplication;
             _authHelper = authHelper;
             _storeZoneApplication = storeZoneApplication;
+            _cityQuery = cityQuery;
+            _stationQuery = stationQuery;
         }
 
         public void OnGet()
         {
             Organizations = new SelectList(_organizationApplication.GetOrganizations(), "Id", "NameEn");
-            StockTypes = new SelectList(
-                _stockTypeApplication.GetStockTypesBy(SearchModel.OrganizationId), "Id", "Name");
+            StockTypes = new SelectList(_stockTypeApplication.GetStockTypesBy(SearchModel.OrganizationId), "Id", "Name");
+            
+            //Stations = new SelectList(_stationQuery.GetAll(), "Id", "Display");
             Stores = _storeApplication.Search(SearchModel);
         }
 
@@ -68,6 +78,8 @@ namespace ServiceHost.Areas.Administration.Pages.Part.Stock.Stores
         {
             var organizations = _organizationApplication.GetOrganizations()
                 .Select(o => new OrganizationSimpleDto { Id = o.Id, NameEn = o.NameEn }).ToList();
+            var cities = _cityQuery.GetAll().Select(c => new CitySimpleDto { Id = c.Id, Display = c.Display }).ToList();
+            //var stations = _stationQuery.GetAll().Select(c => new StationSimpleDto { Id = c.Id, Display = c.Display }).ToList();
 
             var command = new CreateStore
             {
@@ -75,7 +87,10 @@ namespace ServiceHost.Areas.Administration.Pages.Part.Stock.Stores
                 Organizations = organizations,
                 IsAdmin = _authHelper.CurrentAccountIsAdmin(),
                 StockTypeIds = new List<long>(),
-                StockTypes = new List<StockTypeViewModel>()
+                StockTypes = new List<StockTypeViewModel>(),
+                Cities = cities,
+                //Stations = stations
+
             };
 
             if (command.OrganizationId.HasValue)
@@ -84,6 +99,7 @@ namespace ServiceHost.Areas.Administration.Pages.Part.Stock.Stores
                     _stockTypeApplication.GetStockTypesBy(command.OrganizationId)
                     ?? new List<StockTypeViewModel>();
             }
+
 
             return Partial("./Create", command);
         }
@@ -94,14 +110,41 @@ namespace ServiceHost.Areas.Administration.Pages.Part.Stock.Stores
             return new JsonResult(result);
         }
 
+        //public IActionResult OnGetEdit(long id)
+        //{
+        //    long? organizationId = _authHelper.CurrentAccountOrganizationId();
+        //    var store = _storeApplication.GetDetails(id);
+        //    store.StockTypes = _stockTypeApplication.GetStockTypesBy(organizationId);
+        //    store.Organizations = _organizationApplication.GetOrganizations()
+        //        .Select(o => new OrganizationSimpleDto { Id = o.Id, NameEn = o.NameEn }).ToList();
+        //    return Partial("Edit", store);
+        //}
         public IActionResult OnGetEdit(long id)
         {
-            long? organizationId = _authHelper.CurrentAccountOrganizationId();
             var store = _storeApplication.GetDetails(id);
-            store.StockTypes = _stockTypeApplication.GetStockTypesBy(organizationId);
-            store.Organizations = _organizationApplication.GetOrganizations()
-                .Select(o => new OrganizationSimpleDto { Id = o.Id, NameEn = o.NameEn }).ToList();
-            return Partial("Edit", store);
+            if (store == null)
+                return NotFound();
+
+            long? organizationId = store.OrganizationId
+                                   ?? _authHelper.CurrentAccountOrganizationId();
+
+            store.StockTypes = _stockTypeApplication.GetStockTypesBy(organizationId)
+                               ?? new List<StockTypeViewModel>();
+
+            var organizations = _organizationApplication.GetOrganizations()
+                                ?? new List<OrganizationViewModel>();
+
+            store.Organizations = organizations
+                .Select(o => new OrganizationSimpleDto { Id = o.Id, NameEn = o.NameEn })
+                .ToList();
+
+            store.IsAdmin = _authHelper.CurrentAccountIsAdmin();
+
+            //// حذف آیتم‌های null احتمالی
+            //store.StockTypes = store.StockTypes.Where(x => x != null).ToList();
+            //store.Organizations = store.Organizations.Where(x => x != null).ToList();
+
+            return Partial("./Edit", store); 
         }
 
         public JsonResult OnPostEdit(EditStore command)
@@ -140,6 +183,7 @@ namespace ServiceHost.Areas.Administration.Pages.Part.Stock.Stores
             Message = result.Message;
             return RedirectToPage("./Index");
         }
+
 
         // ==================== Policies (مودال) ====================
 

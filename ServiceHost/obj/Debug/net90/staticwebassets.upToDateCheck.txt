@@ -12,6 +12,7 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution-addons\whiteboard\assets\busy-icons-svg\fire.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\content\ic_link_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\busy-icons-svg\money5.svg
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\AdminTheme\assets\tom-select\tom-select.bootstrap4.css
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Img\CountryFlags\svg\rwanda--3697.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Img\CountryFlags\svg\kiribati--3753.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\maps\ic_near_me_24px.svg
@@ -468,6 +469,7 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\image\ic_remove_red_eye_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\action\ic_invert_colors_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\device\ic_battery_80_24px.svg
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\AdminTheme\assets\tom-select\tom-select.complete.min.js
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\busy-icons-svg\bonsai.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\busy-icons-svg\preson-chart03.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Img\CountryFlags\svg\sweden--3675.svg
@@ -587,6 +589,7 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution-addons\whiteboard\assets\busy-icons-svg\badge02.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\action\ic_today_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\AdminTheme\assets\bootstrap3-editable\bootstrap-editable.css
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\AdminTheme\assets\tom-select\tom-select.css
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution-addons\panorama\js\three.min.js
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\busy-icons-svg\chart14.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\busy-icons-svg\safe.svg
@@ -626,6 +629,7 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\action\ic_open_in_browser_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\busy-icons-svg\folders.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\notification\ic_sim_card_alert_24px.svg
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\AdminTheme\assets\tom-select\tom-select.default.css
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\editor\ic_drag_handle_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\action\ic_all_out_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\AdminTheme\assets\fonts\glyphicons-halflings-regular.svg
@@ -1722,6 +1726,7 @@ D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Img\CountryFlags\svg\saudi-arabia--3624.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\av\ic_hd_24px.svg
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\busy-icons-svg\award5.svg
+D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\AdminTheme\assets\tom-select\tom-select.bootstrap5.css
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\AdminTheme\assets\jquery-multi-select\jquery.multi-select.js
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\AdminTheme\assets\jvectormap\jquery-jvectormap-2.0.2.min.js
 D:\ATRIYA ASP.NET PROJECT\MRO_Project\Code\MRO_Project\ServiceHost\wwwroot\Theme\assets\plugins\revolution\revolution\assets\svg\busy-icons-svg\award2.svg
@@ -2523,6 +2528,11 @@ wwwroot\AdminTheme\assets\timepicker\bootstrap-timepicker.min.css
 wwwroot\AdminTheme\assets\timepicker\bootstrap-timepicker.min.js
 wwwroot\AdminTheme\assets\toggles\toggles.css
 wwwroot\AdminTheme\assets\toggles\toggles.min.js
+wwwroot\AdminTheme\assets\tom-select\tom-select.bootstrap4.css
+wwwroot\AdminTheme\assets\tom-select\tom-select.bootstrap5.css
+wwwroot\AdminTheme\assets\tom-select\tom-select.complete.min.js
+wwwroot\AdminTheme\assets\tom-select\tom-select.css
+wwwroot\AdminTheme\assets\tom-select\tom-select.default.css
 wwwroot\AdminTheme\fonts\glyphicons-halflings-regular.eot
 wwwroot\AdminTheme\fonts\glyphicons-halflings-regular.svg
 wwwroot\AdminTheme\fonts\glyphicons-halflings-regular.ttf

@@ -1,6 +1,7 @@
 ﻿using _0_Framework.Application;
 using _01_MROQuery.Contracts.Organization;
 using PartManagement.Application.Contracts.Stock.Commands;
+using PartManagement.Application.Contracts.Stock.DTOs;
 using PartManagement.Application.Contracts.Stock.StockType;
 using PartManagement.Application.Contracts.Stock.Store;
 using PartManagement.Domain.Stock.StoreAgg;
@@ -109,13 +110,13 @@ namespace PartManagement.Application.Stock
 
         public EditStore GetDetails(long id)
         {
-            var store = _storeRepository.Get(id);
+            var store = _storeRepository.GetWithDetails(id);
             if (store == null)
                 return null;
 
-            var organizationName = store.OrganizationId.HasValue
-                ? _organizationQuery.GetNameEn(store.OrganizationId.Value)
-                : null;
+            string organizationName = null;
+            if (store.OrganizationId.HasValue)
+                organizationName = _organizationQuery.GetNameEn(store.OrganizationId.Value);
 
             return new EditStore
             {
@@ -150,7 +151,10 @@ namespace PartManagement.Application.Stock
                 UseAircraftModel = store.PlacementPolicy?.UseAircraftModel,
                 UsePartPhysical = store.PlacementPolicy?.UsePartPhysical,
                 UseLocationKind = store.PlacementPolicy?.UseLocationKind,
-                UseEnvironmentalClass = store.PlacementPolicy?.UseEnvironmentalClass
+                UseEnvironmentalClass = store.PlacementPolicy?.UseEnvironmentalClass,
+
+                StockTypes = new List<StockTypeViewModel>(),
+                Organizations = new List<OrganizationSimpleDto>()
             };
         }
         public List<StoreViewModel> Search(StoreSearchModel searchModel)
@@ -350,6 +354,7 @@ namespace PartManagement.Application.Stock
                 IsActive = store.IsActive
             }).ToList();
         }
+
 
         //public List<StoreViewModel> GetStoresBy(long? organizationId)
         //{

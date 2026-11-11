@@ -1,4 +1,6 @@
-﻿@model PartManagement.Application.Contracts.Stock.Store.EditStore
+﻿@using PartManagement.Application.Contracts.Stock.DTOs
+@using PartManagement.Application.Contracts.Stock.StockType
+@model PartManagement.Application.Contracts.Stock.Store.EditStore
 @{
 }
 
@@ -56,7 +58,8 @@
                 <div class="form-group">
                     <label asp-for="OrganizationId" class="control-label">Organization</label>
                     <select type="text" class="form-control" asp-for="OrganizationId"
-                            asp-items='new SelectList(Model.Organizations, "Id", "NameEn")'>
+                            asp-items='new SelectList(Model.Organizations ?? 
+                                        new List<OrganizationSimpleDto>(), "Id", "NameEn")'>
                         <option value="0">-Organization-</option>
                     </select>
                     <span asp-validation-for="OrganizationId" class="error"></span>
@@ -66,7 +69,8 @@
                 <div class="form-group">
                     <label asp-for="StockTypeId" class="control-label">Store Type</label>
                     <select type="text" class="form-control" asp-for="StockTypeId"
-                            asp-items='new SelectList(Model.StockTypes, "Id", "Name")'>
+                            asp-items='new SelectList(Model.StockTypes ??
+                                        new List<StockTypeViewModel>(), "Id", "Name")'>
                         <option value="0">-Store type-</option>
                     </select>
                     <span asp-validation-for="StockTypeId" class="error"></span>
@@ -104,12 +108,19 @@
             </div>
             <div class="col-md-6">
                 <div class="form-group">
-                    <label asp-for="StationId" class="control-label">Airport station</label>
-                    <select type="text" class="form-control" asp-for="StationId"
-                            asp-items='new SelectList(Model.StockTypes, "Id", "Name")'>
-                        <option value="0">-Airport station's-</option>
-                    </select>
-                    <span asp-validation-for="StationId" class="error"></span>
+                    <div class="form-group">
+                        <label class="control-label">Airport station</label>
+                        <input type="hidden"
+                               id="StationId"
+                               name="StationId"
+                               class="select2-ajax"
+                               data-url="/Administration/Lookups?handler=Stations"
+                               data-min-length="1"
+                               value="@(Model.StationId > 0 ? Model.StationId.ToString() : "")"
+                               data-init-id="@(Model.StationId > 0 ? Model.StationId.ToString() : "")"
+                               data-init-text="@Model.StationDisplay"
+                               style="width:100%" />
+                    </div>
                 </div>
             </div>
 
@@ -130,7 +141,7 @@
                 <div class="form-group">
                     <label asp-for="ProviderId" class="control-label">Provider</label>
                     <select type="text" class="form-control" asp-for="ProviderId"
-                            asp-items='new SelectList(Model.Organizations, "Id", "Name")'>
+                            asp-items='new SelectList(Model.Organizations, "Id", "NameEn")'>
                         <option value="0">-Provider's-</option>
                     </select>
                     <span asp-validation-for="ProviderId" class="error"></span>

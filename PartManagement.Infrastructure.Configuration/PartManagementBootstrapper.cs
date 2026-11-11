@@ -3,7 +3,9 @@ using _0_Framework.Domain;
 using _0_Framework.Infrastructure;
 using _01_MROQuery.Contracts.AircraftModel;
 using _01_MROQuery.Contracts.ATAChapter;
+using _01_MROQuery.Contracts.City;
 using _01_MROQuery.Contracts.Organization;
+using _01_MROQuery.Contracts.Station;
 using _01_MROQuery.Query;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -76,6 +78,10 @@ namespace PartManagement.Configuration
             services.AddTransient<IAtaChapterQuery, AtaChapterQuery>();
 
             services.AddTransient<IAircraftModelQuery, AircraftModelQuery>();
+
+            services.AddTransient<ICityQuery, CityQuery>();
+
+            services.AddTransient<IStationQuery, StationQuery>();
 
             services.AddTransient<IPermissionExposer, PartPermissionExposer>();
 

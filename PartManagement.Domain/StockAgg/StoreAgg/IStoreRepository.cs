@@ -7,6 +7,7 @@ namespace PartManagement.Domain.Stock.StoreAgg
     {
         Store GetByOrganizationId(long? organizationId);
         List<Store> Search(string name, string code, long? organizationId, bool? isActive = null);
+        Store GetWithDetails(long id);
     }
 }
 //namespace PartManagement.Domain.Stock.StoreAgg

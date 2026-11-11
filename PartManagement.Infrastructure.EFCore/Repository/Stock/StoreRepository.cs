@@ -21,6 +21,13 @@ namespace PartManagement.Infrastructure.EFCore.Repository.Stock
                 .FirstOrDefault(x => x.OrganizationId == organizationId);
         }
 
+        public Store GetWithDetails(long id)
+        {
+            return _partContext.Stores
+                .Include(s => s.StoreStockTypes)
+                .FirstOrDefault(x => x.Id == id);
+        }
+
         public List<Store> Search(string name, string code, long? organizationId, bool? isActive = null)
         {
             var query = _partContext.Stores

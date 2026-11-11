@@ -21,7 +21,10 @@ namespace PartManagement.Application.Contracts.Stock.Store
         public long? OrganizationId { get; set; }
         public List<OrganizationSimpleDto> Organizations { get; set; } = new();
         public long CityId { get; set; }
+        public List<CitySimpleDto> Cities { get; set; } = new();
         public long StationId { get; set; }
+        public List<StationSimpleDto> Stations { get; set; } = new();
+        public string StationDisplay { get; set; }
 
         [Range(1, 100000, ErrorMessage = ValidationMessages.IsRequired)]
         public long StockTypeId { get; set; }
